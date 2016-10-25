@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"legend": {"y": "top", "orient": "horizontal", "data": ["GDP"], "x": "center"}, "xAxis": [{"data": ["Nov", "Dec"], "type": "category", "position": "bottom"}], "title": {"subtext": "subtitle", "text": "Title"}, "series": [{"data": [2, 3], "type": "bar", "name": "China"}], "yAxis": {}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

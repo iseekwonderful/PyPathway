@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Core Pathway Object - PyPathway</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="PyPathway">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="PyPathway">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-white palette-accent-orange">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                User Guide <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Core Pathway Object
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/iseekwonderful" title="@iseekwonderful on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/iseekwonderful/pypathway" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          PyPathway
+          <span class="version">
+            0.1.11
+          </span>
+        </strong>
+        
+          <br>
+          iseekwonderful/pypathway
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/iseekwonderful/pypathway/archive/0.1.11.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/iseekwonderful/pypathway/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Get Started" href="../..">
+      Get Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">User Guide</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Search and Retrive Pathway" href="../query/">
+      Search and Retrive Pathway
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Core Pathway Object" href="./">
+      Core Pathway Object
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Pathway Formats" href="#pathway-formats">
+                Pathway Formats
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Work with a Pathway Object." href="#work-with-a-pathway-object">
+                Work with a Pathway Object.
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Data mapping and visualize" href="../map/">
+      Data mapping and visualize
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Format Discuss" href="../../format/">
+      Format Discuss
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Installation" href="../../install/">
+      Installation
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Chart Plot" href="../../chart/">
+      Chart Plot
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/iseekwonderful" target="_blank" title="@iseekwonderful on GitHub">
+                  @iseekwonderful on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Core Pathway Object</h1>
+          
+          <h2 id="pathway-formats">Pathway Formats</h2>
+<h3 id="chaos-of-formats">Chaos of formats</h3>
+<p>While handling pathway, you will find various formats provided by different organizations, which makes a huge difficulty to unify them. As a compromise, we use different <strong>Parsers</strong> and <strong>Visualizers</strong> for <code>KGML</code>, <code>SBGN-PD</code> and <code>GPML</code> formats. The visualizers for <code>SBGN-PD</code> and <code>GPML</code>, written in JavaScript, work well. The components used in these visualizers could be found in github (<a href="https://github.com/iVis-at-Bilkent/sbgnviz-js"><code>SBGNviz.js</code></a>, <a href="https://github.com/wikipathways/pvjs"><code>pvjs</code></a>). We implement a <code>Python API</code> for programmers to use these visualizers via Python code. In this section, we introduce you some knowledges about format handling and pathway object operation.</p>
+<h3 id="format-choice">Format Choice</h3>
+<p><img alt="" src="../../images/query/Supports.png" /></p>
+<p>The formats public databases provide are listed in the above figure.</p>
+<ul>
+<li>KEGG: <code>KGML</code> is the only choice, ignoring other formats provided in the FTP server due to the limited accession.</li>
+<li>WikiPathway: WikiPathway provides two formats, <code>GPML</code> and <code>BioPAX</code>. <code>GPML</code> is the native format and <code>BioPAX</code> seems derived from software. we recommend to use <code>GPML</code> format.</li>
+<li>Reactome: Reactome provides both <code>SBGN</code> and <code>BioPAX</code> formats. However both of them are derived from software, they can’t be directly drawn locally as what you see in Reactome’s website. So we provide some advices and additional work to make its <code>SBGN</code> format usable. see <a href="../../format">HERE</a>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module is concentrating on <code>data visualization</code>. The final aim is to get a <strong>visualized result</strong>. The <code>SBGN-PD</code> format is more recommended, due to the easier conversion from the <code>BioPAX</code> format to <code>SBGN-PD</code> format.</p>
+</div>
+<h2 id="work-with-a-pathway-object">Work with a Pathway Object.</h2>
+<p>We provide several <strong>methods</strong> to work with the pathway object, which is a instance of class <code>Pathway</code>.</p>
+<ul>
+<li>To load a search result to a pathway object, use <code>load()</code> method: </li>
+</ul>
+<iframe width=890 height=150
+  src=../../images/iframe/load_to_mem.html>
+</iframe>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pathway object is the result of <code>parse(data)</code> method of each <code>Parser</code> classes or the output of <code>load()</code> method of each <code>PathwayData</code> subclasses. </p>
+</div>
+<h3 id="visualize-methods">Visualize methods</h3>
+<ul>
+<li>
+<p><code>def draw(self, options=None):</code> Use the <code>HTML</code> and <code>Javascript</code> to visualize the Pathway in IPython notebook, which provides interactive experience.</p>
+</li>
+<li>
+<p><code>def integrate(self, id_lists, visualize_option_lists):</code> Map user-defined data to the pathway in various ways. See the section: <a href="../map/"><code>Data Integration</code></a></p>
+</li>
+<li>
+<p><code>def export(self, format):</code>
+    Save the pathway object as a <code>XML</code> tree and return a string content.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In next section, a series of examples will be given to show how to use these visualization methods</p>
+</div>
+<h3 id="data-structure">Data Structure</h3>
+<p>The data structure of pathway object is adopted from format’s <code>specifications</code>, you can view it at: </p>
+<ul>
+<li><code>SBGN-PD</code>: <a href="http://sbgn.github.io/sbgn/specifications">http://sbgn.github.io/sbgn/specifications</a></li>
+<li><code>GPML</code>: <a href="http://www.pathvisio.org/gpml/">http://www.pathvisio.org/gpml/</a></li>
+<li><code>KGML</code>: <a href="http://www.genome.jp/kegg/xml/">http://www.genome.jp/kegg/xml/</a></li>
+<li><code>BioPAX</code>: <a href="http://www.biopax.org/">http://www.biopax.org/</a></li>
+</ul>
+<h3 id="general-methods">General methods</h3>
+<ul>
+<li><code>father</code>, <code>children</code>, <code>root</code> for node accession.</li>
+<li><code>summary()</code>, <code>__repr__</code>(magic method for print object) for directly screening the node’s information.</li>
+<li><code>entities</code>, <code>reactons</code> for listing the entities and reactions in the map.</li>
+</ul>
+<p>Example of using these methods:</p>
+<iframe width=850 height=1100
+  src=../../images/iframe/kegg_as_example_general.html>
+</iframe>
+
+<h4 id="kgml-specfic">KGML specfic</h4>
+<ul>
+<li><code>genes</code> for listing genes in the pathway</li>
+<li><code>reactions</code> for listing reactions in the pathway</li>
+<li><code>get_element_by_class</code>, <code>get_element_by_id</code>, <code>get_element_by_name</code> and <code>get_element_by_type</code>: their usage is listed below.</li>
+</ul>
+<iframe width=850 height=650
+  src=../../images/iframe/KEGG_example1.html>
+</iframe>
+
+<h4 id="sbgn-specfic">SBGN specfic</h4>
+<p>The example of operating SBGN pathway object:</p>
+<iframe width=850 height=1750
+  src=../../images/iframe/SBGN_API.html>
+</iframe>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../query/" title="Search and Retrive Pathway">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Search and Retrive Pathway
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../map/" title="Data mapping and visualize">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Data mapping and visualize
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'iseekwonderful/pypathway';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../images/iframe/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/gpml_data/interface_gpml.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/custom-element.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/d3.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/mithril.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/polyfills.bundle.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/pvjs.core.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/pvjs.custom-element.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/lib/custom-element.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/lib/custom-element.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/FileSaver.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/backbone-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-clipboard.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-context-menus.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-cose-bilkent.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-edge-bend-editing.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-expand-collapse.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-undo-redo.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-view-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.expander-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.noty.packaged.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.qtip.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/underscore.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/add-remove-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/json-to-sbgnml-converter.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-element-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-filtering.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-style-rules.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgnml-to-json-converter.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/3Dmol-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/add-remove-action-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/biogene-info.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/common-element-properties.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-action-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-sample-app-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/interface.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/register-undo-redo-actions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-global-variables.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-menu-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-mode-handler.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
+    
+      <script src="../../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/kegg_data/interface_kegg.js"></script>
+    
+    
+  </body>
+</html>

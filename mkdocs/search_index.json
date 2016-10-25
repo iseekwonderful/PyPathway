@@ -1,0 +1,389 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to pypathway\n\n\nPyPathway is a package for python users who play with biology pathways, powered by Web technology and \nipython nootebook(jupyter)\n.\n\n\nUsage\n\n\n\n\nSearch and retrieve pathway from Reactome, WikiPathway and KEGG.\n\n\nParse \nBioPAX\n, \nSBGN-ML\n, \nKGML\n and \nGPML\n format pathway file.\n\n\nPython API for highly custom biology data mapping.\n\n\nInteractive visualization data via \nIPython\n notebook.\n\n\n\n\n\n\nInstallation\n\n\n\n\nWarning\n\n\nThis section, assume that you have \nPython\n, \npip\n, \nIPython\n and \nJupyter\n installed, if not,  view this \nFULL install guide\n\n\n\n\nFor most of users, we suggest you install via \npip\n, if you are interested in the developing function, install it from \nGithub\n\n\npip\n \ninstall\n \npypathway\n\n\n\n\n\n\n\n\nBioPAX visualization need additional Paxtool commandline tool:\n\n\n\n\n# osx\n\nbrew install homebrew/science/paxtools\n\n\n\n\n\n\n\nFor windows users, view the guide in the github: \nPaxtools\n to set up the command for application\u2019s usage.\n\n\n\n\ntry it out\n\n\n\n\nWarning\n\n\nUsing \nChrome\n, \nFirefox\n or \nSafari\n to run IPython notebook. \n\n\n\n\nThis case shows searching and drawing pathway related with \njak\n  in IPython notebook, no \ndata mapping API\n is used\n\n\n\n\nFeatures\n\n\nPathway Search and Retrieve\n\n\nSupported database\n\n\n\n\nKEGG\n: Kyoto Encyclopedia of Genes and Genomes\n\n\nReactome\n: a free, open-source, curated and peer reviewed pathway database. \n\n\nWikiPathway\n: WikiPathways is an open, public platform dedicated to the curation of biological pathways by and for the scientific community.\n\n\n\n\nSupported format\n\n\n\n\nKGML\n: a format using by \nKEGG\n, we support it in a \nlimited scope\n.\n\n\nBioPAX\n: a open-source, community created format, we support its parse, modify and export to SBGN-PD format. note that its \nvisualization\n is done after \nconvert\n  to \nSBGN-PD\n format and \nauto-layout\n.\n\n\nSBGN-PD\n: a format for \nProcess Description\n in system biology, especially suit for pathway visualization and data integration.\n\n\nGPML\n: GPML is the native format used by PathVisio and WikiPathways.\n\n\n\n\nData Integration API\n\n\nUse the elements in pathway graphics to display the characters of your experiments/omics data. \n\n\nInteractive API\n\n\nInteractive API gives more space for data presentation.\n\n\n\n\nMouse Event handling.\n\n\nPopUp windows.\n\n\nGlyph property change in runtimes\n\n\n\n\nWheels\n\n\nThe visualization of \nSBGN-PD\n is based on the project \nsbgnviz-js\n, \nand the ploting of \nGPML\n is based on \npvjs\n.\n\n\nWhat\u2019s NEXT\n\n\nNow go to \nSearch and Retrieve Pathway\n, start with query pathway from public database.\n\n\nLisences\n\n\nlicensed with \nCreative Commons BY 3.0", 
+            "title": "Get Started"
+        }, 
+        {
+            "location": "/#welcome-to-pypathway", 
+            "text": "PyPathway is a package for python users who play with biology pathways, powered by Web technology and  ipython nootebook(jupyter) .", 
+            "title": "Welcome to pypathway"
+        }, 
+        {
+            "location": "/#usage", 
+            "text": "Search and retrieve pathway from Reactome, WikiPathway and KEGG.  Parse  BioPAX ,  SBGN-ML ,  KGML  and  GPML  format pathway file.  Python API for highly custom biology data mapping.  Interactive visualization data via  IPython  notebook.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/#installation", 
+            "text": "Warning  This section, assume that you have  Python ,  pip ,  IPython  and  Jupyter  installed, if not,  view this  FULL install guide   For most of users, we suggest you install via  pip , if you are interested in the developing function, install it from  Github  pip   install   pypathway    BioPAX visualization need additional Paxtool commandline tool:   # osx \nbrew install homebrew/science/paxtools   For windows users, view the guide in the github:  Paxtools  to set up the command for application\u2019s usage.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/#try-it-out", 
+            "text": "Warning  Using  Chrome ,  Firefox  or  Safari  to run IPython notebook.    This case shows searching and drawing pathway related with  jak   in IPython notebook, no  data mapping API  is used", 
+            "title": "try it out"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#pathway-search-and-retrieve", 
+            "text": "", 
+            "title": "Pathway Search and Retrieve"
+        }, 
+        {
+            "location": "/#supported-database", 
+            "text": "KEGG : Kyoto Encyclopedia of Genes and Genomes  Reactome : a free, open-source, curated and peer reviewed pathway database.   WikiPathway : WikiPathways is an open, public platform dedicated to the curation of biological pathways by and for the scientific community.", 
+            "title": "Supported database"
+        }, 
+        {
+            "location": "/#supported-format", 
+            "text": "KGML : a format using by  KEGG , we support it in a  limited scope .  BioPAX : a open-source, community created format, we support its parse, modify and export to SBGN-PD format. note that its  visualization  is done after  convert   to  SBGN-PD  format and  auto-layout .  SBGN-PD : a format for  Process Description  in system biology, especially suit for pathway visualization and data integration.  GPML : GPML is the native format used by PathVisio and WikiPathways.", 
+            "title": "Supported format"
+        }, 
+        {
+            "location": "/#data-integration-api", 
+            "text": "Use the elements in pathway graphics to display the characters of your experiments/omics data.", 
+            "title": "Data Integration API"
+        }, 
+        {
+            "location": "/#interactive-api", 
+            "text": "Interactive API gives more space for data presentation.   Mouse Event handling.  PopUp windows.  Glyph property change in runtimes", 
+            "title": "Interactive API"
+        }, 
+        {
+            "location": "/#wheels", 
+            "text": "The visualization of  SBGN-PD  is based on the project  sbgnviz-js , \nand the ploting of  GPML  is based on  pvjs .", 
+            "title": "Wheels"
+        }, 
+        {
+            "location": "/#whats-next", 
+            "text": "Now go to  Search and Retrieve Pathway , start with query pathway from public database.", 
+            "title": "What\u2019s NEXT"
+        }, 
+        {
+            "location": "/#lisences", 
+            "text": "licensed with  Creative Commons BY 3.0", 
+            "title": "Lisences"
+        }, 
+        {
+            "location": "/user-guide/query/", 
+            "text": "Query pathway data from public databases\n\n\nOverview\n\n\nThe \nFigure\n below shows the Public databases we support: \nWikiPathway\n, \nReactome\n and \nKEGG\n. After retrieving pathway from these databases, \npypathway\n handle the these pathway data in \ntwo\n different way: \n\n\n\n\nBioPAX\n, \nSBGN-PD\n: convert to \nSBGN-PD\n and visualization uses \nSBGNviz.js\n.\n\n\nKGML\n, \nGPML\n: use their own data structures and visualize it using \npvjs\n and \nCytoscape.js\n.\n\n\n\n\n\n\n\n\nfigure 1: technical workflow of public database querying and format handling.\n\n\n\n\n\n\nAfter parsing raw pathway data to pathway object, you can use \ndraw()\n method to view your pathway (it is a \nwebapp\n integrated in \nIPython notebook\n):\n\n\n\n\n\n\nNote\n\n\nWhether the format and the visualization method changes or not, the \nData Integration API\n remains \nsame\n.\n\n\n\n\ntry it out:\n\n\n\n\nNote\n\n\nThis is a record of IPython notebook.\n\n\n\n\n\n\nSupported Public Databases\n\n\nThere are three public databases we support: \nKEGG\n, \nReactome\n and the \nWikiPathway\n, which may satisfy most of the requirement.\n\n\nThe supported databases are defined in the class \nSupportedDatabase\n\n\nclass\n \nSupportedDatabase:\n\n    \n\n\n    This class lists the database we support currently\n\n\n    \n\n    \nKEGG\n = \nkegg\n\n    \nREACTOME\n = \nreactome\n\n    \nWikiPathways\n = \nwikipathways\n\n\n\n\n\n\nSupported Pathway Format\n\n\nWe support four main stream data format: \nBioPAX\n, \nSBGN-PD\n, \nGPML\n and \nKGML\n. First two are community support open source format, \nGPML\n is used by \nWikiPathway\n, and last one is defined by famous \nKEGG\n.\n\n\nThe supported data formats are defined in the class \nPathwayFormat\n\n\nclass\n \nPathwayFormat:\n\n    \n\n\n    This class list the format we support currently\n\n\n    \n\n    \nBioPAX\n = \nBIOPAX\n\n    \nKGML\n = \nKGML\n\n    \nSBGN\n = \nSBGN\n\n    \nGPML\n = \nGPML\n\n\n\n\n\n\nSearch pathway\n\n\nsearch pathway in KEGG\n\n\nDifferent from Reactome or WikiPathway, KEGG only supports a relative simple search API which can only search by \nkeyword\n and \norganism\n.\n\n\nTo search pathway in KEGG\n:\n\n\n\n\nThe static method \nsearch_kegg\n in the class \nPublicDatabase\n, with an argument \nkeyword\n and a optional argument \norganism\n, is used for searching in KEGG.\n\n\n\n\nresult\n \n=\n \nPublicDatabase\n.\nsearch_kegg\n(\nb cell\n,\n \norganism\n=\nhsa\n)\n\n\n\n\n\n\n\n\nThe \nresult\n object is a list of instances of \nKEGGPathwayData\n containing the results of this query. If the result is \nempty\n, it will return a \nempty\n list. Use \nprint\n to see the info.\n\n\n\n\nprint\n \nresult\n\n\n \n[\nformat\n:\n \nKGML\n\n \nid\n:\n \n04112\n\n \ndescription\n:\n \nCell\n \ncycle\n \n-\n \nCaulobacter\n\n \nhasData\n:\n \nTrue\n,\n \nformat\n:\n \nKGML\n\n \nid\n:\n \n04662\n\n \ndescription\n:\n \nB\n \ncell\n \nreceptor\n \nsignaling\n \npathway\n\n \nhasData\n:\n \nTrue\n,\n \nformat\n:\n \nKGML\n\n \nid\n:\n \n05100\n\n \ndescription\n:\n \nBacterial\n \ninvasion\n \nof\n \nepithelial\n \ncells\n\n \nhasData\n:\n \nTrue\n,\n \nformat\n:\n \nKGML\n\n \nid\n:\n \n05120\n\n \ndescription\n:\n \nEpithelial\n \ncell\n \nsignaling\n \nin\n \nHelicobacter\n \npylori\n \ninfection\n\n \nhasData\n:\n \nTrue\n,\n \nformat\n:\n \nKGML\n\n \nid\n:\n \n05217\n\n \ndescription\n:\n \nBasal\n \ncell\n \ncarcinoma\n\n \nhasData\n:\n \nTrue\n]\n\n\n\n\n\n\n\n\nQuickly parse and view the pathway.\nwe provide a \nload()\n method which returns a kegg pathway object:\n\n\n\n\nres\n[\n4\n]\n.\nload\n()\n.\ndraw\n()\n\n\n# aka. KEGGParser.parse(res[4].kgml).draw()\n\n\n\n\n\n\n\n\nThen module will draw a pathway:\n\n\n\n\n\n\nSearch Reactome\n\n\nReactome\n provides a pretty good pathway browser, which is more interactive than other traditional pathway databases. We use SBGN and BioPAX file to generate the pathway plotting.\n\n\n\n\nas usual, use \nPublicDatabase.search_reactome\n to search database\n\n\n\n\nPublicDatabase\n.\nsearch_reactome\n(\nt cell\n)\n\n\n\n\n\n\n\n\nthe result is also saved in a \nlist\n object and you can directly view it.\n\n\n\n\n \n[\nsource\n:\n \n[\nu\nhttp://pathwaycommons.org/pc2/reactome\n]\n\n  \nid\n:\n \nhttp\n:\n//\nidentifiers\n.\norg\n/\nreactome\n/\nR\n-\nHSA\n-\n983705\n\n \nBioPAX\n:\n \nFalse\n \n \nSBGN\n-\nPD\n:\n \nFalse\n \n \ndescription\n:\nB\n \nCell\n \nActivation\n,\n\n \nsource\n:\n \n[\nu\nhttp://pathwaycommons.org/pc2/reactome\n]\n\n  \nid\n:\n \nhttp\n:\n//\nidentifiers\n.\norg\n/\nreactome\n/\nR\n-\nHSA\n-\n68884\n\n \nBioPAX\n:\n \nFalse\n \n \nSBGN\n-\nPD\n:\n \nFalse\n \n \ndescription\n:\ncell\n \ndivision\n,\n\n \n...\n\n \nsource\n:\n \n[\nu\nhttp://pathwaycommons.org/pc2/reactome\n]\n\n  \nid\n:\n \nhttp\n:\n//\nidentifiers\n.\norg\n/\nreactome\n/\nR\n-\nHSA\n-\n421270\n\n \nBioPAX\n:\n \nFalse\n \n \nSBGN\n-\nPD\n:\n \nFalse\n \n \ndescription\n:\nCell\n-\ncell\n \njunction\n \norganization\n]\n\n\n\n\n\n\n\n\none thing should be \nnoticed\n is that: the BioPAX file is larger than the other normal pathway formats(may \n 5MB). So this module do not retrieve it when searching the pathway, use \nretrieve()\n to get the pathway by yourself.\n\n\n\n\nres\n[\n1\n]\n.\nretrieve\n(\nproxies\n=\nproxy\n)\n\n\n\n\n\n\n\n\nThen use load() to parse the pathway to the memory and plot the pathway\n\n\n\n\nres\n[\n1\n]\n.\nload\n()\n.\ndraw\n()\n\n\n\n\n\n\n\n\nfinally we get a result in the output area.\n\n\n\n\n\n\nSearch WikiPathway databases\n\n\nWe use the \nPathway Common\n database\u2019s RESTful API. But the procedure is same as the \nKEGG\n searching:\n\n\n\n\nThe static method \nsearch_wp\n in the class \nPublicDatabase\n, with an argument \nkeyword\n and a optional argument \nspecies\n(WikiPathway says it species, different from KEGG).\n\n\n\n\nres\n \n=\n \nPublicDatabase\n.\nsearch_wp\n(\njak\n)\n\n\n\n\n\n\n\n\nResult is stored in a list of \nWikiPathwayData\n instances. Use print to see the detail:\n\n\n\n\nprint\n \nres\n\n\n\n    \n[\n\n \nid\n:\n \nWP2593\n\n \nname\n:\n \nJAK\n/\nSTAT\n\n \nspecies\n:\n \nHomo\n \nsapiens\n\n \nrevision\n:\n \n86961\n\n \nhasData\n:\n \nTrue\n\n \nscore\n:\n \n{\nu\n0\n:\n \nu\n4.593704\n},\n \n    \n.\n\n    \n.\n\n    \n.\n\n \nid\n:\n \nWP75\n\n \nname\n:\n \nToll\n-\nlike\n \nReceptor\n \nSignaling\n \nPathway\n\n \nspecies\n:\n \nHomo\n \nsapiens\n\n \nrevision\n:\n \n83867\n\n \nhasData\n:\n \nTrue\n\n \nscore\n:\n \n{\nu\n0\n:\n \nu\n3.4618585\n},\n \n \nid\n:\n \nWP1449\n\n \nname\n:\n \nRegulation\n \nof\n \ntoll\n-\nlike\n \nreceptor\n \nsignaling\n \npathway\n\n \nspecies\n:\n \nHomo\n \nsapiens\n\n \nrevision\n:\n \n81172\n\n \nhasData\n:\n \nTrue\n\n \nscore\n:\n \n{\nu\n0\n:\n \nu\n3.4582481\n}]\n\n\n\n\n\n\n\n\nsimilar to KEGG and Reactome query, quick drawing is supported:\n\n\n\n\nres\n[\n4\n]\n.\nload\n()\n.\ndraw\n()\n\n\n\n\n\n\ndraws a pathway:\n\n\n\n\nParse local file\n\n\nParsing pathway from local file is as easy as searching in public databases. Each Parser(e.g. \nSBGNParser\n, \nKGMLParser\n) provides the method \nparseFromFile(file_path)\n.\nFor example, we load a local BioPAX file and view it:\n\n\nfrom\n \npypath\n \nimport\n \nBioPAXParser\n\n\nsb\n \n=\n \nBioPAXParser\n.\nparseFromFile\n(\n/Users/sheep/Downloads/BioPAX/Isoleucine_biosynthesis.owl\n)\n\n\nsb\n.\ndraw\n()\n\n\n\n\n\n\nand get the result:", 
+            "title": "Search and Retrive Pathway"
+        }, 
+        {
+            "location": "/user-guide/query/#query-pathway-data-from-public-databases", 
+            "text": "", 
+            "title": "Query pathway data from public databases"
+        }, 
+        {
+            "location": "/user-guide/query/#overview", 
+            "text": "The  Figure  below shows the Public databases we support:  WikiPathway ,  Reactome  and  KEGG . After retrieving pathway from these databases,  pypathway  handle the these pathway data in  two  different way:    BioPAX ,  SBGN-PD : convert to  SBGN-PD  and visualization uses  SBGNviz.js .  KGML ,  GPML : use their own data structures and visualize it using  pvjs  and  Cytoscape.js .     figure 1: technical workflow of public database querying and format handling.    After parsing raw pathway data to pathway object, you can use  draw()  method to view your pathway (it is a  webapp  integrated in  IPython notebook ):    Note  Whether the format and the visualization method changes or not, the  Data Integration API  remains  same .", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/user-guide/query/#try-it-out", 
+            "text": "Note  This is a record of IPython notebook.", 
+            "title": "try it out:"
+        }, 
+        {
+            "location": "/user-guide/query/#supported-public-databases", 
+            "text": "There are three public databases we support:  KEGG ,  Reactome  and the  WikiPathway , which may satisfy most of the requirement.  The supported databases are defined in the class  SupportedDatabase  class   SupportedDatabase: \n          This class lists the database we support currently       \n     KEGG  =  kegg \n     REACTOME  =  reactome \n     WikiPathways  =  wikipathways", 
+            "title": "Supported Public Databases"
+        }, 
+        {
+            "location": "/user-guide/query/#supported-pathway-format", 
+            "text": "We support four main stream data format:  BioPAX ,  SBGN-PD ,  GPML  and  KGML . First two are community support open source format,  GPML  is used by  WikiPathway , and last one is defined by famous  KEGG .  The supported data formats are defined in the class  PathwayFormat  class   PathwayFormat: \n          This class list the format we support currently       \n     BioPAX  =  BIOPAX \n     KGML  =  KGML \n     SBGN  =  SBGN \n     GPML  =  GPML", 
+            "title": "Supported Pathway Format"
+        }, 
+        {
+            "location": "/user-guide/query/#search-pathway", 
+            "text": "", 
+            "title": "Search pathway"
+        }, 
+        {
+            "location": "/user-guide/query/#search-pathway-in-kegg", 
+            "text": "Different from Reactome or WikiPathway, KEGG only supports a relative simple search API which can only search by  keyword  and  organism .  To search pathway in KEGG :   The static method  search_kegg  in the class  PublicDatabase , with an argument  keyword  and a optional argument  organism , is used for searching in KEGG.   result   =   PublicDatabase . search_kegg ( b cell ,   organism = hsa )    The  result  object is a list of instances of  KEGGPathwayData  containing the results of this query. If the result is  empty , it will return a  empty  list. Use  print  to see the info.   print   result    [ format :   KGML \n  id :   04112 \n  description :   Cell   cycle   -   Caulobacter \n  hasData :   True ,   format :   KGML \n  id :   04662 \n  description :   B   cell   receptor   signaling   pathway \n  hasData :   True ,   format :   KGML \n  id :   05100 \n  description :   Bacterial   invasion   of   epithelial   cells \n  hasData :   True ,   format :   KGML \n  id :   05120 \n  description :   Epithelial   cell   signaling   in   Helicobacter   pylori   infection \n  hasData :   True ,   format :   KGML \n  id :   05217 \n  description :   Basal   cell   carcinoma \n  hasData :   True ]    Quickly parse and view the pathway.\nwe provide a  load()  method which returns a kegg pathway object:   res [ 4 ] . load () . draw ()  # aka. KEGGParser.parse(res[4].kgml).draw()    Then module will draw a pathway:", 
+            "title": "search pathway in KEGG"
+        }, 
+        {
+            "location": "/user-guide/query/#search-reactome", 
+            "text": "Reactome  provides a pretty good pathway browser, which is more interactive than other traditional pathway databases. We use SBGN and BioPAX file to generate the pathway plotting.   as usual, use  PublicDatabase.search_reactome  to search database   PublicDatabase . search_reactome ( t cell )    the result is also saved in a  list  object and you can directly view it.     [ source :   [ u http://pathwaycommons.org/pc2/reactome ] \n   id :   http : // identifiers . org / reactome / R - HSA - 983705 \n  BioPAX :   False  \n  SBGN - PD :   False  \n  description : B   Cell   Activation , \n  source :   [ u http://pathwaycommons.org/pc2/reactome ] \n   id :   http : // identifiers . org / reactome / R - HSA - 68884 \n  BioPAX :   False  \n  SBGN - PD :   False  \n  description : cell   division , \n  ... \n  source :   [ u http://pathwaycommons.org/pc2/reactome ] \n   id :   http : // identifiers . org / reactome / R - HSA - 421270 \n  BioPAX :   False  \n  SBGN - PD :   False  \n  description : Cell - cell   junction   organization ]    one thing should be  noticed  is that: the BioPAX file is larger than the other normal pathway formats(may   5MB). So this module do not retrieve it when searching the pathway, use  retrieve()  to get the pathway by yourself.   res [ 1 ] . retrieve ( proxies = proxy )    Then use load() to parse the pathway to the memory and plot the pathway   res [ 1 ] . load () . draw ()    finally we get a result in the output area.", 
+            "title": "Search Reactome"
+        }, 
+        {
+            "location": "/user-guide/query/#search-wikipathway-databases", 
+            "text": "We use the  Pathway Common  database\u2019s RESTful API. But the procedure is same as the  KEGG  searching:   The static method  search_wp  in the class  PublicDatabase , with an argument  keyword  and a optional argument  species (WikiPathway says it species, different from KEGG).   res   =   PublicDatabase . search_wp ( jak )    Result is stored in a list of  WikiPathwayData  instances. Use print to see the detail:   print   res  \n     [ \n  id :   WP2593 \n  name :   JAK / STAT \n  species :   Homo   sapiens \n  revision :   86961 \n  hasData :   True \n  score :   { u 0 :   u 4.593704 },  \n     . \n     . \n     . \n  id :   WP75 \n  name :   Toll - like   Receptor   Signaling   Pathway \n  species :   Homo   sapiens \n  revision :   83867 \n  hasData :   True \n  score :   { u 0 :   u 3.4618585 },  \n  id :   WP1449 \n  name :   Regulation   of   toll - like   receptor   signaling   pathway \n  species :   Homo   sapiens \n  revision :   81172 \n  hasData :   True \n  score :   { u 0 :   u 3.4582481 }]    similar to KEGG and Reactome query, quick drawing is supported:   res [ 4 ] . load () . draw ()   draws a pathway:", 
+            "title": "Search WikiPathway databases"
+        }, 
+        {
+            "location": "/user-guide/query/#parse-local-file", 
+            "text": "Parsing pathway from local file is as easy as searching in public databases. Each Parser(e.g.  SBGNParser ,  KGMLParser ) provides the method  parseFromFile(file_path) .\nFor example, we load a local BioPAX file and view it:  from   pypath   import   BioPAXParser  sb   =   BioPAXParser . parseFromFile ( /Users/sheep/Downloads/BioPAX/Isoleucine_biosynthesis.owl )  sb . draw ()   and get the result:", 
+            "title": "Parse local file"
+        }, 
+        {
+            "location": "/user-guide/core/", 
+            "text": "Pathway Formats\n\n\nChaos of formats\n\n\nWhile handling pathway, you will find various formats provided by different organizations, which makes a huge difficulty to unify them. As a compromise, we use different \nParsers\n and \nVisualizers\n for \nKGML\n, \nSBGN-PD\n and \nGPML\n formats. The visualizers for \nSBGN-PD\n and \nGPML\n, written in JavaScript, work well. The components used in these visualizers could be found in github (\nSBGNviz.js\n, \npvjs\n). We implement a \nPython API\n for programmers to use these visualizers via Python code. In this section, we introduce you some knowledges about format handling and pathway object operation.\n\n\nFormat Choice\n\n\n\n\nThe formats public databases provide are listed in the above figure.\n\n\n\n\nKEGG: \nKGML\n is the only choice, ignoring other formats provided in the FTP server due to the limited accession.\n\n\nWikiPathway: WikiPathway provides two formats, \nGPML\n and \nBioPAX\n. \nGPML\n is the native format and \nBioPAX\n seems derived from software. we recommend to use \nGPML\n format.\n\n\nReactome: Reactome provides both \nSBGN\n and \nBioPAX\n formats. However both of them are derived from software, they can\u2019t be directly drawn locally as what you see in Reactome\u2019s website. So we provide some advices and additional work to make its \nSBGN\n format usable. see \nHERE\n.\n\n\n\n\n\n\nNote\n\n\nThis module is concentrating on \ndata visualization\n. The final aim is to get a \nvisualized result\n. The \nSBGN-PD\n format is more recommended, due to the easier conversion from the \nBioPAX\n format to \nSBGN-PD\n format.\n\n\n\n\nWork with a Pathway Object.\n\n\nWe provide several \nmethods\n to work with the pathway object, which is a instance of class \nPathway\n.\n\n\n\n\nTo load a search result to a pathway object, use \nload()\n method: \n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nThe pathway object is the result of \nparse(data)\n method of each \nParser\n classes or the output of \nload()\n method of each \nPathwayData\n subclasses. \n\n\n\n\nVisualize methods\n\n\n\n\n\n\ndef draw(self, options=None):\n Use the \nHTML\n and \nJavascript\n to visualize the Pathway in IPython notebook, which provides interactive experience.\n\n\n\n\n\n\ndef integrate(self, id_lists, visualize_option_lists):\n Map user-defined data to the pathway in various ways. See the section: \nData Integration\n\n\n\n\n\n\ndef export(self, format):\n\n    Save the pathway object as a \nXML\n tree and return a string content.\n\n\n\n\n\n\n\n\nNote\n\n\nIn next section, a series of examples will be given to show how to use these visualization methods\n\n\n\n\nData Structure\n\n\nThe data structure of pathway object is adopted from format\u2019s \nspecifications\n, you can view it at: \n\n\n\n\nSBGN-PD\n: \nhttp://sbgn.github.io/sbgn/specifications\n\n\nGPML\n: \nhttp://www.pathvisio.org/gpml/\n\n\nKGML\n: \nhttp://www.genome.jp/kegg/xml/\n\n\nBioPAX\n: \nhttp://www.biopax.org/\n\n\n\n\nGeneral methods\n\n\n\n\nfather\n, \nchildren\n, \nroot\n for node accession.\n\n\nsummary()\n, \n__repr__\n(magic method for print object) for directly screening the node\u2019s information.\n\n\nentities\n, \nreactons\n for listing the entities and reactions in the map.\n\n\n\n\nExample of using these methods:\n\n\n\n\n\n\n\nKGML specfic\n\n\n\n\ngenes\n for listing genes in the pathway\n\n\nreactions\n for listing reactions in the pathway\n\n\nget_element_by_class\n, \nget_element_by_id\n, \nget_element_by_name\n and \nget_element_by_type\n: their usage is listed below.\n\n\n\n\n\n\n\n\n\nSBGN specfic\n\n\nThe example of operating SBGN pathway object:", 
+            "title": "Core Pathway Object"
+        }, 
+        {
+            "location": "/user-guide/core/#pathway-formats", 
+            "text": "", 
+            "title": "Pathway Formats"
+        }, 
+        {
+            "location": "/user-guide/core/#chaos-of-formats", 
+            "text": "While handling pathway, you will find various formats provided by different organizations, which makes a huge difficulty to unify them. As a compromise, we use different  Parsers  and  Visualizers  for  KGML ,  SBGN-PD  and  GPML  formats. The visualizers for  SBGN-PD  and  GPML , written in JavaScript, work well. The components used in these visualizers could be found in github ( SBGNviz.js ,  pvjs ). We implement a  Python API  for programmers to use these visualizers via Python code. In this section, we introduce you some knowledges about format handling and pathway object operation.", 
+            "title": "Chaos of formats"
+        }, 
+        {
+            "location": "/user-guide/core/#format-choice", 
+            "text": "The formats public databases provide are listed in the above figure.   KEGG:  KGML  is the only choice, ignoring other formats provided in the FTP server due to the limited accession.  WikiPathway: WikiPathway provides two formats,  GPML  and  BioPAX .  GPML  is the native format and  BioPAX  seems derived from software. we recommend to use  GPML  format.  Reactome: Reactome provides both  SBGN  and  BioPAX  formats. However both of them are derived from software, they can\u2019t be directly drawn locally as what you see in Reactome\u2019s website. So we provide some advices and additional work to make its  SBGN  format usable. see  HERE .    Note  This module is concentrating on  data visualization . The final aim is to get a  visualized result . The  SBGN-PD  format is more recommended, due to the easier conversion from the  BioPAX  format to  SBGN-PD  format.", 
+            "title": "Format Choice"
+        }, 
+        {
+            "location": "/user-guide/core/#work-with-a-pathway-object", 
+            "text": "We provide several  methods  to work with the pathway object, which is a instance of class  Pathway .   To load a search result to a pathway object, use  load()  method:       Note  The pathway object is the result of  parse(data)  method of each  Parser  classes or the output of  load()  method of each  PathwayData  subclasses.", 
+            "title": "Work with a Pathway Object."
+        }, 
+        {
+            "location": "/user-guide/core/#visualize-methods", 
+            "text": "def draw(self, options=None):  Use the  HTML  and  Javascript  to visualize the Pathway in IPython notebook, which provides interactive experience.    def integrate(self, id_lists, visualize_option_lists):  Map user-defined data to the pathway in various ways. See the section:  Data Integration    def export(self, format): \n    Save the pathway object as a  XML  tree and return a string content.     Note  In next section, a series of examples will be given to show how to use these visualization methods", 
+            "title": "Visualize methods"
+        }, 
+        {
+            "location": "/user-guide/core/#data-structure", 
+            "text": "The data structure of pathway object is adopted from format\u2019s  specifications , you can view it at:    SBGN-PD :  http://sbgn.github.io/sbgn/specifications  GPML :  http://www.pathvisio.org/gpml/  KGML :  http://www.genome.jp/kegg/xml/  BioPAX :  http://www.biopax.org/", 
+            "title": "Data Structure"
+        }, 
+        {
+            "location": "/user-guide/core/#general-methods", 
+            "text": "father ,  children ,  root  for node accession.  summary() ,  __repr__ (magic method for print object) for directly screening the node\u2019s information.  entities ,  reactons  for listing the entities and reactions in the map.   Example of using these methods:", 
+            "title": "General methods"
+        }, 
+        {
+            "location": "/user-guide/core/#kgml-specfic", 
+            "text": "genes  for listing genes in the pathway  reactions  for listing reactions in the pathway  get_element_by_class ,  get_element_by_id ,  get_element_by_name  and  get_element_by_type : their usage is listed below.", 
+            "title": "KGML specfic"
+        }, 
+        {
+            "location": "/user-guide/core/#sbgn-specfic", 
+            "text": "The example of operating SBGN pathway object:", 
+            "title": "SBGN specfic"
+        }, 
+        {
+            "location": "/user-guide/map/", 
+            "text": "Note\n\n\nMicrosoft Edge\n is not supported now. Please use \nchrome\n, \nFirefox\n or \nSafiri\n to run IPython notebook\n\n\n\n\nOverview\n\n\nThe purpose of the data mapping API is to provide a simple and flexible way for programmer to display \nadditional\n information in a pathway. Usually, we map the \ncharacter\n of \ndata\n to the \nproperty\n of \nglyph\n. Traditionally, limited information could be displayed in the nodes and arcs only by the their \ncolor\n and \nopacity\n. In our package user triggered events, such as \nmouse-click\n, are employed to demonstrate more details of the data. This processes should be handled, and then output the information in the \nuser-interested\n entity, via \nadditional-plotting\n or \nPopup windows\n.\n\n\nProperity of Glyph\n\n\nThis section introduce the props which could be used in a pathway graphic.\n\n\nnode props\n\n\n\n\nbackground-color\n\n\ncolor\n\n\nopacity (shadow node)\n\n\n\n\nedge props\n\n\n\n\nhighlight edge\n\n\nadditional edge\n\n\n\n\nadditional porps\n\n\nwork as a popup windows, as a container we cant put various data in it.\n\n\n\n\nhyper-link to outer database\n\n\ncharts\n\n\n3D models\n\n\nother infos\n\n\n\n\nImplement of Properity Setting\n\n\nWorkflow\n\n\nAs we mentioned in the last section, the pathway object provide a method called \nintegrate(option)\n. Argument option is the instance of class IntegrationOption. In next part, we will describe usage of this class.\n\n\nIntegrate method\n\n\ndef\n \nintegrate\n(\nid_lists\n,\n \nvisualize_option_lists\n)\n\n\n\n\n\n\n\n\nid_lists\n: the list of entity ID designate the target of the visualize option.\n\n\nvisualize_option_lists\n: a list of VisualizeOption instance used for specfic id.\n\n\n\n\nfor example:\n\n\nid_list\n \n=\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \n4\n]\n\n\nvisualize_option_lists\n \n=\n \n[\nvs1\n,\n \nvs2\n,\n \nvs3\n,\n \nvs4\n]\n\n\n# work likes a dict: \n\n\n{\n\n    \n1\n:\n \nvs1\n,\n\n    \n2\n:\n \nvs2\n,\n\n    \n3\n:\n \nvs3\n,\n\n    \n4\n:\n \nvs4\n\n\n}\n\n\n\n\n\n\nVisualizeOption\n\n\nThis is a class describe the behavior of a certain entity.\n\n\nThe initialization of a VisualizeOption\n\n\ndef\n \n__init__\n(\nself\n,\n\n    \ndefault_value\n=\nNone\n,\n\n    \nmouse_over\n=\nNone\n,\n\n    \nleft_click\n=\nNone\n,\n\n    \nright_click\n=\nNone\n\n\n):\n\n\n\n\n\n\n\n\nAll of four arguments receive a list of instances of class \nInteractiveAction\n(which has children: \nValueChanged\n, \nHyperLink\n, \nPopUp\n, \nConnection\n)\n\n\n\n\n# subclass of dictionary, provide the changed key-value pair value.\n\n\nclass\n \nValueChanged\n(\nInteractiveAction\n):\n\n\n\n# hyper-text link\n\n\nclass\n \nHyperLink\n(\nInteractiveAction\n):\n\n\n\n# PopUp windows\n\n\nclass\n \nPopUp\n(\nInteractiveAction\n):\n\n\n\n# HighLight or Additional Edge\n\n\nclass\n \nConnection\n(\nInteractiveAction\n)\n\n\n\n\n\n\n\n\ndefault_value\n: the default appearance of a entity. We suggest to set the prop of graphic here (like \ncolor\n, \nopacity\n).\n\n\nmouse_over\n, \nleft_click\n, \nleft_click\n: the mouse event handlers, which provide the function to demonstrate more info to a certain entity(like \nplot\n, \nmodel\n or \nimage\n).\n\n\n\n\nNext we will introduce the subclass of \nInteractiveAction\n.\n\n\nValueChanged\n\n\nValueChange class is a subclass of the dictionary containing the changeable value of \nEntity\n and \nEdge\n.  \n\n\n# init with changed color\n\n\nvc\n \n=\n \nValueChanged\n({\n\u2018\ncolor\n\u2019\n:\n \n\u2018\norange\n\u2019\n})\n\n\n\n\n\n\nHyperLink\n\n\nHyperLink class stores a URL to certain page of a website, like \nT cell receptor signaling pathway\n, which will redirect you to kegg\u2019s pathway path.\n\n\n# init with a hyper-text Link\n\n\nhp\n \n=\n \nHyperLink\n(\nname\n=\n\u201c\nKEGG\n \nDB\n\u201d\n,\n\n    \nurl\n=\n\u201c\nhttp\n:\n//\nwww\n.\nkegg\n.\njp\n/\nkegg\n-\nbin\n/\nshow_pathway\n?\nmap\n=\nhsa04660\nshow_description\n=\nshow\n\u201d\n)\n\n\n\n\n\n\nPopUp\n\n\nPopUp class presents a popup windows, which contain tabs for various informations.\n\n\nA tab receives the following types of content:\n\n\n\n\nTable\n: a html like table to present detailed informations.\n\n\nText\n: a text field.\n\n\nImage\n: a image field,which could be the chemical structures or the experiment results of a entity\n\n\ngraph\n: a \nbarplot\n, \npieplot\n, \nlineplot\n or \nscatter\n implemented by \nBaidu\n\u2019s \nEcharts\n. \nPlot chart\n and \nread the docs\n shows how to use this Library.\n\n\nmodel\n: the 3D structure of an entity, which is implemented by \n3Dmol.js\n\n\n\n\nConnection\n\n\nThis class highlight (or add) the edge between self and target entity.", 
+            "title": "Data mapping and visualize"
+        }, 
+        {
+            "location": "/user-guide/map/#overview", 
+            "text": "The purpose of the data mapping API is to provide a simple and flexible way for programmer to display  additional  information in a pathway. Usually, we map the  character  of  data  to the  property  of  glyph . Traditionally, limited information could be displayed in the nodes and arcs only by the their  color  and  opacity . In our package user triggered events, such as  mouse-click , are employed to demonstrate more details of the data. This processes should be handled, and then output the information in the  user-interested  entity, via  additional-plotting  or  Popup windows .", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/user-guide/map/#properity-of-glyph", 
+            "text": "This section introduce the props which could be used in a pathway graphic.", 
+            "title": "Properity of Glyph"
+        }, 
+        {
+            "location": "/user-guide/map/#node-props", 
+            "text": "background-color  color  opacity (shadow node)", 
+            "title": "node props"
+        }, 
+        {
+            "location": "/user-guide/map/#edge-props", 
+            "text": "highlight edge  additional edge", 
+            "title": "edge props"
+        }, 
+        {
+            "location": "/user-guide/map/#additional-porps", 
+            "text": "work as a popup windows, as a container we cant put various data in it.   hyper-link to outer database  charts  3D models  other infos", 
+            "title": "additional porps"
+        }, 
+        {
+            "location": "/user-guide/map/#implement-of-properity-setting", 
+            "text": "", 
+            "title": "Implement of Properity Setting"
+        }, 
+        {
+            "location": "/user-guide/map/#workflow", 
+            "text": "As we mentioned in the last section, the pathway object provide a method called  integrate(option) . Argument option is the instance of class IntegrationOption. In next part, we will describe usage of this class.", 
+            "title": "Workflow"
+        }, 
+        {
+            "location": "/user-guide/map/#integrate-method", 
+            "text": "def   integrate ( id_lists ,   visualize_option_lists )    id_lists : the list of entity ID designate the target of the visualize option.  visualize_option_lists : a list of VisualizeOption instance used for specfic id.   for example:  id_list   =   [ 1 ,   2 ,   3 ,   4 ]  visualize_option_lists   =   [ vs1 ,   vs2 ,   vs3 ,   vs4 ]  # work likes a dict:   { \n     1 :   vs1 , \n     2 :   vs2 , \n     3 :   vs3 , \n     4 :   vs4  }", 
+            "title": "Integrate method"
+        }, 
+        {
+            "location": "/user-guide/map/#visualizeoption", 
+            "text": "This is a class describe the behavior of a certain entity.", 
+            "title": "VisualizeOption"
+        }, 
+        {
+            "location": "/user-guide/map/#the-initialization-of-a-visualizeoption", 
+            "text": "def   __init__ ( self , \n     default_value = None , \n     mouse_over = None , \n     left_click = None , \n     right_click = None  ):    All of four arguments receive a list of instances of class  InteractiveAction (which has children:  ValueChanged ,  HyperLink ,  PopUp ,  Connection )   # subclass of dictionary, provide the changed key-value pair value.  class   ValueChanged ( InteractiveAction ):  # hyper-text link  class   HyperLink ( InteractiveAction ):  # PopUp windows  class   PopUp ( InteractiveAction ):  # HighLight or Additional Edge  class   Connection ( InteractiveAction )    default_value : the default appearance of a entity. We suggest to set the prop of graphic here (like  color ,  opacity ).  mouse_over ,  left_click ,  left_click : the mouse event handlers, which provide the function to demonstrate more info to a certain entity(like  plot ,  model  or  image ).   Next we will introduce the subclass of  InteractiveAction .", 
+            "title": "The initialization of a VisualizeOption"
+        }, 
+        {
+            "location": "/user-guide/map/#valuechanged", 
+            "text": "ValueChange class is a subclass of the dictionary containing the changeable value of  Entity  and  Edge .    # init with changed color  vc   =   ValueChanged ({ \u2018 color \u2019 :   \u2018 orange \u2019 })", 
+            "title": "ValueChanged"
+        }, 
+        {
+            "location": "/user-guide/map/#hyperlink", 
+            "text": "HyperLink class stores a URL to certain page of a website, like  T cell receptor signaling pathway , which will redirect you to kegg\u2019s pathway path.  # init with a hyper-text Link  hp   =   HyperLink ( name = \u201c KEGG   DB \u201d , \n     url = \u201c http : // www . kegg . jp / kegg - bin / show_pathway ? map = hsa04660 show_description = show \u201d )", 
+            "title": "HyperLink"
+        }, 
+        {
+            "location": "/user-guide/map/#popup", 
+            "text": "PopUp class presents a popup windows, which contain tabs for various informations.", 
+            "title": "PopUp"
+        }, 
+        {
+            "location": "/user-guide/map/#a-tab-receives-the-following-types-of-content", 
+            "text": "Table : a html like table to present detailed informations.  Text : a text field.  Image : a image field,which could be the chemical structures or the experiment results of a entity  graph : a  barplot ,  pieplot ,  lineplot  or  scatter  implemented by  Baidu \u2019s  Echarts .  Plot chart  and  read the docs  shows how to use this Library.  model : the 3D structure of an entity, which is implemented by  3Dmol.js", 
+            "title": "A tab receives the following types of content:"
+        }, 
+        {
+            "location": "/user-guide/map/#connection", 
+            "text": "This class highlight (or add) the edge between self and target entity.", 
+            "title": "Connection"
+        }, 
+        {
+            "location": "/format/", 
+            "text": "Overview\n\n\nWe are trying to support main-stream pathway format: \nKGML\n, \nBioPAX\n, \nSBGN-PD\n and \nGMPL\n.\n\n\nChoice\n\n\n\n\nFor the visualization purpose, we prefer more on the format which contains layout info. So the \nSBGN\n format is the first choice.\n\n\nKGML\n and \nGPML\n are from \nKEGG\n and \nWikiPathway\n, both are human made and well desgined data. so we \nDO NOT\n convert it to \nBioPAX\n or \nSBGN\n intend to keep is original looking. \n\n\nBioPAX\n, its visualization require additional layout procedure, so, if not necessary, we will use other format replace it.\n\n\n\n\nReactome\n\n\nReactome provide \nSBML\n, \nBioPAX\n and \nSBGN\n in Restful API and download section.\n\n\n1. \nBioPAX\n\n\nBioPAX file does not contain \nlayout\n info, its visualization requires a lyaout generation. So we can not get the layout same as the one from reactome website.\n\n\n2. \nSBGN\n\n\nThe \nSBGN\n file retrieved from Reactome Webserver look likes:\n\n\n\n\nissues and solutions\n\n\n\n\nthe \nscale\n of the graphic seem uncorrect, After enlarge the \nglyph\n should improve the visibility.\n\n\nThe complex lose its contents, we   read the \nBioPAX\n file and add the elements to the \ncomplex\n entity.\n\n\nThe loss of \nstate variable\n.\n\n\n\n\nAfter the sbgn fix\n\n\n\n\n\n\nwe get a better pathway graphic, however, some small detail remain wrong, move it to avoid overlap.\n\n\n\n\nToDo:\n\n\n\n\nfix the overlap issue\n\n\n\n\nWikiPathway\n\n\n1. \nGPML\n:\n\n\nGPML\n is the original format and recommanded to use.\n\n\n2. \nBioPAX\n\n\nThe Paxtools layout is not as good as \nGPML\n\u2019s layout.\n\n\nKEGG\n\n\nuse \nKGML", 
+            "title": "Format Discuss"
+        }, 
+        {
+            "location": "/format/#overview", 
+            "text": "We are trying to support main-stream pathway format:  KGML ,  BioPAX ,  SBGN-PD  and  GMPL .", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/format/#choice", 
+            "text": "For the visualization purpose, we prefer more on the format which contains layout info. So the  SBGN  format is the first choice.  KGML  and  GPML  are from  KEGG  and  WikiPathway , both are human made and well desgined data. so we  DO NOT  convert it to  BioPAX  or  SBGN  intend to keep is original looking.   BioPAX , its visualization require additional layout procedure, so, if not necessary, we will use other format replace it.", 
+            "title": "Choice"
+        }, 
+        {
+            "location": "/format/#reactome", 
+            "text": "Reactome provide  SBML ,  BioPAX  and  SBGN  in Restful API and download section.", 
+            "title": "Reactome"
+        }, 
+        {
+            "location": "/format/#1-biopax", 
+            "text": "BioPAX file does not contain  layout  info, its visualization requires a lyaout generation. So we can not get the layout same as the one from reactome website.", 
+            "title": "1. BioPAX"
+        }, 
+        {
+            "location": "/format/#2-sbgn", 
+            "text": "The  SBGN  file retrieved from Reactome Webserver look likes:", 
+            "title": "2. SBGN"
+        }, 
+        {
+            "location": "/format/#issues-and-solutions", 
+            "text": "the  scale  of the graphic seem uncorrect, After enlarge the  glyph  should improve the visibility.  The complex lose its contents, we   read the  BioPAX  file and add the elements to the  complex  entity.  The loss of  state variable .", 
+            "title": "issues and solutions"
+        }, 
+        {
+            "location": "/format/#after-the-sbgn-fix", 
+            "text": "we get a better pathway graphic, however, some small detail remain wrong, move it to avoid overlap.", 
+            "title": "After the sbgn fix"
+        }, 
+        {
+            "location": "/format/#todo", 
+            "text": "fix the overlap issue", 
+            "title": "ToDo:"
+        }, 
+        {
+            "location": "/format/#wikipathway", 
+            "text": "", 
+            "title": "WikiPathway"
+        }, 
+        {
+            "location": "/format/#1-gpml", 
+            "text": "GPML  is the original format and recommanded to use.", 
+            "title": "1. GPML:"
+        }, 
+        {
+            "location": "/format/#2-biopax", 
+            "text": "The Paxtools layout is not as good as  GPML \u2019s layout.", 
+            "title": "2. BioPAX"
+        }, 
+        {
+            "location": "/format/#kegg", 
+            "text": "use  KGML", 
+            "title": "KEGG"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "Note\n\n\nThis is a \ndetailed\n installation guide for who starts from install python or encountering a issue.\n\n\n\n\nWindows\n\n\n\n\nChoose and a python version from \n2.7\n or \n3.5\n, download and install it from \nPython Software Foundation\n\n\n\n\nSet the environment, usually is in: \nStart\n-\nComputer\n-\nProperty\n-\nAdvance\n-\nEnvironment Variables\n and append these value \nPYTHON_INSTALL_DIR; PYTHON_INSTALL_DIR\\Scripts\n to variable \npath\n. for example, \nC:\\Python27;C:\\Python27\\Scripts\n assuming you install python in C:\\python27\n\n\n\n\n\n\nNow you should able to use python in a command-line, open a \nCMD\n or \nPowerShell\n, type \npython\n to check is there is a python shell appear.\n\n\n\n\n\n\nC:\\Users\\sheep\npython\nPython 2.7.12 (v2.7.12:d33e0cf91556, Jun 27 2016, 15:19:22) [MSC v.1500 32 bit (\nIntel)] on win32\nType \nhelp\n, \ncopyright\n, \ncredits\n or \nlicense\n for more information.\n\n\n\n\n\n\n\n\n\nThen check the \npip\n:\n\n\n\n\nC:\\Users\\sheep\npip\n\nUsage:\n  pip \ncommand\n [options]\n\n\n\n\n\n\n\nThan nearly all the works are done, just type command below to install:\n\n\n\n\npip install pypathway\n\n\n\n\n\n\n\nNote\n\n\nYou may encounter some compile problem while installing \nIPython\n or \nPillow\n, Search in Google or StackOverflow may be a good choice.\n\n\n\n\nInstall Java\n\n\nIf you are in windows, and needs to load \nBioPAX\n format file from file system, you need to install Java Runtime Environment(JRE)\n\n\nPlease Follow this installation guide: \nInstall JAVA\n\n\nAnd make sure after installation, when type java in \nCMD\n you can see this:\n\n\nC:\n\\\nUsers\n\\\nsheep\n\\\npy35_local\njava\n\n\nusage:\n \njava\n \n[-\noptions\n]\n \nclass\n \n[\nargs\n...]\n\n\n\n\n\n\nmacOS\n\n\n\n\nPython 2.7.10\n should be pre-installed in os, using pip to install:\n\n\n\n\npip install pypathway", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/install/#windows", 
+            "text": "Choose and a python version from  2.7  or  3.5 , download and install it from  Python Software Foundation   Set the environment, usually is in:  Start - Computer - Property - Advance - Environment Variables  and append these value  PYTHON_INSTALL_DIR; PYTHON_INSTALL_DIR\\Scripts  to variable  path . for example,  C:\\Python27;C:\\Python27\\Scripts  assuming you install python in C:\\python27    Now you should able to use python in a command-line, open a  CMD  or  PowerShell , type  python  to check is there is a python shell appear.    C:\\Users\\sheep python\nPython 2.7.12 (v2.7.12:d33e0cf91556, Jun 27 2016, 15:19:22) [MSC v.1500 32 bit (\nIntel)] on win32\nType  help ,  copyright ,  credits  or  license  for more information.    Then check the  pip :   C:\\Users\\sheep pip\n\nUsage:\n  pip  command  [options]   Than nearly all the works are done, just type command below to install:   pip install pypathway   Note  You may encounter some compile problem while installing  IPython  or  Pillow , Search in Google or StackOverflow may be a good choice.", 
+            "title": "Windows"
+        }, 
+        {
+            "location": "/install/#install-java", 
+            "text": "If you are in windows, and needs to load  BioPAX  format file from file system, you need to install Java Runtime Environment(JRE)  Please Follow this installation guide:  Install JAVA  And make sure after installation, when type java in  CMD  you can see this:  C: \\ Users \\ sheep \\ py35_local java  usage:   java   [- options ]   class   [ args ...]", 
+            "title": "Install Java"
+        }, 
+        {
+            "location": "/install/#macos", 
+            "text": "Python 2.7.10  should be pre-installed in os, using pip to install:   pip install pypathway", 
+            "title": "macOS"
+        }, 
+        {
+            "location": "/chart/", 
+            "text": "Echarts-Python\n\n\nThis package provide a python API of generating \nEcharts\n config. You can view the source: \nGithub\n, \nDocumentation\n.\n\n\nInline plot method\n\n\nThe echarts-python does not enable us to plot in IPython notebook. We provide a method called plot to plot the echart object in Ipython notebook\n\n\nfrom\n \npypathway\n \nimport\n \nplot\n\n\n\n\n\n\nHere are a notebook showing how this works.\n\n\n\n\n\nPlot Guide\n\n\nBar plot\n\n\n\n\nInit a chart use \nEchart\n class\n\n\n\n\nchart\n \n=\n \nEchart\n(\nTitle\n,\n \nsubtitle\n)\n\n\n\n\n\n\n\n\nUse \nBar\n class to init a series of bar plot\n\n\n\n\nchart\n.\nuse\n(\nBar\n(\nCountry\n,\n \n[\n2\n,\n \n3\n,\n \n4\n,\n \n5\n]))\n\n\n\n\n\n\n\n\nUse \nAxis\n to set the axis\n\n\n\n\nchart\n.\nuse\n(\nAxis\n(\ncategory\n,\n \nbottom\n,\n \ndata\n=\n[\nNov\n,\n \nDec\n,\n \nJan\n,\n \nFeb\n]))\n\n\n\n\n\n\n\n\nUse \nplot\n method to view your bar plot, result is as same as above.\n\n\n\n\nScatter\n\n\n\n\nclass \nScatter\n is used for ploting a scatter\n\n\n\n\n# generate a random point\n\n\npoints\n \n=\n \n[[\nrandom\n.\nrandint\n(\n0\n,\n \n100\n)\n \n/\n \n10.0\n,\n \nrandom\n.\nrandint\n(\n0\n,\n \n100\n)\n \n/\n \n10.0\n]\n \nfor\n \n_\n \nin\n \nrange\n(\n200\n)]\n\n\n# set the random point as source data of scatter\n\n\nchart\n.\nuse\n(\nScatter\n(\nname\n=\npoints\n,\n \ndata\n=\npoints\n))\n\n\n\n\n\n\nThis IPython notebook shows a example to plot a scatter\n \n\n\n\n\nLine plot\n\n\nclass \nLine\n generate a line plot, we can set multiple line object to the plotting.\n This IPython notebook shows a example to plot a Line chart.\n  \n\n\n\n\nPie Plot\n\n\nclass \nPie\n is used for pie plot.\n This IPython notebook shows a example to plot a Pie chart.\n   \n\n\n\n\nintegrate Guide", 
+            "title": "Chart Plot"
+        }, 
+        {
+            "location": "/chart/#echarts-python", 
+            "text": "This package provide a python API of generating  Echarts  config. You can view the source:  Github ,  Documentation .", 
+            "title": "Echarts-Python"
+        }, 
+        {
+            "location": "/chart/#inline-plot-method", 
+            "text": "The echarts-python does not enable us to plot in IPython notebook. We provide a method called plot to plot the echart object in Ipython notebook  from   pypathway   import   plot   Here are a notebook showing how this works.", 
+            "title": "Inline plot method"
+        }, 
+        {
+            "location": "/chart/#plot-guide", 
+            "text": "", 
+            "title": "Plot Guide"
+        }, 
+        {
+            "location": "/chart/#bar-plot", 
+            "text": "Init a chart use  Echart  class   chart   =   Echart ( Title ,   subtitle )    Use  Bar  class to init a series of bar plot   chart . use ( Bar ( Country ,   [ 2 ,   3 ,   4 ,   5 ]))    Use  Axis  to set the axis   chart . use ( Axis ( category ,   bottom ,   data = [ Nov ,   Dec ,   Jan ,   Feb ]))    Use  plot  method to view your bar plot, result is as same as above.", 
+            "title": "Bar plot"
+        }, 
+        {
+            "location": "/chart/#scatter", 
+            "text": "class  Scatter  is used for ploting a scatter   # generate a random point  points   =   [[ random . randint ( 0 ,   100 )   /   10.0 ,   random . randint ( 0 ,   100 )   /   10.0 ]   for   _   in   range ( 200 )]  # set the random point as source data of scatter  chart . use ( Scatter ( name = points ,   data = points ))   This IPython notebook shows a example to plot a scatter", 
+            "title": "Scatter"
+        }, 
+        {
+            "location": "/chart/#line-plot", 
+            "text": "class  Line  generate a line plot, we can set multiple line object to the plotting.\n This IPython notebook shows a example to plot a Line chart.", 
+            "title": "Line plot"
+        }, 
+        {
+            "location": "/chart/#pie-plot", 
+            "text": "class  Pie  is used for pie plot.\n This IPython notebook shows a example to plot a Pie chart.", 
+            "title": "Pie Plot"
+        }, 
+        {
+            "location": "/chart/#integrate-guide", 
+            "text": "", 
+            "title": "integrate Guide"
+        }
+    ]
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="consumption" id="edge10536983" name="arc" source="entityVertex10536967" target="reactionVertex10536982">
+      <start name="start" x="1095.0" y="465.0"/>
+      <end name="end" x="1134.0" y="618.0"/>
+    </arc>
+    <arc class="production" id="edge10536984" name="arc" source="reactionVertex10536982" target="entityVertex10536968">
+      <start name="start" x="1134.0" y="636.0"/>
+      <end name="end" x="1026.0" y="744.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10536985" name="arc" source="entityVertex10536969" target="reactionVertex10536982">
+      <start name="start" x="795.0" y="585.0"/>
+      <end name="end" x="1134.0" y="618.0"/>
+    </arc>
+    <arc class="consumption" id="edge10536987" name="arc" source="entityVertex10536970" target="reactionVertex10536986">
+      <start name="start" x="1068.0" y="321.0"/>
+      <end name="end" x="822.0" y="351.0"/>
+    </arc>
+    <arc class="production" id="edge10536988" name="arc" source="reactionVertex10536986" target="entityVertex10536971">
+      <start name="start" x="822.0" y="333.0"/>
+      <end name="end" x="727.5" y="150.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10536989" name="arc" source="entityVertex10536969" target="reactionVertex10536986">
+      <start name="start" x="795.0" y="585.0"/>
+      <end name="end" x="822.0" y="351.0"/>
+    </arc>
+    <arc class="consumption" id="edge10536991" name="arc" source="entityVertex10536972" target="reactionVertex10536990">
+      <start name="start" x="960.0" y="879.0"/>
+      <end name="end" x="825.0" y="903.0"/>
+    </arc>
+    <arc class="production" id="edge10536992" name="arc" source="reactionVertex10536990" target="entityVertex10536973">
+      <start name="start" x="825.0" y="921.0"/>
+      <end name="end" x="711.0" y="1056.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10536993" name="arc" source="entityVertex10536969" target="reactionVertex10536990">
+      <start name="start" x="795.0" y="585.0"/>
+      <end name="end" x="825.0" y="903.0"/>
+    </arc>
+    <arc class="consumption" id="edge10536995" name="arc" source="entityVertex10536974" target="reactionVertex10536994">
+      <start name="start" x="1521.0" y="1149.0"/>
+      <end name="end" x="1728.0" y="1263.0"/>
+    </arc>
+    <arc class="consumption" id="edge10536996" name="arc" source="entityVertex10536975" target="reactionVertex10536994">
+      <start name="start" x="1518.0" y="1260.0"/>
+      <end name="end" x="1728.0" y="1263.0"/>
+    </arc>
+    <arc class="consumption" id="edge10536997" name="arc" source="entityVertex10536976" target="reactionVertex10536994">
+      <start name="start" x="1628.25" y="996.0"/>
+      <end name="end" x="1728.0" y="1263.0"/>
+    </arc>
+    <arc class="production" id="edge10536998" name="arc" source="reactionVertex10536994" target="entityVertex10536977">
+      <start name="start" x="1746.0" y="1263.0"/>
+      <end name="end" x="2016.0" y="1176.0"/>
+    </arc>
+    <arc class="consumption" id="edge10537000" name="arc" source="entityVertex10536977" target="reactionVertex10536999">
+      <start name="start" x="2016.0" y="1176.0"/>
+      <end name="end" x="2451.0" y="1230.0"/>
+    </arc>
+    <arc class="consumption" id="edge10537001" name="arc" source="entityVertex10536980" target="reactionVertex10536999">
+      <start name="start" x="2271.75" y="1338.0"/>
+      <end name="end" x="2451.0" y="1230.0"/>
+    </arc>
+    <arc class="consumption" id="edge10537002" name="arc" source="entityVertex10536981" target="reactionVertex10536999">
+      <start name="start" x="2209.5" y="1005.0"/>
+      <end name="end" x="2451.0" y="1230.0"/>
+    </arc>
+    <arc class="production" id="edge10537003" name="arc" source="reactionVertex10536999" target="entityVertex10536978">
+      <start name="start" x="2469.0" y="1230.0"/>
+      <end name="end" x="2680.5" y="1156.95"/>
+    </arc>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex76602294601" name="glyph">
+      <bbox h="417.0" name="bbox" w="1074.0" x="685.5" y="396.0"/>
+      <label name="label" text="nucleoplasm">
+        <bbox h="24.0" name="bbox" w="88.0" x="1542.84" y="864.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex701012294601" name="glyph">
+      <bbox h="906.0" name="bbox" w="1765.5" x="40.5" y="22.5"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="363.48" y="117.0"/>
+      </label>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536967" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="525.0" y="223.5"/>
+      <glyph class="unit of information" id="entityVertex10536967mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="533.0" y="217.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="KIF23"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536968" name="glyph">
+      <bbox h="36.0" name="bbox" w="192.0" x="465.0" y="363.0"/>
+      <glyph class="unit of information" id="entityVertex10536968mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="473.0" y="357.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="S904_S905_KIF23"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536969" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="375.0" y="283.5"/>
+      <glyph class="unit of information" id="entityVertex10536969mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="383.0" y="277.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="PLK1"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536970" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="511.5" y="151.5"/>
+      <glyph class="unit of information" id="entityVertex10536970mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="519.5" y="145.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="KIF20A"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536971" name="glyph">
+      <bbox h="36.0" name="bbox" w="153.0" x="325.5" y="66.0"/>
+      <glyph class="unit of information" id="entityVertex10536971mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="333.5" y="60.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="S528_KIF20A"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536972" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="457.5" y="430.5"/>
+      <glyph class="unit of information" id="entityVertex10536972mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="465.5" y="424.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="NUDC"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536973" name="glyph">
+      <bbox h="36.0" name="bbox" w="186.0" x="309.0" y="519.0"/>
+      <glyph class="unit of information" id="entityVertex10536973mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="317.0" y="513.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="S274_S326_NUDC"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10536974" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="738.0" y="565.5"/>
+      <glyph class="unit of information" id="entityVertex10536974mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="746.0" y="559.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="WAPAL"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10536975" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="736.5" y="621.0"/>
+      <label name="label" text="PDS5"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10536976" name="glyph">
+      <bbox h="36.0" name="bbox" w="172.5" x="771.0" y="489.0"/>
+      <glyph class="annotation" id="entityVertex10536976annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="256.0" x="865.25" y="519.0"/>
+        <callout name="callout" target="entityVertex_10536976">
+          <point name="point" x="1714.5" y="1014.0"/>
+        </callout>
+        <label name="label" text="SMC1A, SMC3, RAD21, STAG2, STAG1"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536976SA1" name="glyph">
+        <bbox h="26.0" name="bbox" w="162.5" x="771.0" y="489.0"/>
+        <label name="label" text="SA1"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536976SMC3" name="glyph">
+        <bbox h="26.0" name="bbox" w="162.5" x="771.0" y="525.0"/>
+        <label name="label" text="SMC3"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536976RAD21" name="glyph">
+        <bbox h="26.0" name="bbox" w="162.5" x="771.0" y="453.0"/>
+        <label name="label" text="RAD21"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536976SA2" name="glyph">
+        <bbox h="26.0" name="bbox" w="162.5" x="771.0" y="561.0"/>
+        <label name="label" text="SA2"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536976SMC1A" name="glyph">
+        <bbox h="26.0" name="bbox" w="162.5" x="771.0" y="417.0"/>
+        <label name="label" text="SMC1A"/>
+      </glyph>
+      <label name="label" text="Cohesin_Complex"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10536977" name="glyph">
+      <bbox h="36.0" name="bbox" w="144.0" x="972.0" y="579.0"/>
+      <glyph class="annotation" id="entityVertex10536977annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="224.0" x="1052.0" y="609.0"/>
+        <callout name="callout" target="entityVertex_10536977">
+          <point name="point" x="2088.0" y="1194.0"/>
+        </callout>
+        <label name="label" text="Cohesin Complex, PDS5, WAPAL"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977PDS5" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="579.0"/>
+        <label name="label" text="PDS5"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977FOE" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="615.0"/>
+        <label name="label" text="FOE"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977SA1" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="543.0"/>
+        <label name="label" text="SA1"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977SMC3" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="651.0"/>
+        <label name="label" text="SMC3"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977RAD21" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="507.0"/>
+        <label name="label" text="RAD21"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977SA2" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="687.0"/>
+        <label name="label" text="SA2"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536977SMC1A" name="glyph">
+        <bbox h="26.0" name="bbox" w="134.0" x="972.0" y="471.0"/>
+        <label name="label" text="SMC1A"/>
+      </glyph>
+      <label name="label" text="Cohesin_PDS5_WAPAL"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10536978" name="glyph">
+      <bbox h="45.9" name="bbox" w="171.0" x="1297.5" y="567.0"/>
+      <label name="label" text="Cohesin_PDS5_WAPAL"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10536980" name="glyph">
+      <bbox h="36.0" name="bbox" w="109.5" x="1108.5" y="660.0"/>
+      <label name="label" text="Chromatin"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10536981" name="glyph">
+      <bbox h="36.0" name="bbox" w="123.0" x="1074.0" y="493.5"/>
+      <glyph class="annotation" id="entityVertex10536981annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="88.0" x="1143.5" y="523.5"/>
+        <callout name="callout" target="entityVertex_10536981">
+          <point name="point" x="2271.0" y="1023.0"/>
+        </callout>
+        <label name="label" text="MAU2, NIPBL"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536981MAU2" name="glyph">
+        <bbox h="26.0" name="bbox" w="113.0" x="1074.0" y="493.5"/>
+        <label name="label" text="MAU2"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10536981IDN3" name="glyph">
+        <bbox h="26.0" name="bbox" w="113.0" x="1074.0" y="529.5"/>
+        <label name="label" text="IDN3"/>
+      </glyph>
+      <label name="label" text="NIPBL_MAU2"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10536982" name="glyph">
+      <port id="reactionVertex105369821" name="port" x="576.0" y="336.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="558.0" y="300.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10536986" name="glyph">
+      <port id="reactionVertex105369861" name="port" x="420.0" y="166.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="402.0" y="166.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10536990" name="glyph">
+      <port id="reactionVertex105369901" name="port" x="421.5" y="478.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="403.5" y="442.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10536994" name="glyph">
+      <port id="reactionVertex105369941" name="port" x="891.0" y="640.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="855.0" y="622.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10536999" name="glyph">
+      <port id="reactionVertex105369991" name="port" x="1252.5" y="624.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="1216.5" y="606.0"/>
+    </glyph>
+  </map>
+</sbgn>

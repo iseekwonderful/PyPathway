@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Search and Retrive Pathway - PyPathway</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="PyPathway">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="PyPathway">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-a422ff04cc.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-white palette-accent-orange">
+    
+      
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                User Guide <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Search and Retrive Pathway
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/iseekwonderful" title="@iseekwonderful on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/iseekwonderful/pypathway" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          PyPathway
+          <span class="version">
+            0.1.11
+          </span>
+        </strong>
+        
+          <br>
+          iseekwonderful/pypathway
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/iseekwonderful/pypathway/archive/0.1.11.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/iseekwonderful/pypathway/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="Get Started" href="../..">
+      Get Started
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <span class="section">User Guide</span>
+    <ul>
+      
+        
+  <li>
+    <a class="current" title="Search and Retrive Pathway" href="./">
+      Search and Retrive Pathway
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Overview" href="#overview">
+                Overview
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="try it out:" href="#try-it-out">
+                try it out:
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Supported Public Databases" href="#supported-public-databases">
+                Supported Public Databases
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Supported Pathway Format" href="#supported-pathway-format">
+                Supported Pathway Format
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Search pathway" href="#search-pathway">
+                Search pathway
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Parse local file" href="#parse-local-file">
+                Parse local file
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Core Pathway Object" href="../core/">
+      Core Pathway Object
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Data mapping and visualize" href="../map/">
+      Data mapping and visualize
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Format Discuss" href="../../format/">
+      Format Discuss
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Installation" href="../../install/">
+      Installation
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Chart Plot" href="../../chart/">
+      Chart Plot
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/iseekwonderful" target="_blank" title="@iseekwonderful on GitHub">
+                  @iseekwonderful on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="query-pathway-data-from-public-databases">Query pathway data from public databases</h1>
+<h2 id="overview">Overview</h2>
+<p>The <strong>Figure</strong> below shows the Public databases we support: <code>WikiPathway</code>, <code>Reactome</code> and <code>KEGG</code>. After retrieving pathway from these databases, <code>pypathway</code> handle the these pathway data in <strong>two</strong> different way: </p>
+<ul>
+<li><code>BioPAX</code>, <code>SBGN-PD</code>: convert to <code>SBGN-PD</code> and visualization uses <code>SBGNviz.js</code>.</li>
+<li><code>KGML</code>, <code>GPML</code>: use their own data structures and visualize it using <code>pvjs</code> and <code>Cytoscape.js</code>.</li>
+</ul>
+<p><img alt="" src="../../images/query/query_data.png" /></p>
+<blockquote>
+<p>figure 1: technical workflow of public database querying and format handling.</p>
+</blockquote>
+<ul>
+<li>After parsing raw pathway data to pathway object, you can use <code>draw()</code> method to view your pathway (it is a <code>webapp</code> integrated in <code>IPython notebook</code>):</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whether the format and the visualization method changes or not, the <code>Data Integration API</code> remains <em>same</em>.</p>
+</div>
+<h2 id="try-it-out">try it out:</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a record of IPython notebook.</p>
+</div>
+<p><img alt="" src="../../images/query/try_it_out_image.png" /></p>
+<h2 id="supported-public-databases">Supported Public Databases</h2>
+<p>There are three public databases we support: <code>KEGG</code>, <code>Reactome</code> and the <code>WikiPathway</code>, which may satisfy most of the requirement.</p>
+<p>The supported databases are defined in the class <code>SupportedDatabase</code></p>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="n">SupportedDatabase:</span>
+    <span class="s">&#39;&#39;&#39;</span>
+<span class="s">    This class lists the database we support currently</span>
+<span class="s">    &#39;&#39;&#39;</span>
+    <span class="n">KEGG</span> = <span class="s">&#39;kegg&#39;</span>
+    <span class="n">REACTOME</span> = <span class="s">&#39;reactome&#39;</span>
+    <span class="n">WikiPathways</span> = <span class="s">&#39;wikipathways&#39;</span>
+</pre></div>
+
+
+<h2 id="supported-pathway-format">Supported Pathway Format</h2>
+<p>We support four main stream data format: <code>BioPAX</code>, <code>SBGN-PD</code>, <code>GPML</code> and <code>KGML</code>. First two are community support open source format, <code>GPML</code> is used by <code>WikiPathway</code>, and last one is defined by famous <code>KEGG</code>.</p>
+<p>The supported data formats are defined in the class <code>PathwayFormat</code></p>
+<div class="code"><pre><span></span><span class="k">class</span> <span class="n">PathwayFormat:</span>
+    <span class="s">&#39;&#39;&#39;</span>
+<span class="s">    This class list the format we support currently</span>
+<span class="s">    &#39;&#39;&#39;</span>
+    <span class="n">BioPAX</span> = <span class="s">&quot;BIOPAX&quot;</span>
+    <span class="n">KGML</span> = <span class="s">&quot;KGML&quot;</span>
+    <span class="n">SBGN</span> = <span class="s">&quot;SBGN&quot;</span>
+    <span class="n">GPML</span> = <span class="s">&quot;GPML&quot;</span>
+</pre></div>
+
+
+<h2 id="search-pathway">Search pathway</h2>
+<h3 id="search-pathway-in-kegg">search pathway in KEGG</h3>
+<p>Different from Reactome or WikiPathway, KEGG only supports a relative simple search API which can only search by <code>keyword</code> and <code>organism</code>.</p>
+<p><strong>To search pathway in KEGG</strong>:</p>
+<ul>
+<li>The static method <code>search_kegg</code> in the class <code>PublicDatabase</code>, with an argument <code>keyword</code> and a optional argument <code>organism</code>, is used for searching in KEGG.</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;b cell&quot;</span><span class="p">,</span> <span class="n">organism</span><span class="o">=</span><span class="s2">&quot;hsa&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>The <code>result</code> object is a list of instances of <code>KEGGPathwayData</code> containing the results of this query. If the result is <strong>empty</strong>, it will return a <strong>empty</strong> list. Use <code>print</code> to see the info.</li>
+</ul>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="n">result</span>
+<span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="mo">04112</span>
+ <span class="n">description</span><span class="p">:</span> <span class="n">Cell</span> <span class="n">cycle</span> <span class="o">-</span> <span class="n">Caulobacter</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="mo">04662</span>
+ <span class="n">description</span><span class="p">:</span> <span class="n">B</span> <span class="n">cell</span> <span class="n">receptor</span> <span class="n">signaling</span> <span class="n">pathway</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="mo">05100</span>
+ <span class="n">description</span><span class="p">:</span> <span class="n">Bacterial</span> <span class="n">invasion</span> <span class="n">of</span> <span class="n">epithelial</span> <span class="n">cells</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="mo">05120</span>
+ <span class="n">description</span><span class="p">:</span> <span class="n">Epithelial</span> <span class="n">cell</span> <span class="n">signaling</span> <span class="ow">in</span> <span class="n">Helicobacter</span> <span class="n">pylori</span> <span class="n">infection</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span> <span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="mo">05217</span>
+ <span class="n">description</span><span class="p">:</span> <span class="n">Basal</span> <span class="n">cell</span> <span class="n">carcinoma</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span><span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>Quickly parse and view the pathway.
+we provide a <code>load()</code> method which returns a kegg pathway object:</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="c1"># aka. KEGGParser.parse(res[4].kgml).draw()</span>
+</pre></div>
+
+
+<ul>
+<li>Then module will draw a pathway:</li>
+</ul>
+<p><img alt="" src="../../images/query/kegg_result_no_data_map.png" /></p>
+<h3 id="search-reactome">Search Reactome</h3>
+<p><code>Reactome</code> provides a pretty good pathway browser, which is more interactive than other traditional pathway databases. We use SBGN and BioPAX file to generate the pathway plotting.</p>
+<ul>
+<li>as usual, use <code>PublicDatabase.search_reactome</code> to search database</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_reactome</span><span class="p">(</span><span class="s2">&quot;t cell&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>the result is also saved in a <code>list</code> object and you can directly view it.</li>
+</ul>
+<div class="code"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">source</span><span class="p">:</span> <span class="p">[</span><span class="s1">u&#39;http://pathwaycommons.org/pc2/reactome&#39;</span><span class="p">]</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">identifiers</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">reactome</span><span class="o">/</span><span class="n">R</span><span class="o">-</span><span class="n">HSA</span><span class="o">-</span><span class="mi">983705</span>
+ <span class="n">BioPAX</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">SBGN</span><span class="o">-</span><span class="n">PD</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">description</span><span class="p">:</span><span class="n">B</span> <span class="n">Cell</span> <span class="n">Activation</span><span class="p">,</span>
+ <span class="n">source</span><span class="p">:</span> <span class="p">[</span><span class="s1">u&#39;http://pathwaycommons.org/pc2/reactome&#39;</span><span class="p">]</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">identifiers</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">reactome</span><span class="o">/</span><span class="n">R</span><span class="o">-</span><span class="n">HSA</span><span class="o">-</span><span class="mi">68884</span>
+ <span class="n">BioPAX</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">SBGN</span><span class="o">-</span><span class="n">PD</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">description</span><span class="p">:</span><span class="n">cell</span> <span class="n">division</span><span class="p">,</span>
+ <span class="o">...</span>
+ <span class="n">source</span><span class="p">:</span> <span class="p">[</span><span class="s1">u&#39;http://pathwaycommons.org/pc2/reactome&#39;</span><span class="p">]</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">identifiers</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">reactome</span><span class="o">/</span><span class="n">R</span><span class="o">-</span><span class="n">HSA</span><span class="o">-</span><span class="mi">421270</span>
+ <span class="n">BioPAX</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">SBGN</span><span class="o">-</span><span class="n">PD</span><span class="p">:</span> <span class="bp">False</span> 
+ <span class="n">description</span><span class="p">:</span><span class="n">Cell</span><span class="o">-</span><span class="n">cell</span> <span class="n">junction</span> <span class="n">organization</span><span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>one thing should be <strong>noticed</strong> is that: the BioPAX file is larger than the other normal pathway formats(may &gt; 5MB). So this module do not retrieve it when searching the pathway, use <code>retrieve()</code> to get the pathway by yourself.</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">proxies</span><span class="o">=</span><span class="n">proxy</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>Then use load() to parse the pathway to the memory and plot the pathway</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+
+
+<ul>
+<li>finally we get a result in the output area.</li>
+</ul>
+<p><img alt="" src="../../images/query/reactome_query2.png" /></p>
+<h3 id="search-wikipathway-databases">Search WikiPathway databases</h3>
+<p>We use the <code>Pathway Common</code> database’s RESTful API. But the procedure is same as the <code>KEGG</code> searching:</p>
+<ul>
+<li>The static method <code>search_wp</code> in the class <code>PublicDatabase</code>, with an argument <code>keyword</code> and a optional argument <code>species</code>(WikiPathway says it species, different from KEGG).</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_wp</span><span class="p">(</span><span class="s2">&quot;jak&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li>Result is stored in a list of <code>WikiPathwayData</code> instances. Use print to see the detail:</li>
+</ul>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="n">res</span>
+<span class="o">&gt;&gt;&gt;</span>
+    <span class="p">[</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="n">WP2593</span>
+ <span class="n">name</span><span class="p">:</span> <span class="n">JAK</span><span class="o">/</span><span class="n">STAT</span>
+ <span class="n">species</span><span class="p">:</span> <span class="n">Homo</span> <span class="n">sapiens</span>
+ <span class="n">revision</span><span class="p">:</span> <span class="mi">86961</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span>
+ <span class="n">score</span><span class="p">:</span> <span class="p">{</span><span class="s1">u&#39;0&#39;</span><span class="p">:</span> <span class="s1">u&#39;4.593704&#39;</span><span class="p">},</span> 
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+ <span class="nb">id</span><span class="p">:</span> <span class="n">WP75</span>
+ <span class="n">name</span><span class="p">:</span> <span class="n">Toll</span><span class="o">-</span><span class="n">like</span> <span class="n">Receptor</span> <span class="n">Signaling</span> <span class="n">Pathway</span>
+ <span class="n">species</span><span class="p">:</span> <span class="n">Homo</span> <span class="n">sapiens</span>
+ <span class="n">revision</span><span class="p">:</span> <span class="mi">83867</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span>
+ <span class="n">score</span><span class="p">:</span> <span class="p">{</span><span class="s1">u&#39;0&#39;</span><span class="p">:</span> <span class="s1">u&#39;3.4618585&#39;</span><span class="p">},</span> 
+ <span class="nb">id</span><span class="p">:</span> <span class="n">WP1449</span>
+ <span class="n">name</span><span class="p">:</span> <span class="n">Regulation</span> <span class="n">of</span> <span class="n">toll</span><span class="o">-</span><span class="n">like</span> <span class="n">receptor</span> <span class="n">signaling</span> <span class="n">pathway</span>
+ <span class="n">species</span><span class="p">:</span> <span class="n">Homo</span> <span class="n">sapiens</span>
+ <span class="n">revision</span><span class="p">:</span> <span class="mi">81172</span>
+ <span class="n">hasData</span><span class="p">:</span> <span class="bp">True</span>
+ <span class="n">score</span><span class="p">:</span> <span class="p">{</span><span class="s1">u&#39;0&#39;</span><span class="p">:</span> <span class="s1">u&#39;3.4582481&#39;</span><span class="p">}]</span>
+</pre></div>
+
+
+<ul>
+<li>similar to KEGG and Reactome query, quick drawing is supported:</li>
+</ul>
+<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+
+
+<p>draws a pathway:</p>
+<p><img alt="" src="../../images/query/wk_query.png" /></p>
+<h2 id="parse-local-file">Parse local file</h2>
+<p>Parsing pathway from local file is as easy as searching in public databases. Each Parser(e.g. <code>SBGNParser</code>, <code>KGMLParser</code>) provides the method <code>parseFromFile(file_path)</code>.
+For example, we load a local BioPAX file and view it:</p>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">pypath</span> <span class="kn">import</span> <span class="n">BioPAXParser</span>
+<span class="n">sb</span> <span class="o">=</span> <span class="n">BioPAXParser</span><span class="o">.</span><span class="n">parseFromFile</span><span class="p">(</span><span class="s2">&quot;/Users/sheep/Downloads/BioPAX/Isoleucine_biosynthesis.owl&quot;</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+
+
+<p>and get the result:</p>
+<p><img alt="" src="../../images/query/biopax_parse2.png" /></p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../.." title="Get Started">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Get Started
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../core/" title="Core Pathway Object">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Core Pathway Object
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'iseekwonderful/pypathway';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+      <script src="../../images/iframe/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/gpml_data/interface_gpml.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/custom-element.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/d3.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/mithril.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/polyfills.bundle.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/pvjs.core.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/pvjs.custom-element.min.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/js/lib/custom-element.js"></script>
+    
+      <script src="../../images/iframe/TryItOutCase/GPML/lib/custom-element.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/FileSaver.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/backbone-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-clipboard.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-context-menus.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-cose-bilkent.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-edge-bend-editing.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-expand-collapse.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-undo-redo.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-view-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.expander-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.noty.packaged.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/jquery.qtip.min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/js/underscore.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/add-remove-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/json-to-sbgnml-converter.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-element-utilities.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-filtering.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-style-rules.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgnml-to-json-converter.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/3Dmol-min.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/add-remove-action-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/biogene-info.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/common-element-properties.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-action-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-sample-app-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/interface.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/register-undo-redo-actions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-global-variables.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-menu-functions.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-mode-handler.js"></script>
+    
+      <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
+    
+      <script src="../../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/qkegg/KEGG/kegg_data/interface_kegg.js"></script>
+    
+    
+  </body>
+</html>

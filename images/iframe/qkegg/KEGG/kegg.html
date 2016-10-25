@@ -1,0 +1,212 @@
+<!DOCTYPE>
+
+<html>
+
+	<head>
+		<title>KGMLViz</title>
+
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="css/jquery.qtip.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="cy-panzoom/cytoscape.js-panzoom.css"/>
+        <link rel="stylesheet" type="text/css" href="cy-panzoom/font-awesome-4.0.3/css/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="kegg_data/custom.css"/>
+
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="js/jquery.qtip.js"></script>
+		<script src="js/cytoscape.min.js"></script>
+		<script src="js/cytoscape-qtip.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/echarts.common.min.js"></script>
+        <script src="cy-panzoom/cytoscape-panzoom.js"></script>
+        <script src="kegg_data/interface_kegg.js"></script>
+
+        <style>
+			body {
+				font-family: helvetica;
+				font-size: 14px;
+				width: 100%;
+				height: 100%;
+			}
+
+			#cy {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 999;
+			}
+
+			h1 {
+				opacity: 0.5;
+				font-size: 1em;
+			}
+		</style>
+
+		<script>
+            var initialColor="black";
+            $.getJSON("kegg_data/config.json", function(jsonData){
+                var zoom = document.getElementById("cy").offsetWidth / parseInt(jsonData["bg"]["width"]);
+                zoom = 1 / zoom;
+                console.log(zoom);
+				var cy = window.cy = cytoscape({
+					container: document.getElementById('cy'),
+
+                    layout: {name: "preset"},
+
+                    zoom: 2.0,
+
+                    maxZoom: 2,
+                    minZoom: 0.5,
+
+
+					ready: function(){
+					},
+
+					style: [
+						{
+							selector: 'node',
+							css: {
+								'content': 'data(name)',
+                                'shape':  "rectangle"
+							}
+						},
+
+						{
+							selector: 'edge',
+							css: {
+								'target-arrow-shape': 'triangle'
+							}
+						},
+                        {
+                            selector: "node:active",
+                            css: {
+                                "background-color": "red"
+                            }
+                        },
+                        {
+                            selector: ":active",
+                            style: {
+                                "overlay-color": "transparent",
+                                "overlay-padding": 0,
+                                "overlay-opacity": 0 // and others… if the dev wants
+                            }
+                        }
+
+
+                    ],
+
+					elements: {
+						nodes: [
+                            {
+                                data: {id: 'back'},
+                                position: {x: jsonData["bg"]["width"] / 2, y: jsonData["bg"]["height"] / 2},
+                                css: {
+                                    "shape": "rectangle",
+                                    "width": jsonData["bg"]["width"],
+                                    "height": jsonData["bg"]["height"],
+                                    "background-image": "kegg_data/bg.png",
+                                    "opacity": 1
+                                },
+                                selected: false,
+                                selectable: false,
+                                locked: true
+                            }
+						],
+						edges: [
+						]
+					}
+				});
+                // the default values of each option are outlined below:
+                var defaults = {
+                    zoomFactor: 0.05, // zoom factor per zoom tick
+                    zoomDelay: 45, // how many ms between zoom ticks
+                    minZoom: 0.1, // min zoom level
+                    maxZoom: 10, // max zoom level
+                    fitPadding: 50, // padding when fitting
+                    panSpeed: 10, // how many ms in between pan ticks
+                    panDistance: 10, // max pan distance per tick
+                    panDragAreaSize: 75, // the length of the pan drag box in which the vector for panning is calculated (bigger = finer control of pan speed and direction)
+                    panMinPercentSpeed: 0.25, // the slowest speed we can pan by (as a percent of panSpeed)
+                    panInactiveArea: 8, // radius of inactive area in pan drag box
+                    panIndicatorMinOpacity: 0.5, // min opacity of pan indicator (the draggable nib); scales from this to 1.0
+                    zoomOnly: false, // a minimal version of the ui only with zooming (useful on systems with bad mousewheel resolution)
+                    fitSelector: undefined, // selector of elements to fit
+                    animateOnFit: function(){ // whether to animate on fit
+                        return false;
+                    },
+                    fitAnimationDuration: 1000, // duration of animation on fit
+
+                    // icon class names
+                    sliderHandleIcon: 'fa fa-minus',
+                    zoomInIcon: 'fa fa-plus',
+                    zoomOutIcon: 'fa fa-minus',
+                    resetIcon: 'fa fa-expand'
+                };
+                cy.panzoom( defaults );
+                // just use the regular qtip api but on cy elements
+                for(var x in jsonData["pathway"]){
+                    console.log(jsonData["pathway"][x]["nodes"]);
+                    cy.add(jsonData["pathway"][x]["nodes"]);
+                }
+                // init hook here.
+                value_change_hook();
+                cy.on("mouseover", function (event) {
+                    if (event.cyTarget == cy){
+                        return;
+                    }
+                    console.log("over" + event);
+                    on_mouse_over(event);
+                });
+                cy.on("tap", function (event){
+                    if (event.cyTarget == cy){
+                        return;
+                    }
+                    console.log("tap" + event);
+                    on_mouse_down(event);
+                });
+                cy.on("mouseout", function(event){
+                    if (event.cyTarget == cy){
+                        return;
+                    }
+                    console.log("out" + event.cyTarget.id());
+                    on_mouse_out(event);
+                });
+                cy.on("cxttap", function (event) {
+                    console.log("down" + event);
+                    right_click(event);
+                })
+            });
+        </script>
+
+    </head>
+
+	<body>
+		<div id="cy"></div>
+        <div hidden id="callback" class="container">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#home">Graphic</a></li>
+                <li><a data-toggle="tab" href="#menu1">Infomation</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active" style="width: 420px;height: 300px;margin-top: 30px;margin-bottom: 30px">
+                </div>
+                <div id="menu1" class="tab-pane fade">
+                    <table id="dynamic" class="table table-hover table-responsive table-striped",  style="width: 440px;">
+                        <tr>
+                            <td style="width: 220px">Key</td>
+                            <td style="width: 220px;">Value</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+	</body>
+
+</html>
