@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="production" id="edge11317872" name="arc" source="reactionVertex11317878" target="entityVertex11317875">
+      <end name="end" x="19119.0" y="699.0"/>
+      <start name="start" x="18942.0" y="786.0"/>
+    </arc>
+    <arc class="consumption" id="edge11317877" name="arc" source="entityVertex11317882" target="reactionVertex11317878">
+      <end name="end" x="18924.0" y="786.0"/>
+      <start name="start" x="18531.0" y="672.0"/>
+    </arc>
+    <arc class="catalysis" id="edge11317879" name="arc" source="entityVertex11317873" target="reactionVertex11317884">
+      <end name="end" x="20535.0" y="1836.0"/>
+      <start name="start" x="20444.25" y="1932.0"/>
+    </arc>
+    <arc class="catalysis" id="edge11317881" name="arc" source="entityVertex11317876" target="reactionVertex11317878">
+      <end name="end" x="18924.0" y="786.0"/>
+      <start name="start" x="18813.0" y="820.8"/>
+    </arc>
+    <arc class="consumption" id="edge11317883" name="arc" source="entityVertex11317874" target="reactionVertex11317884">
+      <end name="end" x="20535.0" y="1836.0"/>
+      <start name="start" x="20085.0" y="1719.0"/>
+    </arc>
+    <arc class="consumption" id="edge11317885" name="arc" source="entityVertex11317874" target="reactionVertex11317880">
+      <end name="end" x="20526.0" y="1710.0"/>
+      <start name="start" x="20085.0" y="1719.0"/>
+    </arc>
+    <arc class="production" id="edge11317887" name="arc" source="reactionVertex11317880" target="entityVertex11317871">
+      <end name="end" x="20817.0" y="1722.0"/>
+      <start name="start" x="20544.0" y="1710.0"/>
+    </arc>
+    <arc class="production" id="edge11317888" name="arc" source="reactionVertex11317884" target="entityVertex11317871">
+      <end name="end" x="20817.0" y="1722.0"/>
+      <start name="start" x="20553.0" y="1836.0"/>
+    </arc>
+    <arc class="catalysis" id="edge11317889" name="arc" source="entityVertex11317886" target="reactionVertex11317880">
+      <end name="end" x="20526.0" y="1710.0"/>
+      <start name="start" x="20418.0" y="1465.8"/>
+    </arc>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex1796310614428" name="glyph">
+      <bbox h="333.0" name="bbox" w="706.5" x="9445.5" y="213.0"/>
+      <label name="label" text="Golgi lumen">
+        <bbox h="24.0" name="bbox" w="88.0" x="19004.04" y="498.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex21679810614428" name="glyph">
+      <bbox h="873.0" name="bbox" w="913.5" x="10248.0" y="198.0"/>
+      <label name="label" text="secretory granule">
+        <bbox h="24.0" name="bbox" w="136.0" x="20642.16" y="468.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex7010110614428" name="glyph">
+      <bbox h="1191.0" name="bbox" w="3037.5" x="8571.0" y="16.5"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="17628.0" y="105.0"/>
+      </label>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex11317871" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="10386.0" y="852.0"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex11317873" name="glyph">
+      <bbox h="36.0" name="bbox" w="148.5" x="10185.0" y="957.0"/>
+      <label name="label" text="Homologues SLC30A8"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex11317874" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="10020.0" y="850.5"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex11317875" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="9537.0" y="340.5"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex11317876" name="glyph">
+      <bbox h="57.6" name="bbox" w="168.0" x="9364.5" y="396.0"/>
+      <glyph class="unit of information" id="entityVertex11317876mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="9372.5" y="390.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A6 coordinates "/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex11317882" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="9243.0" y="327.0"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex11317886" name="glyph">
+      <bbox h="57.6" name="bbox" w="168.0" x="10167.0" y="718.5"/>
+      <glyph class="unit of information" id="entityVertex11317886mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="10175.0" y="712.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A5 coordinates "/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11312141" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11312213" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11312215" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11317878" name="glyph">
+      <port id="reactionVertex113178781" name="port" x="9489.0" y="402.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="9453.0" y="384.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11317880" name="glyph">
+      <port id="reactionVertex113178801" name="port" x="10290.0" y="864.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="10254.0" y="846.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex11317884" name="glyph">
+      <port id="reactionVertex113178841" name="port" x="10294.5" y="927.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="10258.5" y="909.0"/>
+    </glyph>
+  </map>
+</sbgn>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Colchicine Metabolic Pathway" Author="Egon Willighagen" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">P450-mediated biotransformation pathway of colchicine with the CYP3A4, while colchicine inhibits the expression of this enzyme.</Comment>
+  <BiopaxRef>a77</BiopaxRef>
+  <BiopaxRef>e72</BiopaxRef>
+  <Graphics BoardWidth="763.0" BoardHeight="437.0"/>
+  <DataNode TextLabel="Colchicine" GraphId="c6ebc" Type="Metabolite">
+    <Graphics CenterX="145.0" CenterY="111.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="Chemspider" ID="5933"/>
+  </DataNode>
+  <DataNode TextLabel="3DMC" GraphId="d4a9d" Type="Metabolite">
+    <Graphics CenterX="310.0" CenterY="111.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="Chemspider" ID="264748"/>
+  </DataNode>
+  <DataNode TextLabel="2DMC" GraphId="d406b" Type="Metabolite">
+    <Graphics CenterX="145.0" CenterY="246.0" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="Chemspider" ID="22210"/>
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="ff780" Type="Protein">
+    <Graphics CenterX="211.0" CenterY="192.0" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P08684"/>
+  </DataNode>
+  <Interaction GraphId="id2b3f4a18">
+    <BiopaxRef>a77</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="111.0" GraphRef="c6ebc" RelX="1.0" RelY="0.0"/>
+      <Point X="270.0" Y="111.0" GraphRef="d4a9d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.3058823529411765" Shape="None" GraphId="fdf56"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="iddb8622d1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="211.0" Y="182.0" GraphRef="ff780" RelX="0.0" RelY="-1.0"/>
+      <Point X="211.0" Y="111.0" GraphRef="fdf56" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <BiopaxRef>e72</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="165.0" Y="121.0" GraphRef="c6ebc" RelX="0.5" RelY="1.0"/>
+      <Point X="191.0" Y="182.0" GraphRef="ff780" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b7125">
+    <BiopaxRef>a77</BiopaxRef>
+    <Graphics ZOrder="32769" LineThickness="1.0">
+      <Point X="145.0" Y="121.0" GraphRef="c6ebc" RelX="0.0" RelY="1.0"/>
+      <Point X="145.0" Y="236.0" GraphRef="d406b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.6173913043478261" Shape="None" GraphId="e652e"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="fbf4e">
+    <Graphics ZOrder="32770" LineThickness="1.0">
+      <Point X="171.0" Y="192.0" GraphRef="ff780" RelX="-1.0" RelY="0.0"/>
+      <Point X="145.0" Y="192.0" GraphRef="e652e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phase I biotransformation pathway via cytochrome P450</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000375</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a77">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8960070</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colchicine biotransformation by human liver microsomes. Identification of CYP3A4 as the major isoform responsible for colchicine demethylation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tateishi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soucek P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caraco Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guengerich FP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wood AJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e72">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12815172</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colchicine down-regulates cytochrome P450 2B6, 2C8, 2C9, and 3A4 in human hepatocytes by affecting their glucocorticoid receptor-mediated regulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dvorak Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modriansky M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pichard-Garcia L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balaguer P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vilarem MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulrichová J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurel P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascussi JM</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

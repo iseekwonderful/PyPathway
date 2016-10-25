@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+<owl:Ontology rdf:about="">
+ <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" />
+</owl:Ontology>
+
+<bp:BiochemicalReaction rdf:about="id44">
+ <bp:right rdf:resource="b909c" />
+ <bp:left rdf:resource="ca8" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id43">
+ <bp:right rdf:resource="f74" />
+ <bp:left rdf:resource="ca8" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id42">
+ <bp:right rdf:resource="baec0" />
+ <bp:left rdf:resource="b909c" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id41">
+ <bp:right rdf:resource="dfe" />
+ <bp:left rdf:resource="e42" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id48">
+ <bp:right rdf:resource="dfe" />
+ <bp:left rdf:resource="dfde2" />
+</bp:BiochemicalReaction>
+
+<bp:Catalysis rdf:about="id47">
+ <bp:controlled rdf:resource="id46" />
+ <bp:controller rdf:resource="ea5" />
+</bp:Catalysis>
+
+<bp:BiochemicalReaction rdf:about="id46">
+ <bp:right rdf:resource="ca8" />
+ <bp:left rdf:resource="f74" />
+</bp:BiochemicalReaction>
+
+<bp:Catalysis rdf:about="id45">
+ <bp:controlled rdf:resource="id44" />
+ <bp:controller rdf:resource="a69" />
+</bp:Catalysis>
+
+<bp:Protein rdf:about="afe">
+ <bp:entityReference rdf:resource="id13" />
+ <bp:displayName rdf:datatype = "xsd:string">ACHE</bp:displayName>
+</bp:Protein>
+
+<bp:Protein rdf:about="ba5">
+ <bp:entityReference rdf:resource="id3" />
+ <bp:displayName rdf:datatype = "xsd:string">PDHA1</bp:displayName>
+</bp:Protein>
+
+<bp:SmallMolecule rdf:about="ca8">
+ <bp:entityReference rdf:resource="id25" />
+ <bp:displayName rdf:datatype = "xsd:string">Phosphorylcholine</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:BiochemicalReaction rdf:about="id40">
+ <bp:right rdf:resource="f74" />
+ <bp:left rdf:resource="d6e" />
+</bp:BiochemicalReaction>
+
+<bp:SmallMolecule rdf:about="ddaf4">
+ <bp:entityReference rdf:resource="id33" />
+ <bp:displayName rdf:datatype = "xsd:string">Phosphatidylcholine</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:SmallMolecule rdf:about="f74">
+ <bp:entityReference rdf:resource="id19" />
+ <bp:displayName rdf:datatype = "xsd:string">Choline</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:Protein rdf:about="e2a">
+ <bp:entityReference rdf:resource="id7" />
+ <bp:displayName rdf:datatype = "xsd:string">PEMT</bp:displayName>
+</bp:Protein>
+
+<bp:Catalysis rdf:about="id38">
+ <bp:controlled rdf:resource="id37" />
+ <bp:controller rdf:resource="e2a" />
+</bp:Catalysis>
+
+<bp:BiochemicalReaction rdf:about="id39">
+ <bp:right rdf:resource="d6e" />
+ <bp:left rdf:resource="ddaf4" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id53">
+ <bp:right rdf:resource="d2e" />
+ <bp:left rdf:resource="cc9" />
+ <bp:left rdf:resource="e42" />
+</bp:BiochemicalReaction>
+
+<bp:Catalysis rdf:about="id52">
+ <bp:controlled rdf:resource="id51" />
+ <bp:controller rdf:resource="f01" />
+</bp:Catalysis>
+
+<bp:BiochemicalReaction rdf:about="id55">
+ <bp:right rdf:resource="f74" />
+ <bp:left rdf:resource="d2e" />
+</bp:BiochemicalReaction>
+
+<bp:Catalysis rdf:about="id54">
+ <bp:controlled rdf:resource="id53" />
+ <bp:controller rdf:resource="afe" />
+</bp:Catalysis>
+
+<bp:SmallMolecule rdf:about="e42">
+ <bp:entityReference rdf:resource="id23" />
+ <bp:displayName rdf:datatype = "xsd:string">Acetate</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:BioSource rdf:about="id2">
+ <bp:standardName rdf:datatype = "xsd:string">Homo sapiens</bp:standardName>
+</bp:BioSource>
+
+<bp:Pathway rdf:about="id1">
+ <bp:pathwayComponent rdf:resource="id41" />
+ <bp:pathwayComponent rdf:resource="id54" />
+ <bp:pathwayComponent rdf:resource="id52" />
+ <bp:pathwayComponent rdf:resource="id44" />
+ <bp:pathwayComponent rdf:resource="id40" />
+ <bp:pathwayComponent rdf:resource="id43" />
+ <bp:pathwayComponent rdf:resource="id50" />
+ <bp:pathwayComponent rdf:resource="id45" />
+ <bp:pathwayComponent rdf:resource="id46" />
+ <bp:pathwayComponent rdf:resource="id49" />
+ <bp:pathwayComponent rdf:resource="id48" />
+ <bp:pathwayComponent rdf:resource="id55" />
+ <bp:pathwayComponent rdf:resource="id42" />
+ <bp:pathwayComponent rdf:resource="id51" />
+ <bp:pathwayComponent rdf:resource="id38" />
+ <bp:pathwayComponent rdf:resource="id47" />
+ <bp:pathwayComponent rdf:resource="id53" />
+ <bp:pathwayComponent rdf:resource="id39" />
+ <bp:pathwayComponent rdf:resource="id37" />
+ <bp:organism rdf:resource="id2" />
+ <bp:comment rdf:datatype = "xsd:string"> (GenMAPP notes)</bp:comment>
+ <bp:comment rdf:datatype = "xsd:string">Metabolic Process (WikiPathways-category)</bp:comment>
+ <bp:comment rdf:datatype = "xsd:string"> (GenMAPP remarks)</bp:comment>
+ <bp:comment rdf:datatype = "xsd:string">Acetylcholine is an important neurotransmitter. It can be rapidly released in the synaptic cleft upon activation of the neuron. In the synaptic cleft the compound is degraded rapidly into choline and acetate, this is essential for proper neuronal functioning. Choline and Acetate are taken up into the cytosol and recycled for the next activation. (WikiPathways-description)</bp:comment>
+ <bp:displayName rdf:datatype = "xsd:string">Acetylcholine Synthesis</bp:displayName>
+</bp:Pathway>
+
+<bp:RelationshipXref rdf:about="id6">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">5161</bp:id>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id5">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id6" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id10">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">5130</bp:id>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id4">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">5160</bp:id>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id11">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id12" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id3">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id4" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id12">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">1119</bp:id>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id13">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id14" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id9">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id10" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id51">
+ <bp:right rdf:resource="cc9" />
+ <bp:left rdf:resource="f74" />
+ <bp:left rdf:resource="dfe" />
+</bp:BiochemicalReaction>
+
+<bp:RelationshipXref rdf:about="id14">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">43</bp:id>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id8">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">10400</bp:id>
+</bp:RelationshipXref>
+
+<bp:Catalysis rdf:about="id50">
+ <bp:controlled rdf:resource="id48" />
+ <bp:controller rdf:resource="a93" />
+</bp:Catalysis>
+
+<bp:ProteinReference rdf:about="id15">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id16" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id7">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id8" />
+</bp:ProteinReference>
+
+<bp:SmallMolecule rdf:about="baec0">
+ <bp:entityReference rdf:resource="id29" />
+ <bp:displayName rdf:datatype = "xsd:string">Phosphatidylethanolamine</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:Catalysis rdf:about="id49">
+ <bp:controlled rdf:resource="id48" />
+ <bp:controller rdf:resource="ba5" />
+</bp:Catalysis>
+
+<bp:Protein rdf:about="f01">
+ <bp:entityReference rdf:resource="id15" />
+ <bp:displayName rdf:datatype = "xsd:string">CHAT</bp:displayName>
+</bp:Protein>
+
+<bp:Protein rdf:about="a69">
+ <bp:entityReference rdf:resource="id9" />
+ <bp:displayName rdf:datatype = "xsd:string">PCYT1A</bp:displayName>
+</bp:Protein>
+
+<bp:UnificationXref rdf:about="id26">
+ <bp:db rdf:datatype = "xsd:string">HMDB</bp:db>
+ <bp:id rdf:datatype = "xsd:string">HMDB01565</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id25">
+ <bp:xref rdf:resource="id26" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id24">
+ <bp:db rdf:datatype = "xsd:string">CAS</bp:db>
+ <bp:id rdf:datatype = "xsd:string">64-19-7</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id23">
+ <bp:xref rdf:resource="id24" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id22">
+ <bp:db rdf:datatype = "xsd:string">CAS</bp:db>
+ <bp:id rdf:datatype = "xsd:string">72-89-9</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id21">
+ <bp:xref rdf:resource="id22" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id20">
+ <bp:db rdf:datatype = "xsd:string">CAS</bp:db>
+ <bp:id rdf:datatype = "xsd:string">62-49-7</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMolecule rdf:about="cc9">
+ <bp:entityReference rdf:resource="id27" />
+ <bp:displayName rdf:datatype = "xsd:string">Acetylcholine</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:SmallMolecule rdf:about="d6e">
+ <bp:entityReference rdf:resource="id17" />
+ <bp:displayName rdf:datatype = "xsd:string">Glycerophosphocholine</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:UnificationXref rdf:about="id18">
+ <bp:db rdf:datatype = "xsd:string">CAS</bp:db>
+ <bp:id rdf:datatype = "xsd:string">28319-77-9</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id19">
+ <bp:xref rdf:resource="id20" />
+</bp:SmallMoleculeReference>
+
+<bp:RelationshipXref rdf:about="id16">
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+ <bp:id rdf:datatype = "xsd:string">1103</bp:id>
+</bp:RelationshipXref>
+
+<bp:SmallMoleculeReference rdf:about="id17">
+ <bp:xref rdf:resource="id18" />
+</bp:SmallMoleculeReference>
+
+<bp:SmallMoleculeReference rdf:about="id35">
+ <bp:xref rdf:resource="id36" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id34">
+ <bp:db rdf:datatype = "xsd:string">HMDB</bp:db>
+ <bp:id rdf:datatype = "xsd:string">HMDB00564</bp:id>
+</bp:UnificationXref>
+
+<bp:BiochemicalReaction rdf:about="id37">
+ <bp:right rdf:resource="ddaf4" />
+ <bp:left rdf:resource="baec0" />
+</bp:BiochemicalReaction>
+
+<bp:UnificationXref rdf:about="id36">
+ <bp:db rdf:datatype = "xsd:string">HMDB</bp:db>
+ <bp:id rdf:datatype = "xsd:string">HMDB01413</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id31">
+ <bp:xref rdf:resource="id32" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id30">
+ <bp:db rdf:datatype = "xsd:string">HMDB</bp:db>
+ <bp:id rdf:datatype = "xsd:string">HMDB60501</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id33">
+ <bp:xref rdf:resource="id34" />
+</bp:SmallMoleculeReference>
+
+<bp:SmallMolecule rdf:about="d2e">
+ <bp:entityReference rdf:resource="id19" />
+ <bp:displayName rdf:datatype = "xsd:string">Choline</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:SmallMolecule rdf:about="dfde2">
+ <bp:entityReference rdf:resource="id31" />
+ <bp:displayName rdf:datatype = "xsd:string">Pyruvate from Glycolysis</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:UnificationXref rdf:about="id32">
+ <bp:db rdf:datatype = "xsd:string">HMDB</bp:db>
+ <bp:id rdf:datatype = "xsd:string">HMDB00243</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMolecule rdf:about="dfe">
+ <bp:entityReference rdf:resource="id21" />
+ <bp:displayName rdf:datatype = "xsd:string">Acetyl CoA</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:SmallMolecule rdf:about="b909c">
+ <bp:entityReference rdf:resource="id35" />
+ <bp:displayName rdf:datatype = "xsd:string">Cytidine diphosphate choline</bp:displayName>
+</bp:SmallMolecule>
+
+<bp:Protein rdf:about="a93">
+ <bp:entityReference rdf:resource="id5" />
+ <bp:displayName rdf:datatype = "xsd:string">PDHA2</bp:displayName>
+</bp:Protein>
+
+<bp:SmallMoleculeReference rdf:about="id27">
+ <bp:xref rdf:resource="id28" />
+</bp:SmallMoleculeReference>
+
+<bp:UnificationXref rdf:about="id28">
+ <bp:db rdf:datatype = "xsd:string">CAS</bp:db>
+ <bp:id rdf:datatype = "xsd:string">51-84-3</bp:id>
+</bp:UnificationXref>
+
+<bp:SmallMoleculeReference rdf:about="id29">
+ <bp:xref rdf:resource="id30" />
+</bp:SmallMoleculeReference>
+
+<bp:Protein rdf:about="ea5">
+ <bp:entityReference rdf:resource="id11" />
+ <bp:displayName rdf:datatype = "xsd:string">CHKA</bp:displayName>
+</bp:Protein>
+</rdf:RDF>

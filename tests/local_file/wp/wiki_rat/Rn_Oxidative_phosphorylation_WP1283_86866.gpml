@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Oxidative phosphorylation" Last-Modified="2/20/2013" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://www.wikipathways.org/index.php?title=Pathway:WP623&amp;amp;oldid=29958 WP623(r29958)] with a 75% conversion rate.</Comment>
+  <BiopaxRef>f1c</BiopaxRef>
+  <BiopaxRef>f85</BiopaxRef>
+  <BiopaxRef>fa1</BiopaxRef>
+  <BiopaxRef>a9c</BiopaxRef>
+  <BiopaxRef>f60</BiopaxRef>
+  <BiopaxRef>c4d</BiopaxRef>
+  <BiopaxRef>fe3</BiopaxRef>
+  <BiopaxRef>ca6</BiopaxRef>
+  <BiopaxRef>dc8</BiopaxRef>
+  <Graphics BoardWidth="828.0" BoardHeight="1209.0"/>
+  <DataNode TextLabel="NADH" GraphId="bb285" Type="Metabolite">
+    <Graphics CenterX="454.0" CenterY="502.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01487"/>
+  </DataNode>
+  <DataNode TextLabel="NAD" GraphId="a85cb" Type="Metabolite">
+    <Graphics CenterX="591.0" CenterY="210.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00902"/>
+  </DataNode>
+  <DataNode TextLabel="Hydrogen" GraphId="e8c16" Type="Metabolite">
+    <Graphics CenterX="350.0" CenterY="145.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01362"/>
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="c6275" Type="Metabolite">
+    <BiopaxRef>aac</BiopaxRef>
+    <Graphics CenterX="51.24166666666667" CenterY="259.98333333333335" Width="83.51666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01341"/>
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="c7d5a" Type="Metabolite">
+    <BiopaxRef>b84</BiopaxRef>
+    <Graphics CenterX="473.0" CenterY="259.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00538"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5a1" GraphId="ff050" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5a1"/>
+    <Graphics CenterX="224.0" CenterY="191.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="65262"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5b" GraphId="f210d" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5b"/>
+    <Graphics CenterX="224.0" CenterY="171.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="171374"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5d" GraphId="a186a" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5d"/>
+    <Graphics CenterX="224.0" CenterY="331.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="245965"/>
+  </DataNode>
+  <DataNode TextLabel="ATP5E" GraphId="eb406" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5e"/>
+    <Graphics CenterX="224.0" CenterY="311.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="245958"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5g2" GraphId="cd7d2" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5g2"/>
+    <Graphics CenterX="224.0" CenterY="251.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="171082"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5g1" GraphId="ddb0b" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5g1"/>
+    <Graphics CenterX="224.0" CenterY="371.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="29754"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5f1" GraphId="c5268" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5f1"/>
+    <Graphics CenterX="224.0" CenterY="111.48332595825195" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="171375"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5g1" GraphId="a5a12" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5g1"/>
+    <Graphics CenterX="224.0" CenterY="351.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="29754"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5g3" GraphId="a2387" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5g3"/>
+    <Graphics CenterX="224.0" CenterY="151.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="114630"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5h" GraphId="d3704" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5h"/>
+    <Graphics CenterX="224.0" CenterY="211.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000038744"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5i" GraphId="f0a77" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5i"/>
+    <Graphics CenterX="224.0" CenterY="271.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="140608"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5j" GraphId="f8add" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5j"/>
+    <Graphics CenterX="224.0" CenterY="231.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="94271"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5j2" GraphId="fa813" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5j2"/>
+    <Graphics CenterX="223.0" CenterY="451.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="690441"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5l" GraphId="c73fe" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5l"/>
+    <Graphics CenterX="223.0" CenterY="391.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="300677"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5o" GraphId="c13ca" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5o"/>
+    <Graphics CenterX="224.0" CenterY="91.48332595825195" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="192241"/>
+  </DataNode>
+  <DataNode TextLabel="Atp5s" GraphId="f8659" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp5s"/>
+    <Graphics CenterX="224.0" CenterY="71.48332595825195" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="362749"/>
+  </DataNode>
+  <DataNode TextLabel="ATP6" GraphId="b4c86" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP6"/>
+    <Graphics CenterX="223.0" CenterY="411.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26197"/>
+  </DataNode>
+  <DataNode TextLabel="Atp6ap1" GraphId="e94a0" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp6ap1"/>
+    <Graphics CenterX="224.0" CenterY="131.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="83615"/>
+  </DataNode>
+  <DataNode TextLabel="Atp6ap2" GraphId="f9138" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Atp6ap2"/>
+    <Graphics CenterX="223.0" CenterY="471.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="302526"/>
+  </DataNode>
+  <DataNode TextLabel="ATP6_RAT" GraphId="c8395" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP6_RAT"/>
+    <Graphics CenterX="224.0" CenterY="291.4833221435547" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000031979"/>
+  </DataNode>
+  <DataNode TextLabel="COX3_RAT" GraphId="c9856" Type="GeneProduct" GroupRef="a4096">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="COX3_RAT"/>
+    <Graphics CenterX="223.0" CenterY="431.48333740234375" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000030700"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa11" GraphId="fedac" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa11"/>
+    <Graphics CenterX="672.0" CenterY="329.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="301123"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs7" GraphId="a1435" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs7"/>
+    <Graphics CenterX="672.0" CenterY="429.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="362837"/>
+  </DataNode>
+  <DataNode TextLabel="ND1" GraphId="f74d4" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND1"/>
+    <Graphics CenterX="672.0" CenterY="529.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26193"/>
+  </DataNode>
+  <DataNode TextLabel="ND2" GraphId="ffd67" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND2"/>
+    <Graphics CenterX="672.0" CenterY="629.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26194"/>
+  </DataNode>
+  <DataNode TextLabel="ND3" GraphId="dc432" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND3"/>
+    <Graphics CenterX="672.0" CenterY="709.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26199"/>
+  </DataNode>
+  <DataNode TextLabel="ND5" GraphId="da536" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND5"/>
+    <Graphics CenterX="672.0" CenterY="949.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26202"/>
+  </DataNode>
+  <DataNode TextLabel="ND4L" GraphId="cbb28" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND4L"/>
+    <Graphics CenterX="672.0" CenterY="869.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26200"/>
+  </DataNode>
+  <DataNode TextLabel="ND4" GraphId="ffb0c" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND4"/>
+    <Graphics CenterX="672.0" CenterY="789.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26201"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa2" GraphId="dea38" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa2"/>
+    <Graphics CenterX="672.0" CenterY="1109.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="291660"/>
+  </DataNode>
+  <DataNode TextLabel="ND6" GraphId="fcc96" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ND6"/>
+    <Graphics CenterX="672.0" CenterY="1029.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="26203"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa10l1" GraphId="bf64a" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa10l1"/>
+    <Graphics CenterX="672.0" CenterY="969.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="316632"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa8" GraphId="b9c08" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa8"/>
+    <Graphics CenterX="672.0" CenterY="809.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="296658"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa5" GraphId="ba4b2" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa5"/>
+    <Graphics CenterX="672.0" CenterY="549.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="25488"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa4" GraphId="a3948" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa4"/>
+    <Graphics CenterX="672.0" CenterY="449.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="681024"/>
+  </DataNode>
+  <DataNode TextLabel="NDUFA9" GraphId="c10ef" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa9"/>
+    <Graphics CenterX="672.0" CenterY="889.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="362440"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa3" GraphId="a591e" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa3"/>
+    <Graphics CenterX="672.0" CenterY="349.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="691001"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufab1" GraphId="b9d35" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufab1"/>
+    <Graphics CenterX="672.0" CenterY="1049.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="293453"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa7" GraphId="c423b" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa7"/>
+    <Graphics CenterX="672.0" CenterY="729.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="299643"/>
+  </DataNode>
+  <DataNode TextLabel="CI-SGDH" GraphId="b30f8" Type="GeneProduct" GroupRef="daf0d">
+    <Graphics CenterX="672.0" CenterY="1129.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Ndufa6" GraphId="fb62d" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufa6"/>
+    <Graphics CenterX="672.0" CenterY="649.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="315167"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs1" GraphId="a5835" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs1"/>
+    <Graphics CenterX="672.0" CenterY="489.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="301458"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs2" GraphId="e4e03" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs2"/>
+    <Graphics CenterX="672.0" CenterY="589.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="289218"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb8" GraphId="b8ffa" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb8"/>
+    <Graphics CenterX="672.0" CenterY="909.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="293991"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs3" GraphId="d5a47" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs3"/>
+    <Graphics CenterX="672.0" CenterY="689.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="295923"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs8" GraphId="e63cc" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs8"/>
+    <Graphics CenterX="672.0" CenterY="1089.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="293652"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb2" GraphId="a9d8a" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb2"/>
+    <Graphics CenterX="672.0" CenterY="369.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="362344"/>
+  </DataNode>
+  <DataNode TextLabel="LOC679739" GraphId="b6c0f" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="LOC679739"/>
+    <Graphics CenterX="672.0" CenterY="1009.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="679739"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs4" GraphId="c9e09" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs4"/>
+    <Graphics CenterX="672.0" CenterY="849.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="499529"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb10" GraphId="d150d" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb10"/>
+    <Graphics CenterX="672.0" CenterY="1069.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="681418"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufc1" GraphId="b80a3" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufc1"/>
+    <Graphics CenterX="672.0" CenterY="1149.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="689938"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufs5" GraphId="a52ad" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufs5"/>
+    <Graphics CenterX="672.0" CenterY="929.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="362588"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufv1" GraphId="ff685" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufv1"/>
+    <Graphics CenterX="672.0" CenterY="769.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="293655"/>
+  </DataNode>
+  <DataNode TextLabel="GZMB" GraphId="d219b" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gzmb"/>
+    <Graphics CenterX="672.0" CenterY="469.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="171528"/>
+  </DataNode>
+  <DataNode TextLabel="B15" GraphId="e1559" Type="GeneProduct" GroupRef="daf0d">
+    <Graphics CenterX="672.0" CenterY="569.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb7" GraphId="a6b6b" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb7"/>
+    <Graphics CenterX="672.0" CenterY="829.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="361385"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb6" GraphId="be637" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb6"/>
+    <Graphics CenterX="672.0" CenterY="749.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="297990"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufc2" GraphId="c6383" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufc2"/>
+    <Graphics CenterX="672.0" CenterY="389.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="293130"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb5" GraphId="ea3f1" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb5"/>
+    <Graphics CenterX="672.0" CenterY="669.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="294964"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufb9" GraphId="a5623" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufb9"/>
+    <Graphics CenterX="672.0" CenterY="989.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="299954"/>
+  </DataNode>
+  <DataNode TextLabel="Ndufv2" GraphId="d60aa" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufv2"/>
+    <Graphics CenterX="672.0" CenterY="1169.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="81728"/>
+  </DataNode>
+  <DataNode TextLabel="LOC727762" GraphId="a43ad" Type="GeneProduct" GroupRef="daf0d">
+    <Graphics CenterX="672.0" CenterY="609.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="NUOMS" GraphId="ccd3a" Type="GeneProduct" GroupRef="daf0d">
+    <Graphics CenterX="672.0" CenterY="509.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Ndufv3" GraphId="b8dbf" Type="GeneProduct" GroupRef="daf0d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Ndufv3"/>
+    <Graphics CenterX="672.0" CenterY="409.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="64539"/>
+  </DataNode>
+  <Interaction GraphId="fdce3">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="798.0" Y="502.25" GraphRef="c6b79" RelX="1.0" RelY="-0.5"/>
+      <Point X="591.0" Y="200.0" GraphRef="a85cb" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="cdde1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="272.0" Y="259.7416687011719" GraphRef="cb500" RelX="1.0" RelY="0.0"/>
+      <Point X="433.0" Y="259.0" GraphRef="c7d5a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.5" Shape="None" GraphId="cba25"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b45f9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="350.0" Y="155.0" GraphRef="e8c16" RelX="0.0" RelY="1.0"/>
+      <Point X="352.5" Y="259.37083435058594" GraphRef="cba25" RelX="0.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c6f84">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="93.0" Y="259.98333333333335" GraphRef="c6275" RelX="1.0" RelY="0.0"/>
+      <Point X="175.0" Y="259.7416687011719" GraphRef="cb500" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d0955">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="798.0" Y="502.25" GraphRef="c6b79" RelX="1.0" RelY="-0.5"/>
+      <Point X="350.0" Y="135.0" GraphRef="e8c16" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c01e8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="494.0" Y="502.0" GraphRef="bb285" RelX="1.0" RelY="0.0"/>
+      <Point X="568.0" Y="502.25" GraphRef="c6b79" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="ATP synthase" GraphId="c595e" GroupRef="a4096">
+    <Graphics CenterX="224.0" CenterY="48.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Nicotinamide nucleotide transhydrogenase." GraphId="c4ec9" GroupRef="daf0d">
+    <Graphics CenterX="683.0" CenterY="299.0" Width="214.0" Height="34.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Group GroupId="a4096" GraphId="cb500" Style="Group"/>
+  <Group GroupId="daf0d" GraphId="c6b79" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dc8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">388618</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keilin's respiratory chain concept and its chemiosmotic consequences.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1979</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4291593</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemiosmotic hypothesis of oxidative phosphorylation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moyle J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f85">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4381909</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chemi-osmotic theory of oxidative phosphorylation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1966</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tager JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veldsema-Currie RD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slater EC</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a9c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11340051</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Structures and proton-pumping strategies of mitochondrial respiratory enzymes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annu Rev Biophys Biomol Struct</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schultz BE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chan SI</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ca6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11771674</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemical functions of coenzyme Q10.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Am Coll Nutr</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crane FL</bp:AUTHORS>
+    </bp:PublicationXref>
+    
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b84">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15490415</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disturbances of purine nucleotide metabolism in uremia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semin Nephrol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rutkowski B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swierczynski J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slominska E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szolkiewicz M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smolenski RT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marlewski M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Butto B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rutkowski P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aac">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15869601</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lipid rafts are required in Galpha(i) signaling downstream of the P2Y12 receptor during ADP-mediated platelet activation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Thromb Haemost</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quinton TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunapuli SP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f60">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14641005</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The molecular machinery of Keilin's respiratory chain.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Soc Trans</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rich PR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fa1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10600673</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crucial role of the membrane potential for ATP synthesis by F(1)F(o) ATP synthases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Exp Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimroth P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaim G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthey U</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c4d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7654171</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrial proton conductance and H+/O ratio are independent of electron transport rate in isolated hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porter RK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brand MD</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fe3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3881803</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The structure, function and evolution of cytochromes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prog Biophys Mol Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathews FS</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>oxidative phosphorylation pathway</bp:TERM><bp:ID>PW:0001059</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

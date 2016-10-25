@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Phospholipid biosynthesis" Author="M Aguirre" Organism="Homo sapiens" Last-Modified="10/16/2013">
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Graphics BoardWidth="696.0" BoardHeight="335.0"/>
+  <DataNode TextLabel="Ethanolamine" GraphId="ea0ad" Type="Metabolite">
+    <Graphics CenterX="105.0" CenterY="161.0" Width="80.0" Height="23.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00189"/>
+  </DataNode>
+  <DataNode TextLabel="CKA1" GraphId="d2bc5" Type="GeneProduct">
+    <Graphics CenterX="187.5" CenterY="295.0" Width="47.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="KEGG Orthology" ID="K03097"/>
+  </DataNode>
+  <DataNode TextLabel="Phospho-&#10;ethanolamine" GraphId="f9e13" Type="Metabolite">
+    <Graphics CenterX="280.0" CenterY="161.0" Width="80.0" Height="23.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00346"/>
+  </DataNode>
+  <DataNode TextLabel="CDP-&#10;ethanolamine" GraphId="c53a7" Type="Metabolite">
+    <Graphics CenterX="456.0" CenterY="161.0" Width="80.0" Height="23.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00570"/>
+  </DataNode>
+  <DataNode TextLabel="Phosphatidyl-&#10;ethanolamine" GraphId="c31f7" Type="Metabolite">
+    <Graphics CenterX="626.0" CenterY="161.0" Width="80.0" Height="23.0" ZOrder="32771" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00350"/>
+  </DataNode>
+  <DataNode TextLabel="Phospho-&#10;choline" GraphId="aed9d" Type="Metabolite">
+    <Graphics CenterX="280.0" CenterY="260.0" Width="80.0" Height="23.0" ZOrder="32772" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00588"/>
+  </DataNode>
+  <DataNode TextLabel="CDP-choline" GraphId="f9e9c" Type="Metabolite">
+    <Graphics CenterX="456.0" CenterY="260.0" Width="80.0" Height="23.0" ZOrder="32773" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00307"/>
+  </DataNode>
+  <DataNode TextLabel="Phosphatidyl-&#10;choline" GraphId="bb94c" Type="Metabolite">
+    <Graphics CenterX="626.0" CenterY="260.0" Width="80.0" Height="23.0" ZOrder="32774" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00157"/>
+  </DataNode>
+  <DataNode TextLabel="Choline" GraphId="a7cbd" Type="Metabolite">
+    <Graphics CenterX="105.0" CenterY="260.0" Width="80.0" Height="23.0" ZOrder="32775" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="KEGG Compound" ID="C00114"/>
+  </DataNode>
+  <DataNode TextLabel="PCYT1" GraphId="e535f" Type="GeneProduct">
+    <Graphics CenterX="359.5" CenterY="294.0" Width="47.0" Height="20.0" ZOrder="32777" FontSize="10" Valign="Middle"/>
+    <Xref Database="KEGG Orthology" ID="K00968"/>
+  </DataNode>
+  <DataNode TextLabel="CEPT1" GraphId="ece71" Type="GeneProduct">
+    <Graphics CenterX="534.5" CenterY="295.0" Width="47.0" Height="20.0" ZOrder="32779" FontSize="10" Valign="Middle"/>
+    <Xref Database="KEGG Orthology" ID="K00994"/>
+  </DataNode>
+  <Interaction GraphId="id39fecf0f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="145.0" Y="161.0" GraphRef="ea0ad" RelX="1.0" RelY="0.0"/>
+      <Point X="240.0" Y="161.0" GraphRef="f9e13" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc8324439">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="320.0" Y="161.0" GraphRef="f9e13" RelX="1.0" RelY="0.0"/>
+      <Point X="416.0" Y="161.0" GraphRef="c53a7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3bb8eaf3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="496.0" Y="161.0" GraphRef="c53a7" RelX="1.0" RelY="0.0"/>
+      <Point X="586.0" Y="161.0" GraphRef="c31f7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc3c4714f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="280.0" Y="172.5" GraphRef="f9e13" RelX="0.0" RelY="1.0"/>
+      <Point X="280.0" Y="248.5" GraphRef="aed9d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcdbe1cb9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="320.0" Y="260.0" GraphRef="aed9d" RelX="1.0" RelY="0.0"/>
+      <Point X="416.0" Y="260.0" GraphRef="f9e9c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4144c373">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="496.0" Y="260.0" GraphRef="f9e9c" RelX="1.0" RelY="0.0"/>
+      <Point X="586.0" Y="260.0" GraphRef="bb94c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3f8aa78f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="145.0" Y="260.0" GraphRef="a7cbd" RelX="1.0" RelY="0.0"/>
+      <Point X="240.0" Y="260.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc4cc36d0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="187.5" Y="285.0" GraphRef="d2bc5" RelX="0.0" RelY="-1.0"/>
+      <Point X="188.0" Y="262.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a794d">
+    <Graphics ZOrder="32776" LineThickness="1.0">
+      <Point X="359.5" Y="284.0" GraphRef="e535f" RelX="0.0" RelY="-1.0"/>
+      <Point X="360.0" Y="261.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d2c94">
+    <Graphics ZOrder="32778" LineThickness="1.0">
+      <Point X="534.5" Y="285.0" GraphRef="ece71" RelX="0.0" RelY="-1.0"/>
+      <Point X="535.0" Y="262.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+<Biopax><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>lipid metabolic pathway</bp:TERM><bp:ID>PW:0000010</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax></Pathway>

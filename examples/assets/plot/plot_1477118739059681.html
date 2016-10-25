@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"subtext": "In group A", "text": "Map Picks in MLG"}, "xAxis": {}, "legend": {"x": "center", "y": "top", "orient": "horizontal", "data": ["de_dust2", "de_cache", "de_mirage", "de_inferno"]}, "series": [{"type": "pie", "radius": ["50%", "70%"], "name": "Map Picks in MLG", "data": [{"value": 2, "name": "de_dust2"}, {"value": 3, "name": "de_cache"}, {"value": 12, "name": "de_mirage"}, {"value": 9, "name": "de_inferno"}]}], "yAxis": {}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

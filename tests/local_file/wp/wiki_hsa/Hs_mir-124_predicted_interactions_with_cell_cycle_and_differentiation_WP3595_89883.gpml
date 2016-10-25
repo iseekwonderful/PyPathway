@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="mir-124 predicted interactions with cell cycle and differentiation " Version="20151222" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Schematic of predicted interactions of miR-124 with cell cycle and cell differentiation machinery.
+
+A genomewide miRNA mimic toxicity screen indicates common and selective vulnerabilities of epithelial ovarian cancer cells. miR-124 is selectively toxic, mainly by inducing terminal cell differentiation via its target SIX4.</Comment>
+  <BiopaxRef>b9a</BiopaxRef>
+  <Graphics BoardWidth="666.695018226003" BoardHeight="359.2831105710818"/>
+  <DataNode TextLabel="hsa-miR-124a" GraphId="b55db" Type="Rna">
+    <Graphics CenterX="280.6804374240579" CenterY="70.47387606318351" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000422"/>
+  </DataNode>
+  <DataNode TextLabel="SIX4" GraphId="bc31c" Type="GeneProduct">
+    <Graphics CenterX="139.7326852976915" CenterY="202.91616038882105" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100625"/>
+  </DataNode>
+  <DataNode TextLabel="STRADB" GraphId="ccbb3" Type="GeneProduct">
+    <Graphics CenterX="139.7326852976915" CenterY="308.6269744835973" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000082146"/>
+  </DataNode>
+  <DataNode TextLabel="KLB1" GraphId="a31c9" Type="GeneProduct">
+    <Graphics CenterX="270.9599027946532" CenterY="308.626974483597" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000118046"/>
+  </DataNode>
+  <DataNode TextLabel="AMPK" GraphId="fc27e" Type="GeneProduct">
+    <Graphics CenterX="411.90765492102037" CenterY="308.62697448359705" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000132356"/>
+  </DataNode>
+  <DataNode TextLabel="PTBP" GraphId="bae25" Type="GeneProduct">
+    <Graphics CenterX="403.4021871202922" CenterY="134.87241798298902" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000011304"/>
+  </DataNode>
+  <DataNode TextLabel="SCP1" GraphId="f3d26" Type="GeneProduct">
+    <Graphics CenterX="549.1616038882157" CenterY="190.7654921020656" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000144579"/>
+  </DataNode>
+  <Interaction GraphId="idd3d3bd2a">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="280.6804374240579" Y="80.47387606318351" GraphRef="b55db" RelX="0.0" RelY="1.0"/>
+      <Point X="403.4021871202922" Y="124.87241798298902" GraphRef="bae25" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idba9bdd6a">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="320.6804374240579" Y="70.47387606318351" GraphRef="b55db" RelX="1.0" RelY="0.0"/>
+      <Point X="549.1616038882157" Y="180.7654921020656" GraphRef="f3d26" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+      <Anchor Position="0.8645508337816026" Shape="None" GraphId="b722e"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id31b81667">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="443.4021871202922" Y="134.87241798298902" GraphRef="bae25" RelX="1.0" RelY="0.0"/>
+      <Point X="549.1616038882157" Y="134.87900117454234" GraphRef="b722e" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4b2a4814">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="549.1616038882157" Y="200.7654921020656" GraphRef="f3d26" RelX="0.0" RelY="1.0"/>
+      <Point X="549.1616038882157" Y="230.58323207776414" GraphRef="b7afc" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id161fdcb7">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="280.6804374240579" Y="80.47387606318351" GraphRef="b55db" RelX="0.0" RelY="1.0"/>
+      <Point X="139.7326852976915" Y="192.91616038882105" GraphRef="bc31c" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idb879810a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="139.7326852976915" Y="212.91616038882105" GraphRef="bc31c" RelX="0.0" RelY="1.0"/>
+      <Point X="139.7326852976915" Y="298.6269744835973" GraphRef="ccbb3" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3afb19d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="179.7326852976915" Y="308.6269744835973" GraphRef="ccbb3" RelX="1.0" RelY="0.0"/>
+      <Point X="230.9599027946532" Y="308.626974483597" GraphRef="a31c9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5279fbc9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="310.9599027946532" Y="308.626974483597" GraphRef="a31c9" RelX="1.0" RelY="0.0"/>
+      <Point X="371.90765492102037" Y="308.62697448359705" GraphRef="fc27e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2426cd12">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="451.90765492102037" Y="308.62697448359705" GraphRef="fc27e" RelX="1.0" RelY="0.0"/>
+      <Point X="502.1020656136102" Y="309.23450789793475" GraphRef="a6137" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id1ba64a9a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="179.7326852976915" Y="202.91616038882105" GraphRef="bc31c" RelX="1.0" RelY="0.0"/>
+      <Point X="205.90522478736284" Y="203.0558930741189" GraphRef="f62cb" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Neuronal differentiation" GraphId="b7afc">
+    <Graphics CenterX="549.1616038882157" CenterY="240.58323207776414" Width="155.4313487241798" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Cell polarity&#10;and differentiation" GraphId="a6137">
+    <Graphics CenterX="569.3985419198066" CenterY="309.23450789793475" Width="134.59295261239276" Height="40.09720534629411" ZOrder="32769" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Cell cycle &#10;progression" GraphId="f62cb">
+    <Graphics CenterX="258.4811664641551" CenterY="203.05589307411887" Width="105.15188335358442" Height="31.312272174969635" ZOrder="32770" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b9a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26655797</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A genome-scale screen reveals context-dependent ovarian cancer sensitivity to miRNA overexpression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Syst Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shields BB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pecot CV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McMillan E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Potts M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagel C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purinton S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim HS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borkowski RJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khan S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodriguez-Aguayo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez-Berestein G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lea J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gazdar A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baggerly KA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White MA</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>regulatory pathway</bp:TERM><bp:ID>PW:0000004</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

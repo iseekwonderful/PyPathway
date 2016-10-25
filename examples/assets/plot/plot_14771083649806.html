@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"series": [{"type": "scatter", "name": "points", "data": [[9.1, 4.5], [3.7, 3.1], [1.3, 10.0], [0.0, 8.9], [8.9, 5.1], [5.4, 0.0], [2.6, 5.1], [1.9, 2.5], [8.7, 9.4], [3.4, 9.9], [3.3, 8.7], [2.3, 9.0], [4.5, 3.5], [4.3, 4.9], [9.8, 9.6], [3.8, 1.9], [2.2, 8.0], [2.8, 1.4], [7.8, 9.1], [4.0, 3.3]]}], "title": {"subtext": "a example of scatter", "text": "Scatter"}, "legend": {"orient": "horizontal", "y": "top", "data": ["points"], "x": "center"}, "xAxis": {}, "yAxis": {}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

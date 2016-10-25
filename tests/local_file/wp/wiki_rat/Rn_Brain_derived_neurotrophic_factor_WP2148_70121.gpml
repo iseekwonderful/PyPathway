@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Brain derived neurotrophic factor" Author="David" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-category">Cellular Process</Comment>
+  <BiopaxRef>c75</BiopaxRef>
+  <Graphics BoardWidth="704.0" BoardHeight="814.0" />
+  <DataNode TextLabel="mBDNF" GraphId="c0d88" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="368.71428571428567" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24225" />
+  </DataNode>
+  <DataNode TextLabel="proBDNF" GraphId="fb2c9" Type="GeneProduct">
+    <Graphics CenterX="414.9047619047634" CenterY="232.90476190476173" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24225" />
+  </DataNode>
+  <DataNode TextLabel="plasmin" GraphId="f9fa7" Type="GeneProduct">
+    <Graphics CenterX="553.7499999999998" CenterY="298.90476190476113" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="TrkB" GraphId="cb82f" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="466.75" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25054" />
+  </DataNode>
+  <DataNode TextLabel="tPA" GraphId="c38c0" Type="GeneProduct">
+    <Graphics CenterX="618.9358254105451" CenterY="345.6523439107696" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25692" />
+  </DataNode>
+  <DataNode TextLabel="PAI-1" GraphId="b4d31" Type="GeneProduct">
+    <Graphics CenterX="619.5667777914952" CenterY="421.05943120549875" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24617" />
+  </DataNode>
+  <DataNode TextLabel="Erk2 (MAPK 1)" GraphId="df26e" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="647.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="116590" />
+  </DataNode>
+  <DataNode TextLabel="p75" GraphId="a9e43" Type="GeneProduct">
+    <Graphics CenterX="414.9047619047634" CenterY="467.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24596" />
+  </DataNode>
+  <DataNode TextLabel="plasminogen" GraphId="db770" Type="GeneProduct">
+    <Graphics CenterX="553.7499999999998" CenterY="385.9166666666668" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="85253" />
+  </DataNode>
+  <DataNode TextLabel="MAP2K1" GraphId="e4df1" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="610.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="170851" />
+  </DataNode>
+  <DataNode TextLabel="Ras" GraphId="bdd0d" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="538.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24525" />
+  </DataNode>
+  <DataNode TextLabel="Raf" GraphId="ac174" Type="GeneProduct">
+    <Graphics CenterX="212.0" CenterY="574.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24703" />
+  </DataNode>
+  <DataNode TextLabel="proBDNF" GraphId="de560" Type="GeneProduct">
+    <Graphics CenterX="414.9047619047634" CenterY="367.71428571428567" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24225" />
+  </DataNode>
+  <DataNode TextLabel="BDNF" GraphId="f3845" Type="GeneProduct">
+    <Graphics CenterX="255.0" CenterY="165.0" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24225" />
+  </DataNode>
+  <Interaction GraphId="idee5d05c5">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="414.9047619047634" Y="242.90476190476173" GraphRef="fb2c9" RelX="0.0" RelY="1.0" />
+      <Point X="414.9047619047634" Y="357.71428571428567" GraphRef="de560" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaa74d5e5">
+    <BiopaxRef>dde</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="378.71428571428567" GraphRef="c0d88" RelX="0.0" RelY="1.0" />
+      <Point X="212.0" Y="456.75" GraphRef="cb82f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2cbff397">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="374.9047619047634" Y="367.71428571428567" GraphRef="de560" RelX="-1.0" RelY="0.0" />
+      <Point X="252.0" Y="368.71428571428567" GraphRef="c0d88" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="f219a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id583f4cb2">
+    <BiopaxRef>e12</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="414.9047619047634" Y="377.71428571428567" GraphRef="de560" RelX="0.0" RelY="1.0" />
+      <Point X="414.9047619047634" Y="457.0" GraphRef="a9e43" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbc6b51e2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="619.5667777914952" Y="411.05943120549875" GraphRef="b4d31" RelX="0.0" RelY="-1.0" />
+      <Point X="618.9358254105451" Y="355.6523439107696" GraphRef="c38c0" RelX="0.0" RelY="1.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id248169f2">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="295.0" Y="165.0" GraphRef="f3845" RelX="1.0" RelY="0.0" />
+      <Point X="414.9047619047634" Y="222.90476190476173" GraphRef="fb2c9" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf0314e07">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="578.9358254105451" Y="345.6523439107696" GraphRef="c38c0" RelX="-1.0" RelY="0.0" />
+      <Point X="553.7499999999998" Y="345.7216940363008" GraphRef="a9dd0" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id46064bbc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="553.7499999999998" Y="375.9166666666668" GraphRef="db770" RelX="0.0" RelY="-1.0" />
+      <Point X="553.7499999999998" Y="308.90476190476113" GraphRef="f9fa7" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4505911708919365" Shape="None" GraphId="a9dd0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9481aa43">
+    <BiopaxRef>b44</BiopaxRef>
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="513.7499999999998" Y="298.90476190476113" GraphRef="f9fa7" RelX="-1.0" RelY="0.0" />
+      <Point X="325.8426966292135" Y="337.07865168539325" />
+      <Point X="325.74285714285804" Y="368.11428571428564" GraphRef="f219a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfb90e451">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="476.75" GraphRef="cb82f" RelX="0.0" RelY="1.0" />
+      <Point X="212.0" Y="528.0" GraphRef="bdd0d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc4519641">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="548.0" GraphRef="bdd0d" RelX="0.0" RelY="1.0" />
+      <Point X="212.0" Y="564.0" GraphRef="ac174" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2402c8a6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="584.0" GraphRef="ac174" RelX="0.0" RelY="1.0" />
+      <Point X="212.0" Y="600.0" GraphRef="e4df1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5756d45f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="620.0" GraphRef="e4df1" RelX="0.0" RelY="1.0" />
+      <Point X="212.0" Y="637.0" GraphRef="df26e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id76687706">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="212.0" Y="657.0" GraphRef="df26e" RelX="0.0" RelY="1.0" />
+      <Point X="212.5" Y="697.0" GraphRef="c81e1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd4af981">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="414.9047619047634" Y="477.0" GraphRef="a9e43" RelX="0.0" RelY="1.0" />
+      <Point X="415.7286084701815" Y="525.0" GraphRef="e3cf3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="id809ea552">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="318.5041908446164" Y="175.37072856221795" />
+      <Point X="127.01482914248872" Y="175.37072856221795" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="id2dce6ec8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="166.98903932946487" Y="154.73887814313346" />
+      <Point X="166.98903932946487" Y="141.84397163120568" />
+      <Point X="166.98903932946487" Y="128.9490651192779" />
+      <Point X="166.98903932946487" Y="128.9490651192779" />
+      <Point X="197.93681495809156" Y="128.9490651192779" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="e4af9">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="320.76724693745984" Y="155.71244358478378" />
+      <Point X="129.27788523533192" Y="155.71244358478378" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Cell survival, &#xA;Hippocampal Plasticity,&#xA;Long term potentiation" GraphId="c81e1">
+    <BiopaxRef>c97</BiopaxRef>
+    <Graphics CenterX="212.5" CenterY="719.5" Width="123.0" Height="45.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Apoptosis,&#xA;Atrophy,&#xA;Long term depression" GraphId="e3cf3">
+    <BiopaxRef>c97</BiopaxRef>
+    <Graphics CenterX="415.7286084701815" CenterY="555.0" Width="120.0" Height="60.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="e2188">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="380.75" CenterY="625.25" Width="558.5" Height="317.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a9d43">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="378.75" CenterY="361.5" Width="578.5" Height="165.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f72bd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="371.75" CenterY="162.75" Width="604.5" Height="190.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="Nucleus" GraphId="ef8b4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="227.75" CenterY="163.25" Width="278.5" Height="145.5" ZOrder="16384" FontSize="10" Align="Left" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape TextLabel="MAPK Pathway" GraphId="c4cb1">
+    <Graphics CenterX="213.25" CenterY="628.75" Width="177.5" Height="262.5" ZOrder="16384" FontSize="10" Valign="Bottom" ShapeType="RoundedRectangle" Color="999999" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e12">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16025106</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activation of p75NTR by proBDNF facilitates hippocampal long-term depression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Neurosci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woo NH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teng HK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siao CJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiaruttini C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang PT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milner TA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hempstead BL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c97">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21497180</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prenatal stress differentially alters brain-derived neurotrophic factor expression and signaling across rat strains.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuroscience</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neeley EW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berger R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koenig JI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonard S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brain-derived neurotrophic factor signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000572</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dde">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21756980</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exercise influences hippocampal plasticity by modulating brain-derived neurotrophic factor processing.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuroscience</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ding Q</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ying Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gómez-Pinilla F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c75">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21497180 </bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prenatal stress differentially alters brain-derived neurotrophic factor expression and signaling across rat strains.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuroscience</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neeley EW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berger R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koenig JI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonard S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b44">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15486301</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleavage of proBDNF by tPA/plasmin is essential for long-term hippocampal plasticity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang PT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teng HK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaitsev E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woo NT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sakata K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhen S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teng KK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yung WH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hempstead BL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu B</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

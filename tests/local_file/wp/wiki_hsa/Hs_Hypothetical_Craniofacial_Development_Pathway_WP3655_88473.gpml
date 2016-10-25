@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hypothetical Craniofacial Development Pathway" Version="20160613" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Hypothetical pathway linking cranio-facial development pathway (IRF6, TP63, TFAP2A, and TGFB3) to Rho signaling pathway through ARHGAP29 regulation. Authors of literature suspect that a decrease of ARHGAP29 concentration would result in more active form, Rho-GTP, which would down-regulate cranio-facial development genes. An implication of this active Rho-GTP may be the formation of cleft lip. This pathway is based on figure 4 from Leslie et al.</Comment>
+  <BiopaxRef>b4a</BiopaxRef>
+  <Graphics BoardWidth="766.0" BoardHeight="339.75"/>
+  <DataNode TextLabel="TFAP2A" GraphId="b8de4" Type="GeneProduct">
+    <Graphics CenterX="257.0" CenterY="75.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000137203"/>
+  </DataNode>
+  <DataNode TextLabel="TP63" GraphId="b9a7c" Type="GeneProduct">
+    <Graphics CenterX="455.0" CenterY="73.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000073282"/>
+  </DataNode>
+  <DataNode TextLabel="IRF6" GraphId="b1d3c" Type="GeneProduct">
+    <Graphics CenterX="354.0" CenterY="127.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000117595"/>
+  </DataNode>
+  <DataNode TextLabel="TGFB3" GraphId="e8c22" Type="GeneProduct">
+    <Graphics CenterX="160.0" CenterY="151.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000119699"/>
+  </DataNode>
+  <DataNode TextLabel="WNT" GraphId="c0888" Type="GeneProduct">
+    <Comment>WNT Not Specified</Comment>
+    <Graphics CenterX="106.0" CenterY="184.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125084"/>
+  </DataNode>
+  <DataNode TextLabel="RhoA" GraphId="a4e9f" Type="GeneProduct" GroupRef="db5cc">
+    <Graphics CenterX="225.0" CenterY="224.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000067560"/>
+  </DataNode>
+  <DataNode TextLabel="GTP" GraphId="d8cd5" Type="Metabolite" GroupRef="db5cc">
+    <Graphics CenterX="225.0" CenterY="244.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01440"/>
+  </DataNode>
+  <DataNode TextLabel="ARHGAP29" GraphId="a8d97" Type="GeneProduct">
+    <Graphics CenterX="354.0" CenterY="172.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000137962"/>
+  </DataNode>
+  <DataNode TextLabel="GEF" GraphId="b2267" Type="GeneProduct">
+    <Graphics CenterX="354.25" CenterY="299.75" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000275340"/>
+  </DataNode>
+  <DataNode TextLabel="RHOA" GraphId="d0426" Type="GeneProduct" GroupRef="b71c2">
+    <Graphics CenterX="481.0" CenterY="225.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000067560"/>
+  </DataNode>
+  <DataNode TextLabel="GDP" GraphId="e98ab" Type="Metabolite" GroupRef="b71c2">
+    <Graphics CenterX="481.0" CenterY="245.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00960"/>
+  </DataNode>
+  <DataNode TextLabel="Cell Migration" GraphId="b3278" Type="Pathway">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="684.0" CenterY="234.5" Width="104.0" Height="13.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <Interaction GraphId="idb4368bec">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="394.0" Y="127.0" GraphRef="b1d3c" RelX="1.0" RelY="0.0"/>
+      <Point X="475.0" Y="83.0" GraphRef="b9a7c" RelX="0.5" RelY="1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id93d15a46">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="429.0" Y="251.0" GraphRef="b236e" RelX="-1.0" RelY="0.5"/>
+      <Point X="277.0" Y="250.0" GraphRef="a1bd3" RelX="1.0" RelY="0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4868210344081369" Shape="None" GraphId="dfa8e"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id10b46316">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="354.25" Y="289.75" GraphRef="b2267" RelX="0.0" RelY="-1.0"/>
+      <Point X="355.0032027699632" Y="250.51317896559186" GraphRef="dfa8e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4c803e5e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="277.0" Y="218.0" GraphRef="a1bd3" RelX="1.0" RelY="-0.5"/>
+      <Point X="429.0" Y="219.0" GraphRef="b236e" RelX="-1.0" RelY="-0.5" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5066003029647262" Shape="None" GraphId="ad504"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcddefa6b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="354.0" Y="182.0" GraphRef="a8d97" RelX="0.0" RelY="1.0"/>
+      <Point X="354.0032460506384" Y="218.50660030296473" GraphRef="ad504" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2be573a9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="533.0" Y="235.0" GraphRef="b236e" RelX="1.0" RelY="0.0"/>
+      <Point X="632.0" Y="234.5" GraphRef="b3278" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="435.0" Y="83.0" GraphRef="b9a7c" RelX="-0.5" RelY="1.0"/>
+      <Point X="374.0" Y="117.0" GraphRef="b1d3c" RelX="0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="277.0" Y="85.0" GraphRef="b8de4" RelX="0.5" RelY="1.0"/>
+      <Point X="334.0" Y="117.0" GraphRef="b1d3c" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="354.0" Y="137.0" GraphRef="b1d3c" RelX="0.0" RelY="1.0"/>
+      <Point X="354.0" Y="162.0" GraphRef="a8d97" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="200.0" Y="151.0" GraphRef="e8c22" RelX="1.0" RelY="0.0"/>
+      <Point X="314.0" Y="127.0" GraphRef="b1d3c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="160.0" Y="161.0" GraphRef="e8c22" RelX="0.0" RelY="1.0"/>
+      <Point X="225.0" Y="214.0" GraphRef="a4e9f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="146.0" Y="184.0" GraphRef="c0888" RelX="1.0" RelY="0.0"/>
+      <Point X="185.0" Y="224.0" GraphRef="a4e9f" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Group GroupId="db5cc" GraphId="a1bd3" Style="Complex"/>
+  <Group GroupId="b71c2" GraphId="b236e" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b4a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23008150</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression and mutation analyses implicate ARHGAP29 as the etiologic gene for the cleft lip with or without cleft palate locus identified by genome-wide association on chromosome 1p22.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birth Defects Res A Clin Mol Teratol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leslie EJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mansilla MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biggs LC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schuette K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bullard S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cooper M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dunnwald M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lidral AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marazita ML</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beaty TH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray JC</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>signaling pathway pertinent to development</bp:TERM><bp:ID>PW:0000650</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>signaling pathway</bp:TERM><bp:ID>PW:0000003</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cleft lip</bp:TERM><bp:ID>DOID:9296</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

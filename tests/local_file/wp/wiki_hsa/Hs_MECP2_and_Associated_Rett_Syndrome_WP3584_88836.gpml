@@ -1,0 +1,1593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="MECP2 and Associated Rett Syndrome" Version="20150327" Author="Friederike Ehrhart" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Mecp2 is in many mammals an important regulator of neuronal function and development. It affects all cell types, especially neurons but also astrocytes, oligodendrocytes, and glial cells. Mecp2 plays an important role in neuronal differentiation, maturation, morphology and function and influences synaptic plasticity. Mutations impairing the proper function of Mecp2 are mainly associated with the Rett syndrome but may also contribute to other neurological disorders like schizophrenia, FASD (fetal alcohol syndrome), PPM-X-syndrome, autism, Prader-Will-syndrome, and Angelman-syndrome. Dependant on the cofactors Mecp2 acts as an activator or repressor of transcription and micro RNA production. It affects RNA splicing and regulates chromatin structure together with HP1 and interferes in methylation of DNA (epigenetics). The expression of Mecp2 itself is highly regulated by promotor elements, cis-regulatory elements, polyadenylation, promotor DNA methylation and miRNA. 
+Please cite this pathways as: http://www.wikipathways.org/instance/WP3584 </Comment>
+  <BiopaxRef>c74</BiopaxRef>
+  <Graphics BoardWidth="1204.2954066227335" BoardHeight="1012.6927416280282" />
+  <DataNode TextLabel="MECP2" GraphId="b5aaa" Type="GeneProduct">
+    <Comment>methyl CpG binding protein 2</Comment>
+    <Graphics CenterX="534.3506838923527" CenterY="269.67420429436675" Width="115.73007265684046" Height="63.84537306986287" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169057" />
+  </DataNode>
+  <DataNode TextLabel="APOC2" GraphId="a7199" Type="GeneProduct" GroupRef="fd397">
+    <Comment>apolipoprotein C-II</Comment>
+    <Graphics CenterX="631.6549978544751" CenterY="81.35729303132044" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000234906" />
+  </DataNode>
+  <DataNode TextLabel="CDON" GraphId="e502b" Type="GeneProduct" GroupRef="fd397">
+    <Comment>cell adhesion molecule-related/down-regulated by oncogenes</Comment>
+    <Graphics CenterX="631.6549978544751" CenterY="101.06488084850058" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000064309" />
+  </DataNode>
+  <DataNode TextLabel="CSRP1" GraphId="dab81" Type="GeneProduct" GroupRef="fd397">
+    <Comment>cysteine and glycine-rich protein 1</Comment>
+    <Graphics CenterX="631.6549978544751" CenterY="119.87085099775432" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000159176" />
+  </DataNode>
+  <DataNode TextLabel="NREP" GraphId="b24a7" Type="GeneProduct" GroupRef="fd397">
+    <Comment>neuronal regeneration related protein</Comment>
+    <Graphics CenterX="631.654997854475" CenterY="139.4604032365611" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000134986" />
+  </DataNode>
+  <DataNode TextLabel="CNP" GraphId="c497b" Type="GeneProduct" GroupRef="cac1c">
+    <Comment>2',3'-cyclic nucleotide 3' phosphodiesterase</Comment>
+    <BiopaxRef>bf3</BiopaxRef>
+    <Graphics CenterX="785.6726336753713" CenterY="81.22593402014232" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000173786" />
+  </DataNode>
+  <DataNode TextLabel="MBP" GraphId="e9615" Type="GeneProduct" GroupRef="cac1c">
+    <Comment>myelin basic protein</Comment>
+    <BiopaxRef>be3</BiopaxRef>
+    <Graphics CenterX="785.6726336753713" CenterY="100.8154862589485" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000197971" />
+  </DataNode>
+  <DataNode TextLabel="MAG" GraphId="f74be" Type="GeneProduct" GroupRef="cac1c">
+    <Comment>myelin-associated glycoprotein</Comment>
+    <BiopaxRef>be3</BiopaxRef>
+    <Graphics CenterX="785.6726336753713" CenterY="119.62145640820226" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000105695" />
+  </DataNode>
+  <DataNode TextLabel="Glutamate" GraphId="c50c6" Type="Metabolite">
+    <BiopaxRef>d5e</BiopaxRef>
+    <Graphics CenterX="942.0173437499967" CenterY="78.17652245297779" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29987" />
+  </DataNode>
+  <DataNode TextLabel="BDNF" GraphId="ab9d2" Type="GeneProduct">
+    <Comment>brain derived neurotrophic factor</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="375.86323993351965" CenterY="482.747674894744" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000176697" />
+  </DataNode>
+  <DataNode TextLabel="NCOR1" GraphId="a15a2" Type="GeneProduct" GroupRef="e5af6">
+    <Comment>nuclear receptor co-repressor 1</Comment>
+    <BiopaxRef>c4f</BiopaxRef>
+    <Graphics CenterX="102.46557441909614" CenterY="403.20648939117643" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000141027" />
+  </DataNode>
+  <DataNode TextLabel="SIN3A" GraphId="d49cf" Type="GeneProduct" GroupRef="aeff6">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="222.3880597014956" CenterY="422.2388059701501" Width="80.00000000000001" Height="19.999999999999964" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169375" />
+  </DataNode>
+  <DataNode TextLabel="OPRK1" GraphId="cee4b" Type="GeneProduct" GroupRef="a93e1">
+    <Comment>opioid receptor, kappa 1</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="566.1263501720376" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000082556" />
+  </DataNode>
+  <DataNode TextLabel="SST" GraphId="ae4fd" Type="GeneProduct" GroupRef="a93e1">
+    <Comment>Somatostatin</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="546.3459235764482" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000157005" />
+  </DataNode>
+  <DataNode TextLabel="GPRIN1" GraphId="f9894" Type="GeneProduct" GroupRef="a93e1">
+    <Comment>G protein-regulated inducer of neurite outgrowth 1</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="602.4133640029114" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169258" />
+  </DataNode>
+  <DataNode TextLabel="GAMT" GraphId="cba67" Type="GeneProduct" GroupRef="a93e1">
+    <Comment>guanidinoacetate methyltransferase</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="584.3459235764482" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130005" />
+  </DataNode>
+  <DataNode TextLabel="RBFOX1" GraphId="c41f0" Type="GeneProduct" GroupRef="abf1e">
+    <Comment>ataxin 2 binding protein 1, Rbfox1</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="430.3132997128146" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000078328" />
+  </DataNode>
+  <DataNode TextLabel="MEF2C" GraphId="c199c" Type="GeneProduct" GroupRef="abf1e">
+    <Comment>myocyte enhancer factor 2C</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="376.64693899308077" CenterY="411.5632997128145" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000081189" />
+  </DataNode>
+  <DataNode TextLabel="TET1" GraphId="f9bc0" Type="GeneProduct" GroupRef="c6e99">
+    <Comment>tet methylcytosine dioxygenase 1</Comment>
+    <BiopaxRef>b51</BiopaxRef>
+    <Graphics CenterX="494.69196548503334" CenterY="463.6030044458837" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138336" />
+  </DataNode>
+  <DataNode TextLabel="SMC3" GraphId="b9de1" Type="GeneProduct" GroupRef="e5af6">
+    <Comment>tructural maintenance of chromosomes 3</Comment>
+    <Graphics CenterX="102.46557441909614" CenterY="423.2064893911764" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000108055" />
+  </DataNode>
+  <DataNode TextLabel="HB1" GraphId="b0118" Type="GeneProduct" GroupRef="e5af6">
+    <Comment>chromatin factor, data obtained using human cell line and mouse primary tissue</Comment>
+    <BiopaxRef>d46</BiopaxRef>
+    <Graphics CenterX="102.46557441909614" CenterY="443.2064893911763" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="DLX5" GraphId="dc752" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>distal-less homeobox 5</Comment>
+    <Comment>controls GABA production</Comment>
+    <BiopaxRef>e24</BiopaxRef>
+    <BiopaxRef>a0d</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="190.6203907953854" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000105880" />
+  </DataNode>
+  <DataNode TextLabel="FGF2" GraphId="f88be" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>fibroblast growth factor 2</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="210.7728638956175" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138685" />
+  </DataNode>
+  <DataNode TextLabel="FUT8" GraphId="b3358" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>fucosyltransferase 8</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="288.04425542543555" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000033170" />
+  </DataNode>
+  <DataNode TextLabel="NF1" GraphId="ad28c" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>neurofibromatosis 1</Comment>
+    <BiopaxRef>a12</BiopaxRef>
+    <Graphics CenterX="851.7761194029849" CenterY="307.53920492038515" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000196712" />
+  </DataNode>
+  <DataNode TextLabel="GRIN1" GraphId="bb048" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>related to FASD (fetal alcohole spectrum disorder)</Comment>
+    <Comment>NMDA receptor subunit: There are 8 different variants of NR1, produced by alternative splicing of GRIN1</Comment>
+    <BiopaxRef>e24</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="324.7042273507139" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000176884" />
+  </DataNode>
+  <DataNode TextLabel="PRPF3" GraphId="f497a" Type="GeneProduct" GroupRef="f9e99">
+    <Comment>PRP3 pre-mRNA processing factor 3 homolog (yeast)</Comment>
+    <BiopaxRef>f56</BiopaxRef>
+    <Graphics CenterX="738.6360428389208" CenterY="289.18906963518793" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000134748" />
+  </DataNode>
+  <DataNode TextLabel="HP1" GraphId="b9462" Type="GeneProduct">
+    <Graphics CenterX="851.0218283582085" CenterY="371.4656716417909" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-187-5p " GraphId="f3048" Type="Rna" GroupRef="d01de">
+    <Comment>no connection between Mecp2 and miR-187 in other sources than [3]</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="561.3110443611077" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004561" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-193a-5p " GraphId="a4d17" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="920.659194864436" CenterY="579.5134048560939" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004614" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-184 " GraphId="a4696" Type="Rna" GroupRef="d01de">
+    <Comment>The effect of Mecp2 on miR-184 is discussed controversially: Nomura et al. 2008 reports an Mecp2 dependant repression of miR-184 while Liu et al. 2010 reports no effect of Mecp2 but an MBD1 dependant regulation of miR-184</Comment>
+    <BiopaxRef>d7b</BiopaxRef>
+    <BiopaxRef>a0d</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="542.2796652579777" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000454" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-29b-1-5p " GraphId="a46be" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.2335418117749" CenterY="483.34438753179217" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004514" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-329-5p" GraphId="a8da5" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.6591948644362" CenterY="653.1652182215167" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0026555" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-199b-5p " GraphId="cbf40" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.659194864436" CenterY="598.2729286131083" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000263" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-221-5p" GraphId="deffb" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="616.5856329931055" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004568" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-92a-3p " GraphId="faac1" Type="Rna" GroupRef="d01de">
+    <Comment></Comment>
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="503.03038101852354" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000092" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-296-5p" GraphId="d230e" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.6591948644362" CenterY="634.8785048109455" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000690" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-382-3p" GraphId="dc13b" Type="Rna" GroupRef="d01de">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="672.6716344604661" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0022697" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-199a-5p" GraphId="b4cc4" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="819.044257919083" CenterY="579.823389516716" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000231" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-197-3p " GraphId="cbe45" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="819.0442579190831" CenterY="561.0689826662563" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000227" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-221-3p" GraphId="eb387" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="819.044257919083" CenterY="600.0191079795391" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000278" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-222-3p" GraphId="a16ab" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="819.0442579190831" CenterY="620.0968996810149" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000279" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-146a-5p " GraphId="e7be3" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.044257919083" CenterY="522.3210851446747" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000449" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-146b-3p " GraphId="bd0e7" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.044257919083" CenterY="541.2210851446747" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004766" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-130a-3p" GraphId="b8c45" Type="Rna" GroupRef="e6ef9">
+    <Comment>Base sequence! It is unclear which mature miRNA was tested.</Comment>
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.0442579190831" CenterY="503.80544883167045" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase Sequence" ID="MIMAT0000425" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-122-5p" GraphId="fe842" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.0442579190831" CenterY="484.83298990657903" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000421" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-342-3p" GraphId="da74a" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.044257919083" CenterY="639.5643878458719" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000753" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-409-3p" GraphId="e4aed" Type="Rna" GroupRef="e6ef9">
+    <BiopaxRef>f4f</BiopaxRef>
+    <Graphics CenterX="819.0442579190831" CenterY="656.9074399205031" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0001639" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-137" GraphId="a8a41" Type="Rna" GroupRef="d01de">
+    <Comment>influences neuronal stem cell proliferation and differentiation</Comment>
+    <BiopaxRef>bcf</BiopaxRef>
+    <Graphics CenterX="920.6591948644361" CenterY="522.9956632717766" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000429" />
+  </DataNode>
+  <DataNode TextLabel="Ak087060" GraphId="cb49e" Type="GeneProduct" GroupRef="e4c86">
+    <BiopaxRef>bd9</BiopaxRef>
+    <Graphics CenterX="639.2587745668662" CenterY="488.2394068636432" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff0066" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Ak081227" GraphId="d4dc9" Type="GeneProduct" GroupRef="e4c86">
+    <BiopaxRef>bd9</BiopaxRef>
+    <Graphics CenterX="718.3244173637416" CenterY="488.2394068636432" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff0066" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="EZH2" GraphId="cb4d2" Type="GeneProduct">
+    <Comment>histone H3 lysine 27 methyltransferase</Comment>
+    <BiopaxRef>bcf</BiopaxRef>
+    <Graphics CenterX="1032.4124999999995" CenterY="451.23133124999987" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000106462" />
+  </DataNode>
+  <DataNode TextLabel="H3" GraphId="cc402" Type="GeneProduct">
+    <Comment>Histone 3</Comment>
+    <BiopaxRef>bcf</BiopaxRef>
+    <Graphics CenterX="1032.4124999999995" CenterY="416.18797499999994" Width="87.25" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="GAD1" GraphId="d775a" Type="GeneProduct">
+    <BiopaxRef>a0d</BiopaxRef>
+    <BiopaxRef>b72</BiopaxRef>
+    <Graphics CenterX="1007.2850567764287" CenterY="192.11526750899563" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000128683" />
+  </DataNode>
+  <DataNode TextLabel="GABA" GraphId="a8349" Type="Metabolite">
+    <BiopaxRef>a0d</BiopaxRef>
+    <Graphics CenterX="1109.9597149028905" CenterY="192.11526750899566" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16865" />
+  </DataNode>
+  <DataNode TextLabel="GABRR2" GraphId="f15bd" Type="GeneProduct">
+    <Comment>gamma-aminobutyric acid (GABA) C receptor, subunit rho 2</Comment>
+    <BiopaxRef>bd9</BiopaxRef>
+    <Graphics CenterX="722.5848914142306" CenterY="530.104972862453" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000111886" />
+  </DataNode>
+  <DataNode TextLabel="ARHGEF26" GraphId="d39d3" Type="GeneProduct">
+    <Comment>Rho guanine nucleotide exchange factor (GEF) 26</Comment>
+    <BiopaxRef>bd9</BiopaxRef>
+    <Graphics CenterX="634.427733512764" CenterY="529.4603179381759" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000114790" />
+  </DataNode>
+  <DataNode TextLabel="FGF4" GraphId="a7283" Type="GeneProduct" GroupRef="dcf67">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="250.43283582089563" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000075388" />
+  </DataNode>
+  <DataNode TextLabel="FGF5" GraphId="f6047" Type="GeneProduct" GroupRef="dcf67">
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="851.7761194029849" CenterY="269.4328358208958" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138675" />
+  </DataNode>
+  <DataNode TextLabel="FGF3" GraphId="b8240" Type="GeneProduct" GroupRef="dcf67">
+    <Comment>fibroblast growth factor 3</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="851.7761194029848" CenterY="230.4328358208956" Width="80.00000000000003" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000186895" />
+  </DataNode>
+  <DataNode TextLabel="SP1" GraphId="d6cbd" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>trans-acting transcription factor 1</Comment>
+    <BiopaxRef>ecf</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="52.83609106894657" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000185591" />
+  </DataNode>
+  <DataNode TextLabel="SP3" GraphId="f2b4f" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>trans-acting transcription factor 3</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="71.83609106894656" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000172845" />
+  </DataNode>
+  <DataNode TextLabel="TAP1" GraphId="c1bed" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>transporter 1, ATP-binding cassette, sub-family B (MDR/TAP) </Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="163.83609106894656" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000168394" />
+  </DataNode>
+  <DataNode TextLabel="TAF1" GraphId="d7a4f" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>TAF1 RNA polymerase II, TATA box binding protein (TBP)-associated factor</Comment>
+    <BiopaxRef>ecf</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="144.83609106894656" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000147133" />
+  </DataNode>
+  <DataNode TextLabel="C/EBP" GraphId="e5f4a" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>CCAAT/enhancer binding protein (Cebpd), delta</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="90.83609106894657" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000221869" />
+  </DataNode>
+  <DataNode TextLabel="E2F1" GraphId="f5e35" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>E2F transcription factor 1 </Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="126.83609106894657" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000101412" />
+  </DataNode>
+  <DataNode TextLabel="CTCF" GraphId="f287d" Type="GeneProduct" GroupRef="b6aa3">
+    <Comment>CCCTC-binding factor </Comment>
+    <BiopaxRef>ecf</BiopaxRef>
+    <Graphics CenterX="474.82140157650383" CenterY="108.83609106894657" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000102974" />
+  </DataNode>
+  <DataNode TextLabel="MYT1" GraphId="a28b8" Type="GeneProduct">
+    <Comment>myelin transcription factor 1</Comment>
+    <Comment>proof of Mecp2 inhibition  in Oligodendrocytes</Comment>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="388.1474116955515" CenterY="162.55800279837874" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000196132" />
+  </DataNode>
+  <DataNode TextLabel="REST" GraphId="f743a" Type="GeneProduct" GroupRef="a8a74">
+    <Comment>RE1-silencing transcription factor</Comment>
+    <Comment>Silences Mecp2 in non-neuronal tissue</Comment>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="256.76125688370485" CenterY="195.67453838678333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000084093" />
+  </DataNode>
+  <DataNode TextLabel="BRN2" GraphId="b7d84" Type="GeneProduct" GroupRef="a8a74">
+    <Comment>POU domain, class 3, transcription factor 2</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="256.76125688370485" CenterY="215.67453838678333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000184486" />
+  </DataNode>
+  <DataNode TextLabel="BCL6" GraphId="ec9b2" Type="GeneProduct" GroupRef="a8a74">
+    <Comment>B cell leukemia/lymphoma 6</Comment>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="256.76125688370485" CenterY="233.81023415169258" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000113916" />
+  </DataNode>
+  <DataNode TextLabel="BRN3" GraphId="a3e8e" Type="GeneProduct" GroupRef="b220f">
+    <Comment>POU domain, class 4, transcription factor 1 </Comment>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="172.51452908597915" CenterY="196.28831773310836" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000152192" />
+  </DataNode>
+  <DataNode TextLabel="MYT1" GraphId="e5a77" Type="GeneProduct" GroupRef="b220f">
+    <Comment>Myelin transcription factor 1</Comment>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="172.51452908597915" CenterY="215.73831773310826" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000196132" />
+  </DataNode>
+  <DataNode TextLabel="HNRNPF" GraphId="fcec3" Type="GeneProduct">
+    <Comment>Hnrnpf</Comment>
+    <Comment>heterogeneous nuclear ribonucleoprotein F</Comment>
+    <BiopaxRef>e66</BiopaxRef>
+    <Graphics CenterX="308.7000000000001" CenterY="297.3214015765035" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169813" />
+  </DataNode>
+  <DataNode TextLabel="HNRNPH1" GraphId="d8ecd" Type="GeneProduct">
+    <Comment>HNRNPH1</Comment>
+    <BiopaxRef>e66</BiopaxRef>
+    <Graphics CenterX="308.7000000000001" CenterY="322.15001004668505" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169045" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-483-5p" GraphId="bf2a3" Type="Rna" GroupRef="abb00">
+    <Comment>inhibition of Mecp2 expression only reported for human!</Comment>
+    <BiopaxRef>c20</BiopaxRef>
+    <Graphics CenterX="203.8656732534283" CenterY="108.1269715848773" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004761" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-130b-3p" GraphId="baa04" Type="Rna">
+    <Comment>reported for human only</Comment>
+    <Comment>binding site at 3'UTR of Mecp2 reported, regulative effect unclear</Comment>
+    <BiopaxRef>bfa</BiopaxRef>
+    <Graphics CenterX="112.51876818906034" CenterY="127.11761027402329" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000691" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-132-5p" GraphId="c9f62" Type="Rna" GroupRef="abb00">
+    <BiopaxRef>d4c</BiopaxRef>
+    <Graphics CenterX="203.8656732534283" CenterY="127.84796458265853" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0004594" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-152-3p " GraphId="f388b" Type="Rna" GroupRef="abb00">
+    <BiopaxRef>bee</BiopaxRef>
+    <Graphics CenterX="282.47489471979304" CenterY="89.10700788251809" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000438" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-199a-3p" GraphId="ba667" Type="Rna" GroupRef="abb00">
+    <BiopaxRef>bee</BiopaxRef>
+    <Graphics CenterX="282.47489471979304" CenterY="108.11143505021056" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000232" />
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-30a-3p " GraphId="dfe42" Type="Rna" GroupRef="abb00">
+    <Comment>reported for human umbilical vein endothelial cells only</Comment>
+    <BiopaxRef>c56</BiopaxRef>
+    <Graphics CenterX="282.47489471979304" CenterY="127.84796458265853" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="9900ff" />
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000088" />
+  </DataNode>
+  <DataNode TextLabel="AMPA" GraphId="f5eb8" Type="GeneProduct">
+    <Comment>Glutamate receptor</Comment>
+    <BiopaxRef>d9e</BiopaxRef>
+    <Graphics CenterX="918.025213840787" CenterY="141.48172633255928" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000155511" />
+  </DataNode>
+  <DataNode TextLabel="NMDA" GraphId="c3eba" Type="Metabolite">
+    <Comment>N-Methyl-D-aspartic acid</Comment>
+    <Graphics CenterX="973.2484939176204" CenterY="324.58236045356625" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB02393" />
+  </DataNode>
+  <DataNode TextLabel="HDAC1" GraphId="ab195" Type="GeneProduct" GroupRef="aeff6">
+    <Graphics CenterX="222.3880597014956" CenterY="402.2388059701501" Width="80.00000000000001" Height="20.000000000000007" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000116478" />
+  </DataNode>
+  <DataNode TextLabel="TET2" GraphId="c5abd" Type="GeneProduct" GroupRef="c6e99">
+    <Graphics CenterX="494.69196548503334" CenterY="483.60300444588364" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000168769" />
+  </DataNode>
+  <DataNode TextLabel="TET3" GraphId="b37d3" Type="GeneProduct" GroupRef="c6e99">
+    <Graphics CenterX="494.69196548503334" CenterY="503.6030044458841" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000187605" />
+  </DataNode>
+  <DataNode TextLabel="CAMK2A" GraphId="e7c53" Type="GeneProduct">
+    <Graphics CenterX="93.80597014925384" CenterY="539.6865671641783" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000070808" />
+  </DataNode>
+  <DataNode TextLabel="AKT1" GraphId="cc356" Type="GeneProduct" GroupRef="de645">
+    <Graphics CenterX="550.9404388714715" CenterY="396.17554858934136" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000142208" />
+  </DataNode>
+  <DataNode TextLabel="MTOR" GraphId="a65fd" Type="GeneProduct" GroupRef="de645">
+    <Graphics CenterX="550.9404388714715" CenterY="376.17554858934136" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000198793" />
+  </DataNode>
+  <DataNode TextLabel="RPS6" GraphId="c79bb" Type="GeneProduct">
+    <BiopaxRef>d35</BiopaxRef>
+    <Graphics CenterX="613.7782131661475" CenterY="635.329937304073" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000137154" />
+  </DataNode>
+  <DataNode TextLabel="Cytosine methylation " GraphId="ff5d7" Type="Pathway">
+    <Graphics CenterX="494.1222570532915" CenterY="583.8557993730408" Width="130.8777429467084" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP3585" />
+  </DataNode>
+  <DataNode TextLabel="PI3K/MAPK " GraphId="b41f1" Type="Pathway" GroupRef="de645">
+    <Graphics CenterX="550.9404388714715" CenterY="416.1755485893413" Width="84.67084639498428" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP3618" />
+  </DataNode>
+  <DataNode TextLabel="FKBP5" GraphId="c7721" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="852.692741628028" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000096060" />
+  </DataNode>
+  <DataNode TextLabel="IGF2" GraphId="d4c72" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="872.692741628028" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000167244" />
+  </DataNode>
+  <DataNode TextLabel="DLX5" GraphId="a5774" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="912.6927416280281" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000105880" />
+  </DataNode>
+  <DataNode TextLabel="DLX6" GraphId="b8483" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="892.692741628028" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000006377" />
+  </DataNode>
+  <DataNode TextLabel="SGK1" GraphId="c5d67" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="932.6927416280282" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000118515" />
+  </DataNode>
+  <DataNode TextLabel="MPP1" GraphId="ce046" Type="GeneProduct">
+    <Graphics CenterX="70.78910064577042" CenterY="952.6927416280282" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130830" />
+  </DataNode>
+  <DataNode TextLabel="UBE3A" GraphId="c2fec" Type="GeneProduct">
+    <Graphics CenterX="168.9919672389347" CenterY="832.692741628028" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000114062" />
+  </DataNode>
+  <DataNode TextLabel="GRID1" GraphId="e2907" Type="GeneProduct">
+    <Graphics CenterX="168.9919672389347" CenterY="852.692741628028" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000182771" />
+  </DataNode>
+  <DataNode TextLabel="Dopamine" GraphId="d5d5b" Type="Metabolite">
+    <Graphics CenterX="359.8078437549219" CenterY="832.769919136297" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00073" />
+  </DataNode>
+  <DataNode TextLabel="Norepinephrine" GraphId="be393" Type="Metabolite">
+    <Graphics CenterX="359.807843754922" CenterY="852.769919136297" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00216" />
+  </DataNode>
+  <DataNode TextLabel="Serotonin" GraphId="c629d" Type="Metabolite">
+    <Graphics CenterX="359.80784375492203" CenterY="872.769919136297" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00259" />
+  </DataNode>
+  <DataNode TextLabel="Melatonin" GraphId="ec904" Type="Metabolite">
+    <Graphics CenterX="359.80784375492203" CenterY="892.769919136297" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01389" />
+  </DataNode>
+  <DataNode TextLabel="Myoinositol" GraphId="ff3d5" Type="Metabolite">
+    <Graphics CenterX="359.8078437549221" CenterY="912.769919136297" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00211" />
+  </DataNode>
+  <DataNode TextLabel="Dopamine" GraphId="a0f0e" Type="Metabolite" GroupRef="cadaf">
+    <Graphics CenterX="59.04226697494209" CenterY="671.4854770754728" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00073" />
+  </DataNode>
+  <DataNode TextLabel="Serotonin" GraphId="f9a1e" Type="Metabolite" GroupRef="cadaf">
+    <Graphics CenterX="59.04226697494209" CenterY="651.4854770754729" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00259" />
+  </DataNode>
+  <DataNode TextLabel="Norepinephrine" GraphId="c2002" Type="Metabolite" GroupRef="cadaf">
+    <Graphics CenterX="59.04226697494209" CenterY="691.4854770754728" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00216" />
+  </DataNode>
+  <DataNode TextLabel="YB1" GraphId="d6b6c" Type="GeneProduct" GroupRef="f9e99">
+    <Comment>data obtained with human cell line and mouse primary tissue</Comment>
+    <Comment>Y box protein 1</Comment>
+    <BiopaxRef>d46</BiopaxRef>
+    <BiopaxRef>e24</BiopaxRef>
+    <Graphics CenterX="738.6360428389208" CenterY="269.56066536640793" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000065978" />
+  </DataNode>
+  <DataNode TextLabel="MECP2" GraphId="cfdc1" Type="GeneProduct" GroupRef="aeff6">
+    <Comment>methyl CpG binding protein 2</Comment>
+    <Graphics CenterX="222.38805970149244" CenterY="442.23880597015005" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169057" />
+  </DataNode>
+  <DataNode TextLabel="MECP2" GraphId="f18a3" Type="GeneProduct">
+    <Comment>methyl CpG binding protein 2</Comment>
+    <Graphics CenterX="221.38445486386468" CenterY="570.2615449398781" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169057" />
+  </DataNode>
+  <DataNode TextLabel="MECP2" GraphId="b3c7c" Type="GeneProduct" GroupRef="f9e99">
+    <Comment>methyl CpG binding protein 2</Comment>
+    <Graphics CenterX="738.6360428389208" CenterY="250.49759533865156" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169057" />
+  </DataNode>
+  <DataNode TextLabel="SP1" GraphId="bc2e4" Type="GeneProduct" GroupRef="b220f">
+    <Comment>trans-acting transcription factor 1</Comment>
+    <BiopaxRef>ecf</BiopaxRef>
+    <BiopaxRef>d06</BiopaxRef>
+    <Graphics CenterX="172.51452908597915" CenterY="233.87401349801746" Width="80.0" Height="20.0" ZOrder="32775" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000185591" />
+  </DataNode>
+  <DataNode TextLabel="Glutamate" GraphId="ff12a" Type="Metabolite">
+    <BiopaxRef>d5e</BiopaxRef>
+    <Graphics CenterX="1026.6684951049037" CenterY="141.67756321309324" Width="80.0" Height="20.0" ZOrder="32776" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29987" />
+  </DataNode>
+  <DataNode TextLabel="GABA" GraphId="e0993" Type="Metabolite">
+    <Graphics CenterX="721.7558687510632" CenterY="579.1095353921941" Width="80.0" Height="20.0" ZOrder="32777" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16865" />
+  </DataNode>
+  <DataNode TextLabel="CREB1" GraphId="d20c1" Type="GeneProduct" GroupRef="d0e6f">
+    <Graphics CenterX="387.27229710817244" CenterY="678.7359011558815" Width="80.0" Height="20.0" ZOrder="32780" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000118260" />
+  </DataNode>
+  <DataNode TextLabel="RPS6" GraphId="d47bb" Type="GeneProduct">
+    <Graphics CenterX="479.5775862068971" CenterY="635.1418495297792" Width="80.0" Height="20.0" ZOrder="32783" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000137154" />
+  </DataNode>
+  <DataNode TextLabel="BDNF" GraphId="df330" Type="GeneProduct">
+    <Comment>brain derived neurotrophic factor</Comment>
+    <BiopaxRef>c74</BiopaxRef>
+    <Graphics CenterX="70.78910064577042" CenterY="832.692741628028" Width="80.0" Height="20.0" ZOrder="32785" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000176697" />
+  </DataNode>
+  <DataNode TextLabel="GAMT" GraphId="dd398" Type="GeneProduct">
+    <Comment>guanidinoacetate methyltransferase</Comment>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="70.78910064577042" CenterY="972.6927416280282" Width="80.0" Height="20.0" ZOrder="32786" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130005" />
+  </DataNode>
+  <DataNode TextLabel="Glutamate" GraphId="f5a86" Type="Metabolite">
+    <BiopaxRef>d5e</BiopaxRef>
+    <Graphics CenterX="265.99594824713" CenterY="833.1160390774836" Width="80.0" Height="20.0" ZOrder="32788" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="29987" />
+  </DataNode>
+  <DataNode TextLabel="GABA" GraphId="c3063" Type="Metabolite">
+    <Graphics CenterX="359.80784375492215" CenterY="932.769919136297" Width="80.0" Height="20.0" ZOrder="32791" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="16865" />
+  </DataNode>
+  <DataNode TextLabel="MECP2" GraphId="fed1a" Type="GeneProduct" GroupRef="d0e6f">
+    <Comment>methyl CpG binding protein 2</Comment>
+    <Graphics CenterX="387.27229710817244" CenterY="698.7359011558814" Width="80.0" Height="20.0" ZOrder="32792" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169057" />
+  </DataNode>
+  <Interaction GraphId="idc854287">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.2832020565628" Y="237.75151775943533" GraphRef="b5aaa" RelX="0.5" RelY="-1.0" />
+      <Point X="583.6549978544751" Y="110.40884813394077" GraphRef="a9612" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2d0bb18c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.2832020565628" Y="237.75151775943533" GraphRef="b5aaa" RelX="0.5" RelY="-1.0" />
+      <Point X="737.6726336753713" Y="100.4236952141723" GraphRef="df08e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4f207df3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.2832020565628" Y="237.75151775943533" GraphRef="b5aaa" RelX="0.5" RelY="-1.0" />
+      <Point X="902.0173437499967" Y="78.17652245297779" GraphRef="c50c6" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4d764634">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="274.3880597014956" Y="422.2388059701501" GraphRef="db9d2" RelX="1.0" RelY="0.0" />
+      <Point X="328.64693899308077" Y="420.93829971281457" GraphRef="da209" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4a259c62">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="261.3844548638647" Y="570.2615449398781" GraphRef="f18a3" RelX="1.0" RelY="0.0" />
+      <Point X="335.86323993351965" Y="482.747674894744" GraphRef="ab9d2" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id98880116">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="592.2157202207729" Y="269.67420429436675" GraphRef="b5aaa" RelX="1.0" RelY="0.0" />
+      <Point X="690.6360428389208" Y="269.84333248691973" GraphRef="aa42d" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd7ce9853">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="592.2157202207729" Y="285.6355475618325" GraphRef="b5aaa" RelX="1.0" RelY="0.5" />
+      <Point X="811.0218283582085" Y="371.4656716417909" GraphRef="b9462" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6db451c9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.2832020565628" Y="301.59689082929816" GraphRef="b5aaa" RelX="0.5" RelY="1.0" />
+      <Point X="920.4463683381056" Y="465.3443875317921" GraphRef="b7b18" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide7765a90">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.2832020565628" Y="301.59689082929816" GraphRef="b5aaa" RelX="0.5" RelY="1.0" />
+      <Point X="819.0442579190831" Y="466.8329899065791" GraphRef="f127d" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcd318e8b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="261.3844548638647" Y="570.2615449398781" GraphRef="f18a3" RelX="1.0" RelY="0.0" />
+      <Point X="328.64693899308077" Y="574.3796437896798" GraphRef="baf71" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2e73b98">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="274.3880597014956" Y="422.2388059701501" GraphRef="db9d2" RelX="1.0" RelY="0.0" />
+      <Point X="335.86323993351965" Y="482.747674894744" GraphRef="ab9d2" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id71c6c3ab">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="505.4181657281425" Y="301.59689082929816" GraphRef="b5aaa" RelX="-0.5" RelY="1.0" />
+      <Point X="274.3880597014956" Y="401.2388059701501" GraphRef="db9d2" RelX="1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id36da2ee0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="786.6360428389208" Y="269.84333248691973" GraphRef="aa42d" RelX="1.0" RelY="0.0" />
+      <Point X="803.7761194029849" Y="257.66230907304964" GraphRef="e72b1" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1573ec9c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="960.6591948644361" Y="522.9956632717766" GraphRef="a8a41" RelX="1.0" RelY="0.0" />
+      <Point X="1032.4124999999995" Y="461.23133124999987" GraphRef="cb4d2" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id398efdb3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1032.4124999999995" Y="441.23133124999987" GraphRef="cb4d2" RelX="0.0" RelY="-1.0" />
+      <Point X="1032.4124999999995" Y="426.18797499999994" GraphRef="cc402" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id621c1ed1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1032.4124999999995" Y="406.18797499999994" GraphRef="cc402" RelX="0.0" RelY="-1.0" />
+      <Point X="1008.1861940298494" Y="374.56791044776105" GraphRef="de831" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd651faa1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="891.0218283582085" Y="371.4656716417909" GraphRef="b9462" RelX="1.0" RelY="0.0" />
+      <Point X="928.1861940298494" Y="374.56791044776105" GraphRef="de831" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id369d65eb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1076.0374999999995" Y="416.18797499999994" GraphRef="cc402" RelX="1.0" RelY="0.0" />
+      <Point X="1083.9954066227333" Y="416.53556854472777" GraphRef="e30b7" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id83a11120">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="891.7761194029848" Y="190.6203907953854" GraphRef="dc752" RelX="1.0" RelY="0.0" />
+      <Point X="967.2850567764287" Y="192.11526750899563" GraphRef="d775a" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id93a784b4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="534.3506838923527" Y="301.59689082929816" GraphRef="b5aaa" RelX="0.0" RelY="1.0" />
+      <Point X="678.7915959653039" Y="470.2394068636432" GraphRef="b5f42" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida74df2c8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="718.3244173637416" Y="498.2394068636432" GraphRef="d4dc9" RelX="0.0" RelY="1.0" />
+      <Point X="722.5848914142306" Y="520.104972862453" GraphRef="f15bd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id74b2c575">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="639.2587745668662" Y="498.2394068636432" GraphRef="cb49e" RelX="0.0" RelY="1.0" />
+      <Point X="634.427733512764" Y="519.4603179381759" GraphRef="d39d3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id18f3352e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.427733512764" Y="539.4603179381759" GraphRef="d39d3" RelX="0.0" RelY="1.0" />
+      <Point X="634.3267755597043" Y="563.956271455223" GraphRef="ed348" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb3b2615b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="891.7761194029848" Y="210.7728638956175" GraphRef="f88be" RelX="1.0" RelY="0.0" />
+      <Point X="969.5203761755499" Y="212.21943573667747" GraphRef="fe0e1" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8e7af5c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="388.1474116955515" Y="172.55800279837874" GraphRef="a28b8" RelX="0.0" RelY="1.0" />
+      <Point X="505.4181657281425" Y="237.75151775943533" GraphRef="b5aaa" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id12c8ab8c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="304.76125688370485" Y="233.27631021046528" GraphRef="f4c47" RelX="1.0" RelY="0.5" />
+      <Point X="476.4856475639324" Y="253.71286102690104" GraphRef="b5aaa" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8106cf36">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="196.51452908597915" Y="251.87401349801746" GraphRef="cb407" RelX="0.5" RelY="1.0" />
+      <Point X="476.4856475639324" Y="269.67420429436675" GraphRef="b5aaa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1c3def3d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="348.7000000000001" Y="297.3214015765035" GraphRef="fcec3" RelX="1.0" RelY="0.0" />
+      <Point X="476.4856475639324" Y="269.67420429436675" GraphRef="b5aaa" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida6a9fa9d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="348.7000000000001" Y="322.15001004668505" GraphRef="d8ecd" RelX="1.0" RelY="0.0" />
+      <Point X="476.4856475639324" Y="285.6355475618325" GraphRef="b5aaa" RelX="-1.0" RelY="0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2450addf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="286.82258935320186" Y="145.84796458265853" GraphRef="eb94b" RelX="0.5" RelY="1.0" />
+      <Point X="505.4181657281425" Y="237.75151775943533" GraphRef="b5aaa" RelX="-0.5" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6df7811">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="112.51876818906032" Y="137.1176102740233" GraphRef="baa04" RelX="0.0" RelY="1.0" />
+      <Point X="505.4181657281425" Y="237.75151775943533" GraphRef="b5aaa" RelX="-0.5" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3bcd32">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="592.2157202207729" Y="253.71286102690104" GraphRef="b5aaa" RelX="1.0" RelY="-0.5" />
+      <Point X="878.025213840787" Y="141.48172633255928" GraphRef="f5eb8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc2aac5b0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="986.6684951049037" Y="141.67756321309324" GraphRef="ff12a" RelX="-1.0" RelY="0.0" />
+      <Point X="958.025213840787" Y="141.48172633255928" GraphRef="f5eb8" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3094d8c7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1006.6684951049037" Y="151.67756321309324" GraphRef="ff12a" RelX="-0.5" RelY="1.0" />
+      <Point X="1007.2850567764287" Y="182.11526750899563" GraphRef="d775a" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id93a34dd9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1047.2850567764287" Y="192.11526750899563" GraphRef="d775a" RelX="1.0" RelY="0.0" />
+      <Point X="1069.9597149028905" Y="192.11526750899566" GraphRef="a8349" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id362bb104">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="474.82140157650383" Y="181.8360910689466" GraphRef="f0209" RelX="0.0" RelY="1.0" />
+      <Point X="534.3506838923527" Y="237.75151775943533" GraphRef="b5aaa" RelX="0.0" RelY="-1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide73511df">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="933.2484939176204" Y="324.58236045356625" GraphRef="c3eba" RelX="-1.0" RelY="0.0" />
+      <Point X="891.7761194029848" Y="324.7042273507139" GraphRef="bb048" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idccdef421">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="505.4181657281425" Y="301.59689082929816" GraphRef="b5aaa" RelX="-0.5" RelY="1.0" />
+      <Point X="494.6919654850333" Y="441.6030044458837" GraphRef="eecef" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id575dcf88">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="494.6919654850333" Y="525.6030044458842" GraphRef="eecef" RelX="0.0" RelY="1.0" />
+      <Point X="494.1222570532915" Y="573.8557993730408" GraphRef="ff5d7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id75cc558e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="221.38445486386468" Y="580.2615449398781" GraphRef="f18a3" RelX="0.0" RelY="1.0" />
+      <Point X="221.24543619824823" Y="591.4810999313631" GraphRef="e5190" RelX="0.0" RelY="-1.0" ArrowHead="mim-covalent-bond" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8a62b5a0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="170.3880597014924" Y="422.2388059701501" GraphRef="db9d2" RelX="-1.0" RelY="0.0" />
+      <Point X="150.46557441909613" Y="423.2064893911764" GraphRef="b991b" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id15723cb8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="91.4520799188118" Y="575.1641791044767" GraphRef="a339f" RelX="0.0" RelY="-1.0" />
+      <Point X="93.80597014925382" Y="549.6865671641783" GraphRef="e7c53" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6f471503">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="222.388059701494" Y="464.2388059701501" GraphRef="db9d2" RelX="0.0" RelY="1.0" />
+      <Point X="221.38445486386468" Y="560.2615449398781" GraphRef="f18a3" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.7890571101575878" Shape="None" GraphId="b2b0b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida3312ec1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="133.80597014925382" Y="539.6865671641783" GraphRef="e7c53" RelX="1.0" RelY="0.0" />
+      <Point X="221.59615816857402" Y="540.0062308910201" GraphRef="b2b0b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+      <Anchor Position="0.4" Shape="None" GraphId="ba0d8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9df6cf26">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="167.85074626865617" Y="531.201375567304" GraphRef="e1a3c" RelX="0.0" RelY="1.0" />
+      <Point X="168.9220453569819" Y="539.814432654915" GraphRef="ba0d8" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide63237c3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="550.9404388714715" Y="434.17554858934136" GraphRef="f15e6" RelX="0.0" RelY="1.0" />
+      <Point X="552.0979623824473" Y="635.2547021943554" GraphRef="d5847" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb9aa4a32">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="439.5775862068971" Y="635.1418495297792" GraphRef="d47bb" RelX="-1.0" RelY="0.0" />
+      <Point X="425.2435829161235" Y="635.2282552955677" GraphRef="da976" RelX="1.0" RelY="0.0" ArrowHead="mim-covalent-bond" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf2a25a0b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="573.7782131661475" Y="635.329937304073" GraphRef="c79bb" RelX="-1.0" RelY="0.0" />
+      <Point X="519.5775862068971" Y="635.1418495297792" GraphRef="d47bb" RelX="1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="d5847" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6398fcdc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="534.3506838923527" Y="301.59689082929816" GraphRef="b5aaa" RelX="0.0" RelY="1.0" />
+      <Point X="550.9404388714715" Y="358.17554858934136" GraphRef="f15e6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id94d9f609">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="165.75" Y="470.0" GraphRef="ef854" RelX="0.0" RelY="1.0" />
+      <Point X="165.818085747696" Y="488.9302891424503" GraphRef="e51ba" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida4a8b443">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="505.4181657281425" Y="301.59689082929816" GraphRef="b5aaa" RelX="-0.5" RelY="1.0" />
+      <Point X="387.27229710817244" Y="668.7359011558815" GraphRef="d20c1" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id99c43cea">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="335.27229710817244" Y="688.7359011558815" GraphRef="a6834" RelX="-1.0" RelY="0.0" />
+      <Point X="297.0" Y="687.5378151260506" GraphRef="c3ce4" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id47c0ce45">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="201.38445486386468" Y="580.2615449398781" GraphRef="f18a3" RelX="-0.5" RelY="1.0" />
+      <Point X="199.5" Y="661.0756302521013" GraphRef="c3ce4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7d7e28a3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="59.04226697494209" Y="633.4854770754728" GraphRef="c2119" RelX="0.0" RelY="-1.0" />
+      <Point X="57.31028887403568" Y="607.594936708861" GraphRef="a339f" RelX="-0.5" RelY="1.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="de16a">
+    <Graphics ZOrder="32778" LineThickness="1.0">
+      <Point X="721.7558687510632" Y="569.1095353921941" GraphRef="e0993" RelX="0.0" RelY="-1.0" />
+      <Point X="722.5848914142306" Y="540.104972862453" GraphRef="f15bd" RelX="0.0" RelY="1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Astrocytes" GraphId="e9e5d">
+    <BiopaxRef>b5e</BiopaxRef>
+    <Graphics CenterX="628.0887453358197" CenterY="57.826413684321274" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Oligodendrocytes" GraphId="b560f">
+    <Graphics CenterX="785.7528999067151" CenterY="47.69741041939629" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Microglia" GraphId="d42fb">
+    <Graphics CenterX="922.5692437499974" CenterY="45.35785370297809" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="cofactors" GraphId="d0cf9">
+    <Graphics CenterX="114.46557441909613" CenterY="381.20648939117643" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="MECP2 - HDAC complex&#xA;" GraphId="e6bdb">
+    <Graphics CenterX="228.84012539184957" CenterY="357.7998156713821" Width="252.3510971786834" Height="25.944458928971198" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="alternative &#xA;splicing " GraphId="da742">
+    <Graphics CenterX="759.0522310332291" CenterY="216.7045628023814" Width="102.74396049905984" Height="38.424799585954176" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="DNA binding" GraphId="de831">
+    <Graphics CenterX="968.1861940298494" CenterY="374.56791044776105" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="DNA condensing" GraphId="ee947">
+    <Graphics CenterX="926.6656825253875" CenterY="403.12519633822944" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="regulation of &#xA;miRNA" GraphId="cf2b2">
+    <Graphics CenterX="1019.3770728766497" CenterY="561.5398243792763" Width="143.06403606487254" Height="36.872752206829084" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="effects on specific cells" GraphId="abefe">
+    <Graphics CenterX="768.4800156739828" CenterY="11.648119122257189" Width="181.75000000000003" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="009966" />
+  </Label>
+  <Label TextLabel="trimethyl lysine 27" GraphId="d0145" GroupRef="fa8b2">
+    <Graphics CenterX="1130.770406622748" CenterY="415.8605685447278" Width="78.84999999999968" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="regulation of &#xA;long noncoding RNA" GraphId="e93ee">
+    <Graphics CenterX="679.9516103118782" CenterY="431.1201824743782" Width="167.11325197171826" Height="34.65415805220493" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="000066" />
+  </Label>
+  <Label TextLabel="macropinocytosis&#xA;" GraphId="ed348">
+    <Comment>actin-driven endocytic process 
+contributes to repulsive turning 
+in the axons of neurons and retinal 
+cone growth</Comment>
+    <Graphics CenterX="634.3267755597043" CenterY="579.8958277052234" Width="110.49936249999955" Height="31.879112500000844" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="cell proliferation" GraphId="fe0e1">
+    <Graphics CenterX="1009.5203761755499" CenterY="212.21943573667747" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="transcriptional and&#xA;translational regulation of MECP2" GraphId="d14ca">
+    <Graphics CenterX="202.58620689655172" CenterY="47.12947092200208" Width="276.6457680250783" Height="25.293424602624853" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="660066" />
+  </Label>
+  <Label TextLabel="Promotor elements" GraphId="eef7f">
+    <Graphics CenterX="385.9583689175533" CenterY="70.2609930273548" Width="95.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cis-Regulatory Elements" GraphId="f5349">
+    <Graphics CenterX="210.03358168664235" CenterY="171.083025591189" Width="122.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Trans-regulator Elements&#xA;stimulate/inhibit by Polyadenylation of Mecp2&#xA;" GraphId="e7b2a">
+    <Graphics CenterX="154.21429921174825" CenterY="305.34907677356665" Width="217.45" Height="33.59999999999977" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" Align="Right" />
+  </Label>
+  <Label TextLabel="regulation by miRNA&#xA;(mostly posttranscriptional repression)" GraphId="b06b5">
+    <Graphics CenterX="144.94950510432415" CenterY="80.40874209065629" Width="194.36345966958194" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="neuronal activity &#xA;leads to increase of Ca2+ &#xA;" GraphId="a339f">
+    <Graphics CenterX="91.45207991881179" CenterY="591.3795579066688" Width="136.56716417910448" Height="32.430757604384205" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="MECP2 influences&#xA;protein synthesis via&#xA;AKT/mTOR pathway" GraphId="ce4c5">
+    <Graphics CenterX="550.5329153604993" CenterY="679.0752351097179" Width="146.58307210031725" Height="57.21003134796229" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" />
+  </Label>
+  <Label TextLabel="upregulated &#xA;by MECP2" GraphId="e239b">
+    <Graphics CenterX="70.78910064577042" CenterY="810.5648474714678" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="List of genes and metabolites which are up or downregulated in Rett syndrome&#xA;" GraphId="c4483">
+    <Graphics CenterX="311.29259200924037" CenterY="774.6489552049693" Width="574.7687299837244" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Histone deacetylation" GraphId="e51ba">
+    <Graphics CenterX="137.318085747696" CenterY="498.9302891424503" Width="114.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Activation of transcription&#xA;(stop of inhibition, res. from &#xA;phosphorylated MECP2)" GraphId="c3ce4">
+    <Graphics CenterX="199.5" CenterY="687.5378151260506" Width="195.0" Height="52.92436974789871" ZOrder="28672" FillColor="ffffff" FontSize="14" Valign="Middle" Color="009933" />
+  </Label>
+  <Label TextLabel="P" GraphId="e1a3c">
+    <Graphics CenterX="167.85074626865617" CenterY="523.7386890001397" Width="26.567164179104477" Height="14.925373134328536" ZOrder="32781" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="P" GraphId="e5190">
+    <Graphics CenterX="221.2454361982482" CenterY="602.5685534228958" Width="36.333673843780176" Height="22.17490698306517" ZOrder="32782" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="P" GraphId="da976">
+    <Graphics CenterX="412.7082218815704" CenterY="635.2282552955677" Width="25.07072206910626" Height="27.58702053063392" ZOrder="32784" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="down regulated &#xA;by MECP2" GraphId="a2149">
+    <Graphics CenterX="168.9919672389347" CenterY="810.5648474714678" Width="80.0" Height="20.0" ZOrder="32787" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="upregulated &#xA;by MECP2" GraphId="b8cd7">
+    <Graphics CenterX="263.81004882658647" CenterY="810.5648474714678" Width="80.0" Height="20.0" ZOrder="32789" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="down regulated &#xA;by MECP2" GraphId="a5268">
+    <Graphics CenterX="359.8078437549219" CenterY="810.5648474714678" Width="80.0" Height="20.0" ZOrder="32790" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="d501d">
+    <Graphics CenterX="803.8252351097179" CenterY="257.44514106583074" Width="219.93573667711578" Height="174.76489028213166" ZOrder="-6" FillColor="ccffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" Color="ccffff" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d8f6d">
+    <Graphics CenterX="275.4702194357367" CenterY="184.41510301279152" Width="505.48589341692787" Height="306.4263322884012" ZOrder="-4" FillColor="ffcccc" FontSize="10" Valign="Middle" ShapeType="Rectangle" Color="ffcccc" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f3817" GroupRef="bedfd">
+    <Graphics CenterX="228.8401253918495" CenterY="479.6045198505485" Width="408.80721003134795" Height="283.6604503594042" ZOrder="-2" FillColor="ccffcc" FontSize="10" Valign="Middle" ShapeType="Rectangle" Color="ccffcc" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b61a2">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="623.3047062499996" CenterY="95.1936099529783" Width="129.3436625000001" Height="136.13670000000002" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ac818">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="776.4584937499997" CenterY="85.82731307797849" Width="134.20568749999953" Height="118.40410624999998" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="eb4de">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="930.2200343749977" CenterY="65.77145995297812" Width="128.12815624999993" Height="80.72341250000011" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e30b7" GroupRef="fa8b2">
+    <Graphics CenterX="1129.1454066227334" CenterY="416.53556854472777" Width="90.30000000000007" Height="32.84999999999992" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ef854">
+    <Graphics CenterX="165.75" CenterY="421.0" Width="236.5" Height="98.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="abf1e" GraphId="da209" Style="Group" />
+  <Group GroupId="f9e99" GraphId="aa42d" Style="Group" />
+  <Group GroupId="cac1c" GraphId="df08e" Style="Group" />
+  <Group GroupId="fd397" GraphId="a9612" Style="Group" />
+  <Group GroupId="d01de" GraphId="b7b18" Style="Group" />
+  <Group GroupId="fa8b2" GraphId="dc890" Style="Group" />
+  <Group GroupId="e4c86" GraphId="b5f42" Style="Group" />
+  <Group GroupId="e6ef9" GraphId="f127d" Style="Group" />
+  <Group GroupId="dcf67" GraphId="e72b1" Style="Group" />
+  <Group GroupId="b6aa3" GraphId="f0209" Style="Group" />
+  <Group GroupId="a8a74" GraphId="f4c47" Style="Group" />
+  <Group GroupId="b220f" GraphId="cb407" Style="Group" />
+  <Group GroupId="abb00" GraphId="eb94b" Style="Group" />
+  <Group GroupId="aeff6" GraphId="db9d2" Style="Complex" />
+  <Group GroupId="c6e99" GraphId="eecef" Style="Complex" />
+  <Group GroupId="a93e1" GraphId="baf71" Style="Group" />
+  <Group GroupId="de645" GraphId="f15e6" Style="Group" />
+  <Group GroupId="e5af6" GraphId="b991b" Style="Group" />
+  <Group GroupId="bedfd" GraphId="e51f8" Style="Group" />
+  <Group GroupId="d0e6f" GraphId="a6834" Style="Complex" />
+  <Group GroupId="cadaf" GraphId="c2119" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a0d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18203756</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MeCP2-dependent repression of an imprinted miR-184 released by depolarization.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mol Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nomura T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kimura M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horii T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morita S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soejima H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kudo S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hatada I</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d5e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20392956</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rett syndrome microglia damage dendrites and synapses by the elevated release of glutamate.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Neurosci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maezawa I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin LW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bcf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20368621</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cross talk between microRNA and epigenetic regulation in adult neurogenesis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szulwach KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smrt RD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luo Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santistevan NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a12">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21423409</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synaptic signaling and aberrant RNA splicing in autism spectrum disorders.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Synaptic Neurosci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadee W</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rett syndrome</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1206</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c56">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23960241</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicroRNA-mediated epigenetic silencing of sirtuin1 contributes to impaired angiogenic responses.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Circ Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volkmann I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumarswamy R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pfaff N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiedler J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dangwal S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holzmann A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batkai S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geffers R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lother A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hein L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thum T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c20">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23431031</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human-specific regulation of MeCP2 levels in fetal brains by microRNA miR-483-5p.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gennarino VA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hashimoto-Torii K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Choufani S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raju CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldham MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weksberg R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rakic P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoghbi HY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e24">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16251272</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of RNA splicing by the methylation-dependent transcriptional repressor methyl-CpG binding protein 2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Young JI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong EP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Castle JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crespo-Barreto J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bowman AB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose MF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kang D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richman R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnson JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berget S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoghbi HY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18511691</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MeCP2, a key contributor to neurological disease, activates and represses transcription.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chahrour M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jung SY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaw C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong ST</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qin J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zoghbi HY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bd9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23611944</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dysregulation of the long non-coding RNA transcriptome in a Rett syndrome mouse model.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petazzi P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandoval J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szczesna K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jorge OC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roa L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sayols S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gomez A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huertas D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteller M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d9e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24916645</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GluD1 is a common altered player in neuronal differentiation from both MECP2-mutated and CDKL5-mutated iPS cells.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Hum Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Livide G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patriarchi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amenduni M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amabile S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yasui D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcagno E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lo Rizzo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Falco G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulivieri C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ariani F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mari F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mencarelli MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hell JW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Renieri A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloni I</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bee">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22141737</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chronic intermittent ethanol exposure and its removal induce a different miRNA expression pattern in primary cortical neuronal cultures.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alcohol Clin Exp Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carreon S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qiang M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ecf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18820302</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MECP2 genomic structure and function: insights from ENCODE.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singh J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saxena A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christodoulou J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ravine D</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c74">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24615633</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rett syndrome and MeCP2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuromolecular Med</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liyanage VR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rastegar M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bfa">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17573714</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MicroRNA in schizophrenia: genetic and expression analysis of miR-130b (22q11).</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry (Mosc)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burmistrova OA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goltsov AY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abramova LI</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaleda VG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlova VA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogaev EI</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e66">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20400852</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alternative polyadenylation of MeCP2: Influence of cis-acting elements and trans-acting factors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RNA Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newnham CM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall-Pogar T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liang S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tian B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lutz CS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20697302</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A novel transcriptional regulator of myelin gene expression: implications for neurodevelopmental disorders.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuroreport</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vora P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mina R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Namaka M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frost EE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d4c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20010955</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ischemic preconditioning regulates expression of microRNAs and a predicted target, MeCP2, in mouse cortex.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cereb Blood Flow Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lusardi TA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farr CD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faulkner CL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pignataro G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lan J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon RP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saugstad JA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b51">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24069510</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification of TET1 Partners That Control Its DNA-Demethylating Function.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genes Cancer</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cartron PF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nadaradjane A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lepape F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lalier L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gardie B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vallette FM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d46">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22615490</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phosphorylation of distinct sites in MeCP2 modifies cofactor associations and the dynamics of transcriptional regulation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzales ML</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adams S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dunaway KW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LaSalle JM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b72">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25458568</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcriptional regulation of GAD1 GABA synthesis gene in the prefrontal cortex of subjects with schizophrenia.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schizophr Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akbarian S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c4f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23770565</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rett syndrome mutations abolish the interaction of MeCP2 with the NCoR/SMRT co-repressor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Neurosci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyst MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ekiert R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ebert DH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merusi C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nowak J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selfridge J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guy J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kastan NR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robinson ND</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Lima Alves F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rappsilber J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenberg ME</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bird A</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d35">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21212100</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reduced AKT/mTOR signaling and protein synthesis dysregulation in a Rett syndrome animal model.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mol Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricciardi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boggio EM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grosso S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonetti G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forlani G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stefanelli G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcagno E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morello N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Landsberger N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biffo S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pizzorusso T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giustetto M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broccoli V</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bf3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22334035</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Downregulation of CNPase in a MeCP2 deficient mouse model of Rett syndrome</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurol Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gu W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shang S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao Z</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f56">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21070191</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A brain-derived MeCP2 complex supports a role for MeCP2 in RNA processing.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biosci Rep</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Long SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ooi JY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yau PM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones PL</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d7b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20452318</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigenetic regulation of miR-184 by MBD1 governs neural stem cell proliferation and differentiation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Stem Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teng ZQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santistevan NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szulwach KE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao X</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b5e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23351786</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MeCP2 modulates gene expression pathways in astrocytes</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Autism</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dag H Yasui</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huichun Xu</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keith W Dunaway</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Janine M LaSalle</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee-Way Jin</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Izumi Maezawa</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disease pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000013</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20716963</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disrupted microRNA expression caused by Mecp2 loss in a mouse model of Rett syndrome.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epigenetics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urdinguio RG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernandez AF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez-Nieva P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rossi S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huertas D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kulis M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu CG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croce CM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calin GA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteller M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d06">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16613900</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification of cis-regulatory elements for MECP2 expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hum Mol Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francke U</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

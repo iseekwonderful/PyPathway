@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pypathway.core.SBGNPDImpl.objects &#8212; PyPathway 5 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="top" title="PyPathway 5 documentation" href="../../../../index.html" />
+    <link rel="up" title="pypathway" href="../../../pypathway.html" />
+   
+  <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pypathway.core.SBGNPDImpl.objects</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Implement SBGN-PD elements version 1</span>
+<span class="c1"># from general to specific, top to bottom</span>
+<span class="kn">from</span> <span class="nn">xml.sax</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">..objects</span> <span class="k">import</span> <span class="n">Pathway</span>
+<span class="kn">from</span> <span class="nn">...query.common</span> <span class="k">import</span> <span class="n">PathwayFormat</span>
+<span class="kn">from</span> <span class="nn">xml.dom.minidom</span> <span class="k">import</span> <span class="n">Document</span>
+<span class="kn">from</span> <span class="nn">...utils</span> <span class="k">import</span> <span class="n">environment</span> <span class="k">as</span> <span class="n">env</span>
+<span class="kn">from</span> <span class="nn">...utils</span> <span class="k">import</span> <span class="n">SBGNParseException</span>
+<span class="kn">from</span> <span class="nn">..BioPAXImpl.objects</span> <span class="k">import</span> <span class="n">NativeBioPAXParser</span>
+<span class="kn">from</span> <span class="nn">..ReactomeCustome.compress</span> <span class="k">import</span> <span class="n">vertex2id</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<div class="viewcode-block" id="id_handle"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.id_handle">[docs]</a><span class="k">def</span> <span class="nf">id_handle</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    In Cytoscape.js if the id contain some spacial characters, will lead to a select failure, so, we replace the</span>
+<span class="sd">    illegal char in the id</span>
+<span class="sd">    :param id:</span>
+<span class="sd">    :return: filtered id</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">id</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">r&quot;[\d\w]</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">)])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<span class="c1"># First define the errors:</span>
+<div class="viewcode-block" id="TypeNotInNestedElementListError"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.TypeNotInNestedElementListError">[docs]</a><span class="k">class</span> <span class="nc">TypeNotInNestedElementListError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_type</span><span class="p">,</span> <span class="n">exist_types</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_type</span> <span class="o">=</span> <span class="n">input_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exist_types</span> <span class="o">=</span> <span class="n">exist_types</span></div>
+
+
+<span class="c1"># Bbox not found while visualization</span>
+<div class="viewcode-block" id="BboxNotFoundInGlyphException"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.BboxNotFoundInGlyphException">[docs]</a><span class="k">class</span> <span class="nc">BboxNotFoundInGlyphException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="ObjectCaller"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.ObjectCaller">[docs]</a><span class="k">class</span> <span class="nc">ObjectCaller</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dicts</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Notes</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;notes&quot;</span><span class="p">]],</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Extension</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;extension&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Point</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]],</span> <span class="s2">&quot;bbox&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">BBox</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;sbgn&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">SBGNRoot</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]],</span> <span class="s2">&quot;map&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Map</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;language&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;arc&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Arc</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;source&quot;</span><span class="p">,</span> <span class="s2">&quot;target&quot;</span><span class="p">]],</span> <span class="s2">&quot;arcgroup&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">ArcGroup</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;glyph&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Glyph</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">,</span> <span class="s2">&quot;compartmentOrder&quot;</span><span class="p">,</span> <span class="s2">&quot;compartmentRef&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;orientation&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Label</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]],</span> <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">State</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;variable&quot;</span><span class="p">]],</span> <span class="s2">&quot;clone&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Clone</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;callout&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">CallOut</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;target&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Port</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]],</span> <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Start</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]],</span>
+                      <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">Next</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]],</span> <span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">End</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]]}</span>
+
+<div class="viewcode-block" id="ObjectCaller.call"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.ObjectCaller.call">[docs]</a>    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dicts</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">TypeNotInNestedElementListError</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dicts</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">attrs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dicts</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dicts</span><span class="p">[</span><span class="n">name</span><span class="p">][</span><span class="mi">0</span><span class="p">](</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="Heap"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Heap">[docs]</a><span class="k">class</span> <span class="nc">Heap</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">list</span><span class="o">.</span><span class="n">__init__</span><span class="p">([])</span>
+
+<div class="viewcode-block" id="Heap.push"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Heap.push">[docs]</a>    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Heap.peak"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Heap.peak">[docs]</a>    <span class="k">def</span> <span class="nf">peak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span></div></div>
+
+
+<span class="c1"># A parser for SBGN-PD</span>
+<div class="viewcode-block" id="SBGNParser"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNParser">[docs]</a><span class="k">class</span> <span class="nc">SBGNParser</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="SBGNParser.parse"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNParser.parse">[docs]</a>    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">BioPAX</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">handler</span> <span class="o">=</span> <span class="n">SBGNHandler</span><span class="p">()</span>
+        <span class="n">parseString</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">BioPAX</span><span class="p">:</span>
+            <span class="n">handler</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">BioPAX</span> <span class="o">=</span> <span class="n">BioPAX</span>
+        <span class="k">return</span> <span class="n">handler</span><span class="o">.</span><span class="n">root</span></div>
+
+    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="SBGNParser.parseFromFile"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNParser.parseFromFile">[docs]</a>    <span class="k">def</span> <span class="nf">parseFromFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">BioPAX</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">SBGNParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">BioPAX</span><span class="o">=</span><span class="n">BioPAX</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">SBGNParseException</span><span class="p">(</span><span class="s2">&quot;Fail reading file&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">traceback</span></div></div>
+            <span class="c1"># print(traceback.format_exc())</span>
+
+
+<span class="c1"># basic class of all SBGN-PD Objects.</span>
+<div class="viewcode-block" id="SBGNObject"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject">[docs]</a><span class="k">class</span> <span class="nc">SBGNObject</span><span class="p">(</span><span class="n">Pathway</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">ref</span><span class="p">):</span>
+        <span class="n">Pathway</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">core_implement</span> <span class="o">=</span> <span class="n">PathwayFormat</span><span class="o">.</span><span class="n">SBGN</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ref</span> <span class="o">=</span> <span class="n">ref</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;sbgn&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;root&quot;</span>
+
+<div class="viewcode-block" id="SBGNObject.add_child"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.add_child">[docs]</a>    <span class="k">def</span> <span class="nf">add_child</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">child</span><span class="o">.</span><span class="n">father</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Me </span><span class="si">{}</span><span class="s2">, Child: </span><span class="si">{}</span><span class="s2"> not in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+            <span class="k">raise</span> <span class="n">TypeNotInNestedElementListError</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="n">child</span><span class="o">.</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="kn">import</span> <span class="nn">traceback</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="p">)</span>
+            <span class="n">exit</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SBGNObject.summary"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deepth</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="n">refs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">refs</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;....&quot;</span> <span class="o">*</span> <span class="n">deepth</span> <span class="o">+</span> <span class="s2">&quot;Name: </span><span class="si">{}</span><span class="s2">, Props: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                 <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;name&quot;</span>
+                 <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+                 <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+                 <span class="ow">and</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;father&quot;</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;....&quot;</span> <span class="o">*</span> <span class="n">deepth</span> <span class="o">+</span> <span class="s2">&quot;name: </span><span class="si">{}</span><span class="s2">, props: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+                 <span class="k">if</span> <span class="ow">not</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;name&quot;</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">k</span><span class="o">==</span><span class="s2">&quot;father&quot;</span><span class="p">]))</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">refs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">x</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+                        <span class="n">result</span> <span class="o">+=</span> <span class="n">y</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">deepth</span><span class="o">=</span><span class="n">deepth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span></div>
+
+    <span class="c1"># These properties, is essential in a tree object.</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">father</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">father</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">father</span><span class="p">,</span> <span class="n">SBGNRoot</span><span class="p">):</span>
+            <span class="n">father</span> <span class="o">=</span> <span class="n">father</span><span class="o">.</span><span class="n">father</span>
+        <span class="k">return</span> <span class="n">father</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">is_root</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">SBGNRoot</span><span class="p">)</span>
+
+    <span class="c1"># this class should not be overwritten</span>
+<div class="viewcode-block" id="SBGNObject.export"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.export">[docs]</a>    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;You can only use export in a SBGN tree&#39;s root&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SBGNObject.draw"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.draw">[docs]</a>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+    <span class="c1"># Do not call this method directly, please use root&#39;s export method</span>
+    <span class="k">def</span> <span class="nf">_xml_object</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">father</span><span class="p">,</span> <span class="n">doc</span><span class="p">):</span>
+        <span class="c1"># if hasattr(self, &quot;id&quot;) and self.id == &quot;reactionVertex10616398&quot;:</span>
+        <span class="c1">#     print self.bbox</span>
+        <span class="n">me</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;ref&quot;</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;father&quot;</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;root&quot;</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;children&quot;</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;core_implement&quot;</span> \
+                    <span class="ow">or</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;external_id&quot;</span> <span class="ow">or</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;raw_id&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">v</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">type</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
+                <span class="c1"># if hasattr(self, &quot;name&quot;) and self.name == &quot;bbox&quot;:</span>
+                <span class="c1">#     print k, type(v)</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="s2">&quot;class&quot;</span>
+            <span class="kn">import</span> <span class="nn">sys</span>
+            <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+                <span class="n">me</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s2">&quot;text&quot;</span><span class="p">:</span>
+                    <span class="n">me</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">decode</span><span class="p">()))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">me</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+        <span class="n">father</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+        <span class="n">children</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;arc&quot;</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">cmp_s</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;start&quot;</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;next&quot;</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="s2">&quot;end&quot;</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="mi">1</span>
+            <span class="kn">import</span> <span class="nn">sys</span>
+            <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+                <span class="n">children</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="nb">cmp</span><span class="o">=</span><span class="n">cmp_s</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">children</span>
+        <span class="n">new</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;bbox&quot;</span><span class="p">:</span>
+                <span class="n">new</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">new</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">new</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">_xml_object</span><span class="p">(</span><span class="n">me</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">db_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">):</span>
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ref</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">results</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># return str({k: v for k, v in self.__dict__.items() if not k == &quot;father&quot;</span>
+        <span class="c1">#             and not k == &quot;children&quot; and not k == &quot;ref&quot;})</span>
+        <span class="k">return</span> <span class="s2">&quot;class: </span><span class="si">{}</span><span class="s2">, id: </span><span class="si">{}</span><span class="s2">, type: </span><span class="si">{}</span><span class="s2">, external_id: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                                                    <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                                                                    <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+                                                                    <span class="bp">self</span><span class="o">.</span><span class="n">external_id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;external_id&quot;</span><span class="p">)</span>
+                                                                    <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="nb">list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">])</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">_flatten</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SBGNObject.flatten"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.flatten">[docs]</a>    <span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_flatten</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+    <span class="k">def</span> <span class="nf">_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">elements</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">nodes</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">])</span>
+                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;group&quot;</span><span class="p">:</span> <span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;css&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
+                <span class="n">edges</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">])</span>
+                <span class="n">elements</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;groups&quot;</span><span class="p">:</span> <span class="s2">&quot;edges&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                        <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+                        <span class="s2">&quot;target&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span>
+                    <span class="p">},</span>
+                    <span class="s2">&quot;css&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;red&quot;</span>
+                    <span class="p">}</span>
+                <span class="p">})</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">_structure</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">elements</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="n">exit</span><span class="p">()</span>
+
+<div class="viewcode-block" id="SBGNObject.structure"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNObject.structure">[docs]</a>    <span class="k">def</span> <span class="nf">structure</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">no_id_er</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)])</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">no_id_er</span><span class="p">:</span>
+            <span class="n">cx</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">x</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cx</span><span class="p">):</span>
+                <span class="n">n</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">nodes</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">edges</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">elements</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_structure</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">edges</span><span class="p">,</span> <span class="n">elements</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/sheep/WebstormProjects/treeviz/data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+            <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">elements</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">nodes</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">exist_entities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;unspecified entity&quot;</span><span class="p">,</span> <span class="s2">&quot;simple chemical&quot;</span><span class="p">,</span> <span class="s2">&quot;macromolecule&quot;</span><span class="p">,</span> <span class="s2">&quot;nucleic acid feature&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;perturing agent&quot;</span><span class="p">,</span> <span class="s2">&quot;source sink&quot;</span><span class="p">,</span> <span class="s2">&quot;complex&quot;</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">exist_entities</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                    <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">reactions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">exist_reaction</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;process&quot;</span><span class="p">,</span> <span class="s2">&quot;omitted process&quot;</span><span class="p">,</span> <span class="s2">&quot;uncertain process&quot;</span><span class="p">,</span> <span class="s2">&quot;association&quot;</span><span class="p">,</span> <span class="s2">&quot;phenotype&quot;</span><span class="p">,</span> <span class="s2">&quot;dissociation&quot;</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">exist_reaction</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                    <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entities</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">arcs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">exist_arcs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;consumption&quot;</span><span class="p">,</span> <span class="s2">&quot;production&quot;</span><span class="p">,</span> <span class="s2">&quot;modulation&quot;</span><span class="p">,</span> <span class="s2">&quot;stimulation&quot;</span><span class="p">,</span> <span class="s2">&quot;catalysis&quot;</span><span class="p">,</span> <span class="s2">&quot;inhibition&quot;</span><span class="p">,</span> <span class="s2">&quot;logic arc&quot;</span><span class="p">,</span>
+                      <span class="s2">&quot;equivalence arc&quot;</span><span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">exist_arcs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                    <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">members</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">compartments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">flatten</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;compartment&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span><span class="p">:</span>
+                    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+                    <span class="k">continue</span>
+        <span class="k">return</span> <span class="n">result</span></div>
+
+
+<span class="c1"># note or notes?</span>
+<div class="viewcode-block" id="Notes"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Notes">[docs]</a><span class="k">class</span> <span class="nc">Notes</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">):</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="n">note</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Extension"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Extension">[docs]</a><span class="k">class</span> <span class="nc">Extension</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extension</span><span class="p">):</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extension</span> <span class="o">=</span> <span class="n">extension</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Point"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Point">[docs]</a><span class="k">class</span> <span class="nc">Point</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;point&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="BBox"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.BBox">[docs]</a><span class="k">class</span> <span class="nc">BBox</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;bbox&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">h</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="c1"># this is the root class of SBGN</span>
+<span class="c1"># this class provide the function like a DOM tree</span>
+<span class="c1"># get_node(entity)_by_id, get_arc_by_id</span>
+<span class="c1"># defined exception: IDNotFoundINPathwayTree</span>
+<span class="c1"># When you call SBGNParser.parse(stringbuffer) you get a instance of a pathway.</span>
+<div class="viewcode-block" id="SBGNRoot"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot">[docs]</a><span class="k">class</span> <span class="nc">SBGNRoot</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The root class of a SBGN-PD graph, the export and draw method are implement here.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">father</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="n">version</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;sbgn&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;map&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">map</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BioPAX</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="SBGNRoot.draw"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.draw">[docs]</a>    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">setting</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Export the pathway, options and copy the static dir to the ipython&#39;s workdir, run it!</span>
+<span class="sd">        :param setting: ignore it.</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">env</span><span class="p">():</span>
+            <span class="c1"># here we are in IPython, import IPython assert here, copy static to target dir</span>
+            <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+            <span class="c1"># import time</span>
+            <span class="c1"># t = str(time.time())[:10]</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../../static/box.html&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">con</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">option</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">option</span><span class="o">.</span><span class="n">json</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="c1"># with open(os.path.dirname(os.path.abspath(__file__))</span>
+            <span class="c1">#                     + &quot;/../../static/SBGN/sampleapp-components/data/config.json&quot;, &quot;w&quot;) as fp:</span>
+            <span class="c1">#     fp.write(json.dumps(content))</span>
+            <span class="c1"># with open(os.path.dirname(os.path.abspath(__file__))</span>
+            <span class="c1">#                   + &quot;/../../static/SBGN/sampleapp-components/data/pathway.xml&quot;, &quot;w&quot;) as fp:</span>
+            <span class="c1">#     fp.write(self.export(PathwayFormat.SBGN))</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/SBGN&quot;</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="kn">import</span> <span class="nn">traceback</span>
+                <span class="k">pass</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../../static/SBGN&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+                            <span class="o">+</span> <span class="s2">&quot;/SBGN&quot;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/SBGN/sampleapp-components/data/config.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">content</span><span class="p">))</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/SBGN/sampleapp-components/data/pathway.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">PathwayFormat</span><span class="o">.</span><span class="n">SBGN</span><span class="p">))</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;&#39;SBGN/index.html&#39;&quot;</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{path}}&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{ratio}}&quot;</span><span class="p">,</span> <span class="s2">&quot;0.7&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">con</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.export"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.export">[docs]</a>    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">format</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">format</span> <span class="o">==</span> <span class="n">PathwayFormat</span><span class="o">.</span><span class="n">KGML</span><span class="p">:</span>
+            <span class="ne">Warning</span><span class="p">(</span><span class="s2">&quot;[!] Convert from SBGN-PD to Other format is not supported&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">format</span> <span class="o">==</span> <span class="n">PathwayFormat</span><span class="o">.</span><span class="n">SBGN</span><span class="p">:</span>
+            <span class="n">doc</span> <span class="o">=</span> <span class="n">Document</span><span class="p">()</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s2">&quot;sbgn&quot;</span><span class="p">)</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="s2">&quot;xmlns&quot;</span><span class="p">,</span> <span class="s2">&quot;http://sbgn.org/libsbgn/pd/0.1&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">_xml_object</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">doc</span><span class="p">)</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">doc</span><span class="o">.</span><span class="n">toprettyxml</span><span class="p">(</span><span class="n">indent</span><span class="o">=</span><span class="s2">&quot;  &quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">con</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">members</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">member</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">:</span>
+            <span class="n">member</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">member</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Get the list of visualize node id</span>
+<span class="sd">        :return: list of id</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;glyph&quot;</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">entities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nodes</span>
+
+<div class="viewcode-block" id="SBGNRoot.get_element_by_class"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.get_element_by_class">[docs]</a>    <span class="k">def</span> <span class="nf">get_element_by_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">class_</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">class_</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.get_element_by_id"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.get_element_by_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_element_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="nb">id</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.get_element_by_type"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.get_element_by_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_element_by_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="nb">type</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.fix"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.fix">[docs]</a>    <span class="k">def</span> <span class="nf">fix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Fix the error while converting to sbgn from BioPAX</span>
+<span class="sd">        :return: None</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">glyph</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+                 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;glyph&quot;</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">}</span>
+        <span class="n">port</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;port&quot;</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;arc&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">source</span> <span class="ow">in</span> <span class="n">glyph</span><span class="p">:</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">glyph</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">glyph</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">x</span><span class="o">.</span><span class="n">source</span> <span class="ow">in</span> <span class="n">port</span><span class="p">:</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">source</span><span class="p">))</span>
+                    <span class="c1"># raise Exception(&quot;Where?&quot;)</span>
+                <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">target</span> <span class="ow">in</span> <span class="n">glyph</span><span class="p">:</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">glyph</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">glyph</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">x</span><span class="o">.</span><span class="n">target</span> <span class="ow">in</span> <span class="n">port</span><span class="p">:</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">end</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">port</span><span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Wrong target: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;glyph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># fix the too large modification</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;state&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s2">&quot;phosres&quot;</span><span class="p">:</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;P&quot;</span>
+                    <span class="n">r</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span><span class="p">))</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">r</span>
+                    <span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="n">r</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.fix_reactome"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.fix_reactome">[docs]</a>    <span class="k">def</span> <span class="nf">fix_reactome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">2.2</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Special for reactome source pathway, need BioPAX data</span>
+<span class="sd">        1. repair complex</span>
+<span class="sd">        2. repair scale</span>
+<span class="sd">        3. repair the external ID</span>
+<span class="sd">        :param ratio:</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># first delete the arcs, let us try nodes</span>
+        <span class="c1"># self.children[0].ref[&quot;arc&quot;] = []</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;port&quot;</span><span class="p">:</span>
+                <span class="c1"># print x.father.bbox[0].x, x.father.bbox[0].y, x.x, x.y</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+                <span class="n">x</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;compartment&quot;</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">:</span>
+                        <span class="c1"># print(&quot;w: {}, h: {}, x: {}, y: {}&quot;.format(x.bbox[0].w, x.bbox[0].h, x.bbox[0].x, x.bbox[0].y))</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">ratio</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">))</span> <span class="o">/</span> <span class="n">ratio</span> <span class="o">-</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+                        <span class="c1"># print(&quot;w: {}, h: {}, x: {}, y: {}&quot;.format(x.bbox[0].w, x.bbox[0].h, x.bbox[0].x, x.bbox[0].y))</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">:</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="n">ratio</span>
+        <span class="c1"># for x in self.members:</span>
+        <span class="c1">#     if hasattr(x, &quot;id&quot;) and x.id == &quot;reactionVertex10616398&quot;:</span>
+        <span class="c1">#         print x</span>
+        <span class="c1"># filter compartments</span>
+        <span class="n">refs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;compartment&quot;</span><span class="p">:</span>
+                <span class="n">refs</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)],</span> <span class="p">[]])</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;bbox&quot;</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">x</span><span class="o">.</span><span class="n">father</span><span class="o">.</span><span class="n">type</span> <span class="o">!=</span> <span class="s2">&quot;compartment&quot;</span><span class="p">:</span>
+                <span class="n">bd</span> <span class="o">=</span> <span class="p">[(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+                      <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+                      <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">)),</span>
+                      <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">w</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">h</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">y</span><span class="p">))]</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">refs</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">bd</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_point</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                            <span class="n">state</span> <span class="o">=</span> <span class="kc">True</span>
+                            <span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">need_delete</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">refs</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># for x in refs:</span>
+        <span class="c1">#     print x[0].id, len(x[2])</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">glyph</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">need_delete</span><span class="p">:</span>
+                <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;glyph&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+        <span class="c1"># fix complex and id_ref</span>
+        <span class="c1"># parse first:</span>
+        <span class="n">pax</span> <span class="o">=</span> <span class="n">NativeBioPAXParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">BioPAX</span><span class="p">)</span>
+        <span class="c1"># print &quot;prepare to fix biopax&quot;</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">members</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">):</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="s2">&quot;compartment&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+                <span class="c1"># ignore now</span>
+                <span class="n">cid</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">raw_id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">elif</span> <span class="s2">&quot;entity&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+                <span class="n">eid</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">raw_id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">bioId</span> <span class="o">=</span> <span class="n">vertex2id</span><span class="p">(</span><span class="n">eid</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">bioId</span><span class="p">:</span>
+                    <span class="c1"># print(&quot;None corID&quot;)</span>
+                    <span class="k">continue</span>
+                    <span class="k">raise</span> <span class="n">SBGNParseException</span><span class="p">(</span><span class="s2">&quot;No corID find&quot;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">cor</span> <span class="o">=</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_by_DB_ID</span><span class="p">(</span><span class="n">bioId</span><span class="p">)</span><span class="o">.</span><span class="n">father</span>
+                    <span class="k">except</span><span class="p">:</span>
+                        <span class="c1"># print(eid, bioId)</span>
+                        <span class="k">continue</span>
+                    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">cor</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;xref&quot;</span><span class="p">):</span>
+                        <span class="n">ref</span> <span class="o">=</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">n</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+                        <span class="n">x</span><span class="o">.</span><span class="n">external_id</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="n">ref</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;db&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="n">ref</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">})</span>
+                    <span class="c1"># print x.external_id</span>
+                    <span class="c1"># step 2: fix the compartments&#39;s elements</span>
+                    <span class="c1"># print cor.summary()</span>
+                    <span class="n">members</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="k">if</span> <span class="n">cor</span><span class="o">.</span><span class="n">class_</span> <span class="o">==</span> <span class="s2">&quot;bp:Complex&quot;</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">_complex_members</span><span class="p">(</span><span class="n">cor</span><span class="p">,</span> <span class="n">members</span><span class="p">,</span> <span class="n">pax</span><span class="p">)</span>
+                        <span class="n">fbbox</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;bbox&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="c1"># print members</span>
+                        <span class="c1"># x.ref[&quot;glyph&quot;] = []</span>
+                        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">members</span><span class="p">):</span>
+                            <span class="k">if</span> <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+                                <span class="n">g</span> <span class="o">=</span> <span class="n">Glyph</span><span class="p">(</span><span class="s2">&quot;macromolecule&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="n">g</span> <span class="o">=</span> <span class="n">Glyph</span><span class="p">(</span><span class="s2">&quot;macromolecule multimer&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span>
+                            <span class="n">bbox</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">complex_layout</span><span class="p">(</span><span class="n">fbbox</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+                            <span class="n">label</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                            <span class="n">g</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;bbox&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
+                            <span class="n">g</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+                            <span class="k">if</span> <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+                                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">md</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]):</span>
+                                    <span class="n">sg</span> <span class="o">=</span> <span class="n">Glyph</span><span class="p">(</span><span class="s2">&quot;state variable&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span> <span class="o">+</span> <span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">md</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                                    <span class="n">sg</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;bbox&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">BBox</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">11</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">bbox</span><span class="o">.</span><span class="n">w</span><span class="p">,</span>
+                                                               <span class="n">bbox</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">11</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>
+                                    <span class="k">if</span> <span class="s2">&quot;phospho&quot;</span> <span class="ow">in</span> <span class="n">md</span><span class="p">:</span>
+                                        <span class="n">md</span> <span class="o">=</span> <span class="s2">&quot;P&quot;</span>
+                                    <span class="n">sg</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">State</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">md</span><span class="p">,</span> <span class="n">variable</span><span class="o">=</span><span class="kc">None</span><span class="p">))</span>
+                                    <span class="n">g</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;glyph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sg</span><span class="p">)</span>
+                            <span class="n">x</span><span class="o">.</span><span class="n">ref</span><span class="p">[</span><span class="s2">&quot;glyph&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+                        <span class="c1">#print x.summary()</span>
+
+            <span class="k">elif</span> <span class="s2">&quot;reaction&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">:</span>
+                <span class="c1"># ignore now</span>
+                <span class="n">rid</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">raw_id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">bioId</span> <span class="o">=</span> <span class="n">vertex2id</span><span class="p">(</span><span class="n">rid</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SBGNRoot.complex_layout"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNRoot.complex_layout">[docs]</a>    <span class="k">def</span> <span class="nf">complex_layout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bbox</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="mi">10</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="n">offset</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="mi">10</span>
+        <span class="k">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">bbox</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span> <span class="o">*</span> <span class="n">offset</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">w</span> <span class="o">-</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">h</span> <span class="o">-</span> <span class="mi">10</span>
+        <span class="k">return</span> <span class="n">BBox</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_complex_members</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pax</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># for x in pax.find_child(&quot;componentStoichiometry&quot;):</span>
+        <span class="c1">#     print root.find_by_id(x.props[&quot;rdf:resource&quot;].replace(&quot;#&quot;, &quot;&quot;)).summary()</span>
+        <span class="n">cs</span> <span class="o">=</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;componentStoichiometry&quot;</span><span class="p">)</span>
+        <span class="n">cp</span> <span class="o">=</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;component&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">cp</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">SBGNParseException</span><span class="p">(</span><span class="s2">&quot;count of componentStoichiometry != count of component&quot;</span><span class="p">)</span>
+        <span class="n">info</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cs</span><span class="p">)):</span>
+            <span class="n">info</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">cs</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">cp</span><span class="p">[</span><span class="n">x</span><span class="p">]))</span>
+        <span class="k">if</span> <span class="n">pax</span><span class="o">.</span><span class="n">class_</span> <span class="o">==</span> <span class="s2">&quot;bp:Complex&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">info</span><span class="p">:</span>
+                <span class="c1"># print x.props[&quot;rdf:resource&quot;].replace(&quot;#&quot;, &quot;&quot;)</span>
+                <span class="n">target</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">target</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_complex_members</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># print pax.summary()</span>
+            <span class="n">display</span> <span class="o">=</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;displayName&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">display</span><span class="p">:</span>
+                <span class="c1"># may be unstable</span>
+                <span class="n">mods</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pax</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;feature&quot;</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">class_</span> <span class="o">==</span> <span class="s2">&quot;bp:ModificationFeature&quot;</span><span class="p">:</span>
+                        <span class="n">target</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;modificationType&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">modf</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">target</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span>
+                        <span class="k">if</span> <span class="n">modf</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">modf</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;term&quot;</span><span class="p">):</span>
+                                <span class="n">mods</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">modf</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;term&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">s</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)):</span>
+                        <span class="k">if</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;stoichiometricCoefficient&quot;</span><span class="p">):</span>
+                            <span class="n">count</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find_by_id</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">props</span><span class="p">[</span><span class="s2">&quot;rdf:resource&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">find_child</span><span class="p">(</span><span class="s2">&quot;stoichiometricCoefficient&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">display</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="n">mods</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">_check_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">bbox</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="ow">and</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">bbox</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Map"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Map">[docs]</a><span class="k">class</span> <span class="nc">Map</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">language</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">arcgroup</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;map&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;arc&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">arc</span><span class="p">,</span> <span class="s2">&quot;arcgroup&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">arcgroup</span><span class="p">,</span> <span class="s2">&quot;bbox&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">,</span>
+                                          <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="n">language</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="c1"># this is a PD implement so no port currently</span>
+<div class="viewcode-block" id="Arc"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Arc">[docs]</a><span class="k">class</span> <span class="nc">Arc</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_element</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;arc&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;end&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span>
+                                          <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_element</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;start&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">})</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id_handle</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">id_handle</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="n">id_handle</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="ArcGroup"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.ArcGroup">[docs]</a><span class="k">class</span> <span class="nc">ArcGroup</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">note</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="nb">type</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;arcgroup&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;arc&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">arc</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span>
+                                               <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">note</span><span class="p">})</span>
+
+    <span class="c1"># note that arcgroup itself cannot be visualized</span>
+    <span class="c1"># but its child could</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="c1"># entity only used in AF, ignore</span>
+<div class="viewcode-block" id="Glyph"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Glyph">[docs]</a><span class="k">class</span> <span class="nc">Glyph</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">compartmentOrder</span><span class="p">,</span> <span class="n">compartmentRef</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">orientation</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">clone</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">callout</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;glyph&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+                                            <span class="s2">&quot;state&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="s2">&quot;clone&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">clone</span><span class="p">,</span> <span class="s2">&quot;callout&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">callout</span><span class="p">,</span>
+                                            <span class="s2">&quot;bbox&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">,</span> <span class="s2">&quot;glyph&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">glyph</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">,</span>
+                                            <span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">compartmentOrder</span> <span class="o">=</span> <span class="nb">type</span><span class="p">,</span> <span class="n">compartmentOrder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">compartmentRef</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">orientation</span> <span class="o">=</span> <span class="n">compartmentRef</span><span class="p">,</span> <span class="n">orientation</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">id_handle</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">raw_id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">external_id</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Label"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Label">[docs]</a><span class="k">class</span> <span class="nc">Label</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="s2">&quot;bbox&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox</span><span class="p">})</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="State"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.State">[docs]</a><span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">variable</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">variable</span> <span class="o">=</span> <span class="n">variable</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;state&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Clone"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Clone">[docs]</a><span class="k">class</span> <span class="nc">Clone</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">label</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;clone&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="CallOut"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.CallOut">[docs]</a><span class="k">class</span> <span class="nc">CallOut</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">point</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">target</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">target</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;callout&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span><span class="p">})</span>
+
+
+    <span class="c1"># is it?</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Port"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Port">[docs]</a><span class="k">class</span> <span class="nc">Port</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">id_handle</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;notes&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">extension</span><span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Start"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Start">[docs]</a><span class="k">class</span> <span class="nc">Start</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;start&quot;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Next"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.Next">[docs]</a><span class="k">class</span> <span class="nc">Next</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;next&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span><span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="End"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.End">[docs]</a><span class="k">class</span> <span class="nc">End</span><span class="p">(</span><span class="n">SBGNObject</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="p">[]</span>
+        <span class="n">SBGNObject</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">point</span><span class="p">})</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">visualize_able</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="c1"># A Handler class</span>
+<div class="viewcode-block" id="SBGNHandler"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNHandler">[docs]</a><span class="k">class</span> <span class="nc">SBGNHandler</span><span class="p">(</span><span class="n">ContentHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ContentHandler</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">SBGNRoot</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heap</span> <span class="o">=</span> <span class="n">Heap</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">caller</span> <span class="o">=</span> <span class="n">ObjectCaller</span><span class="p">()</span>
+
+<div class="viewcode-block" id="SBGNHandler.startElement"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNHandler.startElement">[docs]</a>    <span class="k">def</span> <span class="nf">startElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;sbgn&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;sbgn&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">attrs</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="s2">&quot;sbgn&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;sbgn:&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">super_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">peak</span><span class="p">()</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">caller</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">attrs</span><span class="p">)</span>
+        <span class="n">super_name</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="n">current</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SBGNHandler.endElement"><a class="viewcode-back" href="../../../../pypathway.core.SBGNPDImpl.html#pypathway.core.SBGNPDImpl.objects.SBGNHandler.endElement">[docs]</a>    <span class="k">def</span> <span class="nf">endElement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;sbgn&quot;</span> <span class="ow">and</span> <span class="s2">&quot;sbgn&quot;</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;sbgn:&quot;</span> <span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">peak</span><span class="p">()</span><span class="o">.</span><span class="n">name</span> <span class="o">!=</span> <span class="n">name</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;should be: </span><span class="si">{}</span><span class="s2"> and is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">peak</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heap</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/sheep/sbgnviz-js/sample-app/samples/mapk_cascade.xml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">con</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">SBGNParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
+    <span class="n">tree</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="c1">#print tree.summary()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/Users/sheep/Desktop/test.xml&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">tree</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="n">PathwayFormat</span><span class="o">.</span><span class="n">SBGN</span><span class="p">))</span>
+
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../../index.html">Module code</a><ul>
+  <li><a href="../../../pypathway.html">pypathway</a><ul>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, sheep.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Valproic acid pathway" Version="20160811" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Valproic acid is a drug used for treatment and management of seizure disorders, mania and prophylactic treatment of migraine headache. In epileptics, valproic acid is used to control absence seizures, tonic-clonic seizures (grand mal), complex partial seizures, and the seizures associated with Lennox-Gastaut syndrome. 
+Valproic Acid dissociates to the valproate ion in the gastrointestinal tract and then binds to and inhibits GABA transaminase. The drug's anticonvulsant activity may be related to increased brain concentrations of gamma-aminobutyric acid (GABA), an inhibitory neurotransmitter in the CNS, by inhibiting enzymes that catabolize GABA or block the reuptake of GABA into glia and nerve endings. Valproic Acid may also work by suppressing repetitive neuronal firing through inhibition of voltage-sensitive sodium channels. It is also a histone deacetylase inhibitor. Valproic acid has also been shown to be an inhibitor of an enzyme called histone deacetylase 1 (HDAC1). HDAC1 is needed for HIV to remain in infected cells. A study published in August 2005 revealed that patients treated with valproic acid in addition to highly active antiretroviral therapy (HAART) showed a 75% reduction in latent HIV infection. 
+Source: description from http://www.drugbank.ca/drugs/DB00313
+Metabolic pathway from: http://smpdb.ca/view/SMP00635</Comment>
+  <BiopaxRef>e87</BiopaxRef>
+  <BiopaxRef>e66</BiopaxRef>
+  <BiopaxRef>bb2</BiopaxRef>
+  <BiopaxRef>e2c</BiopaxRef>
+  <BiopaxRef>c6b</BiopaxRef>
+  <BiopaxRef>b78</BiopaxRef>
+  <BiopaxRef>f67</BiopaxRef>
+  <BiopaxRef>cd4</BiopaxRef>
+  <BiopaxRef>f5b</BiopaxRef>
+  <BiopaxRef>f1a</BiopaxRef>
+  <BiopaxRef>c49</BiopaxRef>
+  <Graphics BoardWidth="1264.0" BoardHeight="654.0" />
+  <DataNode TextLabel="Valproic acid" GraphId="f5d6c" Type="Metabolite">
+    <Graphics CenterX="364.0" CenterY="194.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01877" />
+  </DataNode>
+  <DataNode TextLabel="ABAT" GraphId="fd19b" Type="GeneProduct">
+    <Graphics CenterX="225.0" CenterY="158.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000183044" />
+  </DataNode>
+  <DataNode TextLabel="GABA" GraphId="a44be" Type="Metabolite">
+    <Graphics CenterX="86.5" CenterY="158.0" Width="63.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00112" />
+  </DataNode>
+  <DataNode TextLabel="HDAC1" GraphId="cb258" Type="GeneProduct">
+    <Graphics CenterX="225.0" CenterY="194.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000116478" />
+  </DataNode>
+  <DataNode TextLabel="CYP2A6" GraphId="f14ac" Type="GeneProduct">
+    <Graphics CenterX="482.0" CenterY="43.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000255974" />
+  </DataNode>
+  <DataNode TextLabel="3-Hydroxyvalproic acid" GraphId="ad512" Type="Metabolite">
+    <Graphics CenterX="595.5" CenterY="75.0" Width="125.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB13899" />
+  </DataNode>
+  <DataNode TextLabel="3-Oxovalproic acid" GraphId="a789b" Type="Metabolite">
+    <Graphics CenterX="737.5" CenterY="75.0" Width="99.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60685" />
+  </DataNode>
+  <DataNode TextLabel="Valproic acid glucuronide" GraphId="ff488" Type="Metabolite">
+    <Graphics CenterX="595.5" CenterY="269.0" Width="129.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00901" />
+  </DataNode>
+  <DataNode TextLabel="UGT1A3" GraphId="b5135" Type="GeneProduct">
+    <Graphics CenterX="482.0" CenterY="298.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000243135" />
+  </DataNode>
+  <DataNode TextLabel="Uridine diphosphate glucuronic acid" GraphId="fbc9f" Type="Metabolite">
+    <Graphics CenterX="324.0" CenterY="325.0" Width="182.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00935" />
+  </DataNode>
+  <DataNode TextLabel="Uridine 5'-diphosphate" GraphId="d654b" Type="Metabolite">
+    <Graphics CenterX="561.5" CenterY="326.0" Width="125.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00295" />
+  </DataNode>
+  <DataNode TextLabel="4-ene-Valproic acid" GraphId="b3b1f" Type="Metabolite">
+    <Graphics CenterX="602.0" CenterY="194.0" Width="122.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB13897" />
+  </DataNode>
+  <DataNode TextLabel="CYP2B6" GraphId="c0fa6" Type="GeneProduct" GroupRef="b3779">
+    <Graphics CenterX="482.0" CenterY="148.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000197408" />
+  </DataNode>
+  <DataNode TextLabel="2-Propyl-2,4-pentadienoic acid" GraphId="ad92e" Type="Metabolite">
+    <Graphics CenterX="856.5" CenterY="153.0" Width="157.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60682" />
+  </DataNode>
+  <DataNode TextLabel="4-ene-Valproic acid CoA" GraphId="bcd83" Type="Metabolite">
+    <Graphics CenterX="842.0" CenterY="236.0" Width="134.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60762" />
+  </DataNode>
+  <DataNode TextLabel="ACADSB" GraphId="f42e0" Type="GeneProduct">
+    <Graphics CenterX="673.0" CenterY="223.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000196177" />
+  </DataNode>
+  <DataNode TextLabel="2,3-diene-Valproic acid-CoA" GraphId="c2e9e" Type="Metabolite">
+    <Graphics CenterX="1024.625" CenterY="236.75" Width="153.25" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60723" />
+  </DataNode>
+  <DataNode TextLabel="Valproic acid CoA" GraphId="e7872" Type="Metabolite">
+    <Graphics CenterX="595.5" CenterY="395.0" Width="97.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60877" />
+  </DataNode>
+  <DataNode TextLabel="ACSM1" GraphId="a8ecb" Type="GeneProduct">
+    <Graphics CenterX="482.0" CenterY="364.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000166743" />
+  </DataNode>
+  <DataNode TextLabel="2-ene-Valproic acid CoA" GraphId="edb5a" Type="Metabolite">
+    <Graphics CenterX="776.5" CenterY="395.0" Width="125.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60714" />
+  </DataNode>
+  <DataNode TextLabel="IVD" GraphId="fa5fc" Type="GeneProduct">
+    <Graphics CenterX="678.0" CenterY="425.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000128928" />
+  </DataNode>
+  <DataNode TextLabel="EHHADH" GraphId="bb0d6" Type="GeneProduct">
+    <Graphics CenterX="862.0" CenterY="362.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000113790" />
+  </DataNode>
+  <DataNode TextLabel="3-Hydroxyvalproic acid CoA" GraphId="d9488" Type="Metabolite">
+    <Graphics CenterX="962.0" CenterY="396.0" Width="136.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60744" />
+  </DataNode>
+  <DataNode TextLabel="3-oxo-Valproic acid CoA" GraphId="e4898" Type="Metabolite">
+    <Graphics CenterX="1170.5" CenterY="328.0" Width="127.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60749" />
+  </DataNode>
+  <DataNode TextLabel="HSD17B10" GraphId="cc299" Type="GeneProduct">
+    <Graphics CenterX="987.0" CenterY="349.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000072506" />
+  </DataNode>
+  <DataNode TextLabel="Pentanoyl-CoA" GraphId="a45ef" Type="Metabolite">
+    <Graphics CenterX="1146.0" CenterY="395.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB13037" />
+  </DataNode>
+  <DataNode TextLabel="HADHA" GraphId="eae84" Type="GeneProduct" GroupRef="c9f39">
+    <Graphics CenterX="969.0" CenterY="445.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000084754" />
+  </DataNode>
+  <DataNode TextLabel="HADHB" GraphId="b0c11" Type="GeneProduct" GroupRef="c9f39">
+    <Graphics CenterX="969.25" CenterY="465.75" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138029" />
+  </DataNode>
+  <DataNode TextLabel="Propionyl-CoA" GraphId="c3331" Type="Metabolite">
+    <Graphics CenterX="1147.0" CenterY="469.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01275" />
+  </DataNode>
+  <DataNode TextLabel="3-ene-Valproic acid CoA" GraphId="ce0dc" Type="Metabolite">
+    <Graphics CenterX="776.5" CenterY="462.0" Width="129.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60740" />
+  </DataNode>
+  <DataNode TextLabel="2,3-diene-Valproic acid-CoA" GraphId="c7ba1" Type="Metabolite">
+    <Graphics CenterX="776.5" CenterY="520.25" Width="128.25" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60723" />
+  </DataNode>
+  <DataNode TextLabel="5-Hydroxyvalproic acid" GraphId="efe2d" Type="Metabolite">
+    <Graphics CenterX="595.5" CenterY="559.0" Width="118.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB13898" />
+  </DataNode>
+  <DataNode TextLabel="CYP2C9" GraphId="f21c3" Type="GeneProduct" GroupRef="b3779">
+    <Graphics CenterX="482.0" CenterY="108.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138109" />
+  </DataNode>
+  <DataNode TextLabel="2-Propylglutaric acid" GraphId="aa25d" Type="Metabolite">
+    <Graphics CenterX="776.5" CenterY="560.0" Width="117.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60684" />
+  </DataNode>
+  <DataNode TextLabel="4-Hydroxyvalproic acid" GraphId="c69e5" Type="Metabolite">
+    <Graphics CenterX="598.5" CenterY="614.0" Width="129.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB13900" />
+  </DataNode>
+  <DataNode TextLabel="2-n-Propyl-4-oxopentanoic acid" GraphId="b7bd3" Type="Metabolite">
+    <Graphics CenterX="787.5" CenterY="612.0" Width="147.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60683" />
+  </DataNode>
+  <DataNode TextLabel="3-ene-Valproic acid CoA" GraphId="b12f1" Type="Metabolite">
+    <Graphics CenterX="608.0" CenterY="458.0" Width="134.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB60740" />
+  </DataNode>
+  <DataNode TextLabel="ACADSB" GraphId="af9f3" Type="GeneProduct">
+    <Graphics CenterX="678.0" CenterY="366.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000196177" />
+  </DataNode>
+  <DataNode TextLabel="CYP2A6" GraphId="be914" Type="GeneProduct" GroupRef="b3779">
+    <Graphics CenterX="482.0" CenterY="128.0" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000255974" />
+  </DataNode>
+  <DataNode TextLabel="CYP2B6" GraphId="e56a9" Type="GeneProduct" GroupRef="f29e5">
+    <Graphics CenterX="482.0" CenterY="520.0" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000197408" />
+  </DataNode>
+  <DataNode TextLabel="CYP2C9" GraphId="d9a88" Type="GeneProduct" GroupRef="f29e5">
+    <Graphics CenterX="482.0" CenterY="480.0" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138109" />
+  </DataNode>
+  <DataNode TextLabel="CYP2A6" GraphId="c3ec0" Type="GeneProduct" GroupRef="f29e5">
+    <Graphics CenterX="482.0" CenterY="500.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000255974" />
+  </DataNode>
+  <Interaction GraphId="id1995c725">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="158.0" GraphRef="fd19b" RelX="-1.0" RelY="0.0" />
+      <Point X="118.0" Y="158.0" GraphRef="a44be" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id65ba893d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="324.0" Y="194.0" GraphRef="f5d6c" RelX="-1.0" RelY="0.0" />
+      <Point X="265.0" Y="158.0" GraphRef="fd19b" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2cfa5fb5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="324.0" Y="194.0" GraphRef="f5d6c" RelX="-1.0" RelY="0.0" />
+      <Point X="265.0" Y="194.0" GraphRef="cb258" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2f648ebb">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="533.0" Y="75.0" GraphRef="ad512" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.756198347107438" Shape="None" GraphId="b9314" />
+      <Anchor Position="0.7983870967741935" Shape="None" GraphId="b6204" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9a806b06">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="53.0" GraphRef="f14ac" RelX="0.0" RelY="1.0" />
+      <Point X="483.0" Y="75.0" GraphRef="b6204" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbeebe9d5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="658.0" Y="75.0" GraphRef="ad512" RelX="1.0" RelY="0.0" />
+      <Point X="688.0" Y="75.0" GraphRef="a789b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc99fbf31">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="531.0" Y="269.0" GraphRef="ff488" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.7722772277227723" Shape="None" GraphId="eca99" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd181917f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="288.0" GraphRef="b5135" RelX="0.0" RelY="-1.0" />
+      <Point X="485.0" Y="269.0" GraphRef="eca99" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide1e0c97c">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="324.0" Y="315.0" GraphRef="fbc9f" RelX="0.0" RelY="-1.0" />
+      <Point X="442.75" Y="266.0" />
+      <Point X="561.5" Y="316.0" GraphRef="d654b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id982c5e06">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="541.0" Y="194.0" GraphRef="b3b1f" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5620437956204379" Shape="None" GraphId="ff4b6" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide5042a65">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="166.0" GraphRef="fbee4" RelX="0.0" RelY="1.0" />
+      <Point X="481.0" Y="194.0" GraphRef="ff4b6" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id73e3d248">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="663.0" Y="194.0" GraphRef="b3b1f" RelX="1.0" RelY="0.0" />
+      <Point X="739.0" Y="173.5" />
+      <Point X="778.0" Y="153.0" GraphRef="ad92e" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc32b731">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="663.0" Y="194.0" GraphRef="b3b1f" RelX="1.0" RelY="0.0" />
+      <Point X="739.0" Y="215.0" />
+      <Point X="775.0" Y="236.0" GraphRef="bcd83" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.6818181818181818" Shape="None" GraphId="f4bbd" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id582061f7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="713.0" Y="223.0" GraphRef="f42e0" RelX="1.0" RelY="0.0" />
+      <Point X="739.0" Y="223.0" GraphRef="f4bbd" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ided6fe93b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="909.0" Y="236.0" GraphRef="bcd83" RelX="1.0" RelY="0.0" />
+      <Point X="948.0" Y="236.75" GraphRef="c2e9e" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8fa4bd83">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="547.0" Y="395.0" GraphRef="e7872" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.813953488372093" Shape="None" GraphId="be7a7" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbde5e8c5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="374.0" GraphRef="a8ecb" RelX="0.0" RelY="1.0" />
+      <Point X="483.0" Y="395.0" GraphRef="be7a7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id60644b66">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="644.0" Y="395.0" GraphRef="e7872" RelX="1.0" RelY="0.0" />
+      <Point X="714.0" Y="395.0" GraphRef="edb5a" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5316455696202531" Shape="None" GraphId="bde08" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd63beb11">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="678.0" Y="376.0" GraphRef="af9f3" RelX="0.0" RelY="1.0" />
+      <Point X="681.2151898734177" Y="395.0" GraphRef="bde08" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2d02804b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="678.0" Y="415.0" GraphRef="fa5fc" RelX="0.0" RelY="-1.0" />
+      <Point X="681.2151898734177" Y="395.0" GraphRef="bde08" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc199ade6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="839.0" Y="395.0" GraphRef="edb5a" RelX="1.0" RelY="0.0" />
+      <Point X="894.0" Y="396.0" GraphRef="d9488" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="b606a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfe66c80d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="862.0" Y="372.0" GraphRef="bb0d6" RelX="0.0" RelY="1.0" />
+      <Point X="861.0" Y="395.4" GraphRef="b606a" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4144e0f6">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="1030.0" Y="396.0" GraphRef="d9488" RelX="1.0" RelY="0.0" />
+      <Point X="1107.0" Y="328.0" GraphRef="e4898" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.45517241379310347" Shape="None" GraphId="d19a3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1e633927">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1027.0" Y="349.0" GraphRef="cc299" RelX="1.0" RelY="0.0" />
+      <Point X="1050.0" Y="350.0" GraphRef="d19a3" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id55e9f5ed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1030.0" Y="396.0" GraphRef="d9488" RelX="1.0" RelY="0.0" />
+      <Point X="1106.0" Y="395.0" GraphRef="a45ef" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.6511434511434512" Shape="None" GraphId="a805e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idffad02b4">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="1030.0" Y="396.0" GraphRef="d9488" RelX="1.0" RelY="0.0" />
+      <Point X="1107.0" Y="469.0" GraphRef="c3331" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.52" Shape="None" GraphId="daa96" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idda319cb2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1021.25" Y="455.375" GraphRef="cd191" RelX="1.0" RelY="0.0" />
+      <Point X="1050.0" Y="454.0" GraphRef="daa96" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb6ab8272">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1021.25" Y="455.375" GraphRef="cd191" RelX="1.0" RelY="0.0" />
+      <Point X="1079.4869022869023" Y="395.34885654885653" GraphRef="a805e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf3769eec">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="776.5" Y="405.0" GraphRef="edb5a" RelX="0.0" RelY="1.0" />
+      <Point X="776.5" Y="452.0" GraphRef="ce0dc" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide557227e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="776.5" Y="472.0" GraphRef="ce0dc" RelX="0.0" RelY="1.0" />
+      <Point X="776.5" Y="510.25" GraphRef="c7ba1" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbfe334c8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="536.5" Y="559.0" GraphRef="efe2d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.9165829145728643" Shape="None" GraphId="d9e5e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idae4e4c92">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="538.0" GraphRef="ac43b" RelX="0.0" RelY="1.0" />
+      <Point X="495.0" Y="559.0" GraphRef="d9e5e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida3dac828">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="654.5" Y="559.0" GraphRef="efe2d" RelX="1.0" RelY="0.0" />
+      <Point X="718.0" Y="560.0" GraphRef="aa25d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf63499af">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="534.0" Y="614.0" GraphRef="c69e5" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.8527272727272728" Shape="None" GraphId="fde79" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idab069254">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="482.0" Y="538.0" GraphRef="ac43b" RelX="0.0" RelY="1.0" />
+      <Point X="453.0" Y="614.0" GraphRef="fde79" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5d7d6e91">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="404.0" Y="194.0" GraphRef="f5d6c" RelX="1.0" RelY="0.0" />
+      <Point X="541.0" Y="458.0" GraphRef="b12f1" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide2b8bfdf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="324.0" Y="194.0" GraphRef="f5d6c" RelX="-1.0" RelY="0.0" />
+      <Point X="266.0" Y="238.0" GraphRef="a7bfe" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="mode of action" GraphId="d5ce5">
+    <Graphics CenterX="227.0" CenterY="80.0" Width="140.0" Height="20.0" ZOrder="28672" FillColor="ffff00" FontSize="18" Valign="Middle" ShapeType="Rectangle" />
+  </Label>
+  <Label TextLabel="metabolism" GraphId="d164a">
+    <Graphics CenterX="668.0" CenterY="20.0" Width="126.0" Height="20.0" ZOrder="28672" FillColor="ffff00" FontSize="18" Valign="Middle" ShapeType="Rectangle" Color="333333" />
+  </Label>
+  <Label TextLabel="increased levels" GraphId="c255c">
+    <Graphics CenterX="88.0" CenterY="135.0" Width="112.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="re-uptake &#xA;of GABA" GraphId="a7bfe">
+    <Graphics CenterX="226.0" CenterY="238.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Group GroupId="c9f39" GraphId="cd191" Style="Complex" />
+  <Group GroupId="b3779" GraphId="fbee4" Style="Group" />
+  <Group GroupId="f29e5" GraphId="ac43b" Style="Group" />
+  <Group GroupId="e3d47" GraphId="d7d49" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e87">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8168173</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolic activation of unsaturated derivatives of valproic acid. Identification of novel glutathione adducts formed through coenzyme A-dependent and -independent processes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Biol Interact</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kassahun K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grillo MP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis MR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baillie TA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e66">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1676665</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification and characterization of the glutathione and N-acetylcysteine conjugates of (E)-2-propyl-2,4-pentadienoic acid, a toxic metabolite of valproic acid, in rats and humans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Metab Dispos</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kassahun K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farrell K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbott F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9353388</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human CYP2C9 and CYP2A6 mediate formation of the hepatotoxin 4-ene-valproic acid.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Pharmacol Exp Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadeque AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fisher MB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korzekwa KR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzalez FJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rettie AE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f5b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17687269</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacokinetic and pharmacodynamic interaction of lorazepam and valproic acid in relation to UGT2B7 genetic polymorphism in healthy subjects.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung JY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cho JY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu KS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lim KS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sohn DR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shin SG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jang IJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f67">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16945988</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contribution of CYP2C9, CYP2A6, and CYP2B6 to valproic acid metabolism in hepatic microsomes from individuals with the CYP2C9*1/*1 genotype.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kiang TK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ho PC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anari MR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tong V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbott FS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang TK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocyte</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000182</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">valproic acid drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001451</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f1a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18838507</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect of aging on glucuronidation of valproic acid in human liver microsomes and the role of UDP-glucuronosyltransferase UGT1A4, UGT1A8, and UGT1A10.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Metab Dispos</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argikar UA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remmel RP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bb2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21843514</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valproic acid utilizes the isoleucine breakdown pathway for its complete Î²-oxidation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LuÃ­s PB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruiter JP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ofman R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ijlst L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moedas M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diogo L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garcia P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Almeida IT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duran M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wanders RJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silva MF</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c6b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2112956</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The enzymatic basis for the metabolism and inhibitory effects of valproic acid: dehydrogenation of valproyl-CoA by 2-methyl-branched-chain acyl-CoA dehydrogenase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ito M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ikeda Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnez JG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finocchiaro G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanaka K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b78">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14597963</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Influence of CYP2C9 genotypes on the formation of a hepatotoxic metabolite of valproic acid in human liver microsomes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacogenomics J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ho PC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbott FS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zanger UM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chang TK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c49">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15761113</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></bp:YEAR>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e2c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988037</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrial metabolism of valproic acid.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochemistry</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norwood DL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mao LF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schulz H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000540</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">epilepsy</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1826</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

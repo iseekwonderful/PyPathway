@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Felbamate Metabolism" Author="Egon Willighagen" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">CYP metabolism of felbamate.</Comment>
+  <BiopaxRef>f11</BiopaxRef>
+  <Graphics BoardWidth="1057.0" BoardHeight="450.0" />
+  <DataNode TextLabel="Felbamate" GraphId="fd836" Type="Metabolite">
+    <Graphics CenterX="241.6999969482422" CenterY="274.0" Width="101.30000305175781" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB15084" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="bd51b" Type="GeneProduct" GroupRef="f370e">
+    <Graphics CenterX="124.0" CenterY="202.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000160868" />
+  </DataNode>
+  <DataNode TextLabel="p-hydroxyfelbamate" GraphId="fcf5a" Type="Metabolite">
+    <Graphics CenterX="241.6999969482422" CenterY="150.0" Width="101.30000305175781" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="8096945" />
+  </DataNode>
+  <DataNode TextLabel="3-Hydroxy-2-phenylpropyl&#xA;carbamate" GraphId="c6700" Type="Metabolite">
+    <Graphics CenterX="481.5" CenterY="274.0" Width="149.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="184751" />
+  </DataNode>
+  <DataNode TextLabel="3-carbamoyl-2-phenyl&#xA;propionaldehyde" GraphId="ed054" Type="Metabolite">
+    <Graphics CenterX="725.0" CenterY="274.0" Width="116.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="21350391" />
+  </DataNode>
+  <DataNode TextLabel="1.1.1.1" GraphId="af4ea" Type="Protein">
+    <Graphics CenterX="612.0" CenterY="208.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="1.1.1.1" />
+  </DataNode>
+  <DataNode TextLabel="atropaldehyde" GraphId="a51f4" Type="Metabolite">
+    <Graphics CenterX="725.0" CenterY="144.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="10312" />
+  </DataNode>
+  <DataNode TextLabel="3-carbamoyl-2-phenyl&#xA;propionic acid" GraphId="ea7d2" Type="Metabolite">
+    <Graphics CenterX="973.5" CenterY="274.0" Width="107.0" Height="32.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="3025746" />
+  </DataNode>
+  <DataNode TextLabel="1.2.1.5" GraphId="d506d" Type="Protein">
+    <Graphics CenterX="852.0" CenterY="208.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Enzyme Nomenclature" ID="1.2.1.5" />
+  </DataNode>
+  <DataNode TextLabel="CYP2E1" GraphId="f590e" Type="GeneProduct" GroupRef="f370e">
+    <Graphics CenterX="124.0" CenterY="222.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130649" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="fb29a" Type="GeneProduct" GroupRef="e1790">
+    <Graphics CenterX="126.0" CenterY="321.0" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000160868" />
+  </DataNode>
+  <DataNode TextLabel="CYP2E1" GraphId="ceb78" Type="GeneProduct" GroupRef="e1790">
+    <Graphics CenterX="126.0" CenterY="341.0" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000130649" />
+  </DataNode>
+  <DataNode TextLabel="2-hydroxyfelbamate" GraphId="f01c5" Type="Metabolite">
+    <Graphics CenterX="241.6999969482422" CenterY="410.0" Width="101.30000305175781" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="8575477" />
+  </DataNode>
+  <Interaction GraphId="ida2793a37">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="241.6999969482422" Y="264.0" GraphRef="fd836" RelX="0.0" RelY="-1.0" />
+      <Point X="241.6999969482422" Y="160.0" GraphRef="fcf5a" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5" Shape="None" GraphId="cf006" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1a196c0b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="172.0" Y="212.0" GraphRef="e0305" RelX="1.0" RelY="0.0" />
+      <Point X="241.6999969482422" Y="212.0" GraphRef="cf006" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb9efe33e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="241.6999969482422" Y="284.0" GraphRef="fd836" RelX="0.0" RelY="1.0" />
+      <Point X="241.6999969482422" Y="400.0" GraphRef="f01c5" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4051724137931034" Shape="None" GraphId="f0f5c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4ed85011">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="174.0" Y="331.0" GraphRef="fff35" RelX="1.0" RelY="0.0" />
+      <Point X="241.6999969482422" Y="331.0" GraphRef="f0f5c" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3f269cae">
+    <BiopaxRef>d8c</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="292.3499984741211" Y="274.0" GraphRef="fd836" RelX="1.0" RelY="0.0" />
+      <Point X="407.0" Y="274.0" GraphRef="c6700" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfed6409">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="556.0" Y="274.0" GraphRef="c6700" RelX="1.0" RelY="0.0" />
+      <Point X="667.0" Y="274.0" GraphRef="ed054" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5045045045045045" Shape="None" GraphId="becec" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3e56aed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="612.0" Y="218.0" GraphRef="af4ea" RelX="0.0" RelY="1.0" />
+      <Point X="612.0" Y="274.0" GraphRef="becec" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7c8acb49">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="725.0" Y="258.0" GraphRef="ed054" RelX="0.0" RelY="-1.0" />
+      <Point X="725.0" Y="154.0" GraphRef="a51f4" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbc4392ed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="783.0" Y="274.0" GraphRef="ed054" RelX="1.0" RelY="0.0" />
+      <Point X="920.0" Y="274.0" GraphRef="ea7d2" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.5109489051094891" Shape="None" GraphId="d54f7" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6a66c32a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="852.0" Y="218.0" GraphRef="d506d" RelX="0.0" RelY="1.0" />
+      <Point X="853.0" Y="274.0" GraphRef="d54f7" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="f370e" GraphId="e0305" Style="Group" />
+  <Group GroupId="e1790" GraphId="fff35" Style="Group" />
+  <Group GroupId="ba7d6" GraphId="ade89" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d8c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11823110</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Felbamate-induced apoptosis of hematopoietic cells is mediated by redox-sensitive and redox-independent pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epilepsy Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Husain Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pinto C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sofia RD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yunis EJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nervous system drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000923</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f11">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9314612</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacokinetic interactions with felbamate. In vitro-in vivo correlation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Pharmacokinet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glue P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banfield CR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perhach JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mather GG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Racha JK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Levy RH</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

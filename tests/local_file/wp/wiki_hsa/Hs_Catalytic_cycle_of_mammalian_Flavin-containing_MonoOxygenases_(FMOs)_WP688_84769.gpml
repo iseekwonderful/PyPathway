@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Catalytic cycle of mammalian Flavin-containing MonoOxygenases (FMOs)" Last-Modified="2/21/2013" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Flavin-containing monooxygenases are a group of enzymes that catalyze the oxygenation of substrates, mostly soft nucleophiles via the cofactor flavin. In the catalytic cycle, FMO binds to NADPH and to FAD, causing the reduction of FAD to FADH2. Next, molecular oxygen binds to the complex and is reduced to a hydroperoxide form, called 4a-hydroperoxyflavin. This complex is stable in the absence of a substrate. When a substrate is present, the distal O-atom of the complex is transferred to the substrate yielding an oxygenated product and leaving the flavincomplex 4a-hydroxyflavin that breaks down releasing water. At the end of the cycle, NADP+ is released resulting in FAD as the flavin form to start a next cycle.  
+In contrast to cytochrome P450 enzymes, FMOs are generally not induced or inhibited by xenobiotic substances. The five human FMOs are tissue specific: FMO1 is present in the human fetal liver and the adult kidney, FMO2 is present in the lung and FMO3 is present in the adult liver.</Comment>
+  <Comment Source="WikiPathways-category">Molecular Function</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <BiopaxRef>b1e</BiopaxRef>
+  <BiopaxRef>a03</BiopaxRef>
+  <BiopaxRef>c20</BiopaxRef>
+  <BiopaxRef>deb</BiopaxRef>
+  <BiopaxRef>b64</BiopaxRef>
+  <BiopaxRef>f5f</BiopaxRef>
+  <BiopaxRef>bab</BiopaxRef>
+  <BiopaxRef>d52</BiopaxRef>
+  <Graphics BoardWidth="799.0" BoardHeight="622.0"/>
+  <DataNode TextLabel="FMO1" GraphId="fb003" Type="GeneProduct" GroupRef="b0ee2">
+    <Graphics CenterX="387.01666666666665" CenterY="273.48333333333335" Width="82.03333333333336" Height="24.033333333333303" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff3333"/>
+    <Xref Database="Ensembl" ID="ENSG00000010932"/>
+  </DataNode>
+  <DataNode TextLabel="FMO2" GraphId="c3226" Type="GeneProduct" GroupRef="b0ee2">
+    <Graphics CenterX="387.01666666666654" CenterY="296.51666666666665" Width="82.03333333333336" Height="24.033333333333303" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff3333"/>
+    <Xref Database="Ensembl" ID="ENSG00000094963"/>
+  </DataNode>
+  <DataNode TextLabel="FMO3" GraphId="d527b" Type="GeneProduct" GroupRef="b0ee2">
+    <Graphics CenterX="387.01666666666665" CenterY="320.55" Width="82.03333333333333" Height="24.033333333333335" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff3333"/>
+    <Xref Database="Ensembl" ID="ENSG00000007933"/>
+  </DataNode>
+  <DataNode TextLabel="FMO5" GraphId="ff415" Type="GeneProduct" GroupRef="b0ee2">
+    <Graphics CenterX="387.01666666666665" CenterY="368.61666666666645" Width="82.03333333333336" Height="24.033333333333303" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff3333"/>
+    <Xref Database="Ensembl" ID="ENSG00000131781"/>
+  </DataNode>
+  <DataNode TextLabel="FMO4" GraphId="ffa70" Type="GeneProduct" GroupRef="b0ee2">
+    <Graphics CenterX="387.01666666666665" CenterY="344.5833333333332" Width="82.0333333333333" Height="24.033333333333303" ZOrder="32768" FontSize="10" Valign="Middle" Color="ff3333"/>
+    <Xref Database="Ensembl" ID="ENSG00000076258"/>
+  </DataNode>
+  <DataNode TextLabel="H+" GraphId="fd4b8" Type="Metabolite">
+    <Graphics CenterX="145.0" CenterY="489.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:15378"/>
+  </DataNode>
+  <DataNode TextLabel="NADPH" GraphId="e61bc" Type="Metabolite">
+    <Graphics CenterX="144.0" CenterY="442.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00221"/>
+  </DataNode>
+  <DataNode TextLabel="O2" GraphId="ce06a" Type="Metabolite">
+    <Graphics CenterX="126.0" CenterY="315.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01377"/>
+  </DataNode>
+  <DataNode TextLabel="H2O" GraphId="a2816" Type="Metabolite">
+    <Graphics CenterX="613.0" CenterY="318.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB02111"/>
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="db893" Type="Metabolite">
+    <Graphics CenterX="611.9833333333333" CenterY="437.48333333333335" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00217"/>
+  </DataNode>
+  <DataNode TextLabel="Substrate" GraphId="ed359" Type="Metabolite">
+    <Graphics CenterX="248.0" CenterY="176.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="339900"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Substrate-O" GraphId="adf1d" Type="Metabolite">
+    <Graphics CenterX="535.0" CenterY="185.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="339900"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="FAD-OOH" GraphId="fa807" Type="Metabolite" GroupRef="c4d6f">
+    <Graphics CenterX="247.0" CenterY="250.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="cd240" Type="Metabolite" GroupRef="c4d6f">
+    <Graphics CenterX="247.0" CenterY="270.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00217"/>
+  </DataNode>
+  <DataNode TextLabel="FADH2" GraphId="f4048" Type="Metabolite" GroupRef="fe818">
+    <Graphics CenterX="247.0" CenterY="362.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="25244872"/>
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="d2064" Type="Metabolite" GroupRef="fe818">
+    <Graphics CenterX="247.0" CenterY="382.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00217"/>
+  </DataNode>
+  <DataNode TextLabel="FAD-OH" GraphId="d053e" Type="Metabolite" GroupRef="e5729">
+    <Graphics CenterX="533.0" CenterY="255.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="ab5ef" Type="Metabolite" GroupRef="e5729">
+    <Graphics CenterX="533.0" CenterY="275.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00217"/>
+  </DataNode>
+  <DataNode TextLabel="NADP+" GraphId="dc92d" Type="Metabolite" GroupRef="c30d2">
+    <Graphics CenterX="533.0" CenterY="388.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00217"/>
+  </DataNode>
+  <DataNode TextLabel="FAD" GraphId="f0943" Type="Metabolite" GroupRef="c30d2">
+    <Graphics CenterX="533.0" CenterY="368.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01248"/>
+  </DataNode>
+  <DataNode TextLabel="FAD" GraphId="e9ba0" Type="Metabolite">
+    <Graphics CenterX="384.0" CenterY="463.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01248"/>
+  </DataNode>
+  <Interaction GraphId="c9af4">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff3333">
+      <Point X="247.0" Y="340.0" GraphRef="ff029" RelX="0.0" RelY="-1.0"/>
+      <Point X="247.0" Y="292.0" GraphRef="a4794" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="cf3f5"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="cf266">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0" Color="ff3333">
+      <Point X="344.0" Y="463.0" GraphRef="e9ba0" RelX="-1.0" RelY="0.0"/>
+      <Point X="247.0" Y="404.0" GraphRef="ff029" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.5616639958138471" Shape="None" GraphId="bf029"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ef2a1">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0" Color="ff3333">
+      <Point X="247.0" Y="228.0" GraphRef="a4794" RelX="0.0" RelY="-1.0"/>
+      <Point X="390.0" Y="219.0"/>
+      <Point X="533.0" Y="233.0" GraphRef="c61ae" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4870267507241439" Shape="None" GraphId="a9c45"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d3a6f">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff3333">
+      <Point X="533.0" Y="297.0" GraphRef="c61ae" RelX="0.0" RelY="1.0"/>
+      <Point X="533.0" Y="346.0" GraphRef="aeefa" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.47368421052631576" Shape="None" GraphId="a92c2"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dec02">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0" Color="ff3333">
+      <Point X="533.0" Y="410.0" GraphRef="aeefa" RelX="0.0" RelY="1.0"/>
+      <Point X="424.0" Y="463.0" GraphRef="e9ba0" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4685925428283506" Shape="None" GraphId="f6d9a"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e6555">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="248.0" Y="186.0" GraphRef="ed359" RelX="0.0" RelY="1.0"/>
+      <Point X="391.5" Y="218.0"/>
+      <Point X="535.0" Y="195.0" GraphRef="adf1d" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="f3c9f">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="247.0" Y="404.0" GraphRef="ff029" RelX="0.0" RelY="1.0"/>
+      <Point X="184.0" Y="442.0" GraphRef="e61bc" RelX="1.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dcfea">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="533.0" Y="297.0" GraphRef="c61ae" RelX="0.0" RelY="1.0"/>
+      <Point X="573.0" Y="318.0" GraphRef="a2816" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="adb30">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="533.0" Y="410.0" GraphRef="aeefa" RelX="0.0" RelY="1.0"/>
+      <Point X="571.9833333333333" Y="437.48333333333335" GraphRef="db893" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e2048">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="166.0" Y="315.0" GraphRef="ce06a" RelX="1.0" RelY="0.0"/>
+      <Point X="247.0" Y="292.0" GraphRef="a4794" RelX="0.0" RelY="1.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="cfb95">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="185.0" Y="489.0" GraphRef="fd4b8" RelX="1.0" RelY="0.0"/>
+      <Point X="247.0" Y="404.0" GraphRef="ff029" RelX="0.0" RelY="1.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c9995">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="333.9999999999999" Y="321.0499999999999" GraphRef="f55ab" RelX="-1.0" RelY="0.0"/>
+      <Point X="247.0" Y="320.8" GraphRef="cf3f5" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="aa08d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="387.01666666666665" Y="249.4666666666667" GraphRef="f55ab" RelX="0.0" RelY="-1.0"/>
+      <Point X="386.82775518694285" Y="219.0101488192324" GraphRef="a9c45" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c568d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="387.01666666666665" Y="392.6333333333331" GraphRef="f55ab" RelX="0.0" RelY="1.0"/>
+      <Point X="276.2080250877811" Y="447.87958198560466" GraphRef="bf029" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b441b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="387.01666666666665" Y="392.6333333333331" GraphRef="f55ab" RelX="0.0" RelY="1.0"/>
+      <Point X="493.1761943399822" Y="452.0315629973454" GraphRef="f6d9a" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ea758">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="440.0333333333334" Y="321.0499999999999" GraphRef="f55ab" RelX="1.0" RelY="0.0"/>
+      <Point X="533.0" Y="320.2105263157895" GraphRef="a92c2" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Endoplasmic reticulum" GraphId="c6786">
+    <Graphics CenterX="88.5" CenterY="66.0" Width="131.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="a78d2">
+    <Graphics CenterX="394.98333333333335" CenterY="325.5" Width="748.0333333333333" Height="533.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="b0ee2" GraphId="f55ab" Style="Complex"/>
+  <Group GroupId="c4d6f" GraphId="a4794" Style="Complex"/>
+  <Group GroupId="fe818" GraphId="ff029" Style="Complex"/>
+  <Group GroupId="e5729" GraphId="c61ae" Style="Complex"/>
+  <Group GroupId="c30d2" GraphId="aeefa" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c20">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15922018</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mammalian flavin-containing monooxygenases: structure/function, genetic polymorphisms and role in drug metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krueger SK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams DE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b1e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7720105</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multisubstrate flavin-containing monooxygenases: applications of mechanism to specificity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Biol Interact</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poulsen LL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziegler DM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a03">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8128486</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The mammalian flavin-containing monooxygenases: molecular characterization and regulation of expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol Appl Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hines RN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cashman JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philpot RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams DE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziegler DM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d52">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16112078</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some distinctions between flavin-containing and cytochrome P450 monooxygenases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Biophys Res Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cashman JR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular detoxification pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000124</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bab">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16402899</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Human flavin-containing monooxygenases.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annu Rev Pharmacol Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cashman JR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b64">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18423897</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flavin-containing monooxygenases: mutations, disease and drug response.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Pharmacol Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips IR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shephard EA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f5f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15680226</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Potential roles of flavin-containing monooxygenases in sulfoxidation reactions of l-methionine, N-acetyl-l-methionine and peptides containing l-methionine.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elfarra AA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krause RJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="deb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2203193</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flavin-containing monooxygenases: enzymes adapted for multisubstrate specificity.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Pharmacol Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziegler DM</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Beta Oxidation Meta Pathway" Organism="Rattus norvegicus">
+  <Comment Source="GenMAPP notes">Updated from Charles Redfern and Nathan Salomonisâ original by Magali Jaillard, Marijke Vermeer, Michiel Adrieans, Ron Schormans and Chris Evelo, see website</Comment>
+  <Comment Source="GenMAPP remarks">http://www.bigcat.unimaas.nl/mapps/</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Graphics BoardWidth="966.8333333333334" BoardHeight="680.0" />
+  <DataNode TextLabel="Lpl" GraphId="a71" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Lpl | lipoprotein lipase" />
+    <Graphics CenterX="100.0" CenterY="120.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24539" />
+  </DataNode>
+  <DataNode TextLabel="Gyk" GraphId="ac0" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gyk | glycerol kinase" />
+    <Graphics CenterX="100.0" CenterY="140.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="79223" />
+  </DataNode>
+  <DataNode TextLabel="Gk2" GraphId="f13" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gk2" />
+    <Graphics CenterX="100.0" CenterY="160.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="289481" />
+  </DataNode>
+  <DataNode TextLabel="Tpi1" GraphId="ae6" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Tpi1 | triosephosphate isomerase 1" />
+    <Graphics CenterX="100.0" CenterY="200.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24849" />
+  </DataNode>
+  <DataNode TextLabel="Acsl1" GraphId="bed" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acsl1 | acyl-CoA synthetase long-chain family m..." />
+    <Graphics CenterX="100.0" CenterY="240.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25288" />
+  </DataNode>
+  <DataNode TextLabel="Acsl3" GraphId="d90" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acsl3 | acyl-CoA synthetase long-chain family m..." />
+    <Graphics CenterX="100.0" CenterY="260.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="114024" />
+  </DataNode>
+  <DataNode TextLabel="Acsl4" GraphId="f7e" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acsl4 | acyl-CoA synthetase long-chain family m..." />
+    <Graphics CenterX="100.0" CenterY="280.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="113976" />
+  </DataNode>
+  <DataNode TextLabel="Acsl6" GraphId="f91" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acsl6 | acyl-CoA synthetase long-chain family m..." />
+    <Graphics CenterX="100.0" CenterY="320.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="117243" />
+  </DataNode>
+  <DataNode TextLabel="Crat" GraphId="c0b" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Crat | carnitine acetyltransferase" />
+    <Graphics CenterX="100.0" CenterY="340.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="311849" />
+  </DataNode>
+  <DataNode TextLabel="Cpt1a" GraphId="ba6" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Cpt1a | carnitine palmitoyltransferase 1a liv..." />
+    <Graphics CenterX="100.0" CenterY="360.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25757" />
+  </DataNode>
+  <DataNode TextLabel="Chkb" GraphId="e61" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Chkb | choline kinase beta" />
+    <Graphics CenterX="100.0" CenterY="380.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="29367" />
+  </DataNode>
+  <DataNode TextLabel="Cpt2" GraphId="f51" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Cpt2 | carnitine palmitoyltransferase 2" />
+    <Graphics CenterX="100.0" CenterY="400.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25413" />
+  </DataNode>
+  <DataNode TextLabel="Slc25a20" GraphId="d02" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Slc25a20 | solute carrier family 25 (mitochond..." />
+    <Graphics CenterX="100.0" CenterY="420.0" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="117035" />
+  </DataNode>
+  <DataNode TextLabel="Cpt1b" GraphId="f10" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Cpt1b | carnitine palmitoyltransferase 1b mus..." />
+    <Graphics CenterX="100.0" CenterY="440.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25756" />
+  </DataNode>
+  <DataNode TextLabel="Acadvl" GraphId="b1d" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acadvl | acyl-Coenzyme A dehydrogenase very l..." />
+    <Graphics CenterX="100.0" CenterY="460.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25363" />
+  </DataNode>
+  <DataNode TextLabel="Hadha" GraphId="ed9" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadha | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="100.0" CenterY="480.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="170670" />
+  </DataNode>
+  <DataNode TextLabel="Hadhb" GraphId="d60" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhb | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="100.0" CenterY="500.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="171155" />
+  </DataNode>
+  <DataNode TextLabel="Echs1" GraphId="f4b" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Echs1 | enoyl Coenzyme A hydratase short chai..." />
+    <Graphics CenterX="100.0" CenterY="540.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="140547" />
+  </DataNode>
+  <DataNode TextLabel="Hadhsc" GraphId="b49" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhsc | L-3-hydroxyacyl-Coenzyme A dehydrogen..." />
+    <Graphics CenterX="100.0" CenterY="560.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="113965" />
+  </DataNode>
+  <DataNode TextLabel="Hadhsc" GraphId="a7f" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhsc | L-3-hydroxyacyl-Coenzyme A dehydrogen..." />
+    <Graphics CenterX="436.6666666666667" CenterY="163.33333333333334" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="113965" />
+  </DataNode>
+  <DataNode TextLabel="Hadhb" GraphId="d44" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhb | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="436.6666666666667" CenterY="203.33333333333334" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="171155" />
+  </DataNode>
+  <DataNode TextLabel="Acads" GraphId="f50" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acads | acyl-Coenzyme A dehydrogenase short c..." />
+    <Graphics CenterX="436.6666666666667" CenterY="223.33333333333334" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="64304" />
+  </DataNode>
+  <DataNode TextLabel="Echs1" GraphId="da8" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Echs1 | enoyl Coenzyme A hydratase short chai..." />
+    <Graphics CenterX="833.3333333333334" CenterY="120.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="140547" />
+  </DataNode>
+  <DataNode TextLabel="Acads" GraphId="fea" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acads | acyl-Coenzyme A dehydrogenase short c..." />
+    <Graphics CenterX="833.3333333333334" CenterY="140.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="64304" />
+  </DataNode>
+  <DataNode TextLabel="Hadhsc" GraphId="dcc" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhsc | L-3-hydroxyacyl-Coenzyme A dehydrogen..." />
+    <Graphics CenterX="833.3333333333334" CenterY="160.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="113965" />
+  </DataNode>
+  <DataNode TextLabel="Acat1" GraphId="c0f" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acat1 | acetyl-Coenzyme A acetyltransferase 1" />
+    <Graphics CenterX="833.3333333333334" CenterY="180.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25014" />
+  </DataNode>
+  <DataNode TextLabel="Hadha" GraphId="ed2" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadha | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="833.3333333333334" CenterY="200.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="170670" />
+  </DataNode>
+  <DataNode TextLabel="Hadhb" GraphId="c64" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadhb | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="833.3333333333334" CenterY="220.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="171155" />
+  </DataNode>
+  <DataNode TextLabel="Dld" GraphId="d91" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Dld | dihydrolipoamide dehydrogenase" />
+    <Graphics CenterX="833.3333333333334" CenterY="240.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="298942" />
+  </DataNode>
+  <DataNode TextLabel="Gcdh" GraphId="a4b" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gcdh | glutaryl-Coenzyme A dehydrogenase" />
+    <Graphics CenterX="833.3333333333334" CenterY="260.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="364975" />
+  </DataNode>
+  <DataNode TextLabel="Lipc" GraphId="ee5" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Lipc | lipase hepatic" />
+    <Graphics CenterX="100.0" CenterY="580.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24538" />
+  </DataNode>
+  <DataNode TextLabel="Lipe" GraphId="f6d" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Lipe | lipase hormone sensitive" />
+    <Graphics CenterX="100.0" CenterY="600.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25330" />
+  </DataNode>
+  <DataNode TextLabel="Lipf" GraphId="beb" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Lipf | lipase gastric" />
+    <Graphics CenterX="100.0" CenterY="620.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="50682" />
+  </DataNode>
+  <DataNode TextLabel="Pnpla2" GraphId="c86" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Pnpla2 | patatin-like phospholipase domain cont..." />
+    <Graphics CenterX="100.0" CenterY="640.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="361676" />
+  </DataNode>
+  <DataNode TextLabel="Acas2" GraphId="bbb" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acas2 | acetyl-Coenzyme A synthetase 2 (ADP for..." />
+    <Graphics CenterX="100.0" CenterY="220.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="311569" />
+  </DataNode>
+  <DataNode TextLabel="Acadm" GraphId="ffd" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acadm | acetyl-Coenzyme A dehydrogenase mediu..." />
+    <Graphics CenterX="436.6666666666667" CenterY="123.33333333333333" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="24158" />
+  </DataNode>
+  <DataNode TextLabel="Echs1" GraphId="ae8" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Echs1 | enoyl Coenzyme A hydratase short chai..." />
+    <Graphics CenterX="436.6666666666667" CenterY="143.33333333333334" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="140547" />
+  </DataNode>
+  <DataNode TextLabel="Hadha" GraphId="a35" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Hadha | hydroxyacyl-Coenzyme A dehydrogenase/3..." />
+    <Graphics CenterX="436.6666666666667" CenterY="183.33333333333334" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="170670" />
+  </DataNode>
+  <DataNode TextLabel="Gpd2" GraphId="ccc" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Gpd2 | glycerol phosphate dehydrogenase 2 mit..." />
+    <Graphics CenterX="100.0" CenterY="180.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25062" />
+  </DataNode>
+  <DataNode TextLabel="Acsl5" GraphId="e21" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acsl5 | acyl-CoA synthetase long-chain family m..." />
+    <Graphics CenterX="100.0" CenterY="300.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="94340" />
+  </DataNode>
+  <DataNode TextLabel="Acadl" GraphId="ce7" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acadl | acetyl-Coenzyme A dehydrogenase long-..." />
+    <Graphics CenterX="100.0" CenterY="520.0" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="25287" />
+  </DataNode>
+  <Label TextLabel="Beta Oxidation 1 MAPP" GraphId="dc0">
+    <Graphics CenterX="106.66666666666667" CenterY="83.33333333333333" Width="180.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Beta Oxidation 2 MAPP" GraphId="b86">
+    <Graphics CenterX="453.3333333333333" CenterY="83.33333333333333" Width="180.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Beta Oxidation 3 MAPP" GraphId="a64">
+    <Graphics CenterX="846.6666666666666" CenterY="83.33333333333333" Width="180.33333333333334" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="This MAPP is only present for statistical purpose," GraphId="f41">
+    <Graphics CenterX="720.0" CenterY="366.6666666666667" Width="377.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="to help evaluate all beta-oxidation MAPPS at once." GraphId="f76">
+    <Graphics CenterX="726.6666666666666" CenterY="386.6666666666667" Width="384.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Omit the 3 individual sub-mapps from statistical" GraphId="e6d">
+    <Graphics CenterX="716.6666666666666" CenterY="406.6666666666667" Width="364.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="evaluation to prevent redundancy." GraphId="a21">
+    <Graphics CenterX="666.6666666666666" CenterY="426.6666666666667" Width="265.3333333333333" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <InfoBox CenterX="538.3333333333334" CenterY="555.0" />
+  <Legend CenterX="195.0" CenterY="288.3333333333333" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fatty acid beta degradation pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000738</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

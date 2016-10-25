@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="TCA Cycle Nutrient Utilization and Invasiveness of Ovarian Cancer" Version="20141029" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Schematic showing the shift in nutrient utilization in TCA cycle with increasing degree of invasiveness. Low-invasive ovarian cancer (OVCA) cells are glucose dependent for their TCA cycle pool. With increasing invasiveness in cancer cells, dominant nutrient which feeds the TCA cycle shifts from glucose to Gln. In high-invasive OVCA cells, Gln dominates the TCA cycle. In low-invasive OVCA cells, glucose activates Jak1, which activates STAT3 by tyrosine phosphorylation, thereby regulating glycolysis in cancer cells. In highinvasive OVCA cells, besides glucose's role in activating STAT3 tyrosine phosphorylation, glutamine activates JAK1 through TCA cycle to further activate STAT3 by tyrosine phosphorylation and thus regulate glycolysis. Further, Gln activates Erk1/2, which subsequently activates STAT3 by serine phosphorylation selectively in high-invasive OVCA cells. The serine phosphorylation of STAT3 enhances oxidative phosphorylation in mitochondria by interaction with mitochondrial complexes I and II, thereby increasing TCA cycle activity in high-invasive OVCA cells.</Comment>
+  <BiopaxRef>cca</BiopaxRef>
+  <Graphics BoardWidth="912.0" BoardHeight="613.0"/>
+  <DataNode TextLabel="EGFR" GraphId="ed313" Type="GeneProduct">
+    <Graphics CenterX="102.0" CenterY="266.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="1956"/>
+  </DataNode>
+  <DataNode TextLabel="JAK1" GraphId="cc42b" Type="GeneProduct">
+    <Graphics CenterX="102.0" CenterY="343.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="3716"/>
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="a2a4a" Type="GeneProduct">
+    <Graphics CenterX="102.0" CenterY="408.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="6774"/>
+  </DataNode>
+  <DataNode TextLabel="Glucose" GraphId="e0064" Type="Metabolite">
+    <Graphics CenterX="102.0" CenterY="205.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00122"/>
+  </DataNode>
+  <DataNode TextLabel="D-Glutamine" GraphId="cf7ed" Type="Metabolite">
+    <Graphics CenterX="639.0" CenterY="202.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB03423"/>
+  </DataNode>
+  <DataNode TextLabel="TCA Cycle" GraphId="f133c" Type="Pathway">
+    <Graphics CenterX="640.0" CenterY="513.0" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP78"/>
+  </DataNode>
+  <DataNode TextLabel="Lactate" GraphId="c34c9" Type="Metabolite">
+    <Graphics CenterX="219.0" CenterY="460.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00190"/>
+  </DataNode>
+  <DataNode TextLabel="Pyruvate" GraphId="d632b" Type="Metabolite">
+    <Graphics CenterX="219.0" CenterY="546.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00243"/>
+  </DataNode>
+  <DataNode TextLabel="ERK2" GraphId="d3a8b" Type="GeneProduct" GroupRef="b5238">
+    <Graphics CenterX="639.0" CenterY="276.25" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="5594"/>
+  </DataNode>
+  <DataNode TextLabel="ERK1" GraphId="c3e6f" Type="GeneProduct" GroupRef="b5238">
+    <Graphics CenterX="639.0" CenterY="296.25" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="5595"/>
+  </DataNode>
+  <DataNode TextLabel="Glucose" GraphId="c1502" Type="Metabolite">
+    <Graphics CenterX="101.0" CenterY="546.0" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00122"/>
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="dd827" Type="GeneProduct">
+    <Graphics CenterX="639.0" CenterY="368.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" Color="00cc00"/>
+    <Xref Database="Entrez Gene" ID="6774"/>
+  </DataNode>
+  <DataNode TextLabel="Glucose" GraphId="fd7c3" Type="Metabolite">
+    <Graphics CenterX="459.0" CenterY="202.0" Width="80.0" Height="20.0" ZOrder="32781" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00122"/>
+  </DataNode>
+  <DataNode TextLabel="EGFR" GraphId="cda95" Type="GeneProduct">
+    <Graphics CenterX="459.0" CenterY="287.0" Width="80.0" Height="20.0" ZOrder="32782" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="1956"/>
+  </DataNode>
+  <DataNode TextLabel="JAK1" GraphId="b0e72" Type="GeneProduct">
+    <Graphics CenterX="459.0" CenterY="351.0" Width="80.0" Height="20.0" ZOrder="32783" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="3716"/>
+  </DataNode>
+  <DataNode TextLabel="STAT3" GraphId="a3dd3" Type="GeneProduct">
+    <Graphics CenterX="459.0" CenterY="404.0" Width="80.0" Height="20.0" ZOrder="32784" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="6774"/>
+  </DataNode>
+  <State GraphRef="a2a4a" TextLabel="Tyr-P" GraphId="d439a">
+    <Comment>P</Comment>
+    <Graphics RelX="1.0" RelY="-1.0" Width="35.5" Height="12.5" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="dd827" TextLabel="Ser-P" GraphId="bcf9c">
+    <Graphics RelX="0.825" RelY="-0.9" Width="33.5" Height="14.5" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <State GraphRef="a3dd3" TextLabel="Tyr-P" GraphId="c6512">
+    <Graphics RelX="0.84375" RelY="-1.0" Width="29.5" Height="14.5" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <Interaction GraphId="id96ef6249">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="102.0" Y="276.0" GraphRef="ed313" RelX="0.0" RelY="1.0"/>
+      <Point X="102.0" Y="333.0" GraphRef="cc42b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id20dcdc6a">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="102.0" Y="353.0" GraphRef="cc42b" RelX="0.0" RelY="1.0"/>
+      <Point X="102.0" Y="398.0" GraphRef="a2a4a" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5e1188a0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="141.0" Y="546.0" GraphRef="c1502" RelX="1.0" RelY="0.0"/>
+      <Point X="179.0" Y="546.0" GraphRef="d632b" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida1fffb24">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="00cc00">
+      <Point X="639.0" Y="212.0" GraphRef="cf7ed" RelX="0.0" RelY="1.0"/>
+      <Point X="639.0" Y="258.25" GraphRef="ade37" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id882e8822">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="679.0" Y="202.0" GraphRef="cf7ed" RelX="1.0" RelY="0.0"/>
+      <Point X="765.0" Y="357.5"/>
+      <Point X="680.0" Y="513.0" GraphRef="f133c" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcc5e48b2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="240.0" Y="162.0" GraphRef="d04eb" RelX="1.0" RelY="0.0"/>
+      <Point X="458.0" Y="162.0" GraphRef="ce657" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="f830a">
+    <Graphics ZOrder="32771" LineThickness="1.0" Color="ff0000">
+      <Point X="102.0" Y="418.0" GraphRef="a2a4a" RelX="0.0" RelY="1.0"/>
+      <Point X="101.0" Y="536.0" GraphRef="c1502" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="da63f">
+    <Graphics ConnectorType="Elbow" ZOrder="32772" LineThickness="1.0" Color="ff0000">
+      <Point X="102.0" Y="418.0" GraphRef="a2a4a" RelX="0.0" RelY="1.0"/>
+      <Point X="219.0" Y="509.6" GraphRef="d476a" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b15f8">
+    <Graphics ZOrder="32773" LineThickness="1.0">
+      <Point X="219.0" Y="536.0" GraphRef="d632b" RelX="0.0" RelY="-1.0"/>
+      <Point X="219.0" Y="470.0" GraphRef="c34c9" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="d476a"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ed5aa">
+    <Graphics ZOrder="32776" LineThickness="1.0" Color="00cc00">
+      <Point X="639.0" Y="314.25" GraphRef="ade37" RelX="0.0" RelY="1.0"/>
+      <Point X="639.0" Y="358.0" GraphRef="dd827" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="bd041">
+    <Graphics ZOrder="32777" LineThickness="1.0" Color="ff0000">
+      <Point X="102.0" Y="215.0" GraphRef="e0064" RelX="0.0" RelY="1.0"/>
+      <Point X="102.0" Y="256.0" GraphRef="ed313" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a83a5">
+    <Graphics ConnectorType="Elbow" ZOrder="32779" LineThickness="1.0" Color="ff0000">
+      <Point X="600.0" Y="513.0" GraphRef="f133c" RelX="-1.0" RelY="0.0"/>
+      <Point X="524.0" Y="458.5"/>
+      <Point X="499.0" Y="404.0" GraphRef="a3dd3" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b2bf0">
+    <Graphics ZOrder="32780" LineThickness="1.0" Color="00cc00">
+      <Point X="639.0" Y="378.0" GraphRef="dd827" RelX="0.0" RelY="1.0"/>
+      <Point X="640.0" Y="503.0" GraphRef="f133c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="eee04">
+    <Graphics ZOrder="32786" LineThickness="1.0" Color="ff0000">
+      <Point X="459.0" Y="212.0" GraphRef="fd7c3" RelX="0.0" RelY="1.0"/>
+      <Point X="459.0" Y="277.0" GraphRef="cda95" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="f64fd">
+    <Graphics ZOrder="32787" LineThickness="1.0" Color="ff0000">
+      <Point X="459.0" Y="297.0" GraphRef="cda95" RelX="0.0" RelY="1.0"/>
+      <Point X="459.0" Y="341.0" GraphRef="b0e72" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c4cb0">
+    <Graphics ZOrder="32788" LineThickness="1.0" Color="ff0000">
+      <Point X="459.0" Y="361.0" GraphRef="b0e72" RelX="0.0" RelY="1.0"/>
+      <Point X="459.0" Y="394.0" GraphRef="a3dd3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine>
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="622.0" Y="57.0"/>
+      <Point X="688.0" Y="57.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="a6fd8">
+    <Graphics ZOrder="32794" LineThickness="1.0" Color="00cc66">
+      <Point X="623.0" Y="78.0"/>
+      <Point X="689.0" Y="78.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="db540">
+    <Graphics ZOrder="32795" LineThickness="1.0">
+      <Point X="624.0" Y="101.0"/>
+      <Point X="690.0" Y="101.0" ArrowHead="Arrow"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Complex I&#10;NADH-Ubiquinone" GraphId="ab466">
+    <Graphics CenterX="590.5" CenterY="442.0" Width="93.0" Height="32.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Complex II&#10;Succinate-Ubiquinone" GraphId="c9ca7">
+    <Graphics CenterX="694.5" CenterY="442.0" Width="105.0" Height="32.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Low-invasive Ovarian Cancer" GraphId="d04eb">
+    <Graphics CenterX="144.5" CenterY="162.0" Width="191.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Cancer stage" GraphId="e72fa">
+    <Graphics CenterX="344.0" CenterY="147.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Tyrosine phosphorylation pathway" GraphId="a7ac8">
+    <Graphics CenterX="789.5" CenterY="57.0" Width="179.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Legend" GraphId="fc5a8">
+    <Graphics CenterX="642.0" CenterY="27.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="High-invasive Ovarian Cancer" GraphId="ce657">
+    <Graphics CenterX="553.5" CenterY="162.0" Width="191.0" Height="20.0" ZOrder="32789" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Serine phosphorylation pathway" GraphId="ee7e2">
+    <Graphics CenterX="784.5" CenterY="79.0" Width="179.0" Height="20.0" ZOrder="32792" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Metabolix flux" GraphId="bb4cd">
+    <Graphics CenterX="736.0" CenterY="102.0" Width="84.0" Height="20.0" ZOrder="32793" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="c350e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Graphics CenterX="162.5" CenterY="414.0" Width="257.0" Height="338.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f3a30">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Graphics CenterX="645.5" CenterY="477.0" Width="219.0" Height="128.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="cb2f9">
+    <Graphics CenterX="743.0" CenterY="66.5" Width="278.0" Height="107.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ebd9f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Graphics CenterX="587.0" CenterY="412.0" Width="386.0" Height="336.0" ZOrder="32778" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="b5238" GraphId="ade37" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cca">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24799285</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metabolic shifts toward glutamine regulate tumor growth, invasion and bioenergetics in ovarian cancer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Syst Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yang L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moss T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mangala LS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marini J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wahlig S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armaiz-Pena G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiang D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Achreja A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roopaimoole R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodriguez-Aguayo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mercado-Uribe I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lopez-Berestein G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsukamoto T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ram PT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagrath D</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cancer</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:162</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered citric acid cycle pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001119</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:15</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

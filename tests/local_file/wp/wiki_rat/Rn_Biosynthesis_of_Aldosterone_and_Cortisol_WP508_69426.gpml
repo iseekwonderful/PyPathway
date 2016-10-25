@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Biosynthesis of Aldosterone and Cortisol" Last-Modified="2/21/2013" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-description">Keywords: 17-oh aldosterone biochemistry biosynthesis corticosterone cortisol metabolism metabolism of pregnenolone progesterone steroid</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Graphics BoardWidth="909.0" BoardHeight="349.0"/>
+  <DataNode TextLabel="Cholesterol" GraphId="e97" Type="Metabolite">
+    <Graphics CenterX="262.0" CenterY="73.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="ChEBI" ID="16113"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp11a1" GraphId="e10" Type="GeneProduct">
+    <Graphics CenterX="416.0" CenterY="67.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000008074"/>
+  </DataNode>
+  <DataNode TextLabel="Pregnenolone" GraphId="c07" Type="Metabolite">
+    <Graphics CenterX="569.0" CenterY="73.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="ChEBI" ID="16581"/>
+  </DataNode>
+  <DataNode TextLabel="Progesterone" GraphId="c18" Type="Metabolite">
+    <Graphics CenterX="820.0" CenterY="73.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="ChEBI" ID="17026"/>
+  </DataNode>
+  <DataNode TextLabel="Deoxy-corticosterone" GraphId="fbb" Type="Metabolite">
+    <Graphics CenterX="820.0" CenterY="188.0" Width="118.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="ChEBI" ID="16973"/>
+  </DataNode>
+  <DataNode TextLabel="17-OH Pregnenolone" GraphId="c29" Type="Metabolite">
+    <Graphics CenterX="574.5" CenterY="201.0" Width="131.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="PubChem-compound" ID="91451"/>
+  </DataNode>
+  <DataNode TextLabel="17-OH Progesterone" GraphId="f57" Type="Metabolite">
+    <Graphics CenterX="316.5" CenterY="201.0" Width="103.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Corticosterone" GraphId="dcb" Type="Metabolite">
+    <Graphics CenterX="820.0" CenterY="307.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="HMDB" ID="HMDB01547"/>
+  </DataNode>
+  <DataNode TextLabel="18-OH Corticosterone" GraphId="b69" Type="Metabolite">
+    <Graphics CenterX="527.5" CenterY="307.0" Width="123.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="PubChem-compound" ID="11222"/>
+  </DataNode>
+  <DataNode TextLabel="11-deoxycortisol" GraphId="f58" Type="Metabolite">
+    <Graphics CenterX="77.5" CenterY="201.0" Width="109.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="HMDB" ID="HMDB00015"/>
+  </DataNode>
+  <DataNode TextLabel="Cortisol" GraphId="b29" Type="Metabolite">
+    <Graphics CenterX="75.0" CenterY="309.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="HMDB" ID="HMDB00063"/>
+  </DataNode>
+  <DataNode TextLabel="Aldosterone" GraphId="eb9" Type="Metabolite">
+    <Graphics CenterX="247.0" CenterY="307.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0033ff"/>
+    <Xref Database="HMDB" ID="HMDB00037"/>
+  </DataNode>
+  <DataNode TextLabel="Hsd3b1" GraphId="ad5" Type="GeneProduct">
+    <Graphics CenterX="686.0" CenterY="68.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000019441"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp21a1" GraphId="eda" Type="GeneProduct">
+    <Graphics CenterX="807.0" CenterY="130.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000000428"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp11b1" GraphId="e22" Type="GeneProduct">
+    <Graphics CenterX="807.0" CenterY="244.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000037385"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp17a1" GraphId="e65" Type="GeneProduct">
+    <Graphics CenterX="468.0" CenterY="158.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000020035"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp17a1" GraphId="c95" Type="GeneProduct">
+    <Graphics CenterX="566.0" CenterY="118.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000020035"/>
+  </DataNode>
+  <DataNode TextLabel="Hsd3b1" GraphId="c8b" Type="GeneProduct">
+    <Graphics CenterX="444.0" CenterY="197.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000019441"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp21a1" GraphId="ec4" Type="GeneProduct">
+    <Graphics CenterX="207.0" CenterY="197.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000000428"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp11b1" GraphId="c9c" Type="GeneProduct">
+    <Graphics CenterX="71.0" CenterY="248.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000037385"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp11b2" GraphId="f6d" Type="GeneProduct">
+    <Graphics CenterX="376.0" CenterY="302.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000030111"/>
+  </DataNode>
+  <DataNode TextLabel="Cyp11b2" GraphId="da8" Type="GeneProduct">
+    <Graphics CenterX="688.0" CenterY="301.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000030111"/>
+  </DataNode>
+  <Interaction GraphId="ca061">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="310.0" Y="66.0" GraphRef="e97" RelX="1.2" RelY="-0.7"/>
+      <Point X="516.0" Y="66.0" GraphRef="c07" RelX="-1.325" RelY="-0.7" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ee8fb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="610.0" Y="66.0" GraphRef="c07" RelX="1.025" RelY="-0.7"/>
+      <Point X="770.0" Y="66.0" GraphRef="c18" RelX="-1.25" RelY="-0.7" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b9812">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="806.0" Y="82.0" GraphRef="c18" RelX="-0.35" RelY="0.9"/>
+      <Point X="806.0" Y="166.0" GraphRef="fbb" RelX="-0.23728813559322035" RelY="-2.2" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dfc58">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="563.0" Y="81.0" GraphRef="c07" RelX="-0.15" RelY="0.8"/>
+      <Point X="563.0" Y="176.0" GraphRef="c29" RelX="-0.17557251908396945" RelY="-2.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d6013">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="499.0" Y="195.0" GraphRef="c29" RelX="-1.1526717557251909" RelY="-0.6"/>
+      <Point X="373.0" Y="195.0" GraphRef="f57" RelX="1.0970873786407767" RelY="-0.6" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="aa9d2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="255.0" Y="195.0" GraphRef="f57" RelX="-1.1941747572815533" RelY="-0.6"/>
+      <Point X="135.0" Y="195.0" GraphRef="f58" RelX="1.055045871559633" RelY="-0.6" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a8ac3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="71.0" Y="210.0" GraphRef="f58" RelX="-0.11926605504587157" RelY="0.9"/>
+      <Point X="71.0" Y="283.0" GraphRef="b29" RelX="-0.1" RelY="-2.6" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="cfa1b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="454.0" Y="300.0" GraphRef="b69" RelX="-1.1951219512195121" RelY="-0.7"/>
+      <Point X="289.0" Y="300.0" GraphRef="eb9" RelX="1.05" RelY="-0.7" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="cc87f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="795.0" Y="81.0" GraphRef="c18" RelX="-0.625" RelY="0.8"/>
+      <Point X="329.0" Y="180.0" GraphRef="f57" RelX="0.24271844660194175" RelY="-2.1" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e33e1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="771.0" Y="300.0" GraphRef="dcb" RelX="-1.225" RelY="-0.7"/>
+      <Point X="594.0" Y="300.0" GraphRef="b69" RelX="1.08130081300813" RelY="-0.7" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d9395">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="808.0" Y="201.0" GraphRef="fbb" RelX="-0.2033898305084746" RelY="1.3"/>
+      <Point X="808.0" Y="281.0" GraphRef="dcb" RelX="-0.3" RelY="-2.6" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C21-steroid hormone biosynthetic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000070</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

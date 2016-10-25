@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Amino acid conjugation of benzoic acid" Last-Modified="2/21/2013" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Comment Source="HomologyConvert">This pathway was inferred from Homo sapiens pathway [http://www.wikipathways.org/index.php?title=Pathway:WP521&amp;amp;oldid=29685 WP521(r29685)] with a 50% conversion rate.</Comment>
+  <Graphics BoardWidth="386.6666666666667" BoardHeight="425.6666666666667"/>
+  <DataNode TextLabel="Acetyl CoA" GraphId="e5093" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="264.6666666666667" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="3333ff"/>
+    <Xref Database="CAS" ID="72-89-9"/>
+  </DataNode>
+  <DataNode TextLabel="Glyat" GraphId="a52db" Type="GeneProduct" GroupRef="fcfe4">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Glyat"/>
+    <Graphics CenterX="77.0" CenterY="313.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000012142"/>
+  </DataNode>
+  <DataNode TextLabel="glycine" GraphId="e9f5c" Type="Metabolite">
+    <Graphics CenterX="315.0" CenterY="350.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00123"/>
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="eb377" Type="Metabolite">
+    <Graphics CenterX="269.3333333333333" CenterY="97.66666666666667" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00538"/>
+  </DataNode>
+  <DataNode TextLabel="Benzoic acid AMP ester" GraphId="f8b3c" Type="Metabolite">
+    <Graphics CenterX="193.0" CenterY="189.66666666666666" Width="126.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="3333ff"/>
+    <Xref Database="HMDB" ID="HMDB01870"/>
+  </DataNode>
+  <DataNode TextLabel="Benzoyl-CoA" GraphId="f4d6d" Type="Metabolite">
+    <Graphics CenterX="193.33333333333334" CenterY="295.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB02252"/>
+  </DataNode>
+  <DataNode TextLabel="Phosphate" GraphId="e4925" Type="Metabolite" GroupRef="bfd6f">
+    <Graphics CenterX="270.6666666666667" CenterY="139.66666666666666" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01429"/>
+  </DataNode>
+  <DataNode TextLabel="GLYATL2" GraphId="bc23e" Type="GeneProduct" GroupRef="fcfe4">
+    <Graphics CenterX="77.0" CenterY="353.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="AMP" GraphId="f880c" Type="Metabolite">
+    <Graphics CenterX="316.6666666666667" CenterY="238.66666666666666" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00045"/>
+  </DataNode>
+  <DataNode TextLabel="GLYATL1" GraphId="e0307" Type="GeneProduct" GroupRef="fcfe4">
+    <Graphics CenterX="77.0" CenterY="333.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Benzoic acid" GraphId="f08c7" Type="Metabolite">
+    <Graphics CenterX="193.0" CenterY="59.666666666666664" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="3333ff"/>
+    <Xref Database="HMDB" ID="HMDB01870"/>
+  </DataNode>
+  <DataNode TextLabel="Phosphate" GraphId="e077f" Type="Metabolite" GroupRef="bfd6f">
+    <Graphics CenterX="270.6666666666667" CenterY="159.66666666666666" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01429"/>
+  </DataNode>
+  <DataNode TextLabel="hippuric acid" GraphId="ba590" Type="Metabolite">
+    <Graphics CenterX="193.33333333333334" CenterY="385.6666666666667" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB00714"/>
+  </DataNode>
+  <DataNode TextLabel="Acss2" GraphId="bdf48" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="Acss2"/>
+    <Graphics CenterX="80.0" CenterY="236.33333333333334" Width="118.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="311569"/>
+  </DataNode>
+  <DataNode TextLabel="Coenzyme A" GraphId="cfee7" Type="Metabolite">
+    <Graphics CenterX="315.0" CenterY="326.3333333333333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="HMDB" ID="HMDB01423"/>
+  </DataNode>
+  <Interaction GraphId="e4068">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="193.0" Y="69.66666666666666" GraphRef="f08c7" RelX="0.0" RelY="1.0"/>
+      <Point X="193.0" Y="179.66666666666666" GraphRef="f8b3c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dd1c5">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="276.6666666666667" Y="264.6666666666667" GraphRef="e5093" RelX="-1.0" RelY="0.0"/>
+      <Point X="193.33333333333334" Y="285.0" GraphRef="f4d6d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d8ba1">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="193.33333333333334" Y="305.0" GraphRef="f4d6d" RelX="0.0" RelY="1.0"/>
+      <Point X="275.0" Y="326.3333333333333" GraphRef="cfee7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="be749">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="129.0" Y="333.0" GraphRef="d1438" RelX="1.0" RelY="0.0"/>
+      <Point X="193.33333333333334" Y="333.26666666666665" GraphRef="cc1d5" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a52c1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="193.33333333333334" Y="305.0" GraphRef="f4d6d" RelX="0.0" RelY="1.0"/>
+      <Point X="193.33333333333334" Y="375.6666666666667" GraphRef="ba590" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="cc1d5"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="dca68">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="275.0" Y="350.0" GraphRef="e9f5c" RelX="-1.0" RelY="0.0"/>
+      <Point X="193.33333333333334" Y="375.6666666666667" GraphRef="ba590" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d817a">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="193.0" Y="199.66666666666666" GraphRef="f8b3c" RelX="0.0" RelY="1.0"/>
+      <Point X="276.6666666666667" Y="238.66666666666666" GraphRef="f880c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d9fc5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="193.0" Y="199.66666666666666" GraphRef="f8b3c" RelX="0.0" RelY="1.0"/>
+      <Point X="193.33333333333334" Y="285.0" GraphRef="f4d6d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="a3b44">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="139.0" Y="236.33333333333334" GraphRef="bdf48" RelX="1.0" RelY="0.0"/>
+      <Point X="194.1390104268704" Y="236.99349136898928" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="e379d">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="229.33333333333331" Y="97.66666666666667" GraphRef="eb377" RelX="-1.0" RelY="0.0"/>
+      <Point X="193.0" Y="123.66666666666667"/>
+      <Point X="222.66666666666669" Y="149.66666666666666" GraphRef="a39e2" RelX="-1.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Group GroupId="bfd6f" GraphId="a39e2" Style="Group"/>
+  <Group GroupId="fcfe4" GraphId="d1438" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+<Biopax><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>amino acid metabolic pathway</bp:TERM><bp:ID>PW:0000011</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax></Pathway>

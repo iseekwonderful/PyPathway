@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Interactions between CFTR and other ion channels" Last-Modified="10/17/2013" Organism="Rattus norvegicus" License="CC BY 2.0">
+  <Comment Source="WikiPathways-description">The CFTR receptor (an ion channel, which transports CL- out of the cell) can form a complex with CFTR assiciated protein (CAL), followed by degradation. If NHERF1 is present it will form a complex with the CFTR receptor (by binding the PDZ1 region), inhibiting degradation. This complex will bind to other proteins / ion channels. One of these ion channels is the Slc26 family, which binds to the PDZ2 region of NHERF1. After forming this complex  Cl- and NaHCO3 secretion will be performed.
+The same thing happens with the ENaC (an ion channel, which transports Na+), which consists of 3 subunits (alfa, beta &amp; gamma). This channels binds YES-accosiated protein (YAP), which in his turn binds the PDZ2 region of NHERF1. Also c-YES will bind to NHERF1, which inhibits the ENaC channel. By forming this complex Cl- secretion will be induced, while Na+ absorption will be reduced.</Comment>
+  <Comment Source="WikiPathways-category">Cellular Process</Comment>
+  <BiopaxRef>c6f</BiopaxRef>
+  <Graphics BoardWidth="1091.660888671875" BoardHeight="780.0" />
+  <DataNode TextLabel="Cftr" GraphId="f01ca" Type="GeneProduct" GroupRef="ed5d4">
+    <Graphics CenterX="530.660888671875" CenterY="248.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="NHERF1" GraphId="c2ce8" Type="GeneProduct" GroupRef="ed5d4">
+    <Graphics CenterX="450.660888671875" CenterY="248.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000003232" />
+  </DataNode>
+  <DataNode TextLabel="Slc26 family" GraphId="f17d7" Type="GeneProduct" GroupRef="db981">
+    <Graphics CenterX="160.0" CenterY="269.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="NHERF1" GraphId="d7b2a" Type="GeneProduct">
+    <Graphics CenterX="450.0" CenterY="102.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000003232" />
+  </DataNode>
+  <DataNode TextLabel="Cftr" GraphId="cb57d" Type="GeneProduct">
+    <Graphics CenterX="563.0" CenterY="103.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="c-Yes" GraphId="e6486" Type="GeneProduct">
+    <Graphics CenterX="878.0" CenterY="362.0" Width="52.0" Height="18.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="292256" />
+  </DataNode>
+  <DataNode TextLabel="YAP" GraphId="dae85" Type="GeneProduct">
+    <Graphics CenterX="817.0" CenterY="252.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000005933" />
+  </DataNode>
+  <DataNode TextLabel="NHERF1" GraphId="f4042" Type="GeneProduct" GroupRef="ae47a">
+    <Graphics CenterX="616.660888671875" CenterY="385.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000003232" />
+  </DataNode>
+  <DataNode TextLabel="Cftr" GraphId="b57dd" Type="GeneProduct" GroupRef="ae47a">
+    <Graphics CenterX="536.660888671875" CenterY="385.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="YAP" GraphId="ae36f" Type="GeneProduct" GroupRef="ae47a">
+    <Graphics CenterX="696.660888671875" CenterY="385.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000005933" />
+  </DataNode>
+  <DataNode TextLabel="CAL" GraphId="ee7d3" Type="GeneProduct">
+    <Graphics CenterX="561.0" CenterY="60.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG0000000408" />
+  </DataNode>
+  <DataNode TextLabel="CAL" GraphId="d93e7" Type="GeneProduct" GroupRef="ae061">
+    <Graphics CenterX="743.0" CenterY="91.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG0000000408" />
+  </DataNode>
+  <DataNode TextLabel="Cftr" GraphId="c71fc" Type="GeneProduct" GroupRef="ae061">
+    <Graphics CenterX="743.0" CenterY="71.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="Cl" GraphId="fc33a" Type="Metabolite" GroupRef="f22dd">
+    <Graphics CenterX="711.0" CenterY="557.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cl" GraphId="cd196" Type="Metabolite" GroupRef="f22dd">
+    <Graphics CenterX="711.0" CenterY="732.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cftr" GraphId="ab975" Type="GeneProduct" GroupRef="a908b">
+    <Graphics CenterX="712.4038461538462" CenterY="637.5" Width="40.0" Height="65.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="NHERF1" GraphId="bbdb0" Type="GeneProduct" GroupRef="a908b">
+    <Graphics CenterX="759.8304443359375" CenterY="680.0" Width="80.339111328125" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000003232" />
+  </DataNode>
+  <DataNode TextLabel="YAP" GraphId="ceb3a" Type="GeneProduct" GroupRef="a908b">
+    <Graphics CenterX="817.0" CenterY="680.0" Width="34.0" Height="64.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000005933" />
+  </DataNode>
+  <DataNode TextLabel="c-Yes" GraphId="fb5bb" Type="GeneProduct" GroupRef="a908b">
+    <Graphics CenterX="816.5" CenterY="719.0" Width="33.0" Height="17.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="292256" />
+  </DataNode>
+  <DataNode TextLabel="ENaC" GraphId="ae123" Type="GeneProduct" GroupRef="a908b">
+    <Graphics CenterX="848.0" CenterY="635.0" Width="110.0" Height="26.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="fad47" Type="Metabolite" GroupRef="f22dd">
+    <Graphics CenterX="859.0" CenterY="572.0" Width="30.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="cbdc6" Type="Metabolite" GroupRef="f22dd">
+    <Graphics CenterX="859.0" CenterY="697.0" Width="28.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Slc26 family" GraphId="fee5b" Type="GeneProduct" GroupRef="ef862">
+    <Graphics CenterX="382.0" CenterY="634.0" Width="110.0" Height="26.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Cftr" GraphId="e463f" Type="GeneProduct" GroupRef="ef862">
+    <Graphics CenterX="244.0" CenterY="638.5" Width="40.0" Height="65.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000055103" />
+  </DataNode>
+  <DataNode TextLabel="Cl" GraphId="eeb99" Type="Metabolite" GroupRef="fc45f">
+    <Graphics CenterX="245.0" CenterY="556.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="NaHCO3" GraphId="e9567" Type="Metabolite" GroupRef="fc45f">
+    <Graphics CenterX="390.096684922689" CenterY="696.0" Width="48.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="NHERF1" GraphId="caca9" Type="GeneProduct" GroupRef="ef862">
+    <Graphics CenterX="304.1695556640625" CenterY="657.5" Width="80.339111328125" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000003232" />
+  </DataNode>
+  <DataNode TextLabel="Cl" GraphId="d88bf" Type="Metabolite" GroupRef="fc45f">
+    <Graphics CenterX="245.0" CenterY="731.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="NaHCO3" GraphId="b38f4" Type="Metabolite">
+    <Graphics CenterX="390.096684922689" CenterY="575.0" Width="48.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="ENaC" GraphId="e8dcf" Type="GeneProduct">
+    <Graphics CenterX="927.660888671875" CenterY="416.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="ENaCg" GraphId="e2660" Type="GeneProduct" GroupRef="acee7">
+    <Graphics CenterX="1013.660888671875" CenterY="312.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000017842" />
+  </DataNode>
+  <DataNode TextLabel="ENaCb" GraphId="b9815" Type="GeneProduct" GroupRef="acee7">
+    <Graphics CenterX="1013.660888671875" CenterY="332.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000030981" />
+  </DataNode>
+  <DataNode TextLabel="ENaCa" GraphId="b4ed6" Type="GeneProduct" GroupRef="acee7">
+    <Graphics CenterX="1013.660888671875" CenterY="352.96665954589844" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSRNOG00000019368;" />
+  </DataNode>
+  <Interaction GraphId="ide39de8f7">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="450.0" Y="112.0" GraphRef="d7b2a" RelX="0.0" RelY="1.0" />
+      <Point X="490.660888671875" Y="226.96665954589844" GraphRef="fdefc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4984fbbc">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="563.0" Y="113.0" GraphRef="cb57d" RelX="0.0" RelY="1.0" />
+      <Point X="490.660888671875" Y="226.96665954589844" GraphRef="fdefc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idba2938da">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="490.660888671875" Y="270.96665954589844" GraphRef="fdefc" RelX="0.0" RelY="1.0" />
+      <Point X="616.660888671875" Y="363.96665954589844" GraphRef="cbd31" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb7392c90">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="817.0" Y="262.0" GraphRef="dae85" RelX="0.0" RelY="1.0" />
+      <Point X="616.660888671875" Y="363.96665954589844" GraphRef="cbd31" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id140e521d">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="616.660888671875" Y="407.96665954589844" GraphRef="cbd31" RelX="0.0" RelY="1.0" />
+      <Point X="789.0" Y="539.0" GraphRef="e0b86" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4e103bbf">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="878.0" Y="371.0" GraphRef="e6486" RelX="0.0" RelY="1.0" />
+      <Point X="789.0" Y="539.0" GraphRef="e0b86" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id14363116">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="887.660888671875" Y="416.96665954589844" GraphRef="e8dcf" RelX="-1.0" RelY="0.0" />
+      <Point X="789.0" Y="539.0" GraphRef="e0b86" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida7bf420b">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="160.0" Y="287.0" GraphRef="f25b3" RelX="0.0" RelY="1.0" />
+      <Point X="343.0" Y="538.0" GraphRef="b5380" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id607aa987">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="490.660888671875" Y="270.96665954589844" GraphRef="fdefc" RelX="0.0" RelY="1.0" />
+      <Point X="343.0" Y="538.0" GraphRef="b5380" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id819a1184">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="601.0" Y="60.0" GraphRef="ee7d3" RelX="1.0" RelY="0.0" />
+      <Point X="691.0" Y="81.0" GraphRef="b7d84" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5fb33da7">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="603.0" Y="103.0" GraphRef="cb57d" RelX="1.0" RelY="0.0" />
+      <Point X="691.0" Y="81.0" GraphRef="b7d84" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idcb1149f1">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="ff3333">
+      <Point X="791.0" Y="85.0" />
+      <Point X="883.0" Y="84.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id40f200cf" GroupRef="f22dd">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="711.9323689253882" Y="718.0" />
+      <Point X="710.9323689253882" Y="580.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id91656fb0" GroupRef="f22dd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="572.0" Y="629.0" />
+      <Point X="1007.0" Y="630.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1068ab34" GroupRef="f22dd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="571.0" Y="634.0" />
+      <Point X="1007.0" Y="635.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id22c01e19" GroupRef="f22dd">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="833.0" Y="719.0" GraphRef="fb5bb" RelX="1.0" RelY="0.0" />
+      <Point X="951.0" Y="680.25" />
+      <Point X="903.0" Y="641.5" GraphRef="ae123" RelX="1.0" RelY="0.5" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2eb460d1" GroupRef="f22dd">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="859.0" Y="588.0" />
+      <Point X="859.0" Y="683.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4d4611b3" GroupRef="f22dd">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="759.8304443359375" Y="690.0" GraphRef="bbdb0" RelX="0.0" RelY="1.0" />
+      <Point X="702.4038461538462" Y="670.0" GraphRef="ab975" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c347b" GroupRef="fc45f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="106.0" Y="628.0" />
+      <Point X="581.0" Y="629.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ddf43" GroupRef="fc45f">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="304.1695556640625" Y="667.5" GraphRef="caca9" RelX="0.0" RelY="1.0" />
+      <Point X="269.08477783203125" Y="700.0" />
+      <Point X="234.0" Y="671.0" GraphRef="e463f" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f4f0c" GroupRef="fc45f">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="245.9323689253882" Y="717.0" />
+      <Point X="244.9323689253882" Y="579.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="eed63" GroupRef="fc45f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="105.0" Y="634.0" />
+      <Point X="578.0" Y="634.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d7dae">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="304.1695556640625" Y="667.5" GraphRef="caca9" RelX="0.0" RelY="1.0" />
+      <Point X="380.58477783203125" Y="730.0" />
+      <Point X="457.0" Y="682.0" />
+      <Point X="437.0" Y="634.0" GraphRef="fee5b" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a20f5">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="390.9323689253882" Y="680.0" />
+      <Point X="390.0" Y="590.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idde67a4e6">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="973.660888671875" Y="312.96665954589844" GraphRef="e2660" RelX="-1.0" RelY="0.0" />
+      <Point X="927.660888671875" Y="406.96665954589844" GraphRef="e8dcf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9b22f3c3">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="973.660888671875" Y="332.96665954589844" GraphRef="b9815" RelX="-1.0" RelY="0.0" />
+      <Point X="927.660888671875" Y="406.96665954589844" GraphRef="e8dcf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id80fd6aab">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="973.660888671875" Y="352.96665954589844" GraphRef="b4ed6" RelX="-1.0" RelY="0.0" />
+      <Point X="927.660888671875" Y="406.96665954589844" GraphRef="e8dcf" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Shape GraphId="c6696">
+    <Graphics CenterX="912.9833333333333" CenterY="86.48333333333333" Width="52.03333333333333" Height="49.03333333333333" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="mim-degradation" Color="ff3333" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="db981" GraphId="f25b3" Style="Group" />
+  <Group GroupId="ed5d4" GraphId="fdefc" Style="Complex" />
+  <Group GroupId="ae47a" GraphId="cbd31" Style="Complex" />
+  <Group GroupId="ae061" GraphId="b7d84" Style="Complex" />
+  <Group GroupId="f22dd" GraphId="e0b86" Style="Group" />
+  <Group GroupId="fc45f" GraphId="b5380" Style="Group" />
+  <Group GroupId="acee7" GraphId="a885f" Style="Group" />
+  <Group GroupId="ef862" GraphId="a7935" Style="Complex" />
+  <Group GroupId="a908b" GraphId="ef104" Style="Complex" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c6f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16723978</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New insights into cystic fibrosis: molecular switches that regulate CFTR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guggino WB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanton BA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chloride ion transport pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001350</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

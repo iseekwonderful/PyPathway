@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Acetate mediated promotion of metabolic syndrome" Version="20160611" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-description">Acetates produced by gut microbes stimulates the parasympathetic nervous system which causes in an increase in the release of the gastrin hormone which triggers insulin release from beta-cells. Prolonged exposure to high acetate levels promote a state of metabolic syndrome.</Comment>
+  <BiopaxRef>d13</BiopaxRef>
+  <Graphics BoardWidth="616.0" BoardHeight="393.0"/>
+  <DataNode TextLabel="acetate" GraphId="eebe1" Type="Metabolite">
+    <Graphics CenterX="209.5" CenterY="309.0" Width="51.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:30089"/>
+  </DataNode>
+  <DataNode TextLabel="High fat diet" GraphId="c4a57">
+    <Graphics CenterX="209.5" CenterY="83.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="fatty acid" GraphId="abbd7" Type="Metabolite">
+    <Graphics CenterX="209.5" CenterY="158.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:35366"/>
+  </DataNode>
+  <DataNode TextLabel="glucose" GraphId="ffae7" Type="Metabolite">
+    <Graphics CenterX="97.0" CenterY="158.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:17234"/>
+  </DataNode>
+  <DataNode TextLabel="insulin" GraphId="e8550" Type="Protein">
+    <Graphics CenterX="533.5" CenterY="140.0" Width="67.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P01323"/>
+  </DataNode>
+  <DataNode TextLabel="gastrin" GraphId="b6e3e" Type="Protein">
+    <Graphics CenterX="396.0" CenterY="140.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P04563"/>
+  </DataNode>
+  <DataNode TextLabel="parasympathetic&#10;nervous system" GraphId="b0b95">
+    <Graphics CenterX="537.5" CenterY="309.0" Width="97.0" Height="33.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="fatty acid" GraphId="edc1b" Type="Metabolite">
+    <Graphics CenterX="209.5" CenterY="248.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:35366"/>
+  </DataNode>
+  <DataNode TextLabel="acetate" GraphId="eb774" Type="Metabolite">
+    <Graphics CenterX="395.0" CenterY="309.0" Width="51.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:30089"/>
+  </DataNode>
+  <Interaction GraphId="id2551b5eb">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="209.5" Y="93.0" GraphRef="c4a57" RelX="0.0" RelY="1.0"/>
+      <Point X="209.5" Y="148.0" GraphRef="abbd7" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id337e762">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="209.5" Y="168.0" GraphRef="abbd7" RelX="0.0" RelY="1.0"/>
+      <Point X="209.5" Y="238.0" GraphRef="edc1b" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5f2bd57f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="209.5" Y="258.0" GraphRef="edc1b" RelX="0.0" RelY="1.0"/>
+      <Point X="209.5" Y="299.0" GraphRef="eebe1" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5258b26d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="97.0" Y="168.0" GraphRef="ffae7" RelX="0.0" RelY="1.0"/>
+      <Point X="189.5" Y="238.0" GraphRef="edc1b" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id79f12e1e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="235.0" Y="309.0" GraphRef="eebe1" RelX="1.0" RelY="0.0"/>
+      <Point X="369.5" Y="309.0" GraphRef="eb774" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id178b2def">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="420.5" Y="309.0" GraphRef="eb774" RelX="1.0" RelY="0.0"/>
+      <Point X="489.0" Y="309.0" GraphRef="b0b95" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id1be35cad">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="436.0" Y="140.0" GraphRef="b6e3e" RelX="1.0" RelY="0.0"/>
+      <Point X="500.0" Y="140.0" GraphRef="e8550" RelX="-1.0" RelY="0.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc5c77f4d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="537.5" Y="292.5" GraphRef="b0b95" RelX="0.0" RelY="-1.0"/>
+      <Point X="396.0" Y="150.0" GraphRef="b6e3e" RelX="0.0" RelY="1.0" ArrowHead="mim-stimulation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <GraphicalLine GraphId="id5b34c8f1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="336.0" Y="14.0"/>
+      <Point X="336.0" Y="363.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="aec92">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="454.0" Y="14.0"/>
+      <Point X="454.0" Y="363.0"/>
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Microbial cell" GraphId="a0308">
+    <Graphics CenterX="132.0" CenterY="319.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Plasma" GraphId="ecaee">
+    <Graphics CenterX="393.5" CenterY="50.0" Width="61.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="a569f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="176.25" CenterY="274.75" Width="173.5" Height="132.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d13">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27279214</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acetate mediates a microbiome-brain-β-cell axis to promote metabolic syndrome.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perry RJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peng L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barry NA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cline GW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhang D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardone RL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petersen KF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kibbey RG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodman AL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shulman GI</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>acquired metabolic disease</bp:TERM><bp:ID>DOID:0060158</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>B cell</bp:TERM><bp:ID>CL:0000236</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>parasympathetic neuron</bp:TERM><bp:ID>CL:0011102</bp:ID><bp:Ontology>Cell Type</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>disease pathway</bp:TERM><bp:ID>PW:0000013</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

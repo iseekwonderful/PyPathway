@@ -1,0 +1,752 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="production" id="edge10830076" name="arc" source="reactionVertex10830100" target="entityVertex10830150">
+      <end name="end" x="1862.25" y="1344.9"/>
+      <start name="start" x="1548.0" y="1197.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830090" name="arc" source="entityVertex10830150" target="reactionVertex10830089">
+      <end name="end" x="2349.0" y="747.0"/>
+      <start name="start" x="1862.25" y="1344.9"/>
+    </arc>
+    <arc class="consumption" id="edge10830092" name="arc" source="entityVertex10830108" target="reactionVertex10830089">
+      <end name="end" x="2349.0" y="747.0"/>
+      <start name="start" x="2096.25" y="567.0"/>
+    </arc>
+    <arc class="production" id="edge10830093" name="arc" source="reactionVertex10830089" target="entityVertex10830085">
+      <end name="end" x="2600.25" y="702.0"/>
+      <start name="start" x="2367.0" y="747.0"/>
+    </arc>
+    <arc class="production" id="edge10830103" name="arc" source="reactionVertex10830102" target="entityVertex10830079">
+      <end name="end" x="1052.25" y="1155.0"/>
+      <start name="start" x="801.0" y="1209.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830105" name="arc" source="entityVertex10830079" target="reactionVertex10830100">
+      <end name="end" x="1530.0" y="1197.0"/>
+      <start name="start" x="1052.25" y="1155.0"/>
+    </arc>
+    <arc class="production" id="edge10830109" name="arc" source="reactionVertex10830119" target="entityVertex10830107">
+      <end name="end" x="5367.0" y="756.0"/>
+      <start name="start" x="5682.0" y="654.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830111" name="arc" source="entityVertex10830074" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5214.0" y="54.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830114" name="arc" source="entityVertex10830106" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5847.0" y="402.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830116" name="arc" source="entityVertex10830082" target="reactionVertex10830147">
+      <end name="end" x="3396.0" y="1710.0"/>
+      <start name="start" x="3306.0" y="1518.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830117" name="arc" source="entityVertex10830083" target="reactionVertex10830153">
+      <end name="end" x="4284.0" y="1662.0"/>
+      <start name="start" x="4076.25" y="1401.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830120" name="arc" source="entityVertex10830162" target="reactionVertex10830102">
+      <end name="end" x="783.0" y="1209.0"/>
+      <start name="start" x="655.5" y="1371.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830121" name="arc" source="entityVertex10830134" target="reactionVertex10830164">
+      <end name="end" x="1794.0" y="786.0"/>
+      <start name="start" x="1712.25" y="873.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830122" name="arc" source="entityVertex10830086" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5172.0" y="624.0"/>
+    </arc>
+    <arc class="production" id="edge10830124" name="arc" source="reactionVertex10830153" target="entityVertex10830083">
+      <end name="end" x="4076.25" y="1401.0"/>
+      <start name="start" x="4284.0" y="1644.0"/>
+    </arc>
+    <arc class="production" id="edge10830125" name="arc" source="reactionVertex10830132" target="entityVertex10830081">
+      <end name="end" x="4737.75" y="1239.0"/>
+      <start name="start" x="4536.0" y="1410.0"/>
+    </arc>
+    <arc class="production" id="edge10830126" name="arc" source="reactionVertex10830147" target="entityVertex10830095">
+      <end name="end" x="3687.0" y="1722.0"/>
+      <start name="start" x="3414.0" y="1710.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830127" name="arc" source="entityVertex10830087" target="reactionVertex10830113">
+      <end name="end" x="1800.0" y="693.0"/>
+      <start name="start" x="1725.75" y="534.0"/>
+    </arc>
+    <arc class="production" id="edge10830128" name="arc" source="reactionVertex10830157" target="entityVertex10830083">
+      <end name="end" x="4076.25" y="1401.0"/>
+      <start name="start" x="4149.0" y="1083.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830129" name="arc" source="entityVertex10830096" target="reactionVertex10830157">
+      <end name="end" x="4149.0" y="1065.0"/>
+      <start name="start" x="3638.25" y="888.0"/>
+    </arc>
+    <arc class="production" id="edge10830131" name="arc" source="reactionVertex10830164" target="entityVertex10830101">
+      <end name="end" x="1989.0" y="699.0"/>
+      <start name="start" x="1812.0" y="786.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830133" name="arc" source="entityVertex10830112" target="reactionVertex10830113">
+      <end name="end" x="1800.0" y="693.0"/>
+      <start name="start" x="1401.0" y="672.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830135" name="arc" source="entityVertex10830080" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5421.0" y="54.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830136" name="arc" source="entityVertex10830104" target="reactionVertex10830157">
+      <end name="end" x="4149.0" y="1065.0"/>
+      <start name="start" x="3966.0" y="711.0"/>
+    </arc>
+    <arc class="production" id="edge10830137" name="arc" source="reactionVertex10830157" target="entityVertex10830084">
+      <end name="end" x="3717.75" y="1416.0"/>
+      <start name="start" x="4131.0" y="1065.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830138" name="arc" source="entityVertex10830083" target="reactionVertex10830132">
+      <end name="end" x="4536.0" y="1428.0"/>
+      <start name="start" x="4076.25" y="1401.0"/>
+    </arc>
+    <arc class="stimulation" id="edge10830139" name="arc" source="entityVertex10830094" target="reactionVertex10830132">
+      <end name="end" x="4536.0" y="1428.0"/>
+      <start name="start" x="5136.0" y="1527.0"/>
+    </arc>
+    <arc class="production" id="edge10830141" name="arc" source="reactionVertex10830118" target="entityVertex10830104">
+      <end name="end" x="3966.0" y="711.0"/>
+      <start name="start" x="3195.0" y="735.0"/>
+    </arc>
+    <arc class="production" id="edge10830142" name="arc" source="reactionVertex10830113" target="entityVertex10830101">
+      <end name="end" x="1989.0" y="699.0"/>
+      <start name="start" x="1818.0" y="693.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830143" name="arc" source="entityVertex10830099" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5610.0" y="54.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830144" name="arc" source="entityVertex10830078" target="reactionVertex10830147">
+      <end name="end" x="3396.0" y="1710.0"/>
+      <start name="start" x="2955.0" y="1719.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830145" name="arc" source="entityVertex10830097" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5292.0" y="432.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830146" name="arc" source="entityVertex10830123" target="reactionVertex10830157">
+      <end name="end" x="4149.0" y="1065.0"/>
+      <start name="start" x="3647.25" y="1002.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830148" name="arc" source="entityVertex10830075" target="reactionVertex10830157">
+      <end name="end" x="4149.0" y="1065.0"/>
+      <start name="start" x="3462.75" y="1125.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830149" name="arc" source="entityVertex10830130" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5817.0" y="54.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830151" name="arc" source="entityVertex10830112" target="reactionVertex10830164">
+      <end name="end" x="1794.0" y="786.0"/>
+      <start name="start" x="1401.0" y="672.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830152" name="arc" source="entityVertex10830115" target="reactionVertex10830110">
+      <end name="end" x="3405.0" y="1836.0"/>
+      <start name="start" x="3325.5" y="1953.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830154" name="arc" source="entityVertex10830140" target="reactionVertex10830102">
+      <end name="end" x="783.0" y="1209.0"/>
+      <start name="start" x="243.0" y="1161.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830155" name="arc" source="entityVertex10830088" target="reactionVertex10830132">
+      <end name="end" x="4536.0" y="1428.0"/>
+      <start name="start" x="4321.5" y="1131.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830156" name="arc" source="entityVertex10830078" target="reactionVertex10830110">
+      <end name="end" x="3405.0" y="1836.0"/>
+      <start name="start" x="2955.0" y="1719.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830158" name="arc" source="entityVertex10830101" target="reactionVertex10830089">
+      <end name="end" x="2349.0" y="747.0"/>
+      <start name="start" x="1989.0" y="699.0"/>
+    </arc>
+    <arc class="production" id="edge10830159" name="arc" source="reactionVertex10830110" target="entityVertex10830095">
+      <end name="end" x="3687.0" y="1722.0"/>
+      <start name="start" x="3423.0" y="1836.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10830160" name="arc" source="entityVertex10830091" target="reactionVertex10830132">
+      <end name="end" x="4536.0" y="1428.0"/>
+      <start name="start" x="5102.25" y="1707.45"/>
+    </arc>
+    <arc class="catalysis" id="edge10830161" name="arc" source="entityVertex10830077" target="reactionVertex10830153">
+      <end name="end" x="4284.0" y="1662.0"/>
+      <start name="start" x="4148.25" y="2208.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830163" name="arc" source="entityVertex10830098" target="reactionVertex10830119">
+      <end name="end" x="5682.0" y="636.0"/>
+      <start name="start" x="5292.0" y="288.0"/>
+    </arc>
+    <arc class="consumption" id="edge10830165" name="arc" source="entityVertex10830085" target="reactionVertex10830118">
+      <end name="end" x="3177.0" y="735.0"/>
+      <start name="start" x="2600.25" y="702.0"/>
+    </arc>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex13959453160" name="glyph">
+      <bbox h="240.0" name="bbox" w="339.0" x="829.5" y="585.0"/>
+      <label name="label" text="ER to Golgi transport vesicle">
+        <bbox h="24.0" name="bbox" w="232.0" x="1713.24" y="1242.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex17963453160" name="glyph">
+      <bbox h="333.0" name="bbox" w="706.5" x="880.5" y="213.0"/>
+      <label name="label" text="Golgi lumen">
+        <bbox h="24.0" name="bbox" w="88.0" x="1874.04" y="498.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex17957453160" name="glyph">
+      <bbox h="348.0" name="bbox" w="718.5" x="45.0" y="489.0"/>
+      <label name="label" text="endoplasmic reticulum lumen">
+        <bbox h="24.0" name="bbox" w="216.0" x="204.96" y="1050.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex216798453160" name="glyph">
+      <bbox h="873.0" name="bbox" w="913.5" x="1683.0" y="198.0"/>
+      <label name="label" text="secretory granule">
+        <bbox h="24.0" name="bbox" w="136.0" x="3512.16" y="468.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex70101453160" name="glyph">
+      <bbox h="1191.0" name="bbox" w="3037.5" x="6.0" y="16.5"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="498.0" y="105.0"/>
+      </label>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830074" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2584.5" y="18.0"/>
+      <glyph class="unit of information" id="entityVertex10830074mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2592.5" y="12.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC8"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10830075" name="glyph">
+      <bbox h="36.0" name="bbox" w="181.5" x="1686.0" y="553.5"/>
+      <label name="label" text="Carboxypeptidase"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10830077" name="glyph">
+      <bbox h="36.0" name="bbox" w="226.5" x="2017.5" y="1095.0"/>
+      <label name="label" text="KIF5B_like_proteins"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10830078" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="1455.0" y="850.5"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830079" name="glyph">
+      <bbox h="36.0" name="bbox" w="226.5" x="469.5" y="568.5"/>
+      <glyph class="unit of information" id="entityVertex10830079mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="477.5" y="562.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="_6xHC_INS_25_110"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830080" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2688.0" y="18.0"/>
+      <glyph class="unit of information" id="entityVertex10830080mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2696.0" y="12.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC7"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830081" name="glyph">
+      <bbox h="36.0" name="bbox" w="277.5" x="2299.5" y="610.5"/>
+      <glyph class="annotation" id="entityVertex10830081annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="152.0" x="2446.25" y="640.5"/>
+        <label name="label" text="Insulin, Zn2+, Ca2+"/>
+        <callout name="callout" target="entityVertex_10830081">
+          <point name="point" x="4876.5" y="1257.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex10830081Zn2" name="glyph">
+        <bbox h="26.0" name="bbox" w="267.5" x="2299.5" y="610.5"/>
+        <label name="label" text="Zn2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830081Ca2" name="glyph">
+        <bbox h="26.0" name="bbox" w="267.5" x="2299.5" y="646.5"/>
+        <label name="label" text="Ca2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex108300812xHCINS2554" name="glyph">
+        <bbox h="26.0" name="bbox" w="267.5" x="2299.5" y="574.5"/>
+        <glyph class="state variable" id="entityVertex108300812xHCINS2554halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2288.5" y="563.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300812xHCINS2554halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2556.0" y="576.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="2xHC-INS(25-54)"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830081InsulinAChain" name="glyph">
+        <bbox h="26.0" name="bbox" w="267.5" x="2299.5" y="682.5"/>
+        <glyph class="state variable" id="entityVertex10830081InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2288.5" y="671.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830081InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2556.0" y="684.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830081InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2288.5" y="697.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830081InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2556.0" y="710.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="Insulin A Chain"/>
+      </glyph>
+      <label name="label" text="_6xInsulin_2xZn2_Ca2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830082" name="glyph">
+      <bbox h="36.0" name="bbox" w="132.0" x="1620.0" y="750.0"/>
+      <glyph class="unit of information" id="entityVertex10830082mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="1628.0" y="744.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A5"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830083" name="glyph">
+      <bbox h="36.0" name="bbox" w="208.5" x="1986.0" y="691.5"/>
+      <glyph class="annotation" id="entityVertex10830083annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="104.0" x="2098.25" y="721.5"/>
+        <label name="label" text="Insulin, Zn2+"/>
+        <callout name="callout" target="entityVertex_10830083">
+          <point name="point" x="4180.5" y="1419.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex10830083Zn2" name="glyph">
+        <bbox h="26.0" name="bbox" w="198.5" x="1986.0" y="691.5"/>
+        <label name="label" text="Zn2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex108300832xHCINS2554" name="glyph">
+        <bbox h="26.0" name="bbox" w="198.5" x="1986.0" y="727.5"/>
+        <glyph class="state variable" id="entityVertex108300832xHCINS2554halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1975.0" y="716.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300832xHCINS2554halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2173.5" y="729.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="2xHC-INS(25-54)"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830083InsulinAChain" name="glyph">
+        <bbox h="26.0" name="bbox" w="198.5" x="1986.0" y="655.5"/>
+        <glyph class="state variable" id="entityVertex10830083InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1975.0" y="644.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830083InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2173.5" y="657.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830083InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1975.0" y="670.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex10830083InsulinAChainhalfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2173.5" y="683.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="Insulin A Chain"/>
+      </glyph>
+      <label name="label" text="_6xInsulin_2xZn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830084" name="glyph">
+      <bbox h="36.0" name="bbox" w="139.5" x="1824.0" y="699.0"/>
+      <glyph class="unit of information" id="entityVertex10830084mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="1832.0" y="693.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="INS_57_87"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830085" name="glyph">
+      <bbox h="36.0" name="bbox" w="316.5" x="1221.0" y="342.0"/>
+      <glyph class="annotation" id="entityVertex10830085annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="224.0" x="1387.25" y="372.0"/>
+        <label name="label" text="6xHC-INS(25-110), Zn2+, Ca2+"/>
+        <callout name="callout" target="entityVertex_10830085">
+          <point name="point" x="2758.5" y="720.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex108300856xHCINS25110" name="glyph">
+        <bbox h="26.0" name="bbox" w="306.5" x="1221.0" y="342.0"/>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1210.0" y="331.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1516.5" y="344.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1210.0" y="357.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1516.5" y="370.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1210.0" y="383.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108300856xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1516.5" y="396.0"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="6xHC-INS(25-110)"/>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex10830085Zn2" name="glyph">
+        <bbox h="26.0" name="bbox" w="306.5" x="1221.0" y="378.0"/>
+        <label name="label" text="Zn2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830085Ca2" name="glyph">
+        <bbox h="26.0" name="bbox" w="306.5" x="1221.0" y="306.0"/>
+        <label name="label" text="Ca2+"/>
+      </glyph>
+      <label name="label" text="_6xProinsulin_2xZn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830086" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2563.5" y="303.0"/>
+      <glyph class="unit of information" id="entityVertex10830086mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2571.5" y="297.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC3"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830087" name="glyph">
+      <bbox h="36.0" name="bbox" w="109.5" x="835.5" y="258.0"/>
+      <glyph class="unit of information" id="entityVertex10830087mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="843.5" y="252.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A7"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830088" name="glyph">
+      <bbox h="36.0" name="bbox" w="237.0" x="2101.5" y="556.5"/>
+      <glyph class="annotation" id="entityVertex10830088annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="160.0" x="2228.0" y="586.5"/>
+        <label name="label" text="MYO5A, MYRIP, RAB27A"/>
+        <callout name="callout" target="entityVertex_10830088">
+          <point name="point" x="4440.0" y="1149.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830088MYO5A" name="glyph">
+        <bbox h="26.0" name="bbox" w="227.0" x="2101.5" y="556.5"/>
+        <label name="label" text="MYO5A"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830088RAB27A" name="glyph">
+        <bbox h="26.0" name="bbox" w="227.0" x="2101.5" y="592.5"/>
+        <label name="label" text="RAB27A"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830088MYRIP" name="glyph">
+        <bbox h="26.0" name="bbox" w="227.0" x="2101.5" y="520.5"/>
+        <label name="label" text="MYRIP"/>
+      </glyph>
+      <label name="label" text="MYO5A_MYRIP_RAB27A"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830091" name="glyph">
+      <bbox h="36.9" name="bbox" w="142.5" x="2515.5" y="844.5"/>
+      <glyph class="annotation" id="entityVertex10830091annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="96.0" x="2594.75" y="874.95"/>
+        <label name="label" text="VAMP2, STX1A"/>
+        <callout name="callout" target="entityVertex_10830091">
+          <point name="point" x="5173.5" y="1725.9"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830091VAMP2" name="glyph">
+        <bbox h="26.9" name="bbox" w="132.5" x="2515.5" y="844.5"/>
+        <label name="label" text="VAMP2"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830091STX1A" name="glyph">
+        <bbox h="26.9" name="bbox" w="132.5" x="2515.5" y="881.4"/>
+        <label name="label" text="STX1A"/>
+      </glyph>
+      <label name="label" text="Core_SNARE_Complex"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830094" name="glyph">
+      <bbox h="36.0" name="bbox" w="114.0" x="2539.5" y="754.5"/>
+      <glyph class="unit of information" id="entityVertex10830094mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2547.5" y="748.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="TMEM27"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10830095" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="1821.0" y="852.0"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830096" name="glyph">
+      <bbox h="36.0" name="bbox" w="244.5" x="1758.0" y="435.0"/>
+      <glyph class="annotation" id="entityVertex10830096annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="88.0" x="1888.25" y="465.0"/>
+        <label name="label" text="PCSK1, Ca2+"/>
+        <callout name="callout" target="entityVertex_10830096">
+          <point name="point" x="3760.5" y="906.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830096Ca2" name="glyph">
+        <bbox h="26.0" name="bbox" w="234.5" x="1758.0" y="435.0"/>
+        <label name="label" text="Ca2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830096PCSK1" name="glyph">
+        <bbox h="26.0" name="bbox" w="234.5" x="1758.0" y="471.0"/>
+        <label name="label" text="PCSK1"/>
+      </glyph>
+      <label name="label" text="PC1_calcium_cofactor"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830097" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2623.5" y="207.0"/>
+      <glyph class="unit of information" id="entityVertex10830097mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2631.5" y="201.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC1"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830098" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2623.5" y="135.0"/>
+      <glyph class="unit of information" id="entityVertex10830098mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2631.5" y="129.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC5"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830099" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2782.5" y="18.0"/>
+      <glyph class="unit of information" id="entityVertex10830099mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2790.5" y="12.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC6"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10830101" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="972.0" y="340.5"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830104" name="glyph">
+      <bbox h="36.0" name="bbox" w="330.0" x="1900.5" y="346.5"/>
+      <glyph class="annotation" id="entityVertex10830104annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="224.0" x="2073.5" y="376.5"/>
+        <label name="label" text="6xHC-INS(25-110), Ca2+, Zn2+"/>
+        <callout name="callout" target="entityVertex_10830104">
+          <point name="point" x="4131.0" y="729.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex108301046xHCINS25110" name="glyph">
+        <bbox h="26.0" name="bbox" w="320.0" x="1900.5" y="346.5"/>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1889.5" y="335.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2209.5" y="348.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1889.5" y="361.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2209.5" y="374.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="1889.5" y="387.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <glyph class="state variable" id="entityVertex108301046xHCINS25110halfcystine" name="glyph">
+          <bbox h="22.0" name="bbox" w="22.0" x="2209.5" y="400.5"/>
+          <state name="state" value="half cystine"/>
+        </glyph>
+        <label name="label" text="6xHC-INS(25-110)"/>
+      </glyph>
+      <glyph class="macromolecule multimer" id="entityVertex10830104Zn2" name="glyph">
+        <bbox h="26.0" name="bbox" w="320.0" x="1900.5" y="382.5"/>
+        <label name="label" text="Zn2+"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830104Ca2" name="glyph">
+        <bbox h="26.0" name="bbox" w="320.0" x="1900.5" y="310.5"/>
+        <label name="label" text="Ca2+"/>
+      </glyph>
+      <label name="label" text="_6xProinsulin_2xZn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830106" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2901.0" y="192.0"/>
+      <glyph class="unit of information" id="entityVertex10830106mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2909.0" y="186.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC4"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex10830107" name="glyph">
+      <bbox h="36.0" name="bbox" w="468.0" x="2566.5" y="369.0"/>
+      <glyph class="annotation" id="entityVertex10830107annotation" name="glyph">
+        <bbox h="24.0" name="bbox" w="432.0" x="2808.5" y="399.0"/>
+        <label name="label" text="EXOC2, EXOC4, EXOC5, EXOC6, EXOC8, EXOC1, EXOC3, EXOC7"/>
+        <callout name="callout" target="entityVertex_10830107">
+          <point name="point" x="5601.0" y="774.0"/>
+        </callout>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC1" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="369.0"/>
+        <label name="label" text="EXOC1"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC5" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="405.0"/>
+        <label name="label" text="EXOC5"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC3" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="333.0"/>
+        <label name="label" text="EXOC3"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC4" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="441.0"/>
+        <label name="label" text="EXOC4"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC2" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="297.0"/>
+        <label name="label" text="EXOC2"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC8" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="477.0"/>
+        <label name="label" text="EXOC8"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC6" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="261.0"/>
+        <label name="label" text="EXOC6"/>
+      </glyph>
+      <glyph class="macromolecule" id="entityVertex10830107EXOC7" name="glyph">
+        <bbox h="26.0" name="bbox" w="458.0" x="2566.5" y="513.0"/>
+        <label name="label" text="EXOC7"/>
+      </glyph>
+      <label name="label" text="Exocyst_Complex"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10830108" name="glyph">
+      <bbox h="36.0" name="bbox" w="94.5" x="1024.5" y="274.5"/>
+      <label name="label" text="Ca2"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10830112" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="678.0" y="327.0"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830115" name="glyph">
+      <bbox h="36.0" name="bbox" w="123.0" x="1632.0" y="967.5"/>
+      <glyph class="unit of information" id="entityVertex10830115mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="1640.0" y="961.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A8"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830123" name="glyph">
+      <bbox h="36.0" name="bbox" w="106.5" x="1797.0" y="492.0"/>
+      <glyph class="unit of information" id="entityVertex10830123mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="1805.0" y="486.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="PCSK2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830130" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="2886.0" y="18.0"/>
+      <glyph class="unit of information" id="entityVertex10830130mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="2894.0" y="12.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="EXOC2"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830134" name="glyph">
+      <bbox h="36.0" name="bbox" w="112.5" x="828.0" y="427.5"/>
+      <glyph class="unit of information" id="entityVertex10830134mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="836.0" y="421.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A6"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830140" name="glyph">
+      <bbox h="36.0" name="bbox" w="162.0" x="81.0" y="571.5"/>
+      <glyph class="unit of information" id="entityVertex10830140mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="89.0" y="565.5"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="INS_25_110"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10830150" name="glyph">
+      <bbox h="37.8" name="bbox" w="214.5" x="877.5" y="663.0"/>
+      <glyph class="unit of information" id="entityVertex10830150mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="885.5" y="657.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="_6xHC_INS_25_110"/>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex10830162" name="glyph">
+      <bbox h="36.0" name="bbox" w="237.0" x="268.5" y="676.5"/>
+      <label name="label" text="EROIL_like_Proteins"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830089" name="glyph">
+      <port id="reactionVertex108300891" name="port" x="1201.5" y="382.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="1165.5" y="364.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830100" name="glyph">
+      <port id="reactionVertex108301001" name="port" x="792.0" y="607.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="756.0" y="589.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830102" name="glyph">
+      <port id="reactionVertex108301021" name="port" x="418.5" y="613.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="382.5" y="595.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830110" name="glyph">
+      <port id="reactionVertex108301101" name="port" x="1729.5" y="927.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="1693.5" y="909.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830113" name="glyph">
+      <port id="reactionVertex108301131" name="port" x="927.0" y="355.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="891.0" y="337.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830118" name="glyph">
+      <port id="reactionVertex108301181" name="port" x="1615.5" y="376.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="1579.5" y="358.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830119" name="glyph">
+      <port id="reactionVertex108301191" name="port" x="2850.0" y="345.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="2832.0" y="309.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830132" name="glyph">
+      <port id="reactionVertex108301321" name="port" x="2277.0" y="705.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="2259.0" y="705.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830147" name="glyph">
+      <port id="reactionVertex108301471" name="port" x="1725.0" y="864.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="1689.0" y="846.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830153" name="glyph">
+      <port id="reactionVertex108301531" name="port" x="2151.0" y="822.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="2133.0" y="822.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830157" name="glyph">
+      <port id="reactionVertex108301571" name="port" x="2083.5" y="559.5"/>
+      <port id="reactionVertex108301572" name="port" x="2065.5" y="541.5"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="2065.5" y="523.5"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10830164" name="glyph">
+      <port id="reactionVertex108301641" name="port" x="924.0" y="402.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="888.0" y="384.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10961715" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10961743" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10961792" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10961967" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+  </map>
+</sbgn>

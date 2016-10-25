@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Calcium Regulation in the Cardiac Cell" Last-Modified="10/17/2013" Organism="Homo sapiens" License="CC BY 2.0">
+  <Comment Source="GenMAPP notes"></Comment>
+  <Comment Source="GenMAPP remarks"></Comment>
+  <Comment Source="WikiPathways-category">Physiological Process</Comment>
+  <Comment Source="WikiPathways-description">Calcium is a common signaling mechanism, as once it enters the cytoplasm it exerts allosteric regulatory affects on many enzymes and proteins. Calcium can act in signal transduction after influx resulting from activation of ion channels or as a second messenger caused by indirect signal transduction pathways such as G protein-coupled receptors. Movement of calcium ions from the extracellular compartment to the intracellular compartment alters membrane depolarisation. This is seen in the heart, during the plateau phase of ventricular contraction. In this example, calcium acts to maintain depolarisation of the heart.
+
+Source: [[wikipedia:Calcium_signaling|Wikipedia]]</Comment>
+  <BiopaxRef>fbf</BiopaxRef>
+  <Graphics BoardWidth="1504.3333333333333" BoardHeight="1056.6666666666667" />
+  <DataNode TextLabel="GNAS" GraphId="d09" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAS | GNAS complex locus" />
+    <Graphics CenterX="636.1030494216612" CenterY="252.0273396424816" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2778" />
+  </DataNode>
+  <DataNode TextLabel="GNAQ" GraphId="e6b" Type="GeneProduct" GroupRef="f2fc9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAQ | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="969.9999999999998" CenterY="248.28180862250264" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2776" />
+  </DataNode>
+  <DataNode TextLabel="ANXA6" GraphId="ca8" Type="GeneProduct" GroupRef="ce56a">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ANXA6 | annexin A6" />
+    <Graphics CenterX="387.40904311251313" CenterY="421.9999999999999" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="309" />
+  </DataNode>
+  <DataNode TextLabel="RYR2" GraphId="b6d" Type="GeneProduct" GroupRef="c3cbb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RYR2 | ryanodine receptor 2 (cardiac)" />
+    <Graphics CenterX="387.40904311251313" CenterY="476.9999999999999" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6262" />
+  </DataNode>
+  <DataNode TextLabel="FKBP1A" GraphId="c95" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="FKBP1A | FK506 binding protein 1A 12kDa" />
+    <Graphics CenterX="503.3333333333333" CenterY="550.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2280" />
+  </DataNode>
+  <DataNode TextLabel="PLN" GraphId="c5b" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PLN | phospholamban" />
+    <Graphics CenterX="863.3333333333334" CenterY="596.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5350" />
+  </DataNode>
+  <DataNode TextLabel="CALR" GraphId="fbc" Type="GeneProduct" GroupRef="f9f41">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CALR | calreticulin" />
+    <Graphics CenterX="693.3333333333334" CenterY="464.615141955836" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="811" />
+  </DataNode>
+  <DataNode TextLabel="CASQ2" GraphId="e21" Type="GeneProduct" GroupRef="f9f41">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CASQ2 | calsequestrin 2 (cardiac muscle)" />
+    <Graphics CenterX="693.3333333333334" CenterY="444.615141955836" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="845" />
+  </DataNode>
+  <DataNode TextLabel="ADCY7" GraphId="a90" Type="GeneProduct" GroupRef="f2b52">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY7 | adenylate cyclase 7" />
+    <Graphics CenterX="1203.3333333333333" CenterY="73.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="113" />
+  </DataNode>
+  <DataNode TextLabel="RGS2" GraphId="eb8" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS2 | regulator of G-protein signalling 2 24k..." />
+    <Graphics CenterX="1330.0" CenterY="86.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5997" />
+  </DataNode>
+  <DataNode TextLabel="ADCY1" GraphId="eae" Type="GeneProduct" GroupRef="f2b52">
+    <Comment Source="GenMAPP remarks">CYA1 HUMAN</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY1 | adenylate cyclase 1 (brain)" />
+    <Graphics CenterX="1113.3333333333333" CenterY="53.333333333333336" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="107" />
+  </DataNode>
+  <DataNode TextLabel="ADCY4" GraphId="c01" Type="GeneProduct" GroupRef="f2b52">
+    <Comment Source="GenMAPP remarks">There is no SwissProt entry for a full-length sequence in mouse.  This EST is from the Affymetrix Murine6500 chip.</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY4 | adenylate cyclase 4" />
+    <Graphics CenterX="1113.3333333333333" CenterY="113.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="196883" />
+  </DataNode>
+  <DataNode TextLabel="RGS20" GraphId="da1" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS20 | regulator of G-protein signalling 20" />
+    <Graphics CenterX="1420.0" CenterY="206.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="8601" />
+  </DataNode>
+  <DataNode TextLabel="YWHAH" GraphId="ea1" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAH | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1329.0" CenterY="302.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7533" />
+  </DataNode>
+  <DataNode TextLabel="PRKCB1" GraphId="db5" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCB1 | protein kinase C beta 1" />
+    <Graphics CenterX="1330.0" CenterY="573.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5579" />
+  </DataNode>
+  <DataNode TextLabel="YWHAQ" GraphId="b95" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAQ | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1419.0" CenterY="282.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10971" />
+  </DataNode>
+  <DataNode TextLabel="YWHAG" GraphId="b78" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAG | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1329.0" CenterY="322.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7532" />
+  </DataNode>
+  <DataNode TextLabel="YWHAE" GraphId="bf4" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAE | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1329.0" CenterY="282.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7531" />
+  </DataNode>
+  <DataNode TextLabel="YWHAZ" GraphId="dc9" Type="GeneProduct" GroupRef="c41ba">
+    <Comment Source="GenMAPP remarks">PMID: 9861170 PMID: 1317796</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAZ | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1419.0" CenterY="302.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7534" />
+  </DataNode>
+  <DataNode TextLabel="RGS19" GraphId="c8b" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS19 | regulator of G-protein signalling 19" />
+    <Graphics CenterX="1420.0" CenterY="186.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10287" />
+  </DataNode>
+  <DataNode TextLabel="SFN" GraphId="efd" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="SFN | stratifin" />
+    <Graphics CenterX="1419.0" CenterY="262.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2810" />
+  </DataNode>
+  <DataNode TextLabel="PRKCH" GraphId="a4a" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCH | protein kinase C eta" />
+    <Graphics CenterX="1423.3333333333333" CenterY="573.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5583" />
+  </DataNode>
+  <DataNode TextLabel="PRKAR2A" GraphId="f50" Type="GeneProduct" GroupRef="e1f1c">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKAR2A | protein kinase cAMP-dependent regul..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="224.76008897362567" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5576" />
+  </DataNode>
+  <DataNode TextLabel="ADCY8" GraphId="fcb" Type="GeneProduct" GroupRef="f2b52">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY8 | adenylate cyclase 8 (brain)" />
+    <Graphics CenterX="1203.3333333333333" CenterY="93.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="114" />
+  </DataNode>
+  <DataNode TextLabel="ADCY6" GraphId="b06" Type="GeneProduct" GroupRef="f2b52">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY6 | adenylate cyclase 6" />
+    <Graphics CenterX="1203.3333333333333" CenterY="53.333333333333336" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="112" />
+  </DataNode>
+  <DataNode TextLabel="PRKACB" GraphId="e75" Type="GeneProduct" GroupRef="e1f1c">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKACB | protein kinase cAMP-dependent cataly..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="226.66666666666666" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5567" />
+  </DataNode>
+  <DataNode TextLabel="PRKCE" GraphId="ed6" Type="GeneProduct" GroupRef="d2eb9">
+    <Comment Source="GenMAPP remarks">This EST is listed on the Affymetrix Murine6500 chip.  The SwissProt entry name is KPCE MOUSE.</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCE | protein kinase C epsilon" />
+    <Graphics CenterX="1330.0" CenterY="633.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5581" />
+  </DataNode>
+  <DataNode TextLabel="PRKCZ" GraphId="d64" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCZ | protein kinase C zeta" />
+    <Graphics CenterX="1423.3333333333333" CenterY="633.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5590" />
+  </DataNode>
+  <DataNode TextLabel="PRKCD" GraphId="b34" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCD | protein kinase C delta" />
+    <Graphics CenterX="1330.0" CenterY="613.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5580" />
+  </DataNode>
+  <DataNode TextLabel="PRKD1" GraphId="c54" Type="GeneProduct" GroupRef="d2eb9">
+    <Comment Source="GenMAPP remarks">KPCM HUMAN</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKD1 | protein kinase D1" />
+    <Graphics CenterX="1423.3333333333333" CenterY="593.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5587" />
+  </DataNode>
+  <DataNode TextLabel="ADCY9" GraphId="c16" Type="GeneProduct" GroupRef="f2b52">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY9 | adenylate cyclase 9" />
+    <Graphics CenterX="1203.3333333333333" CenterY="113.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="115" />
+  </DataNode>
+  <DataNode TextLabel="PRKCH" GraphId="b42" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCH | protein kinase C eta" />
+    <Graphics CenterX="1423.3333333333333" CenterY="553.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5583" />
+  </DataNode>
+  <DataNode TextLabel="PRKCG" GraphId="ba3" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCG | protein kinase C gamma" />
+    <Graphics CenterX="1330.0" CenterY="593.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5582" />
+  </DataNode>
+  <DataNode TextLabel="PRKCA" GraphId="c42" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCA | protein kinase C alpha" />
+    <Graphics CenterX="1330.0" CenterY="553.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5578" />
+  </DataNode>
+  <DataNode TextLabel="ADCY2" GraphId="b8a" Type="GeneProduct" GroupRef="f2b52">
+    <Comment Source="GenMAPP remarks">There is no SwissProt entry for a full-length sequence in mouse.  This EST is from the Affymetrix Murine6500 chip.</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY2 | adenylate cyclase 2 (brain)" />
+    <Graphics CenterX="1113.3333333333333" CenterY="73.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="108" />
+  </DataNode>
+  <DataNode TextLabel="PRKAR1B" GraphId="cff" Type="GeneProduct" GroupRef="e1f1c">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKAR1B | protein kinase cAMP-dependent regul..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="205.66666666666666" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5575" />
+  </DataNode>
+  <DataNode TextLabel="PRKCQ" GraphId="c89" Type="GeneProduct" GroupRef="d2eb9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKCQ | protein kinase C theta" />
+    <Graphics CenterX="1423.3333333333333" CenterY="613.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5588" />
+  </DataNode>
+  <DataNode TextLabel="RGS4" GraphId="a89" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS4 | regulator of G-protein signalling 4" />
+    <Graphics CenterX="1330.0" CenterY="126.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5999" />
+  </DataNode>
+  <DataNode TextLabel="RGS17" GraphId="b84" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS17 | regulator of G-protein signalling 17" />
+    <Graphics CenterX="1420.0" CenterY="146.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="26575" />
+  </DataNode>
+  <DataNode TextLabel="RGS16" GraphId="cf1" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS16 | regulator of G-protein signalling 16" />
+    <Graphics CenterX="1420.0" CenterY="126.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6004" />
+  </DataNode>
+  <DataNode TextLabel="RGS14" GraphId="e39" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS14 | regulator of G-protein signalling 14" />
+    <Graphics CenterX="1420.0" CenterY="106.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10636" />
+  </DataNode>
+  <DataNode TextLabel="RGS11" GraphId="b92" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS11 | regulator of G-protein signalling 11" />
+    <Graphics CenterX="1420.0" CenterY="86.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="8786" />
+  </DataNode>
+  <DataNode TextLabel="RGS10" GraphId="dd6" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS10 | regulator of G-protein signalling 10" />
+    <Graphics CenterX="1420.0" CenterY="66.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6001" />
+  </DataNode>
+  <DataNode TextLabel="RGS9" GraphId="b6b" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS9 | regulator of G-protein signalling 9" />
+    <Graphics CenterX="1330.0" CenterY="206.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="8787" />
+  </DataNode>
+  <DataNode TextLabel="RGS7" GraphId="aab" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS7 | regulator of G-protein signalling 7" />
+    <Graphics CenterX="1330.0" CenterY="186.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6000" />
+  </DataNode>
+  <DataNode TextLabel="PRKAR2B" GraphId="e7e" Type="GeneProduct" GroupRef="e1f1c">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKAR2B | protein kinase cAMP-dependent regul..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="186.66666666666666" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5577" />
+  </DataNode>
+  <DataNode TextLabel="RGS5" GraphId="a35" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS5 | regulator of G-protein signalling 5" />
+    <Graphics CenterX="1330.0" CenterY="146.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="8490" />
+  </DataNode>
+  <DataNode TextLabel="PRKACA" GraphId="cdb" Type="GeneProduct" GroupRef="e1f1c">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKACA | protein kinase cAMP-dependent cataly..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="206.66666666666666" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5566" />
+  </DataNode>
+  <DataNode TextLabel="RGS3" GraphId="cbf" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS3 | regulator of G-protein signalling 3" />
+    <Graphics CenterX="1330.0" CenterY="106.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5998" />
+  </DataNode>
+  <DataNode TextLabel="RGS1" GraphId="e0e" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS1 | regulator of G-protein signalling 1" />
+    <Graphics CenterX="1330.0" CenterY="66.66666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5996" />
+  </DataNode>
+  <DataNode TextLabel="ADCY5" GraphId="b80" Type="GeneProduct" GroupRef="f2b52">
+    <Comment Source="GenMAPP remarks">There is no SwissProt entry for a full-length sequence in mouse.  This EST is from the Affymetrix Murine6500 chip.</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY5 | adenylate cyclase 5" />
+    <Graphics CenterX="1113.3333333333333" CenterY="133.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="111" />
+  </DataNode>
+  <DataNode TextLabel="ADCY3" GraphId="b60" Type="GeneProduct" GroupRef="f2b52">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADCY3 | adenylate cyclase 3" />
+    <Graphics CenterX="1113.3333333333333" CenterY="93.33333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="109" />
+  </DataNode>
+  <DataNode TextLabel="PRKAR1A" GraphId="c38" Type="GeneProduct" GroupRef="e1f1c">
+    <Comment Source="GenMAPP remarks">KAP0 HUMAN</Comment>
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PRKAR1A | protein kinase cAMP-dependent regul..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="186.66666666666666" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5573" />
+  </DataNode>
+  <DataNode TextLabel="RGS18" GraphId="c34" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS18 | regulator of G-protein signalling 18" />
+    <Graphics CenterX="1420.0" CenterY="166.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="64407" />
+  </DataNode>
+  <DataNode TextLabel="RGS6" GraphId="aa2" Type="GeneProduct" GroupRef="cdb61">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RGS6 | regulator of G-protein signalling 6" />
+    <Graphics CenterX="1330.0" CenterY="166.66666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="9628" />
+  </DataNode>
+  <DataNode TextLabel="GNG2" GraphId="ae4" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG2 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1112.3333333333333" CenterY="584.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="54331" />
+  </DataNode>
+  <DataNode TextLabel="GNGT1" GraphId="af1" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNGT1 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1112.3333333333333" CenterY="564.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2792" />
+  </DataNode>
+  <DataNode TextLabel="GNB5" GraphId="c9f" Type="GeneProduct" GroupRef="b1341">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNB5 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="493.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10681" />
+  </DataNode>
+  <DataNode TextLabel="GNB4" GraphId="bbf" Type="GeneProduct" GroupRef="b1341">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNB4 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="473.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="59345" />
+  </DataNode>
+  <DataNode TextLabel="GNB3" GraphId="d14" Type="GeneProduct" GroupRef="b1341">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNB3 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="513.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2784" />
+  </DataNode>
+  <DataNode TextLabel="GNB2" GraphId="aaa" Type="GeneProduct" GroupRef="b1341">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNB2 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="493.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2783" />
+  </DataNode>
+  <DataNode TextLabel="GNB1" GraphId="d29" Type="GeneProduct" GroupRef="b1341">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNB1 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="473.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2782" />
+  </DataNode>
+  <DataNode TextLabel="GRK6" GraphId="ae2" Type="GeneProduct" GroupRef="a9610">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GRK6 | G protein-coupled receptor kinase 6" />
+    <Graphics CenterX="1326.6666666666667" CenterY="420.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2870" />
+  </DataNode>
+  <DataNode TextLabel="PLCB3" GraphId="c43" Type="GeneProduct" GroupRef="f11a0">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PLCB3 | phospholipase C beta 3 (phosphatidylin..." />
+    <Graphics CenterX="970.0" CenterY="315.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5331" />
+  </DataNode>
+  <DataNode TextLabel="GNG4" GraphId="b99" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG4 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1112.3333333333333" CenterY="624.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2786" />
+  </DataNode>
+  <DataNode TextLabel="GRK4" GraphId="f72" Type="GeneProduct" GroupRef="a9610">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GRK4 | G protein-coupled receptor kinase 4" />
+    <Graphics CenterX="1326.6666666666667" CenterY="380.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2868" />
+  </DataNode>
+  <DataNode TextLabel="GRK5" GraphId="f5d" Type="GeneProduct" GroupRef="a9610">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GRK5 | G protein-coupled receptor kinase 5" />
+    <Graphics CenterX="1326.6666666666667" CenterY="400.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2869" />
+  </DataNode>
+  <DataNode TextLabel="PKIB" GraphId="f1f" Type="GeneProduct" GroupRef="a68c8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PKIB | protein kinase (cAMP-dependent catalyti..." />
+    <Graphics CenterX="1423.3333333333333" CenterY="400.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5570" />
+  </DataNode>
+  <DataNode TextLabel="CALM2" GraphId="b22" Type="GeneProduct" GroupRef="e309e">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CALM2 | calmodulin 2 (phosphorylase kinase del..." />
+    <Graphics CenterX="1160.0" CenterY="396.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="805" />
+  </DataNode>
+  <DataNode TextLabel="PKIG" GraphId="ddf" Type="GeneProduct" GroupRef="a68c8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PKIG | protein kinase (cAMP-dependent catalyti..." />
+    <Graphics CenterX="1423.3333333333333" CenterY="420.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="11142" />
+  </DataNode>
+  <DataNode TextLabel="PKIA" GraphId="f71" Type="GeneProduct" GroupRef="a68c8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PKIA | protein kinase (cAMP-dependent catalyti..." />
+    <Graphics CenterX="1423.3333333333333" CenterY="380.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5569" />
+  </DataNode>
+  <DataNode TextLabel="GNG3" GraphId="c74" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG3 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1112.3333333333333" CenterY="604.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2785" />
+  </DataNode>
+  <DataNode TextLabel="GNG11" GraphId="d50" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG11 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1205.6666666666667" CenterY="604.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2791" />
+  </DataNode>
+  <DataNode TextLabel="GNG5" GraphId="fa0" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG5 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1112.3333333333333" CenterY="644.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2787" />
+  </DataNode>
+  <DataNode TextLabel="GNG13" GraphId="f34" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG13 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1205.6666666666667" CenterY="644.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="51764" />
+  </DataNode>
+  <DataNode TextLabel="GNG12" GraphId="e47" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG12 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1205.6666666666667" CenterY="624.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="55970" />
+  </DataNode>
+  <DataNode TextLabel="GNG8" GraphId="e20" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG8 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1205.6666666666667" CenterY="584.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="94235" />
+  </DataNode>
+  <DataNode TextLabel="GNG7" GraphId="c15" Type="GeneProduct" GroupRef="bf7d8">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNG7 | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1205.6666666666667" CenterY="564.6666666666666" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2788" />
+  </DataNode>
+  <DataNode TextLabel="YWHAB" GraphId="aed" Type="GeneProduct" GroupRef="c41ba">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="YWHAB | tyrosine 3-monooxygenase/tryptophan 5-m..." />
+    <Graphics CenterX="1329.0" CenterY="262.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="7529" />
+  </DataNode>
+  <DataNode TextLabel="PLCB3" GraphId="e7c" Type="GeneProduct" GroupRef="f11a0">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="PLCB3 | phospholipase C beta 3 (phosphatidylin..." />
+    <Graphics CenterX="969.0" CenterY="338.3333333333333" Width="58.0" Height="23.333333333333332" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="5331" />
+  </DataNode>
+  <DataNode TextLabel="ARRB2" GraphId="c10" Type="GeneProduct" GroupRef="f86b6">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ARRB2 | arrestin beta 2" />
+    <Graphics CenterX="1376.6666666666667" CenterY="496.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="409" />
+  </DataNode>
+  <DataNode TextLabel="ARRB1" GraphId="fa8" Type="GeneProduct" GroupRef="f86b6">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ARRB1 | arrestin beta 1" />
+    <Graphics CenterX="1376.6666666666667" CenterY="476.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="408" />
+  </DataNode>
+  <DataNode TextLabel="CALM1" GraphId="a23" Type="GeneProduct" GroupRef="e309e">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CALM1 | calmodulin 1 (phosphorylase kinase del..." />
+    <Graphics CenterX="1160.0" CenterY="376.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="801" />
+  </DataNode>
+  <DataNode TextLabel="RYR3" GraphId="f0f" Type="GeneProduct" GroupRef="c3cbb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RYR3 | ryanodine receptor 3" />
+    <Graphics CenterX="387.40904311251313" CenterY="495.9999999999999" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6263" />
+  </DataNode>
+  <DataNode TextLabel="ITPR1" GraphId="e77" Type="GeneProduct" GroupRef="d9bb1">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ITPR1 | inositol 145-triphosphate receptor t..." />
+    <Graphics CenterX="814.384858044164" CenterY="427.8212407991588" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3708" />
+  </DataNode>
+  <DataNode TextLabel="ITPR2" GraphId="efb" Type="GeneProduct" GroupRef="d9bb1">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ITPR2 | inositol 145-triphosphate receptor t..." />
+    <Graphics CenterX="814.384858044164" CenterY="448.8212407991589" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3709" />
+  </DataNode>
+  <DataNode TextLabel="ITPR3" GraphId="d00" Type="GeneProduct" GroupRef="d9bb1">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ITPR3 | inositol 145-triphosphate receptor t..." />
+    <Graphics CenterX="814.384858044164" CenterY="469.8212407991589" Width="53.333333333333336" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3710" />
+  </DataNode>
+  <DataNode TextLabel="CALM3" GraphId="a7e" Type="GeneProduct" GroupRef="e309e">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CALM3 | calmodulin 3 (phosphorylase kinase del..." />
+    <Graphics CenterX="1160.0" CenterY="416.6666666666667" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="808" />
+  </DataNode>
+  <DataNode TextLabel="GNA11" GraphId="bc4" Type="GeneProduct" GroupRef="f2fc9">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNA11 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="969.9999999999998" CenterY="269.2818086225026" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2767" />
+  </DataNode>
+  <DataNode TextLabel="RYR1" GraphId="a3f" Type="GeneProduct" GroupRef="c3cbb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="RYR1 | ryanodine receptor 1 (skeletal)" />
+    <Graphics CenterX="387.40904311251313" CenterY="456.9999999999999" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6261" />
+  </DataNode>
+  <DataNode TextLabel="CASQ1" GraphId="e2a" Type="GeneProduct" GroupRef="f9f41">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CASQ1 | calsequestrin 1 (fast-twitch skeletal ..." />
+    <Graphics CenterX="693.3333333333334" CenterY="424.615141955836" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="844" />
+  </DataNode>
+  <DataNode TextLabel="ATP2A2" GraphId="bbb" Type="GeneProduct" GroupRef="f6aeb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP2A2 | ATPase Ca++ transporting cardiac mus..." />
+    <Graphics CenterX="612.4605678233437" CenterY="539.8212407991589" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="488" />
+  </DataNode>
+  <DataNode TextLabel="ATP2A3" GraphId="e87" Type="GeneProduct" GroupRef="f6aeb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP2A3 | ATPase Ca++ transporting ubiquitous" />
+    <Graphics CenterX="612.4605678233437" CenterY="559.8212407991589" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="489" />
+  </DataNode>
+  <DataNode TextLabel="CAMK2A" GraphId="cb2" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK2A | calcium/calmodulin-dependent protein k..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="283.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="815" />
+  </DataNode>
+  <DataNode TextLabel="CAMK2B" GraphId="f22" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK2B | calcium/calmodulin-dependent protein k..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="303.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="816" />
+  </DataNode>
+  <DataNode TextLabel="CAMK2G" GraphId="d54" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK2G | calcium/calmodulin-dependent protein k..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="283.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="818" />
+  </DataNode>
+  <DataNode TextLabel="CAMK2D" GraphId="eeb" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK2D | calcium/calmodulin-dependent protein k..." />
+    <Graphics CenterX="1113.3333333333333" CenterY="323.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="817" />
+  </DataNode>
+  <DataNode TextLabel="CAMK1" GraphId="fb2" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK1 | calcium/calmodulin-dependent protein ki..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="303.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="8536" />
+  </DataNode>
+  <DataNode TextLabel="CAMK4" GraphId="b70" Type="GeneProduct" GroupRef="b7012">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CAMK4 | calcium/calmodulin-dependent protein ki..." />
+    <Graphics CenterX="1203.3333333333333" CenterY="323.3333333333333" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="814" />
+  </DataNode>
+  <DataNode TextLabel="CACNB3" GraphId="e1c" Type="GeneProduct" GroupRef="c7479">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNB3 | calcium channel voltage-dependent be..." />
+    <Graphics CenterX="189.23991102637433" CenterY="702.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="784" />
+  </DataNode>
+  <DataNode TextLabel="CACNB1" GraphId="bac" Type="GeneProduct" GroupRef="c7479">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNB1 | calcium channel voltage-dependent be..." />
+    <Graphics CenterX="188.33333333333334" CenterY="682.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="782" />
+  </DataNode>
+  <DataNode TextLabel="ATP2B3" GraphId="cad" Type="GeneProduct" GroupRef="bdeb4">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP2B3 | ATPase Ca++ transporting plasma memb..." />
+    <Graphics CenterX="730.0" CenterY="710.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="492" />
+  </DataNode>
+  <DataNode TextLabel="ATP2B2" GraphId="d87" Type="GeneProduct" GroupRef="bdeb4">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP2B2 | ATPase Ca++ transporting plasma memb..." />
+    <Graphics CenterX="730.0" CenterY="691.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="491" />
+  </DataNode>
+  <DataNode TextLabel="ATP2B1" GraphId="a0b" Type="GeneProduct" GroupRef="bdeb4">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP2B1 | ATPase Ca++ transporting plasma memb..." />
+    <Graphics CenterX="730.0" CenterY="671.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="490" />
+  </DataNode>
+  <DataNode TextLabel="SLC8A3" GraphId="bc6" Type="GeneProduct" GroupRef="f2058">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="SLC8A3 | solute carrier family 8 (sodium-calciu..." />
+    <Graphics CenterX="536.6666666666666" CenterY="683.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6547" />
+  </DataNode>
+  <DataNode TextLabel="SLC8A1" GraphId="cf0" Type="GeneProduct" GroupRef="f2058">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="SLC8A1 | solute carrier family 8 (sodium/calciu..." />
+    <Graphics CenterX="536.6666666666666" CenterY="703.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="6546" />
+  </DataNode>
+  <DataNode TextLabel="ATP1A4" GraphId="b17" Type="GeneProduct" GroupRef="c25cf">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP1A4 | ATPase Na+/K+ transporting alpha 4 p..." />
+    <Graphics CenterX="320.0" CenterY="667.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="480" />
+  </DataNode>
+  <DataNode TextLabel="ATP1B1" GraphId="eff" Type="GeneProduct" GroupRef="c25cf">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP1B1 | ATPase Na+/K+ transporting beta 1 po..." />
+    <Graphics CenterX="320.0" CenterY="684.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="481" />
+  </DataNode>
+  <DataNode TextLabel="ATP1B2" GraphId="e44" Type="GeneProduct" GroupRef="c25cf">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP1B2 | ATPase Na+/K+ transporting beta 2 po..." />
+    <Graphics CenterX="320.0" CenterY="704.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="482" />
+  </DataNode>
+  <DataNode TextLabel="ATP1B3" GraphId="c7b" Type="GeneProduct" GroupRef="a76fe">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ATP1B3 | ATPase Na+/K+ transporting beta 3 po..." />
+    <Graphics CenterX="409.0" CenterY="669.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="483" />
+  </DataNode>
+  <DataNode TextLabel="FXYD2" GraphId="a20" Type="GeneProduct" GroupRef="a76fe">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="FXYD2 | FXYD domain containing ion transport re..." />
+    <Graphics CenterX="409.0" CenterY="686.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="486" />
+  </DataNode>
+  <DataNode TextLabel="CHRM1" GraphId="aba" Type="GeneProduct" GroupRef="c1f83">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CHRM1 | cholinergic receptor muscarinic 1" />
+    <Graphics CenterX="194.20609884332282" CenterY="153.38485804416405" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1128" />
+  </DataNode>
+  <DataNode TextLabel="CHRM2" GraphId="f7c" Type="GeneProduct" GroupRef="c1f83">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CHRM2 | cholinergic receptor muscarinic 2" />
+    <Graphics CenterX="194.20609884332282" CenterY="173.38485804416405" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1129" />
+  </DataNode>
+  <DataNode TextLabel="CHRM3" GraphId="df1" Type="GeneProduct" GroupRef="c1f83">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CHRM3 | cholinergic receptor muscarinic 3" />
+    <Graphics CenterX="194.20609884332282" CenterY="193.38485804416405" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1131" />
+  </DataNode>
+  <DataNode TextLabel="CHRM4" GraphId="c77" Type="GeneProduct" GroupRef="ae1eb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CHRM4 | cholinergic receptor muscarinic 4" />
+    <Graphics CenterX="290.8727655099894" CenterY="153.38485804416405" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1132" />
+  </DataNode>
+  <DataNode TextLabel="CHRM5" GraphId="b46" Type="GeneProduct" GroupRef="ae1eb">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CHRM5 | cholinergic receptor muscarinic 5" />
+    <Graphics CenterX="290.8727655099894" CenterY="174.38485804416405" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="1133" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1C" GraphId="ad8" Type="GeneProduct" GroupRef="a6032">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1C | calcium channel voltage-dependent L..." />
+    <Graphics CenterX="392.63932702418487" CenterY="147.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="775" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1D" GraphId="ef7" Type="GeneProduct" GroupRef="a6032">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1D | calcium channel voltage-dependent L..." />
+    <Graphics CenterX="392.63932702418487" CenterY="167.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="776" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1E" GraphId="cd9" Type="GeneProduct" GroupRef="d71fe">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1E | calcium channel voltage-dependent a..." />
+    <Graphics CenterX="482.63932702418487" CenterY="188.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="777" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1S" GraphId="a68" Type="GeneProduct" GroupRef="a6032">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1S | calcium channel voltage-dependent L..." />
+    <Graphics CenterX="392.63932702418487" CenterY="187.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="779" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1A" GraphId="e18" Type="GeneProduct" GroupRef="d71fe">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1A | calcium channel voltage-dependent P..." />
+    <Graphics CenterX="482.63932702418487" CenterY="148.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="773" />
+  </DataNode>
+  <DataNode TextLabel="CACNA1B" GraphId="b9f" Type="GeneProduct" GroupRef="d71fe">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CACNA1B | calcium channel voltage-dependent L..." />
+    <Graphics CenterX="482.63932702418487" CenterY="168.07570977917982" Width="66.66666666666667" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="774" />
+  </DataNode>
+  <DataNode TextLabel="ADRB1" GraphId="cc1" Type="GeneProduct" GroupRef="ec09d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRB1 | adrenergic beta-1- receptor" />
+    <Graphics CenterX="626.0241850683493" CenterY="153.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="153" />
+  </DataNode>
+  <DataNode TextLabel="ADRB3" GraphId="a7a" Type="GeneProduct" GroupRef="ec09d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRB3 | adrenergic beta-3- receptor" />
+    <Graphics CenterX="626.0241850683493" CenterY="193.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="155" />
+  </DataNode>
+  <DataNode TextLabel="ADRB2" GraphId="c8d" Type="GeneProduct" GroupRef="ec09d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRB2 | adrenergic beta-2- receptor surface" />
+    <Graphics CenterX="626.0241850683493" CenterY="173.33333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="154" />
+  </DataNode>
+  <DataNode TextLabel="ADRA1A" GraphId="c8a" Type="GeneProduct" GroupRef="bf063">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRA1A | adrenergic alpha-1A- receptor" />
+    <Graphics CenterX="970.0000000000016" CenterY="145.07570977917982" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="148" />
+  </DataNode>
+  <DataNode TextLabel="ADRA1B" GraphId="e04" Type="GeneProduct" GroupRef="bf063">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRA1B | adrenergic alpha-1B- receptor" />
+    <Graphics CenterX="970.0000000000016" CenterY="165.07570977917982" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="147" />
+  </DataNode>
+  <DataNode TextLabel="ADRA1D" GraphId="a07" Type="GeneProduct" GroupRef="bf063">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="ADRA1D | adrenergic alpha-1D- receptor" />
+    <Graphics CenterX="970.0000000000016" CenterY="185.07570977917982" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="146" />
+  </DataNode>
+  <DataNode TextLabel="GJA1" GraphId="d2d" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA1 | gap junction protein alpha 1 43kDa (co..." />
+    <Graphics CenterX="320.0" CenterY="870.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2697" />
+  </DataNode>
+  <DataNode TextLabel="GJA3" GraphId="e49" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA3 | gap junction protein alpha 3 46kDa (co..." />
+    <Graphics CenterX="320.0" CenterY="890.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2700" />
+  </DataNode>
+  <DataNode TextLabel="GJA4" GraphId="b49" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA4 | gap junction protein alpha 4 37kDa (co..." />
+    <Graphics CenterX="320.0" CenterY="910.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2701" />
+  </DataNode>
+  <DataNode TextLabel="GJA5" GraphId="c64" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA5 | gap junction protein alpha 5 40kDa (co..." />
+    <Graphics CenterX="320.0" CenterY="930.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2702" />
+  </DataNode>
+  <DataNode TextLabel="GJA7" GraphId="ced" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA7 | gap junction protein alpha 7 45kDa (co..." />
+    <Graphics CenterX="320.0" CenterY="948.5809906291834" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10052" />
+  </DataNode>
+  <DataNode TextLabel="GJA8" GraphId="a38" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA8 | gap junction protein alpha 8 50kDa (co..." />
+    <Graphics CenterX="410.0" CenterY="870.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2703" />
+  </DataNode>
+  <DataNode TextLabel="CX36" GraphId="b3e" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="CX36 | connexin-36" />
+    <Graphics CenterX="410.0" CenterY="890.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="57369" />
+  </DataNode>
+  <DataNode TextLabel="GJA10" GraphId="d9f" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA10 | gap junction protein alpha 10 59kDa" />
+    <Graphics CenterX="410.0" CenterY="910.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="81025" />
+  </DataNode>
+  <DataNode TextLabel="GJA12" GraphId="fd3" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJA12 | gap junction protein alpha 12 47kDa" />
+    <Graphics CenterX="410.0" CenterY="930.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="57165" />
+  </DataNode>
+  <DataNode TextLabel="GJB1" GraphId="f7b" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB1 | gap junction protein beta 1 32kDa (con..." />
+    <Graphics CenterX="500.0" CenterY="870.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2705" />
+  </DataNode>
+  <DataNode TextLabel="GJB2" GraphId="aef" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB2 | gap junction protein beta 2 26kDa (con..." />
+    <Graphics CenterX="500.0" CenterY="890.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2706" />
+  </DataNode>
+  <DataNode TextLabel="GJB3" GraphId="d08" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB3 | gap junction protein beta 3 31kDa (con..." />
+    <Graphics CenterX="500.0" CenterY="910.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2707" />
+  </DataNode>
+  <DataNode TextLabel="GJB4" GraphId="aa9" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB4 | gap junction protein beta 4 (connexin 3..." />
+    <Graphics CenterX="500.0" CenterY="930.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="127534" />
+  </DataNode>
+  <DataNode TextLabel="GJB5" GraphId="b04" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB5 | gap junction protein beta 5 (connexin 3..." />
+    <Graphics CenterX="500.0" CenterY="950.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2709" />
+  </DataNode>
+  <DataNode TextLabel="GJB6" GraphId="cd2" Type="GeneProduct" GroupRef="d395d">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GJB6 | gap junction protein beta 6 (connexin 3..." />
+    <Graphics CenterX="500.0" CenterY="970.0" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="10804" />
+  </DataNode>
+  <DataNode TextLabel="KCNJ3" GraphId="d23" Type="GeneProduct" GroupRef="d2fb6">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="KCNJ3 | potassium inwardly-rectifying channel ..." />
+    <Graphics CenterX="93.69085173501577" CenterY="274.79390115667707" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3760" />
+  </DataNode>
+  <DataNode TextLabel="KCNJ5" GraphId="df0" Type="GeneProduct" GroupRef="d2fb6">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="KCNJ5 | potassium inwardly-rectifying channel ..." />
+    <Graphics CenterX="93.69085173501577" CenterY="294.79390115667707" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3762" />
+  </DataNode>
+  <DataNode TextLabel="KCNB1" GraphId="ad0" Type="GeneProduct">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="KCNB1 | potassium voltage-gated channel Shab-r..." />
+    <Graphics CenterX="91.58780231335436" CenterY="343.1545741324926" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="3745" />
+  </DataNode>
+  <DataNode TextLabel="GNAI1" GraphId="ce1" Type="GeneProduct" GroupRef="bf230">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAI1 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1160.0" CenterY="703.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2770" />
+  </DataNode>
+  <DataNode TextLabel="GNAI2" GraphId="a58" Type="GeneProduct" GroupRef="bf230">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAI2 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1160.0" CenterY="723.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2771" />
+  </DataNode>
+  <DataNode TextLabel="GNAI3" GraphId="da8" Type="GeneProduct" GroupRef="bf230">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAI3 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1160.0" CenterY="743.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2773" />
+  </DataNode>
+  <DataNode TextLabel="GNAO1" GraphId="f63" Type="GeneProduct" GroupRef="bf230">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAO1 | guanine nucleotide binding protein (G p..." />
+    <Graphics CenterX="1160.0" CenterY="763.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2775" />
+  </DataNode>
+  <DataNode TextLabel="GNAZ" GraphId="f66" Type="GeneProduct" GroupRef="bf230">
+    <Attribute Key="org.pathvisio.model.BackpageHead" Value="GNAZ | guanine nucleotide binding protein (G pr..." />
+    <Graphics CenterX="1160.0" CenterY="783.3333333333334" Width="60.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="2781" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="b1d" Type="Metabolite">
+    <Graphics CenterX="655.5833333333334" CenterY="617.4166666666666" Width="32.833333333333336" Height="15.166666666666666" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="1927-31-7" />
+  </DataNode>
+  <DataNode TextLabel="Acetylcholine" GraphId="ae8" Type="Metabolite">
+    <Graphics CenterX="163.33333333333334" CenterY="83.33333333333333" Width="91.33333333333333" Height="16.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="51-84-3" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="f32" Type="Metabolite">
+    <Graphics CenterX="816.6666666666666" CenterY="580.0" Width="28.333333333333332" Height="15.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="1927-31-7" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="f91" Type="Metabolite">
+    <Graphics CenterX="773.3333333333334" CenterY="570.0" Width="29.333333333333332" Height="15.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="58-64-0" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="cf4" Type="Metabolite">
+    <Graphics CenterX="761.6984752891696" CenterY="728.7620925341745" Width="32.5" Height="14.166666666666666" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="1927-31-7" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="c2e" Type="Metabolite">
+    <Graphics CenterX="820.0" CenterY="196.80680012710513" Width="31.333333333333332" Height="16.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="CAS" ID="1927-31-7" />
+  </DataNode>
+  <DataNode TextLabel="Epinephrine" GraphId="c26da" Type="Metabolite">
+    <Graphics CenterX="636.050420168067" CenterY="70.69085173501577" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00068" />
+  </DataNode>
+  <DataNode TextLabel="cAMP" GraphId="d19c8" Type="Metabolite">
+    <Graphics CenterX="780.5" CenterY="234.0" Width="41.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="6076" />
+  </DataNode>
+  <DataNode TextLabel="K+" GraphId="b4df6" Type="Metabolite">
+    <Graphics CenterX="23.239495798319325" CenterY="289.0168067226892" Width="30.54621848739496" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00586" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="ee706" Type="Metabolite">
+    <Graphics CenterX="882.7339642481597" CenterY="463.7223974763413" Width="43.15457413249204" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="b45a2" Type="Metabolite">
+    <Graphics CenterX="359.69865647419454" CenterY="590.956887486856" Width="44.20609884332278" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00588" />
+  </DataNode>
+  <DataNode TextLabel="PIP2" GraphId="b40cc" Type="Metabolite">
+    <Graphics CenterX="969.5268138801258" CenterY="388.0126182965296" Width="44.20609884332291" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB10032" />
+  </DataNode>
+  <DataNode TextLabel="Pi" GraphId="e5d44" Type="Metabolite" GroupRef="e75ca">
+    <Graphics CenterX="818.1493165089377" CenterY="769.7160883280761" Width="35.793901156676654" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01429" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="ade0a" Type="Metabolite" GroupRef="e75ca">
+    <Graphics CenterX="781.3038906414303" CenterY="769.716088328076" Width="37.89695057833835" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01341" />
+  </DataNode>
+  <DataNode TextLabel="Connexin" GraphId="cbd36" Type="GeneProduct">
+    <Graphics CenterX="642.9863301787592" CenterY="715.0368033648791" Width="59.97896950578334" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="None" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Calsequestrin" GraphId="de646" Type="GeneProduct" GroupRef="b4122">
+    <Graphics CenterX="587.5366755580148" CenterY="362.6487195757011" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="844" />
+  </DataNode>
+  <DataNode TextLabel="Calreticulin" GraphId="f92ea" Type="GeneProduct" GroupRef="b4122">
+    <Graphics CenterX="590.4877811625712" CenterY="386.58619345047424" Width="69.73940430974764" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Entrez Gene" ID="811" />
+  </DataNode>
+  <DataNode TextLabel="DAG" GraphId="caa32" Type="Metabolite">
+    <Graphics CenterX="1005.2240228789318" CenterY="426.1201143946615" Width="40.95328884652044" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="IP3" GraphId="a033e" Type="Metabolite">
+    <Graphics CenterX="931.382268827455" CenterY="426.12011439466136" Width="36.18684461391818" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="388562" />
+  </DataNode>
+  <DataNode TextLabel="IP4" GraphId="fd85f" Type="Metabolite">
+    <Graphics CenterX="1000.4575786463299" CenterY="494.756911344137" Width="37.14013346043842" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Phospholamban" GraphId="a0c17" Type="GeneProduct">
+    <Graphics CenterX="687.5749318801096" CenterY="597.6339691189825" Width="94.49591280653993" Height="14.541326067211628" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000198523" />
+  </DataNode>
+  <DataNode TextLabel="Epinephrine" GraphId="b6bb6" Type="Metabolite">
+    <Graphics CenterX="969.6908517350157" CenterY="71.89695057833859" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00068" />
+  </DataNode>
+  <DataNode TextLabel="K+" GraphId="f535c" Type="Metabolite">
+    <Graphics CenterX="21.735294117647058" CenterY="340.68067226890753" Width="30.54621848739496" Height="20.0" ZOrder="32778" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00586" />
+  </DataNode>
+  <DataNode TextLabel="K+" GraphId="aef72" Type="Metabolite">
+    <Graphics CenterX="383.1638655462182" CenterY="758.2997198879546" Width="30.54621848739496" Height="20.0" ZOrder="32779" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00586" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="e63e1" Type="Metabolite">
+    <Graphics CenterX="255.50998948475328" CenterY="739.7581493165097" Width="43.15457413249204" Height="20.0" ZOrder="32782" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="db6dd" Type="Metabolite">
+    <Graphics CenterX="550.4731861198744" CenterY="758.1703470031559" Width="43.15457413249204" Height="20.0" ZOrder="32783" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="ebbcd" Type="Metabolite">
+    <Graphics CenterX="642.4921135646692" CenterY="894.3533123028402" Width="43.15457413249204" Height="20.0" ZOrder="32784" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="d5f32" Type="Metabolite">
+    <Graphics CenterX="730.3049421661416" CenterY="798.1493165089385" Width="43.15457413249204" Height="20.0" ZOrder="32785" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="b01ff" Type="Metabolite">
+    <Graphics CenterX="964.2797055730814" CenterY="734.5425867507898" Width="43.15457413249204" Height="20.0" ZOrder="32786" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="a8fd3" Type="Metabolite">
+    <Graphics CenterX="608.8222923238695" CenterY="478.9800210304947" Width="43.15457413249204" Height="20.0" ZOrder="32787" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="b92d2" Type="Metabolite">
+    <Graphics CenterX="200.3154574132492" CenterY="479.4180627687081" Width="43.15457413249204" Height="20.0" ZOrder="32788" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="b687e" Type="Metabolite">
+    <Graphics CenterX="88.33859095688746" CenterY="735.5730809674044" Width="43.15457413249204" Height="20.0" ZOrder="32789" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="af916" Type="Metabolite">
+    <Graphics CenterX="435.8780231335432" CenterY="70.49421661409119" Width="43.15457413249204" Height="20.0" ZOrder="32790" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="f3265" Type="Metabolite">
+    <Graphics CenterX="435.3627760252368" CenterY="250.84121976866538" Width="43.15457413249204" Height="20.0" ZOrder="32791" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="d33d3" Type="Metabolite">
+    <Graphics CenterX="246.57202944269218" CenterY="73.09148264984228" Width="44.20609884332278" Height="20.0" ZOrder="32792" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00588" />
+  </DataNode>
+  <DataNode TextLabel="Na+" GraphId="bac79" Type="Metabolite">
+    <Graphics CenterX="525.7623554153521" CenterY="599.3901156677175" Width="44.20609884332278" Height="20.0" ZOrder="32793" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00588" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="a60f0" Type="Metabolite">
+    <Graphics CenterX="643.522607781283" CenterY="639.8633017875927" Width="43.15457413249204" Height="20.0" ZOrder="32794" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Pi" GraphId="a33c1" Type="Metabolite" GroupRef="c6e89">
+    <Graphics CenterX="713.5331230283908" CenterY="574.6687697160886" Width="35.793901156676654" Height="20.0" ZOrder="32796" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01429" />
+  </DataNode>
+  <DataNode TextLabel="ADP" GraphId="d632a" Type="Metabolite" GroupRef="c6e89">
+    <Graphics CenterX="676.6876971608834" CenterY="574.6687697160885" Width="37.89695057833835" Height="20.0" ZOrder="32797" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01341" />
+  </DataNode>
+  <DataNode TextLabel="Connexin" GraphId="c1556" Type="GeneProduct">
+    <Graphics CenterX="642.4710830704524" CenterY="791.282860147213" Width="59.97896950578334" Height="20.0" ZOrder="32798" FontSize="10" Valign="Middle" ShapeType="None" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="dfc21" Type="Metabolite" GroupRef="b4122">
+    <Graphics CenterX="649.1139626242609" CenterY="362.6487195757011" Width="43.15457413249204" Height="20.0" ZOrder="32799" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <DataNode TextLabel="Ca2+" GraphId="e6703" Type="Metabolite" GroupRef="b4122">
+    <Graphics CenterX="646.9347703836911" CenterY="386.5861934504742" Width="43.15457413249204" Height="20.0" ZOrder="32802" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00464" />
+  </DataNode>
+  <State GraphRef="a0c17" TextLabel="P" GraphId="d3882">
+    <Graphics RelX="1.0" RelY="6.246096189876987E-4" Width="15.0" Height="15.0" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </State>
+  <Interaction GraphId="ebf78">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="731.3333333333334" Y="463.615141955836" GraphRef="d1e1a" RelX="1.0" RelY="0.5" />
+      <Point X="861.1566771819137" Y="463.7223974763413" GraphRef="ee706" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5975108496276983" Shape="None" GraphId="d7452" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e67ae">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="833.3333333333334" Y="596.6666666666666" GraphRef="c5b" RelX="-1.0" RelY="0.0" />
+      <Point X="742.3228882833796" Y="597.6385104450496" GraphRef="d3882" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.512" Shape="None" GraphId="b3bf7" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c848a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="473.33333333333326" Y="550.0" GraphRef="c95" RelX="-1.0" RelY="0.0" />
+      <Point X="445.66666666666674" Y="550.0" GraphRef="b2d" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="f8fb9" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d81b3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="913.288846520496" Y="426.12011439466136" GraphRef="a033e" RelX="-1.0" RelY="0.0" />
+      <Point X="731.3333333333334" Y="425.615141955836" GraphRef="d1e1a" RelX="1.0" RelY="-0.5" ArrowHead="Arrow" />
+      <Anchor Position="0.6150394937246894" Shape="None" GraphId="b9c4f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e3f84">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="937.3333333333334" Y="426.1666666666667" />
+      <Point X="1000.4575786463299" Y="484.756911344137" GraphRef="fd85f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c1065">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="609.1139626242609" Y="404.5861934504742" GraphRef="f9374" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="608.8222923238695" Y="468.9800210304947" GraphRef="a8fd3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.6174208730703837" Shape="None" GraphId="d222f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c3e0b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="608.9338792927446" Y="444.3442866952742" GraphRef="d222f" RelX="0.0" RelY="0.0" />
+      <Point X="655.3333333333334" Y="444.615141955836" GraphRef="d1e1a" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f8e92">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="621.9453207150368" Y="639.8633017875927" GraphRef="a60f0" RelX="-1.0" RelY="0.0" />
+      <Point X="608.8222923238695" Y="488.9800210304947" GraphRef="a8fd3" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.23333333333333334" Shape="None" GraphId="e39b1" />
+      <Anchor Position="0.5962043982817241" Shape="None" GraphId="e2ae3" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c8fec">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="608.8222923238695" Y="614.7181913774981" GraphRef="e39b1" RelX="0.0" RelY="0.0" />
+      <Point X="649.7392218717143" Y="574.6687697160885" GraphRef="dfa72" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b98a7">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="587.2450052576235" Y="478.9800210304947" GraphRef="a8fd3" RelX="-1.0" RelY="0.0" />
+      <Point X="221.8927444794952" Y="479.4180627687081" GraphRef="b92d2" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5525125671543817" Shape="None" GraphId="e2b40" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c835b">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="931.3822688274552" Y="436.12011439466136" GraphRef="a033e" RelX="0.0" RelY="1.0" />
+      <Point X="933.3333333333335" Y="682.0" GraphRef="d5b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e86b7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1000.4575786463299" Y="504.756911344137" GraphRef="fd85f" RelX="0.0" RelY="1.0" />
+      <Point X="933.3333333333335" Y="682.0" GraphRef="d5b" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cbb3b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="964.2797055730814" Y="724.5425867507898" GraphRef="b01ff" RelX="0.0" RelY="-1.0" />
+      <Point X="964.75" Y="658.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d36e5">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="9f9f9f">
+      <Point X="792.3333333333335" Y="284.0" GraphRef="c61" RelX="1.0" RelY="0.0" />
+      <Point X="910.2500000000001" Y="682.0" GraphRef="d5b" RelX="-0.5" RelY="-1.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ffa19">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="8f8f8f">
+      <Point X="246.0" Y="252.66666666666666" GraphRef="a33" RelX="0.0" RelY="1.0" />
+      <Point X="341.40904311251313" Y="433.4999999999999" GraphRef="d6513" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="aa161">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="786.735985467757" Y="597.1642506811987" GraphRef="b3bf7" RelX="0.0" RelY="0.0" />
+      <Point X="773.3333333333335" Y="577.5" GraphRef="f91" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e5979">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="787.4005449591282" Y="627.5749318801089" GraphRef="c7d" RelX="0.0" RelY="-1.0" />
+      <Point X="786.735985467757" Y="597.1642506811987" GraphRef="b3bf7" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ef9c8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="0f0f0f">
+      <Point X="764.5000000000001" Y="292.0" GraphRef="c61" RelX="0.5" RelY="1.0" />
+      <Point X="779.25" Y="559.0" />
+      <Point X="786.735985467757" Y="597.1642506811987" GraphRef="b3bf7" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b6ef5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="525.7623554153521" Y="609.3901156677175" GraphRef="bac79" RelX="0.0" RelY="1.0" />
+      <Point X="526.6666666666666" Y="743.3333333333334" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bbc23">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="359.69865647419454" Y="600.956887486856" GraphRef="b45a2" RelX="0.0" RelY="1.0" />
+      <Point X="360.0" Y="750.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f794e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="383.1638655462182" Y="748.2997198879546" GraphRef="aef72" RelX="0.0" RelY="-1.0" />
+      <Point X="383.3333333333333" Y="616.6666666666666" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="efbab">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="550.4731861198743" Y="748.1703470031559" GraphRef="db6dd" RelX="0.0" RelY="-1.0" />
+      <Point X="550.0" Y="616.6666666666666" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e7b5c">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="663.5119047619049" Y="639.4285714285714" />
+      <Point X="711.0" Y="653.0" GraphRef="d9148" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b0f97">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="730.0" Y="728.0" GraphRef="d9148" RelX="0.0" RelY="1.0" />
+      <Point X="730.3049421661415" Y="788.1493165089385" GraphRef="d5f32" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5312964193746725" Shape="None" GraphId="dbc97" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b21b8">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="730.1620146809873" Y="759.9571164890328" GraphRef="dbc97" RelX="0.0" RelY="0.0" />
+      <Point X="754.3554153522612" Y="769.716088328076" GraphRef="cc8e2" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b9d61">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="afafaf">
+      <Point X="187.51209253417454" Y="759.1424815983173" GraphRef="fab" RelX="0.0" RelY="-1.0" />
+      <Point X="169.5599777565936" Y="720.0" GraphRef="fe367" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d9a0d">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="afafaf">
+      <Point X="187.51209253417454" Y="759.1424815983173" GraphRef="fab" RelX="0.0" RelY="-1.0" />
+      <Point X="208.0132666031141" Y="720.0" GraphRef="fe367" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f1e50">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="88.33859095688746" Y="725.5730809674044" GraphRef="b687e" RelX="0.0" RelY="-1.0" />
+      <Point X="189.52681388012618" Y="489.4180627687081" GraphRef="b92d2" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.19461252344946886" Shape="None" GraphId="a3e05" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fc34e">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="255.5099894847533" Y="729.7581493165097" GraphRef="e63e1" RelX="0.0" RelY="-1.0" />
+      <Point X="211.1041009463722" Y="489.4180627687081" GraphRef="b92d2" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.1881889052932881" Shape="None" GraphId="aa56b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d71a1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="666.1030494216612" Y="252.0273396424816" GraphRef="d09" RelX="1.0" RelY="0.0" />
+      <Point X="764.472235462345" Y="178.26501429933268" GraphRef="b21" RelX="-0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ee485">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="780.2386558627263" Y="196.5590085795996" GraphRef="c0758" RelX="0.0" RelY="0.0" />
+      <Point X="804.3333333333333" Y="196.80680012710513" GraphRef="c2e" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ff30c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="666.1030494216612" Y="252.0273396424816" GraphRef="d09" RelX="1.0" RelY="0.0" />
+      <Point X="705.539432176656" Y="251.92429022082018" GraphRef="d1c" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cc32b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="643.5226077812829" Y="649.8633017875927" GraphRef="a60f0" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+      <Point X="642.4921135646691" Y="884.3533123028402" GraphRef="ebbcd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.32285266408536756" Shape="None" GraphId="efcd3" />
+      <Anchor Position="0.5424808301275018" Shape="None" GraphId="a1f94" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cabf7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="37.008403361344534" Y="340.68067226890753" GraphRef="f535c" RelX="1.0" RelY="0.0" />
+      <Point X="156.66666666666674" Y="340.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="e989d" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b97d3">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="681.0" Y="284.0" GraphRef="c61" RelX="-1.0" RelY="0.0" />
+      <Point X="484.80599369085155" Y="214.07570977917982" GraphRef="ca75f" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f4da1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="970.0000000000016" Y="203.07570977917982" GraphRef="f6c75" RelX="0.0" RelY="1.0" />
+      <Point X="969.9999999999998" Y="234.9484752891693" GraphRef="e6b" RelX="0.0" RelY="-1.3333333333333333" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="da182" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e51a8">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="780.0644264378773" Y="178.26501429933268" GraphRef="b21" RelX="0.0" RelY="1.0" />
+      <Point X="780.5" Y="224.0" GraphRef="d19c8" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="c0758" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a7b4a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="942.3381468906846" Y="215.61032839848474" GraphRef="f67" RelX="1.0" RelY="0.0" />
+      <Point X="970.0000000000009" Y="215.8248159831756" GraphRef="da182" RelX="0.0" RelY="0.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d738e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="969.5268138801258" Y="398.0126182965296" GraphRef="b40cc" RelX="0.0" RelY="1.0" />
+      <Point X="931.3822688274552" Y="416.12011439466136" GraphRef="a033e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b684b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="8f8f8f">
+      <Point X="969.6908517350157" Y="81.89695057833859" GraphRef="b6bb6" RelX="0.0" RelY="1.0" />
+      <Point X="970.0000000000016" Y="127.07570977917982" GraphRef="f6c75" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d25f4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="613.9561974237643" Y="223.32386961093593" GraphRef="fc4" RelX="0.9375" RelY="-0.4166666666666667" />
+      <Point X="636.0557308096742" Y="223.61093585699265" GraphRef="cb779" RelX="0.0" RelY="0.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fc415">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="afafaf">
+      <Point X="246.57202944269218" Y="83.09148264984228" GraphRef="d33d3" RelX="0.0" RelY="1.0" />
+      <Point X="246.0" Y="236.66666666666666" GraphRef="a33" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5270594482333599" Shape="None" GraphId="efc9a" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ab3f3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="970.0" Y="357.99999999999994" GraphRef="d80f4" RelX="0.0" RelY="1.0" />
+      <Point X="969.5268138801258" Y="378.0126182965296" GraphRef="b40cc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cf977">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="38.5126050420168" Y="289.0168067226892" GraphRef="b4df6" RelX="1.0" RelY="0.0" />
+      <Point X="156.66666666666674" Y="290.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="c7b7d" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bd488">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="969.9999999999998" Y="279.2818086225026" GraphRef="bc4" RelX="0.0" RelY="1.0" />
+      <Point X="970.0" Y="297.6666666666667" GraphRef="d80f4" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fe4c6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="970.0000000000016" Y="203.07570977917982" GraphRef="f6c75" RelX="0.0" RelY="1.0" />
+      <Point X="1002.3333333333339" Y="228.00000000000006" GraphRef="e28" RelX="-16.923076923076923" RelY="-32.63157894736842" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="fb192">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0000">
+      <Point X="435.8780231335432" Y="80.49421661409119" GraphRef="af916" RelX="0.0" RelY="1.0" />
+      <Point X="435.3627760252368" Y="240.84121976866538" GraphRef="f3265" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5144656101250724" Shape="None" GraphId="c462c" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e373a">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="8f8f8f">
+      <Point X="193.33333333333334" Y="93.33333333333333" GraphRef="ae8" RelX="0.656934306569343" RelY="1.25" />
+      <Point X="195.37276550998945" Y="114.0" GraphRef="f87b8" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bd8e0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="969.5268138801258" Y="398.0126182965296" GraphRef="b40cc" RelX="0.0" RelY="1.0" />
+      <Point X="1005.2240228789317" Y="416.1201143946615" GraphRef="caa32" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b59a1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="780.5" Y="244.0" GraphRef="d19c8" RelX="0.0" RelY="1.0" />
+      <Point X="730.0000000000001" Y="274.0" GraphRef="c61" RelX="-0.11976047904191617" RelY="-1.25" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f9995">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="636.0241850683494" Y="211.33333333333337" GraphRef="cbc30" RelX="0.0" RelY="1.0" />
+      <Point X="636.1030494216612" Y="242.0273396424816" GraphRef="d09" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.4" Shape="None" GraphId="cb779" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d2468">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="606.1030494216612" Y="252.0273396424816" GraphRef="d09" RelX="-1.0" RelY="0.0" />
+      <Point X="484.80599369085155" Y="214.07570977917982" GraphRef="ca75f" RelX="0.5" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f1ebd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="289.99999999999994" Y="206.66666666666669" />
+      <Point X="313.3333333333318" Y="230.0" GraphRef="f73" RelX="-80.38461538461539" RelY="-1.0526315789473684" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ae526">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0" Color="afafaf">
+      <Point X="202.83333333333331" Y="244.66666666666666" GraphRef="a33" RelX="-1.0" RelY="0.0" />
+      <Point X="112.69085173501577" Y="256.79390115667707" GraphRef="df27a" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b312b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="8f8f8f">
+      <Point X="636.050420168067" Y="80.69085173501577" GraphRef="c26da" RelX="0.0" RelY="1.0" />
+      <Point X="636.0241850683494" Y="114.00000000000001" GraphRef="cbc30" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e1755">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="708.8333333333334" Y="292.0" GraphRef="c61" RelX="-0.5" RelY="1.0" />
+      <Point X="462.26666666666665" Y="550.0" GraphRef="f8fb9" RelX="0.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="da9e2">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="227.23991102637433" Y="678.0" GraphRef="fe367" RelX="1.0" RelY="-0.5" />
+      <Point X="247.1532939321396" Y="684.5288115309849" GraphRef="aa56b" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a8f55">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="150.33333333333337" Y="678.0" GraphRef="fe367" RelX="-1.0" RelY="-0.5" />
+      <Point X="108.03108636334633" Y="679.6143569505009" GraphRef="a3e05" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ca1a9">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="779.7181913774973" Y="448.82124079915883" GraphRef="c6fa9" RelX="-1.0" RelY="0.0" />
+      <Point X="808.9041898178074" Y="463.6792282930204" GraphRef="d7452" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bb564">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="779.7181913774973" Y="448.82124079915883" GraphRef="c6fa9" RelX="-1.0" RelY="0.0" />
+      <Point X="801.3790198094474" Y="425.80953640154127" GraphRef="b9c4f" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c4396">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="425.40904311251313" Y="476.4999999999999" GraphRef="afa7b" RelX="1.0" RelY="0.0" />
+      <Point X="385.3832897394427" Y="479.22204459579575" GraphRef="e2b40" RelX="0.0" RelY="0.0" ArrowHead="mim-stimulation" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b37cf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="639.1666666666667" Y="617.4166666666665" GraphRef="b1d" RelX="-1.0" RelY="0.0" />
+      <Point X="608.8222923238695" Y="614.7181913774981" GraphRef="e39b1" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bbc7c">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="816.6666666666667" Y="587.5" GraphRef="f32" RelX="0.0" RelY="1.0" />
+      <Point X="786.735985467757" Y="597.1642506811987" GraphRef="b3bf7" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ba225">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="745.4484752891696" Y="728.7620925341744" GraphRef="cf4" RelX="-1.0" RelY="0.0" />
+      <Point X="730.1620146809873" Y="759.9571164890328" GraphRef="dbc97" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id72b89da5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="608.8222923238695" Y="555.2050473186121" GraphRef="e2ae3" RelX="0.0" RelY="0.0" />
+      <Point X="574.4605678233437" Y="549.8212407991589" GraphRef="e6a60" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3bf93e4e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="433.9726603575183" Y="167.07570977917982" GraphRef="f2f1a" RelX="1.0" RelY="0.0" />
+      <Point X="435.6129462156032" Y="162.9872354237361" GraphRef="c462c" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ideb489076">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="441.30599369085155" Y="168.07570977917982" GraphRef="a7905" RelX="-1.0" RelY="0.0" />
+      <Point X="435.6129462156032" Y="162.9872354237361" GraphRef="c462c" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id88a9e277">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="232.20609884332282" Y="173.38485804416405" GraphRef="c7661" RelX="1.0" RelY="0.0" />
+      <Point X="246.2705359202536" Y="164.03473440008645" GraphRef="efc9a" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1f1a1951">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="252.8727655099894" Y="163.88485804416405" GraphRef="bd460" RelX="-1.0" RelY="0.0" />
+      <Point X="246.2705359202536" Y="164.03473440008645" GraphRef="efc9a" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbc8672f7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="93.69085173501577" Y="312.79390115667707" GraphRef="df27a" RelX="0.0" RelY="1.0" />
+      <Point X="85.77422969187678" Y="289.4100840336135" GraphRef="c7b7d" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida2bd5d5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="84.87170868347343" Y="340.40840336134454" GraphRef="e989d" RelX="0.0" RelY="0.0" />
+      <Point X="91.58780231335436" Y="333.1545741324926" GraphRef="ad0" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6e1154c3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="642.4710830704523" Y="801.282860147213" GraphRef="c1556" RelX="0.0" RelY="1.0" />
+      <Point X="642.9635844232126" Y="777.0696373485108" GraphRef="a1f94" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id74301fb6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="642.9863301787591" Y="705.0368033648791" GraphRef="cbd36" RelX="0.0" RelY="-1.0" />
+      <Point X="643.1899099781245" Y="725.5690263838462" GraphRef="efcd3" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="FKBP12" GraphId="b2d">
+    <Graphics CenterX="428.00000000000017" CenterY="550.0" Width="35.333333333333336" Height="10.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="6" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Sarcoplasmic Reticulum" GraphId="f48">
+    <Graphics CenterX="464.7739221871715" CenterY="354.04837013669845" Width="153.52260778128317" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="GRK" GraphId="b40" GroupRef="a9610">
+    <Graphics CenterX="1326.6666666666667" CenterY="356.6666666666667" Width="33.333333333333336" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Calmodulin" GraphId="e5d" GroupRef="e309e">
+    <Graphics CenterX="1160.0" CenterY="353.3333333333333" Width="78.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="PKA Inhibitors" GraphId="f02" GroupRef="a68c8">
+    <Graphics CenterX="1426.6666666666667" CenterY="356.6666666666667" Width="95.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="beta Arrestin" GraphId="ba5" GroupRef="f86b6">
+    <Graphics CenterX="1376.6666666666667" CenterY="453.3333333333333" Width="86.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein Kinase A" GraphId="d19" GroupRef="e1f1c">
+    <Graphics CenterX="1156.6666666666667" CenterY="163.33333333333334" Width="111.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Signaling" GraphId="f0d" GroupRef="cdb61">
+    <Graphics CenterX="1373.3333333333333" CenterY="46.666666666666664" Width="66.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="PKC inhibitor Protein-1" GraphId="d65" GroupRef="c41ba">
+    <Graphics CenterX="1372.3333333333333" CenterY="239.0" Width="150.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Adenylyl Cyclases" GraphId="c4b" GroupRef="f2b52">
+    <Graphics CenterX="1156.6666666666667" CenterY="30.0" Width="119.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="G" GraphId="f73">
+    <Graphics CenterX="1010.0" CenterY="240.0" Width="17.333333333333332" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="000080" />
+  </Label>
+  <Label TextLabel="Regulators of G-protein" GraphId="ab1" GroupRef="cdb61">
+    <Graphics CenterX="1373.3333333333333" CenterY="30.0" Width="152.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="bg" GraphId="ed0">
+    <Graphics CenterX="1026.6666666666667" CenterY="243.33333333333334" Width="21.333333333333332" Height="17.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="11" Valign="Middle" Color="000080" />
+  </Label>
+  <Label TextLabel="Protein Kinase C" GraphId="daf" GroupRef="d2eb9">
+    <Graphics CenterX="1376.6666666666667" CenterY="530.0" Width="111.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Protein Kinase A" GraphId="c61">
+    <Graphics CenterX="736.6666666666666" CenterY="284.0" Width="111.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Repolarization" GraphId="f06">
+    <Graphics CenterX="244.66666666666666" CenterY="300.0" Width="129.33333333333334" Height="21.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontStyle="Italic" FontSize="14" Valign="Middle" Color="808080" />
+  </Label>
+  <Label TextLabel="IP3 Receptors" GraphId="d5b">
+    <Graphics CenterX="933.3333333333334" CenterY="690.0" Width="92.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Cytosol" GraphId="c4d">
+    <Graphics CenterX="146.66666666666666" CenterY="393.3333333333333" Width="76.33333333333333" Height="24.0" ZOrder="28672" FillColor="ffffff" FontSize="16" Valign="Middle" />
+  </Label>
+  <Label TextLabel="CaM kinase" GraphId="c7d">
+    <Graphics CenterX="787.4005449591282" CenterY="635.5749318801089" Width="78.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="CaM kinase" GraphId="c29" GroupRef="b7012">
+    <Graphics CenterX="1156.6666666666667" CenterY="259.0" Width="78.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Dihydropyridine-Sensitive" GraphId="fc0">
+    <Graphics CenterX="185.91666666666674" CenterY="660.0" Width="137.49999999999994" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Membrane&#xA;Depolarization" GraphId="fab">
+    <Graphics CenterX="187.51209253417454" CenterY="779.7258149316507" Width="116.66666666666667" Height="41.166666666666664" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontStyle="Italic" FontSize="14" Valign="Middle" Color="808080" />
+  </Label>
+  <Label TextLabel="Na+/Ca2+ Exchanger" GraphId="ff1">
+    <Graphics CenterX="536.6666666666666" CenterY="663.3333333333334" Width="138.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Na+/K+ ATPase" GraphId="d6f">
+    <Graphics CenterX="364.3333333333333" CenterY="645.6666666666666" Width="103.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adrenergic Receptor" GraphId="b02" GroupRef="ec09d">
+    <Graphics CenterX="636.0241850683493" CenterY="130.0" Width="136.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="a" GraphId="bf9">
+    <Graphics CenterX="570.0" CenterY="130.0" Width="14.333333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="L-Type Ca2+ Channel" GraphId="e19" GroupRef="d27c6">
+    <Graphics CenterX="439.30599369085155" CenterY="116.38170347003154" Width="141.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="M1 Muscarinic Receptor" GraphId="e17" GroupRef="ec50d">
+    <Graphics CenterX="244.20609884332254" CenterY="130.0" Width="156.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="b" GraphId="efa">
+    <Graphics CenterX="910.0" CenterY="130.0" Width="13.333333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adrenergic Receptor" GraphId="d1d" GroupRef="fd911">
+    <Graphics CenterX="969.6635120925381" CenterY="116.43322818086224" Width="136.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Adenylyl&#xA;Cyclases" GraphId="b21">
+    <Graphics CenterX="780.0644264378773" CenterY="160.6291706387035" Width="62.3687639021289" Height="35.27168732125837" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" ShapeType="Rectangle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="G" GraphId="cd3" GroupRef="b1341">
+    <Graphics CenterX="1150.0" CenterY="446.6666666666667" Width="17.333333333333332" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="b" GraphId="e97" GroupRef="b1341">
+    <Graphics CenterX="1163.3333333333333" CenterY="450.0" Width="14.333333333333334" Height="17.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="11" Valign="Middle" />
+  </Label>
+  <Label TextLabel="G" GraphId="e28" GroupRef="bf7d8">
+    <Graphics CenterX="1149.0" CenterY="538.0" Width="17.333333333333332" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="g" GraphId="e72" GroupRef="bf7d8">
+    <Graphics CenterX="1162.3333333333333" CenterY="541.3333333333334" Width="12.333333333333334" Height="17.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="11" Valign="Middle" />
+  </Label>
+  <Label TextLabel="G bg" GraphId="d1c">
+    <Graphics CenterX="718.1745531019978" CenterY="251.92429022082018" Width="25.27024185068372" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="000080" />
+  </Label>
+  <Label TextLabel="IP3 Receptors" GraphId="b77">
+    <Graphics CenterX="813.5120925341746" CenterY="397.20294426919037" Width="92.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="Gap Junctions (Connexins)" GraphId="ae0" GroupRef="d395d">
+    <Graphics CenterX="410.0" CenterY="846.6666666666666" Width="174.33333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="b" GraphId="bd8">
+    <Graphics CenterX="420.0" CenterY="276.6666666666667" Width="13.333333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="arrestin/GRK" GraphId="fc4">
+    <Graphics CenterX="580.396950578338" CenterY="226.65720294426927" Width="71.59305993690934" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="b" GraphId="db9">
+    <Graphics CenterX="846.6666666666666" CenterY="220.0" Width="13.333333333333334" Height="16.0" ZOrder="28672" FillColor="ffffff" FontName="Symbol" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="arrestin/GRK" GraphId="f67">
+    <Graphics CenterX="899.6714802240178" CenterY="215.61032839848474" Width="85.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="G alpha i/o/z" GraphId="a33">
+    <Graphics CenterX="246.0" CenterY="244.66666666666666" Width="86.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" Color="0000ff" />
+  </Label>
+  <Label TextLabel="G bg" GraphId="e05">
+    <Graphics CenterX="328.1167192429022" CenterY="240.0" Width="33.56677181913776" Height="19.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" Color="000080" />
+  </Label>
+  <Label TextLabel="G alpha i/o/z" GraphId="d01" GroupRef="bf230">
+    <Graphics CenterX="1156.6666666666667" CenterY="676.6666666666666" Width="86.33333333333333" Height="16.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="bd1">
+    <Graphics CenterX="371.0" CenterY="679.0" Width="184.6666666666666" Height="86.66666666666667" ZOrder="16384" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c3e">
+    <Graphics CenterX="643.3333333333326" CenterY="719.6424815983179" Width="20.0" Height="93.62633333333333" ZOrder="16384" FillColor="bbffbb" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f24">
+    <Graphics CenterX="643.3333333333334" CenterY="816.1303890641425" Width="20.0" Height="93.62633333333333" ZOrder="16384" FillColor="bbffbb" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ba330">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="471.3333333333333" CenterY="921.3333333333334" Width="582.6666666666666" Height="210.66666666666674" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="dc87b">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="574.0" CenterY="430.0" Width="964.0" Height="529.3333333333333" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a59eb">
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="601.9999999999999" CenterY="446.66666666666663" Width="433.33333333333326" Height="224.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="c1f83" GraphId="c7661" GroupRef="ec50d" />
+  <Group GroupId="ae1eb" GraphId="bd460" GroupRef="ec50d" />
+  <Group GroupId="a6032" GraphId="f2f1a" GroupRef="d27c6" />
+  <Group GroupId="d71fe" GraphId="a7905" GroupRef="d27c6" />
+  <Group GroupId="ec50d" GraphId="f87b8" Style="Group" />
+  <Group GroupId="d27c6" GraphId="ca75f" Style="Group" />
+  <Group GroupId="ec09d" GraphId="cbc30" Style="Group" />
+  <Group GroupId="d2fb6" GraphId="df27a" />
+  <Group GroupId="c7479" GraphId="fe367" />
+  <Group GroupId="d395d" GraphId="ee68b" Style="Group" />
+  <Group GroupId="c3cbb" GraphId="afa7b" GroupRef="ce56a" />
+  <Group GroupId="f9f41" GraphId="d1e1a" />
+  <Group GroupId="d9bb1" GraphId="c6fa9" />
+  <Group GroupId="d2eb9" GraphId="dcef4" Style="Group" />
+  <Group GroupId="bf230" GraphId="b7fde" Style="Group" />
+  <Group GroupId="bf7d8" GraphId="de7c1" Style="Group" />
+  <Group GroupId="b1341" GraphId="e70ca" Style="Group" />
+  <Group GroupId="e309e" GraphId="d3a80" Style="Group" />
+  <Group GroupId="f86b6" GraphId="bdb35" Style="Group" />
+  <Group GroupId="a68c8" GraphId="a719f" Style="Group" />
+  <Group GroupId="a9610" GraphId="c3061" Style="Group" />
+  <Group GroupId="c41ba" GraphId="c045d" Style="Group" />
+  <Group GroupId="cdb61" GraphId="c8457" Style="Group" />
+  <Group GroupId="f2b52" GraphId="bae77" Style="Group" />
+  <Group GroupId="e1f1c" GraphId="e6f01" Style="Group" />
+  <Group GroupId="b7012" GraphId="aa4e1" Style="Group" />
+  <Group GroupId="bdeb4" GraphId="d9148" />
+  <Group GroupId="f2fc9" GraphId="cd49c" />
+  <Group GroupId="f11a0" GraphId="d80f4" />
+  <Group GroupId="bf063" GraphId="f6c75" GroupRef="fd911" />
+  <Group GroupId="fd911" GraphId="a3555" Style="Group" />
+  <Group GroupId="ce56a" GraphId="d6513" />
+  <Group GroupId="c25cf" GraphId="eefe4" />
+  <Group GroupId="a76fe" GraphId="c5799" />
+  <Group GroupId="f2058" GraphId="d6620" />
+  <Group GroupId="f6aeb" GraphId="e6a60" Style="Group" />
+  <Group GroupId="e75ca" GraphId="cc8e2" Style="Group" />
+  <Group GroupId="c6e89" GraphId="dfa72" Style="Group" />
+  <Group GroupId="b4122" GraphId="f9374" Style="Group" />
+  <Group GroupId="d1f84" GraphId="f2423" Style="Group" />
+  <Group GroupId="cb384" GraphId="dc8b5" Style="Group" />
+  <InfoBox CenterX="1.6666666666666667" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fbf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12618512</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcium and the heart: a question of life and death.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Clin Invest</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marks AR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium/calcium-mediated signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001140</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiac muscle cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000746</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardiovascular system disease</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:1287</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

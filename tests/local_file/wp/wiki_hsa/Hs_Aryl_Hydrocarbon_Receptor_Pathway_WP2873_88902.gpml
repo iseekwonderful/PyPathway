@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Aryl Hydrocarbon Receptor Pathway" Author="Rianne Fijten" Organism="Homo sapiens"><Comment Source="WikiPathways-description">The aryl hydrocarbon receptor (AhR) is a transcription factor (part of the group of nuclear receptors) that responds to the presence of aromatic hydrocarbons. It regulates genes involved xenobiotic metabolism (including for example cytochrome P540 enzymes).</Comment>
+  <BiopaxRef>c03</BiopaxRef>
+  <BiopaxRef>d11</BiopaxRef>
+  <BiopaxRef>d9b</BiopaxRef>
+  <BiopaxRef>c06</BiopaxRef>
+  <Graphics BoardWidth="973.3962264150944" BoardHeight="1103.0"/>
+  <DataNode TextLabel="HSP90AA1" GraphId="e0aed" Type="GeneProduct" GroupRef="ef627">
+    <Graphics CenterX="420.4040428018218" CenterY="195.86448797232794" Width="80.00000000000001" Height="19.999999999999986" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000080824"/>
+  </DataNode>
+  <DataNode TextLabel="EP300" GraphId="bf828" Type="GeneProduct" GroupRef="d0629">
+    <Graphics CenterX="321.34418703335103" CenterY="801.0202060306964" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100393"/>
+  </DataNode>
+  <DataNode TextLabel="EGFR pathway" GraphId="ae7a3" Type="Pathway">
+    <Graphics CenterX="866.9246139872841" CenterY="354.3060853769301" Width="99.94550408719343" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e"/>
+    <Xref Database="WikiPathways" ID="WP1910"/>
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="b5e72" Type="Metabolite">
+    <Comment>Omeprazole, TCDD, PCB</Comment>
+    <Graphics CenterX="82.10662101178933" CenterY="79.00330805572919" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:72768"/>
+  </DataNode>
+  <DataNode TextLabel="SRC&#10;&#10;" GraphId="a9692" Type="GeneProduct" GroupRef="b131b">
+    <Graphics CenterX="219.79854517101072" CenterY="259.8854227158367" Width="80.00000000000001" Height="19.999999999999993" ZOrder="32776" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000197122"/>
+  </DataNode>
+  <DataNode TextLabel="AIP" GraphId="eb5fc" Type="GeneProduct" GroupRef="b131b">
+    <Graphics CenterX="219.79854517101072" CenterY="199.88542271583665" Width="80.00000000000001" Height="20.000000000000032" ZOrder="32780" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000110711"/>
+  </DataNode>
+  <DataNode TextLabel="AHR" GraphId="e3da1" Type="GeneProduct" GroupRef="b131b">
+    <Graphics CenterX="219.79854517101072" CenterY="239.8854227158367" Width="80.00000000000001" Height="20.000000000000032" ZOrder="32790" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106546"/>
+  </DataNode>
+  <DataNode TextLabel="EGFR" GraphId="a676f" Type="GeneProduct">
+    <Graphics CenterX="811.0566037735849" CenterY="118.16981132075469" Width="80.0" Height="20.0" ZOrder="32808" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000146648"/>
+  </DataNode>
+  <DataNode TextLabel="HSP90AA1&#10;" GraphId="cc6cc" Type="GeneProduct" GroupRef="b131b">
+    <Graphics CenterX="219.79854517101074" CenterY="179.88542271583663" Width="80.0" Height="20.0" ZOrder="32810" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000080824"/>
+  </DataNode>
+  <DataNode TextLabel="TNF&#10;&#10;" GraphId="a3178" Type="GeneProduct">
+    <Graphics CenterX="868.4633272004294" CenterY="530.533445086906" Width="80.0" Height="20.0" ZOrder="32812" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000232810"/>
+  </DataNode>
+  <DataNode TextLabel="ARNT" GraphId="d6cb1" Type="GeneProduct" GroupRef="aa9db">
+    <Graphics CenterX="219.3334990454655" CenterY="696.7359392608215" Width="80.0" Height="20.0" ZOrder="32822" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="405"/>
+  </DataNode>
+  <DataNode TextLabel="CDC37" GraphId="cf024" Type="GeneProduct">
+    <Graphics CenterX="550.3888345710859" CenterY="159.3285866892875" Width="80.0" Height="20.0" ZOrder="32824" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000105401"/>
+  </DataNode>
+  <DataNode TextLabel="AHR" GraphId="b5896" Type="GeneProduct" GroupRef="aa9db">
+    <Graphics CenterX="219.3334990454655" CenterY="676.7359392608214" Width="80.0" Height="20.0" ZOrder="32828" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106546"/>
+  </DataNode>
+  <DataNode TextLabel="ARNT" GraphId="f0e04" Type="GeneProduct">
+    <Graphics CenterX="109.45124632145382" CenterY="436.9415373142427" Width="80.0" Height="20.0" ZOrder="32830" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="405"/>
+  </DataNode>
+  <DataNode TextLabel="AIP" GraphId="d8ee4" Type="GeneProduct" GroupRef="ef627">
+    <Graphics CenterX="420.4040428018218" CenterY="253.86448797232802" Width="80.00000000000001" Height="20.000000000000032" ZOrder="32834" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000110711"/>
+  </DataNode>
+  <DataNode TextLabel="SRC&#10;" GraphId="d3a1a" Type="GeneProduct" GroupRef="ef627">
+    <Graphics CenterX="420.4040428018218" CenterY="282.86448797232794" Width="80.00000000000001" Height="19.999999999999993" ZOrder="32836" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000197122"/>
+  </DataNode>
+  <DataNode TextLabel="SRC" GraphId="b8f15" Type="GeneProduct" GroupRef="e217a">
+    <Graphics CenterX="559.0566037735853" CenterY="283.188329839273" Width="80.00000000000001" Height="19.999999999999993" ZOrder="32838" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000197122"/>
+  </DataNode>
+  <DataNode TextLabel="CDC37" GraphId="a8d4a" Type="GeneProduct" GroupRef="e217a">
+    <Graphics CenterX="559.0566037735847" CenterY="263.18832983927325" Width="80.0" Height="20.0" ZOrder="32840" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000105401"/>
+  </DataNode>
+  <DataNode TextLabel="AHR" GraphId="ff908" Type="GeneProduct" GroupRef="f9aed">
+    <Graphics CenterX="218.52303496692917" CenterY="416.4012672394022" Width="80.0" Height="20.0" ZOrder="32842" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106546"/>
+  </DataNode>
+  <DataNode TextLabel="ARNT" GraphId="d8ae5" Type="GeneProduct" GroupRef="be064">
+    <Graphics CenterX="203.67310180612077" CenterY="800.7894942425629" Width="80.0" Height="20.0" ZOrder="32846" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="405"/>
+  </DataNode>
+  <DataNode TextLabel="AHR" GraphId="a95e0" Type="GeneProduct" GroupRef="be064">
+    <Graphics CenterX="203.67310180612077" CenterY="820.789494242563" Width="80.0" Height="20.0" ZOrder="32848" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106546"/>
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="a0be9" Type="Metabolite" GroupRef="f9aed">
+    <Comment>Omeprazole, TCDD, PCB</Comment>
+    <Graphics CenterX="218.52303496692917" CenterY="396.4012672394023" Width="80.0" Height="20.0" ZOrder="32854" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:72768"/>
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="c644d" Type="Metabolite" GroupRef="aa9db">
+    <Comment>Omeprazole, TCDD, PCB</Comment>
+    <Graphics CenterX="219.3334990454655" CenterY="656.7359392608214" Width="80.0" Height="20.0" ZOrder="32856" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:72768"/>
+  </DataNode>
+  <DataNode TextLabel="Ligand" GraphId="a1377" Type="Metabolite" GroupRef="be064">
+    <Comment>Omeprazole, TCDD, PCB</Comment>
+    <Graphics CenterX="203.67310180612077" CenterY="780.7894942425629" Width="80.0" Height="20.0" ZOrder="32858" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="ChEBI" ID="CHEBI:72768"/>
+  </DataNode>
+  <DataNode TextLabel="PTGES3" GraphId="c072f" Type="GeneProduct" GroupRef="b131b">
+    <Graphics CenterX="219.79854517101074" CenterY="219.88542271583668" Width="80.00000000000001" Height="20.000000000000032" ZOrder="32942" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000110958"/>
+  </DataNode>
+  <DataNode TextLabel="PTGES3" GraphId="fdfd5" Type="GeneProduct" GroupRef="ef627">
+    <Graphics CenterX="420.4040428018218" CenterY="224.9552665942261" Width="80.00000000000001" Height="20.000000000000032" ZOrder="32943" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000110958"/>
+  </DataNode>
+  <DataNode TextLabel="NCOA1" GraphId="d4b56" Type="GeneProduct" GroupRef="d0629">
+    <Graphics CenterX="321.34418703335103" CenterY="781.0202060306964" Width="80.0" Height="20.0" ZOrder="32944" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000084676"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A3" GraphId="adfa8" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="884.8881118881122" Width="80.0" Height="20.0" ZOrder="33662" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000243135"/>
+  </DataNode>
+  <DataNode TextLabel="SLC7A5" GraphId="aa824" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="703.8865376751473" Width="80.0" Height="20.0" ZOrder="33663" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000103257"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A4" GraphId="cd6c4" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="904.8881118881122" Width="80.0" Height="20.0" ZOrder="33665" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000244474"/>
+  </DataNode>
+  <DataNode TextLabel="MYOF" GraphId="f64cc" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="743.8865376751473" Width="80.0" Height="20.0" ZOrder="33666" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000138119"/>
+  </DataNode>
+  <DataNode TextLabel="IFNG" GraphId="d53fc" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>d2d</BiopaxRef>
+    <Graphics CenterX="545.8847284580165" CenterY="797.135779354483" Width="80.0" Height="20.0" ZOrder="33667" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000111537"/>
+  </DataNode>
+  <DataNode TextLabel="SERPINB2" GraphId="ca011" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="545.8847284580165" CenterY="817.135779354483" Width="80.0" Height="20.0" ZOrder="33668" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000197632"/>
+  </DataNode>
+  <DataNode TextLabel="TGFB1" GraphId="affdb" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="545.8847284580165" CenterY="777.135779354483" Width="80.0" Height="20.0" ZOrder="33669" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000105329"/>
+  </DataNode>
+  <DataNode TextLabel="CAP2" GraphId="a428f" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>e72</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="723.8865376751473" Width="80.0" Height="20.0" ZOrder="33670" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000112186"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A9" GraphId="c111c" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="964.8881118881122" Width="80.0" Height="20.0" ZOrder="33671" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000241119"/>
+  </DataNode>
+  <DataNode TextLabel="POLK" GraphId="c3e78" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="763.8865376751473" Width="80.0" Height="20.0" ZOrder="33672" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000122008"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A7" GraphId="d3eca" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="944.8881118881122" Width="80.0" Height="20.0" ZOrder="33673" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000244122"/>
+  </DataNode>
+  <DataNode TextLabel="IL12A" GraphId="d1632" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>d2d</BiopaxRef>
+    <Graphics CenterX="545.884728458017" CenterY="717.1357793544843" Width="80.0" Height="20.0" ZOrder="33675" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000168811"/>
+  </DataNode>
+  <DataNode TextLabel="CES3" GraphId="c6247" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>e72</BiopaxRef>
+    <Graphics CenterX="750.7114536564866" CenterY="803.1593701142165" Width="80.0" Height="20.0" ZOrder="33676" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000172828"/>
+  </DataNode>
+  <DataNode TextLabel="IL17B" GraphId="f1fde" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="545.884728458017" CenterY="757.1357793544839" Width="80.0" Height="20.0" ZOrder="33677" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000127743"/>
+  </DataNode>
+  <DataNode TextLabel="IL1B" GraphId="a460d" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="545.884728458017" CenterY="697.1357793544842" Width="80.0" Height="20.0" ZOrder="33678" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125538"/>
+  </DataNode>
+  <DataNode TextLabel="JUNB" GraphId="db0f0" Type="GeneProduct" GroupRef="bdc7a">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="547.5353419178361" CenterY="878.2610377253554" Width="80.0" Height="20.0" ZOrder="33679" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000171223"/>
+  </DataNode>
+  <DataNode TextLabel="IL12B" GraphId="bcbe0" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>d2d</BiopaxRef>
+    <Graphics CenterX="545.884728458017" CenterY="737.1357793544838" Width="80.0" Height="20.0" ZOrder="33680" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000113302"/>
+  </DataNode>
+  <DataNode TextLabel="MGST1" GraphId="fe59b" Type="GeneProduct" GroupRef="bcf7a">
+    <BiopaxRef>e65</BiopaxRef>
+    <Graphics CenterX="545.884728458017" CenterY="677.1357793544842" Width="80.0" Height="20.0" ZOrder="33682" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000008394"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A6" GraphId="a7d38" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="924.8881118881122" Width="80.0" Height="20.0" ZOrder="33684" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000167165"/>
+  </DataNode>
+  <DataNode TextLabel="AHRR" GraphId="a3c3b" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="683.8865376751473" Width="80.0" Height="20.0" ZOrder="33685" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000063438"/>
+  </DataNode>
+  <DataNode TextLabel="CDKN1B" GraphId="d91e1" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="917.3685144541475" Width="80.0" Height="20.0" ZOrder="33686" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000111276"/>
+  </DataNode>
+  <DataNode TextLabel="CYP1B1" GraphId="a25e3" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>feb</BiopaxRef>
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <BiopaxRef>e72</BiopaxRef>
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="723.1593701142172" Width="80.0" Height="20.0" ZOrder="33687" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000138061"/>
+  </DataNode>
+  <DataNode TextLabel="UGT1A1" GraphId="e524b" Type="GeneProduct" GroupRef="b7763">
+    <BiopaxRef>a7b</BiopaxRef>
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <Graphics CenterX="749.1006333687428" CenterY="864.8881118881122" Width="80.0" Height="20.0" ZOrder="33688" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000241635"/>
+  </DataNode>
+  <DataNode TextLabel="ALDH3A1" GraphId="bbd2e" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="783.1593701142169" Width="80.0" Height="20.0" ZOrder="33689" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000108602"/>
+  </DataNode>
+  <DataNode TextLabel="GSTA2" GraphId="bb1c4" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="743.1593701142172" Width="80.0" Height="20.0" ZOrder="33690" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000244067"/>
+  </DataNode>
+  <DataNode TextLabel="JUND" GraphId="b19c6" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>e35</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="957.3685144541466" Width="80.0" Height="20.0" ZOrder="33691" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000130522"/>
+  </DataNode>
+  <DataNode TextLabel="NQO1" GraphId="e47a9" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="763.1593701142169" Width="80.0" Height="20.0" ZOrder="33692" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000181019"/>
+  </DataNode>
+  <DataNode TextLabel="IGFBP1&#10;&#10;" GraphId="ec5a6" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>b16</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="877.3685144541482" Width="80.0" Height="20.0" ZOrder="33693" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000146678"/>
+  </DataNode>
+  <DataNode TextLabel="NFE2L2" GraphId="c7cc4" Type="GeneProduct" GroupRef="bdc7a">
+    <BiopaxRef>ef9</BiopaxRef>
+    <Graphics CenterX="547.5353419178361" CenterY="898.2610377253554" Width="80.0" Height="20.0" ZOrder="33694" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000116044"/>
+  </DataNode>
+  <DataNode TextLabel="BAX&#10;" GraphId="ca96b" Type="GeneProduct" GroupRef="b788c">
+    <BiopaxRef>feb</BiopaxRef>
+    <Graphics CenterX="647.7247180998186" CenterY="783.8865376751473" Width="80.0" Height="20.0" ZOrder="33695" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000087088"/>
+  </DataNode>
+  <DataNode TextLabel="JUN" GraphId="ed0e5" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>dc0</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="897.368514454148" Width="80.0" Height="20.0" ZOrder="33696" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000177606"/>
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="f0419" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>feb</BiopaxRef>
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <BiopaxRef>e72</BiopaxRef>
+    <BiopaxRef>fc2</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="703.1593701142173" Width="80.0" Height="20.0" ZOrder="33697" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000140505"/>
+  </DataNode>
+  <DataNode TextLabel="IL2&#10;&#10;" GraphId="f12e0" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>d47</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="857.3685144541482" Width="80.0" Height="20.0" ZOrder="33698" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000109471"/>
+  </DataNode>
+  <DataNode TextLabel="HES1" GraphId="ebe99" Type="GeneProduct" GroupRef="fdf75">
+    <BiopaxRef>c85</BiopaxRef>
+    <Graphics CenterX="649.2836248044048" CenterY="937.3685144541473" Width="80.0" Height="20.0" ZOrder="33699" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000114315"/>
+  </DataNode>
+  <DataNode TextLabel="CYP1A1" GraphId="e0aae" Type="GeneProduct" GroupRef="f6cef">
+    <BiopaxRef>feb</BiopaxRef>
+    <BiopaxRef>fc2</BiopaxRef>
+    <BiopaxRef>ef9</BiopaxRef>
+    <BiopaxRef>a2e</BiopaxRef>
+    <BiopaxRef>e72</BiopaxRef>
+    <Graphics CenterX="750.7114536564864" CenterY="683.1593701142173" Width="79.99999999999999" Height="20.000000000000036" ZOrder="33700" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000140465"/>
+  </DataNode>
+  <Interaction GraphId="f6856">
+    <Graphics ZOrder="-2" LineThickness="1.0">
+      <Point X="177.6266397976926" Y="830.6018518518516"/>
+      <Point X="445.72158365261816" Y="830.6018518518516"/>
+      <Anchor Position="1.0" Shape="None" GraphId="f0ac7"/>
+      <Anchor Position="0.0" Shape="None" GraphId="e8ff9"/>
+      <Anchor Position="0.7894979988995053" Shape="None" GraphId="f5502"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idca59debd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="389.28706148623155" Y="830.6018518518516" GraphRef="f5502" RelX="0.0" RelY="0.0"/>
+      <Point X="389.54999999999995" Y="782.2499999999999"/>
+      <Anchor Position="1.0" Shape="None" GraphId="ec257"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf879a38f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="389.54999999999995" Y="782.2499999999999" GraphRef="ec257" RelX="0.0" RelY="0.0"/>
+      <Point X="414.94662500000004" Y="780.2392499999996" GraphRef="bdaf9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida62b6619">
+    <Graphics ZOrder="12290" LineStyle="Broken" LineThickness="1.0">
+      <Point X="550.3888345710859" Y="169.3285866892875" GraphRef="cf024" RelX="0.0" RelY="1.0"/>
+      <Point X="559.056603773585" Y="241.18832983927325" GraphRef="bb8b3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcf99fdfc">
+    <Graphics ZOrder="12292" LineThickness="1.0">
+      <Point X="82.10662101178933" Y="89.00330805572919" GraphRef="b5e72" RelX="0.0" RelY="1.0"/>
+      <Point X="179.79854517101074" Y="239.88542271583668" GraphRef="e3da1" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id91a42556">
+    <Graphics ZOrder="12294" LineThickness="1.0">
+      <Point X="219.79854517101074" Y="281.8854227158367" GraphRef="c056e" RelX="0.0" RelY="1.0"/>
+      <Point X="218.52303496692917" Y="374.4012672394023" GraphRef="ea580" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.3568923694636921" Shape="None" GraphId="cac90"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4ddfb744">
+    <Graphics ZOrder="12296" LineThickness="1.0">
+      <Point X="109.45124632145382" Y="446.9415373142427" GraphRef="f0e04" RelX="0.0" RelY="1.0"/>
+      <Point X="218.8472205983437" Y="509.7351360479699" GraphRef="db26a" RelX="0.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8fd73907">
+    <Graphics ZOrder="12298" LineStyle="Broken" LineThickness="1.0">
+      <Point X="599.0566037735853" Y="283.188329839273" GraphRef="b8f15" RelX="1.0" RelY="0.0"/>
+      <Point X="791.0566037735849" Y="128.1698113207547" GraphRef="a676f" RelX="-0.5" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id14d4e40c">
+    <Graphics ZOrder="12300" LineThickness="1.0">
+      <Point X="866.9246139872841" Y="364.3060853769301" GraphRef="ae7a3" RelX="0.0" RelY="1.0"/>
+      <Point X="868.4633272004294" Y="520.533445086906" GraphRef="a3178" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id662a5a46">
+    <Graphics ZOrder="12302" LineThickness="1.0">
+      <Point X="868.4633272004294" Y="540.533445086906" GraphRef="a3178" RelX="0.0" RelY="1.0"/>
+      <Point X="790.7114536564864" Y="683.1593701142173" GraphRef="e0aae" RelX="1.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id6936389">
+    <Graphics ZOrder="12306" LineThickness="1.0">
+      <Point X="868.4633272004294" Y="540.533445086906" GraphRef="a3178" RelX="0.0" RelY="1.0"/>
+      <Point X="790.7114536564864" Y="723.1593701142172" GraphRef="a25e3" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8224f5e4">
+    <Graphics ZOrder="12308" LineThickness="1.0">
+      <Point X="445.72158365261816" Y="830.6018518518516" GraphRef="f0ac7" RelX="0.0" RelY="0.0"/>
+      <Point X="445.72158365261816" Y="846.7432950191571" GraphRef="c9178" RelX="0.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idedb62ccb">
+    <Graphics ZOrder="12310" LineThickness="1.0">
+      <Point X="219.3334990454655" Y="718.7359392608214" GraphRef="dda0d" RelX="0.0" RelY="1.0"/>
+      <Point X="203.67310180612077" Y="758.789494242563" GraphRef="f3515" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id312942d2">
+    <Graphics ZOrder="12312" LineThickness="1.0">
+      <Point X="219.34332531200096" Y="314.90362168078656" GraphRef="cac90" RelX="0.0" RelY="0.0"/>
+      <Point X="372.4040428018218" Y="239.36448797232794" GraphRef="c2ae7" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8fbd0d1">
+    <Graphics ZOrder="12314" LineThickness="1.0">
+      <Point X="177.6266397976926" Y="830.6018518518516" GraphRef="e8ff9" RelX="0.0" RelY="0.0"/>
+      <Point X="177.09815078236144" Y="847.0839260312945" GraphRef="eb5a7" RelX="0.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida5e90e14">
+    <Graphics ZOrder="12316" LineThickness="1.0">
+      <Point X="460.4040428018218" Y="282.86448797232794" GraphRef="d3a1a" RelX="1.0" RelY="0.0"/>
+      <Point X="519.0566037735853" Y="283.188329839273" GraphRef="b8f15" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d2236">
+    <Graphics ZOrder="32844" LineThickness="1.0">
+      <Point X="218.52303496692917" Y="426.4012672394022" GraphRef="ff908" RelX="0.0" RelY="1.0"/>
+      <Point X="219.3334990454655" Y="634.7359392608214" GraphRef="dda0d" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.15009330416820307" Shape="None" GraphId="d7d9b"/>
+      <Anchor Position="0.4" Shape="None" GraphId="db26a"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d3d8b">
+    <Graphics ZOrder="32860" LineThickness="1.0">
+      <Point X="177.09815078236144" Y="847.0839260312945"/>
+      <Point X="445.72158365261816" Y="846.7432950191571"/>
+      <Anchor Position="1.0" Shape="None" GraphId="c9178"/>
+      <Anchor Position="0.0" Shape="None" GraphId="eb5a7"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="c472b">
+    <Graphics ZOrder="32863" LineThickness="1.0">
+      <Point X="811.0566037735849" Y="128.1698113207547" GraphRef="a676f" RelX="0.0" RelY="1.0"/>
+      <Point X="866.9246139872841" Y="344.3060853769301" GraphRef="ae7a3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="fde92">
+    <Graphics ConnectorType="Segmented" ZOrder="33683" LineThickness="1.0">
+      <Point X="607.7247180998186" Y="683.8865376751473" GraphRef="a3c3b" RelX="-1.0" RelY="0.0"/>
+      <Point X="563.921568627451" Y="611.7647058823529"/>
+      <Point X="312.15686274509807" Y="611.7647058823529"/>
+      <Point X="255.67310180612077" Y="808.7463531552664" GraphRef="f3515" RelX="1.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Co-activators" GraphId="d0c8e" GroupRef="d0629">
+    <Graphics CenterX="321.344187033351" CenterY="759.81781618753" Width="79.16355489171035" Height="22.40477968633298" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Other" GraphId="a0315">
+    <Graphics CenterX="647.1123749999979" CenterY="661.0038750000006" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Drug and steroid &#10;metabolism" GraphId="c3a7a">
+    <Graphics CenterX="752.3012500000007" CenterY="655.9487499999996" Width="107.25250000000028" Height="26.53750000000008" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Inflammation" GraphId="fb95e">
+    <Graphics CenterX="544.6350000000007" CenterY="658.1924999999999" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Transcription&#10;factors" GraphId="dadc4">
+    <Graphics CenterX="546.8399999999995" CenterY="856.6424999999995" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Cell proliferation &#10;and differentiation" GraphId="eca80">
+    <Graphics CenterX="650.3199999999987" CenterY="830.1824999999993" Width="101.74000000000068" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Phase 2 &#10;metabolism" GraphId="af2bd">
+    <Graphics CenterX="749.5450000000003" CenterY="835.1050000000005" Width="90.71499999999972" Height="23.22999999999992" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Transcription" GraphId="bdaf9">
+    <Graphics CenterX="454.94662500000004" CenterY="780.2392499999996" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="XRE" GraphId="f4f82" GroupRef="be064">
+    <Graphics CenterX="201.94868394314383" CenterY="838.7876447856479" Width="49.465769687376316" Height="15.831134564643746" ZOrder="32861" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="Genes" GraphId="a8f30">
+    <Graphics CenterX="424.4858327567971" CenterY="838.9258046794436" Width="49.465769687376316" Height="15.829046299960597" ZOrder="32862" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Label TextLabel="TATA box" GraphId="f3ec2">
+    <Graphics CenterX="318.8791089725458" CenterY="837.8347051125251" Width="49.465769687376316" Height="15.831134564643746" ZOrder="32864" FillColor="ffffff" FontSize="10" Valign="Middle" ShapeType="Rectangle"/>
+  </Label>
+  <Shape GraphId="a4cbf">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="494.51701338493785" CenterY="597.6917432672151" Width="897.7584260603129" Height="950.6165134655698" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b6f14">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="489.8267065514241" CenterY="796.8196334067234" Width="860.0155743971519" Height="525.9297206865533" ZOrder="16386" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="be064" GraphId="f3515" Style="Complex"/>
+  <Group GroupId="e217a" GraphId="bb8b3" Style="Complex"/>
+  <Group GroupId="f9aed" GraphId="ea580" Style="Complex"/>
+  <Group GroupId="aa9db" GraphId="dda0d" Style="Complex"/>
+  <Group GroupId="b131b" GraphId="c056e" Style="Complex"/>
+  <Group GroupId="ef627" GraphId="c2ae7" Style="Group"/>
+  <Group GroupId="d0629" GraphId="fdebf" Style="Group"/>
+  <Group GroupId="bcf7a" GraphId="c8b1a" Style="Group"/>
+  <Group GroupId="bdc7a" GraphId="df96f" Style="Group"/>
+  <Group GroupId="b788c" GraphId="a78f1" Style="Group"/>
+  <Group GroupId="fdf75" GraphId="d2d14" Style="Group"/>
+  <Group GroupId="f6cef" GraphId="bde0d" Style="Group"/>
+  <Group GroupId="b7763" GraphId="ff1fe" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dfc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19129222</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification of pregnane-X receptor target genes and coactivator and corepressor binding to promoter elements in human hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucleic Acids Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hariparsad N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chu X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yabut J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labhart P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartley DP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dai X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evers R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c85">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21226706</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The aryl hydrocarbon receptor (AHR) transcription factor regulates megakaryocytic polyploidization.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Br J Haematol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindsey S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papoutsakis ET</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15581595</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulatory network of lipid-sensing nuclear receptors: roles for CAR, PXR, LXR, and FXR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Biochem Biophys</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handschin C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer UA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="feb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12573486</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional role of AhR in the expression of toxic effects by TCDD.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mimura J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujii-Kuriyama Y</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="db8">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20399894</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bile acids and their nuclear receptor FXR: Relevance for hepatobiliary and gastrointestinal disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gadaleta RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Mil SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldenburg B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siersema PD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klomp LW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Erpecum KJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14999402</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peroxisome proliferator-activated receptor alpha target genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Life Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandard S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MÃƒÆ’Ã‚Â¼ller M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kersten S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c06">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24261707</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathways for ligand activated nuclear receptors to unravel the genomic responses induced by hepatotoxicants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Drug Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fijten RR</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennen DG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Delft JH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a7b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21420387</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From differential induction of UDP-glucuronosyltransferases in rat liver to characterization of responsible ligand-activated transcription factors, and their multilevel crosstalk in humans.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bock KW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d2e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11903058</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuclear receptor corepressor-dependent repression of peroxisome-proliferator-activated receptor delta-mediated transactivation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krogsdam AM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nielsen CA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neve S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holst D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helledie T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomsen B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bendixen C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandrup S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kristiansen K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bdd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15610735</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural basis for constitutive activity in the human CAR/RXRalpha heterodimer.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu RX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambert MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wisely BB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warren EN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weinert EE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waitt GM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams JD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore LB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore JT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f65">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15501915</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chromatin immunoprecipitation (ChIP) scanning identifies primary glucocorticoid receptor target genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proc Natl Acad Sci U S A</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derynck MK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nonaka DF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khodabakhsh DB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haqq C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamamoto KR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d47">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11120824</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The murine IL-2 promoter contains distal regulatory elements responsive to the Ah receptor, a member of the evolutionarily conserved bHLH-PAS transcription factor family.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Immunol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeon MS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esser C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cb1">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15541765</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanisms of glucocorticoid receptor signaling during inflammation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mech Ageing Dev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smoak KA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cidlowski JA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b7a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17284330</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAR and PXR: the xenobiotic-sensing receptors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steroids</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timsit YE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negishi M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c91">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12120277</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PXR, CAR and drug metabolism.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Rev Drug Discov</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kliewer SA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fe0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12573484</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dc0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15897893</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCDD induces c-jun expression via a novel Ah (dioxin) receptor-mediated p38-MAPK-dependent pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oncogene</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faust D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DÃƒÆ’Ã‚Â¼rk H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolluri SK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pelzer A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dietrich C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oesch F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GÃƒÆ’Ã‚Â¶ttlicher M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bed">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15581595</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulatory network of lipid-sensing nuclear receptors: roles for CAR, PXR, LXR, and FXR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Biochem Biophys</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handschin C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer UA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c02">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17595319</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The xenobiotic-sensing nuclear receptors pregnane X receptor, constitutive androstane receptor, and orphan nuclear receptor hepatocyte nuclear factor 4alpha in the regulation of human steroid-/bile acid-sulfotransferase.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Endocrinol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Echchgadda I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Song CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De La Cruz IJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chatterjee B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fc2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20619336</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Involvement of aryl hydrocarbon receptor in basal and 2,3,7,8-tetrachlorodibenzo-p-dioxin-induced expression of target genes in primary human hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol In Vitro</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Vee M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jouan E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fardel O</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b16">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15496506</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,3,7,8-Tetrachlorodibenzo-p-dioxin induces insulin-like growth factor binding protein-1 gene expression and counteracts the negative effect of insulin.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marchand A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomkiewicz C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marchandeau JP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boitier E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barouki R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garlatti M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ce9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15004031</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The nuclear receptor CAR is a regulator of thyroid hormone metabolism during caloric restriction.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maglich JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watson J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McMillen PJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodwin B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore JT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cc6">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14978251</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehydroepiandrosterone sulfotransferase is a target for transcriptional induction by the vitamin D receptor.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Echchgadda I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Song CS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roy AK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chatterjee B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a57">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19471584</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dynamic and combinatorial control of gene expression by nuclear retinoic acid receptors (RARs).</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucl Recept Signal</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rochette-Egly C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germain P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d52">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11803135</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of hepatocyte RXR alpha in xenobiotic-sensing nuclear receptor-mediated pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Pharm Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konishi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campwala KH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wan YJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e72">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15598615</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subchronic exposure to TCDD, PeCDF, PCB126, and PCB153: effect on hepatic gene expression.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environ Health Perspect</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vezina CM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walker NJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olson JR</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fa4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20399894</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bile acids and their nuclear receptor FXR: Relevance for hepatobiliary and gastrointestinal disease.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gadaleta RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Mil SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldenburg B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siersema PD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klomp LW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van Erpecum KJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="eb7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12611900</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification of a novel human constitutive androstane receptor (CAR) agonist and its use in the identification of CAR target genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maglich JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parks DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore LB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodwin B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billin AN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoltz CA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kliewer SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambert MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore JT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d34">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17901129</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genome-wide identification of estrogen receptor alpha-binding sites in mouse liver.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Endocrinol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gao H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FÃƒÆ’Ã‚Â¤lt S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandelin A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustafsson JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dahlman-Wright K</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e65">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17944540</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AHR- and DNA-damage-mediated gene expression responses induced by benzo(a)pyrene in human cell lines.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Res Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hockley SL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arlt VM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brewer D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Te Poele R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workman P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giddings I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips DH</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b6a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15581595</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulatory network of lipid-sensing nuclear receptors: roles for CAR, PXR, LXR, and FXR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arch Biochem Biophys</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handschin C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer UA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e35">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17952121</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TCDD deregulates contact inhibition in rat liver oval cells via Ah receptor, JunD and cyclin A.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oncogene</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weiss C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faust D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schreck I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruff A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farwerck T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melenberg A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oesch-Bartlomowicz B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZatloukalovÃƒÆ’Ã‚Â¡ J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VondrÃƒÆ’Ã‚Â¡cek J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oesch F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dietrich C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a2e">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18288955</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xenobiotic-induced transcriptional regulation of xenobiotic metabolizing enzymes of the cytochrome P450 superfamily in human extrahepatic tissues.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curr Drug Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pavek P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dvorak Z</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="bc9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11991950</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression of CYP3A4, CYP2B6, and CYP2C9 is regulated by the vitamin D receptor pathway in primary human hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drocourt L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ourlin JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascussi JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurel P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vilarem MJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ddf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16197558</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gene expression profiling of potential peroxisome proliferator-activated receptor (PPAR) target genes in human hepatoblastoma cell lines inducibly expressing different PPAR isoforms.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nucl Recept</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tachibana K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kobayashi Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanaka T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tagami M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sugiyama A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katayama T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ueda C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yamasaki D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ishimoto K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sumitomo M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uchiyama Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kohro T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sakai J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamakubo T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kodama T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doi T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c03">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9099515</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aryl hydrocarbon receptor-mediated signal transduction.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crit Rev Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowlands JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustafsson JA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d11">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18848820</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Growth factors, cytokines and their receptors as downstream targets of arylhydrocarbon receptor (AhR) signaling pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haarmann-Stemmann T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bothe H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abel J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ed4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21908933</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21908933</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crosstalk of thyroid hormone receptor and liver X receptor in lipid metabolism and beyond [Review].</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endocr J</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hashimoto K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mori M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c6d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11991950</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expression of CYP3A4, CYP2B6, and CYP2C9 is regulated by the vitamin D receptor pathway in primary human hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drocourt L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ourlin JC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascussi JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurel P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vilarem MJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aca">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21124311</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrogen receptors: therapies targeted to receptor subtypes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nilsson S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustafsson JÅ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d2d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16289099</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Over-production of IFN-gamma and IL-12 in AhR-null mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEBS Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodríguez-Sosa M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizondo G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">López-Durán RM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rivera I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzalez FJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vega L</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c2d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19106115</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanism of vitamin D receptor inhibition of cholesterol 7alpha-hydroxylase gene transcription in human hepatocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Metab Dispos</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiang JY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c2f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15489539</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPAR- and LXR-dependent pathways controlling lipid metabolism and the development of atherosclerosis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Lipid Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li AC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glass CK</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f4a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12573484</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The expression of CYP2B6, CYP2C9 and CYP3A4 genes: a tangle of networks of nuclear and steroid receptors.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pascussi JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerbal-Chaloin S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drocourt L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurel P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vilarem MJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="be4">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11343253</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The phenobarbital response enhancer module in the human bilirubin UDP-glucuronosyltransferase UGT1A1 gene and regulation by the nuclear receptor CAR.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sugatani J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kojima H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ueda A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kakizaki S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yoshinari K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gong QH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owens IS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negishi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sueyoshi T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b04">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14999402</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peroxisome proliferator-activated receptor alpha target genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Mol Life Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandard S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Müller M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kersten S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="df0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15340055</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d9b">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16545780</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ah receptor: dioxin-mediated toxic responses as hints to deregulated physiologic functions.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bock KW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köhle C</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c44">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11803135</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The role of hepatocyte RXR alpha in xenobiotic-sensing nuclear receptor-mediated pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eur J Pharm Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konishi T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campwala KH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French SW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wan YJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ef9">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17266942</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coordinate regulation of Phase I and II xenobiotic metabolisms by the Ah receptor and Nrf2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Köhle C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bock KW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a9d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12611900</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Identification of a novel human constitutive androstane receptor (CAR) agonist and its use in the identification of CAR target genes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Biol Chem</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maglich JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parks DJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore LB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins JL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodwin B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billin AN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoltz CA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kliewer SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambert MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willson TM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moore JT</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>regulatory pathway</bp:TERM><bp:ID>PW:0000004</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="mir219 in Oligodendrocyte Differentiation and Myelination" Version="20140520" Organism="Rattus norvegicus">
+  <Comment Source="WikiPathways-description">Young and environmentally enriched exosomes deliver functional miR-219 that impacts oligodendrocyte differentiation and myelination. Schematic illustration of the involvement of miR-219 in oligodendrocyte differentiation. 
+Upon exposure to nutritive exosomes, neural stem cells preferentially enter the oligodendrocyte lineage due to the inhibition of the proneurogenic factor NeuroD1. miR-219 also suppresses expression of a number of other factors that inhibit OPC differentiation, such as PDGFRα, a receptor for a mitogenic factor that promotes proliferation and prohibits differentiation. Finally, miR-219 decreases levels of ELOVL7, a regulator of lipid metabolism whose over-activity could lead to demyelination. </Comment>
+  <BiopaxRef>e40</BiopaxRef>
+  <Graphics BoardWidth="1039.0" BoardHeight="513.0"/>
+  <DataNode TextLabel="Neurod1" GraphId="e9289" Type="GeneProduct">
+    <Graphics CenterX="247.0" CenterY="256.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000005609"/>
+  </DataNode>
+  <DataNode TextLabel="Pdgfra" GraphId="e453a" Type="GeneProduct" GroupRef="ecc28">
+    <Graphics CenterX="521.0" CenterY="177.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000002244"/>
+  </DataNode>
+  <DataNode TextLabel="Foxj3" GraphId="d98ab" Type="GeneProduct" GroupRef="ecc28">
+    <Graphics CenterX="521.0" CenterY="257.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000061851"/>
+  </DataNode>
+  <DataNode TextLabel="Elovl7" GraphId="c00c2" Type="GeneProduct">
+    <Graphics CenterX="776.0" CenterY="215.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000010450"/>
+  </DataNode>
+  <DataNode TextLabel="Zfp238" GraphId="ffd0f" Type="GeneProduct" GroupRef="ecc28">
+    <Graphics CenterX="521.0" CenterY="237.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000004423"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-1" GraphId="a4777" Type="Rna" GroupRef="f21bf">
+    <Graphics CenterX="102.00000000000028" CenterY="190.00000000000009" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314058"/>
+  </DataNode>
+  <DataNode TextLabel="Sox6" GraphId="b961f" Type="GeneProduct" GroupRef="ecc28">
+    <Graphics CenterX="521.0" CenterY="197.0" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000020514"/>
+  </DataNode>
+  <DataNode TextLabel="Hes5" GraphId="eb5f7" Type="GeneProduct" GroupRef="ecc28">
+    <Graphics CenterX="521.0" CenterY="217.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSRNOG00000013850"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-1" GraphId="cae8d" Type="Rna" GroupRef="d978b">
+    <Graphics CenterX="520.666666666667" CenterY="104.6666666666667" Width="80.0" Height="20.0" ZOrder="32780" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314058"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-1" GraphId="d2fcc" Type="Rna" GroupRef="af357">
+    <Graphics CenterX="775.9999999999999" CenterY="133.33333333333337" Width="80.0" Height="20.0" ZOrder="32783" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314058"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-2" GraphId="a72c8" Type="Rna" GroupRef="d978b">
+    <Graphics CenterX="520.666666666667" CenterY="84.66666666666671" Width="80.0" Height="20.0" ZOrder="32784" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314293"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-2" GraphId="c988a" Type="Rna" GroupRef="af357">
+    <Graphics CenterX="776.0" CenterY="113.33333333333337" Width="80.0" Height="20.0" ZOrder="32785" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314293"/>
+  </DataNode>
+  <DataNode TextLabel="Mir219-2" GraphId="b00b3" Type="Rna" GroupRef="f21bf">
+    <Graphics CenterX="102.00000000000026" CenterY="170.00000000000009" Width="80.0" Height="20.0" ZOrder="32786" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="Entrez Gene" ID="100314293"/>
+  </DataNode>
+  <Interaction GraphId="idf0dd67db">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="220.79997872717695" Y="360.67959576178293" GraphRef="c4823" RelX="1.0" RelY="0.0"/>
+      <Point X="364.5" Y="360.5" GraphRef="d7292" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3de350b1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="443.5" Y="360.5" GraphRef="d7292" RelX="1.0" RelY="0.0"/>
+      <Point X="611.0" Y="360.5" GraphRef="ed928" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.46496104645570857" Shape="None" GraphId="fba24"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id708674c7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="185.4882634921021" Y="335.35919152356587" GraphRef="c4823" RelX="0.0" RelY="-1.0"/>
+      <Point X="305.0" Y="189.0" GraphRef="b4c89" RelX="-0.5" RelY="1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.530360740041031" Shape="None" GraphId="eb04c"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id89eb72df">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="150.00000000000028" Y="180.00000000000009" GraphRef="ce22d" RelX="1.0" RelY="0.0"/>
+      <Point X="207.0" Y="256.0" GraphRef="e9289" RelX="-1.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id6be7eff6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="207.0" Y="256.0" GraphRef="e9289" RelX="-1.0" RelY="0.0"/>
+      <Point X="248.87259651001952" Y="257.7360223953205" GraphRef="eb04c" RelX="0.0" RelY="0.0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9d0c98ea">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="520.666666666667" Y="122.66666666666671" GraphRef="aa55d" RelX="0.0" RelY="1.0"/>
+      <Point X="521.0" Y="159.0" GraphRef="c65de" RelX="0.0" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3bdf54cf">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="521.0" Y="275.0" GraphRef="c65de" RelX="0.0" RelY="1.0"/>
+      <Point X="521.3809752813312" Y="360.5" GraphRef="fba24" RelX="0.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id34d28fbe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="776.0" Y="151.33333333333337" GraphRef="cee77" RelX="0.0" RelY="1.0"/>
+      <Point X="776.0" Y="205.0" GraphRef="c00c2" RelX="0.0" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id60a8e7b9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="776.0" Y="225.0" GraphRef="c00c2" RelX="0.0" RelY="1.0"/>
+      <Point X="776.7858378082102" Y="359.97901808860075" GraphRef="a79e8" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id96551f86">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="167.8324058745647" Y="386.0" GraphRef="c4823" RelX="-0.5" RelY="1.0"/>
+      <Point X="143.41620293728235" Y="400.0"/>
+      <Point X="119.0" Y="374.00969682133723"/>
+      <Point X="150.17654825702726" Y="348.0193936426744" GraphRef="c4823" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d6670">
+    <Graphics ZOrder="28676" LineThickness="1.0">
+      <Point X="706.0" Y="360.5" GraphRef="ed928" RelX="1.0" RelY="0.0"/>
+      <Point X="882.9645945205256" Y="359.1975452215019" GraphRef="f3783" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="a79e8"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Neural stem cell" GraphId="c1baa">
+    <Graphics CenterX="184.5" CenterY="430.0" Width="99.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Neuron" GraphId="c6896">
+    <Graphics CenterX="306.0" CenterY="109.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Oligodendrocyte precursor cell  (O4)" GraphId="a0ae0">
+    <Graphics CenterX="405.5" CenterY="443.5" Width="89.0" Height="39.0" ZOrder="28673" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Pre-Oligodendrocyte (O1)" GraphId="cfb58">
+    <Graphics CenterX="660.5" CenterY="437.5" Width="121.0" Height="33.0" ZOrder="28674" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Myelinating Oligodendrocyte (MBP)" GraphId="a9114">
+    <Graphics CenterX="958.0" CenterY="464.0" Width="102.0" Height="38.0" ZOrder="28675" FillColor="ffffff" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="c4823">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="185.4882634921021" CenterY="360.67959576178293" Width="70.62343047014969" Height="50.640808476434124" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="cccccc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b4c89">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="322.0" CenterY="159.0" Width="68.0" Height="60.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="cccccc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="d7292">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="404.0" CenterY="360.5" Width="79.0" Height="79.0" ZOrder="16385" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="cccccc" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ed928">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="658.5" CenterY="360.5" Width="95.0" Height="95.0" ZOrder="16386" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="f3783">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="942.9645945205256" CenterY="359.1975452215019" Width="120.0" Height="120.0" ZOrder="16387" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="666666" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="ecc28" GraphId="c65de" Style="Group"/>
+  <Group GroupId="ebe43" GraphId="b8828" Style="Group"/>
+  <Group GroupId="a8926" GraphId="a8df7" Style="Group"/>
+  <Group GroupId="c9624" GraphId="cdc8f" Style="Group"/>
+  <Group GroupId="dea66" GraphId="b4be5" Style="Group"/>
+  <Group GroupId="d978b" GraphId="aa55d" Style="Group"/>
+  <Group GroupId="af357" GraphId="cee77" Style="Group"/>
+  <Group GroupId="f21bf" GraphId="ce22d" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuroglioblast</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000468</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e40">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24339157</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youth and environmental enrichment generate serum exosomes containing miR-219 that promote CNS myelination.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glia</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pusic AD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kraig RP</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000540</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>regulatory pathway</bp:TERM><bp:ID>PW:0000004</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

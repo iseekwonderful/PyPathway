@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"xAxis": [{"type": "category", "data": ["Nov", "Dec", "Jan", "Feb"], "position": "bottom"}], "yAxis": {}, "legend": {"x": "center", "y": "top", "data": ["Country"], "orient": "horizontal"}, "title": {"text": "Title", "subtext": "subtitle"}, "series": [{"type": "bar", "data": [2, 3, 4, 5], "name": "Country"}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

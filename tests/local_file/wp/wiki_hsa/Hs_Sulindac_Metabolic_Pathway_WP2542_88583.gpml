@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Sulindac Metabolic Pathway" Author="Egon Willighagen" Organism="Homo sapiens">
+  <BiopaxRef>b1d</BiopaxRef>
+  <Graphics BoardWidth="635.0" BoardHeight="325.0" />
+  <DataNode TextLabel="Sulindac-S" GraphId="c89b3" Type="Metabolite">
+    <Graphics CenterX="390.0" CenterY="285.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="11245227" />
+  </DataNode>
+  <DataNode TextLabel="Sulfindac sulfide" GraphId="a1f9f" Type="Metabolite">
+    <Graphics CenterX="550.5" CenterY="199.0" Width="109.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="4509492" />
+  </DataNode>
+  <DataNode TextLabel="MsrA" GraphId="e495e" Type="GeneProduct">
+    <Graphics CenterX="549.5" CenterY="277.0" Width="63.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000175806" />
+  </DataNode>
+  <DataNode TextLabel="FMO" GraphId="ed228" Type="GeneProduct">
+    <Graphics CenterX="416.0" CenterY="193.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Wikipedia" ID="Flavin-containing monooxygenase" />
+  </DataNode>
+  <DataNode TextLabel="MsrB2" GraphId="c2ce3" Type="GeneProduct" GroupRef="cbaa1">
+    <Graphics CenterX="547.5" CenterY="90.0" Width="53.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000148450" />
+  </DataNode>
+  <DataNode TextLabel="CYP1B1" GraphId="adfbb" Type="GeneProduct" GroupRef="f8012">
+    <Graphics CenterX="236.0" CenterY="79.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000138061" />
+  </DataNode>
+  <DataNode TextLabel="Sulindac-R" GraphId="facbe" Type="Metabolite">
+    <Graphics CenterX="390.0" CenterY="96.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="16046677" />
+  </DataNode>
+  <DataNode TextLabel="Sulindac sulfone" GraphId="b80d4" Type="Metabolite">
+    <Comment>The structure for the sulfone in the paper is inconsistent with the entries in ChemSpider and PubChem; I assume the paper made typographic errors.</Comment>
+    <Graphics CenterX="222.0" CenterY="199.0" Width="94.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="Chemspider" ID="4582441" />
+  </DataNode>
+  <DataNode TextLabel="MsrB3" GraphId="aff0a" Type="GeneProduct" GroupRef="cbaa1">
+    <Graphics CenterX="547.5" CenterY="110.0" Width="53.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000174099" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="e312f" Type="GeneProduct" GroupRef="f8012">
+    <Graphics CenterX="236.0" CenterY="99.0" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140505" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="d8d1c" Type="GeneProduct">
+    <Graphics CenterX="238.0" CenterY="271.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140505" />
+  </DataNode>
+  <Interaction GraphId="id88e36fe3">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="410.0" Y="275.0" GraphRef="c89b3" RelX="0.5" RelY="-1.0" />
+      <Point X="523.25" Y="209.0" GraphRef="a1f9f" RelX="-0.5" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.49532620808234745" Shape="None" GraphId="a601e" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1bc04a73">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="518.0" Y="277.0" GraphRef="e495e" RelX="-1.0" RelY="0.0" />
+      <Point X="466.09569306532586" Y="242.30847026656505" GraphRef="a601e" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1d00538b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="523.25" Y="189.0" GraphRef="a1f9f" RelX="-0.5" RelY="-1.0" />
+      <Point X="390.0" Y="106.0" GraphRef="facbe" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="d387f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6412c6f1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="410.0" Y="106.0" GraphRef="facbe" RelX="0.5" RelY="1.0" />
+      <Point X="550.5" Y="189.0" GraphRef="a1f9f" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="d93cc" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6897b5e0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="513.0" Y="114.0" GraphRef="da567" RelX="-1.0" RelY="0.5" />
+      <Point X="466.2" Y="139.2" GraphRef="d93cc" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd5b178a2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="436.0" Y="183.0" GraphRef="ed228" RelX="0.5" RelY="-1.0" />
+      <Point X="469.95" Y="155.8" GraphRef="d387f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4bb9df15">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="370.0" Y="106.0" GraphRef="facbe" RelX="-0.5" RelY="1.0" />
+      <Point X="245.5" Y="189.0" GraphRef="b80d4" RelX="0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="aed5b" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id76eea139">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="370.0" Y="275.0" GraphRef="c89b3" RelX="-0.5" RelY="-1.0" />
+      <Point X="245.5" Y="209.0" GraphRef="b80d4" RelX="0.5" RelY="1.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="d90a8" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf9bbca95">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="284.0" Y="103.0" GraphRef="bf268" RelX="1.0" RelY="0.5" />
+      <Point X="320.2" Y="139.2" GraphRef="aed5b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id31bb6c8a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="278.0" Y="271.0" GraphRef="d8d1c" RelX="1.0" RelY="0.0" />
+      <Point X="320.2" Y="248.6" GraphRef="d90a8" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="cbaa1" GraphId="da567" />
+  <Group GroupId="f8012" GraphId="bf268" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b1d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21383205</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studies on the metabolism and biological activity of the epimers of sulindac.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drug Metab Dispos</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brunell D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sagher D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kesaraju S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brot N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weissbach H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classic metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000002</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

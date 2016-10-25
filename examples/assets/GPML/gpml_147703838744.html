@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPML display</title>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/d3.min.js" type="text/javascript"></script>
+    <script src="js/mithril.min.js" type="text/javascript"></script>
+    <!--<script src="//wikipathways.org/wpi/lib/pvjs/release/polyfills.bundle.min.js" type="text/javascript"></script>-->
+    <script src="js/polyfills.bundle.min.js"></script>
+    <!--<script src="js/pvjs.core.js" type="text/javascript"></script>-->
+    <script src="js/pvjs.core.min.mod.js"></script>
+    <script src="//wikipathways.org/wpi/lib/pvjs/release/pvjs.custom-element.min.js" type="text/javascript"></script>
+    <!--<script src="js/pvjs.custom-element.min.js"></script>-->
+    <script src="gpml_data/interface_gpml_147703838744.js"></script>
+    <script src="js/jquery.qtip.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="gpml_data/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.qtip.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+</head>
+<body>
+    <wikipathways-pvjs id="pvjs-container" style="width: 98vw; height: 96vh;"
+    alt="WP525 Biological Pathway"
+    src="./gpml_data/pathway_147703838744.xml"
+    display-errors="false"
+    display-warnings="false"
+    display-success="false"
+    fit-to-container="true">
+    </wikipathways-pvjs>
+    <script>
+        $("#" + "pvjs-container").on("mousedown", function(event){
+            var source_e = $(".annotation");
+            source_e.remove();
+            console.log(event.target.id);
+            on_mouse_down(event);
+        });
+        $("#" + "pvjs-container").on("mouseover", function(event){
+//            console.log("onover");
+            console.log(event);
+            on_mouse_over(event);
+//            on_mouse_over(event);
+        });
+        $("#" + "pvjs-container").on("mouseout", function(event){
+            console.log("onout");
+            on_mouse_out(event);
+        });
+    </script>
+</body>
+</html>

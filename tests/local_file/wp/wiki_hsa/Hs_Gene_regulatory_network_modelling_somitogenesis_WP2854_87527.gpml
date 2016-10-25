@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Gene regulatory network modelling somitogenesis " Version="20140930" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Reaction scheme of the proposed gene regulatory network (GRN).
+
+The scheme details the full GRN for one cell and part of a neighboring cell for those reactions that involve ligand-receptor interactions like in Delta-Notch signaling or input from the Fgf8 or Wnt3a signal transduction pathways. Color-coded circular areas for each gene symbolize mRNA and protein. For fast changing gene products the transport of mRNA or protein between cytoplasm and nucleus or between cytoplasm and membrane is explicitly simulated, which is indicated by dividing each half-area of the circle again. Regulatory interactions are shown as activating or repressing arrows. Broken lines indicate that the interaction is simulated only in an even more course-grained manner than the other gene regulatory reactions. NICD, which originates through cleavage reactions following DLL1 ligand binding to the NOTCH1 receptor, was assigned a separate symbol to clarify that only the intracellular domain of the Notch receptor acts in the nucleus as a transcription (co)-factor. The (weak) modulating action of LFNG on D/N signaling is shown as dashed lines - (red for the case of inhibiting action, green for the case of a positive effect on the D/N reaction rate.) Arrows pointing to the symbol for the empty set designate decay reactions of a species. We suppressed them for all species' decays except for those decay rates that we assume as controlled by signal transduction pathways. This applies also to the removal of DLL1 and NOTCH1 from the membrane after their binding, resulting in NOTCH1 cleavage and NICD split-off.</Comment>
+  <BiopaxRef>e6c</BiopaxRef>
+  <Graphics BoardWidth="798.0" BoardHeight="644.0"/>
+  <DataNode TextLabel="FGF8" GraphId="cbb2f" Type="GeneProduct">
+    <Graphics CenterX="377.9558146750486" CenterY="131.185540444688" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000107831"/>
+  </DataNode>
+  <DataNode TextLabel="TBX6" GraphId="ca8ee" Type="GeneProduct">
+    <Graphics CenterX="463.3205873442563" CenterY="158.49686445933088" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000149922"/>
+  </DataNode>
+  <DataNode TextLabel="RIPPLY2" GraphId="bb2e5" Type="GeneProduct">
+    <Graphics CenterX="603.4287277629008" CenterY="231.79696448650756" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000203877"/>
+  </DataNode>
+  <DataNode TextLabel="MESP2" GraphId="d39d8" Type="GeneProduct">
+    <Graphics CenterX="603.4287277629008" CenterY="293.7717544024741" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000188095"/>
+  </DataNode>
+  <DataNode TextLabel="EPHA4" GraphId="ea522" Type="GeneProduct">
+    <Graphics CenterX="603.4287277629008" CenterY="353.64570398230603" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000116106"/>
+  </DataNode>
+  <DataNode TextLabel="HES7" GraphId="c11f9" Type="GeneProduct">
+    <Graphics CenterX="462.21805151184174" CenterY="241.37582640794705" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000179111"/>
+  </DataNode>
+  <DataNode TextLabel="HES1" GraphId="eae0c" Type="GeneProduct">
+    <Graphics CenterX="341.3405996805612" CenterY="221.10514219258405" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000114315"/>
+  </DataNode>
+  <DataNode TextLabel="NICD" GraphId="d6e0b" Type="GeneProduct">
+    <Graphics CenterX="341.3405996805612" CenterY="304.8324362693889" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="4851"/>
+  </DataNode>
+  <DataNode TextLabel="LFNG" GraphId="e7a60" Type="GeneProduct">
+    <Graphics CenterX="462.2180515118418" CenterY="356.6489101250304" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106003"/>
+  </DataNode>
+  <DataNode TextLabel="NOTCH1" GraphId="cf313" Type="GeneProduct">
+    <Graphics CenterX="341.34059968056124" CenterY="376.1754935409" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000148400"/>
+  </DataNode>
+  <DataNode TextLabel="DLL1" GraphId="d8973" Type="GeneProduct">
+    <Graphics CenterX="341.3405996805612" CenterY="445.27603776831137" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000198719"/>
+  </DataNode>
+  <DataNode TextLabel="WNT3A" GraphId="bef68" Type="GeneProduct">
+    <Graphics CenterX="465.52565900908536" CenterY="484.48381932948166" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000154342"/>
+  </DataNode>
+  <DataNode TextLabel="NOTCH1" GraphId="a24b5" Type="GeneProduct">
+    <Graphics CenterX="124.01652558657732" CenterY="484.6480733811975" Width="80.0" Height="20.0" ZOrder="32768" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000148400"/>
+  </DataNode>
+  <DataNode TextLabel="DLL1" GraphId="f4710" Type="GeneProduct">
+    <Graphics CenterX="124.91059876160254" CenterY="352.95388168838264" Width="80.0" Height="20.0" ZOrder="32769" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000198719"/>
+  </DataNode>
+  <DataNode TextLabel="WNT3A" GraphId="c5d2f" Type="GeneProduct">
+    <Graphics CenterX="124.91059876160254" CenterY="271.67969522157205" Width="80.0" Height="20.0" ZOrder="32770" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000154342"/>
+  </DataNode>
+  <DataNode TextLabel="FGF8" GraphId="bd6ad" Type="GeneProduct">
+    <Graphics CenterX="124.91059876160254" CenterY="198.06476929980622" Width="80.0" Height="20.0" ZOrder="32771" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000107831"/>
+  </DataNode>
+  <DataNode TextLabel="FGF8" GraphId="eb1fd" Type="GeneProduct">
+    <Graphics CenterX="122.9558146750486" CenterY="131.185540444688" Width="80.0" Height="20.0" ZOrder="32772" FontSize="12" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000107831"/>
+  </DataNode>
+  <Interaction GraphId="idd8cb5782">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="603.4287277629008" Y="303.7717544024741" GraphRef="d39d8" RelX="0.0" RelY="1.0"/>
+      <Point X="603.4287277629008" Y="343.64570398230603" GraphRef="ea522" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idcc767638">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="623.4287277629008" Y="283.7717544024741" GraphRef="d39d8" RelX="0.5" RelY="-1.0"/>
+      <Point X="623.4287277629008" Y="241.79696448650756" GraphRef="bb2e5" RelX="0.5" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida2964802">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="583.4287277629008" Y="241.79696448650756" GraphRef="bb2e5" RelX="-0.5" RelY="1.0"/>
+      <Point X="583.4287277629008" Y="283.7717544024741" GraphRef="d39d8" RelX="-0.5" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideab33fe">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="503.3205873442563" Y="158.49686445933088" GraphRef="ca8ee" RelX="1.0" RelY="0.0"/>
+      <Point X="688.3379040701176" Y="226.13430943090248"/>
+      <Point X="643.4287277629008" Y="293.7717544024741" GraphRef="d39d8" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="iddc90ec24">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="164.91059876160256" Y="198.06476929980622" GraphRef="bd6ad" RelX="1.0" RelY="0.0"/>
+      <Point X="583.4287277629008" Y="303.7717544024741" GraphRef="d39d8" RelX="-0.5" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7d9535d0">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="381.3405996805612" Y="304.8324362693889" GraphRef="d6e0b" RelX="1.0" RelY="0.0"/>
+      <Point X="563.4287277629008" Y="293.7717544024741" GraphRef="d39d8" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8d07267b">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="503.3205873442563" Y="158.49686445933088" GraphRef="ca8ee" RelX="1.0" RelY="0.0"/>
+      <Point X="583.4287277629008" Y="221.79696448650756" GraphRef="bb2e5" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idafe51d16">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="503.3205873442563" Y="158.49686445933088" GraphRef="ca8ee" RelX="1.0" RelY="0.0"/>
+      <Point X="381.3405996805612" Y="445.27603776831137" GraphRef="d8973" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9c98b82e">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="84.91059876160256" Y="271.67969522157205" GraphRef="c5d2f" RelX="-1.0" RelY="0.0"/>
+      <Point X="41.2790805407058" Y="215.08827984045146"/>
+      <Point X="423.3205873442563" Y="158.49686445933088" GraphRef="ca8ee" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id139ec6a6">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="417.9558146750486" Y="131.185540444688" GraphRef="cbb2f" RelX="1.0" RelY="0.0"/>
+      <Point X="397.9558146750486" Y="121.185540444688" GraphRef="cbb2f" RelX="0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc151bef8">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="84.91059876160256" Y="198.06476929980622" GraphRef="bd6ad" RelX="-1.0" RelY="0.0"/>
+      <Point X="104.91059876160256" Y="208.06476929980622" GraphRef="bd6ad" RelX="-0.5" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc4fa6cb7">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="84.91059876160256" Y="271.67969522157205" GraphRef="c5d2f" RelX="-1.0" RelY="0.0"/>
+      <Point X="104.91059876160256" Y="281.67969522157205" GraphRef="c5d2f" RelX="-0.5" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id1cd12f50">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="164.91059876160256" Y="352.95388168838264" GraphRef="f4710" RelX="1.0" RelY="0.0"/>
+      <Point X="301.34059968056124" Y="376.1754935409" GraphRef="cf313" RelX="-1.0" RelY="0.0"/>
+      <Anchor Position="0.7593330689827187" Shape="None" GraphId="edad1"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf9ba1782">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="425.52565900908536" Y="484.48381932948166" GraphRef="bef68" RelX="-1.0" RelY="0.0"/>
+      <Point X="236.65723180121003" Y="484.5659463553396"/>
+      <Point X="164.0165255865773" Y="484.6480733811975" GraphRef="a24b5" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9b749d6d">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="505.52565900908536" Y="484.48381932948166" GraphRef="bef68" RelX="1.0" RelY="0.0"/>
+      <Point X="485.52565900908536" Y="494.48381932948166" GraphRef="bef68" RelX="0.5" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idfc8bc572">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="84.91059876160256" Y="271.67969522157205" GraphRef="c5d2f" RelX="-1.0" RelY="0.0"/>
+      <Point X="41.2790805407058" Y="358.47786649494174"/>
+      <Point X="301.3405996805612" Y="445.27603776831137" GraphRef="d8973" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id6c4a9b88">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="84.91059876160256" Y="271.67969522157205" GraphRef="c5d2f" RelX="-1.0" RelY="0.0"/>
+      <Point X="41.2790805407058" Y="338.927594381236"/>
+      <Point X="181.3098401106335" Y="406.1754935409"/>
+      <Point X="321.34059968056124" Y="386.1754935409" GraphRef="cf313" RelX="-0.5" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id9602c9d1">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="262.9177360028907" Y="376.1754935409" GraphRef="edad1" RelX="0.0" RelY="0.0"/>
+      <Point X="272.1291678417259" Y="304.61521499448736"/>
+      <Point X="281.3405996805612" Y="304.7238256319381"/>
+      <Point X="301.3405996805612" Y="304.8324362693889" GraphRef="d6e0b" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2a4d9be6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="341.3405996805612" Y="294.8324362693889" GraphRef="d6e0b" RelX="0.0" RelY="-1.0"/>
+      <Point X="341.3405996805612" Y="231.10514219258405" GraphRef="eae0c" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id50feb987">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="301.3405996805612" Y="221.10514219258405" GraphRef="eae0c" RelX="-1.0" RelY="0.0"/>
+      <Point X="272.51857633902546" Y="246.86731583482356" GraphRef="a3478" RelX="0.5" RelY="-1.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.3423233155840134" Shape="None" GraphId="e7d9f"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id78f7c09e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="321.3405996805612" Y="294.8324362693889" GraphRef="d6e0b" RelX="-0.5" RelY="-1.0"/>
+      <Point X="280.01857633902546" Y="261.86731583482356" GraphRef="a3478" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="ec48c"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id96bcac66">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="381.3405996805612" Y="221.10514219258405" GraphRef="eae0c" RelX="1.0" RelY="0.0"/>
+      <Point X="361.3405996805612" Y="211.10514219258405" GraphRef="eae0c" RelX="0.5" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7dffd7cf">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="164.91059876160256" Y="198.06476929980622" GraphRef="bd6ad" RelX="1.0" RelY="0.0"/>
+      <Point X="259.76647549868903" Y="213.9944520951264"/>
+      <Point X="291.47414908844684" Y="229.92413489044657" GraphRef="e7d9f" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8d2a2109">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="164.91059876160256" Y="271.67969522157205" GraphRef="c5d2f" RelX="1.0" RelY="0.0"/>
+      <Point X="218.61521499448736" Y="276.6630416585674"/>
+      <Point X="304.8117903439469" Y="281.64638809556277" GraphRef="ec48c" RelX="0.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idbfd493dd">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="361.3405996805612" Y="294.8324362693889" GraphRef="d6e0b" RelX="0.5" RelY="-1.0"/>
+      <Point X="422.21805151184174" Y="241.37582640794705" GraphRef="c11f9" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id63e5ba7d">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="502.21805151184174" Y="241.37582640794705" GraphRef="c11f9" RelX="1.0" RelY="0.0"/>
+      <Point X="515.6152149944874" Y="256.37582640794705"/>
+      <Point X="498.91663325316455" Y="271.37582640794705"/>
+      <Point X="482.21805151184174" Y="251.37582640794705" GraphRef="c11f9" RelX="0.5" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2e7833e1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="462.21805151184174" Y="251.37582640794705" GraphRef="c11f9" RelX="0.0" RelY="1.0"/>
+      <Point X="462.2180515118418" Y="346.6489101250304" GraphRef="e7a60" RelX="0.0" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3777b293">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="381.3405996805612" Y="304.8324362693889" GraphRef="d6e0b" RelX="1.0" RelY="0.0"/>
+      <Point X="422.2180515118418" Y="356.6489101250304" GraphRef="e7a60" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2d1ddc5c">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="502.21805151184174" Y="241.37582640794705" GraphRef="c11f9" RelX="1.0" RelY="0.0"/>
+      <Point X="522.6152149944874" Y="343.3259320881292"/>
+      <Point X="381.3405996805612" Y="445.27603776831137" GraphRef="d8973" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id2e4fdeec">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="ff0033">
+      <Point X="442.2180515118418" Y="346.6489101250304" GraphRef="e7a60" RelX="-0.5" RelY="-1.0"/>
+      <Point X="397.392972634604" Y="329.6582138919515"/>
+      <Point X="352.5678937573663" Y="331.8632855567806"/>
+      <Point X="307.7428148801285" Y="334.06835722160974"/>
+      <Point X="262.9177360028907" Y="376.1754935409" GraphRef="edad1" RelX="0.0" RelY="0.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id16cc8e0">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineStyle="Broken" LineThickness="1.0" Color="009933">
+      <Point X="442.2180515118418" Y="346.6489101250304" GraphRef="e7a60" RelX="-0.5" RelY="-1.0"/>
+      <Point X="393.10461561259126" Y="340.68357221609705"/>
+      <Point X="343.9911797133407" Y="341.7861080485116"/>
+      <Point X="303.4544578581157" Y="342.88864388092617"/>
+      <Point X="262.9177360028907" Y="376.1754935409" GraphRef="edad1" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id20315a91">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="337.9558146750486" Y="131.185540444688" GraphRef="cbb2f" RelX="-1.0" RelY="0.0"/>
+      <Point X="162.9558146750486" Y="131.185540444688" GraphRef="eb1fd" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Shape GraphId="a3478">
+    <Graphics CenterX="265.01857633902546" CenterY="261.86731583482356" Width="30.0" Height="30.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="mim-degradation" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c6812">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Graphics CenterX="119.0" CenterY="325.5" Width="242.0" Height="525.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="e8761">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Graphics CenterX="504.5" CenterY="325.5" Width="527.0" Height="577.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e6c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22761566</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">From dynamic expression patterns to boundary formation in the presomitic mesoderm.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS Comput Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiedemann HB</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneltzer E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zeiser S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoesel B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beckers J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Przemeck GK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de Angelis MH</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>regulatory pathway</bp:TERM><bp:ID>PW:0000004</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

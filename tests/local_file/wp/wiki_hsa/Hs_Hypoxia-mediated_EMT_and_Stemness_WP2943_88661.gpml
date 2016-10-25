@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Hypoxia-mediated EMT and Stemness" Version="20150603" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Model of hypoxia mediated EMT and stemness.</Comment>
+  <BiopaxRef>aea</BiopaxRef>
+  <Graphics BoardWidth="646.6666666666673" BoardHeight="485.33333333333223"/>
+  <DataNode TextLabel="DICER1" GraphId="a5e3d" Type="GeneProduct">
+    <Graphics CenterX="308.00000000000006" CenterY="170.66666666666654" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="23405"/>
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-200a-3p" GraphId="e8574" Type="Rna" GroupRef="e8455">
+    <Graphics CenterX="450.6666666666666" CenterY="257.3333333333337" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000682"/>
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-200b-3p" GraphId="d0147" Type="Rna" GroupRef="e8455">
+    <Graphics CenterX="450.6666666666666" CenterY="277.33333333333405" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000318"/>
+  </DataNode>
+  <DataNode TextLabel="hsa-miR-200c-3p" GraphId="c13ed" Type="Rna" GroupRef="e8455">
+    <Graphics CenterX="450.6666666666666" CenterY="297.333333333334" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase mature sequence" ID="MIMAT0000617"/>
+  </DataNode>
+  <DataNode TextLabel="ZEB1" GraphId="d0b22" Type="GeneProduct">
+    <Graphics CenterX="450.6666666666666" CenterY="374.66666666666686" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="6935"/>
+  </DataNode>
+  <Interaction GraphId="id3fdb2042">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="245.33333333333331" Y="228.00000000000003" GraphRef="aaa80" RelX="1.0" RelY="0.0"/>
+      <Point X="403.33333333333314" Y="228.00000000000003" GraphRef="e9cdc" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.4" Shape="None" GraphId="ee3a0"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id285ee7f2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="308.00000000000006" Y="113.99999999999997" GraphRef="aba38" RelX="0.0" RelY="1.0"/>
+      <Point X="308.00000000000006" Y="160.66666666666654" GraphRef="a5e3d" RelX="0.0" RelY="-1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id67b13f5d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="308.00000000000006" Y="180.66666666666654" GraphRef="a5e3d" RelX="0.0" RelY="1.0"/>
+      <Point X="308.53333333333325" Y="228.00000000000003" GraphRef="ee3a0" RelX="0.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7136e97e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="450.6666666666665" Y="315.333333333334" GraphRef="d3b0f" RelX="0.0" RelY="1.0"/>
+      <Point X="450.6666666666666" Y="364.66666666666686" GraphRef="d0b22" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id604fcd2c">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="450.6666666666666" Y="384.66666666666686" GraphRef="d0b22" RelX="0.0" RelY="1.0"/>
+      <Point X="450.6666666666666" Y="435.33333333333223" GraphRef="f052c" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="Hypoxia" GraphId="aba38">
+    <Graphics CenterX="308.00000000000006" CenterY="103.99999999999997" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Epithelial-Mesenchymal Transition (EMT) / Stemness" GraphId="f052c">
+    <Graphics CenterX="450.6666666666666" CenterY="445.33333333333223" Width="332.0000000000015" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Pre-miRNA" GraphId="aaa80">
+    <Graphics CenterX="205.33333333333331" CenterY="228.00000000000003" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Mature miRNA" GraphId="e9cdc" GroupRef="e8455">
+    <Graphics CenterX="450.6666666666665" CenterY="228.00000000000003" Width="94.66666666666679" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Group GroupId="e8455" GraphId="d3b0f" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="aea">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25351418</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hypoxia promotes stem cell phenotypes and poor prognosis through epigenetic regulation of DICER.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nat Commun</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">van den Beucken T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koch E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chu K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rupaimoole R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prickaerts P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adriaens M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voncken JW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harris AL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffa FM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haider S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Starmans MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yao CQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pecot CV</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boutros PC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sood AK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koritzinsky M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wouters BG</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>regulatory pathway</bp:TERM><bp:ID>PW:0000004</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

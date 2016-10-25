@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pypathway.core.GPMLImpl package &#8212; PyPathway 5 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="PyPathway 5 documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pypathway-core-gpmlimpl-package">
+<h1>pypathway.core.GPMLImpl package<a class="headerlink" href="#pypathway-core-gpmlimpl-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pypathway.core.GPMLImpl.objects">
+<span id="pypathway-core-gpmlimpl-objects-module"></span><h2>pypathway.core.GPMLImpl.objects module<a class="headerlink" href="#module-pypathway.core.GPMLImpl.objects" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLHandler">
+<em class="property">class </em><code class="descclassname">pypathway.core.GPMLImpl.objects.</code><code class="descname">GPMLHandler</code><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/xml.sax.handler.html#xml.sax.handler.ContentHandler" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">xml.sax.handler.ContentHandler</span></code></a></p>
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLHandler.characters">
+<code class="descname">characters</code><span class="sig-paren">(</span><em>content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLHandler.characters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLHandler.characters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLHandler.endElement">
+<code class="descname">endElement</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLHandler.endElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLHandler.endElement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLHandler.startElement">
+<code class="descname">startElement</code><span class="sig-paren">(</span><em>name</em>, <em>attrs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLHandler.startElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLHandler.startElement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser">
+<em class="property">class </em><code class="descclassname">pypathway.core.GPMLImpl.objects.</code><code class="descname">GPMLParser</code><span class="sig-paren">(</span><em>_class</em>, <em>props</em>, <em>is_root=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pypathway.core.html#pypathway.core.objects.Pathway" title="pypathway.core.objects.Pathway"><code class="xref py py-class docutils literal"><span class="pre">pypathway.core.objects.Pathway</span></code></a></p>
+<p>GPMLParser, parse GPML format pathway data</p>
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.add_child">
+<code class="descname">add_child</code><span class="sig-paren">(</span><em>child</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.add_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.add_child" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.children">
+<code class="descname">children</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.children" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of children</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of children nodes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.config">
+<code class="descname">config</code><span class="sig-paren">(</span><em>setting=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><em>setting=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.draw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw GPML pathway, In IPython notebook</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>setting</strong> &#8211; preserved, currently no usage</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a plot region in output area</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.entities">
+<code class="descname">entities</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pathway objects&#8217;s nodes (aka. self.nodes)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">self.nodes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.export">
+<code class="descname">export</code><span class="sig-paren">(</span><em>format=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.export"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the GPML file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>format</strong> &#8211; raise warning, if not input a GPML</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string with GPML file conetent</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.external_id">
+<code class="descname">external_id</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.external_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the external database ID in a GPML file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a dict of external ID</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.father">
+<code class="descname">father</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.father" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get self&#8217;s father element</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">father node</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.find_by_class">
+<code class="descname">find_by_class</code><span class="sig-paren">(</span><em>_class</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.find_by_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.find_by_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find node by its class</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>_class</strong> &#8211; the class wanna use.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a list of satisfied class</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.flatten">
+<code class="descname">flatten</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.flatten"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flatten the pathway tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of nodes.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.get_child">
+<code class="descname">get_child</code><span class="sig-paren">(</span><em>_class</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.get_child"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.get_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the child who match certain class</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>_class</strong> &#8211; the class wanna use.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a satisfied node</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.graphics">
+<code class="descname">graphics</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.graphics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the graphic elements in a GPML pathway (aka. class=Graphics)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of GPML pathway graphic</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.integrate">
+<code class="descname">integrate</code><span class="sig-paren">(</span><em>id_lists</em>, <em>visualize_option_lists</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.integrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.integrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mapping data to pathway</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>id_lists</strong> &#8211; list of graphic element&#8217;s ID</li>
+<li><strong>visualize_option_lists</strong> &#8211; a list of visualize option corresponds to each id</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.is_root">
+<code class="descname">is_root</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.is_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if current node is root</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if is root else false</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.members">
+<code class="descname">members</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.members" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members in nodes (aka. self.flatten)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a flatten list of pathway tree&#8217;s nodes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.nodes">
+<code class="descname">nodes</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the DataNode elements in a GPML format pathway tree</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of nodes whose class is DataNode</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.parse">
+<em class="property">static </em><code class="descname">parse</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.parse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a string to pathway object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; string format of pathway data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a GMPL pathway object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.reactions">
+<code class="descname">reactions</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.reactions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the reactions in pathway (aka. class=Interaction)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a list of reaction</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.root">
+<code class="descname">root</code><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.root" title="Permalink to this definition">¶</a></dt>
+<dd><p>The root of pathway</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The root node of pathway</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.set_father">
+<code class="descname">set_father</code><span class="sig-paren">(</span><em>father</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.set_father"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.set_father" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.summary">
+<code class="descname">summary</code><span class="sig-paren">(</span><em>depth=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.summary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summary of what pathway has</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>depth</strong> &#8211; tab&#8217;s start count, if you are not anti-human, do not change this.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a string summary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.GPMLParser.xrefs">
+<code class="descname">xrefs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#GPMLParser.xrefs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.GPMLParser.xrefs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pypathway.core.GPMLImpl.objects.Heap">
+<em class="property">class </em><code class="descclassname">pypathway.core.GPMLImpl.objects.</code><code class="descname">Heap</code><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#Heap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.Heap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#list" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">list</span></code></a></p>
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.Heap.peak">
+<code class="descname">peak</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#Heap.peak"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.Heap.peak" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.Heap.push">
+<code class="descname">push</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#Heap.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.Heap.push" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pypathway.core.GPMLImpl.objects.Shape">
+<em class="property">class </em><code class="descclassname">pypathway.core.GPMLImpl.objects.</code><code class="descname">Shape</code><span class="sig-paren">(</span><em>type</em>, <em>x</em>, <em>g</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#Shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.Shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<dl class="method">
+<dt id="pypathway.core.GPMLImpl.objects.Shape.generate">
+<code class="descname">generate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#Shape.generate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.Shape.generate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pypathway.core.GPMLImpl.objects.contain">
+<code class="descclassname">pypathway.core.GPMLImpl.objects.</code><code class="descname">contain</code><span class="sig-paren">(</span><em>rect</em>, <em>source_z</em>, <em>target</em>, <em>target_z</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pypathway/core/GPMLImpl/objects.html#contain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pypathway.core.GPMLImpl.objects.contain" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-pypathway.core.GPMLImpl">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pypathway.core.GPMLImpl" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pypathway.core.GPMLImpl package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pypathway.core.GPMLImpl.objects">pypathway.core.GPMLImpl.objects module</a></li>
+<li><a class="reference internal" href="#module-pypathway.core.GPMLImpl">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pypathway.core.GPMLImpl.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, sheep.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/pypathway.core.GPMLImpl.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

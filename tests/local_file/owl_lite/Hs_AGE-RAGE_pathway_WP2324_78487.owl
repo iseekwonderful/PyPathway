@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+<owl:Ontology rdf:about="">
+ <owl:imports rdf:resource="http://www.biopax.org/release/biopax-level3.owl#" />
+</owl:Ontology>
+
+<bp:RelationshipXref rdf:about="id44">
+ <bp:id rdf:datatype = "xsd:string">2308</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id43">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id44" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id42">
+ <bp:id rdf:datatype = "xsd:string">5594</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id41">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id42" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id48">
+ <bp:id rdf:datatype = "xsd:string">4790</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id47">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id48" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="c790c">
+ <bp:displayName rdf:datatype = "xsd:string">INS</bp:displayName>
+ <bp:entityReference rdf:resource="id128" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id46">
+ <bp:id rdf:datatype = "xsd:string">6667</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id45">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id46" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="ac33a">
+ <bp:displayName rdf:datatype = "xsd:string">NOS3</bp:displayName>
+ <bp:entityReference rdf:resource="id99" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id40">
+ <bp:id rdf:datatype = "xsd:string">6714</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="f3e9c">
+ <bp:displayName rdf:datatype = "xsd:string">AGEs</bp:displayName>
+ <bp:entityReference rdf:resource="id124" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c6630">
+ <bp:displayName rdf:datatype = "xsd:string">MAPK9</bp:displayName>
+ <bp:entityReference rdf:resource="id3" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f09b1">
+ <bp:displayName rdf:datatype = "xsd:string">RELA</bp:displayName>
+ <bp:entityReference rdf:resource="id49" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id38">
+ <bp:id rdf:datatype = "xsd:string">3625</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id39">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id40" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id53">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id54" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id52">
+ <bp:id rdf:datatype = "xsd:string">207</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id55">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id56" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id54">
+ <bp:id rdf:datatype = "xsd:string">1432</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id57">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id58" />
+</bp:ProteinReference>
+
+<bp:BioSource rdf:about="id2">
+ <bp:standardName rdf:datatype = "xsd:string">Homo sapiens</bp:standardName>
+</bp:BioSource>
+
+<bp:RelationshipXref rdf:about="id56">
+ <bp:id rdf:datatype = "xsd:string">5599</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Pathway rdf:about="id1">
+ <bp:organism rdf:resource="id2" />
+ <bp:displayName rdf:datatype = "xsd:string">AGE/RAGE pathway</bp:displayName>
+ <bp:comment rdf:datatype = "xsd:string">Cellular Process (WikiPathways-category)</bp:comment>
+ <bp:comment rdf:datatype = "xsd:string">Advanced glycation end products (AGEs) are heterogeneous group of non-enzymatic malliard reaction products of aldose sugar with proteins and lipids. Formation of AGEs is an indicator of one of the many chemical modifications of proteins and DNA that occur within the biological systems. Research over past two decades have implicated the role of AGEs in most of the age-related diseases like Alzheimer&#8217;s disease, cancer, cardiovascular disease, diabetes, renal disorders, hypertension, stroke, visual impairment and skin disorders. AGEs also modify the skin collagen and accelerates the aging process. In diabetic patients, AGE formation occurs in large scale and manifests with clinical symptoms such as cataract, atherosclerosis, nephropathy and neuropathy.
+
+AGEs are known to bind with different cell surface receptors such as receptor for advanced glycation end products (RAGE), dolichyldiphosphooligosaccharide-protein glycosyltransferase (AGE-R1), protein kinase C substrate, 80KH phosphoprotein (AGE-R2), galectin-3 (AGE-R3), and class A macrophage scavenger receptor types I and II.  RAGE, is the well-studied receptor for AGEs and the signaling events mediated by others are either not been identified or are considered as negative regulators of RAGE signaling. RAGE is an integral membrane protein of the immunoglobulin superfamily. RAGE is constituted of an extracellular domain, a transmembrane domain and a short cytoplasmic domain. RAGE is expressed in a wide range of tissues such as lung, heart, kidney, brain, skeletal muscles, and in different types of cells including endothelial cells, macrophages/monocytes, neutrophils, and lymphocytes. Besides AGEs, RAGE also mediate the effects of its other extracellular ligands namely extracellular high mobility group box-1 (HMGB1), S100 family of calcium binding proteins and amyloid-beta peptide, among many others. Although a large number of advanced glycation end products have been identified in humans, AGE/RAGE signaling ex-vivo is mostly studied using the AGEs such as AGE-modified albumin, N(6)(carboxymethyl)lysine, N(6)(carboxyethyl)lysine and pentosidine.
+
+The signaling events mediated by RAGE are complex due to the diversity of its ligands and their effects in different cell types. Homodimerization of RAGE has been identified to be essential for RAGE signaling. Depending on the intensity and duration of RAGE ligation, specific signaling modules such as ERK1/2, p38 MAPK, CDC42/RAC, SAPK/JNK and NF-&#954;B has been shown to be regulated in different cell types. AGEs have been shown to induce the formation of complexes containing RAGE with DIAPH1, SRC/IRS1/PKC-alpha, TIRAP/MYD88/IRAK4 and RHOA. RAGE-DIAPH1 interaction is required for the activation of RAC1/CDC42 pathway leading to neurite outgrowth and regulation of cytoskeleton.Activation of PKC-alpha through RAGE/SRC/IRS1/PKC-alpha by AGEs has been suggested as a mechanism of insulin resistance in skeletal muscle cells. RAGE also shares the adaptor molecules such as TIRAP, MYD88 and IRAK4 of toll-like receptors and induce the activation of AKT, p38MAPK and NFKB pathways. AGEs have also been shown to induce the formation of complex between RAGE and RHOA. RHOA/ROCK dependent phosphorylation of ezrin/radixin/moesin (ERM) is required for the regulation of gap formation and actin reorganization, and thereby endothelial permeability. However, in tubular cells, AGEs inhibit phosphorylation of ERMs leading to inhibition of tubulogenesis. Similarly, AKT have been shown to be activated by AGEs and induce proliferation of primary acute myeloid leukemia (AML) cells where as phosphorylation of AKT is shown to be inhibited in podocytes leading to FOXO4 activation and apoptosis. The major component of AGE/RAGE signaling is the oxidative stress induced pathways. AGEs induce the oxidative stress through the activation of NADPH oxidases. Increased intracellular oxidative stress leads to stimulation of PKC and ERK1/2, resulting in the translocation and activation of NF-&#954;B and subsequent up regulation of NF-&#954;B dependent genes which ultimately produce deleterious effects to cells. 
+Please access this pathway at [http://www.netpath.org/netslim/age_signaling_pathways.html NetSlim] database. (WikiPathways-description)</bp:comment>
+ <bp:pathwayComponent rdf:resource="id169" />
+ <bp:pathwayComponent rdf:resource="id223" />
+ <bp:pathwayComponent rdf:resource="id215" />
+ <bp:pathwayComponent rdf:resource="id164" />
+ <bp:pathwayComponent rdf:resource="id156" />
+ <bp:pathwayComponent rdf:resource="id177" />
+ <bp:pathwayComponent rdf:resource="id184" />
+ <bp:pathwayComponent rdf:resource="id163" />
+ <bp:pathwayComponent rdf:resource="id206" />
+ <bp:pathwayComponent rdf:resource="id158" />
+ <bp:pathwayComponent rdf:resource="id218" />
+ <bp:pathwayComponent rdf:resource="id162" />
+ <bp:pathwayComponent rdf:resource="id174" />
+ <bp:pathwayComponent rdf:resource="id229" />
+ <bp:pathwayComponent rdf:resource="id179" />
+ <bp:pathwayComponent rdf:resource="id189" />
+ <bp:pathwayComponent rdf:resource="id159" />
+ <bp:pathwayComponent rdf:resource="id165" />
+ <bp:pathwayComponent rdf:resource="id226" />
+ <bp:pathwayComponent rdf:resource="id219" />
+ <bp:pathwayComponent rdf:resource="id197" />
+ <bp:pathwayComponent rdf:resource="id198" />
+ <bp:pathwayComponent rdf:resource="id170" />
+ <bp:pathwayComponent rdf:resource="id176" />
+ <bp:pathwayComponent rdf:resource="id207" />
+ <bp:pathwayComponent rdf:resource="id211" />
+ <bp:pathwayComponent rdf:resource="id167" />
+ <bp:pathwayComponent rdf:resource="id160" />
+ <bp:pathwayComponent rdf:resource="id183" />
+ <bp:pathwayComponent rdf:resource="id222" />
+ <bp:pathwayComponent rdf:resource="id220" />
+ <bp:pathwayComponent rdf:resource="id191" />
+ <bp:pathwayComponent rdf:resource="id209" />
+ <bp:pathwayComponent rdf:resource="id212" />
+ <bp:pathwayComponent rdf:resource="id186" />
+ <bp:pathwayComponent rdf:resource="id168" />
+ <bp:pathwayComponent rdf:resource="id204" />
+ <bp:pathwayComponent rdf:resource="id181" />
+ <bp:pathwayComponent rdf:resource="id205" />
+ <bp:pathwayComponent rdf:resource="id180" />
+ <bp:pathwayComponent rdf:resource="id182" />
+ <bp:pathwayComponent rdf:resource="id195" />
+ <bp:pathwayComponent rdf:resource="id155" />
+ <bp:pathwayComponent rdf:resource="id166" />
+ <bp:pathwayComponent rdf:resource="id193" />
+ <bp:pathwayComponent rdf:resource="id153" />
+ <bp:pathwayComponent rdf:resource="id224" />
+ <bp:pathwayComponent rdf:resource="id213" />
+ <bp:pathwayComponent rdf:resource="id185" />
+ <bp:pathwayComponent rdf:resource="id178" />
+ <bp:pathwayComponent rdf:resource="id157" />
+ <bp:pathwayComponent rdf:resource="id172" />
+ <bp:pathwayComponent rdf:resource="id199" />
+ <bp:pathwayComponent rdf:resource="id216" />
+ <bp:pathwayComponent rdf:resource="id173" />
+ <bp:pathwayComponent rdf:resource="id221" />
+ <bp:pathwayComponent rdf:resource="id175" />
+ <bp:pathwayComponent rdf:resource="id190" />
+ <bp:pathwayComponent rdf:resource="id227" />
+ <bp:pathwayComponent rdf:resource="id194" />
+ <bp:pathwayComponent rdf:resource="id225" />
+ <bp:pathwayComponent rdf:resource="id208" />
+ <bp:pathwayComponent rdf:resource="id201" />
+ <bp:pathwayComponent rdf:resource="id192" />
+ <bp:pathwayComponent rdf:resource="id214" />
+ <bp:pathwayComponent rdf:resource="id200" />
+ <bp:pathwayComponent rdf:resource="id171" />
+ <bp:pathwayComponent rdf:resource="id154" />
+ <bp:pathwayComponent rdf:resource="id202" />
+ <bp:pathwayComponent rdf:resource="id151" />
+ <bp:pathwayComponent rdf:resource="id210" />
+ <bp:pathwayComponent rdf:resource="id152" />
+ <bp:pathwayComponent rdf:resource="id188" />
+ <bp:pathwayComponent rdf:resource="id203" />
+ <bp:pathwayComponent rdf:resource="id217" />
+ <bp:pathwayComponent rdf:resource="id228" />
+ <bp:pathwayComponent rdf:resource="id196" />
+ <bp:pathwayComponent rdf:resource="id161" />
+ <bp:pathwayComponent rdf:resource="id187" />
+</bp:Pathway>
+
+<bp:ProteinReference rdf:about="id59">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id60" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id58">
+ <bp:id rdf:datatype = "xsd:string">4303</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="cb4c2">
+ <bp:displayName rdf:datatype = "xsd:string">IRAK4</bp:displayName>
+ <bp:entityReference rdf:resource="id29" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id6">
+ <bp:id rdf:datatype = "xsd:string">4088</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="f9531">
+ <bp:displayName rdf:datatype = "xsd:string">NFKB1</bp:displayName>
+ <bp:entityReference rdf:resource="id47" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id5">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id6" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id4">
+ <bp:id rdf:datatype = "xsd:string">5601</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id3">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id4" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id9">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id10" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id51">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id52" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id8">
+ <bp:id rdf:datatype = "xsd:string">5595</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id50">
+ <bp:id rdf:datatype = "xsd:string">5970</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id7">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id8" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="c7907">
+ <bp:displayName rdf:datatype = "xsd:string">CYCS</bp:displayName>
+ <bp:entityReference rdf:resource="id112" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id49">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id50" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="db477">
+ <bp:displayName rdf:datatype = "xsd:string">SRC</bp:displayName>
+ <bp:entityReference rdf:resource="id39" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f1bb6">
+ <bp:displayName rdf:datatype = "xsd:string">CDC42</bp:displayName>
+ <bp:entityReference rdf:resource="id15" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id26">
+ <bp:id rdf:datatype = "xsd:string">5578</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id25">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id26" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id24">
+ <bp:id rdf:datatype = "xsd:string">3667</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id23">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id24" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id22">
+ <bp:id rdf:datatype = "xsd:string">836</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id21">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id22" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id20">
+ <bp:id rdf:datatype = "xsd:string">387</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="adefd">
+ <bp:displayName rdf:datatype = "xsd:string">STAT5B</bp:displayName>
+ <bp:entityReference rdf:resource="id9" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c2be2">
+ <bp:displayName rdf:datatype = "xsd:string">HRAS</bp:displayName>
+ <bp:entityReference rdf:resource="id37" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id18">
+ <bp:id rdf:datatype = "xsd:string">5879</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id19">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id20" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="d1a37">
+ <bp:displayName rdf:datatype = "xsd:string">FOXO4</bp:displayName>
+ <bp:entityReference rdf:resource="id57" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id16">
+ <bp:id rdf:datatype = "xsd:string">998</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id17">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id18" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id35">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id36" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id34">
+ <bp:id rdf:datatype = "xsd:string">114609</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id37">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id38" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id36">
+ <bp:id rdf:datatype = "xsd:string">6093</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="ddab7">
+ <bp:displayName rdf:datatype = "xsd:string">FOXO4</bp:displayName>
+ <bp:entityReference rdf:resource="id57" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id31">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id32" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id30">
+ <bp:id rdf:datatype = "xsd:string">51135</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id33">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id34" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id32">
+ <bp:id rdf:datatype = "xsd:string">4478</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:BiochemicalReaction rdf:about="id198">
+ <bp:left rdf:resource="dbb51" />
+ <bp:right rdf:resource="e9070" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id197">
+ <bp:right rdf:resource="d45ac" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id199">
+ <bp:left rdf:resource="f840d" />
+ <bp:right rdf:resource="b40db" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id194">
+ <bp:left rdf:resource="c7907" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id193">
+ <bp:left rdf:resource="dc564" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id196">
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id195">
+ <bp:left rdf:resource="d04bd" />
+ <bp:right rdf:resource="c7907" />
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id108">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id190">
+ <bp:left rdf:resource="a73f2" />
+ <bp:right rdf:resource="f1558" />
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id109">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id191">
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id106">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id192">
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id107">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id104">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id105" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id105">
+ <bp:id rdf:datatype = "xsd:string">5590</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id102">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id103" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id103">
+ <bp:id rdf:datatype = "xsd:string">5579</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id100">
+ <bp:id rdf:datatype = "xsd:string">4846</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id101">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="f09ac">
+ <bp:displayName rdf:datatype = "xsd:string">MAPK1</bp:displayName>
+ <bp:entityReference rdf:resource="id41" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id27">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id28" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="ae895">
+ <bp:displayName rdf:datatype = "xsd:string">NOS2</bp:displayName>
+ <bp:entityReference rdf:resource="id97" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id28">
+ <bp:id rdf:datatype = "xsd:string">4615</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id29">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id30" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="afc55">
+ <bp:displayName rdf:datatype = "xsd:string">CHUK</bp:displayName>
+ <bp:entityReference rdf:resource="id65" />
+</bp:Protein>
+
+<bp:Protein rdf:about="ce17c">
+ <bp:displayName rdf:datatype = "xsd:string">MMP2</bp:displayName>
+ <bp:entityReference rdf:resource="id141" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id210">
+ <bp:left rdf:resource="cb4c2" />
+ <bp:right rdf:resource="cdb3d" />
+ <bp:right rdf:resource="f552e" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c8007">
+ <bp:displayName rdf:datatype = "xsd:string">EZR</bp:displayName>
+ <bp:entityReference rdf:resource="id134" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id211">
+ <bp:right rdf:resource="a6127" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c1fae">
+ <bp:displayName rdf:datatype = "xsd:string">NO</bp:displayName>
+ <bp:entityReference rdf:resource="id85" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id216">
+ <bp:right rdf:resource="d666a" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id217">
+ <bp:left rdf:resource="c7e07" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id218">
+ <bp:left rdf:resource="c790c" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id219">
+ <bp:right rdf:resource="ff031" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id212">
+ <bp:right rdf:resource="dff48" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id213">
+ <bp:left rdf:resource="a6ab1" />
+ <bp:left rdf:resource="dff48" />
+ <bp:left rdf:resource="d666a" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id214">
+ <bp:left rdf:resource="f3e9c" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id215">
+ <bp:left rdf:resource="dff48" />
+ <bp:right rdf:resource="a6127" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id209">
+ <bp:left rdf:resource="c7140" />
+ <bp:left rdf:resource="d0399" />
+ <bp:right rdf:resource="adefd" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="f0655">
+ <bp:displayName rdf:datatype = "xsd:string">CML</bp:displayName>
+ <bp:entityReference rdf:resource="id107" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id221">
+ <bp:left rdf:resource="a52fa" />
+ <bp:right rdf:resource="d0782" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id222">
+ <bp:left rdf:resource="c8007" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id220">
+ <bp:right rdf:resource="a52fa" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c402d">
+ <bp:displayName rdf:datatype = "xsd:string">Protein</bp:displayName>
+ <bp:entityReference rdf:resource="id106" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id229">
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id227">
+ <bp:right rdf:resource="dbb51" />
+</bp:BiochemicalReaction>
+
+<bp:RelationshipXref rdf:about="id10">
+ <bp:id rdf:datatype = "xsd:string">6777</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:BiochemicalReaction rdf:about="id228">
+ <bp:left rdf:resource="c1fae" />
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id11">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id12" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id225">
+ <bp:left rdf:resource="e1bbd" />
+</bp:BiochemicalReaction>
+
+<bp:RelationshipXref rdf:about="id12">
+ <bp:id rdf:datatype = "xsd:string">3551</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:BiochemicalReaction rdf:about="id226">
+ <bp:left rdf:resource="e9070" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c1c85">
+ <bp:displayName rdf:datatype = "xsd:string">MMP7</bp:displayName>
+ <bp:entityReference rdf:resource="id149" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id13">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id14" />
+</bp:ProteinReference>
+
+<bp:BiochemicalReaction rdf:about="id223">
+ <bp:right rdf:resource="af7f7" />
+</bp:BiochemicalReaction>
+
+<bp:RelationshipXref rdf:about="id14">
+ <bp:id rdf:datatype = "xsd:string">177</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:BiochemicalReaction rdf:about="id224">
+ <bp:right rdf:resource="a6ab1" />
+</bp:BiochemicalReaction>
+
+<bp:ProteinReference rdf:about="id15">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id16" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="e9070">
+ <bp:displayName rdf:datatype = "xsd:string">H2O2</bp:displayName>
+ <bp:entityReference rdf:resource="id101" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f479d">
+ <bp:displayName rdf:datatype = "xsd:string">ALPL</bp:displayName>
+ <bp:entityReference rdf:resource="id90" />
+</bp:Protein>
+
+<bp:Protein rdf:about="ac1a0">
+ <bp:displayName rdf:datatype = "xsd:string">CASP9</bp:displayName>
+ <bp:entityReference rdf:resource="id83" />
+</bp:Protein>
+
+<bp:Protein rdf:about="b1e61">
+ <bp:displayName rdf:datatype = "xsd:string">MAPK8</bp:displayName>
+ <bp:entityReference rdf:resource="id55" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f1558">
+ <bp:displayName rdf:datatype = "xsd:string">AGER</bp:displayName>
+ <bp:entityReference rdf:resource="id13" />
+</bp:Protein>
+
+<bp:Protein rdf:about="d04bd">
+ <bp:displayName rdf:datatype = "xsd:string">CYCS</bp:displayName>
+ <bp:entityReference rdf:resource="id112" />
+</bp:Protein>
+
+<bp:Protein rdf:about="dff48">
+ <bp:displayName rdf:datatype = "xsd:string">DDOST</bp:displayName>
+ <bp:entityReference rdf:resource="id122" />
+</bp:Protein>
+
+<bp:Protein rdf:about="bc3b6">
+ <bp:displayName rdf:datatype = "xsd:string">RAF1</bp:displayName>
+ <bp:entityReference rdf:resource="id88" />
+</bp:Protein>
+
+<bp:Protein rdf:about="e01ab">
+ <bp:displayName rdf:datatype = "xsd:string">RHOA</bp:displayName>
+ <bp:entityReference rdf:resource="id19" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f552e">
+ <bp:displayName rdf:datatype = "xsd:string">MAPK14</bp:displayName>
+ <bp:entityReference rdf:resource="id53" />
+</bp:Protein>
+
+<bp:Protein rdf:about="a73f2">
+ <bp:displayName rdf:datatype = "xsd:string">PRKCZ</bp:displayName>
+ <bp:entityReference rdf:resource="id104" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c7140">
+ <bp:displayName rdf:datatype = "xsd:string">STAT5A</bp:displayName>
+ <bp:entityReference rdf:resource="id94" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id200">
+ <bp:left rdf:resource="d45ac" />
+ <bp:right rdf:resource="ce949" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="f5146">
+ <bp:displayName rdf:datatype = "xsd:string">CASP3</bp:displayName>
+ <bp:entityReference rdf:resource="id21" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id203">
+ <bp:right rdf:resource="f7731" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id204">
+ <bp:left rdf:resource="f840d" />
+ <bp:right rdf:resource="f1bb6" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id201">
+ <bp:left rdf:resource="ae895" />
+ <bp:right rdf:resource="c1fae" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id202">
+</bp:BiochemicalReaction>
+
+<bp:Catalysis rdf:about="id207">
+ <bp:controlled rdf:resource="id206" />
+ <bp:controller rdf:resource="abec4" />
+</bp:Catalysis>
+
+<bp:BiochemicalReaction rdf:about="id208">
+ <bp:right rdf:resource="c5f9d" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id205">
+ <bp:left rdf:resource="af7f7" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id206">
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="b206c">
+ <bp:displayName rdf:datatype = "xsd:string">MMP9</bp:displayName>
+ <bp:entityReference rdf:resource="id147" />
+</bp:Protein>
+
+<bp:Protein rdf:about="abec4">
+ <bp:displayName rdf:datatype = "xsd:string">PLC</bp:displayName>
+ <bp:entityReference rdf:resource="id75" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id159">
+ <bp:left rdf:resource="d93a5" />
+ <bp:right rdf:resource="d6d36" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="d6d36">
+ <bp:displayName rdf:datatype = "xsd:string">NFKBIA</bp:displayName>
+ <bp:entityReference rdf:resource="id69" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id157">
+ <bp:left rdf:resource="f9531" />
+ <bp:right rdf:resource="a8401" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id158">
+ <bp:left rdf:resource="d6d36" />
+ <bp:right rdf:resource="f09b1" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id151">
+ <bp:left rdf:resource="c7140" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id152">
+ <bp:right rdf:resource="f1558" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="d666a">
+ <bp:displayName rdf:datatype = "xsd:string">MSR1</bp:displayName>
+ <bp:entityReference rdf:resource="id125" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id150">
+ <bp:id rdf:datatype = "xsd:string">4316</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:BiochemicalReaction rdf:about="id155">
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id156">
+ <bp:left rdf:resource="fd142" />
+ <bp:right rdf:resource="ca61e" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id153">
+ <bp:right rdf:resource="d6d36" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="da8b2">
+ <bp:displayName rdf:datatype = "xsd:string">SP1</bp:displayName>
+ <bp:entityReference rdf:resource="id45" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id154">
+ <bp:right rdf:resource="d6ab6" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c9a95">
+ <bp:displayName rdf:datatype = "xsd:string">SHC1</bp:displayName>
+ <bp:entityReference rdf:resource="id118" />
+</bp:Protein>
+
+<bp:Protein rdf:about="d96ee">
+ <bp:displayName rdf:datatype = "xsd:string">MAPK3</bp:displayName>
+ <bp:entityReference rdf:resource="id7" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id168">
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id169">
+ <bp:left rdf:resource="c2be2" />
+ <bp:right rdf:resource="bc3b6" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c8598">
+ <bp:displayName rdf:datatype = "xsd:string">STAT1</bp:displayName>
+ <bp:entityReference rdf:resource="id61" />
+</bp:Protein>
+
+<bp:Protein rdf:about="d0399">
+ <bp:displayName rdf:datatype = "xsd:string">JAK2</bp:displayName>
+ <bp:entityReference rdf:resource="id59" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id160">
+ <bp:left rdf:resource="f09b1" />
+ <bp:right rdf:resource="b766a" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id161">
+ <bp:left rdf:resource="c9a95" />
+ <bp:right rdf:resource="c2be2" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id162">
+ <bp:right rdf:resource="f552e" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id163">
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="d6ab6">
+ <bp:displayName rdf:datatype = "xsd:string">Na+ K+ ATPase</bp:displayName>
+ <bp:entityReference rdf:resource="id78" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id164">
+ <bp:left rdf:resource="d43b4" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id165">
+ <bp:right rdf:resource="d43b4" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id166">
+ <bp:left rdf:resource="e01ab" />
+ <bp:right rdf:resource="fd142" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="d45ac">
+ <bp:displayName rdf:datatype = "xsd:string">PRKCB</bp:displayName>
+ <bp:entityReference rdf:resource="id102" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id167">
+ <bp:left rdf:resource="c8007" />
+ <bp:left rdf:resource="ca61e" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="ca2f2">
+ <bp:displayName rdf:datatype = "xsd:string">STAT3</bp:displayName>
+ <bp:entityReference rdf:resource="id63" />
+</bp:Protein>
+
+<bp:Protein rdf:about="d43b4">
+ <bp:displayName rdf:datatype = "xsd:string">PLA2G4A</bp:displayName>
+ <bp:entityReference rdf:resource="id76" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c0d27">
+ <bp:displayName rdf:datatype = "xsd:string">SMAD3</bp:displayName>
+ <bp:entityReference rdf:resource="id5" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c5f9d">
+ <bp:displayName rdf:datatype = "xsd:string">PRKCA</bp:displayName>
+ <bp:entityReference rdf:resource="id25" />
+</bp:Protein>
+
+<bp:Protein rdf:about="cdb3d">
+ <bp:displayName rdf:datatype = "xsd:string">AKT1</bp:displayName>
+ <bp:entityReference rdf:resource="id51" />
+</bp:Protein>
+
+<bp:Protein rdf:about="fbb21">
+ <bp:displayName rdf:datatype = "xsd:string">SMAD2</bp:displayName>
+ <bp:entityReference rdf:resource="id71" />
+</bp:Protein>
+
+<bp:Protein rdf:about="f840d">
+ <bp:displayName rdf:datatype = "xsd:string">DIAPH1</bp:displayName>
+ <bp:entityReference rdf:resource="id73" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id179">
+ <bp:left rdf:resource="f552e" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c1104">
+ <bp:displayName rdf:datatype = "xsd:string">FOXO1</bp:displayName>
+ <bp:entityReference rdf:resource="id43" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id177">
+ <bp:left rdf:resource="cdb3d" />
+ <bp:right rdf:resource="c69e0" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id178">
+ <bp:left rdf:resource="bc3b6" />
+ <bp:right rdf:resource="c4629" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id175">
+ <bp:left rdf:resource="d6d36" />
+ <bp:right rdf:resource="f9531" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id176">
+ <bp:left rdf:resource="cdb3d" />
+ <bp:right rdf:resource="d1a37" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="dc564">
+ <bp:displayName rdf:datatype = "xsd:string">Ligand</bp:displayName>
+ <bp:entityReference rdf:resource="id111" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id173">
+ <bp:left rdf:resource="db477" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id174">
+ <bp:left rdf:resource="f552e" />
+ <bp:right rdf:resource="acfb1" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="fd142">
+ <bp:displayName rdf:datatype = "xsd:string">ROCK1</bp:displayName>
+ <bp:entityReference rdf:resource="id35" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id171">
+ <bp:left rdf:resource="f7731" />
+ <bp:right rdf:resource="da8b2" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id172">
+ <bp:left rdf:resource="b40db" />
+ <bp:right rdf:resource="ce949" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="ff1e5">
+ <bp:displayName rdf:datatype = "xsd:string">Pentosidine</bp:displayName>
+ <bp:entityReference rdf:resource="id110" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id170">
+ <bp:left rdf:resource="c4629" />
+ <bp:right rdf:resource="f09ac" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="d0782">
+ <bp:displayName rdf:datatype = "xsd:string">HIF1A</bp:displayName>
+ <bp:entityReference rdf:resource="id132" />
+</bp:Protein>
+
+<bp:Protein rdf:about="e944f">
+ <bp:displayName rdf:datatype = "xsd:string">AGE-modified albumin</bp:displayName>
+ <bp:entityReference rdf:resource="id109" />
+</bp:Protein>
+
+<bp:Protein rdf:about="a8401">
+ <bp:displayName rdf:datatype = "xsd:string">NFKB1</bp:displayName>
+ <bp:entityReference rdf:resource="id47" />
+</bp:Protein>
+
+<bp:Protein rdf:about="c4629">
+ <bp:displayName rdf:datatype = "xsd:string">MAP2K1</bp:displayName>
+ <bp:entityReference rdf:resource="id86" />
+</bp:Protein>
+
+<bp:Protein rdf:about="cd9bc">
+ <bp:displayName rdf:datatype = "xsd:string">CEL</bp:displayName>
+ <bp:entityReference rdf:resource="id108" />
+</bp:Protein>
+
+<bp:Protein rdf:about="bbe6a">
+ <bp:displayName rdf:datatype = "xsd:string">MMP14</bp:displayName>
+ <bp:entityReference rdf:resource="id143" />
+</bp:Protein>
+
+<bp:Protein rdf:about="ca61e">
+ <bp:displayName rdf:datatype = "xsd:string">MSN</bp:displayName>
+ <bp:entityReference rdf:resource="id31" />
+</bp:Protein>
+
+<bp:Protein rdf:about="a52fa">
+ <bp:displayName rdf:datatype = "xsd:string">HIF1A</bp:displayName>
+ <bp:entityReference rdf:resource="id132" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id186">
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id187">
+ <bp:left rdf:resource="ac33a" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id188">
+ <bp:left rdf:resource="cdb3d" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id189">
+ <bp:left rdf:resource="b40db" />
+ <bp:left rdf:resource="f1bb6" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id182">
+ <bp:left rdf:resource="f552e" />
+ <bp:right rdf:resource="f479d" />
+ <bp:right rdf:resource="a0854" />
+ <bp:right rdf:resource="fd142" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id183">
+ <bp:left rdf:resource="c69e0" />
+ <bp:right rdf:resource="c1104" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id184">
+ <bp:left rdf:resource="d1a37" />
+ <bp:right rdf:resource="ddab7" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id185">
+ <bp:left rdf:resource="f479d" />
+</bp:BiochemicalReaction>
+
+<bp:BiochemicalReaction rdf:about="id181">
+ <bp:right rdf:resource="acfb1" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="acfb1">
+ <bp:displayName rdf:datatype = "xsd:string">ATF2</bp:displayName>
+ <bp:entityReference rdf:resource="id79" />
+</bp:Protein>
+
+<bp:BiochemicalReaction rdf:about="id180">
+ <bp:right rdf:resource="acfb1" />
+ <bp:right rdf:resource="a0854" />
+</bp:BiochemicalReaction>
+
+<bp:Protein rdf:about="c7e07">
+ <bp:displayName rdf:datatype = "xsd:string">AGEs</bp:displayName>
+ <bp:entityReference rdf:resource="id127" />
+</bp:Protein>
+
+<bp:Protein rdf:about="b2ad9">
+ <bp:displayName rdf:datatype = "xsd:string">MYD88</bp:displayName>
+ <bp:entityReference rdf:resource="id27" />
+</bp:Protein>
+
+<bp:Protein rdf:about="a6ab1">
+ <bp:displayName rdf:datatype = "xsd:string">LGALS3</bp:displayName>
+ <bp:entityReference rdf:resource="id136" />
+</bp:Protein>
+
+<bp:Protein rdf:about="dbb51">
+ <bp:displayName rdf:datatype = "xsd:string">SOD1</bp:displayName>
+ <bp:entityReference rdf:resource="id114" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id112">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id113" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id111">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id110">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="af7f7">
+ <bp:displayName rdf:datatype = "xsd:string">NOX</bp:displayName>
+ <bp:entityReference rdf:resource="id96" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id116">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id115">
+ <bp:id rdf:datatype = "xsd:string">6647</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id114">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id115" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id113">
+ <bp:id rdf:datatype = "xsd:string">54205</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id119">
+ <bp:id rdf:datatype = "xsd:string">6464</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id118">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id119" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id117">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="ff031">
+ <bp:displayName rdf:datatype = "xsd:string">INSR</bp:displayName>
+ <bp:entityReference rdf:resource="id130" />
+</bp:Protein>
+
+<bp:Protein rdf:about="d8cde">
+ <bp:displayName rdf:datatype = "xsd:string">AGER</bp:displayName>
+ <bp:entityReference rdf:resource="id13" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id80">
+ <bp:id rdf:datatype = "xsd:string">1386</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id81">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id82" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id82">
+ <bp:id rdf:datatype = "xsd:string">3725</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id83">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id84" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="e1bbd">
+ <bp:displayName rdf:datatype = "xsd:string">AGEs</bp:displayName>
+ <bp:entityReference rdf:resource="id138" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id84">
+ <bp:id rdf:datatype = "xsd:string">842</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id85">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id86">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id87" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id87">
+ <bp:id rdf:datatype = "xsd:string">5604</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="fccf4">
+ <bp:displayName rdf:datatype = "xsd:string">SMAD2</bp:displayName>
+ <bp:entityReference rdf:resource="id71" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id88">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id89" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id89">
+ <bp:id rdf:datatype = "xsd:string">5894</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id121">
+ <bp:id rdf:datatype = "xsd:string">1956</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id120">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id121" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id123">
+ <bp:id rdf:datatype = "xsd:string">1650</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="c69e0">
+ <bp:displayName rdf:datatype = "xsd:string">FOXO1</bp:displayName>
+ <bp:entityReference rdf:resource="id43" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id122">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id123" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id125">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id126" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id124">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id127">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id126">
+ <bp:id rdf:datatype = "xsd:string">4481</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id129">
+ <bp:id rdf:datatype = "xsd:string">3630</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id128">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id129" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id90">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id91" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id91">
+ <bp:id rdf:datatype = "xsd:string">249</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="b81b8">
+ <bp:displayName rdf:datatype = "xsd:string">CML-Collagen</bp:displayName>
+ <bp:entityReference rdf:resource="id117" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id94">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id95" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id95">
+ <bp:id rdf:datatype = "xsd:string">6776</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="b766a">
+ <bp:displayName rdf:datatype = "xsd:string">RELA</bp:displayName>
+ <bp:entityReference rdf:resource="id49" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id92">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id93" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id93">
+ <bp:id rdf:datatype = "xsd:string">653361</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id98">
+ <bp:id rdf:datatype = "xsd:string">4843</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id99">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id100" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id96">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id97">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id98" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id134">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id135" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id133">
+ <bp:id rdf:datatype = "xsd:string">3091</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id132">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id133" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id131">
+ <bp:id rdf:datatype = "xsd:string">3643</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id130">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id131" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="f7731">
+ <bp:displayName rdf:datatype = "xsd:string">SP1</bp:displayName>
+ <bp:entityReference rdf:resource="id45" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id139">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id140" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id138">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="e589c">
+ <bp:displayName rdf:datatype = "xsd:string">IRS1</bp:displayName>
+ <bp:entityReference rdf:resource="id23" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id137">
+ <bp:id rdf:datatype = "xsd:string">3958</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id136">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id137" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id135">
+ <bp:id rdf:datatype = "xsd:string">7430</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="a0854">
+ <bp:displayName rdf:datatype = "xsd:string">JUN</bp:displayName>
+ <bp:entityReference rdf:resource="id81" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id60">
+ <bp:id rdf:datatype = "xsd:string">3717</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id61">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id62" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="d93a5">
+ <bp:displayName rdf:datatype = "xsd:string">IKBKB</bp:displayName>
+ <bp:entityReference rdf:resource="id11" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id62">
+ <bp:id rdf:datatype = "xsd:string">6772</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id67">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id68" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id68">
+ <bp:id rdf:datatype = "xsd:string">841</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="a4f30">
+ <bp:displayName rdf:datatype = "xsd:string">MMP13</bp:displayName>
+ <bp:entityReference rdf:resource="id145" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id69">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id70" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id63">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id64" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id64">
+ <bp:id rdf:datatype = "xsd:string">6774</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id65">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id66" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id66">
+ <bp:id rdf:datatype = "xsd:string">1147</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id143">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id144" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id142">
+ <bp:id rdf:datatype = "xsd:string">4313</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="b719d">
+ <bp:displayName rdf:datatype = "xsd:string">SMAD3</bp:displayName>
+ <bp:entityReference rdf:resource="id5" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id145">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id146" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="de582">
+ <bp:displayName rdf:datatype = "xsd:string">CASP8</bp:displayName>
+ <bp:entityReference rdf:resource="id67" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id144">
+ <bp:id rdf:datatype = "xsd:string">4323</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id141">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id142" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="b55fe">
+ <bp:displayName rdf:datatype = "xsd:string">Glyc-FBS</bp:displayName>
+ <bp:entityReference rdf:resource="id116" />
+</bp:Protein>
+
+<bp:RelationshipXref rdf:about="id140">
+ <bp:id rdf:datatype = "xsd:string">5580</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="a6127">
+ <bp:displayName rdf:datatype = "xsd:string">EGFR</bp:displayName>
+ <bp:entityReference rdf:resource="id120" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id147">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id148" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id146">
+ <bp:id rdf:datatype = "xsd:string">4322</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id149">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id150" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id148">
+ <bp:id rdf:datatype = "xsd:string">4318</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id72">
+ <bp:id rdf:datatype = "xsd:string">4087</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:Protein rdf:about="efb8f">
+ <bp:displayName rdf:datatype = "xsd:string">PRKCD</bp:displayName>
+ <bp:entityReference rdf:resource="id139" />
+</bp:Protein>
+
+<bp:Protein rdf:about="ea81b">
+ <bp:displayName rdf:datatype = "xsd:string">TIRAP</bp:displayName>
+ <bp:entityReference rdf:resource="id33" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id73">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id74" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id70">
+ <bp:id rdf:datatype = "xsd:string">4792</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id71">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id72" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="b40db">
+ <bp:displayName rdf:datatype = "xsd:string">RAC1</bp:displayName>
+ <bp:entityReference rdf:resource="id17" />
+</bp:Protein>
+
+<bp:ProteinReference rdf:about="id78">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id79">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id80" />
+</bp:ProteinReference>
+
+<bp:ProteinReference rdf:about="id76">
+ <bp:organism rdf:resource="id2" />
+ <bp:xref rdf:resource="id77" />
+</bp:ProteinReference>
+
+<bp:RelationshipXref rdf:about="id77">
+ <bp:id rdf:datatype = "xsd:string">5321</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:RelationshipXref rdf:about="id74">
+ <bp:id rdf:datatype = "xsd:string">1729</bp:id>
+ <bp:db rdf:datatype = "xsd:string">Entrez Gene</bp:db>
+</bp:RelationshipXref>
+
+<bp:ProteinReference rdf:about="id75">
+ <bp:organism rdf:resource="id2" />
+</bp:ProteinReference>
+
+<bp:Protein rdf:about="ce949">
+ <bp:displayName rdf:datatype = "xsd:string">NCF1</bp:displayName>
+ <bp:entityReference rdf:resource="id92" />
+</bp:Protein>
+</rdf:RDF>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Lidocaine metabolism" Author="Egon Willighagen" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Lidocaine is primarily metabolized by CYP1A2 but minor involvement of CYP3A4 is observed too.</Comment>
+  <Comment>Based on KEGG pathway http://www.genome.jp/kegg-bin/show_pathway?hsa00982.</Comment>
+  <Graphics BoardWidth="811.0" BoardHeight="397.0" />
+  <DataNode TextLabel="Lidocaine" GraphId="cd113" Type="Metabolite">
+    <Graphics CenterX="179.0" CenterY="212.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB14426" />
+  </DataNode>
+  <DataNode TextLabel="monoethyl&#xA;glycinexylidide" GraphId="d668d" Type="Metabolite">
+    <Graphics CenterX="376.0" CenterY="212.0" Width="80.0" Height="27.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="24415" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="e3332" Type="GeneProduct">
+    <Graphics CenterX="265.0" CenterY="157.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140505" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="e11d4" Type="GeneProduct">
+    <Graphics CenterX="265.0" CenterY="245.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000160868" />
+  </DataNode>
+  <DataNode TextLabel="3-hydroxylidocaine" GraphId="e517f" Type="Metabolite">
+    <Graphics CenterX="178.0" CenterY="353.0" Width="103.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="161824" />
+  </DataNode>
+  <DataNode TextLabel="2,6-xylidine" GraphId="c59ff" Type="Metabolite">
+    <Graphics CenterX="548.0" CenterY="212.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:28738" />
+  </DataNode>
+  <DataNode TextLabel="2-amino-3-methylbenzoate" GraphId="d02c6" Type="Metabolite">
+    <Graphics CenterX="711.0" CenterY="106.0" Width="140.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="PubChem-compound" ID="4161142" />
+  </DataNode>
+  <DataNode TextLabel="4-hydroxy-&#xA;2,6-dimethylaniline" GraphId="eadb2" Type="Metabolite">
+    <Graphics CenterX="729.5" CenterY="212.5" Width="89.0" Height="25.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:55545" />
+  </DataNode>
+  <DataNode TextLabel="3-hydroxymonoethyl&#xA;glycinexylidide" GraphId="ca0ff" Type="Metabolite">
+    <Graphics CenterX="376.5" CenterY="354.0" Width="109.0" Height="26.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="KEGG Compound" ID="C16572" />
+  </DataNode>
+  <DataNode TextLabel="glycinexylidide" GraphId="ca7df" Type="Metabolite">
+    <Graphics CenterX="548.0" CenterY="306.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="ChEBI" ID="CHEBI:357241" />
+  </DataNode>
+  <DataNode TextLabel="CYP1A2" GraphId="e20e7" Type="GeneProduct">
+    <Graphics CenterX="100.0" CenterY="282.0" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000140505" />
+  </DataNode>
+  <DataNode TextLabel="CYP3A4" GraphId="cb81f" Type="GeneProduct">
+    <Graphics CenterX="265.0" CenterY="282.0" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000160868" />
+  </DataNode>
+  <Interaction GraphId="idb4e6360e">
+    <BiopaxRef>dff</BiopaxRef>
+    <BiopaxRef>f6a</BiopaxRef>
+    <BiopaxRef>f45</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="219.0" Y="212.0" GraphRef="cd113" RelX="1.0" RelY="0.0" />
+      <Point X="336.0" Y="212.0" GraphRef="d668d" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+      <Anchor Position="0.4" Shape="None" GraphId="e352f" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idc372dfec">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="265.0" Y="167.0" GraphRef="e3332" RelX="0.0" RelY="1.0" />
+      <Point X="265.8" Y="212.0" GraphRef="e352f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id76aaf04a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="265.0" Y="235.0" GraphRef="e11d4" RelX="0.0" RelY="-1.0" />
+      <Point X="265.8" Y="212.0" GraphRef="e352f" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb9262808">
+    <BiopaxRef>f6a</BiopaxRef>
+    <BiopaxRef>f45</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="179.0" Y="222.0" GraphRef="cd113" RelX="0.0" RelY="1.0" />
+      <Point X="178.0" Y="343.0" GraphRef="e517f" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+      <Anchor Position="0.5040295041660975" Shape="None" GraphId="a0a95" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5c24ba9b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="225.0" Y="282.0" GraphRef="cb81f" RelX="-1.0" RelY="0.0" />
+      <Point X="178.49597049583392" Y="282.9875700040978" GraphRef="a0a95" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4e93dbbe">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="140.0" Y="282.0" GraphRef="e20e7" RelX="1.0" RelY="0.0" />
+      <Point X="178.49597049583392" Y="282.9875700040978" GraphRef="a0a95" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida635fa68">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="416.0" Y="212.0" GraphRef="d668d" RelX="1.0" RelY="0.0" />
+      <Point X="508.0" Y="212.0" GraphRef="c59ff" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id94583f32">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="179.0" Y="202.0" GraphRef="cd113" RelX="0.0" RelY="-1.0" />
+      <Point X="179.0" Y="105.0" />
+      <Point X="527.0" Y="105.0" />
+      <Point X="528.0" Y="202.0" GraphRef="c59ff" RelX="-0.5" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id28a7c7d9">
+    <Graphics ConnectorType="Segmented" ZOrder="12288" LineThickness="1.0">
+      <Point X="568.0" Y="202.0" GraphRef="c59ff" RelX="0.5" RelY="-1.0" />
+      <Point X="568.0" Y="105.0" />
+      <Point X="641.0" Y="106.0" GraphRef="d02c6" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf6b56c5b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="588.0" Y="212.0" GraphRef="c59ff" RelX="1.0" RelY="0.0" />
+      <Point X="685.0" Y="212.5" GraphRef="eadb2" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id99c68ff9">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="376.0" Y="225.5" GraphRef="d668d" RelX="0.0" RelY="1.0" />
+      <Point X="376.5" Y="341.0" GraphRef="ca0ff" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb8588c6a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="229.5" Y="353.0" GraphRef="e517f" RelX="1.0" RelY="0.0" />
+      <Point X="322.0" Y="354.0" GraphRef="ca0ff" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9c9a3c27">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="548.0" Y="296.0" GraphRef="ca7df" RelX="0.0" RelY="-1.0" />
+      <Point X="548.0" Y="222.0" GraphRef="c59ff" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6747c81e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="396.0" Y="225.5" GraphRef="d668d" RelX="0.5" RelY="1.0" />
+      <Point X="508.0" Y="306.0" GraphRef="ca7df" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f6a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10608481</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluvoxamine is a more potent inhibitor of lidocaine metabolism than ketoconazole and erythromycin in vitro.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacol Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang JS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Backman JT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wen X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taavitsainen P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuvonen PJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kivistö KT</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dff">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14749694</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytochrome P450 1A2 is a major determinant of lidocaine metabolism in vivo: effects of liver function.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clin Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlando R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piccoli P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">De Martin S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Padrini R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Floreani M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palatini P</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phase I biotransformation pathway via cytochrome P450</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000375</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="f45">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16918719</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effect of fluvoxamine and erythromycin on the pharmacokinetics of oral lidocaine.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basic Clin Pharmacol Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isohanni MH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neuvonen PJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olkkola KT</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

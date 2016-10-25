@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="production" id="edge10737072" name="arc" source="reactionVertex10737069" target="entityVertex10737071">
+      <end name="end" x="20817.0" y="1722.0"/>
+      <start name="start" x="20553.0" y="1836.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10737073" name="arc" source="entityVertex10737068" target="reactionVertex10737069">
+      <end name="end" x="20535.0" y="1836.0"/>
+      <start name="start" x="20433.0" y="1900.8"/>
+    </arc>
+    <arc class="consumption" id="edge10737074" name="arc" source="entityVertex10737070" target="reactionVertex10737069">
+      <end name="end" x="20535.0" y="1836.0"/>
+      <start name="start" x="20085.0" y="1719.0"/>
+    </arc>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex21679810614426" name="glyph">
+      <bbox h="873.0" name="bbox" w="913.5" x="10248.0" y="198.0"/>
+      <label name="label" text="secretory granule">
+        <bbox h="24.0" name="bbox" w="136.0" x="20642.16" y="468.0"/>
+      </label>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex7010110614426" name="glyph">
+      <bbox h="1191.0" name="bbox" w="3037.5" x="8571.0" y="16.5"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="17628.0" y="105.0"/>
+      </label>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex10737068" name="glyph">
+      <bbox h="57.6" name="bbox" w="168.0" x="10174.5" y="936.0"/>
+      <glyph class="unit of information" id="entityVertex10737068mt" name="glyph">
+        <bbox h="24.0" name="bbox" w="56.0" x="10182.5" y="930.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="SLC30A8 coordinates "/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10737070" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="10020.0" y="850.5"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="simple chemical" id="entityVertex10737071" name="glyph">
+      <bbox h="36.0" name="bbox" w="90.0" x="10386.0" y="852.0"/>
+      <label name="label" text="Zn2"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10737069" name="glyph">
+      <port id="reactionVertex107370691" name="port" x="10294.5" y="927.0"/>
+      <bbox h="36.0" name="bbox" w="36.0" x="10258.5" y="909.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex10737739" name="glyph">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+  </map>
+</sbgn>

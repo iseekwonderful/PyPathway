@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="miR-148a/miR-31/FIH1/HIF1α-Notch signaling in glioblastoma " Version="20151214" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">miR-148a and miR-31 target the factor inhibiting hypoxia (FIH1) to promote downstream HIF1α and Notch signaling</Comment>
+  <BiopaxRef>cd0</BiopaxRef>
+  <Graphics BoardWidth="724.7004608294931" BoardHeight="637.5966386554624"/>
+  <DataNode TextLabel="MIR31" GraphId="a5c7d" Type="GeneProduct" GroupRef="b8e35">
+    <Graphics CenterX="264.9033613445378" CenterY="101.79831932773106" Width="56.806722689075514" Height="19.999999999999986" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase Sequence" ID="MI0000089"/>
+  </DataNode>
+  <DataNode TextLabel="HIF1AN" GraphId="b4193" Type="GeneProduct">
+    <Graphics CenterX="264.8067226890756" CenterY="237.30252100840335" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000166135"/>
+  </DataNode>
+  <DataNode TextLabel="HIF1A" GraphId="aaa2c" Type="GeneProduct">
+    <Graphics CenterX="128.2521008403361" CenterY="145.91596638655452" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100644"/>
+  </DataNode>
+  <DataNode TextLabel="MIR148A" GraphId="be13d" Type="Rna" GroupRef="b8e35">
+    <Graphics CenterX="264.9033613445378" CenterY="121.79831932773106" Width="56.806722689075514" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099"/>
+    <Xref Database="miRBase Sequence" ID="MI0000253"/>
+  </DataNode>
+  <DataNode TextLabel="VEGFA" GraphId="a9fc2" Type="GeneProduct" GroupRef="dd341">
+    <Graphics CenterX="226.9915966386559" CenterY="409.57142857142856" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000112715"/>
+  </DataNode>
+  <DataNode TextLabel="HES1" GraphId="a1278" Type="GeneProduct" GroupRef="a2f54">
+    <Graphics CenterX="529.5126050420148" CenterY="417.9747899159658" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000114315"/>
+  </DataNode>
+  <DataNode TextLabel="HEY1" GraphId="c3813" Type="GeneProduct" GroupRef="a2f54">
+    <Graphics CenterX="529.5126050420148" CenterY="437.9747899159658" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000164683"/>
+  </DataNode>
+  <DataNode TextLabel="HIF1A" GraphId="c1945" Type="GeneProduct">
+    <Graphics CenterX="128.2521008403361" CenterY="237.30252100840335" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100644"/>
+  </DataNode>
+  <DataNode TextLabel="VEGFB" GraphId="b3047" Type="GeneProduct" GroupRef="dd341">
+    <Graphics CenterX="226.9915966386559" CenterY="429.57142857142856" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000173511"/>
+  </DataNode>
+  <DataNode TextLabel="VEGFC" GraphId="bd27c" Type="GeneProduct" GroupRef="dd341">
+    <Graphics CenterX="226.9915966386559" CenterY="449.57142857142856" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000150630"/>
+  </DataNode>
+  <DataNode TextLabel="HIF1A" GraphId="a9e99" Type="GeneProduct" GroupRef="ede45">
+    <Graphics CenterX="415.0168067226905" CenterY="249.8487394957985" Width="80.0" Height="20.0" ZOrder="32772" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000100644"/>
+  </DataNode>
+  <Interaction GraphId="ide662591b">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="264.9033613445378" Y="139.79831932773106" GraphRef="d315c" RelX="0.0" RelY="1.0"/>
+      <Point X="264.8067226890756" Y="227.30252100840335" GraphRef="b4193" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4f6bb02a">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="224.80672268907563" Y="237.30252100840335" GraphRef="b4193" RelX="-1.0" RelY="0.0"/>
+      <Point X="168.2521008403361" Y="237.30252100840335" GraphRef="c1945" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id79b37461">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="128.2521008403361" Y="155.91596638655452" GraphRef="aaa2c" RelX="0.0" RelY="1.0"/>
+      <Point X="128.2521008403361" Y="227.30252100840335" GraphRef="c1945" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4c607dd0">
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="128.2521008403361" Y="247.30252100840335" GraphRef="c1945" RelX="0.0" RelY="1.0"/>
+      <Point X="178.9915966386559" Y="429.57142857142856" GraphRef="d8648" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id79dc72a3">
+    <Graphics ZOrder="12288" LineThickness="1.0" Color="ff0033">
+      <Point X="304.8067226890756" Y="237.30252100840335" GraphRef="b4193" RelX="1.0" RelY="0.0"/>
+      <Point X="367.0" Y="237.42436974789925" GraphRef="f5d7d" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idfe1efe9">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="226.9915966386559" Y="467.57142857142856" GraphRef="d8648" RelX="0.0" RelY="1.0"/>
+      <Point X="227.47478991597006" Y="499.80672268907574" GraphRef="ff0b7" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b02a9">
+    <Graphics ConnectorType="Elbow" ZOrder="32773" LineThickness="1.0">
+      <Point X="415.00840336134524" Y="267.8487394957985" GraphRef="f5d7d" RelX="0.0" RelY="1.0"/>
+      <Point X="481.5126050420148" Y="427.9747899159658" GraphRef="b7592" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="d134b">
+    <Graphics ZOrder="32775" LineStyle="Broken" LineThickness="1.0">
+      <Point X="529.5126050420148" Y="455.9747899159658" GraphRef="b7592" RelX="0.0" RelY="1.0"/>
+      <Point X="529.5420168067247" Y="491.25210084033597" GraphRef="a6585" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="b2e4e">
+    <Graphics ZOrder="32777" LineStyle="Broken" LineThickness="1.0">
+      <Point X="227.47478991597006" Y="549.0" GraphRef="ff0b7" RelX="0.0" RelY="1.0"/>
+      <Point X="227.53456221198155" Y="567.1344537815128" GraphRef="adc22" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="eaf03">
+    <Graphics ZOrder="32779" LineStyle="Broken" LineThickness="1.0">
+      <Point X="529.5420168067247" Y="540.0" GraphRef="a6585" RelX="0.0" RelY="1.0"/>
+      <Point X="528.8018433179724" Y="566.6302521008402" GraphRef="e6a70" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="- Abnormal angiogenesis&#10;- Stem cell maintenance&#10;- High levels of Ki67" GraphId="ff0b7">
+    <Graphics CenterX="227.47478991597006" CenterY="524.4033613445379" Width="164.99999999999977" Height="49.19327731092426" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Notch Intracellular domain" GraphId="d704d">
+    <Graphics CenterX="502.0" CenterY="225.0" Width="132.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="- More normalized vessels&#10;- Reduced stemness&#10;- Low levels of Ki67" GraphId="a6585">
+    <Graphics CenterX="529.5420168067247" CenterY="515.626050420168" Width="164.99999999999977" Height="48.74789915966403" ZOrder="32774" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Fast tumor growth and short lifespan" GraphId="adc22">
+    <Graphics CenterX="227.53456221198155" CenterY="587.3655462184876" Width="316.8202764976959" Height="40.46218487394958" ZOrder="32776" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Smaller tumor size and lifespan extended" GraphId="e6a70">
+    <Graphics CenterX="528.8018433179724" CenterY="586.861344537815" Width="331.79723502304137" Height="40.46218487394958" ZOrder="32778" FillColor="ffffff" FontWeight="Bold" FontSize="14" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="NICD" GraphId="de258" GroupRef="ede45">
+    <Graphics CenterX="415.0" CenterY="225.0" Width="80.0" Height="20.0" ZOrder="32780" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Group GroupId="b8e35" GraphId="d315c" Style="Group"/>
+  <Group GroupId="dd341" GraphId="d8648" Style="Group"/>
+  <Group GroupId="a2f54" GraphId="b7592" Style="Group"/>
+  <Group GroupId="ede45" GraphId="f5d7d" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25903473</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Cancer Genome Atlas Analysis Predicts MicroRNA for Targeting Cancer Growth and Vascularization in Glioblastoma.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong HK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fatimy RE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onodera C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wei Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yi M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohan A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gowrisankaran S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karmali P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marcusson E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wakimoto H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephens R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uhlmann EJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Song JS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tannous B</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krichevsky AM</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>disease pathway</bp:TERM><bp:ID>PW:0000013</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>cancer</bp:TERM><bp:ID>DOID:162</bp:ID><bp:Ontology>Disease</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>glioma pathway</bp:TERM><bp:ID>PW:0000711</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sbgn xmlns="http://sbgn.org/libsbgn/0.2">
+  <map language="process description">
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex_7660_615498">
+      <label text="nucleoplasm">
+        <bbox h="24.0" w="88.0" x="6121.08" y="483.0"/>
+      </label>
+      <bbox h="2190.0" w="3276.0" x="5859.0" y="411.0"/>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="10.0" id="compartmentVertex_7660_508493">
+      <label text="nucleoplasm">
+        <bbox h="24.0" w="88.0" x="1308.84" y="266.01"/>
+      </label>
+      <bbox h="2667.0" w="4248.0" x="969.0" y="186.0"/>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex_70101_615498">
+      <label text="cytosol">
+        <bbox h="24.0" w="56.0" x="6047.88" y="323.76"/>
+      </label>
+      <bbox h="3192.0" w="4461.0" x="5691.0" y="228.0"/>
+    </glyph>
+    <glyph class="compartment" compartmentOrder="2.0" id="compartmentVertex_70101_508493">
+      <label text="cytosol">
+        <bbox h="24.0" w="56.0" x="476.4" y="156.18"/>
+      </label>
+      <bbox h="3006.0" w="5355.0" x="48.0" y="66.0"/>
+    </glyph>
+    <glyph class="complex" id="entityVertex_10884852">
+      <label text="CDC6_ORC_origin"/>
+      <bbox h="36.0" w="171.0" x="2829.0" y="990.0"/>
+      <glyph class="annotation" id="entityVertex_10884852_annotation">
+        <label text="ORC:origin of replication, CDC6"/>
+        <callout target="entityVertex_10884852">
+          <point x="3000.0" y="1026.0"/>
+        </callout>
+        <bbox h="24.0" w="248.0" x="3016.0" y="1050.0"/>
+      </glyph>
+    </glyph>
+    <glyph class="unspecified entity" id="entityVertex_10884867">
+      <label text="E2F1"/>
+      <bbox h="36.0" w="103.5" x="3432.0" y="1284.0"/>
+    </glyph>
+    <glyph class="macromolecule" id="entityVertex_10884884">
+      <label text="CDC6"/>
+      <bbox h="36.0" w="90.0" x="3267.0" y="1104.0"/>
+      <glyph class="unit of information" id="entityVertex_10884884_mt">
+        <label text="mt:prot"/>
+        <bbox h="24.0" w="56.0" x="3283.0" y="1092.0"/>
+      </glyph>
+    </glyph>
+    <glyph class="complex" id="entityVertex_10884929">
+      <label text="ORC_origin replicati"/>
+      <bbox h="36.0" w="133.5" x="3420.0" y="987.0"/>
+      <glyph class="annotation" id="entityVertex_10884929_annotation">
+        <label text="ORC3, ORC5, ORC6, ORC4, origin of replication, ORC1, Orc2 associated with MCM8"/>
+        <callout target="entityVertex_10884929">
+          <point x="3553.5" y="1023.0"/>
+        </callout>
+        <bbox h="24.0" w="624.0" x="3569.5" y="1047.0"/>
+      </glyph>
+    </glyph>
+    <glyph class="process" id="reactionVertex_10884919">
+      <bbox h="36.0" w="36.0" x="3243.0" y="1038.0"/>
+      <port id="reactionVertex_10884919.1" x="3243.0" y="1056.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex_10884948">
+      <bbox h="36.0" w="36.0" x="3327.0" y="1317.0"/>
+      <port id="reactionVertex_10884948.1" x="3345.0" y="1317.0"/>
+    </glyph>
+    <glyph class="process" id="reactionVertex_10943999">
+      <bbox h="0.0" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+    <arc class="production" id="edge_10884900" source="reactionVertex_10884948.1" target="entityVertex_10884884">
+      <start x="3345.0" y="1317.0"/>
+      <end x="3312.0" y="1140.0"/>
+    </arc>
+    <arc class="consumption" id="edge_10884914" source="entityVertex_10884929" target="reactionVertex_10884919">
+      <start x="3420.0" y="1005.0"/>
+      <end x="3279.0" y="1056.0"/>
+    </arc>
+    <arc class="stimulation" id="edge_10884915" source="entityVertex_10884867" target="reactionVertex_10884948">
+      <start x="3432.0" y="1302.0"/>
+      <end x="3363.0" y="1335.0"/>
+    </arc>
+    <arc class="consumption" id="edge_10884918" source="entityVertex_10884884" target="reactionVertex_10884919">
+      <start x="3267.0" y="1122.0"/>
+      <end x="3261.0" y="1074.0"/>
+    </arc>
+    <arc class="production" id="edge_10884975" source="reactionVertex_10884919.1" target="entityVertex_10884852">
+      <start x="3243.0" y="1056.0"/>
+      <end x="3000.0" y="1008.0"/>
+    </arc>
+  </map>
+</sbgn>

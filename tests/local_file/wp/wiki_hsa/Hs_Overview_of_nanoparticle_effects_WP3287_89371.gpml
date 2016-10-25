@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Overview of nanoparticle effects" Version="20150624" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">This pathway is giving a summary of currently known nanoparticle effects on cells and organisms. Although there is currently no nanoparticle specific effect known, there is a cascade of effects triggered if cells or organisms are exposed to nanoparticles: The most abundantly observed event is oxidative stress which causes DNA damage, protein and lipid oxidation, and cell death. The mere overload of nanoparticles in the vesicular system lead to cytoskeleton and cell adhesion problems and interfere with the cells autophagic system. Some specific nanoparticles are reported to interfere with the cell membrane, others stimulate the blood coagulation system. The release of metal ions from specific nanoparticles challenges the metal disposal system of the cell. </Comment>
+  <Graphics BoardWidth="1045.3716508210887" BoardHeight="532.7108749999998" />
+  <DataNode TextLabel="Nanoparticle" GraphId="f632a">
+    <Graphics CenterX="491.46862499999986" CenterY="52.5" Width="79.06275000000028" Height="73.0" ZOrder="32768" FillColor="ffff00" FontSize="13" Valign="Middle" ShapeType="Oval" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Inflammation" GraphId="e4e41" Type="Pathway">
+    <BiopaxRef>fee</BiopaxRef>
+    <BiopaxRef>a83</BiopaxRef>
+    <Graphics CenterX="198.65737499999997" CenterY="302.0425000000001" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP453" />
+  </DataNode>
+  <DataNode TextLabel="Necrosis" GraphId="e0ecd" Type="Pathway">
+    <BiopaxRef>fdd</BiopaxRef>
+    <Graphics CenterX="438.77437499999985" CenterY="492.6658749999997" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP2513" />
+  </DataNode>
+  <DataNode TextLabel="Apoptosis" GraphId="ffedd" Type="Pathway">
+    <BiopaxRef>fdd</BiopaxRef>
+    <Graphics CenterX="340.07187499999986" CenterY="492.71087499999976" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP2507" />
+  </DataNode>
+  <DataNode TextLabel="Autophagic cell death" GraphId="d7e3d" Type="Pathway">
+    <BiopaxRef>fdd</BiopaxRef>
+    <Graphics CenterX="560.4908750000002" CenterY="492.3583749999998" Width="131.01824999999963" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP2509" />
+  </DataNode>
+  <DataNode TextLabel="Necroptosis" GraphId="fc382" Type="Pathway">
+    <BiopaxRef>fdd</BiopaxRef>
+    <Graphics CenterX="684.4692500000003" CenterY="492.3583749999998" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP2513" />
+  </DataNode>
+  <DataNode TextLabel="Oxidative stress" GraphId="a02c6" Type="Pathway">
+    <BiopaxRef>adc</BiopaxRef>
+    <Graphics CenterX="485.6813749999999" CenterY="145.74687500000005" Width="100.63725000000022" Height="23.048750000000027" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" LineStyle="Broken" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP408" />
+  </DataNode>
+  <DataNode TextLabel="Cell adhesion" GraphId="e3c8d" Type="Pathway">
+    <BiopaxRef>dfd</BiopaxRef>
+    <Graphics CenterX="648.8847499999999" CenterY="242.31249999999977" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP306" />
+  </DataNode>
+  <DataNode TextLabel="Cytoskeleton" GraphId="bbf84" Type="Pathway">
+    <BiopaxRef>dfd</BiopaxRef>
+    <BiopaxRef>b41</BiopaxRef>
+    <Graphics CenterX="650.0397500000003" CenterY="331.08000000000015" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP51" />
+  </DataNode>
+  <DataNode TextLabel="Blood coagulation" GraphId="e45d4" Type="Pathway">
+    <Graphics CenterX="561.426125" CenterY="379.04249999999985" Width="102.85224999999991" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP558" />
+  </DataNode>
+  <DataNode TextLabel="Immune system&#xA;up or down regulation" GraphId="df6eb" Type="Pathway">
+    <BiopaxRef>dd0</BiopaxRef>
+    <BiopaxRef>edf</BiopaxRef>
+    <Graphics CenterX="191.5" CenterY="446.77750000000026" Width="129.0" Height="34.44499999999948" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP2783" />
+  </DataNode>
+  <DataNode TextLabel="Prostaglandin pathway" GraphId="a6efa" Type="Pathway">
+    <Graphics CenterX="355.30674999999985" CenterY="161.35350000000008" Width="138.6134999999997" Height="27.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="006600" />
+    <Xref Database="WikiPathways" ID="WP98" />
+  </DataNode>
+  <DataNode TextLabel="P-cadherin" GraphId="ffc0a" Type="GeneProduct" GroupRef="a25d5">
+    <Graphics CenterX="820.0876389925373" CenterY="354.0927929104477" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000062038" />
+  </DataNode>
+  <DataNode TextLabel="FAK (PTK2)" GraphId="da822" Type="GeneProduct" GroupRef="a25d5">
+    <Graphics CenterX="820.0876389925373" CenterY="374.1501250000001" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169398" />
+  </DataNode>
+  <DataNode TextLabel="C-reactive protein" GraphId="b27fd" Type="GeneProduct">
+    <BiopaxRef>b31</BiopaxRef>
+    <BiopaxRef>cd5</BiopaxRef>
+    <Graphics CenterX="475.14829944029816" CenterY="333.5245811567164" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000132693" />
+  </DataNode>
+  <DataNode TextLabel="COX1 (PTGS1)" GraphId="feb7b" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="146.88012499999985" CenterY="112.02645802238837" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000095303" />
+  </DataNode>
+  <DataNode TextLabel="COX2 (PTGS2)" GraphId="b394e" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="225.75625000000002" CenterY="112.02645802238837" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000073756" />
+  </DataNode>
+  <DataNode TextLabel="HMOX1" GraphId="d5e74" Type="GeneProduct">
+    <BiopaxRef>d41</BiopaxRef>
+    <Graphics CenterX="636.6308749999998" CenterY="409.6021875" Width="74.73825000000033" Height="20.795624999999973" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000100292" />
+  </DataNode>
+  <DataNode TextLabel="Metallothionein" GraphId="e5ecf" Type="GeneProduct" GroupRef="c4c9a">
+    <Graphics CenterX="678.7763749999995" CenterY="60.56174999999996" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Pfam" ID="PF00131" />
+  </DataNode>
+  <DataNode TextLabel="ferritin" GraphId="ad084" Type="GeneProduct" GroupRef="c4c9a">
+    <Graphics CenterX="678.7763749999996" CenterY="79.56175000000013" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Pfam" ID="PF00210" />
+  </DataNode>
+  <DataNode TextLabel="Actin" GraphId="fee48" Type="GeneProduct">
+    <Graphics CenterX="854.4238750000009" CenterY="410.6313749999998" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Pfam" ID="PF00022" />
+  </DataNode>
+  <DataNode TextLabel="Glutathione " GraphId="b68ec" Type="Metabolite">
+    <BiopaxRef>a1f</BiopaxRef>
+    <Graphics CenterX="674.3468750000006" CenterY="147.07037500000024" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="ChEBI" ID="16856" />
+  </DataNode>
+  <DataNode TextLabel="Prostaglandin " GraphId="f1b63" Type="Metabolite" GroupRef="c705c">
+    <Comment></Comment>
+    <Graphics CenterX="349.5853749999996" CenterY="113.56712500000046" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="ChEBI" ID="CHEBI:26333" />
+  </DataNode>
+  <DataNode TextLabel="TNF-a Signaling" GraphId="ba4f1" Type="Pathway">
+    <Graphics CenterX="79.1603749999997" CenterY="225.4852499999999" Width="116.40324999999999" Height="21.57624999999996" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP231" />
+  </DataNode>
+  <DataNode TextLabel="Il-6 signaling" GraphId="c6713" Type="Pathway">
+    <Graphics CenterX="49.90537499999995" CenterY="141.48962499999996" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP364" />
+  </DataNode>
+  <DataNode TextLabel="DNA damage response" GraphId="b6c75" Type="Pathway">
+    <Graphics CenterX="191.6855000000004" CenterY="247.2828750000001" Width="148.81675000000007" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP707" />
+  </DataNode>
+  <DataNode TextLabel="Cell cycle" GraphId="d9af9" Type="Pathway">
+    <Graphics CenterX="869.0" CenterY="287.0" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP179" />
+  </DataNode>
+  <DataNode TextLabel="Integrin" GraphId="cf31b" Type="GeneProduct">
+    <BiopaxRef>a84</BiopaxRef>
+    <Graphics CenterX="781.0" CenterY="251.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000156886" />
+  </DataNode>
+  <DataNode TextLabel="PI3K" GraphId="bd94f" Type="GeneProduct">
+    <Graphics CenterX="804.0" CenterY="206.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000171608" />
+  </DataNode>
+  <DataNode TextLabel="AKT" GraphId="a0c7c" Type="GeneProduct">
+    <Graphics CenterX="849.0" CenterY="172.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000117020" />
+  </DataNode>
+  <DataNode TextLabel="Angiogenesis" GraphId="a7a1e" Type="Pathway" GroupRef="f300c">
+    <Graphics CenterX="962.3716508210886" CenterY="180.45721694036305" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP1539" />
+  </DataNode>
+  <DataNode TextLabel="Differentiation" GraphId="fdb65" Type="Pathway" GroupRef="f300c">
+    <Graphics CenterX="962.3716508210886" CenterY="213.45721694036305" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP2848" />
+  </DataNode>
+  <DataNode TextLabel="fibronectin" GraphId="fda70" Type="GeneProduct" GroupRef="a25d5">
+    <Graphics CenterX="899.05125" CenterY="354.0927929104477" Width="80.0" Height="20.0" ZOrder="32798" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000115414" />
+  </DataNode>
+  <DataNode TextLabel="collagen IV" GraphId="de983" Type="GeneProduct" GroupRef="a25d5">
+    <Graphics CenterX="899.05125" CenterY="374.1501250000001" Width="80.0" Height="20.0" ZOrder="32799" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000187498" />
+  </DataNode>
+  <DataNode TextLabel="NF-kB" GraphId="ce28b" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="224.91387500000013" CenterY="161.68599999999978" Width="80.0" Height="20.0" ZOrder="32801" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000170322" />
+  </DataNode>
+  <DataNode TextLabel="Bax" GraphId="b232f" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="224.91387500000013" CenterY="141.35125000000045" Width="80.0" Height="20.0" ZOrder="32802" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000087088" />
+  </DataNode>
+  <DataNode TextLabel="IL-6" GraphId="e56eb" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="145.88012499999985" CenterY="141.35125000000045" Width="80.0" Height="20.0" ZOrder="32803" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000136244" />
+  </DataNode>
+  <DataNode TextLabel="Il-8" GraphId="bbfd9" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="145.88012499999985" CenterY="161.68599999999978" Width="80.0" Height="20.0" ZOrder="32804" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169429" />
+  </DataNode>
+  <DataNode TextLabel="Bcl-2" GraphId="ead50" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="224.91387500000013" CenterY="180.13600000000008" Width="80.0" Height="20.0" ZOrder="32806" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000171791" />
+  </DataNode>
+  <DataNode TextLabel="TNF-a" GraphId="a1b86" Type="GeneProduct" GroupRef="c705c">
+    <Graphics CenterX="145.88012499999985" CenterY="180.13600000000008" Width="80.0" Height="20.0" ZOrder="32807" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000232810" />
+  </DataNode>
+  <DataNode TextLabel="cyclin D3" GraphId="b0b92" Type="GeneProduct" GroupRef="a25d5">
+    <BiopaxRef>a84</BiopaxRef>
+    <Graphics CenterX="820.0876389925373" CenterY="336.8926250000002" Width="80.0" Height="20.0" ZOrder="32808" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000112576" />
+  </DataNode>
+  <DataNode TextLabel="laminin" GraphId="b065c" Type="GeneProduct" GroupRef="a25d5">
+    <Graphics CenterX="899.05125" CenterY="336.8926250000002" Width="80.0" Height="20.0" ZOrder="32809" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000053747" />
+  </DataNode>
+  <Interaction GraphId="id96b07c7">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="491.46862499999986" Y="89.0" GraphRef="f632a" RelX="0.0" RelY="1.0" />
+      <Point X="485.6813749999999" Y="134.22250000000003" GraphRef="a02c6" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbe75848d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="451.9372499999997" Y="52.5" GraphRef="f632a" RelX="-1.0" RelY="0.0" />
+      <Point X="281.0" Y="56.25" GraphRef="c1303" RelX="1.0" RelY="-0.5" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb07bf61b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="426.0" Y="263.0" GraphRef="d2d94" RelX="0.0" RelY="1.0" />
+      <Point X="340.07187499999986" Y="482.71087499999976" GraphRef="ffedd" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7b553998">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="375.0" Y="217.0" GraphRef="bd07f" RelX="0.0" RelY="1.0" />
+      <Point X="340.07187499999986" Y="482.71087499999976" GraphRef="ffedd" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id62bbc58c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="814.4238750000009" Y="410.6313749999998" GraphRef="fee48" RelX="-1.0" RelY="0.0" />
+      <Point X="650.0397500000003" Y="341.08000000000015" GraphRef="bbf84" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8e4bb9ab">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="599.2617499999997" Y="409.6021875" GraphRef="d5e74" RelX="-1.0" RelY="0.0" />
+      <Point X="561.426125" Y="389.04249999999985" GraphRef="e45d4" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ideb7b8d6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="772.0876389925374" Y="355.52137500000015" GraphRef="c0b3c" RelX="-1.0" RelY="0.0" />
+      <Point X="688.8847499999999" Y="242.31249999999977" GraphRef="e3c8d" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3ca79b47">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="634.3468750000006" Y="147.07037500000024" GraphRef="b68ec" RelX="-1.0" RelY="0.0" />
+      <Point X="536.0" Y="145.74687500000005" GraphRef="a02c6" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide1f14431">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="238.65737499999997" Y="302.0425000000001" GraphRef="e4e41" RelX="1.0" RelY="0.0" />
+      <Point X="247.73274999999973" Y="198.13600000000008" GraphRef="f8e66" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id73a5139c" GroupRef="c705c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="309.5853749999996" Y="113.56712500000046" GraphRef="f1b63" RelX="-1.0" RelY="0.0" />
+      <Point X="265.75625" Y="112.02645802238837" GraphRef="b394e" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id946e8fec" GroupRef="c705c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="309.5853749999996" Y="113.56712500000046" GraphRef="f1b63" RelX="-1.0" RelY="0.0" />
+      <Point X="186.88012499999985" Y="112.02645802238837" GraphRef="feb7b" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide4e16319">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="531.0" Y="52.5" GraphRef="f632a" RelX="1.0" RelY="0.0" />
+      <Point X="630.7763749999995" Y="70.06175000000005" GraphRef="f51ba" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id7d633b90">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="355.30674999999985" Y="147.85350000000008" GraphRef="a6efa" RelX="0.0" RelY="-1.0" />
+      <Point X="349.5853749999996" Y="123.56712500000046" GraphRef="f1b63" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida485da1f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="145.88012499999985" Y="190.13600000000008" GraphRef="a1b86" RelX="0.0" RelY="1.0" />
+      <Point X="79.1603749999997" Y="214.69712499999991" GraphRef="ba4f1" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id90edc79e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="158.65737499999997" Y="302.0425000000001" GraphRef="e4e41" RelX="-1.0" RelY="0.0" />
+      <Point X="79.1603749999997" Y="236.27337499999987" GraphRef="ba4f1" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd2f1032b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="145.88012499999985" Y="131.35125000000045" GraphRef="e56eb" RelX="0.0" RelY="-1.0" />
+      <Point X="475.14829944029816" Y="343.5245811567164" GraphRef="b27fd" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddbe606f">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="89.90537499999995" Y="141.48962499999996" GraphRef="c6713" RelX="1.0" RelY="0.0" />
+      <Point X="105.88012499999985" Y="141.35125000000045" GraphRef="e56eb" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1c2bda66">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="650.0397500000003" Y="341.08000000000015" GraphRef="bbf84" RelX="0.0" RelY="1.0" />
+      <Point X="767.4238750000009" Y="456.5" GraphRef="bb7a9" RelX="-1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3b28ebe0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="820.0876389925373" Y="326.8926250000002" GraphRef="b0b92" RelX="0.0" RelY="-1.0" />
+      <Point X="849.0" Y="297.0" GraphRef="d9af9" RelX="-0.5" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ided5232ac">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="781.0" Y="241.0" GraphRef="cf31b" RelX="0.0" RelY="-1.0" />
+      <Point X="804.0" Y="216.0" GraphRef="bd94f" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="iddfeae967">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="889.0" Y="172.0" GraphRef="a0c7c" RelX="1.0" RelY="0.0" />
+      <Point X="907.8716508210886" Y="178.08221694036308" GraphRef="e56cc" RelX="-1.0" RelY="-0.5" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb85f66c6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="335.0" Y="207.0" GraphRef="bd07f" RelX="-1.0" RelY="0.0" />
+      <Point X="266.0938750000004" Y="247.2828750000001" GraphRef="b6c75" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4b54811">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="869.0" Y="277.0" GraphRef="d9af9" RelX="0.0" RelY="-1.0" />
+      <Point X="907.8716508210886" Y="240.33221694036308" GraphRef="e56cc" RelX="-1.0" RelY="0.5" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a3119">
+    <Graphics ZOrder="32769" LineThickness="1.0">
+      <Point X="491.46862499999986" Y="89.0" GraphRef="f632a" RelX="0.0" RelY="1.0" />
+      <Point X="648.8847499999999" Y="232.31249999999977" GraphRef="e3c8d" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b33b4">
+    <Graphics ZOrder="32770" LineThickness="1.0">
+      <Point X="491.46862499999986" Y="89.0" GraphRef="f632a" RelX="0.0" RelY="1.0" />
+      <Point X="650.0397500000003" Y="321.08000000000015" GraphRef="bbf84" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="af890">
+    <Graphics ZOrder="32771" LineThickness="1.0">
+      <Point X="491.46862499999986" Y="89.0" GraphRef="f632a" RelX="0.0" RelY="1.0" />
+      <Point X="561.426125" Y="369.04249999999985" GraphRef="e45d4" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ab437">
+    <Graphics ZOrder="32772" LineThickness="1.0">
+      <Point X="491.46862499999986" Y="89.0" GraphRef="f632a" RelX="0.0" RelY="1.0" />
+      <Point X="424.6134999999997" Y="154.60350000000008" GraphRef="a6efa" RelX="1.0" RelY="-0.5" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bec7e">
+    <Graphics ZOrder="32773" LineThickness="1.0">
+      <Point X="485.6813749999999" Y="157.27125000000007" GraphRef="a02c6" RelX="0.0" RelY="1.0" />
+      <Point X="415.0" Y="207.0" GraphRef="bd07f" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e3e49">
+    <Graphics ZOrder="32774" LineThickness="1.0">
+      <Point X="648.8847499999999" Y="252.31249999999977" GraphRef="e3c8d" RelX="0.0" RelY="1.0" />
+      <Point X="650.0397500000003" Y="321.08000000000015" GraphRef="bbf84" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cebae">
+    <Graphics ZOrder="32775" LineThickness="1.0">
+      <Point X="286.0" Y="161.35350000000008" GraphRef="a6efa" RelX="-1.0" RelY="0.0" />
+      <Point X="238.65737499999997" Y="302.0425000000001" GraphRef="e4e41" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e1e4f">
+    <Graphics ZOrder="32776" LineThickness="1.0">
+      <Point X="335.0" Y="207.0" GraphRef="bd07f" RelX="-1.0" RelY="0.0" />
+      <Point X="244.0" Y="397.0" GraphRef="a88d7" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d7df5">
+    <Graphics ZOrder="32777" LineThickness="1.0">
+      <Point X="485.6813749999999" Y="157.27125000000007" GraphRef="a02c6" RelX="0.0" RelY="1.0" />
+      <Point X="491.5" Y="425.0" GraphRef="db45e" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cf1ae">
+    <Graphics ZOrder="32778" LineThickness="1.0">
+      <Point X="491.5" Y="449.0" GraphRef="db45e" RelX="0.0" RelY="1.0" />
+      <Point X="684.4692500000003" Y="482.3583749999998" GraphRef="fc382" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bebd0">
+    <Graphics ZOrder="32779" LineThickness="1.0">
+      <Point X="491.5" Y="449.0" GraphRef="db45e" RelX="0.0" RelY="1.0" />
+      <Point X="560.4908750000002" Y="482.3583749999998" GraphRef="d7e3d" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="c3ca1">
+    <Graphics ZOrder="32780" LineThickness="1.0">
+      <Point X="491.5" Y="449.0" GraphRef="db45e" RelX="0.0" RelY="1.0" />
+      <Point X="340.07187499999986" Y="482.71087499999976" GraphRef="ffedd" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cc338">
+    <Graphics ZOrder="32781" LineThickness="1.0">
+      <Point X="491.5" Y="449.0" GraphRef="db45e" RelX="0.0" RelY="1.0" />
+      <Point X="438.77437499999985" Y="482.6658749999997" GraphRef="e0ecd" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f9901">
+    <Graphics ZOrder="32782" LineThickness="1.0">
+      <Point X="485.6813749999999" Y="157.27125000000007" GraphRef="a02c6" RelX="0.0" RelY="1.0" />
+      <Point X="475.14829944029816" Y="323.5245811567164" GraphRef="b27fd" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="dfe0a">
+    <Graphics ZOrder="32783" LineThickness="1.0">
+      <Point X="435.14829944029816" Y="333.5245811567164" GraphRef="b27fd" RelX="-1.0" RelY="0.0" />
+      <Point X="256.0" Y="348.0" GraphRef="fc53e" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cc468">
+    <Graphics ZOrder="32784" LineThickness="1.0">
+      <Point X="286.0" Y="161.35350000000008" GraphRef="a6efa" RelX="-1.0" RelY="0.0" />
+      <Point X="256.0" Y="446.77750000000026" GraphRef="df6eb" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="a44c1">
+    <Graphics ZOrder="32787" LineThickness="1.0">
+      <Point X="464.0" Y="437.0" GraphRef="db45e" RelX="-1.0" RelY="0.0" />
+      <Point X="238.65737499999997" Y="302.0425000000001" GraphRef="e4e41" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="f9e40">
+    <Graphics ZOrder="32788" LineThickness="1.0">
+      <Point X="485.6813749999999" Y="157.27125000000007" GraphRef="a02c6" RelX="0.0" RelY="1.0" />
+      <Point X="426.0" Y="243.0" GraphRef="d2d94" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d5e50">
+    <Graphics ZOrder="32789" LineThickness="1.0">
+      <Point X="510.0" Y="379.04249999999985" GraphRef="e45d4" RelX="-1.0" RelY="0.0" />
+      <Point X="256.0" Y="348.0" GraphRef="fc53e" RelX="1.0" RelY="0.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="beb19">
+    <Graphics ZOrder="32792" LineThickness="1.0">
+      <Point X="127.0" Y="446.77750000000026" GraphRef="df6eb" RelX="-1.0" RelY="0.0" />
+      <Point X="79.1603749999997" Y="236.27337499999987" GraphRef="ba4f1" RelX="0.0" RelY="1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d678e">
+    <Graphics ZOrder="32793" LineThickness="1.0">
+      <Point X="741.0" Y="251.0" GraphRef="cf31b" RelX="-1.0" RelY="0.0" />
+      <Point X="688.8847499999999" Y="242.31249999999977" GraphRef="e3c8d" RelX="1.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cd525">
+    <Graphics ZOrder="32794" LineThickness="1.0">
+      <Point X="741.0" Y="251.0" GraphRef="cf31b" RelX="-1.0" RelY="0.0" />
+      <Point X="650.0397500000003" Y="321.08000000000015" GraphRef="bbf84" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e5e68">
+    <Graphics ZOrder="32795" LineThickness="1.0">
+      <Point X="804.0" Y="196.0" GraphRef="bd94f" RelX="0.0" RelY="-1.0" />
+      <Point X="849.0" Y="182.0" GraphRef="a0c7c" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="b0e45">
+    <Graphics ZOrder="32796" LineThickness="1.0">
+      <Point X="198.65737499999997" Y="312.0425000000001" GraphRef="e4e41" RelX="0.0" RelY="1.0" />
+      <Point X="198.5" Y="338.0" GraphRef="fc53e" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Astrocytes" GraphId="ed3ad">
+    <BiopaxRef>beb</BiopaxRef>
+    <Graphics CenterX="679.9299999999998" CenterY="30.38250000000008" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="depletion in hepatocytes" GraphId="b1738">
+    <Graphics CenterX="672.7612500000004" CenterY="164.68250000000012" Width="118.27750000000007" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cell death" GraphId="db45e">
+    <Graphics CenterX="491.5" CenterY="437.0" Width="55.0" Height="24.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="DNA damage" GraphId="bd07f">
+    <Graphics CenterX="375.0" CenterY="207.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Acute lung effects: hypercoagulation, &#xA;hypofibrinolysis, etc." GraphId="c1303">
+    <Graphics CenterX="192.5" CenterY="63.5" Width="177.0" Height="29.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Coronary heart disease, &#xA;plaques, DIC" GraphId="fc53e">
+    <BiopaxRef>ec3</BiopaxRef>
+    <BiopaxRef>d6a</BiopaxRef>
+    <Graphics CenterX="198.5" CenterY="348.0" Width="115.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Endocytosis&#xA;Exocytosis&#xA;Phagocytosis" GraphId="bb7a9">
+    <Graphics CenterX="807.4238750000009" CenterY="456.5" Width="80.0" Height="47.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cell migration" GraphId="d26d2" GroupRef="f300c">
+    <Graphics CenterX="962.3716508210886" CenterY="243.45721694036305" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Mitochondrial potential" GraphId="d2d94">
+    <BiopaxRef>d14</BiopaxRef>
+    <BiopaxRef>b41</BiopaxRef>
+    <BiopaxRef>e6d</BiopaxRef>
+    <Graphics CenterX="426.0" CenterY="253.0" Width="112.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Genotoxicity / Cancer" GraphId="a88d7">
+    <Graphics CenterX="188.0" CenterY="397.0" Width="112.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Shape GraphId="c676a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="676.5" CenterY="61.92874999999995" Width="119.0" Height="86.1425000000001" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ebced" GroupRef="f300c">
+    <Graphics CenterX="965.6216508210886" CenterY="209.20721694036305" Width="99.5" Height="108.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="a25d5" GraphId="c0b3c" Style="Group" />
+  <Group GroupId="c4c9a" GraphId="f51ba" Style="Group" />
+  <Group GroupId="c705c" GraphId="f8e66" Style="Group">
+    <BiopaxRef>a1f</BiopaxRef>
+    <BiopaxRef>a83</BiopaxRef>
+  </Group>
+  <Group GroupId="f300c" GraphId="e56cc" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nanomaterial response pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001435</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dfd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16697548</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytotoxicity of single-wall carbon nanotubes on human fibroblasts.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol In Vitro</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tian F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cui D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schwarz H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estrada GG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kobayashi H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dd0">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20016026</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nanoparticles and the immune system.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endocrinology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zolnik BS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GonzÃƒÂ¡lez-FernÃƒÂ¡ndez A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadrieh N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrovolskaia MA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d41">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17607736</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comparative study of pathological lesions induced by multiwalled carbon nanotubes in lungs of mice by intratracheal instillation and inhalation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environ Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li JG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li WX</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xu JY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai XQ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu RL</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li YJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao QF</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li QN</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="edf">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24724793</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immunosuppressive and anti-inflammatory properties of engineered nanomaterials.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Br J Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ilinskaya AN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrovolskaia MA</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a1f">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25739888</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amelioration of titanium dioxide nanoparticles-induced liver injury in mice: possible role of some antioxidants.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exp Toxicol Pathol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azim SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darwish HA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rizk MZ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ali SA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadry MO</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd5">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23322373</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiovascular toxicity of different sizes amorphous silica nanoparticles in rats after intratracheal instillation.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiovasc Toxicol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Du Z</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jing L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cui G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jin M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Du H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guo C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhou X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun Z</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d6a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21353301</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public health importance of triggers of myocardial infarction: a comparative risk assessment.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lancet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nawrot TS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KÃƒÂ¼nzli N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Munters E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemery B</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e6d">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21979174</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water-soluble germanium nanoparticles cause necrotic cell death and the damage can be attenuated by blocking the transduction of necrotic signaling pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma YH</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huang CP</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tsai JS</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shen MY</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li YK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lin LY</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b41">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20713077</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fullerenol cytotoxicity in kidney cells is associated with cytoskeleton disruption, autophagic vacuole accumulation, and mitochondrial dysfunction.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxicol Appl Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnson-Lyles DN</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peifley K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lockett S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neun BW</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hansen M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clogston J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stern ST</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McNeil SE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fee">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23865044</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recent advances in particulate matter and nanoparticle toxicology: a review of the in vivo and in vitro studies.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biomed Res Int</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nemmar A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holme JA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosas I</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schwarze PE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alfaro-Moreno E</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="beb">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23224777</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handling of iron oxide and silver nanoparticles by astrocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neurochem Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hohnholt MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geppert M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luther EM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petters C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulcke F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dringen R</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ec3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21793770</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Size and surface charge significantly influence the toxicity of silica and dendritic nanoparticles.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nanotoxicology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greish K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thiagarajan G</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herd H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bauer H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hubbard D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burckle A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sadekar S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yu T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anwar A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ray A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ghandehari H</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d14">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23882024</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molecular responses of mouse macrophages to copper and copper oxide nanoparticles inferred from proteomic analyses.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Proteomics</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triboulet S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aude-Garcia C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CarriÃƒÂ¨re M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diemer H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proamer F</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Habert A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevallet M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collin-Faure V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strub JM</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanau D</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van Dorsselaer A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herlin-Boime N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rabilloud T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a83">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20628458</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Acute Liver Injury in Mice Caused by Nano-Anatase TiO2.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nanoscale Res Lett</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ma L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhao J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duan Y</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liu H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li N</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yan J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruan J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang H</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong F</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ab3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22728467</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microparticles and acute lung injury.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Lung Cell Mol Physiol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McVey M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tabuchi A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuebler WM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b31">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23858833</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cardiovascular effects of pulmonary exposure to titanium dioxide nanoparticles in ApoE knockout mice.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Nanosci Nanotechnol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chen C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pu J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cui X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jia G</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="adc">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16456071</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toxic potential of materials at the nanolevel.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nel A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xia T</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MÃƒÂ¤dler L</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li N</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a84">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23428231</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Big signals from small particles: regulation of cell signaling pathways by nanoparticles.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chem Rev</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rauch J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolch W</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurent S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mahmoudi M</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="fdd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22720979</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programmed cell death: molecular mechanisms and implications for safety assessment of nanomaterials.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acc Chem Res</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AndÃƒÂ³n FT</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fadeel B</bp:AUTHORS>
+    </bp:PublicationXref>
+  </Biopax>
+</Pathway>

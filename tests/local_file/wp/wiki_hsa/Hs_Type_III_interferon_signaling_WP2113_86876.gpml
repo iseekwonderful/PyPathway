@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Type III interferon signaling" Author="Shamith Samarajiwa" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-category">Cellular Process</Comment>
+  <Comment Source="WikiPathways-description">The recently identified type III interferon group consists of three IFN-λ (lambda) genes encoding molecules called IFN-λ1, IFN-λ2 and IFN-λ3 (also called IL29, IL28A and IL28B respectively). These IFNs signal through a receptor complex consisting of IL10R2 (also called CRF2-4) and IFNLR1 (also called CRF2-12).</Comment>
+  <Graphics BoardWidth="1413.0" BoardHeight="1224.0"/>
+  <DataNode TextLabel="IRF9" GraphId="fdbcc" Type="GeneProduct" GroupRef="dfa12">
+    <Graphics CenterX="671.0" CenterY="546.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Entrez Gene" ID="10379"/>
+  </DataNode>
+  <DataNode TextLabel="IL28A" GraphId="eb7e9" Type="GeneProduct">
+    <Graphics CenterX="509.0" CenterY="152.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="282616"/>
+  </DataNode>
+  <DataNode TextLabel="IL29" GraphId="d26ec" Type="GeneProduct">
+    <Graphics CenterX="703.0" CenterY="97.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="282618"/>
+  </DataNode>
+  <DataNode TextLabel="IL28B" GraphId="caf9d" Type="GeneProduct">
+    <Graphics CenterX="584.0" CenterY="118.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="282617"/>
+  </DataNode>
+  <DataNode TextLabel="JAK1" GraphId="e5c12" Type="GeneProduct">
+    <Graphics CenterX="581.0" CenterY="285.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="3716"/>
+  </DataNode>
+  <DataNode TextLabel="IL10RB" GraphId="a02a0" Type="GeneProduct">
+    <Graphics CenterX="676.0" CenterY="258.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="3588"/>
+  </DataNode>
+  <DataNode TextLabel="TYK2" GraphId="c88d5" Type="GeneProduct">
+    <Graphics CenterX="688.0" CenterY="283.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="7297"/>
+  </DataNode>
+  <DataNode TextLabel="IL28RA" GraphId="f78d0" Type="GeneProduct">
+    <Graphics CenterX="587.0" CenterY="257.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="163702"/>
+  </DataNode>
+  <DataNode TextLabel="STAT1" GraphId="eaf54" Type="GeneProduct" GroupRef="a1343">
+    <Graphics CenterX="476.0" CenterY="513.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="6772"/>
+  </DataNode>
+  <DataNode TextLabel="STAT2" GraphId="c38be" Type="GeneProduct">
+    <Graphics CenterX="670.0" CenterY="463.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="6773"/>
+  </DataNode>
+  <DataNode TextLabel="STAT1" GraphId="bb515" Type="GeneProduct" GroupRef="a1343">
+    <Graphics CenterX="474.0" CenterY="491.0" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="6772"/>
+  </DataNode>
+  <DataNode TextLabel="STAT1" GraphId="b7ba1" Type="GeneProduct">
+    <Graphics CenterX="672.0" CenterY="505.0" Width="80.0" Height="20.0" ZOrder="32774" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle"/>
+    <Xref Database="Entrez Gene" ID="6772"/>
+  </DataNode>
+  <Interaction GraphId="id79da6b86" GroupRef="dfa12">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="636.5" Y="345.0" GraphRef="ce6db" RelX="0.0" RelY="1.0"/>
+      <Point X="671.75" Y="435.5" GraphRef="da410" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7b36159b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="671.75" Y="586.0" GraphRef="da410" RelX="0.0" RelY="1.0"/>
+      <Point X="523.75" Y="999.0" GraphRef="fedd1" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id80079018">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="671.75" Y="586.0" GraphRef="da410" RelX="0.0" RelY="1.0"/>
+      <Point X="832.75" Y="979.0" GraphRef="db133" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc2022868">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="703.0" Y="107.0" GraphRef="d26ec" RelX="0.0" RelY="1.0"/>
+      <Point X="636.5" Y="208.5" GraphRef="ce6db" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idce034040">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="584.0" Y="128.0" GraphRef="caf9d" RelX="0.0" RelY="1.0"/>
+      <Point X="636.5" Y="208.5" GraphRef="ce6db" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7ddc5757">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="509.0" Y="162.0" GraphRef="eb7e9" RelX="0.0" RelY="1.0"/>
+      <Point X="636.5" Y="208.5" GraphRef="ce6db" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idff1e426a">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="636.5" Y="345.0" GraphRef="ce6db" RelX="0.0" RelY="1.0"/>
+      <Point X="479.75" Y="458.5" GraphRef="e22fd" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="ISGF3 complex" GraphId="adca3" GroupRef="dfa12">
+    <Graphics CenterX="724.0" CenterY="422.0" Width="96.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="f5bd1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="704.25" CenterY="726.5" Width="1357.5" Height="935.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ce6db">
+    <Graphics CenterX="636.5" CenterY="276.75" Width="201.0" Height="136.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="33ff33" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="da410" GroupRef="dfa12">
+    <Graphics CenterX="671.75" CenterY="510.75" Width="108.5" Height="150.5" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="66ff33" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="b68fb">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="727.5" CenterY="992.0" Width="673.0" Height="322.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="ISRE" GraphId="fedd1">
+    <Graphics CenterX="535.5" CenterY="1019.5" Width="47.0" Height="41.0" ZOrder="16384" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Triangle" Rotation="0.0"/>
+  </Shape>
+  <Shape TextLabel="GAS" GraphId="db133">
+    <Graphics CenterX="844.5" CenterY="999.5" Width="47.0" Height="41.0" ZOrder="32771" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="Triangle" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="d1c14" GroupRef="a1343">
+    <Graphics CenterX="479.75" CenterY="501.75" Width="108.5" Height="62.5" ZOrder="32775" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="66ff33" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="dfa12" GraphId="a0e10" Style="Group"/>
+  <Group GroupId="a1343" GraphId="e22fd" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jak-Stat signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000209</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>interleukin-29 signaling pathway</bp:TERM><bp:ID>PW:0000893</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>interleukin-28A signaling pathway</bp:TERM><bp:ID>PW:0000891</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>interleukin-28B signaling pathway</bp:TERM><bp:ID>PW:0000892</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

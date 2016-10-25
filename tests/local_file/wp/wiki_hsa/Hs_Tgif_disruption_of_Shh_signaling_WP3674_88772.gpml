@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Tgif disruption of Shh signaling" Version="20160620" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">Mutations in the Sonic Hedgehog(SHH) gene result in HPE in humans and mice, and the Shh pathway is targeted by other mutations that cause HPE. HPE is a severe human genetic disease affecting craniofacial development of children.  The TGIF1 gene maps to the HPE4, and the heterozygous loss of the TGIF1 mutations are associated with HPE, however mouse models have yet to explain how the inhibition of TGIF causes the genetic disease Holoprosencephaly.  Using a conditional Tgif1 allele, we show that mouse embryos lacking both Tgif1 and the related Tgif2 have HPE-like phenotypes reminiscent of Shh null embryos. This pathway is based on figure 9 from Taniguchi et al.</Comment>
+  <BiopaxRef>e72</BiopaxRef>
+  <Graphics BoardWidth="891.4137931034483" BoardHeight="512.0"/>
+  <DataNode TextLabel="SMAD2" GraphId="cc33e" Type="GeneProduct">
+    <Graphics CenterX="242.91379310344826" CenterY="190.79673321234128" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000175387"/>
+  </DataNode>
+  <DataNode TextLabel="TGIF1" GraphId="f6157" Type="GeneProduct" GroupRef="be9ac">
+    <Graphics CenterX="242.91379310344826" CenterY="130.79673321234117" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000177426"/>
+  </DataNode>
+  <DataNode TextLabel="NODAL" GraphId="ff9de" Type="GeneProduct">
+    <Graphics CenterX="242.91379310344826" CenterY="242.79673321234128" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000156574"/>
+  </DataNode>
+  <DataNode TextLabel="FGF8" GraphId="c3e23" Type="GeneProduct">
+    <Graphics CenterX="79.41379310344826" CenterY="121.79673321234117" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000107831"/>
+  </DataNode>
+  <DataNode TextLabel="FOXG1" GraphId="ef408" Type="GeneProduct">
+    <Graphics CenterX="79.41379310344826" CenterY="222.79673321234128" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000176165"/>
+  </DataNode>
+  <DataNode TextLabel="GLI3" GraphId="faed2" Type="GeneProduct">
+    <Graphics CenterX="420.0" CenterY="76.79673321234117" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106571"/>
+  </DataNode>
+  <DataNode TextLabel="SHH" GraphId="a9cec" Type="GeneProduct">
+    <Graphics CenterX="420.0" CenterY="255.79673321234128" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000164690"/>
+  </DataNode>
+  <DataNode TextLabel="NKX2-1" GraphId="c21c6" Type="GeneProduct">
+    <Graphics CenterX="577.4137931034483" CenterY="255.79673321234128" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000136352"/>
+  </DataNode>
+  <DataNode TextLabel="TGIF2" GraphId="a7ab6" Type="GeneProduct" GroupRef="be9ac">
+    <Graphics CenterX="242.91379310344826" CenterY="110.79673321234117" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000118707"/>
+  </DataNode>
+  <Interaction GraphId="idfb402b17">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="242.91379310344826" Y="152.79673321234117" GraphRef="bdb1e" RelX="0.0" RelY="1.0"/>
+      <Point X="242.91379310344826" Y="180.79673321234128" GraphRef="cc33e" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7096a13">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="242.91379310344826" Y="232.79673321234128" GraphRef="ff9de" RelX="0.0" RelY="-1.0"/>
+      <Point X="242.91379310344826" Y="200.79673321234128" GraphRef="cc33e" RelX="0.0" RelY="1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida408347a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="202.91379310344826" Y="190.79673321234128" GraphRef="cc33e" RelX="-1.0" RelY="0.0"/>
+      <Point X="119.41379310344826" Y="121.79673321234117" GraphRef="c3e23" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id3f39f41c">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="79.41379310344826" Y="131.79673321234117" GraphRef="c3e23" RelX="0.0" RelY="1.0"/>
+      <Point X="79.41379310344826" Y="212.79673321234128" GraphRef="ef408" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida6a23148">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="420.0" Y="66.79673321234117" GraphRef="faed2" RelX="0.0" RelY="-1.0"/>
+      <Point X="249.70689655172413" Y="49.79673321234117"/>
+      <Point X="79.41379310344826" Y="111.79673321234117" GraphRef="c3e23" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf811be72">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="262.91379310344826" Y="180.79673321234128" GraphRef="cc33e" RelX="0.5" RelY="-1.0"/>
+      <Point X="380.0" Y="76.79673321234117" GraphRef="faed2" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideb6c0667">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="262.91379310344826" Y="200.79673321234128" GraphRef="cc33e" RelX="0.5" RelY="1.0"/>
+      <Point X="380.0" Y="255.79673321234128" GraphRef="a9cec" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5ab67169">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="460.0" Y="255.79673321234128" GraphRef="a9cec" RelX="1.0" RelY="0.0"/>
+      <Point X="537.4137931034483" Y="255.79673321234128" GraphRef="c21c6" RelX="-1.0" RelY="0.0" ArrowHead="Arrow"/>
+      <Anchor Position="0.48813255709807535" Shape="None" GraphId="b0382"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id6c165d74">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="420.0" Y="245.79673321234128" GraphRef="a9cec" RelX="0.0" RelY="-1.0"/>
+      <Point X="420.0" Y="86.79673321234117" GraphRef="faed2" RelX="0.0" RelY="1.0" ArrowHead="TBar"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id7435f341">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="440.0" Y="86.79673321234117" GraphRef="faed2" RelX="0.5" RelY="1.0"/>
+      <Point X="497.78819278224756" Y="255.79673321234128" GraphRef="b0382" RelX="0.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Shape GraphId="ea6d4">
+    <Graphics CenterX="242.16379310344826" CenterY="172.2967332123411" Width="154.5" Height="193.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Rectangle" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="be9ac" GraphId="bdb1e" Style="Complex"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="e72">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22383895</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss of Tgif function causes holoprosencephaly by disrupting the SHH signaling pathway.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLoS Genet</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taniguchi K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anderson AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sutherland AE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wotton D</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>signaling pathway</bp:TERM><bp:ID>PW:0000003</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary><bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>altered Hedgehog signaling pathway</bp:TERM><bp:ID>PW:0000321</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

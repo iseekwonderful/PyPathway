@@ -1,0 +1,21 @@
+<div id="box{{time}}" style="width: 100%; height: 0px;background-color: #ffffff">
+    <script>
+        var box = $("#box{{time}}");
+        var father = box.parent();
+//        var grandfather = father.parent();
+        var thirdfather = father.parent().parent().parent();
+        thirdfather.children(".prompt").remove();
+        father.parent().children(".prompt").remove();
+        father.css("max-width", "100%");
+        box.css("margin-left", "5px");
+//        box.css("margin-top", "10px");
+        var target = document.getElementById("box{{time}}");
+//        var w = target.offsetWidth;
+        var w = thirdfather.outerWidth();
+        console.log(w);
+        target.style.height = w * {{ratio}} + "px";
+        box.append($("<iframe width='" + (parseInt(w) - 15).toString() + "'" +
+                " height='" + w * {{ratio}} + "' src={{path}} " +
+                "frameborder='0'></iframe>"))
+    </script>
+</div>

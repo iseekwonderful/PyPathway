@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Diclofenac Metabolic Pathway" Author="Egon Willighagen" Organism="Homo sapiens"><Comment Source="WikiPathways-description">CYP metabolism of the diclofenac drug.</Comment>
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <BiopaxRef>bf5</BiopaxRef>
+  <BiopaxRef>b84</BiopaxRef>
+  <Graphics BoardWidth="587.4541794267145" BoardHeight="367.11050289701967"/>
+  <DataNode TextLabel="diclofenac" GraphId="e8252" Type="Metabolite">
+    <Graphics CenterX="289.19315954771645" CenterY="224.11050289701976" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="3033"/>
+  </DataNode>
+  <DataNode TextLabel="3'-Hydroxydiclofenac" GraphId="dd575" Type="Metabolite">
+    <Graphics CenterX="290.19315954771633" CenterY="327.11050289701967" Width="130.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="112230"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2C9" GraphId="f35cf" Type="Protein">
+    <Graphics CenterX="375.51468072317084" CenterY="273.1105028970198" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q6IRV8"/>
+  </DataNode>
+  <DataNode TextLabel="4'-hydroxydiclofenac" GraphId="d0dce" Type="Metabolite">
+    <Graphics CenterX="497.2640324949946" CenterY="223.72675181663948" Width="120.38029386343993" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="116545"/>
+  </DataNode>
+  <DataNode TextLabel="5-hydroxydiclofenac" GraphId="c0ffe" Type="Metabolite">
+    <Graphics CenterX="289.3988639556678" CenterY="131.246198661929" Width="116.05877268798615" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="3052566"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2B6" GraphId="bc661" Type="Protein">
+    <Graphics CenterX="377.83494893439774" CenterY="180.713200190832" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P20813"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2C8" GraphId="c820a" Type="Protein" GroupRef="f26b3">
+    <Graphics CenterX="161.18779588192785" CenterY="162.4968468901054" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P10632"/>
+  </DataNode>
+  <DataNode TextLabel="Metabolite" GraphId="b876b" Type="Metabolite">
+    <Graphics CenterX="493.0041152263367" CenterY="131.6872427983539" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="10065052"/>
+  </DataNode>
+  <DataNode TextLabel="4',5-Dihydroxydiclofenac" GraphId="fed6d" Type="Metabolite">
+    <Graphics CenterX="288.641975308642" CenterY="39.50617283950618" Width="138.76543209876547" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="3052567"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2C18" GraphId="d1021" Type="Protein" GroupRef="f26b3">
+    <Graphics CenterX="161.0826361517942" CenterY="181.62726170075516" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P33260"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2C19" GraphId="e7aad" Type="Protein" GroupRef="f26b3">
+    <Graphics CenterX="161.2104117884486" CenterY="201.3434356575383" Width="80.0" Height="20.0" ZOrder="32770" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="P33261"/>
+  </DataNode>
+  <DataNode TextLabel="CYP2C9" GraphId="cdda7" Type="Protein">
+    <Graphics CenterX="378.781450992011" CenterY="85.36340595214881" Width="80.0" Height="20.0" ZOrder="32771" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q6IRV8"/>
+  </DataNode>
+  <Interaction GraphId="id101e6313">
+    <BiopaxRef>bf5</BiopaxRef>
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="289.19315954771645" Y="234.11050289701976" GraphRef="e8252" RelX="0.0" RelY="1.0"/>
+      <Point X="290.19315954771633" Y="317.11050289701967" GraphRef="dd575" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.47640640498795506" Shape="None" GraphId="df98b"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8770e4e5">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="335.51468072317084" Y="273.1105028970198" GraphRef="f35cf" RelX="-1.0" RelY="0.0"/>
+      <Point X="289.6695659527044" Y="273.65223451101997" GraphRef="df98b" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8da001ed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="329.19315954771645" Y="224.11050289701976" GraphRef="e8252" RelX="1.0" RelY="0.0"/>
+      <Point X="437.07388556327464" Y="223.72675181663948" GraphRef="d0dce" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.4333937229539684" Shape="None" GraphId="f9210"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ide4de82d6">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="375.51468072317084" Y="263.1105028970198" GraphRef="f35cf" RelX="0.0" RelY="-1.0"/>
+      <Point X="375.94798903057625" Y="223.94418758760614" GraphRef="f9210" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf27d9fd4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="289.19315954771645" Y="214.11050289701976" GraphRef="e8252" RelX="0.0" RelY="-1.0"/>
+      <Point X="289.3988639556678" Y="141.246198661929" GraphRef="c0ffe" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.45404149958235857" Shape="None" GraphId="d9695"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idfdcd0f07">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="337.83494893439774" Y="180.713200190832" GraphRef="bc661" RelX="-1.0" RelY="0.0"/>
+      <Point X="289.2865578855734" Y="181.02708493609396" GraphRef="d9695" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5236f80d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="209.2104117884486" Y="181.92014127382186" GraphRef="b0c84" RelX="1.0" RelY="0.0"/>
+      <Point X="289.2865578855734" Y="181.02708493609396" GraphRef="d9695" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id206a96dc">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="347.4282502996609" Y="131.246198661929" GraphRef="c0ffe" RelX="1.0" RelY="0.0"/>
+      <Point X="453.0041152263367" Y="131.6872427983539" GraphRef="b876b" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idf950b039">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="289.3988639556678" Y="121.24619866192899" GraphRef="c0ffe" RelX="0.0" RelY="-1.0"/>
+      <Point X="288.641975308642" Y="49.50617283950618" GraphRef="fed6d" RelX="0.0" RelY="1.0" ArrowHead="mim-conversion"/>
+      <Anchor Position="0.5033050970846588" Shape="None" GraphId="db1a9"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id913aca5b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="338.781450992011" Y="85.36340595214881" GraphRef="cdda7" RelX="-1.0" RelY="0.0"/>
+      <Point X="289.0179180416942" Y="85.13907800051854" GraphRef="db1a9" RelX="0.0" RelY="0.0" ArrowHead="mim-catalysis"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Group GroupId="f26b3" GraphId="b0c84"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b84">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10449188</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hepatic metabolism of diclofenac: role of human CYP in the minor oxidative pathways.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochem Pharmacol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bort R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Macé K</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boobis A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gómez-Lechón MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pfeifer A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Castell J</bp:AUTHORS>
+    </bp:PublicationXref>
+  <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#"><bp:TERM>phase I biotransformation pathway via cytochrome P450</bp:TERM><bp:ID>PW:0000375</bp:ID><bp:Ontology>Pathway Ontology</bp:Ontology></bp:openControlledVocabulary></Biopax>
+</Pathway>

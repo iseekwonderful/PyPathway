@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Transcription factor regulation in adipogenesis" Version="20151120" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The transcription factors involved in adipogenesis are shown in the current pathway. Adipogensis is the biological proces of cell differentation in which preadipocytes are converted into adipocytes. </Comment>
+  <Graphics BoardWidth="825.0" BoardHeight="871.0" />
+  <DataNode TextLabel="Glucocorticoids" GraphId="c837d" Type="Metabolite">
+    <Graphics CenterX="180.0" CenterY="95.0" Width="114.0" Height="20.0" ZOrder="28672" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" />
+    <Xref Database="ChEBI" ID="CHEBI:24261" />
+  </DataNode>
+  <DataNode TextLabel="INSR" GraphId="d36b9" Type="GeneProduct">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics CenterX="634.75" CenterY="56.14609053497942" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000171105" />
+  </DataNode>
+  <DataNode TextLabel="RXRA" GraphId="e85ab" Type="GeneProduct">
+    <BiopaxRef>b88</BiopaxRef>
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics CenterX="209.75" CenterY="657.25" Width="78.45781893004104" Height="26.000000000000025" ZOrder="32770" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000186350" />
+  </DataNode>
+  <DataNode TextLabel="LPIN1" GraphId="dc35a" Type="GeneProduct">
+    <BiopaxRef>c3c</BiopaxRef>
+    <Graphics CenterX="154.75" CenterY="621.25" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32772" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000134324" />
+  </DataNode>
+  <DataNode TextLabel="PCK2" GraphId="bb3d5" Type="GeneProduct">
+    <BiopaxRef>b88</BiopaxRef>
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics CenterX="188.75" CenterY="734.0" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32774" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000100889" />
+  </DataNode>
+  <DataNode TextLabel="CEBPA" GraphId="df184" Type="GeneProduct">
+    <BiopaxRef>d36</BiopaxRef>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="380.9537037037037" CenterY="607.119341563786" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32776" FontSize="12" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000245848" />
+  </DataNode>
+  <DataNode TextLabel="GLUT4" GraphId="f7112" Type="GeneProduct">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Graphics CenterX="441.25" CenterY="55.5" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32778" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000181856" />
+  </DataNode>
+  <DataNode TextLabel="PPARG" GraphId="a42bd" Type="GeneProduct">
+    <BiopaxRef>d36</BiopaxRef>
+    <BiopaxRef>cd2</BiopaxRef>
+    <BiopaxRef>b88</BiopaxRef>
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics CenterX="279.09362139917675" CenterY="614.15329218107" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32780" FontSize="14" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000132170" />
+  </DataNode>
+  <DataNode TextLabel="CREB1" GraphId="ab62d" Type="GeneProduct">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="454.7500000000001" CenterY="453.2499999999998" Width="78.4578189300411" Height="26.00000000000002" ZOrder="32782" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000118260" />
+  </DataNode>
+  <DataNode TextLabel="CEBPB" GraphId="a2f28" Type="GeneProduct">
+    <Graphics CenterX="332.75" CenterY="453.2499999999999" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32784" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000172216" />
+  </DataNode>
+  <DataNode TextLabel="CEBPD" GraphId="ce540" Type="GeneProduct">
+    <Graphics CenterX="332.75" CenterY="479.24999999999994" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32790" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000221869" />
+  </DataNode>
+  <DataNode TextLabel="NR3C1" GraphId="be482" Type="GeneProduct">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="211.75" CenterY="479.24999999999994" Width="78.457818930041" Height="26.000000000000025" ZOrder="32792" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000113580" />
+  </DataNode>
+  <DataNode TextLabel="NRIP1" GraphId="c4247" Type="GeneProduct">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Graphics CenterX="441.25" CenterY="128.75" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32794" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000180530" />
+  </DataNode>
+  <DataNode TextLabel="IRS1" GraphId="e0e2f" Type="GeneProduct">
+    <Graphics CenterX="634.75" CenterY="130.4269547325103" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32796" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000169047" />
+  </DataNode>
+  <DataNode TextLabel="IRS2" GraphId="e77bb" Type="GeneProduct">
+    <Graphics CenterX="634.75" CenterY="156.25" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32798" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000185950" />
+  </DataNode>
+  <DataNode TextLabel="ADIPOQ" GraphId="fe83b" Type="GeneProduct">
+    <Graphics CenterX="332.75" CenterY="767.0205761316872" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32802" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000181092" />
+  </DataNode>
+  <DataNode TextLabel="LEP" GraphId="ec4b3" Type="GeneProduct">
+    <Graphics CenterX="332.75" CenterY="741.5205761316872" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32804" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000174697" />
+  </DataNode>
+  <DataNode TextLabel="JNK" GraphId="db93e" Type="GeneProduct">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics CenterX="457.25" CenterY="190.74999999999997" Width="78.45781893004097" Height="26.000000000000025" ZOrder="32808" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000107643" />
+  </DataNode>
+  <DataNode TextLabel="FOXO1A" GraphId="fb802" Type="GeneProduct">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics CenterX="154.75" CenterY="554.25" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32862" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000150907" />
+  </DataNode>
+  <DataNode TextLabel="TWIST1" GraphId="de981" Type="GeneProduct">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics CenterX="277.51934307034696" CenterY="386.9726948947872" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32864" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000122691" />
+  </DataNode>
+  <DataNode TextLabel="PPARGC1A" GraphId="a1d85" Type="GeneProduct">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics CenterX="154.75" CenterY="428.25" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32866" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000109819" />
+  </DataNode>
+  <DataNode TextLabel="TNF" GraphId="d0778" Type="GeneProduct">
+    <Graphics CenterX="389.75" CenterY="377.25" Width="78.45781893004097" Height="26.000000000000025" ZOrder="32868" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000232810" />
+  </DataNode>
+  <DataNode TextLabel="IL6" GraphId="ae904" Type="GeneProduct">
+    <Graphics CenterX="389.75" CenterY="403.25" Width="78.45781893004097" Height="26.000000000000025" ZOrder="32870" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000136244" />
+  </DataNode>
+  <DataNode TextLabel="NRIP1" GraphId="aec7d" Type="GeneProduct">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Graphics CenterX="498.75" CenterY="714.25" Width="78.45781893004101" Height="26.000000000000025" ZOrder="32874" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000180530" />
+  </DataNode>
+  <Interaction GraphId="id85631901">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12288" LineThickness="1.0">
+      <Point X="544.0" Y="239.0" GraphRef="e32a1" RelX="-1.0" RelY="0.0" />
+      <Point X="457.25" Y="203.75" GraphRef="db93e" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd850349e">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics ZOrder="12290" LineStyle="Broken" LineThickness="1.0">
+      <Point X="316.74825253536744" Y="386.9726948947872" GraphRef="de981" RelX="1.0" RelY="0.0" />
+      <Point X="341.0" Y="387.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9a088dab">
+    <BiopaxRef>d36</BiopaxRef>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12292" LineThickness="2.0">
+      <Point X="361.33924897119346" Y="594.119341563786" GraphRef="df184" RelX="-0.5" RelY="-1.0" />
+      <Point X="298.708076131687" Y="601.15329218107" GraphRef="a42bd" RelX="0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida66f2245">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12296" LineThickness="1.0">
+      <Point X="238.29043360532648" Y="386.9726948947872" GraphRef="de981" RelX="-1.0" RelY="0.0" />
+      <Point X="193.9789094650205" Y="428.25" GraphRef="a1d85" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id41baa57f">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12298" LineThickness="1.0">
+      <Point X="154.75" Y="415.25" GraphRef="a1d85" RelX="0.0" RelY="-1.0" />
+      <Point X="154.73934108527132" Y="395.25" />
+      <Point X="154.72868217054264" Y="377.0427386594448" />
+      <Point X="109.6817874069059" Y="358.8354773188897" GraphRef="ec0d2" RelX="0.0" RelY="0.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd72907d4">
+    <BiopaxRef>d36</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12300" LineThickness="1.0">
+      <Point X="259.4791666666665" Y="627.15329218107" GraphRef="a42bd" RelX="-0.5" RelY="1.0" />
+      <Point X="295.98958333333326" Y="696.969696969697" />
+      <Point X="332.5" Y="718.5" GraphRef="b60b6" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id9292023">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12302" LineStyle="Broken" LineThickness="1.0">
+      <Point X="496.4789094650205" Y="190.75" GraphRef="db93e" RelX="1.0" RelY="0.0" />
+      <Point X="586.0" Y="144.25" GraphRef="b6207" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idef575326">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12304" LineThickness="1.0">
+      <Point X="498.75" Y="701.25" GraphRef="aec7d" RelX="0.0" RelY="-1.0" />
+      <Point X="526.0" Y="658.0" GraphRef="f2a8e" RelX="0.0" RelY="1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide67bd9b7">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12306" LineStyle="Broken" LineThickness="1.0">
+      <Point X="634.5" Y="180.0" GraphRef="b6207" RelX="0.0" RelY="1.0" />
+      <Point X="394.625" Y="516.0" />
+      <Point X="154.75" Y="541.25" GraphRef="fb802" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idfe0b87e8">
+    <BiopaxRef>d36</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12308" LineThickness="1.0">
+      <Point X="332.5" Y="501.25373134328356" GraphRef="d2cac" RelX="0.0" RelY="1.0" />
+      <Point X="356.72685185185185" Y="537.0" />
+      <Point X="380.9537037037037" Y="594.119341563786" GraphRef="df184" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id325e64da">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12310" LineStyle="Broken" LineThickness="1.0">
+      <Point X="180.0" Y="105.0" GraphRef="c837d" RelX="0.0" RelY="1.0" />
+      <Point X="195.875" Y="279.0" />
+      <Point X="211.75" Y="466.24999999999994" GraphRef="be482" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id236dd07f">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Graphics ZOrder="12312" LineThickness="1.0">
+      <Point X="441.25" Y="115.75" GraphRef="c4247" RelX="0.0" RelY="-1.0" />
+      <Point X="441.25" Y="68.50000000000001" GraphRef="f7112" RelX="0.0" RelY="1.0" ArrowHead="TBar" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1b6bd66b">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ZOrder="12314" LineStyle="Broken" LineThickness="1.0">
+      <Point X="193.9789094650205" Y="554.25" GraphRef="fb802" RelX="1.0" RelY="0.0" />
+      <Point X="239.86471193415628" Y="607.65329218107" GraphRef="a42bd" RelX="-1.0" RelY="-0.5" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id84f36005">
+    <BiopaxRef>d36</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12316" LineThickness="1.0">
+      <Point X="400.56815843621393" Y="620.119341563786" GraphRef="df184" RelX="0.5" RelY="1.0" />
+      <Point X="366.53407921810697" Y="697.1254521225967" />
+      <Point X="332.5" Y="718.5" GraphRef="b60b6" RelX="0.0" RelY="-1.0" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ide3ff3f41">
+    <BiopaxRef>d36</BiopaxRef>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12318" LineThickness="2.0">
+      <Point X="279.09362139917675" Y="627.15329218107" GraphRef="a42bd" RelX="0.0" RelY="1.0" />
+      <Point X="380.9537037037037" Y="620.119341563786" GraphRef="df184" RelX="0.0" RelY="1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id19399ec5">
+    <Graphics ZOrder="12320" LineThickness="1.0">
+      <Point X="415.5210905349795" Y="453.2499999999998" GraphRef="ab62d" RelX="-1.0" RelY="0.0" />
+      <Point X="371.9789094650205" Y="453.2499999999999" GraphRef="a2f28" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4bd87ed5">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12322" LineStyle="Broken" LineThickness="1.0">
+      <Point X="634.5" Y="180.0" GraphRef="b6207" RelX="0.0" RelY="1.0" />
+      <Point X="493.9789094650207" Y="453.2499999999998" GraphRef="ab62d" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb7ae0a">
+    <BiopaxRef>b88</BiopaxRef>
+    <BiopaxRef>ce7</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12326" LineThickness="1.0">
+      <Point X="209.75" Y="670.25" GraphRef="e85ab" RelX="0.0" RelY="1.0" />
+      <Point X="188.75" Y="721.0" GraphRef="bb3d5" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5368898d">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12328" LineThickness="1.0">
+      <Point X="211.75" Y="492.24999999999994" GraphRef="be482" RelX="0.0" RelY="1.0" />
+      <Point X="235.61458333333326" Y="537.0" />
+      <Point X="259.4791666666665" Y="601.15329218107" GraphRef="a42bd" RelX="-0.5" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idabbef303">
+    <BiopaxRef>c3c</BiopaxRef>
+    <Graphics ZOrder="12330" LineThickness="1.0">
+      <Point X="193.9789094650205" Y="621.25" GraphRef="dc35a" RelX="1.0" RelY="0.0" />
+      <Point X="239.86471193415628" Y="614.15329218107" GraphRef="a42bd" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idd4e6353d">
+    <BiopaxRef>b88</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12334" LineThickness="1.0">
+      <Point X="149.5210905349795" Y="734.0" GraphRef="bb3d5" RelX="-1.0" RelY="0.0" />
+      <Point X="109.6817874069059" Y="503.16012473175056" />
+      <Point X="95.62344104088277" Y="272.3202494635011" GraphRef="b67bd" RelX="1.0" RelY="0.0" ArrowHead="mim-stimulation" />
+      <Anchor Position="0.8049302118063293" Shape="None" GraphId="ec0d2" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id1ee0941">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12338" LineThickness="1.0">
+      <Point X="242.0" Y="164.5" GraphRef="f2f44" RelX="1.0" RelY="0.0" />
+      <Point X="418.0210905349795" Y="190.75" GraphRef="db93e" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id669e7b54">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ZOrder="12340" LineThickness="1.0">
+      <Point X="634.75" Y="69.14609053497944" GraphRef="d36b9" RelX="0.0" RelY="1.0" />
+      <Point X="634.5" Y="108.5" GraphRef="b6207" RelX="0.0" RelY="-1.0" ArrowHead="mim-conversion" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idf10e7f2c">
+    <BiopaxRef>d36</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12342" LineThickness="1.0">
+      <Point X="332.5" Y="501.25373134328356" GraphRef="d2cac" RelX="0.0" RelY="1.0" />
+      <Point X="305.7968106995884" Y="537.0" />
+      <Point X="279.09362139917675" Y="601.15329218107" GraphRef="a42bd" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3dcf8722">
+    <BiopaxRef>cd2</BiopaxRef>
+    <Graphics ZOrder="12344" LineThickness="1.0">
+      <Point X="250.97890946502048" Y="479.24999999999994" GraphRef="be482" RelX="1.0" RelY="0.0" />
+      <Point X="293.5210905349795" Y="479.24999999999994" GraphRef="ce540" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <GraphicalLine GraphId="e4fa0">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12294" LineThickness="1.0">
+      <Point X="409.9862574438845" Y="276.2253779202931" />
+      <Point X="451.67201099404485" Y="262.43248969308286" />
+      <Point X="541.9147961520843" Y="248.63960146587263" GraphRef="e4c05" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ffd99">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12324" LineThickness="1.0">
+      <Point X="662.0" Y="299.0" />
+      <Point X="662.0267260579064" Y="277.5" />
+      <Point X="588.0" Y="256.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="f2c10">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ZOrder="12332" LineThickness="1.0">
+      <Point X="574.0" Y="335.54191479615207" />
+      <Point X="502.0" Y="322.54191479615207" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="bf393">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ConnectorType="Elbow" ZOrder="12336" LineThickness="1.0">
+      <Point X="587.25" Y="383.25" GraphRef="f7aab" RelX="0.0" RelY="0.0" />
+      <Point X="671.2621022342587" Y="419.7698036560596" />
+      <Point X="755.2742044685174" Y="390.9952606635071" />
+      <Point X="735.2742044685174" Y="362.2207176709547" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <GraphicalLine GraphId="ed69c">
+    <BiopaxRef>efd</BiopaxRef>
+    <Graphics ZOrder="32904" LineThickness="1.0">
+      <Point X="554.0" Y="378.0" />
+      <Point X="515.0" Y="417.0" ArrowHead="Arrow" />
+    </Graphics>
+  </GraphicalLine>
+  <Label TextLabel="Lipids/FA oxidation" GraphId="c2ca9">
+    <Graphics CenterX="93.65843621399176" CenterY="237.0" Width="135.31687242798353" Height="20.0" ZOrder="28674" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="ER" GraphId="ea4d4">
+    <Graphics CenterX="244.0" CenterY="262.0" Width="80.0" Height="20.0" ZOrder="28676" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Adipocyte Secretory Products" GraphId="af32a">
+    <Graphics CenterX="333.0" CenterY="799.0" Width="152.0" Height="20.0" ZOrder="28678" FillColor="ffffff" FontSize="10" Valign="Middle" />
+  </Label>
+  <Label TextLabel="ROS" GraphId="e32a1">
+    <Graphics CenterX="584.0" CenterY="239.0" Width="80.0" Height="20.0" ZOrder="28680" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Lipids" GraphId="af99d">
+    <Graphics CenterX="565.0" CenterY="397.71886952866237" Width="80.0" Height="20.0" ZOrder="28682" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Genes involved in:&#xA;Mitochondrial uncoupling&#xA;FA Beta-oxidation&#xA;Oxidative phosphorylation&#xA;TCA cycle&#xA;Glycolysis" GraphId="b82a2">
+    <Graphics CenterX="527.0" CenterY="617.0" Width="122.0" Height="86.0" ZOrder="28684" FillColor="ffffff" FontSize="10" Valign="Middle" Align="Left" />
+  </Label>
+  <Label TextLabel="Mitochondria" GraphId="e47ba">
+    <Graphics CenterX="752.0" CenterY="180.5" Width="80.0" Height="27.0" ZOrder="28686" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape TextLabel="  Nucleus" GraphId="aa1df">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus" />
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double" />
+    <Graphics CenterX="329.5" CenterY="581.0" Width="605.0" Height="496.0" ZOrder="-2" FontWeight="Bold" FontSize="14" Valign="Middle" Align="Left" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f33a7">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="558.75" CenterY="369.75" Width="7.5" Height="6.5" ZOrder="16384" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b113a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="562.75" CenterY="352.25" Width="14.5" Height="17.5" ZOrder="16386" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d2cac">
+    <BiopaxRef>d36</BiopaxRef>
+    <BiopaxRef>cd2</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="332.5" CenterY="465.50373134328356" Width="97.0" Height="71.5" ZOrder="16388" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="2.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b8d12">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="547.25" CenterY="233.75" Width="3.5" Height="4.5" ZOrder="16390" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e4c05">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="548.4573980760421" CenterY="248.63960146587263" Width="13.085203847915627" Height="10.279202931745264" ZOrder="16392" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d558c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="547.25" CenterY="261.75" Width="7.5" Height="8.5" ZOrder="16396" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e017a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="607.25" CenterY="353.25" Width="13.5" Height="13.5" ZOrder="16398" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c05c9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="573.75" CenterY="259.25" Width="4.5" Height="5.5" ZOrder="16400" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e7678">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="560.25" CenterY="236.25" Width="9.5" Height="9.5" ZOrder="16402" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f7aab">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="587.25" CenterY="383.25" Width="15.5" Height="13.5" ZOrder="16404" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a9772">
+    <BiopaxRef>efd</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="405.5" CenterY="448.5" Width="779.0" Height="785.0" ZOrder="16406" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="3.0" Color="ffcc66" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="eff04">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="556.25" CenterY="274.5" Width="5.5" Height="5.0" ZOrder="16408" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f705a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="61.903100817590214" CenterY="104.0892763253672" Width="48.675929205754926" Height="36.88983260358924" ZOrder="16410" FillColor="ffcccc" FontSize="10" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="663300" Rotation="5.84072900007198" />
+  </Shape>
+  <Shape GraphId="cdadc">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="581.5" CenterY="362.5" Width="21.0" Height="21.0" ZOrder="16412" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b0487">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Endoplasmic Reticulum" />
+    <Graphics CenterX="379.7141415663782" CenterY="299.7391167124629" Width="101.05707351100168" Height="330.732300498171" ZOrder="16414" FontSize="10" Valign="Middle" ShapeType="Endoplasmic Reticulum" LineThickness="3.0" Color="cc0000" Rotation="1.7200294850141746" />
+  </Shape>
+  <Shape GraphId="f6940">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="565.25" CenterY="248.75" Width="9.5" Height="6.5" ZOrder="16416" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a1ab9">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="562.25" CenterY="262.75" Width="7.5" Height="8.5" ZOrder="16418" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ea403">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="599.75" CenterY="372.25" Width="10.5" Height="9.5" ZOrder="16420" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b085f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="566.25" CenterY="382.25" Width="11.5" Height="9.5" ZOrder="16422" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e359a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="587.75" CenterY="341.25" Width="12.5" Height="15.5" ZOrder="16424" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b67bd">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="56.30090048064513" CenterY="272.32024946350106" Width="65.08472268258609" Height="46.309364171889115" ZOrder="32786" FillColor="ffcccc" FontSize="10" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="663300" Rotation="5.84072900007198" />
+  </Shape>
+  <Shape GraphId="d07e6">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="685.0411011637843" CenterY="342.0054329244522" Width="95.90791646102605" Height="70.4973961847112" ZOrder="32788" FillColor="ffcccc" FontSize="10" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="663300" Rotation="0.4287590238132762" />
+  </Shape>
+  <Shape GraphId="b6207">
+    <BiopaxRef>efd</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="634.5" CenterY="144.25" Width="97.0" Height="71.5" ZOrder="32800" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="2.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b60b6">
+    <BiopaxRef>d36</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="332.5" CenterY="754.25" Width="97.0" Height="71.5" ZOrder="32806" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="2.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bf4bc">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="236.75" CenterY="186.25" Width="12.5" Height="15.5" ZOrder="32810" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f2f44">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="231.5" CenterY="164.5" Width="21.0" Height="21.0" ZOrder="32812" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f9e7a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="217.25" CenterY="179.25" Width="11.5" Height="9.5" ZOrder="32814" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e012c">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="205.75" CenterY="171.75" Width="7.5" Height="6.5" ZOrder="32816" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ad18e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="224.5" CenterY="195.0" Width="9.0" Height="8.0" ZOrder="32818" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e566f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="212.5" CenterY="155.25" Width="13.0" Height="15.5" ZOrder="32820" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f0962">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="71.25" CenterY="375.75" Width="7.5" Height="8.5" ZOrder="32822" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c92b8">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="57.25" CenterY="361.75" Width="13.5" Height="10.5" ZOrder="32824" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bb7df">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="74.25" CenterY="361.75" Width="9.5" Height="6.5" ZOrder="32826" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bb7a5">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="56.25" CenterY="374.75" Width="7.5" Height="8.5" ZOrder="32828" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c47be">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="65.25" CenterY="387.5" Width="5.5" Height="5.0" ZOrder="32830" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d8b84">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="172.5" CenterY="300.5" Width="21.0" Height="21.0" ZOrder="32832" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cac87">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="158.25" CenterY="315.25" Width="11.5" Height="9.5" ZOrder="32834" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a3a48">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="146.75" CenterY="307.75" Width="7.5" Height="6.5" ZOrder="32836" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d4565">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="153.5" CenterY="291.25" Width="13.0" Height="15.5" ZOrder="32838" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a4953">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="665.25" CenterY="497.75" Width="7.5" Height="8.5" ZOrder="32840" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ae4af">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="651.25" CenterY="483.75" Width="13.5" Height="10.5" ZOrder="32842" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cc5f0">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="668.25" CenterY="483.75" Width="9.5" Height="6.5" ZOrder="32844" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c1099">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="650.25" CenterY="496.75" Width="7.5" Height="8.5" ZOrder="32846" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bd491">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="659.25" CenterY="509.5" Width="5.5" Height="5.0" ZOrder="32848" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ca518">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="756.25" CenterY="116.75" Width="7.5" Height="8.5" ZOrder="32850" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cb5c1">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="742.25" CenterY="102.75" Width="13.5" Height="10.5" ZOrder="32852" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e7b48">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="759.25" CenterY="102.75" Width="9.5" Height="6.5" ZOrder="32854" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b2a7b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="741.25" CenterY="115.75" Width="7.5" Height="8.5" ZOrder="32856" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ce22a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="750.25" CenterY="128.5" Width="5.5" Height="5.0" ZOrder="32858" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b57a3">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Mitochondria" />
+    <Graphics CenterX="741.9031008175903" CenterY="209.0892763253672" Width="48.675929205754926" Height="36.88983260358924" ZOrder="32860" FillColor="ffcccc" FontSize="10" Valign="Middle" ShapeType="Mitochondria" LineThickness="3.0" Color="663300" Rotation="0.14284452347995613" />
+  </Shape>
+  <Shape GraphId="bd885">
+    <BiopaxRef>cb3</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="389.5" CenterY="389.25" Width="97.0" Height="71.5" ZOrder="32872" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="2.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f2a8e">
+    <BiopaxRef>a7a</BiopaxRef>
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Extracellular region" />
+    <Graphics CenterX="526.0" CenterY="613.0" Width="132.0" Height="90.0" ZOrder="32876" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" LineThickness="2.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cdfa8">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="647.25" CenterY="767.25" Width="11.5" Height="9.5" ZOrder="32878" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c2981">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="643.75" CenterY="737.25" Width="14.5" Height="17.5" ZOrder="32880" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fda5e">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="639.75" CenterY="754.75" Width="7.5" Height="6.5" ZOrder="32882" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e9f82">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="680.75" CenterY="757.25" Width="10.5" Height="9.5" ZOrder="32884" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a2db2">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="668.75" CenterY="726.25" Width="12.5" Height="15.5" ZOrder="32886" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.020686703779844145" />
+  </Shape>
+  <Shape GraphId="f115d">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="668.25" CenterY="768.25" Width="15.5" Height="13.5" ZOrder="32888" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c010b">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="662.5" CenterY="747.5" Width="21.0" Height="21.0" ZOrder="32890" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c5f17">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="688.25" CenterY="738.25" Width="13.5" Height="13.5" ZOrder="32892" FillColor="ffff00" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="ffcc00" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="f2dec">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="745.25" CenterY="632.75" Width="7.5" Height="8.5" ZOrder="32894" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c6f38">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="731.25" CenterY="618.75" Width="13.5" Height="10.5" ZOrder="32896" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d5d05">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="748.25" CenterY="618.75" Width="9.5" Height="6.5" ZOrder="32898" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="d99b4">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="730.25" CenterY="631.75" Width="7.5" Height="8.5" ZOrder="32900" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="c89ce">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="739.25" CenterY="644.5" Width="5.5" Height="5.0" ZOrder="32902" FillColor="cccccc" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cb3">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22969750</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A tale with a Twist: a developmental gene with potential relevance for metabolic dysfunction and inflammation in adipose tissue.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Front Endocrinol (Lausanne)</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dobrian AD</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">signaling pathway pertinent to development</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000650</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="b88">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7799943</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPAR gamma 2 regulates adipose expression of the phosphoenolpyruvate carboxykinase gene.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mol Cell Biol</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tontonoz P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hu E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Devine J</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beale EG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spiegelman BM</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="cd2">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22079269</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcriptional networks and chromatin remodeling controlling adipogenesis.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trends Endocrinol Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siersbæk R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nielsen R</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandrup S</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="ce7">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14739072</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regulation of cytosolic phosphoenolpyruvate carboxykinase gene expression in adipocytes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochimie</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beale EG</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forest C</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hammer RE</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="a7a">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21193034</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of nuclear receptor corepressor RIP140 in metabolic syndrome.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21193034</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Role of nuclear receptor corepressor RIP140 in metabolic syndrome.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biochim Biophys Acta</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosell M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones MC</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parker MG</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c3c">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20530740</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lpin1 in human visceral and subcutaneous adipose tissue: similar levels but different associations with lipogenic and lipolyticgenes.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am J Physiol Endocrinol Metab</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miranda M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escoté X</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alcaide MJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solano E</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceperuelo-Mallafré V</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hernández P</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wabitsch M</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vendrell J</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="efd">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17167474</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inflammation and metabolic disorders.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nature</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hotamisligil GS</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="d36">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21807935</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adipogenesis at a glance.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J Cell Sci</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lowe CE</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Rahilly S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rochford JJ</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fat cell</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000136</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cell Type</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

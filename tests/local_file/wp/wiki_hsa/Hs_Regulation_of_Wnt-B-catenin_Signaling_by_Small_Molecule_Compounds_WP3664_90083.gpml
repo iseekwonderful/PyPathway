@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Regulation of Wnt/B-catenin Signaling by Small Molecule Compounds" Version="20160619" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">The Wnt/B-catenin pathway begins with Wnt family activation by MBOAT that allows Wnt proteins to translocate out of a cell and bind to FZD and LRP to form a complex. This complex stimulates B-catenin to bind to the TF/LEF complex to regulate gene expression in the cell. Regulation of this pathway takes place at different levels. The Wnt signaling can be inhibited by DKK3, FZD7, SFRP4, FZD8, V3Nter, and Wnt antibodies or FZD antibodies that inhibit FZD and do not allow formation of FZD/LRP/Wnt complex. Another level of regulation is the destruction complex (TNKS/AXIN/GSK3B/APC/CK1a/CK1e) that is regulated by XAV939, DVL, IC261, and Pyrvinium to catalyze the breakdown of B-catenin, inhibiting its binding to the TCF/LEF complex. Several substances including retinoids, glucocorticoids, and ICG-001 inhibit the TCF/LEF complex to stop Wnt/B-catenin signaling pathways from promoting gene transcription. This pathway is based on figure 4 from White et al.</Comment>
+  <BiopaxRef>c93</BiopaxRef>
+  <Graphics BoardWidth="1027.0" BoardHeight="932.0"/>
+  <DataNode TextLabel="iCRT14" GraphId="a0e6e" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="768.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="162247440"/>
+  </DataNode>
+  <DataNode TextLabel="NSC668036" GraphId="a1197" Type="Metabolite" GroupRef="b5d27">
+    <Graphics CenterX="141.470588235294" CenterY="436.91176470588226" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="76620423"/>
+  </DataNode>
+  <DataNode TextLabel="AXIN1" GraphId="ab8e1" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="489.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000103126"/>
+  </DataNode>
+  <DataNode TextLabel="PRK222-815" GraphId="ad2cc" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="868.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="FZD8" GraphId="b3354" Type="GeneProduct" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="262.16176470588255" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000177283"/>
+  </DataNode>
+  <DataNode TextLabel="PRK118-744" GraphId="b6af8" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="848.2436974789911" Width="79.9375" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="LEF1" GraphId="ba872" Type="GeneProduct" GroupRef="fcb57">
+    <Graphics CenterX="511.6470588235299" CenterY="764.0000000000001" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000138795"/>
+  </DataNode>
+  <DataNode TextLabel="IWP-2" GraphId="bb38d" Type="Metabolite">
+    <Graphics CenterX="675.0" CenterY="95.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="2155128"/>
+  </DataNode>
+  <DataNode TextLabel="DKK3" GraphId="bd4ac" Type="GeneProduct" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="202.1617647058824" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000050165"/>
+  </DataNode>
+  <DataNode TextLabel="NC043" GraphId="bd6fe" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifer Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="668.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="iCRT5" GraphId="c086f" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="788.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="164227414"/>
+  </DataNode>
+  <DataNode TextLabel="SFRP4" GraphId="c1553" Type="GeneProduct" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="242.1617647058824" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000106483"/>
+  </DataNode>
+  <DataNode TextLabel="CGP049090" GraphId="c1e35" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="688.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="Retinoids" GraphId="c6242" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="628.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="135307150"/>
+  </DataNode>
+  <DataNode TextLabel="XAV939" GraphId="c6eb4" Type="Metabolite">
+    <Graphics CenterX="937.4978991596637" CenterY="469.3508403361344" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="254760594"/>
+  </DataNode>
+  <DataNode TextLabel="FZD7" GraphId="d17b7" Type="GeneProduct" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="222.1617647058824" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000155760"/>
+  </DataNode>
+  <DataNode TextLabel="DVL2" GraphId="d5509" Type="GeneProduct">
+    <Graphics CenterX="374.0" CenterY="425.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000004975"/>
+  </DataNode>
+  <DataNode TextLabel="LRP" GraphId="d78e4" Type="GeneProduct" GroupRef="d585f">
+    <Comment>LRP Not Specified</Comment>
+    <Graphics CenterX="519.2016806722686" CenterY="357.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000123384"/>
+  </DataNode>
+  <DataNode TextLabel="Pyrvinium" GraphId="d7e03" Type="Metabolite">
+    <Graphics CenterX="945.4453781512601" CenterY="548.8487394957982" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="123097016"/>
+  </DataNode>
+  <DataNode TextLabel="Glucocorticoids" GraphId="dae83" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="708.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="53787563"/>
+  </DataNode>
+  <DataNode TextLabel="PRK118-310" GraphId="e272a" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="828.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="MBOAT" GraphId="e6aef" Type="GeneProduct">
+    <Comment>MBOAT Family</Comment>
+    <Graphics CenterX="479.0" CenterY="95.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000172197"/>
+  </DataNode>
+  <DataNode TextLabel="1a,25-(OH)2D3 " GraphId="e7444" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="648.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-compound" ID="13019066"/>
+  </DataNode>
+  <DataNode TextLabel="ICG-001" GraphId="e7a70" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="728.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="136340203"/>
+  </DataNode>
+  <DataNode TextLabel="FZD" GraphId="e8b28" Type="GeneProduct" GroupRef="d585f">
+    <Comment>FZD Not Specified</Comment>
+    <Graphics CenterX="439.2016806722688" CenterY="357.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="HGNC" ID="FZD1"/>
+  </DataNode>
+  <DataNode TextLabel="TNKS" GraphId="ea438" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="469.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000173273"/>
+  </DataNode>
+  <DataNode TextLabel="PRK115-584" GraphId="eda01" Type="Metabolite" GroupRef="c010f">
+    <Comment>Identifier Not Found</Comment>
+    <Graphics CenterX="118.10084033613447" CenterY="808.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="" ID=""/>
+  </DataNode>
+  <DataNode TextLabel="GSK3B" GraphId="f285c" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="509.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000082701"/>
+  </DataNode>
+  <DataNode TextLabel="iCRT3" GraphId="f3ce6" Type="Metabolite" GroupRef="c010f">
+    <Graphics CenterX="118.10084033613447" CenterY="748.2436974789911" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="275174963"/>
+  </DataNode>
+  <DataNode TextLabel="CK1e" GraphId="f93e6" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="569.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Uniprot-TrEMBL" ID="Q5R2U3"/>
+  </DataNode>
+  <DataNode TextLabel="WNT" GraphId="f9f0e" Type="GeneProduct">
+    <Comment>Wnt Not Specified</Comment>
+    <Graphics CenterX="479.75" CenterY="152.75" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125084"/>
+  </DataNode>
+  <DataNode TextLabel="IC261" GraphId="fa28d" Type="Metabolite">
+    <Graphics CenterX="138.05042016806723" CenterY="569.2521008403363" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff"/>
+    <Xref Database="PubChem-substance" ID="53789627"/>
+  </DataNode>
+  <DataNode TextLabel="APC" GraphId="fad6d" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="529.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000134982"/>
+  </DataNode>
+  <DataNode TextLabel="TCF4" GraphId="fad8d" Type="GeneProduct" GroupRef="fcb57">
+    <Graphics CenterX="511.6470588235299" CenterY="744.0000000000001" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000196628"/>
+  </DataNode>
+  <DataNode TextLabel="CK1a" GraphId="fc166" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="549.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000113712"/>
+  </DataNode>
+  <DataNode TextLabel="CTNNB1" GraphId="ff45e" Type="GeneProduct" GroupRef="a1772">
+    <Graphics CenterX="509.0" CenterY="589.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000168036"/>
+  </DataNode>
+  <DataNode TextLabel="WNT" GraphId="c0593" Type="GeneProduct">
+    <Comment>Wnt Not Specified</Comment>
+    <Graphics CenterX="479.9012605042016" CenterY="256.80042016806726" Width="80.0" Height="20.0" ZOrder="32769" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000125084"/>
+  </DataNode>
+  <DataNode TextLabel="CTNNB1" GraphId="f7757" Type="GeneProduct" GroupRef="fcb57">
+    <Graphics CenterX="511.6470588235299" CenterY="724.0000000000001" Width="80.0" Height="20.0" ZOrder="32773" FontSize="10" Valign="Middle"/>
+    <Xref Database="Ensembl" ID="ENSG00000168036"/>
+  </DataNode>
+  <State GraphRef="ab8e1" TextLabel="Ub" GraphId="bc580">
+    <Graphics RelX="1.0" RelY="-0.3655462184873898" Width="15.0" Height="15.0" ShapeType="Oval"/>
+    <Xref Database="" ID=""/>
+  </State>
+  <Interaction GraphId="id173b67aa">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="236.1764705882353" Y="290.9663865546218" GraphRef="ed8f0" RelX="1.0" RelY="0.0"/>
+      <Point X="399.2016806722688" Y="357.0" GraphRef="e8b28" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id345fcae2">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="674.9642857142857" Y="257.16176470588226" GraphRef="d8db4" RelX="-1.0" RelY="0.0"/>
+      <Point X="519.9012605042017" Y="256.80042016806726" GraphRef="c0593" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id4cff0114">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="562.0" Y="732.0"/>
+      <Point X="593.9495798319331" Y="732.0" GraphRef="fa2ea" RelX="-1.0" RelY="0.0" ArrowHead="mim-transcription-translation"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id593c678d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="905.4453781512601" Y="548.8487394957982" GraphRef="d7e03" RelX="-1.0" RelY="0.0"/>
+      <Point X="549.0" Y="549.0" GraphRef="fc166" RelX="1.0" RelY="0.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5bad619e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="166.10084033613447" Y="748.2436974789911" GraphRef="c2612" RelX="1.0" RelY="0.0"/>
+      <Point X="458.0" Y="748.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id5c1c48c4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="549.0" Y="589.0" GraphRef="ff45e" RelX="1.0" RelY="0.0"/>
+      <Point X="630.0" Y="589.0" GraphRef="ffac3" RelX="-1.0" RelY="0.0" ArrowHead="mim-conversion"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id603496b4">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="479.9012605042017" Y="266.80042016806726" GraphRef="c0593" RelX="0.0" RelY="1.0"/>
+      <Point X="479.2016806722687" Y="335.0" GraphRef="c31dc" RelX="0.0" RelY="-1.0" ArrowHead="mim-binding"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id63750e14">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="479.0" Y="105.0" GraphRef="e6aef" RelX="0.0" RelY="1.0"/>
+      <Point X="479.75" Y="142.75" GraphRef="f9f0e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="id8b9e1944">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="178.05042016806723" Y="569.2521008403363" GraphRef="fa28d" RelX="1.0" RelY="0.0"/>
+      <Point X="469.0" Y="569.0" GraphRef="f93e6" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ida4b0312a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="209.0084033613444" Y="424.4117647058822" GraphRef="d7cea" RelX="1.0" RelY="0.0"/>
+      <Point X="334.0" Y="425.0" GraphRef="d5509" RelX="-1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc2038e04">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="374.0" Y="435.0" GraphRef="d5509" RelX="0.0" RelY="1.0"/>
+      <Point X="457.0" Y="488.0" GraphRef="d1e39" RelX="-1.0" RelY="-0.5" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idc5a84009">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="897.4978991596637" Y="469.3508403361344" GraphRef="c6eb4" RelX="-1.0" RelY="0.0"/>
+      <Point X="549.0" Y="469.0" GraphRef="ea438" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="ideee74888">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="635.0" Y="95.0" GraphRef="bb38d" RelX="-1.0" RelY="0.0"/>
+      <Point X="519.0" Y="95.0" GraphRef="e6aef" RelX="1.0" RelY="0.0" ArrowHead="mim-inhibition"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Interaction GraphId="idfcfc52a0">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="479.75" Y="162.75" GraphRef="f9f0e" RelX="0.0" RelY="1.0"/>
+      <Point X="479.9012605042017" Y="246.80042016806726" GraphRef="c0593" RelX="0.0" RelY="-1.0" ArrowHead="Arrow"/>
+    </Graphics>
+    <Xref Database="" ID=""/>
+  </Interaction>
+  <Label TextLabel="FZD antibodies" GraphId="ed8f0">
+    <Graphics CenterX="187.94117647058823" CenterY="290.9663865546218" Width="96.47058823529413" Height="25.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="Gene Transcription" GraphId="fa2ea">
+    <Graphics CenterX="660.9453781512606" CenterY="732.0" Width="133.99159663865527" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="V3Nter" GraphId="ac2a6" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="284.66176470588215" Width="96.47058823529413" Height="25.0" ZOrder="32770" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="WNT antibodies" GraphId="f320e" GroupRef="e0975">
+    <Graphics CenterX="731.1995798319327" CenterY="309.66176470588215" Width="96.47058823529413" Height="25.0" ZOrder="32771" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Label TextLabel="DVL PDZ Domains" GraphId="f9191" GroupRef="b5d27">
+    <Graphics CenterX="141.470588235294" CenterY="414.4117647058822" Width="119.0756302521008" Height="25.0" ZOrder="32772" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle"/>
+  </Label>
+  <Shape GraphId="a90ec">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="477.5" CenterY="126.0" Width="253.0" Height="130.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c5669">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="538.125" CenterY="626.375" Width="597.75" Height="537.25" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="c681f">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Nucleus"/>
+    <Attribute Key="org.pathvisio.DoubleLineProperty" Value="Double"/>
+    <Graphics CenterX="574.5" CenterY="763.5" Width="489.0" Height="201.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="Oval" LineThickness="3.0" Color="c0c0c0" Rotation="0.0"/>
+  </Shape>
+  <Shape GraphId="ffac3">
+    <Graphics CenterX="645.0" CenterY="589.0" Width="30.0" Height="30.0" ZOrder="16384" FontSize="10" Valign="Middle" ShapeType="mim-degradation" Rotation="0.0"/>
+  </Shape>
+  <Group GroupId="fcb57" Style="Complex"/>
+  <Group GroupId="c010f" GraphId="c2612" Style="Group"/>
+  <Group GroupId="d585f" GraphId="c31dc" Style="Complex"/>
+  <Group GroupId="a1772" GraphId="d1e39" Style="Complex"/>
+  <Group GroupId="b5d27" GraphId="d7cea" Style="Group"/>
+  <Group GroupId="e0975" GraphId="d8db4" Style="Group"/>
+  <InfoBox CenterX="0.0" CenterY="0.0"/>
+  <Biopax>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="c93">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22155636</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dysregulation of Wnt/β-catenin signaling in gastrointestinal cancers.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gastroenterology</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White BD</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chien AJ</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dawson DW</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gastrointestinal carcinoma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:0050922</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altered Wnt signaling pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000598</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

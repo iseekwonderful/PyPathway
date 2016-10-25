@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pypathway.query.common &#8212; PyPathway 5 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="top" title="PyPathway 5 documentation" href="../../../index.html" />
+    <link rel="up" title="pypathway" href="../../pypathway.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for pypathway.query.common</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Here we implement the pathway data objects of the pathway we support</span>
+<span class="c1"># including the KEGG, Reactome, Pathway Common</span>
+<span class="kn">from</span> <span class="nn">.network</span> <span class="k">import</span> <span class="n">MultiThreadNetworkRequest</span><span class="p">,</span> <span class="n">NetworkMethod</span><span class="p">,</span> <span class="n">NetworkException</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="k">import</span> <span class="n">environment</span> <span class="k">as</span> <span class="n">env</span>
+
+
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">Queue</span> <span class="k">import</span> <span class="n">Queue</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">queue</span> <span class="k">import</span> <span class="n">Queue</span>
+
+
+<div class="viewcode-block" id="PathwayFileFormatNotSupportException"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.PathwayFileFormatNotSupportException">[docs]</a><span class="k">class</span> <span class="nc">PathwayFileFormatNotSupportException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class handle the unsupported file format of custome pathway file</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="PathwayFileReadException"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.PathwayFileReadException">[docs]</a><span class="k">class</span> <span class="nc">PathwayFileReadException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="ne">Exception</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="n">message</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class handle the exception while opening the custom pathway file</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">message</span></div>
+
+
+<div class="viewcode-block" id="SupportedOrganism"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.SupportedOrganism">[docs]</a><span class="k">class</span> <span class="nc">SupportedOrganism</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class represent the organism supported by Pathway Common, not KEGG</span>
+<span class="sd">    Currently, the integrate pathway data supported is only the Homo sapiens (9606)</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        Homo_Sapiens: 9606</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">Homo_Sapiens</span> <span class="o">=</span> <span class="mi">9606</span></div>
+
+
+<div class="viewcode-block" id="SupportedDatabase"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.SupportedDatabase">[docs]</a><span class="k">class</span> <span class="nc">SupportedDatabase</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class lists the database we support currently</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">KEGG</span> <span class="o">=</span> <span class="s1">&#39;kegg&#39;</span>
+    <span class="n">REACTOME</span> <span class="o">=</span> <span class="s1">&#39;reactome&#39;</span>
+    <span class="n">PANTHER_Pathway</span> <span class="o">=</span> <span class="s1">&#39;panther&#39;</span>
+    <span class="n">WikiPathways</span> <span class="o">=</span> <span class="s1">&#39;wikipathways&#39;</span></div>
+
+
+<span class="c1"># definition of the current support data format</span>
+<div class="viewcode-block" id="PathwayFormat"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.PathwayFormat">[docs]</a><span class="k">class</span> <span class="nc">PathwayFormat</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">des</span> <span class="o">=</span> <span class="s2">&quot;This is the class include the current support data format&quot;</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class list the format we support currently</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">BioPAX</span> <span class="o">=</span> <span class="s2">&quot;BIOPAX&quot;</span>
+    <span class="n">KGML</span> <span class="o">=</span> <span class="s2">&quot;KGML&quot;</span>
+    <span class="n">SBGN</span> <span class="o">=</span> <span class="s2">&quot;SBGN&quot;</span>
+    <span class="n">GPML</span> <span class="o">=</span> <span class="s2">&quot;GPML&quot;</span></div>
+
+
+<div class="viewcode-block" id="PathwayData"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.PathwayData">[docs]</a><span class="k">class</span> <span class="nc">PathwayData</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="c1"># formats is a list, of PathwayFormat</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">formats</span> <span class="o">=</span> <span class="nb">format</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class is the super class of all class store raw pathway data, generally they will contain the</span>
+<span class="sd">    identifier(id), descriptions, source(database), format, data</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        source: the public database it comes from</span>
+<span class="sd">        id: the unique identifier in the source database, if source is pathway common, its uri</span>
+<span class="sd">        formats: member of PathwayFormat, we currently support BioPAX, SBGN-PD, KGML</span>
+<span class="sd">        data: the raw pathway file data</span>
+<span class="sd">        description: the description provide by source database</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        summary: provide the information containing in this class</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="PathwayData.summary"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.PathwayData.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div></div>
+
+
+<div class="viewcode-block" id="CommonPathwayData"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CommonPathwayData">[docs]</a><span class="k">class</span> <span class="nc">CommonPathwayData</span><span class="p">(</span><span class="n">PathwayData</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">bioPAX</span><span class="p">,</span> <span class="n">SBGN</span><span class="p">):</span>
+        <span class="n">PathwayData</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="n">bioPAX</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SBGN</span> <span class="o">=</span> <span class="n">SBGN</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">BioPAX</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class represent the pathway data query from Pathway Common, it provide the interface of many</span>
+<span class="sd">    public database like:</span>
+<span class="sd">        1. Reactome, 2. NCI Pathway Interaction Database: Pathway, 3. PhosphoSitePlus, 4. HumanCyc</span>
+<span class="sd">        5. PANTHER Pathway, 6. Database of Interacting Proteins, 7. BioGRID, 8. IntAct, 9. WikiPathways</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        data: now it contains BioPAX format data of pathway</span>
+<span class="sd">        SBGN: it contains the SBGN-PD graphic format of pathway</span>
+<span class="sd">        BioPax: return data</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="CommonPathwayData.summary"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CommonPathwayData.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Get the summary for a pathway data.</span>
+<span class="sd">        :return:</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="s2">&quot;source: </span><span class="si">{}</span><span class="se">\n</span><span class="s2"> id: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">BioPAX: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">SBGN-PD: </span><span class="si">{}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">description:</span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">SBGN</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span>
+            <span class="c1"># Temp:</span>
+            <span class="s2">&quot;http://www.pathwaycommons.org/pc2/get?uri=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">),</span>
+            <span class="s2">&quot;http://www.pathwaycommons.org/pc2/get?uri=</span><span class="si">{}</span><span class="s2">&amp;format=sbgn&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<div class="viewcode-block" id="CommonPathwayData.retrieve"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CommonPathwayData.retrieve">[docs]</a>    <span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Trying to fill the BioPAX and SBGN-PD data for certain pathway.</span>
+<span class="sd">        :param proxies: if not None, proxies used by while requesting data.</span>
+<span class="sd">        :return: None, but fill self&#39;s BioPAX and SBGN if it is empty</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="n">query</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+        <span class="c1"># lock = RLock()</span>
+        <span class="c1"># print &quot;http://www.pathwaycommons.org/pc2/get?uri={}&amp;format=sbgn&quot;.format(self.id)</span>
+        <span class="n">query</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MultiThreadNetworkRequest</span><span class="p">(</span>
+                <span class="c1">#&quot;http://www.pathwaycommons.org/pc2/get?uri={}&quot;.format(self.id),</span>
+            <span class="s2">&quot;http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/biopaxExporter/Level3/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">r&quot;\d+&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">),</span>
+            <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span> <span class="n">error_queue</span><span class="o">=</span><span class="n">error</span><span class="p">))</span>
+        <span class="n">query</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MultiThreadNetworkRequest</span><span class="p">(</span>
+            <span class="s2">&quot;http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/sbgnExporter/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">r&quot;\d+&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">),</span>
+            <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;SBGN&quot;</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span> <span class="n">error_queue</span><span class="o">=</span><span class="n">error</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">join</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;catched!&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">raise</span> <span class="n">e</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">error</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+            <span class="n">er</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">er</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">NetworkException</span><span class="p">(</span><span class="n">er</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">er</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="CommonPathwayData.load"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CommonPathwayData.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">SBGN</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;load a reactome need the SBGN and BioPAX data, try retrieve first&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">..core.SBGNPDImpl.objects</span> <span class="k">import</span> <span class="n">SBGNParser</span>
+            <span class="n">sb</span> <span class="o">=</span> <span class="n">SBGNParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SBGN</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">sb</span><span class="o">.</span><span class="n">fix</span><span class="p">()</span>
+            <span class="n">sb</span><span class="o">.</span><span class="n">fix_reactome</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">sb</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Error while parse SBGN file&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="WiKiPathwayData"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData">[docs]</a><span class="k">class</span> <span class="nc">WiKiPathwayData</span><span class="p">(</span><span class="n">PathwayData</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">species</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">revision</span><span class="p">):</span>
+        <span class="n">PathwayData</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">SupportedDatabase</span><span class="o">.</span><span class="n">WikiPathways</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="p">[</span><span class="n">PathwayFormat</span><span class="o">.</span><span class="n">GPML</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">GPML</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">species</span> <span class="o">=</span> <span class="n">species</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">revision</span> <span class="o">=</span> <span class="n">revision</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class is used for storage the raw wiki pathway data, including the id, name,  oragnism, reversion, score,</span>
+<span class="sd">    field?</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="WiKiPathwayData.load"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">..core.GPMLImpl.objects</span> <span class="k">import</span> <span class="n">GPMLParser</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Parse GMPL file need GPML data&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">GPMLParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<div class="viewcode-block" id="WiKiPathwayData.summary"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">id: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">name: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">species: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">revision: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">hasData: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">score: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">species</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">revision</span><span class="p">,</span> <span class="kc">True</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">False</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">score</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="WiKiPathwayData.retrieve"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData.retrieve">[docs]</a>    <span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># get the GPML data from wiki pathway</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://webservice.wikipathways.org/getPathway?pwId=</span><span class="si">{}</span><span class="s2">&amp;format=json&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">gpml</span> <span class="o">=</span> <span class="n">MultiThreadNetworkRequest</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">process_data</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">gpml</span><span class="p">])</span>
+        <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="WiKiPathwayData.join_active_thread"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData.join_active_thread">[docs]</a>    <span class="k">def</span> <span class="nf">join_active_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">join</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="WiKiPathwayData.process_data"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.WiKiPathwayData.process_data">[docs]</a>    <span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="s2">&quot;pathway&quot;</span><span class="p">][</span><span class="s2">&quot;gpml&quot;</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Pathway Not found in database&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">GPML</span> <span class="o">=</span> <span class="n">content</span></div></div>
+
+
+<div class="viewcode-block" id="KEGGPathwayDataList"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayDataList">[docs]</a><span class="k">class</span> <span class="nc">KEGGPathwayDataList</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="n">results</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="KEGGPathwayDataList.show"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayDataList.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">env</span><span class="p">():</span>
+            <span class="n">htmls</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="n">html</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="p">)])</span>
+            <span class="kn">import</span> <span class="nn">os</span>
+            <span class="kn">import</span> <span class="nn">shutil</span>
+            <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../static/midviz/kegg_result_viz.html&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">tem</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="n">tem</span> <span class="o">=</span> <span class="n">tem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{body}}&quot;</span><span class="p">,</span> <span class="n">htmls</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../static/midviz/kegg_result_viz_out.html&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">tem</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../static/box_fixed_height.html&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">con</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{path}}&quot;</span><span class="p">,</span> <span class="s2">&quot;static/midviz/kegg_result_viz_out.html&quot;</span><span class="p">)</span>
+            <span class="n">con</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{height}}&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="mi">400</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">)</span> <span class="o">+</span> <span class="mi">20</span><span class="p">))</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/static&quot;</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">())</span>
+                <span class="k">pass</span>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">copytree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../static&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;/static&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">con</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">item</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">type</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+<div class="viewcode-block" id="KEGGPathwayDataList.next"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayDataList.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span><span class="p">()</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span></div></div>
+
+
+<div class="viewcode-block" id="KEGGPathwayData"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData">[docs]</a><span class="k">class</span> <span class="nc">KEGGPathwayData</span><span class="p">(</span><span class="n">PathwayData</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="n">organsim</span><span class="p">):</span>
+        <span class="n">PathwayData</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">SupportedDatabase</span><span class="o">.</span><span class="n">KEGG</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="p">[</span><span class="n">PathwayFormat</span><span class="o">.</span><span class="n">KGML</span><span class="p">],</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">png</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">=</span> <span class="n">organsim</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    The class used for storage the raw KEGG pathway data, we first fill the info then request the background</span>
+<span class="sd">    Image and KGML files</span>
+
+<span class="sd">    Attribute:</span>
+<span class="sd">        png: the background image of pathway</span>
+<span class="sd">        threads: the available thread of while query png and KGML in a multi-thread way</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        retrieve: this method design for multi-usage of KEGGPathwayData class, so in this situation, we call</span>
+<span class="sd">        Thread&#39;s join() method by join_active_thread manually</span>
+<span class="sd">        join_active_thread: join the thread self.thread has while requesting</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="KEGGPathwayData.load"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query_entity_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Load the pathway data to pathway object in KGML data structure</span>
+<span class="sd">        :param query_entity_data: query KEGG ORTHOLOGY for each node, may take minutes</span>
+<span class="sd">        :param proxies: if not None, proxys for requesting.</span>
+<span class="sd">        :return: a kegg pathway object (instance of KEGGPathway).</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="kn">from</span> <span class="nn">..core.KEGGImpl.objects</span> <span class="k">import</span> <span class="n">KEGGParser</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Target pathway have no data in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">organism</span><span class="p">))</span>
+        <span class="n">kg</span> <span class="o">=</span> <span class="n">KEGGParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">png</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">query_entity_data</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">kg</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># for the KGML file doesnt containing all the data</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">Queue</span><span class="p">()</span>
+            <span class="n">candidate</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">kg</span><span class="o">.</span><span class="n">prepare_addition_info</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span>
+            <span class="n">reqs</span> <span class="o">=</span> <span class="p">[</span><span class="n">MultiThreadNetworkRequest</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span>
+                                              <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">data_callback</span><span class="p">,</span>
+                                              <span class="n">callback_args</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+                                              <span class="n">error_queue</span><span class="o">=</span><span class="n">error</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">candidate</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">reqs</span><span class="p">]</span>
+            <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">join</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">reqs</span><span class="p">]</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">error</span><span class="o">.</span><span class="n">empty</span><span class="p">():</span>
+                <span class="n">e</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+                <span class="k">raise</span> <span class="n">NetworkException</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">kg</span></div>
+
+<div class="viewcode-block" id="KEGGPathwayData.data_callback"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.data_callback">[docs]</a>    <span class="k">def</span> <span class="nf">data_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">source</span><span class="p">):</span>
+        <span class="n">split</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;///&quot;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">ko</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">split</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">r&quot;ORTHOLOGY\s+?(K\d+)\s&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+                <span class="n">ko</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">r&quot;ORTHOLOGY\s+?(K\d+)\s&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="p">[</span><span class="n">source</span><span class="o">.</span><span class="n">ko_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ko</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="KEGGPathwayData.summary"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;format: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">id: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">description: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">hasData: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="s2">&quot;KGML&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="KEGGPathwayData.html"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.html">[docs]</a>    <span class="k">def</span> <span class="nf">html</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">os</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot;/../static/midviz/kegg_element_template&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+            <span class="n">tem</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">tem</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{id}}&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{name}}&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="p">)</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{hasData}}&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="kc">True</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="k">else</span> <span class="kc">False</span><span class="p">))</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{i}}&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>\
+            <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;{{image}}&quot;</span><span class="p">,</span> <span class="s2">&quot;http://rest.kegg.jp/get/</span><span class="si">{}{}</span><span class="s2">/image&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">organism</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">))</span></div>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+    <span class="c1"># retrieve the pathway info and KGML data</span>
+<div class="viewcode-block" id="KEGGPathwayData.retrieve"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.retrieve">[docs]</a>    <span class="k">def</span> <span class="nf">retrieve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">organism</span><span class="o">=</span><span class="s2">&quot;hsa&quot;</span><span class="p">,</span> <span class="n">proxies</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">=</span> <span class="n">organism</span>
+        <span class="n">kgml_url</span> <span class="o">=</span> <span class="s2">&quot;http://rest.kegg.jp/get/</span><span class="si">{}{}</span><span class="s2">/kgml&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">organism</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">png_url</span> <span class="o">=</span> <span class="s2">&quot;http://rest.kegg.jp/get/</span><span class="si">{}{}</span><span class="s2">/image&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">organism</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+        <span class="n">kgml</span> <span class="o">=</span> <span class="n">MultiThreadNetworkRequest</span><span class="p">(</span><span class="n">kgml_url</span><span class="p">,</span> <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span>
+                                         <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span> <span class="n">error_queue</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+        <span class="n">png</span> <span class="o">=</span> <span class="n">MultiThreadNetworkRequest</span><span class="p">(</span><span class="n">png_url</span><span class="p">,</span> <span class="n">NetworkMethod</span><span class="o">.</span><span class="n">GET</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">,</span>
+                                        <span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">proxy</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span> <span class="n">error_queue</span><span class="o">=</span><span class="n">error</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">kgml</span><span class="p">,</span> <span class="n">png</span><span class="p">])</span>
+        <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="KEGGPathwayData.join_active_thread"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.KEGGPathwayData.join_active_thread">[docs]</a>    <span class="k">def</span> <span class="nf">join_active_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">join</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">threads</span><span class="p">]</span></div>
+
+    <span class="k">def</span> <span class="nf">_parse_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="CustomPathwayFileData"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CustomPathwayFileData">[docs]</a><span class="k">class</span> <span class="nc">CustomPathwayFileData</span><span class="p">(</span><span class="n">PathwayData</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">format</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">PathwayFormat</span><span class="o">.</span><span class="n">__dict__</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PathwayFileFormatNotSupportException</span><span class="p">(</span><span class="s2">&quot;Use the member of PathwayFormat likes: PathwayFormat.BioPAX&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PathwayFileFormatNotSupportException</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PathwayFileFormatNotSupportException</span><span class="p">(</span><span class="s2">&quot;Other error, see traceback&quot;</span><span class="p">)</span>
+        <span class="n">PathwayData</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">description</span><span class="p">,</span> <span class="p">[</span><span class="nb">format</span><span class="p">],</span> <span class="n">data</span><span class="p">)</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This class support the reading of local pathway file supported by our program</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_path: the path of pathway file</span>
+<span class="sd">        format: the file format, should be the member of PathwayFormat</span>
+<span class="sd">        id: if has, its id in certain database or what you like</span>
+<span class="sd">        description: if has, its description on certain database or what you like</span>
+<span class="sd">        source: if has, the source of this pathway file</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        summary: return the necessary information</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<div class="viewcode-block" id="CustomPathwayFileData.summary"><a class="viewcode-back" href="../../../pypathway.query.html#pypathway.query.common.CustomPathwayFileData.summary">[docs]</a>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;User provide data: file read: Pass</span><span class="se">\n</span><span class="s2">Format: </span><span class="si">{}</span><span class="s2">, data size: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">format</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="p">)</span></div></div>
+
+<span class="c1"># if __name__ == &#39;__main__&#39;:</span>
+<span class="c1">#     data_from_file = CustomPathwayFileData(&quot;test.owl&quot;, PathwayFormat.SBGN, None, None, None)</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  <li><a href="../../pypathway.html">pypathway</a><ul>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, sheep.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

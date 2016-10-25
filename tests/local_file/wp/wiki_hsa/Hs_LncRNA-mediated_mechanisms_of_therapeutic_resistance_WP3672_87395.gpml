@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="LncRNA-mediated mechanisms of therapeutic resistance" Version="20160617" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-description">LncRNA-mediated mechanisms of therapeutic resistance. Mechanisms of tumor cell resistance to chemotherapy or hypoxia involving lncRNA include modulation of drug transporters and elimination, survival signaling pathways, cell cycle progression and DNA repair, sensitization to apoptosis, and modulation of intercellular communication mediated by extracellular vesicles.
+
+This pathway is based on Fig 6 from Parasramka et al: http://www.ncbi.nlm.nih.gov/pubmed/27013343</Comment>
+  <BiopaxRef>dae</BiopaxRef>
+  <Graphics BoardWidth="1111.0" BoardHeight="575.0" />
+  <DataNode TextLabel="HOTAIR" GraphId="d8242" Type="Rna">
+    <Graphics CenterX="397.6666666666665" CenterY="194.33333333333323" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000228630" />
+  </DataNode>
+  <DataNode TextLabel="AK126698" GraphId="dbe60" Type="Rna">
+    <Graphics CenterX="97.75" CenterY="195.08333333333331" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000203601" />
+  </DataNode>
+  <DataNode TextLabel="UCA1" GraphId="efe36" Type="Rna">
+    <Graphics CenterX="255.33333333333343" CenterY="194.33333333333337" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000214049" />
+  </DataNode>
+  <DataNode TextLabel="MEG3" GraphId="bec8f" Type="Rna">
+    <Graphics CenterX="580.0" CenterY="195.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000214548" />
+  </DataNode>
+  <DataNode TextLabel="linc-VLDLR" GraphId="df657" Type="Rna">
+    <Graphics CenterX="744.0" CenterY="195.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Entrez Gene" ID="401491" />
+  </DataNode>
+  <DataNode TextLabel="linc-RoR" GraphId="bfa32" Type="Rna">
+    <Graphics CenterX="1028.0" CenterY="194.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000258609" />
+  </DataNode>
+  <DataNode TextLabel="WNT6" GraphId="a338e" Type="GeneProduct">
+    <Graphics CenterX="255.0" CenterY="278.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000115596" />
+  </DataNode>
+  <DataNode TextLabel="TP53" GraphId="f7d9a" Type="GeneProduct" GroupRef="ebace">
+    <Graphics CenterX="545.0" CenterY="301.0" Width="54.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000141510" />
+  </DataNode>
+  <DataNode TextLabel="HIF1A" GraphId="ba68d" Type="GeneProduct">
+    <Graphics CenterX="967.0" CenterY="420.0" Width="56.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000100644" />
+  </DataNode>
+  <DataNode TextLabel="MRUL" GraphId="c2c9e" Type="Rna">
+    <Graphics CenterX="97.75" CenterY="302.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="P-gp" GraphId="f39a1" Type="GeneProduct">
+    <Graphics CenterX="97.75" CenterY="387.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000085563" />
+  </DataNode>
+  <DataNode TextLabel="p21" GraphId="fdf3a" Type="GeneProduct">
+    <Graphics CenterX="398.0" CenterY="270.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000124762" />
+  </DataNode>
+  <DataNode TextLabel="G0/G1 cell cycle arrest" GraphId="a7a65" Type="Pathway">
+    <Graphics CenterX="397.5" CenterY="346.0" Width="149.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Apoptosis" GraphId="dd467" Type="Pathway">
+    <Graphics CenterX="529.0" CenterY="405.0" Width="80.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="WikiPathways" ID="WP254" />
+  </DataNode>
+  <DataNode TextLabel="Cell proliferation" GraphId="f2599" Type="Pathway">
+    <Graphics CenterX="625.0" CenterY="404.0" Width="110.0" Height="20.0" ZOrder="32768" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="None" Color="14961e" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Bcl-xl" GraphId="f416e" Type="GeneProduct" GroupRef="ebace">
+    <Graphics CenterX="613.0" CenterY="301.0" Width="52.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" />
+    <Xref Database="Ensembl" ID="ENSG00000171552" />
+  </DataNode>
+  <DataNode TextLabel="EV linc-RoR" GraphId="ab9dc" Type="Rna">
+    <Graphics CenterX="1028.0" CenterY="262.0" Width="80.0" Height="20.0" ZOrder="32786" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Ensembl" ID="ENSG00000258609" />
+  </DataNode>
+  <DataNode TextLabel="EV linc-VLDLR" GraphId="b2ab3" Type="Rna">
+    <Graphics CenterX="744.0" CenterY="267.0" Width="80.0" Height="20.0" ZOrder="32787" FontSize="10" Valign="Middle" Color="990099" />
+    <Xref Database="Entrez Gene" ID="401491" />
+  </DataNode>
+  <Interaction GraphId="idf53064bd">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="97.75" Y="397.0" GraphRef="f39a1" RelX="0.0" RelY="1.0" />
+      <Point X="97.75" Y="517.0" GraphRef="fe140" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id721b74a1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="97.75" Y="205.08333333333331" GraphRef="dbe60" RelX="0.0" RelY="1.0" />
+      <Point X="97.75" Y="292.0" GraphRef="c2c9e" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida9750c88">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="97.75" Y="312.0" GraphRef="c2c9e" RelX="0.0" RelY="1.0" />
+      <Point X="97.75" Y="377.0" GraphRef="f39a1" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="ida306c88">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="117.75" Y="397.0" GraphRef="f39a1" RelX="0.5" RelY="1.0" />
+      <Point X="164.0" Y="451.0" GraphRef="d13c3" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id346077f1">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="255.33333333333343" Y="204.33333333333337" GraphRef="efe36" RelX="0.0" RelY="1.0" />
+      <Point X="255.0" Y="268.0" GraphRef="a338e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb06821ae">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="397.6666666666665" Y="204.33333333333323" GraphRef="d8242" RelX="0.0" RelY="1.0" />
+      <Point X="398.0" Y="260.0" GraphRef="fdf3a" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id3ae3a93d">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="398.0" Y="280.0" GraphRef="fdf3a" RelX="0.0" RelY="1.0" />
+      <Point X="397.5" Y="336.0" GraphRef="a7a65" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id8ca6ace4">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="578.5" Y="319.0" GraphRef="a8700" RelX="0.0" RelY="1.0" />
+      <Point X="625.0" Y="394.0" GraphRef="f2599" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idb27af6da">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="580.0" Y="205.0" GraphRef="bec8f" RelX="0.0" RelY="1.0" />
+      <Point X="545.0" Y="291.0" GraphRef="f7d9a" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id5f486e36">
+    <Graphics ZOrder="12288" LineStyle="Broken" LineThickness="1.0">
+      <Point X="578.5" Y="319.0" GraphRef="a8700" RelX="0.0" RelY="1.0" />
+      <Point X="529.0" Y="395.0" GraphRef="dd467" RelX="0.0" RelY="-1.0" ArrowHead="mim-inhibition" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idaf70dc8a">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="744.0" Y="205.0" GraphRef="df657" RelX="0.0" RelY="1.0" />
+      <Point X="744.0" Y="257.0" GraphRef="b2ab3" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id2f22336e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="1028.0" Y="204.0" GraphRef="bfa32" RelX="0.0" RelY="1.0" />
+      <Point X="1028.0" Y="252.0" GraphRef="ab9dc" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id4aaf4e61">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="887.0" Y="190.0" GraphRef="ce83a" RelX="0.0" RelY="1.0" />
+      <Point X="887.25" Y="274.0" GraphRef="f4c40" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id80f38b4e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="887.25" Y="327.0" GraphRef="f4c40" RelX="0.0" RelY="1.0" />
+      <Point X="887.0" Y="374.0" GraphRef="fdd89" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="idbdec057a">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="967.0" Y="430.0" GraphRef="ba68d" RelX="0.0" RelY="1.0" />
+      <Point X="927.0" Y="510.0" GraphRef="d1648" RelX="1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6f87634d">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="791.5" Y="434.0" GraphRef="c9d23" RelX="0.0" RelY="1.0" />
+      <Point X="847.0" Y="510.0" GraphRef="d1648" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="id6e247d6b">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="580.0" Y="205.0" GraphRef="bec8f" RelX="0.0" RelY="1.0" />
+      <Point X="613.0" Y="291.0" GraphRef="f416e" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Label TextLabel="Chemotherapy" GraphId="c4c6e">
+    <Graphics CenterX="429.0" CenterY="115.5" Width="760.0" Height="23.0" ZOrder="28672" FillColor="0066ff" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="Rectangle" Color="ffffff" />
+  </Label>
+  <Label TextLabel="Drug-resistant&#xA;cancer cells" GraphId="fe140">
+    <Graphics CenterX="97.75" CenterY="531.0" Width="109.0" Height="28.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="cc00cc" />
+  </Label>
+  <Label TextLabel="Impaired &#xA;drug &#xA;expulsion" GraphId="d13c3">
+    <Graphics CenterX="204.0" CenterY="451.0" Width="80.0" Height="48.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" LineStyle="Broken" Color="cc00cc" />
+  </Label>
+  <Label TextLabel="HCC cells" GraphId="def62">
+    <Graphics CenterX="886.0" CenterY="145.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Cell survival" GraphId="d1648">
+    <Graphics CenterX="887.0" CenterY="510.0" Width="80.0" Height="20.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="Transporter&#xA;expression" GraphId="c9d23">
+    <Graphics CenterX="791.5" CenterY="414.5" Width="79.0" Height="39.0" ZOrder="28672" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" ShapeType="RoundedRectangle" Color="0066ff" />
+  </Label>
+  <Label TextLabel="Hypoxia" GraphId="f6ec1">
+    <Graphics CenterX="1029.5" CenterY="118.0" Width="103.0" Height="23.0" ZOrder="32769" FillColor="00cc33" FontWeight="Bold" FontSize="14" Valign="Middle" ShapeType="Rectangle" Color="ffffff" />
+  </Label>
+  <Label TextLabel="Recipient cells" GraphId="a4d74">
+    <Graphics CenterX="887.5" CenterY="461.0" Width="83.0" Height="20.0" ZOrder="32784" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Label TextLabel="EVs" GraphId="fb476">
+    <Graphics CenterX="932.0" CenterY="304.0" Width="50.0" Height="20.0" ZOrder="32785" FillColor="ffffff" FontWeight="Bold" FontSize="12" Valign="Middle" />
+  </Label>
+  <Shape GraphId="a43e0">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="902.5" CenterY="286.5" Width="21.0" Height="21.0" ZOrder="-2" FillColor="dedeec" FontSize="10" Valign="Middle" ShapeType="Oval" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ce83a">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="887.0" CenterY="173.0" Width="46.0" Height="34.0" ZOrder="16384" FillColor="ff9999" FontSize="10" Valign="Middle" ShapeType="RoundedRectangle" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="bc585" GroupRef="c1085">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Cell" />
+    <Graphics CenterX="886.5" CenterY="422.5" Width="55.0" Height="51.0" ZOrder="16384" FillColor="ffccff" FontSize="10" Valign="Middle" ShapeType="Oval" Color="990066" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="db220" GroupRef="c4a08">
+    <Graphics CenterX="905.0" CenterY="286.5" Width="14.0" Height="5.0" ZOrder="16384" FillColor="cc3300" FontSize="10" Valign="Middle" ShapeType="Oval" Color="cc3300" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e4693" GroupRef="c4a08">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="873.0" CenterY="292.5" Width="21.0" Height="21.0" ZOrder="32772" FillColor="dedeec" FontSize="10" Valign="Middle" ShapeType="Oval" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b25fc" GroupRef="c4a08">
+    <Graphics CenterX="872.0" CenterY="293.5" Width="12.0" Height="5.0" ZOrder="32774" FillColor="cc3300" FontSize="10" Valign="Middle" ShapeType="Oval" Color="cc3300" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="cfbb4" GroupRef="c4a08">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="898.0" CenterY="308.5" Width="21.0" Height="21.0" ZOrder="32776" FillColor="dedeec" FontSize="10" Valign="Middle" ShapeType="Oval" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="b5df6" GroupRef="c4a08">
+    <Graphics CenterX="898.0" CenterY="309.5" Width="12.0" Height="5.0" ZOrder="32777" FillColor="cc3300" FontSize="10" Valign="Middle" ShapeType="Oval" Color="cc3300" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="fec46" GroupRef="c1085">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="904.5" CenterY="393.5" Width="21.0" Height="21.0" ZOrder="32779" FillColor="dedeec" FontSize="10" Valign="Middle" ShapeType="Oval" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="ebf11">
+    <Graphics CenterX="903.0" CenterY="394.5" Width="12.0" Height="5.0" ZOrder="32780" FillColor="cc3300" FontSize="10" Valign="Middle" ShapeType="Oval" Color="cc3300" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="e2e86" GroupRef="c1085">
+    <Attribute Key="org.pathvisio.CellularComponentProperty" Value="Vesicle" />
+    <Graphics CenterX="871.5" CenterY="392.5" Width="21.0" Height="21.0" ZOrder="32782" FillColor="dedeec" FontSize="10" Valign="Middle" ShapeType="Oval" Color="c0c0c0" Rotation="0.0" />
+  </Shape>
+  <Shape GraphId="a146f" GroupRef="c1085">
+    <Graphics CenterX="871.0" CenterY="393.5" Width="12.0" Height="5.0" ZOrder="32783" FillColor="cc3300" FontSize="10" Valign="Middle" ShapeType="Oval" Color="cc3300" Rotation="0.0" />
+  </Shape>
+  <Group GroupId="c4a08" GraphId="f4c40" Style="Group" />
+  <Group GroupId="c1085" GraphId="fdd89" Style="Group" />
+  <Group GroupId="ebace" GraphId="a8700" Style="Group" />
+  <Group GroupId="eab32" GraphId="f9a3b" Style="Group" />
+  <Group GroupId="a29b7" GraphId="b9863" Style="Group" />
+  <Group GroupId="aeb1a" GraphId="efb6f" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">long non-coding RNA pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0001335</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:PublicationXref xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:id="dae">
+      <bp:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27013343</bp:ID>
+      <bp:DB rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed</bp:DB>
+      <bp:TITLE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Long non-coding RNAs as novel targets for therapy in hepatocellular carcinoma.</bp:TITLE>
+      <bp:SOURCE rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pharmacol Ther</bp:SOURCE>
+      <bp:YEAR rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</bp:YEAR>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parasramka MA</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maji S</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matsuda A</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yan IK</bp:AUTHORS>
+      <bp:AUTHORS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patel T</bp:AUTHORS>
+    </bp:PublicationXref>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antineoplastic drug pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0002367</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hepatocellular carcinoma</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOID:684</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disease</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2013a" Name="Amino acid conjugation" Organism="Homo sapiens">
+  <Comment Source="WikiPathways-category">Metabolic Process</Comment>
+  <Graphics BoardWidth="378.0" BoardHeight="398.0" />
+  <DataNode TextLabel="carboxylic acid" GraphId="e0361" Type="Metabolite">
+    <Graphics CenterX="164.48333333333332" CenterY="69.98333333333333" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="ATP" GraphId="bb44a" Type="Metabolite">
+    <Graphics CenterX="296.0" CenterY="92.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00538" />
+  </DataNode>
+  <DataNode TextLabel="carboxylic acid AMP ester" GraphId="c34c7" Type="Metabolite">
+    <Graphics CenterX="164.74166666666667" CenterY="187.98333333333332" Width="139.48333333333332" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Phosphate" GraphId="b8600" Type="Metabolite" GroupRef="b5014">
+    <Graphics CenterX="298.0" CenterY="142.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01429" />
+  </DataNode>
+  <DataNode TextLabel="Phosphate" GraphId="b836b" Type="Metabolite" GroupRef="b5014">
+    <Graphics CenterX="298.0" CenterY="162.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB01429" />
+  </DataNode>
+  <DataNode TextLabel="carboxyl CoA" GraphId="ef007" Type="Metabolite">
+    <Graphics CenterX="164.0" CenterY="279.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="carboxyl amino acid conjugate" GraphId="b56c0" Type="Metabolite">
+    <Graphics CenterX="164.0" CenterY="358.0" Width="172.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="" ID="" />
+  </DataNode>
+  <DataNode TextLabel="Glycine" GraphId="b09fb" Type="Metabolite" GroupRef="c6b80">
+    <Graphics CenterX="271.0" CenterY="279.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00123" />
+  </DataNode>
+  <DataNode TextLabel="Taurine" GraphId="f36a5" Type="Metabolite" GroupRef="c6b80">
+    <Graphics CenterX="271.0" CenterY="299.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00251" />
+  </DataNode>
+  <DataNode TextLabel="L-Glutamine" GraphId="cb1fb" Type="Metabolite" GroupRef="c6b80">
+    <Graphics CenterX="271.0" CenterY="319.0" Width="80.0" Height="20.0" ZOrder="32768" FontSize="10" Valign="Middle" Color="0000ff" />
+    <Xref Database="HMDB" ID="HMDB00641" />
+  </DataNode>
+  <Interaction GraphId="a9d87">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="256.0" Y="92.0" GraphRef="bb44a" RelX="-1.0" RelY="0.0" />
+      <Point X="166.0" Y="122.0" />
+      <Point X="250.0" Y="152.0" GraphRef="c24a4" RelX="-1.0" RelY="0.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="d91ed">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="164.48333333333332" Y="79.98333333333333" GraphRef="e0361" RelX="0.0" RelY="1.0" />
+      <Point X="164.74166666666667" Y="177.98333333333332" GraphRef="c34c7" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="cb47e">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="164.74166666666667" Y="197.98333333333332" GraphRef="c34c7" RelX="0.0" RelY="1.0" />
+      <Point X="164.0" Y="269.0" GraphRef="ef007" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="e4497">
+    <Graphics ConnectorType="Curved" ZOrder="12288" LineThickness="1.0">
+      <Point X="223.0" Y="299.0" GraphRef="db47d" RelX="-1.0" RelY="0.0" />
+      <Point X="164.0" Y="348.0" GraphRef="b56c0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Interaction GraphId="bbbac">
+    <Graphics ZOrder="12288" LineThickness="1.0">
+      <Point X="164.0" Y="289.0" GraphRef="ef007" RelX="0.0" RelY="1.0" />
+      <Point X="164.0" Y="348.0" GraphRef="b56c0" RelX="0.0" RelY="-1.0" ArrowHead="Arrow" />
+    </Graphics>
+    <Xref Database="" ID="" />
+  </Interaction>
+  <Group GroupId="b5014" GraphId="c24a4" Style="Group" />
+  <Group GroupId="c6b80" GraphId="db47d" Style="Group" />
+  <InfoBox CenterX="0.0" CenterY="0.0" />
+  <Biopax>
+    <bp:openControlledVocabulary xmlns:bp="http://www.biopax.org/release/biopax-level3.owl#">
+      <bp:TERM xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amino acid metabolic pathway</bp:TERM>
+      <bp:ID xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW:0000011</bp:ID>
+      <bp:Ontology xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathway Ontology</bp:Ontology>
+    </bp:openControlledVocabulary>
+  </Biopax>
+</Pathway>
