@@ -99,7 +99,7 @@ class PublicDatabase:
         return results
 
     @staticmethod
-    def search_kegg(keyword, organism="hsa", proxies=None):
+    def search_kegg(keyword, organism="ko", proxies=None):
         '''
         Search KEGG database using KEGG's rest api.
 
@@ -126,30 +126,7 @@ class PublicDatabase:
             if not error.empty():
                 e = error.get()
                 raise NetworkException(e[0], e[1])
-            return [p for p in pathways if hasattr(p, "data") and len(p.data) > 0]
-
-    # @staticmethod
-    # def search_reactome(keyword, organism=None, proxies=None):
-    #     '''
-    #     Search Reactome database
-    #
-    #     :param keyword: The keyword using while searching.
-    #     :param proxies: if not None, the proxies use while searching.
-    #     :param organism: the target organism
-    #     :return: a list of search result
-    #     '''
-    #     try:
-    #         if organism:
-    #             return PublicDatabase._common_search(keyword,
-    #                                                  source=[SupportedDatabase.REACTOME],
-    #                                                  organism=[organism],
-    #                                                  proxies=proxies).results
-    #         else:
-    #             return PublicDatabase._common_search(keyword,
-    #                                                  source=[SupportedDatabase.REACTOME],
-    #                                                  proxies=proxies).results
-    #     except Exception as e:
-    #         raise e
+            return [p for p in pathways if hasattr(p, "data") and p.data and len(p.data) > 0]
 
     @staticmethod
     def search_reactome(keyword, organism=None, proxies=None):

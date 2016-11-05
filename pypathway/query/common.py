@@ -1,6 +1,6 @@
 # Here we implement the pathway data objects of the pathway we support
 # including the KEGG, Reactome, Pathway Common
-from .network import MultiThreadNetworkRequest, NetworkMethod, NetworkException
+from .network import MultiThreadNetworkRequest, NetworkMethod, NetworkException, NetworkRequest
 import json
 import re
 import sys
@@ -301,34 +301,51 @@ class KEGGPathwayData(PathwayData):
         join_active_thread: join the thread self.thread has while requesting
     '''
 
-    def load(self, query_entity_data=True, proxies=None):
+    def load(self, proxies=None):
         '''
         Load the pathway data to pathway object in KGML data structure
         :param query_entity_data: query KEGG ORTHOLOGY for each node, may take minutes
         :param proxies: if not None, proxys for requesting.
         :return: a kegg pathway object (instance of KEGGPathway).
         '''
-        from ..core.KGMLImpl import KEGGParser
+        from ..core.kgml import KEGGParser
         if not self.data:
             raise Exception("Target pathway have no data in {}".format(self.organism))
         kg = KEGGParser.parse(self.data, self.png)
-        if not query_entity_data:
-            return kg
-        else:
-            # for the KGML file doesnt containing all the data
-            error = Queue()
-            candidate = []
-            kg._prepare_addition_info(candidate)
-            reqs = [MultiThreadNetworkRequest(x[0], NetworkMethod.GET,
-                                              callback=self.data_callback,
-                                              callback_args=[x[1]], proxy=proxies,
-                                              error_queue=error) for x in candidate]
-            [x.start() for x in reqs]
-            [x.join() for x in reqs]
-            if not error.empty():
-                e = error.get()
-                raise NetworkException(e[0], e[1])
-            return kg
+        # update at 16-11-03
+        url = "http://www.kegg.jp/kegg-bin/show_pathway?map{}".format(self.id)
+        try:
+            res = NetworkRequest(url, NetworkMethod.GET)
+        except Exception as e:
+            raise NetworkException(url, e)
+        try:
+            result = {}
+            for x in re.findall(r"<area.+?coords=([\d,]+).+?title=\"(.+?)\" />", res.text):
+                result[x[0]] = x[1]
+            # match the result in pathway
+            id2name = {}
+            for x in kg.entities:
+                g = x.graphic[0]
+                if not g.x or not g.y or not g.width or not g.height:
+                    continue
+                addr = "{},{},{},{}".format(int(g.x - g.width / 2), int(g.y - g.height / 2),
+                                            int(g.x + g.width / 2), int(g.y + g.height / 2))
+                if not result.get(addr):
+                    pass
+                else:
+                    id2name[x.id] = result.get(addr).split(",")[0].split(" ")[1][1: -1]
+                    if not x.ko_id:
+                        x.ko_id = []
+                    for kx in result.get(addr).split(", "):
+                        x.ko_id.append(kx.split(" ")[0].replace("\n", ""))
+            kg.set_label(id2name)
+        except:
+            raise
+        for x in kg.genes:
+            hsa = x.name.split(" ")
+            # print(hsa, self.organism)
+            setattr(x, self.organism, hsa)
+        return kg
 
     def data_callback(self, data, source):
         split = data.split("///")[:-1]

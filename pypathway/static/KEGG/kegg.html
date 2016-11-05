@@ -108,14 +108,16 @@
                                 position: {x: jsonData["bg"]["width"] / 2, y: jsonData["bg"]["height"] / 2},
                                 css: {
                                     "shape": "rectangle",
-                                    "width": jsonData["bg"]["width"],
-                                    "height": jsonData["bg"]["height"],
+                                    "width": jsonData["bg"]["width"] - 20,
+                                    "height": jsonData["bg"]["height"] - 20,
                                     "background-image": "kegg_data/bg_{{time}}.png",
-                                    "opacity": 1
+                                    "opacity": 1,
+                                    "border-width": 0
                                 },
                                 selected: false,
                                 selectable: false,
-                                locked: true
+                                locked: true,
+                                grabbable: false
                             }
 						],
 						edges: [

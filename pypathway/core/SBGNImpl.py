@@ -436,6 +436,37 @@ class SBGNRoot(SBGNObject):
     def visualize_able(self):
         return False
 
+    def _get_option(self):
+        if self.option:
+            content = self.option.json
+            print(self.option.json)
+        else:
+            content = {}
+        for x in self.entities:
+            if x.id not in content:
+                if not x.color == "black" or not x.bg_color == "white" or not x.scale == 1 or not x.opacity == 1:
+                    content[x.id] = {}
+                    content[x.id]['default'] = {
+                        "value_changed": {
+                            "background-color": x.bg_color,
+                            "color": x.color,
+                            "opacity": x.opacity,
+                            "scale": x.scale
+                        }
+                    }
+            else:
+                if 'default' not in content[x.id]:
+                    if not x.color == "black" or not x.bg_color == "white" or not x.scale == 1 or not x.opacity == 1:
+                        content[x.id]['default'] = {
+                            "value_changed": {
+                                "background-color": x.bg_color,
+                                "color": x.color,
+                                "opacity": x.opacity,
+                                "scale": x.scale
+                            }
+                        }
+        return content
+
     def draw(self, setting=None):
         '''
         Export the pathway, options and copy the static dir to the ipython's workdir, run it!
@@ -445,10 +476,7 @@ class SBGNRoot(SBGNObject):
         area_id = str(time.time()).replace(".", "")
         with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/box.html") as fp:
             con = fp.read()
-        if self.option:
-            content = self.option.json
-        else:
-            content = {}
+        content = self._get_option()
         if not os.path.exists(os.getcwd() + "/assets/SBGN/"):
             shutil.copytree(os.path.dirname(os.path.abspath(__file__)) + "/../static/SBGN", os.getcwd() + "/assets/SBGN/")
         with open(os.getcwd() + "/assets/SBGN/sampleapp-components/data/config_{}.json".format(area_id), "w") as fp:
@@ -456,7 +484,7 @@ class SBGNRoot(SBGNObject):
         with open(os.getcwd() + "/assets/SBGN/sampleapp-components/data/pathway_{}.xml".format(area_id), "w") as fp:
             fp.write(self.export())
         con = con.replace("{{path}}", "'assets/SBGN/index_{}.html'".format(area_id))
-        con = con.replace("{{ratio}}", "0.7").replace("{{time}}", area_id)
+        con = con.replace("{{ratio}}", "0.8").replace("{{time}}", area_id)
         with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/SBGN/index.html") as fp:
             id_con = fp.read()
         with open(os.getcwd() + "/assets/SBGN/index_{}.html".format(area_id), "w") as fp:
@@ -529,6 +557,14 @@ class SBGNRoot(SBGNObject):
                         if x not in result:
                             result.append(x)
         return result
+
+    def __getattr__(self, item):
+        if item in ["__str__"]:
+            raise AttributeError
+        if item in ["id", "type", "label", "glyph", "external_id", "name"]:
+            return None
+        l = self.get_element_by_name(item)
+        return l if l else None
 
     def get_element_by_oid(self, oid):
         result = []
@@ -815,6 +851,11 @@ class Glyph(SBGNObject):
         self.id = id_handle(id)
         self.raw_id = id
         self.external_id = []
+        # default value for display.
+        self.color = "black"
+        self.bg_color = "white"
+        self.opacity = 1
+        self.scale = 1
 
     @property
     def visualize_able(self):

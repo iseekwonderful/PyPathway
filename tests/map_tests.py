@@ -28,18 +28,18 @@ class MappingAPITest:
             NP.SCALE: 2,
             NP.COLOR: "white"
         })
-        vo = VisualizationOption(default_value=[vc_default], mouse_over=[vc_mouse_over],
-                                 left_click=[vc_left], right_click=[vc_right])
+        vo = VisualizationOption(default=[vc_default], over=[vc_mouse_over],
+                                 click=[vc_left])
         return MappingAPITest.draw_test_vo_in(vo, target)
 
     @staticmethod
     def draw_test_vo_in(vo, target, query_id=False):
-        if not target in ["KEGG", "WP", "Reactome"]:
+        if target not in ["KEGG", "WP", "Reactome"]:
             target = "KEGG"
         if target == "KEGG":
             # res = PublicDatabase.search_kegg("b cell")
             res = PublicDatabase.search_kegg("jak")
-            path = res[0].load(query_entity_data=False)
+            path = res[0].load()
             ids = [x.id for x in path.genes]
         elif target == "WP":
             res = PublicDatabase.search_wp("jak")
@@ -64,7 +64,7 @@ class MappingAPITest:
     def test_hyper_link(target="KEGG"):
         hp = HyperLink(name="Google", url="http://www.google.com")
         hp_left = HyperLink(name="github", url="http://www.github.com")
-        vo = VisualizationOption(default_value=[], mouse_over=[hp], left_click=[hp_left])
+        vo = VisualizationOption(default=[], over=[hp], click=[hp_left])
         return MappingAPITest.draw_test_vo_in(vo, target)
 
     @staticmethod
@@ -86,7 +86,7 @@ class MappingAPITest:
         chart.use(Pie("%", data=[random.randint(10, 30), random.randint(10, 30)]))
         ct = ChartTab("Pie-Chart", chart.json)
         pp_left = PopUp([it, tt, ct, txt])
-        vo = VisualizationOption(mouse_over=[pp_over], left_click=[pp_left])
+        vo = VisualizationOption(over=[pp_over], click=[pp_left])
         return MappingAPITest.draw_test_vo_in(vo, target)
 
     @staticmethod
@@ -94,7 +94,7 @@ class MappingAPITest:
         ids, path = MappingAPITest.draw_test_vo_in(None, target, True)
         vos = []
         for x in ids:
-            vos.append(VisualizationOption(mouse_over=[
+            vos.append(VisualizationOption(over=[
                 Connection([Edge(x, width=3, line_style="dashed",
                                  line_color="#ff8800",
                                  target_style=ValueChanged({

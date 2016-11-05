@@ -320,7 +320,7 @@ function make_tip_node(config){
             }else if (c[0] == "model"){
             }else if (c[0] == "text"){
                 console.log(c[1]);
-                $("<div><p>111</p></div>").appendTo(sub2)
+                $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
 
             }
             sub2.appendTo(view);

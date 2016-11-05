@@ -68,23 +68,19 @@ def rgb(r, g, b):
 
 
 class VisualizationOption:
-    def __init__(self, default_value=None, mouse_over=None, left_click=None, right_click=None):
+    def __init__(self, default=None, over=None, click=None):
         self.default = {}
-        if default_value:
-            for x in default_value:
+        if default:
+            for x in default:
                 self.default[list(x.json.keys())[0]] = list(x.json.values())[0]
         self.mouse_over = {}
-        if mouse_over:
-            for x in mouse_over:
+        if over:
+            for x in over:
                 self.mouse_over[list(x.json.keys())[0]] = list(x.json.values())[0]
         self.left_click = {}
-        if left_click:
-            for x in left_click:
+        if click:
+            for x in click:
                 self.left_click[list(x.json.keys())[0]] = list(x.json.values())[0]
-        self.right_click = {}
-        if right_click:
-            for x in right_click:
-                self.right_click[list(x.json.keys())[0]] = list(x.json.values())[0]
 
     '''
     While making a Visualization Option we are care about
@@ -110,9 +106,10 @@ class VisualizationOption:
             "default": self.default,
             "over": self.mouse_over,
             "left": self.left_click,
-            "right": self.right_click
         }
 
+
+Option = VisualizationOption
 
 class InteractiveAction:
     def __init__(self):
@@ -139,6 +136,21 @@ class ValueChanged(InteractiveAction):
         return {"value_changed": self.setting}
 
 VC = ValueChanged
+
+
+class Prop(InteractiveAction):
+    def __init__(self, color=None, bg_color=None, opacity=None, scale=None):
+        InteractiveAction.__init__(self)
+        self.setting = {
+            NP.COLOR: color,
+            NP.BG_COLOR: bg_color,
+            NP.OPACITY: opacity,
+            NP.SCALE: scale
+        }
+
+    @property
+    def json(self):
+        return {"value_changed": {k: v for k, v in self.setting.items() if v}}
 
 
 class Connection(InteractiveAction):
@@ -175,7 +187,8 @@ class Edge:
                 "line-color": self.line_color,
                 "line-style": self.line_style if self.line_style in ("solid", "dotted", "dashed") else "solid",
                 "opacity": self.opacity,
-                "target-style": self.target_style.json if isinstance(self.target_style, ValueChanged) else self.target_style
+                "target-style": self.target_style.json if isinstance(self.target_style,
+                                                                     ValueChanged) else self.target_style
             }
         ]
 

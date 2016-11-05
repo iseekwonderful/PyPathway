@@ -72,7 +72,17 @@ function value_change_hook(){
             for(var x in defaults){
                 if (x == "value_changed") {
                     for (var k in defaults[x]) {
-                        elememt.css(k, defaults[x][k]);
+                        if (k == "scale"){
+                            elememt.css("width", parseFloat(elememt.css("width")) *
+                                parseFloat(defaults[x][k]));
+                            elememt.css("height", parseFloat(elememt.css("height")) *
+                                parseFloat(defaults[x][k]));
+                            console.log(elememt.css("font-size"));
+                            elememt.css("font-size", parseFloat(elememt.css("font-size")) *
+                                parseFloat(defaults[x][k]));
+                        }else{
+                            elememt.css(k, defaults[x][k]);
+                        }
                     }
                 }
             }
@@ -85,9 +95,12 @@ function applyValueChange(element, config){
         if (x == "scale"){
             element_styles.push([element, "width", element.css("width")]);
             element_styles.push([element, "height", element.css("height")]);
+            element_styles.push([element, "font-size", element.css("font-size")]);
             element.css("width", parseFloat(element.css("width")) *
                                 parseFloat(config[x]));
             element.css("height", parseFloat(element.css("height")) *
+                                parseFloat(config[x]));
+            element.css("font-size", parseFloat(element.css("font-size")) *
                                 parseFloat(config[x]));
         }else {
             element_styles.push([element, x, element.css(x)]);
@@ -236,16 +249,18 @@ function make_tip_node(config){
                 echartargs.push([f, [id, op]]);
                 // this is a echart drawing:
             }else if (c[0] == "table"){
-                var tb = $("<table class='table table-striped'></table>");
-                for (var r in c[1].table){
+                var dive = $("<div class='table-responsive'></div>");
+                var tb = $("<table class='table table-striped table-condensed'></table>");
+                for (var r in c[1].table) {
                     var tr = $("<tr></tr>");
-                    for (var cl in c[1].table[r]){
+                    for (var cl in c[1].table[r]) {
                         $("<td>" + c[1].table[r][cl] + "</td>").appendTo(tr);
                         console.log(c[1].table[r][cl]);
                     }
                     tr.appendTo(tb)
                 }
-                tb.appendTo(sub2);
+                tb.appendTo(dive);
+                dive.appendTo(sub2);
             }else if (c[0] == "model"){
                 // $("<div id='model-area'></div>").appendTo(sub2);
                 // var element = $('#model-area');
@@ -266,6 +281,10 @@ function make_tip_node(config){
                 //     console.error( "Failed to load PDB " + pdbUri + ": " + err );
                 // }
                 // })
+            }else if (c[0] == "text"){
+                console.log(c[1]);
+                $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
+
             }
             sub2.appendTo(view);
             count ++;

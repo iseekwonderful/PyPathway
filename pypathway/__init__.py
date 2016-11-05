@@ -4,7 +4,7 @@ import sys
 if sys.version[0] == "2":
     from core.SBGNImpl import SBGNParser
     from core.GPMLImpl import GPMLParser
-    from core.KGMLImpl import KEGGParser
+    from core.kgml import KEGGParser
     from core.BioPAXImpl import BioPAXParser
 
     # the interface database query expose to users
@@ -17,7 +17,7 @@ if sys.version[0] == "2":
 else:
     from .core.SBGNImpl import SBGNParser
     from .core.GPMLImpl import GPMLParser
-    from .core.KGMLImpl import KEGGParser
+    from .core.kgml import KEGGParser
     from .core.BioPAXImpl import BioPAXParser
 
     # the interface database query expose to users
@@ -30,5 +30,5 @@ else:
 
 
 def version():
-    return "0.17.1"
+    return "0.17.3"
 

@@ -266,7 +266,7 @@ class KEGGObject(RootPathway):
 
     @property
     def is_root(self):
-        return self.root == self
+        return self.class_ == "pathway"
 
 
 class Pathway(KEGGObject):
@@ -280,15 +280,18 @@ class Pathway(KEGGObject):
         KEGGObject.__init__(self, "pathway", {"entry": self.entry,
                                               "relation": self.relation, "reaction": self.reaction})
         self.xrange, self.yrange, self.father = 1273, 803, None
+        self.father = self
+        # self.is_root = True
         self.png = None
 
-    def draw(self):
+    def draw(self, area_id=None):
         '''
         Draw the content in ipython notebook!
         :return: return a HTML objects in ipython notebook.
         '''
         # calculate the area_id and prepare the HTML element
-        area_id = str(time.time()).replace(".", "")
+        if not area_id:
+            area_id = str(time.time()).replace(".", "")
         with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/box.html") as fp:
             con = fp.read()
         # is asset/KEGG not exist, copy it!
@@ -305,8 +308,8 @@ class Pathway(KEGGObject):
         if not self.option:
             self.option = []
         with open(os.getcwd() + "/assets/KEGG/kegg_data/config_{}.json".format(area_id), "w") as fp:
-            fp.write(json.dumps({"pathway": graph, "option": self.option.json if isinstance(self.option,
-                                                                                            IntegrationOptions) else self.option,
+            fp.write(json.dumps({"pathway": graph, "option": self._get_option(), #self.option.json if isinstance(self.option,
+                                                                                            #IntegrationOptions) else self.option,
                                  "bg": {"width": w, "height": h}}))
         if sys.version[0] == '3':
             with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/KEGG/kegg.html", encoding="utf8") as fp:
@@ -362,6 +365,34 @@ class Pathway(KEGGObject):
         io.set(new, new_option)
         self.option = io
 
+    def _get_option(self):
+        option = self.option.json if self.option else {}
+        # print(self.option.json if self.option is not [] else [])
+        # any time if you have option in integrate option, will overwrite the options
+        for x in self.genes:
+            if x.id in option:
+                if "value_changed" in option[x.id]["default"]:
+                    continue
+                else:
+                    option[x.id]["default"] = {"value_changed": {"color": x.color, "background-color": x.bg_color,
+                                                                 "opacity": x.opacity, "scale": x.scale}}
+            if x.id not in option:
+                option[x.id] = {
+                    'left': {},
+                    'default': {
+                        "value_changed": {
+                            "color": x.color,
+                            "background-color": x.bg_color,
+                            "opacity": x.opacity,
+                            "scale": x.scale
+                        }
+                    },
+                    'right': {},
+                    'over': {},
+                }
+        # print(option)
+        return option
+
     @property
     def entities(self):
         return self.entry
@@ -402,6 +433,94 @@ class Pathway(KEGGObject):
                 candidate.append([x.link.replace("http://www.kegg.jp/dbget-bin/www_bget?",
                                                  "http://rest.kegg.jp/get/"), x])
 
+    def get_element_by_label(self, label):
+        # return [x for x in self.flatten() if hasattr(x, "display_name") and x.display_name == label]
+        result = []
+        for x in self.flatten():
+            if hasattr(x, "display_name") and x.display_name == label:
+                result.append(x)
+        return result
+
+    def __getattr__(self, item):
+        print(item)
+        if item in ["children", "root", "is_root", "father", "__str__", "display_name", "id"]:
+            raise AttributeError
+        if item in ["display_name", "name", "id", "type"]:
+            return None
+        l = self.get_element_by_label(item)
+        if l:
+            return l
+        i = self.get_element_by_id(item)
+        if i:
+            return i
+        return None
+
+    def __cmp__(self, other):
+        if id(self) == id(other):
+            return True
+        else:
+            return -1
+
+    def __eq__(self, other):
+        return id(self) == id(other)
+
+    def set_label(self, id2name):
+        if not type(id2name) == dict:
+            raise Exception("set_display_name receive a dictionary")
+        for x in id2name:
+            tr = self.get_element_by_id(str(x))
+            if tr:
+                tr[0].add_name = id2name[x]
+
+    def set_color(self, id2color):
+        if not type(id2color) == dict:
+            raise Exception("set_display_name receive a dictionary")
+        for x in id2color:
+            tr = self.get_element_by_id(str(x))
+            if tr:
+                if isinstance(tr[0], Entry):
+                    tr[0].color = id2color[x]
+            nm = self.get_element_by_label(str(x))
+            for n in nm:
+                n.color = id2color[x]
+
+    def set_scale(self, id2scale):
+        if not type(id2scale) == dict:
+            raise Exception("set_display_name receive a dictionary")
+        for x in id2scale:
+            tr = self.get_element_by_id(str(x))
+            if tr:
+                if isinstance(tr[0], Entry):
+                    tr[0].scale = id2scale[x]
+            nm = self.get_element_by_label(str(x))
+            for n in nm:
+                n.color = id2scale[x]
+
+    def set_opacity(self, id2opacity):
+        if not type(id2opacity) == dict:
+            raise Exception("set_display_name receive a dictionary")
+        for x in id2opacity:
+            tr = self.get_element_by_id(str(x))
+            if tr:
+                if isinstance(tr[0], Entry):
+                    tr[0].opacity = id2opacity[x]
+            nm = self.get_element_by_label(str(x))
+            for n in nm:
+                n.opacity = id2opacity[x]
+
+    def set_bg_color(self, id2bg):
+        if not type(id2bg) == dict:
+            raise Exception("set_display_name receive a dictionary")
+        for x in id2bg:
+            tr = self.get_element_by_id(str(x))
+            if tr:
+                if isinstance(tr[0], Entry):
+                    tr[0].bg_color = id2bg[x]
+            nm = self.get_element_by_label(str(x))
+            for n in nm:
+                n.bg_color = id2bg[x]
+
+
 
 class Entry(KEGGObject):
     def __init__(self, id, name, type, link, reaction):
@@ -412,6 +531,11 @@ class Entry(KEGGObject):
         KEGGObject.__init__(self, "entry", {"component": self.component, "graphics": self.graphic})
         self.info = None
         self.ko_id = []
+        self.add_name = None
+        self.color = "black"
+        self.opacity = 1
+        self.bg_color = "white"
+        self.scale = 1
 
     def visualize_able(self):
         return True
@@ -422,6 +546,25 @@ class Entry(KEGGObject):
         else:
             print("Not Found")
             return -1
+
+    @property
+    def display_name(self):
+        if self.add_name:
+            return self.add_name
+        g = self.graphic[0]
+        if not g:
+            return None
+        if not g.name:
+            return None
+        names = g.name.replace(".", "").split(",")
+        name = ""
+        for x in names:
+            if len(x) < 7:
+                name = x.replace(" ", "")
+                break
+        if name == "":
+            name = names[0]
+        return name
 
     @property
     def data(self):
@@ -438,8 +581,12 @@ class Entry(KEGGObject):
         name = ""
         for x in names:
             if len(x) < 7:
-                name = x
+                name = x.replace(" ", "")
                 break
+        if name == "":
+            name = names[0]
+        if self.add_name:
+            name = self.add_name
         graphic = {
             "data": {"id": self.id, "name": name, "parent": "back"},
             "css":
@@ -467,8 +614,10 @@ class Entry(KEGGObject):
 
     @property
     def root(self):
-        o = self
-        while o.father:
+        o = self.father
+        print(o)
+        while not o.class_ == "pathway":
+            print(o)
             o = o.father
         return o
 
