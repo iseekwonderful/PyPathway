@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"xAxis": {}, "yAxis": {}, "legend": {"data": ["1", "2", "3", "4"], "y": "top", "orient": "horizontal", "x": "center"}, "title": {"text": "Pie", "subtext": "subtitle"}, "series": [{"data": [{"value": 2, "name": "1"}, {"value": 3, "name": "2"}, {"value": 12, "name": "3"}, {"value": 9, "name": "4"}], "type": "pie", "name": "Pie", "radius": ["50%", "70%"]}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

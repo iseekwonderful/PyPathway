@@ -1,0 +1,432 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="consumption" id="edge10884910" name="arc" source="entityVertex10884874" target="reactionVertex10884898">
+      <end name="end" x="309.0" y="1452.0"/>
+      <start name="start" x="225.75" y="1770.0"/>
+    </arc>
+    <arc class="production" id="edge10884912" name="arc" source="reactionVertex108849461" target="entityVertex10884887">
+      <end name="end" x="2457.0" y="1014.0"/>
+      <start name="start" x="2730.0" y="1065.0"/>
+    </arc>
+    <arc class="consumption" id="edge10884916" name="arc" source="entityVertex10884879" target="reactionVertex10884943">
+      <end name="end" x="546.0" y="1503.0"/>
+      <start name="start" x="534.0" y="1305.0"/>
+    </arc>
+    <arc class="production" id="edge10884930" name="arc" source="reactionVertex108848981" target="entityVertex10884954">
+      <end name="end" x="273.0" y="1170.0"/>
+      <start name="start" x="309.0" y="1416.0"/>
+    </arc>
+    <arc class="production" id="edge10884947" name="arc" source="reactionVertex108848982" target="entityVertex10884879">
+      <end name="end" x="360.0" y="1305.0"/>
+      <start name="start" x="309.0" y="1416.0"/>
+    </arc>
+    <arc class="consumption" id="edge10884950" name="arc" source="entityVertex10884865" target="reactionVertex10884946">
+      <end name="end" x="2748.0" y="1083.0"/>
+      <start name="start" x="2778.0" y="1413.0"/>
+    </arc>
+    <arc class="production" id="edge10884955" name="arc" source="reactionVertex108849431" target="entityVertex10884864">
+      <end name="end" x="534.0" y="1629.0"/>
+      <start name="start" x="546.0" y="1539.0"/>
+    </arc>
+    <arc class="consumption" id="edge10884959" name="arc" source="entityVertex10884852" target="reactionVertex10884946">
+      <end name="end" x="2766.0" y="1065.0"/>
+      <start name="start" x="2829.0" y="1008.0"/>
+    </arc>
+    <arc class="catalysis" id="edge10884965" name="arc" source="entityVertex10884909" target="reactionVertex10884943">
+      <end name="end" x="564.0" y="1521.0"/>
+      <start name="start" x="648.0" y="1464.0"/>
+    </arc>
+    <arc class="consumption" id="edge10884969" name="arc" source="entityVertex10884864" target="reactionVertex10884898">
+      <end name="end" x="309.0" y="1452.0"/>
+      <start name="start" x="444.0" y="1629.0"/>
+    </arc>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartmentVertex7660615498" name="glyph" opacity="1" scale="1">
+      <bbox h="995.454545455" name="bbox" w="1489.09090909" x="2663.18181818" y="186.818181818"/>
+      <label name="label" text="nucleoplasm">
+        <bbox h="24.0" name="bbox" w="88.0" x="6121.08" y="483.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartmentVertex7660508493" name="glyph" opacity="1" scale="1">
+      <bbox h="1212.27272727" name="bbox" w="1930.90909091" x="440.454545455" y="84.5454545455"/>
+      <label name="label" text="nucleoplasm">
+        <bbox h="24.0" name="bbox" w="88.0" x="1308.84" y="266.01"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="2.0" id="compartmentVertex70101615498" name="glyph" opacity="1" scale="1">
+      <bbox h="1450.90909091" name="bbox" w="2027.72727273" x="2586.81818182" y="103.636363636"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="6047.88" y="323.76"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="2.0" id="compartmentVertex70101508493" name="glyph" opacity="1" scale="1">
+      <bbox h="1366.36363636" name="bbox" w="2434.09090909" x="21.8181818182" y="30.0"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="56.0" x="476.4" y="156.18"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="complex" color="black" id="entityVertex10884852" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="171.0" x="1285.90909091" y="450.0"/>
+      <glyph bg_color="white" class="annotation" color="black" id="entityVertex10884852annotation" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="248.0" x="1370.90909091" y="477.272727273"/>
+        <callout name="callout" target="entityVertex_10884852">
+          <point name="point" x="3000.0" y="1026.0"/>
+        </callout>
+        <label name="label" text="ORC:origin of replication, CDC6"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852CDC6" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="450.0"/>
+        <label name="label" text="CDC6"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ARS" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="486.0"/>
+        <label name="label" text="ARS"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="414.0"/>
+        <label name="label" text="ORC1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC4" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="522.0"/>
+        <label name="label" text="ORC4"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="378.0"/>
+        <label name="label" text="ORC2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852MCM8" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="558.0"/>
+        <label name="label" text="MCM8"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="342.0"/>
+        <label name="label" text="ORC5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="594.0"/>
+        <label name="label" text="ORC3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884852ORC6" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1285.90909091" y="306.0"/>
+        <label name="label" text="ORC6"/>
+      </glyph>
+      <label name="label" text="CDC6_ORC_origin"/>
+    </glyph>
+    <glyph bg_color="white" class="unspecified entity" color="black" id="entityVertex10884864" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="90.0" x="201.818181818" y="732.272727273"/>
+      <label name="label" text="Ub"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884865" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="90.0" x="1242.27272727" y="642.272727273"/>
+      <glyph bg_color="white" class="unit of information" color="black" id="entityVertex10884865mt" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="56.0" x="1249.54545455" y="636.818181818"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="CDT1"/>
+    </glyph>
+    <glyph bg_color="white" class="complex" color="black" id="entityVertex10884874" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="133.5" x="72.2727272727" y="804.545454545"/>
+      <glyph bg_color="white" class="annotation" color="black" id="entityVertex10884874annotation" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="80.0" x="140.227272727" y="831.818181818"/>
+        <callout name="callout" target="entityVertex_10884874">
+          <point name="point" x="292.5" y="1806.0"/>
+        </callout>
+        <label name="label" text="GMNN, CDT1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884874CDT1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="123.5" x="72.2727272727" y="804.545454545"/>
+        <label name="label" text="CDT1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884874GMNN" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="123.5" x="72.2727272727" y="840.545454545"/>
+        <label name="label" text="GMNN"/>
+      </glyph>
+      <label name="label" text="Cdt1_geminin"/>
+    </glyph>
+    <glyph bg_color="white" class="complex" color="black" id="entityVertex10884879" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="174.0" x="163.636363636" y="585.0"/>
+      <glyph bg_color="white" class="annotation" color="black" id="entityVertex10884879annotation" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="64.0" x="250.0" y="612.272727273"/>
+        <callout name="callout" target="entityVertex_10884879">
+          <point name="point" x="534.0" y="1323.0"/>
+        </callout>
+        <label name="label" text="Ub, GMNN"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884879GMNN" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="164.0" x="163.636363636" y="585.0"/>
+        <label name="label" text="GMNN"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884879Ub" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="164.0" x="163.636363636" y="621.0"/>
+        <label name="label" text="Ub"/>
+      </glyph>
+      <label name="label" text="geminin_ubiquitin"/>
+    </glyph>
+    <glyph bg_color="white" class="complex" color="black" id="entityVertex10884887" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="171.0" x="1039.09090909" y="452.727272727"/>
+      <glyph bg_color="white" class="annotation" color="black" id="entityVertex10884887annotation" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="232.0" x="1124.09090909" y="480.0"/>
+        <callout name="callout" target="entityVertex_10884887">
+          <point name="point" x="2457.0" y="1032.0"/>
+        </callout>
+        <label name="label" text="CDC6:ORC:origin complex, CDT1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887CDC6" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="452.727272727"/>
+        <label name="label" text="CDC6"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ARS" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="488.727272727"/>
+        <label name="label" text="ARS"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="416.727272727"/>
+        <label name="label" text="ORC1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC4" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="524.727272727"/>
+        <label name="label" text="ORC4"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="380.727272727"/>
+        <label name="label" text="ORC2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887MCM8" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="560.727272727"/>
+        <label name="label" text="MCM8"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="344.727272727"/>
+        <label name="label" text="ORC5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="596.727272727"/>
+        <label name="label" text="ORC3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887ORC6" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="308.727272727"/>
+        <label name="label" text="ORC6"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884887CDT1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="161.0" x="1039.09090909" y="632.727272727"/>
+        <label name="label" text="CDT1"/>
+      </glyph>
+      <label name="label" text="CDT1_CDC6_ORC_origin"/>
+    </glyph>
+    <glyph bg_color="white" class="complex" color="black" id="entityVertex10884909" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="141.0" x="294.545454545" y="657.272727273"/>
+      <glyph bg_color="white" class="annotation" color="black" id="entityVertex10884909annotation" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="2560.0" x="365.909090909" y="684.545454545"/>
+        <callout name="callout" target="entityVertex_10884909">
+          <point name="point" x="789.0" y="1482.0"/>
+        </callout>
+        <label name="label" text="PSMD14, PSMA1, PSMA2, PSMA3, PSMA4, PSMA5, PSMA6, PSMA7, PSMB1, PSMB10, PSMB2, PSMB3, PSMB4, PSMB5, PSMB6, PSMB7, PSMB8, PSMB9, PSMC1, PSMC2, PSMC3, PSMC4, PSMC5, PSMC6, PSMD1, PSMD10, PSMD11, PSMD12, PSMD13, PSMD2, PSMD3, PSMD4, PSMD5, PSMD6, PSMD7, PSMD8, PSMD9, PSME1, PSME2, PSME3, PSMF1, PSME4, PSMA8, PSMB11, SHFM1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMC3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="657.272727273"/>
+        <label name="label" text="PSMC3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909p31" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="693.272727273"/>
+        <label name="label" text="p31"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSME4" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="621.272727273"/>
+        <label name="label" text="PSME4"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909SHFM1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="729.272727273"/>
+        <label name="label" text="SHFM1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA7" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="585.272727273"/>
+        <label name="label" text="PSMA7"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="765.272727273"/>
+        <label name="label" text="PSMB1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB7" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="549.272727273"/>
+        <label name="label" text="PSMB7"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMC4" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="801.272727273"/>
+        <label name="label" text="PSMC4"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909RPN2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="513.272727273"/>
+        <label name="label" text="RPN2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="837.272727273"/>
+        <label name="label" text="PSMD2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909p42A" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="477.272727273"/>
+        <label name="label" text="p42A"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="873.272727273"/>
+        <label name="label" text="PSMB3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB6" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="441.272727273"/>
+        <label name="label" text="PSMB6"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909p44" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="909.272727273"/>
+        <label name="label" text="p44"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD12" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="405.272727273"/>
+        <label name="label" text="PSMD12"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSME3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="945.272727273"/>
+        <label name="label" text="PSME3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB11" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="369.272727273"/>
+        <label name="label" text="PSMB11"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMF1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="981.272727273"/>
+        <label name="label" text="PSMF1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB8" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="333.272727273"/>
+        <label name="label" text="PSMB8"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMC5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1017.27272727"/>
+        <label name="label" text="PSMC5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD11" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="297.272727273"/>
+        <label name="label" text="PSMD11"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1053.27272727"/>
+        <label name="label" text="PSMD3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909RPN11" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="261.272727273"/>
+        <label name="label" text="RPN11"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1089.27272727"/>
+        <label name="label" text="PSMA5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMC1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="225.272727273"/>
+        <label name="label" text="PSMC1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909AF" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1125.27272727"/>
+        <label name="label" text="AF"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="189.272727273"/>
+        <label name="label" text="PSMB5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1161.27272727"/>
+        <label name="label" text="PSMA3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSME1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="153.272727273"/>
+        <label name="label" text="PSME1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1197.27272727"/>
+        <label name="label" text="PSMA2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA1" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="117.272727273"/>
+        <label name="label" text="PSMA1"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB10" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1233.27272727"/>
+        <label name="label" text="PSMB10"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB9" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="81.2727272727"/>
+        <label name="label" text="PSMB9"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD13" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1269.27272727"/>
+        <label name="label" text="PSMD13"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD5" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="45.2727272727"/>
+        <label name="label" text="PSMD5"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD9" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1305.27272727"/>
+        <label name="label" text="PSMD9"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMC2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="9.27272727273"/>
+        <label name="label" text="PSMC2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA8" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1341.27272727"/>
+        <label name="label" text="PSMA8"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSME2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="-26.7272727273"/>
+        <label name="label" text="PSME2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMB2" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1377.27272727"/>
+        <label name="label" text="PSMB2"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMA4" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="-62.7272727273"/>
+        <label name="label" text="PSMA4"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD10" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1413.27272727"/>
+        <label name="label" text="PSMD10"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909p27K" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="-98.7272727273"/>
+        <label name="label" text="p27K"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909HSN3" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="1449.27272727"/>
+        <label name="label" text="HSN3"/>
+      </glyph>
+      <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884909PSMD7" name="glyph" opacity="1" scale="1">
+        <bbox h="26.0" name="bbox" w="131.0" x="294.545454545" y="-134.727272727"/>
+        <label name="label" text="PSMD7"/>
+      </glyph>
+      <label name="label" text="_26S_proteasome"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex10884954" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="90.0" x="103.636363636" y="515.454545455"/>
+      <glyph bg_color="white" class="unit of information" color="black" id="entityVertex10884954mt" name="glyph" opacity="1" scale="1">
+        <bbox h="24.0" name="bbox" w="56.0" x="110.909090909" y="510.0"/>
+        <label name="label" text="mt:prot"/>
+      </glyph>
+      <label name="label" text="CDT1"/>
+    </glyph>
+    <glyph bg_color="white" class="process" color="black" id="reactionVertex10884898" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="36.0" x="132.272727273" y="643.636363636"/>
+      <port id="reactionVertex108848981" name="port" x="150.272727273" y="643.636363636"/>
+      <port id="reactionVertex108848982" name="port" x="150.272727273" y="643.636363636"/>
+    </glyph>
+    <glyph bg_color="white" class="process" color="black" id="reactionVertex10884943" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="36.0" x="240.0" y="683.181818182"/>
+      <port id="reactionVertex108849431" name="port" x="258.0" y="719.181818182"/>
+    </glyph>
+    <glyph bg_color="white" class="process" color="black" id="reactionVertex10884946" name="glyph" opacity="1" scale="1">
+      <bbox h="36.0" name="bbox" w="36.0" x="1240.90909091" y="475.909090909"/>
+      <port id="reactionVertex108849461" name="port" x="1240.90909091" y="493.909090909"/>
+    </glyph>
+    <glyph bg_color="white" class="process" color="black" id="reactionVertex10943996" name="glyph" opacity="1" scale="1">
+      <bbox h="0.0" name="bbox" w="0.0" x="0.0" y="0.0"/>
+    </glyph>
+  </map>
+</sbgn>

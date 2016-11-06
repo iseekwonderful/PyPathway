@@ -308,7 +308,7 @@ class KEGGPathwayData(PathwayData):
         :param proxies: if not None, proxys for requesting.
         :return: a kegg pathway object (instance of KEGGPathway).
         '''
-        from ..core.kgml import KEGGParser
+        from ..core.KGMLImpl import KEGGParser
         if not self.data:
             raise Exception("Target pathway have no data in {}".format(self.organism))
         kg = KEGGParser.parse(self.data, self.png)

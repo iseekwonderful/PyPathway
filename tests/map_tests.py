@@ -23,11 +23,6 @@ class MappingAPITest:
             NP.OPACITY: 0,
             NP.COLOR: "red"
         })
-        vc_right = VC({
-            NP.BG_COLOR: rgb(0, 0, 0),
-            NP.SCALE: 2,
-            NP.COLOR: "white"
-        })
         vo = VisualizationOption(default=[vc_default], over=[vc_mouse_over],
                                  click=[vc_left])
         return MappingAPITest.draw_test_vo_in(vo, target)
@@ -38,7 +33,7 @@ class MappingAPITest:
             target = "KEGG"
         if target == "KEGG":
             # res = PublicDatabase.search_kegg("b cell")
-            res = PublicDatabase.search_kegg("jak")
+            res = PublicDatabase.search_kegg("jak", organism="hsa")
             path = res[0].load()
             ids = [x.id for x in path.genes]
         elif target == "WP":
@@ -57,6 +52,7 @@ class MappingAPITest:
         if query_id:
             return ids, path
         else:
+            # print(path._get_option())
             path.integrate(ids, [vo for _ in range(len(ids))])
             return path.draw()
 

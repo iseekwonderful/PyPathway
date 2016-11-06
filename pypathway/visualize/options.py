@@ -111,6 +111,7 @@ class VisualizationOption:
 
 Option = VisualizationOption
 
+
 class InteractiveAction:
     def __init__(self):
         self.type = 'option'
@@ -150,7 +151,8 @@ class Prop(InteractiveAction):
 
     @property
     def json(self):
-        return {"value_changed": {k: v for k, v in self.setting.items() if v}}
+        # return {"value_changed": {k: v for k, v in self.setting.items() if v}}
+        return {"value_changed": self.setting}
 
 
 class Connection(InteractiveAction):
@@ -188,7 +190,7 @@ class Edge:
                 "line-style": self.line_style if self.line_style in ("solid", "dotted", "dashed") else "solid",
                 "opacity": self.opacity,
                 "target-style": self.target_style.json if isinstance(self.target_style,
-                                                                     ValueChanged) else self.target_style
+                                                                     ValueChanged) or isinstance(self.target_style, Prop) else self.target_style
             }
         ]
 

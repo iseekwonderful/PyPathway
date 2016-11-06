@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 100vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"legend": {"data": ["Spleen", "Skin", "HK", "Jill"], "orient": "horizontal", "y": "bottom", "x": "center"}, "xAxis": [{"type": "category", "data": ["0H", "6H", "12H", "2Day", "3Day", "5Day", "7Day"], "boundaryGap": false, "position": "bottom"}], "tooltip": {"trigger": "axis"}, "title": {"subtext": "random data", "text": "The expression level in four organsim"}, "yAxis": [{"type": "value", "data": [], "position": "left"}], "series": [{"type": "line", "data": [6.4422, 6.6276, 7.428, 23.9676, 10.2308, 11.051, 9.6319], "name": "Spleen"}, {"type": "line", "data": [33.0026, 27.4669, 30.4548, 16.0057, 32.8149, 48.466, 23.6215], "name": "Skin"}, {"type": "line", "data": [55.8697, 41.5226, 56.8521, 34.8005, 42.43, 70.3075, 53.3718], "name": "HK"}, {"type": "line", "data": [94.3488, 84.7489, 89.7222, 75.97, 46.4775, 73.5134, 90.5363], "name": "Jill"}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

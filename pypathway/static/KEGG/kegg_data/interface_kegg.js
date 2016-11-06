@@ -191,9 +191,10 @@ function generate_tip(element, config){
             delay: 100
         },
         position: {
-            my: "top center",
-            at: "bottom center",
-            viewport: $(window)
+            at: "center center",
+            adjust: {
+                method: 'shift flip'
+            }
         }
     });
 }

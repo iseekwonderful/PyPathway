@@ -1,3 +1,5 @@
+# 2016-11-03 rewrite KGML module
+
 from xml.sax import ContentHandler, parseString
 from .SBGNImpl import TypeNotInNestedElementListError
 from ..visualize.options import IntegrationOptions
@@ -26,8 +28,6 @@ class BackgroundImageQueryException(Exception):
 
 
 class KEGGParser:
-    def __init__(self):
-        pass
     '''
     The KEGG's KGML parser, return a KEGG pathway tree, you can visualize it using draw method, it is same like other
     pathway's object.
@@ -117,14 +117,14 @@ class KEGGHandler(ContentHandler):
         self.heap.pop(0)
 
 
-class KEGGObject(RootPathway):
+class KEGGNode:
     '''
     This class is the subclass of a RootPathway (aka. Pathway class) and the root class of every KEGG class
     '''
     def __init__(self, name, ref):
-        RootPathway.__init__(self)
         self.class_ = name
         self.ref = ref
+        self.ko_id = []
 
     def add_child(self, child):
         child.father = self
@@ -173,6 +173,10 @@ class KEGGObject(RootPathway):
             )
         else:
             return self.summary()
+
+    @property
+    def ko(self):
+        return self.ko_id
 
     @property
     def children(self):
@@ -269,7 +273,7 @@ class KEGGObject(RootPathway):
         return self.class_ == "pathway"
 
 
-class Pathway(KEGGObject):
+class Pathway(KEGGNode, RootPathway):
     '''
     In KEGG's specification, the pathway is defined in Pathway class, so we use it.
     Caution: If you use this with our ROOT Pathway class use import as to avoid namespace conflict.
@@ -277,12 +281,11 @@ class Pathway(KEGGObject):
     def __init__(self, name=None, org=None, number=None, title=None, image=None, link=None):
         self.name, self.org, self.number, self.title, self.image, self.link = name, org, number, title, image, link
         self.entry, self.relation, self.reaction = [], [], []
-        KEGGObject.__init__(self, "pathway", {"entry": self.entry,
-                                              "relation": self.relation, "reaction": self.reaction})
         self.xrange, self.yrange, self.father = 1273, 803, None
         self.father = self
         # self.is_root = True
         self.png = None
+        KEGGNode.__init__(self, "pathway", {"entry": self.entry, "relation": self.relation, "reaction": self.reaction})
 
     def draw(self, area_id=None):
         '''
@@ -308,9 +311,7 @@ class Pathway(KEGGObject):
         if not self.option:
             self.option = []
         with open(os.getcwd() + "/assets/KEGG/kegg_data/config_{}.json".format(area_id), "w") as fp:
-            fp.write(json.dumps({"pathway": graph, "option": self._get_option(), #self.option.json if isinstance(self.option,
-                                                                                            #IntegrationOptions) else self.option,
-                                 "bg": {"width": w, "height": h}}))
+            fp.write(json.dumps({"pathway": graph, "option": self._get_option(), "bg": {"width": w, "height": h}}))
         if sys.version[0] == '3':
             with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/KEGG/kegg.html", encoding="utf8") as fp:
                 kg_index = fp.read()
@@ -327,7 +328,7 @@ class Pathway(KEGGObject):
         with open(os.getcwd() + "/assets/KEGG/kegg_data/interface_kegg_{}.js".format(area_id), "w") as fp:
             fp.write(kg_index.replace("{{time}}", area_id))
         # the kegg view
-        ratio = str(float(h) / w)
+        ratio = str(float(h) / w if float(h) / w > 0.6 else 0.6)
         con = con.replace("{{path}}",
                           "'assets/KEGG/kegg_{}.html'".format(area_id)).replace("{{ratio}}", ratio).replace("{{time}}", area_id)
         # different in environment, do diff things
@@ -366,10 +367,9 @@ class Pathway(KEGGObject):
         self.option = io
 
     def _get_option(self):
-        option = self.option.json if self.option else {}
-        # print(self.option.json if self.option is not [] else [])
+        option = self.option.json if isinstance(self.option, IntegrationOptions) else {}
         # any time if you have option in integrate option, will overwrite the options
-        for x in self.genes:
+        for x in self.nodes:
             if x.id in option:
                 if "value_changed" in option[x.id]["default"]:
                     continue
@@ -390,7 +390,6 @@ class Pathway(KEGGObject):
                     'right': {},
                     'over': {},
                 }
-        # print(option)
         return option
 
     @property
@@ -400,6 +399,10 @@ class Pathway(KEGGObject):
     @property
     def reactions(self):
         return self.relation
+
+    @property
+    def nodes(self):
+        return self.entities
 
     @property
     def genes(self):
@@ -442,10 +445,10 @@ class Pathway(KEGGObject):
         return result
 
     def __getattr__(self, item):
-        print(item)
-        if item in ["children", "root", "is_root", "father", "__str__", "display_name", "id"]:
+        if item in ["__str__"]:
             raise AttributeError
-        if item in ["display_name", "name", "id", "type"]:
+        if item in ["children", "root", "is_root", "father", "__str__",
+                    "display_name", "id", "display_name", "name", "id", "type", "entry"]:
             return None
         l = self.get_element_by_label(item)
         if l:
@@ -453,7 +456,8 @@ class Pathway(KEGGObject):
         i = self.get_element_by_id(item)
         if i:
             return i
-        return None
+        else:
+            return None
 
     def __cmp__(self, other):
         if id(self) == id(other):
@@ -521,14 +525,13 @@ class Pathway(KEGGObject):
                 n.bg_color = id2bg[x]
 
 
-
-class Entry(KEGGObject):
+class Entry(KEGGNode):
     def __init__(self, id, name, type, link, reaction):
         self.id, self.name, self.type, self.link, self.reaction = id, name, type, link, reaction
         self.kegg_id = None
         self.component, self.graphic = [], []
         # self.back_color = (random.random(), random.random(), random.random())
-        KEGGObject.__init__(self, "entry", {"component": self.component, "graphics": self.graphic})
+        KEGGNode.__init__(self, "entry", {"component": self.component, "graphics": self.graphic})
         self.info = None
         self.ko_id = []
         self.add_name = None
@@ -615,9 +618,7 @@ class Entry(KEGGObject):
     @property
     def root(self):
         o = self.father
-        print(o)
         while not o.class_ == "pathway":
-            print(o)
             o = o.father
         return o
 
@@ -627,56 +628,56 @@ class Entry(KEGGObject):
     #     print("start to fill {}".format(self.name))
 
 
-class Component(KEGGObject):
+class Component(KEGGNode):
     def __init__(self, id):
         self.id = id
-        KEGGObject.__init__(self, "component", {})
+        KEGGNode.__init__(self, "component", {})
 
 
-class Graphics(KEGGObject):
+class Graphics(KEGGNode):
     def __init__(self, name, x, y, coords, type, width, height, fgcolor):
         self.name, self.x, self.y, self.coords = name, float(x) if x is not None else None,\
                                                  float(y) if y is not None else None, coords
         self.type, self.width, self.height, self.fgcolor = type, float(width) if width is not None else None,\
                                                            float(height) if height is not None else None, fgcolor
-        KEGGObject.__init__(self, "graphics", {})
+        KEGGNode.__init__(self, "graphics", {})
 
 
-class Reaction(KEGGObject):
+class Reaction(KEGGNode):
     def __init__(self, id, name, type):
         self.id, self.name, self.type = id, name, type
         self.substrate, self.product = [], []
-        KEGGObject.__init__(self, "reaction", {"substrate": self.substrate, "product": self.product})
+        KEGGNode.__init__(self, "reaction", {"substrate": self.substrate, "product": self.product})
 
 
-class Substrate(KEGGObject):
+class Substrate(KEGGNode):
     def __init__(self, id, name):
         self.id, self.name = id, name
         self.alt = []
-        KEGGObject.__init__(self, "substrate", {"alt": self.alt})
+        KEGGNode.__init__(self, "substrate", {"alt": self.alt})
 
 
-class Product(KEGGObject):
+class Product(KEGGNode):
     def __init__(self, id, name):
         self.id, self.name = id, name
         self.alt = []
-        KEGGObject.__init__(self, "product", {"alt": self.alt})
+        KEGGNode.__init__(self, "product", {"alt": self.alt})
 
 
-class Alt(KEGGObject):
+class Alt(KEGGNode):
     def __init__(self, name):
         self.name = name
-        KEGGObject.__init__(self, "alt", {})
+        KEGGNode.__init__(self, "alt", {})
 
 
-class Relation(KEGGObject):
+class Relation(KEGGNode):
     def __init__(self, entry1, entry2, type):
         self.entry1, self.entry2, self.type = entry1, entry2, type
         self.subtype = []
-        KEGGObject.__init__(self, "relation", {"subtype": self.subtype})
+        KEGGNode.__init__(self, "relation", {"subtype": self.subtype})
 
 
-class Subtype(KEGGObject):
+class Subtype(KEGGNode):
     def __init__(self, name, value):
         self.name, self.value = name, value
-        KEGGObject.__init__(self, "subtype", {})
+        KEGGNode.__init__(self, "subtype", {})

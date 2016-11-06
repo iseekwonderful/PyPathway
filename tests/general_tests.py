@@ -266,11 +266,10 @@ class LocalFilesAndAPITes(unittest.TestCase):
         # labels
         print(path.nodes)
         l = path.nodes[0].display_name
-        path.get_element_by_name(l)
+        path.get_element_by_label(l)
         print(path.TSC1)
         e = path.nodes[1]
         e.color = "red"
-
 
     def test_operate_a_GPML_pathway_object(self):
         '''
@@ -346,7 +345,6 @@ class MappingAndPlottingTests(unittest.TestCase):
 
     def test_connection_Reactome(self):
         MappingAPITest.test_connection("Reactome")
-
 
     def test_popup_kegg(self):
         MappingAPITest.test_popup_windows("KEGG")

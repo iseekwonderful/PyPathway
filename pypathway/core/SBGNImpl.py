@@ -352,27 +352,6 @@ class SBGNObject(Pathway):
                     continue
         return result
 
-    # def get_element_by_class(self, _class):
-    #     return [x for x in self.flatten() if hasattr(x, "name") and x.name == _class]
-    #
-    # def get_element_by_type(self, type):
-    #     return [x for x in self.flatten() if hasattr(x, "type") and x.type == type]
-    #
-    # def get_element_by_text(self, name):
-    #     result = []
-    #     for x in self.flatten():
-    #         for c in x.children:
-    #             if c.name == "label" and c.props.get("text") == name:
-    #                 if x not in result:
-    #                     result.append(x)
-    #     return result
-    #
-    # def get_element_by_id(self, id):
-    #     return [x for x in self.flatten() if hasattr(x, "id") and x.id == id]
-    #
-    # def get_element_by_oid(self, oid):
-    #     return [x for x in self.flatten() if hasattr(x, "external_id") and oid in x.external_id]
-
 
 # note or notes?
 class Notes(SBGNObject):
@@ -439,7 +418,6 @@ class SBGNRoot(SBGNObject):
     def _get_option(self):
         if self.option:
             content = self.option.json
-            print(self.option.json)
         else:
             content = {}
         for x in self.entities:
@@ -548,7 +526,7 @@ class SBGNRoot(SBGNObject):
     def get_element_by_type(self, type):
         return [x for x in self.members if hasattr(x, "type") and x.type == type]
 
-    def get_element_by_name(self, name):
+    def get_element_by_label(self, name):
         result = []
         for x in self.flatten():
             for c in x.children:
@@ -563,7 +541,7 @@ class SBGNRoot(SBGNObject):
             raise AttributeError
         if item in ["id", "type", "label", "glyph", "external_id", "name"]:
             return None
-        l = self.get_element_by_name(item)
+        l = self.get_element_by_label(item)
         return l if l else None
 
     def get_element_by_oid(self, oid):
