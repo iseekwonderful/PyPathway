@@ -311,13 +311,13 @@
 <li>Python API for highly custom biology data mapping.</li>
 <li>Interactive visualization data via <code>IPython</code> notebook.</li>
 </ul>
-<p><img alt="" src="./images/query/ALL.png" /></p>
+<p><img alt="" src="./images/query/ALL_re.png" /></p>
 <h2 id="installation">Installation</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This section, assume that you have <code>Python</code>, <code>pip</code>, <code>IPython</code> and <code>Jupyter</code> installed, if not,  view this <a href="./install/">FULL install guide</a></p>
+<p>This section assumes that you, like most Python users, have <code>Python</code>, <code>pip</code>, <code>IPython</code> and <code>Jupyter</code> installed, if not,  view this <a href="./install/">FULL install guide</a></p>
 </div>
-<p>For most of users, we suggest you install via <code>pip</code>, if you are interested in the developing function, install it from <a href="http://mkdocs.org">Github</a></p>
+<p>For most of users, we suggest you install via <code>pip</code>, if you are interested in the developing function, install it from <a href="https://github.com/iseekwonderful/PyPathway">Github</a></p>
 <div class="code"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pypathway</span>
 </pre></div>
 
@@ -331,14 +331,23 @@ brew install homebrew/science/paxtools
 
 
 <ul>
-<li>For windows users, view the guide in the github: <a href="https://biopax.github.io/Paxtools/">Paxtools</a> to set up the command for application’s usage.</li>
+<li>For windows users, view <a href="./install/#optionalinstall-java">Java setup guide</a> to set up the command for application’s usage.</li>
 </ul>
 <h2 id="try-it-out">try it out</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Using <code>Chrome</code>, <code>Firefox</code> or <code>Safari</code> to run IPython notebook. </p>
 </div>
-<p>This case shows searching and drawing pathway related with <code>jak</code>  in IPython notebook, no <strong>data mapping API</strong> is used</p>
+<p>First, open <code>IPython notebook</code> by typing <code>jupyter notebook</code> in <code>terminal</code>(linux and osx), <code>CMD</code>, or <code>powershell</code>. </p>
+<p>This IPython notebook shows searching and drawing pathway related with <code>jak</code>  in IPython notebook, no <strong>data mapping API</strong> is used</p>
+<h3 id="code">code</h3>
+<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">pypathway</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;jak&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="n">res</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+</pre></div>
+
+
+<h3 id="result">result</h3>
 <p><img alt="" src="./images/query/try_it_out_kg.png" /></p>
 <h2 id="features">Features</h2>
 <h3 id="pathway-search-and-retrieve">Pathway Search and Retrieve</h3>
@@ -554,7 +563,83 @@ and the ploting of <code>GPML</code> is based on <a href="https://github.com/wik
     
       <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
     
+      <script src="./images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
+    
+      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
       <script src="./images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
+    
+      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
+    
+      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
     
       <script src="./images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
     

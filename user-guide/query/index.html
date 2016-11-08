@@ -198,14 +198,8 @@
         <ul>
           
             <li class="anchor">
-              <a title="Overview" href="#overview">
-                Overview
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="try it out:" href="#try-it-out">
-                try it out:
+              <a title="First case:" href="#first-case">
+                First case:
               </a>
             </li>
           
@@ -230,6 +224,12 @@
             <li class="anchor">
               <a title="Parse local file" href="#parse-local-file">
                 Parse local file
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Insides" href="#insides">
+                Insides
               </a>
             </li>
           
@@ -313,27 +313,10 @@
         <div class="wrapper">
           
           <h1 id="query-pathway-data-from-public-databases">Query pathway data from public databases</h1>
-<h2 id="overview">Overview</h2>
-<p>The <strong>Figure</strong> below shows the Public databases we support: <code>WikiPathway</code>, <code>Reactome</code> and <code>KEGG</code>. After retrieving pathway from these databases, <code>pypathway</code> handle the these pathway data in <strong>two</strong> different way: </p>
-<ul>
-<li><code>BioPAX</code>, <code>SBGN-PD</code>: convert to <code>SBGN-PD</code> and visualization uses <code>SBGNviz.js</code>.</li>
-<li><code>KGML</code>, <code>GPML</code>: use their own data structures and visualize it using <code>pvjs</code> and <code>Cytoscape.js</code>.</li>
-</ul>
-<p><img alt="" src="../../images/query/query_data.png" /></p>
-<blockquote>
-<p>figure 1: technical workflow of public database querying and format handling.</p>
-</blockquote>
-<ul>
-<li>After parsing raw pathway data to pathway object, you can use <code>draw()</code> method to view your pathway (it is a <code>webapp</code> integrated in <code>IPython notebook</code>):</li>
-</ul>
+<h2 id="first-case">First case:</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Whether the format and the visualization method changes or not, the <code>Data Integration API</code> remains <em>same</em>.</p>
-</div>
-<h2 id="try-it-out">try it out:</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a record of IPython notebook.</p>
+<p>This is a record of IPython notebook. If not emphasized, all example using IPython notebook.</p>
 </div>
 <p><img alt="" src="../../images/query/try_it_out_image.png" /></p>
 <h2 id="supported-public-databases">Supported Public Databases</h2>
@@ -350,7 +333,7 @@
 
 
 <h2 id="supported-pathway-format">Supported Pathway Format</h2>
-<p>We support four main stream data format: <code>BioPAX</code>, <code>SBGN-PD</code>, <code>GPML</code> and <code>KGML</code>. First two are community support open source format, <code>GPML</code> is used by <code>WikiPathway</code>, and last one is defined by famous <code>KEGG</code>.</p>
+<p>We support four main stream data format: <code>BioPAX</code>, <code>SBGN-PD</code>, <code>GPML</code> and <code>KGML</code>. First two are community support open source format, <code>GPML</code> is used by <code>WikiPathway</code>, and last one is defined by <code>KEGG</code>.</p>
 <p>The supported data formats are defined in the class <code>PathwayFormat</code></p>
 <div class="code"><pre><span></span><span class="k">class</span> <span class="n">PathwayFormat:</span>
     <span class="s">&#39;&#39;&#39;</span>
@@ -365,19 +348,18 @@
 
 <h2 id="search-pathway">Search pathway</h2>
 <h3 id="search-pathway-in-kegg">search pathway in KEGG</h3>
-<p>Different from Reactome or WikiPathway, KEGG only supports a relative simple search API which can only search by <code>keyword</code> and <code>organism</code>.</p>
-<p><strong>To search pathway in KEGG</strong>:</p>
 <ul>
 <li>The static method <code>search_kegg</code> in the class <code>PublicDatabase</code>, with an argument <code>keyword</code> and a optional argument <code>organism</code>, is used for searching in KEGG.</li>
 </ul>
-<div class="code"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;b cell&quot;</span><span class="p">,</span> <span class="n">organism</span><span class="o">=</span><span class="s2">&quot;hsa&quot;</span><span class="p">)</span>
+<div class="code"><pre><span></span><span class="c1"># if no organism is assigned, the reference pathway, ko, is used as default value.</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;b cell&quot;</span><span class="p">)</span>
 </pre></div>
 
 
 <ul>
 <li>The <code>result</code> object is a list of instances of <code>KEGGPathwayData</code> containing the results of this query. If the result is <strong>empty</strong>, it will return a <strong>empty</strong> list. Use <code>print</code> to see the info.</li>
 </ul>
-<div class="code"><pre><span></span><span class="k">print</span> <span class="n">result</span>
+<div class="code"><pre><span></span><span class="k">print</span> <span class="n">res</span>
 <span class="o">&gt;&gt;</span> <span class="p">[</span><span class="n">format</span><span class="p">:</span> <span class="n">KGML</span>
  <span class="nb">id</span><span class="p">:</span> <span class="mo">04112</span>
  <span class="n">description</span><span class="p">:</span> <span class="n">Cell</span> <span class="n">cycle</span> <span class="o">-</span> <span class="n">Caulobacter</span>
@@ -401,7 +383,7 @@
 <li>Quickly parse and view the pathway.
 we provide a <code>load()</code> method which returns a kegg pathway object:</li>
 </ul>
-<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 <span class="c1"># aka. KEGGParser.parse(res[4].kgml).draw()</span>
 </pre></div>
 
@@ -438,13 +420,6 @@ we provide a <code>load()</code> method which returns a kegg pathway object:</li
  <span class="n">BioPAX</span><span class="p">:</span> <span class="bp">False</span> 
  <span class="n">SBGN</span><span class="o">-</span><span class="n">PD</span><span class="p">:</span> <span class="bp">False</span> 
  <span class="n">description</span><span class="p">:</span><span class="n">Cell</span><span class="o">-</span><span class="n">cell</span> <span class="n">junction</span> <span class="n">organization</span><span class="p">]</span>
-</pre></div>
-
-
-<ul>
-<li>one thing should be <strong>noticed</strong> is that: the BioPAX file is larger than the other normal pathway formats(may &gt; 5MB). So this module do not retrieve it when searching the pathway, use <code>retrieve()</code> to get the pathway by yourself.</li>
-</ul>
-<div class="code"><pre><span></span><span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">proxies</span><span class="o">=</span><span class="n">proxy</span><span class="p">)</span>
 </pre></div>
 
 
@@ -518,6 +493,23 @@ For example, we load a local BioPAX file and view it:</p>
 
 <p>and get the result:</p>
 <p><img alt="" src="../../images/query/biopax_parse2.png" /></p>
+<h2 id="insides">Insides</h2>
+<p>The <strong>Figure</strong> below shows the Public databases we support: <code>WikiPathway</code>, <code>Reactome</code> and <code>KEGG</code>. After retrieving pathway from these databases, <code>pypathway</code> handle the these pathway data in <strong>two</strong> different way: </p>
+<ul>
+<li><code>BioPAX</code>, <code>SBGN-PD</code>: convert to <code>SBGN-PD</code> and visualization uses <code>SBGNviz.js</code>.</li>
+<li><code>KGML</code>, <code>GPML</code>: use their own data structures and visualize it using <code>pvjs</code> and <code>Cytoscape.js</code>.</li>
+</ul>
+<p><img alt="" src="../../images/query/query_data.png" /></p>
+<blockquote>
+<p>figure 1: technical workflow of public database querying and format handling.</p>
+</blockquote>
+<ul>
+<li>After parsing raw pathway data to pathway object, you can use <code>draw()</code> method to view your pathway (it is a <code>webapp</code> integrated in <code>IPython notebook</code>):</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Whether the format and the visualization method changes or not, the <code>Data Integration API</code> remains <em>same</em>.</p>
+</div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -717,7 +709,83 @@ For example, we load a local BioPAX file and view it:</p>
     
       <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
     
+      <script src="../../images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
       <script src="../../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
     
       <script src="../../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
     

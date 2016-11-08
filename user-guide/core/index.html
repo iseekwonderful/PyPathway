@@ -205,14 +205,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="Pathway Formats" href="#pathway-formats">
-                Pathway Formats
+              <a title="Work with a Pathway Object." href="#work-with-a-pathway-object">
+                Work with a Pathway Object.
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Work with a Pathway Object." href="#work-with-a-pathway-object">
-                Work with a Pathway Object.
+              <a title="Pathway Formats" href="#pathway-formats">
+                Pathway Formats
               </a>
             </li>
           
@@ -288,25 +288,10 @@
           
             <h1>Core Pathway Object</h1>
           
-          <h2 id="pathway-formats">Pathway Formats</h2>
-<h3 id="chaos-of-formats">Chaos of formats</h3>
-<p>While handling pathway, you will find various formats provided by different organizations, which makes a huge difficulty to unify them. As a compromise, we use different <strong>Parsers</strong> and <strong>Visualizers</strong> for <code>KGML</code>, <code>SBGN-PD</code> and <code>GPML</code> formats. The visualizers for <code>SBGN-PD</code> and <code>GPML</code>, written in JavaScript, work well. The components used in these visualizers could be found in github (<a href="https://github.com/iVis-at-Bilkent/sbgnviz-js"><code>SBGNviz.js</code></a>, <a href="https://github.com/wikipathways/pvjs"><code>pvjs</code></a>). We implement a <code>Python API</code> for programmers to use these visualizers via Python code. In this section, we introduce you some knowledges about format handling and pathway object operation.</p>
-<h3 id="format-choice">Format Choice</h3>
-<p><img alt="" src="../../images/query/Supports.png" /></p>
-<p>The formats public databases provide are listed in the above figure.</p>
-<ul>
-<li>KEGG: <code>KGML</code> is the only choice, ignoring other formats provided in the FTP server due to the limited accession.</li>
-<li>WikiPathway: WikiPathway provides two formats, <code>GPML</code> and <code>BioPAX</code>. <code>GPML</code> is the native format and <code>BioPAX</code> seems derived from software. we recommend to use <code>GPML</code> format.</li>
-<li>Reactome: Reactome provides both <code>SBGN</code> and <code>BioPAX</code> formats. However both of them are derived from software, they can’t be directly drawn locally as what you see in Reactome’s website. So we provide some advices and additional work to make its <code>SBGN</code> format usable. see <a href="../../format">HERE</a>.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This module is concentrating on <code>data visualization</code>. The final aim is to get a <strong>visualized result</strong>. The <code>SBGN-PD</code> format is more recommended, due to the easier conversion from the <code>BioPAX</code> format to <code>SBGN-PD</code> format.</p>
-</div>
-<h2 id="work-with-a-pathway-object">Work with a Pathway Object.</h2>
+          <h2 id="work-with-a-pathway-object">Work with a Pathway Object.</h2>
 <p>We provide several <strong>methods</strong> to work with the pathway object, which is a instance of class <code>Pathway</code>.</p>
 <ul>
-<li>To load a search result to a pathway object, use <code>load()</code> method: </li>
+<li>To load a search result to a pathway object, use <code>load()</code> method, which return a <code>Pathway Object</code>. </li>
 </ul>
 <iframe width=890 height=150
   src=../../images/iframe/load_to_mem.html>
@@ -324,10 +309,6 @@
 <li>
 <p><code>def integrate(self, id_lists, visualize_option_lists):</code> Map user-defined data to the pathway in various ways. See the section: <a href="../map/"><code>Data Integration</code></a></p>
 </li>
-<li>
-<p><code>def export(self, format):</code>
-    Save the pathway object as a <code>XML</code> tree and return a string content.</p>
-</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -341,32 +322,44 @@
 <li><code>KGML</code>: <a href="http://www.genome.jp/kegg/xml/">http://www.genome.jp/kegg/xml/</a></li>
 <li><code>BioPAX</code>: <a href="http://www.biopax.org/">http://www.biopax.org/</a></li>
 </ul>
-<h3 id="general-methods">General methods</h3>
+<h3 id="methods">Methods</h3>
 <ul>
 <li><code>father</code>, <code>children</code>, <code>root</code> for node accession.</li>
 <li><code>summary()</code>, <code>__repr__</code>(magic method for print object) for directly screening the node’s information.</li>
 <li><code>entities</code>, <code>reactons</code> for listing the entities and reactions in the map.</li>
+<li><code>get_element_by_id</code>, <code>get_element_by_type</code> and <code>get_element_by_label</code>.</li>
 </ul>
 <p>Example of using these methods:</p>
-<iframe width=850 height=1100
-  src=../../images/iframe/kegg_as_example_general.html>
+<iframe width=850 height=2200
+  src=../../images/iframe/General-2.html>
 </iframe>
 
 <h4 id="kgml-specfic">KGML specfic</h4>
 <ul>
 <li><code>genes</code> for listing genes in the pathway</li>
+<li><code>nodes</code> for all <code>entites</code>.</li>
 <li><code>reactions</code> for listing reactions in the pathway</li>
-<li><code>get_element_by_class</code>, <code>get_element_by_id</code>, <code>get_element_by_name</code> and <code>get_element_by_type</code>: their usage is listed below.</li>
 </ul>
-<iframe width=850 height=650
-  src=../../images/iframe/KEGG_example1.html>
-</iframe>
-
 <h4 id="sbgn-specfic">SBGN specfic</h4>
-<p>The example of operating SBGN pathway object:</p>
-<iframe width=850 height=1750
-  src=../../images/iframe/SBGN_API.html>
-</iframe>
+<ul>
+<li><code>arcs</code>, <code>reactions</code>, <code>entities</code>.</li>
+<li><code>get_element_by_class</code>, <code>get_element_by_id</code>, <code>get_element_by_label</code>.</li>
+</ul>
+<h2 id="pathway-formats">Pathway Formats</h2>
+<h3 id="chaos-of-formats">Chaos of formats</h3>
+<p>While handling pathway, you will find various formats provided by different organizations, which makes a huge difficulty to unify them. As a compromise, we use different <strong>Parsers</strong> and <strong>Visualizers</strong> for <code>KGML</code>, <code>SBGN-PD</code> and <code>GPML</code> formats. The visualizers for <code>SBGN-PD</code> and <code>GPML</code>, written in JavaScript, work well. The components used in these visualizers could be found in github (<a href="https://github.com/iVis-at-Bilkent/sbgnviz-js"><code>SBGNviz.js</code></a>, <a href="https://github.com/wikipathways/pvjs"><code>pvjs</code></a>). We implement a <code>Python API</code> for programmers to use these visualizers via Python code. In this section, we introduce you some knowledges about format handling and pathway object operation.</p>
+<h3 id="format-choice">Format Choice</h3>
+<p><img alt="" src="../../images/query/Supports.png" /></p>
+<p>The formats public databases provide are listed in the above figure.</p>
+<ul>
+<li>KEGG: <code>KGML</code> is the only choice, ignoring other formats provided in the FTP server due to the limited accession.</li>
+<li>WikiPathway: WikiPathway provides two formats, <code>GPML</code> and <code>BioPAX</code>. <code>GPML</code> is the native format and <code>BioPAX</code> seems derived from software. we recommend to use <code>GPML</code> format.</li>
+<li>Reactome: Reactome provides both <code>SBGN</code> and <code>BioPAX</code> formats. However both of them are derived from software, they can’t be directly drawn locally as what you see in Reactome’s website. So we provide some advices and additional work to make its <code>SBGN</code> format usable. see <a href="../../format">HERE</a>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module is concentrating on <code>data visualization</code>. The final aim is to get a <strong>visualized result</strong>. The <code>SBGN-PD</code> format is more recommended, due to the easier conversion from the <code>BioPAX</code> format to <code>SBGN-PD</code> format.</p>
+</div>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -566,7 +559,83 @@
     
       <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
     
+      <script src="../../images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
       <script src="../../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
     
       <script src="../../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
     

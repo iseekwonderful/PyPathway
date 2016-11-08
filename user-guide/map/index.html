@@ -220,6 +220,12 @@
             </li>
           
             <li class="anchor">
+              <a title="ID" href="#id">
+                ID
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Properity of Glyph" href="#properity-of-glyph">
                 Properity of Glyph
               </a>
@@ -306,6 +312,37 @@
 </div>
 <h2 id="overview">Overview</h2>
 <p>The purpose of the data mapping API is to provide a simple and flexible way for programmer to display <strong>additional</strong> information in a pathway. Usually, we map the <strong>character</strong> of <code>data</code> to the <strong>property</strong> of <code>glyph</code>. Traditionally, limited information could be displayed in the nodes and arcs only by the their <code>color</code> and <code>opacity</code>. In our package user triggered events, such as <code>mouse-click</code>, are employed to demonstrate more details of the data. This processes should be handled, and then output the information in the <strong>user-interested</strong> entity, via <code>additional-plotting</code> or <code>Popup windows</code>.</p>
+<h2 id="id">ID</h2>
+<ul>
+<li>In <code>KEGG</code> pathway file, pathway.nodes is used to get all nodes in pathway, each has a <code>id</code> property and <code>ko_id</code> property (may be empty). if you are using pathway for epecifc organism, using <code>ko</code> to get the ko_id for node, and organims code like <code>hsa</code> for organism specific ID. These ids could be used in data mapping.</li>
+<li>In <code>GPML</code>, every <code>DataNode</code> has <code>id</code> and <code>external_id</code> properties, stand for <code>GPML</code> file’s id and external databases’ id.</li>
+</ul>
+<div class="code"><pre><span></span><span class="c1"># query pathway</span>
+<span class="kn">from</span> <span class="nn">pypathway</span> <span class="kn">import</span> <span class="n">PublicDatabase</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;jak&quot;</span><span class="p">,</span> <span class="n">organism</span><span class="o">=</span><span class="s2">&quot;hsa&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+<span class="c1"># ko</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">p</span><span class="o">.</span><span class="n">RAF1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">ko</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="p">[</span><span class="s1">&#39;K04366&#39;</span><span class="p">]</span>
+<span class="c1"># hsa</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">p</span><span class="o">.</span><span class="n">RAF1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hsa</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="p">[</span><span class="s1">&#39;hsa:5894&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<ul>
+<li>in <code>Reactome</code> pathway file, each glyph node contains <code>id</code> and <code>external_id</code> properties. <code>id</code> stand for graphic id and <code>external_id</code> stand for external database id.</li>
+</ul>
+<h3 id="example">Example</h3>
+<p><iframe width=890 height=820
+  src=../../images/iframe/id_example.html>
+</iframe></p>
+<h3 id="quick-way-to-get-nodes">Quick way to get nodes</h3>
+<p>You can get node in pathway simplily using its graphic name: path.JAK2.
+example:
+<iframe width=890 height=400
+  src=../../images/iframe/quick_way.html>
+</iframe></p>
 <h2 id="properity-of-glyph">Properity of Glyph</h2>
 <p>This section introduce the props which could be used in a pathway graphic.</p>
 <h3 id="node-props">node props</h3>
@@ -314,17 +351,18 @@
 <li>color</li>
 <li>opacity (shadow node)</li>
 </ul>
+<p><img alt="" src="../../../images/node_props.png" /></p>
 <h3 id="edge-props">edge props</h3>
 <ul>
 <li>highlight edge</li>
 <li>additional edge</li>
 </ul>
+<p><img alt="" src="../../../images/edge.png" /></p>
 <h3 id="additional-porps">additional porps</h3>
 <p>work as a popup windows, as a container we cant put various data in it.</p>
 <ul>
 <li>hyper-link to outer database</li>
 <li>charts</li>
-<li>3D models</li>
 <li>other infos</li>
 </ul>
 <h2 id="implement-of-properity-setting">Implement of Properity Setting</h2>
@@ -339,7 +377,7 @@
 <li><code>id_lists</code>: the list of entity ID designate the target of the visualize option.</li>
 <li><code>visualize_option_lists</code>: a list of VisualizeOption instance used for specfic id.</li>
 </ul>
-<p>for example:</p>
+<p>How it works</p>
 <div class="code"><pre><span></span><span class="n">id_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">visualize_option_lists</span> <span class="o">=</span> <span class="p">[</span><span class="n">vs1</span><span class="p">,</span> <span class="n">vs2</span><span class="p">,</span> <span class="n">vs3</span><span class="p">,</span> <span class="n">vs4</span><span class="p">]</span>
 <span class="c1"># work likes a dict: </span>
@@ -352,23 +390,27 @@
 </pre></div>
 
 
-<h3 id="visualizeoption">VisualizeOption</h3>
+<p>example:</p>
+<iframe width=890 height=630
+  src=../../images/iframe/integrate.html>
+</iframe>
+
+<h3 id="visualizeoptionaka-option">VisualizeOption(aka. Option)</h3>
 <p>This is a class describe the behavior of a certain entity.</p>
 <h4 id="the-initialization-of-a-visualizeoption">The initialization of a VisualizeOption</h4>
 <div class="code"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
-    <span class="n">default_value</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-    <span class="n">mouse_over</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-    <span class="n">left_click</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-    <span class="n">right_click</span><span class="o">=</span><span class="bp">None</span>
+    <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">over</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">click</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
 <span class="p">):</span>
 </pre></div>
 
 
 <ul>
-<li>All of four arguments receive a list of instances of class <code>InteractiveAction</code>(which has children: <code>ValueChanged</code>, <code>HyperLink</code>, <code>PopUp</code>, <code>Connection</code>)</li>
+<li>All of four arguments receive a list of instances of class <code>InteractiveAction</code>(which has children: <code>Prop</code>, <code>HyperLink</code>, <code>PopUp</code>, <code>Connection</code>)</li>
 </ul>
 <div class="code"><pre><span></span><span class="c1"># subclass of dictionary, provide the changed key-value pair value.</span>
-<span class="k">class</span> <span class="nc">ValueChanged</span><span class="p">(</span><span class="n">InteractiveAction</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Prop</span><span class="p">(</span><span class="n">InteractiveAction</span><span class="p">):</span>
 
 <span class="c1"># hyper-text link</span>
 <span class="k">class</span> <span class="nc">HyperLink</span><span class="p">(</span><span class="n">InteractiveAction</span><span class="p">):</span>
@@ -382,14 +424,14 @@
 
 
 <ul>
-<li><code>default_value</code>: the default appearance of a entity. We suggest to set the prop of graphic here (like <code>color</code>, <code>opacity</code>).</li>
-<li><code>mouse_over</code>, <code>left_click</code>, <code>left_click</code>: the mouse event handlers, which provide the function to demonstrate more info to a certain entity(like <code>plot</code>, <code>model</code> or <code>image</code>).</li>
+<li><code>default</code>: the default appearance of a entity. We suggest to set the prop of graphic here (like <code>color</code>, <code>opacity</code>).</li>
+<li><code>over</code>, <code>click</code>: the mouse event handlers, which provide the function to demonstrate more info to a certain entity(like <code>plot</code>, <code>model</code> or <code>image</code>).</li>
 </ul>
 <p>Next we will introduce the subclass of <code>InteractiveAction</code>.</p>
-<h3 id="valuechanged">ValueChanged</h3>
-<p>ValueChange class is a subclass of the dictionary containing the changeable value of <code>Entity</code> and <code>Edge</code>.  </p>
+<h3 id="prop">Prop</h3>
+<p>Prop class is a subclass of the dictionary containing the changeable value of <code>Entity</code> and <code>Edge</code>.  </p>
 <div class="code"><pre><span></span><span class="c1"># init with changed color</span>
-<span class="n">vc</span> <span class="o">=</span> <span class="n">ValueChanged</span><span class="p">({</span><span class="err">‘</span><span class="n">color</span><span class="err">’</span><span class="p">:</span> <span class="err">‘</span><span class="n">orange</span><span class="err">’</span><span class="p">})</span>
+<span class="n">vc</span> <span class="o">=</span> <span class="n">Prop</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="err">‘</span><span class="n">color</span><span class="err">’</span><span class="p">,</span> <span class="n">bg_color</span><span class="o">=</span><span class="err">‘</span><span class="n">blue</span><span class="err">’</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 
@@ -401,6 +443,11 @@
 </pre></div>
 
 
+<p>example: while you mouse over a node, a popup windows will show the link.</p>
+<iframe width=890 height=630
+  src=../../images/iframe/hyper_link.html>
+</iframe>
+
 <h3 id="popup">PopUp</h3>
 <p>PopUp class presents a popup windows, which contain tabs for various informations.</p>
 <h4 id="a-tab-receives-the-following-types-of-content">A tab receives the following types of content:</h4>
@@ -409,10 +456,17 @@
 <li><code>Text</code>: a text field.</li>
 <li><code>Image</code>: a image field,which could be the chemical structures or the experiment results of a entity</li>
 <li><code>graph</code>: a <strong>barplot</strong>, <strong>pieplot</strong>, <strong>lineplot</strong> or <strong>scatter</strong> implemented by <code>Baidu</code>’s <code>Echarts</code>. <a href="../../chart">Plot chart</a> and <a href="http://echarts-python.readthedocs.io/en/stable/">read the docs</a> shows how to use this Library.</li>
-<li><code>model</code>: the 3D structure of an entity, which is implemented by <code>3Dmol.js</code></li>
 </ul>
+<p>example:
+<iframe width=890 height=1160
+  src=../../images/iframe/popup.html>
+</iframe></p>
 <h3 id="connection">Connection</h3>
 <p>This class highlight (or add) the edge between self and target entity.</p>
+<p>exmaple:
+<iframe width=890 height=1000
+  src=../../images/iframe/connection.html>
+</iframe></p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -612,7 +666,83 @@
     
       <script src="../../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
     
+      <script src="../../images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
+    
+      <script src="../../images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
       <script src="../../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
+    
+      <script src="../../images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
+    
+      <script src="../../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
     
       <script src="../../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
     

@@ -232,14 +232,26 @@
         <ul>
           
             <li class="anchor">
-              <a title="Windows" href="#windows">
-                Windows
+              <a title="Python and Ipython notebook" href="#python-and-ipython-notebook">
+                Python and Ipython notebook
               </a>
             </li>
           
             <li class="anchor">
-              <a title="macOS" href="#macos">
-                macOS
+              <a title="PyPathway" href="#pypathway">
+                PyPathway
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="[Optional]Install Java" href="#optionalinstall-java">
+                [Optional]Install Java
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Issue tracker" href="#issue-tracker">
+                Issue tracker
               </a>
             </li>
           
@@ -286,48 +298,25 @@
           
           <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a <strong>detailed</strong> installation guide for who starts from install python or encountering a issue.</p>
+<p>This is a <strong>detailed</strong> installation guide from sketch.</p>
 </div>
-<h2 id="windows">Windows</h2>
-<ul>
-<li>Choose and a python version from <code>2.7</code> or <code>3.5</code>, download and install it from <a href="../“https://www.python.org/downloads/”">Python Software Foundation</a></li>
-<li>
-<p>Set the environment, usually is in: <code>Start</code>-&gt;<code>Computer</code>-&gt;<code>Property</code>-&gt;<code>Advance</code>-&gt;<code>Environment Variables</code> and append these value <code>PYTHON_INSTALL_DIR; PYTHON_INSTALL_DIR\Scripts</code> to variable <code>path</code>. for example, <code>C:\Python27;C:\Python27\Scripts</code> assuming you install python in C:\python27</p>
-</li>
-<li>
-<p>Now you should able to use python in a command-line, open a <code>CMD</code> or <code>PowerShell</code>, type <code>python</code> to check is there is a python shell appear.</p>
-</li>
-</ul>
-<div class="code"><pre><span></span>C:\Users\sheep&gt;python
-Python 2.7.12 (v2.7.12:d33e0cf91556, Jun 27 2016, 15:19:22) [MSC v.1500 32 bit (
-Intel)] on win32
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
+<h2 id="python-and-ipython-notebook">Python and Ipython notebook</h2>
+<p>Our package is based on IPython(Jupyter) notebook, install python and jupyter notebook following this guide.</p>
+<blockquote>
+<p><a href="http://jupyter.readthedocs.io/en/latest/install.html">Installing Jupyter Notebook</a></p>
+</blockquote>
+<h2 id="pypathway">PyPathway</h2>
+<p>using <code>pip3</code> in <code>python 3.x</code>:</p>
+<div class="code"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pypathway</span>
 </pre></div>
 
 
-<ul>
-<li>Then check the <code>pip</code>:</li>
-</ul>
-<div class="code"><pre><span></span>C:\Users\sheep&gt;pip
-
-Usage:
-  pip &lt;command&gt; [options]
+<p>or <code>pip</code> in <code>python 2.x</code>:</p>
+<div class="code"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pypathway</span>
 </pre></div>
 
 
-<ul>
-<li>Than nearly all the works are done, just type command below to install:</li>
-</ul>
-<div class="code"><pre><span></span>pip install pypathway
-</pre></div>
-
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You may encounter some compile problem while installing <code>IPython</code> or <code>Pillow</code>, Search in Google or StackOverflow may be a good choice.</p>
-</div>
-<h3 id="install-java">Install Java</h3>
+<h2 id="optionalinstall-java">[Optional]Install Java</h2>
 <p>If you are in windows, and needs to load <code>BioPAX</code> format file from file system, you need to install Java Runtime Environment(JRE)</p>
 <p>Please Follow this installation guide: <a href="https://java.com/en/download/help/windows_manual_download.xml">Install JAVA</a></p>
 <p>And make sure after installation, when type java in <code>CMD</code> you can see this:</p>
@@ -336,12 +325,8 @@ Usage:
 </pre></div>
 
 
-<h2 id="macos">macOS</h2>
-<ul>
-<li><code>Python 2.7.10</code> should be pre-installed in os, using pip to install:</li>
-</ul>
-<div class="code"><pre><span></span>pip install pypathway
-</pre></div>
+<h2 id="issue-tracker">Issue tracker</h2>
+<p>if you run into any trouble while installing this package and cannot be solved after asking goole and stackoverflow. Please go to <a href="https://github.com/iseekwonderful/pypathway">Github</a> and create a new issue.</p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -541,7 +526,83 @@ Usage:
     
       <script src="../images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
     
+      <script src="../images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
+    
+      <script src="../images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
       <script src="../images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
+    
+      <script src="../images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
+    
+      <script src="../images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
     
       <script src="../images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
     
