@@ -135,7 +135,7 @@
         <strong>
           PyPathway
           <span class="version">
-            0.1.11
+            0.2.3
           </span>
         </strong>
         
@@ -151,7 +151,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/iseekwonderful/pypathway/archive/0.1.11.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/iseekwonderful/pypathway/archive/0.2.3.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -192,8 +192,8 @@
             </li>
           
             <li class="anchor">
-              <a title="try it out" href="#try-it-out">
-                try it out
+              <a title="Try it out" href="#try-it-out">
+                Try it out
               </a>
             </li>
           
@@ -240,8 +240,8 @@
       
         
   <li>
-    <a class="" title="Data mapping and visualize" href="user-guide/map/">
-      Data mapping and visualize
+    <a class="" title="Data mapping and visualization" href="user-guide/map/">
+      Data mapping and visualization
     </a>
     
   </li>
@@ -303,7 +303,7 @@
         <div class="wrapper">
           
           <h1 id="welcome-to-pypathway">Welcome to pypathway</h1>
-<p>PyPathway is a package for python users who play with biology pathways, powered by Web technology and <a href="http://jupyter.org/">ipython nootebook(jupyter)</a>.</p>
+<p>PyPathway is a package for python users who play with biology pathways, powered by Web technology and <a href="http://jupyter.org/">ipython nootebook(jupyter)</a>. In tradictional environment, rendered pathway graphic will be displayed in a browser.</p>
 <h2 id="usage">Usage</h2>
 <ul>
 <li>Search and retrieve pathway from Reactome, WikiPathway and KEGG.</li>
@@ -313,8 +313,8 @@
 </ul>
 <p><img alt="" src="./images/query/ALL_re.png" /></p>
 <h2 id="installation">Installation</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This section assumes that you, like most Python users, have <code>Python</code>, <code>pip</code>, <code>IPython</code> and <code>Jupyter</code> installed, if not,  view this <a href="./install/">FULL install guide</a></p>
 </div>
 <p>For most of users, we suggest you install via <code>pip</code>, if you are interested in the developing function, install it from <a href="https://github.com/iseekwonderful/PyPathway">Github</a></p>
@@ -333,21 +333,29 @@ brew install homebrew/science/paxtools
 <ul>
 <li>For windows users, view <a href="./install/#optionalinstall-java">Java setup guide</a> to set up the command for application’s usage.</li>
 </ul>
-<h2 id="try-it-out">try it out</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<h2 id="try-it-out">Try it out</h2>
+<h3 id="1-load-ipython-notebook">1. Load IPython notebook</h3>
+<p>Most of situation we suggest you use <code>IPython</code> notebook to handle pathway data. This Web base interactive code environment provide richer content while rendering pathway.</p>
+<p>Open <code>IPython notebook</code> by typing <code>jupyter notebook</code> in <code>terminal</code>(linux and osx), <code>CMD</code>, or <code>powershell</code>. </p>
+<p>Example: in macOS 10.11, terminal. which will open <code>IPython notebook</code> a page in default browser</p>
+<p><img src=./images/query/jupyter.png alt="Drawing" style="width: 700px;"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Using <code>Chrome</code>, <code>Firefox</code> or <code>Safari</code> to run IPython notebook. </p>
 </div>
-<p>First, open <code>IPython notebook</code> by typing <code>jupyter notebook</code> in <code>terminal</code>(linux and osx), <code>CMD</code>, or <code>powershell</code>. </p>
+<h3 id="2-create-a-new-notebook">2. create a new notebook</h3>
+<p>On the right top, click <code>New</code> -&gt; <code>Python3</code>(<code>Python2</code>) to create a new notebook.</p>
+<p><img src=./images/query/create_step_1.png alt="Drawing" style="width: 200px;"/></p>
+<p>You will see a notebook page like this. Than enjoy your time with <code>IPython notebook</code>. </p>
+<p><img alt="" src="./images/query/create_step_2.png" /></p>
 <p>This IPython notebook shows searching and drawing pathway related with <code>jak</code>  in IPython notebook, no <strong>data mapping API</strong> is used</p>
-<h3 id="code">code</h3>
-<div class="code"><pre><span></span><span class="kn">from</span> <span class="nn">pypathway</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">PublicDatabase</span><span class="o">.</span><span class="n">search_kegg</span><span class="p">(</span><span class="s2">&quot;jak&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
-<span class="n">res</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-</pre></div>
-
-
-<h3 id="result">result</h3>
+<h3 id="3-search-and-retrieve-pathway">3. Search and retrieve pathway</h3>
+<ul>
+<li>Use <code>PublicDatabase</code>’s <code>search_kegg</code> staticmethod to Search <code>KEGG</code> database.</li>
+<li>Use load() method to retrieve and parse pathway from <code>KEGG</code></li>
+<li>Use draw() method to render pathway.  </li>
+</ul>
+<h3 id="4-code-and-result">4. Code and result</h3>
 <p><img alt="" src="./images/query/try_it_out_kg.png" /></p>
 <h2 id="features">Features</h2>
 <h3 id="pathway-search-and-retrieve">Pathway Search and Retrieve</h3>
@@ -364,7 +372,7 @@ brew install homebrew/science/paxtools
 <li><a href="http://www.sbgn.org/"><code>SBGN-PD</code></a>: a format for <strong>Process Description</strong> in system biology, especially suit for pathway visualization and data integration.</li>
 <li><a href="http://www.pathvisio.org/gpml/"><code>GPML</code></a>: GPML is the native format used by PathVisio and WikiPathways.</li>
 </ul>
-<h3 id="data-integration-api">Data Integration API</h3>
+<h3 id="data-mapping-api">Data mapping API</h3>
 <p>Use the elements in pathway graphics to display the characters of your experiments/omics data. </p>
 <h3 id="interactive-api"><a href="docs.md">Interactive API</a></h3>
 <p>Interactive API gives more space for data presentation.</p>

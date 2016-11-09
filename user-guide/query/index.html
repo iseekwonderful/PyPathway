@@ -139,7 +139,7 @@
         <strong>
           PyPathway
           <span class="version">
-            0.1.11
+            0.2.3
           </span>
         </strong>
         
@@ -155,7 +155,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/iseekwonderful/pypathway/archive/0.1.11.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/iseekwonderful/pypathway/archive/0.2.3.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -198,8 +198,14 @@
         <ul>
           
             <li class="anchor">
-              <a title="First case:" href="#first-case">
-                First case:
+              <a title="Overview" href="#overview">
+                Overview
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="First case" href="#first-case">
+                First case
               </a>
             </li>
           
@@ -250,8 +256,8 @@
       
         
   <li>
-    <a class="" title="Data mapping and visualize" href="../map/">
-      Data mapping and visualize
+    <a class="" title="Data mapping and visualization" href="../map/">
+      Data mapping and visualization
     </a>
     
   </li>
@@ -313,7 +319,14 @@
         <div class="wrapper">
           
           <h1 id="query-pathway-data-from-public-databases">Query pathway data from public databases</h1>
-<h2 id="first-case">First case:</h2>
+<h2 id="overview">Overview</h2>
+<p>This figure shows how Searching and Retrival API Works</p>
+<p><img alt="" src="../../images/icons/searching.png" /></p>
+<ul>
+<li>The <code>Searching API</code> is implemented in class <code>PublicDatabase</code> with staticmethod <code>search_kegg</code>, <code>search_wp</code> and <code>search_reactome</code>.</li>
+<li>The <code>Retrival API</code> and <code>Parsing API</code> is done with <code>load()</code> method of class <code>SearchResult</code>, you can directly use it at result of Searching API.</li>
+</ul>
+<h2 id="first-case">First case</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is a record of IPython notebook. If not emphasized, all example using IPython notebook.</p>
