@@ -29,7 +29,7 @@ test_requirements = [
 
 setup(
     name='pypathway',
-    version='0.2.2.2',
+    version='0.2.3',
     description="A Python package for playing with pathways",
     long_description=readme,
     author="sheep",
@@ -42,7 +42,7 @@ setup(
                  'pypathway'},
     include_package_data=True,
     install_requires=requirements,
-    license="Creative Commons BY 3.0",
+    license="GNU General Public License v3 (GPLv3)",
     zip_safe=False,
     keywords='pypathway',
     classifiers=[
