@@ -15,7 +15,7 @@ var additionalScale = [];
 
 function clean_qtip() {
     var selected = $(".qtip");
-    console.log(selected);
+    //console.log(selected);
     selected.remove();
     $(".qtip-default").remove();
     if (qtip_state != undefined){
@@ -75,7 +75,16 @@ function value_change_hook(){
             for(var x in defaults){
                 if (x == "value_changed") {
                     for (var k in defaults[x]) {
-                        elememt.css(k, defaults[x][k]);
+                        if (k == "scale"){
+                            elememt.css("width", parseFloat(elememt.css("width")) *
+                                parseFloat(defaults[x][k]));
+                            elememt.css("height", parseFloat(elememt.css("height")) *
+                                parseFloat(defaults[x][k]));
+                            elememt.css("font-size", parseFloat(elememt.css("font-size")) *
+                                parseFloat(defaults[x][k]));
+                        }else{
+                            elememt.css(k, defaults[x][k]);
+                        }
                     }
                 }
             }
@@ -182,9 +191,10 @@ function generate_tip(element, config){
             delay: 0
         },
         position: {
-            my: "top center",
-            at: "bottom center",
-            viewport: $(window)
+            at: "center center",
+            adjust: {
+                method: 'shift flip'
+            }
         }
     });
 }
@@ -271,8 +281,8 @@ function make_tip_node(config){
                 // }
                 // })
             }else if (c[0] == "text"){
-                console.log(c[1]);
-                $("<div><p>111</p></div>").appendTo(sub2)
+                //console.log(c[1]);
+                $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
 
             }
             sub2.appendTo(view);

@@ -29,8 +29,8 @@ function dynamicResize()
   if (windowHeight > canvasHeight)
   {
     // we want full usage
-    $("#sbgn-network-container").height(windowHeight * 0.90);
-    $("#sbgn-inspector").height(windowHeight * 0.85);
+    $("#sbgn-network-container").height(windowHeight * 1);
+    $("#sbgn-inspector").height(windowHeight * 1);
   }
 }
 

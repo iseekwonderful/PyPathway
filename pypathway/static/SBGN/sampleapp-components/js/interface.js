@@ -15,7 +15,7 @@ var additionalScale = [];
 
 function clean_qtip() {
     var selected = $(".qtip");
-    console.log(selected);
+    //console.log(selected);
     selected.remove();
     $(".qtip-default").remove();
     if (qtip_state != undefined){
@@ -281,7 +281,7 @@ function make_tip_node(config){
                 // }
                 // })
             }else if (c[0] == "text"){
-                console.log(c[1]);
+                //console.log(c[1]);
                 $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
 
             }

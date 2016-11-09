@@ -16,7 +16,7 @@ function clean_qtip() {
     var selected = $(".qtip");
     selected.remove();
     if (qtip_state != undefined){
-        console.log("exist" + qtip_state.qtip);
+        //console.log("exist" + qtip_state.qtip);
     }
     $("#qtip-content").remove();
     // if (qtip_state != undefined){
@@ -32,19 +32,19 @@ function clean_qtip() {
 //     // var path_to_xml = "neuronal_muscle_signalling.xml";
 //     var path_to_xml = "../sampleapp-components/data/pathway.xml";
 //     loadSample(path_to_xml);
-//     console.log("Hooked");
+//     ////console.log("Hooked");
 // }
 
 function resertProps() {
     // clean_qtip()
     for (var x in additionalScale){
-        console.log(additionalScale);
+        //console.log(additionalScale);
         additionalScale[x][0].css("width", additionalScale[x][1]);
         additionalScale[x][0].css("height", additionalScale[x][2]);
     }
     additionalScale = [];
     for (var x in element_styles){
-        console.log(element_styles);
+        ////console.log(element_styles);
         element_styles[x][0].css(element_styles[x][1], element_styles[x][2]);
     }
     // if (highlights != undefined){
@@ -64,16 +64,25 @@ function resertProps() {
 function value_change_hook(){
     $.getJSON(configFile, function (data) {
         configData = data["option"];
-        console.log(configData);
         // when init here we want to set the default value
         for(var k in configData){
             var elememt = cy.$("#" + k);
-            // console.log(k, elememt);
+            // //console.log(k, elememt);
             var defaults = configData[k].default;
             for(var x in defaults){
                 if (x == "value_changed") {
                     for (var k in defaults[x]) {
-                        elememt.css(k, defaults[x][k]);
+                        if (k == "scale"){
+                            elememt.css("width", parseFloat(elememt.css("width")) *
+                                parseFloat(defaults[x][k]));
+                            elememt.css("height", parseFloat(elememt.css("height")) *
+                                parseFloat(defaults[x][k]));
+                            ////console.log(elememt.css("font-size"));
+                            elememt.css("font-size", parseFloat(elememt.css("font-size")) *
+                                parseFloat(defaults[x][k]));
+                        }else{
+                            elememt.css(k, defaults[x][k]);
+                        }
                     }
                 }
             }
@@ -86,9 +95,12 @@ function applyValueChange(element, config){
         if (x == "scale"){
             element_styles.push([element, "width", element.css("width")]);
             element_styles.push([element, "height", element.css("height")]);
+            element_styles.push([element, "font-size", element.css("font-size")]);
             element.css("width", parseFloat(element.css("width")) *
                                 parseFloat(config[x]));
             element.css("height", parseFloat(element.css("height")) *
+                                parseFloat(config[x]));
+            element.css("font-size", parseFloat(element.css("font-size")) *
                                 parseFloat(config[x]));
         }else {
             element_styles.push([element, x, element.css(x)]);
@@ -96,7 +108,7 @@ function applyValueChange(element, config){
         }
     }
     // highlights = element;
-    // console.log(element_styles);
+    // //console.log(element_styles);
 }
 
 function applyLink(element, config) {
@@ -179,9 +191,10 @@ function generate_tip(element, config){
             delay: 100
         },
         position: {
-            my: "top center",
-            at: "bottom center",
-            viewport: $(window)
+            at: "center center",
+            adjust: {
+                method: 'shift flip'
+            }
         }
     });
 }
@@ -193,7 +206,7 @@ function make_tip_node(config){
     var w = config.width;
     var h = config.height;
     config = config.tab;
-    console.log(w, h);
+    //console.log(w, h);
     var content = $("<div></div>");
     content.attr("id", "qtip-content");
     content.css({"width": w + 'px', 'height': h + 'px', 'padding': '2px'});
@@ -210,7 +223,7 @@ function make_tip_node(config){
         var count = 0;
         for (var x in config) {
             var c = config[x];
-            console.log(c);
+            //console.log(c);
             var sub = $("<li></li>");
             if (count == 0){
                 sub.attr("class", "active")
@@ -237,22 +250,24 @@ function make_tip_node(config){
                 echartargs.push([f, [id, op]]);
                 // this is a echart drawing:
             }else if (c[0] == "table"){
-                var tb = $("<table class='table table-striped'></table>");
-                for (var r in c[1].table){
+                var dive = $("<div class='table-responsive'></div>");
+                var tb = $("<table class='table table-striped table-condensed'></table>");
+                for (var r in c[1].table) {
                     var tr = $("<tr></tr>");
-                    for (var cl in c[1].table[r]){
+                    for (var cl in c[1].table[r]) {
                         $("<td>" + c[1].table[r][cl] + "</td>").appendTo(tr);
-                        console.log(c[1].table[r][cl]);
+                        //console.log(c[1].table[r][cl]);
                     }
                     tr.appendTo(tb)
                 }
-                tb.appendTo(sub2);
+                tb.appendTo(dive);
+                dive.appendTo(sub2);
             }else if (c[0] == "model"){
                 // $("<div id='model-area'></div>").appendTo(sub2);
                 // var element = $('#model-area');
                 // var model_config = { defaultcolors: $3Dmol.rasmolElementColors, backgroundColor: 'white' };
                 // var viewer = $3Dmol.createViewer( element, model_config );
-                // console.log("loading");
+                // //console.log("loading");
                 // var pdbUri = 'https://files.rcsb.org/download/5HWC.pdb';
                 // jQuery.ajax( pdbUri, {
                 // success: function(data) {
@@ -264,9 +279,13 @@ function make_tip_node(config){
                 //     v.zoom(1.2, 1000);                               /* slight zoom */
                 // },
                 // error: function(hdr, status, err) {
-                //     console.error( "Failed to load PDB " + pdbUri + ": " + err );
+                //     //console.error( "Failed to load PDB " + pdbUri + ": " + err );
                 // }
                 // })
+            }else if (c[0] == "text"){
+                //console.log(c[1]);
+                $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
+
             }
             sub2.appendTo(view);
             count ++;
@@ -274,7 +293,7 @@ function make_tip_node(config){
         tab.appendTo(content);
         view.appendTo(content);
         content.appendTo('body');
-        console.log("append");
+        //console.log("append");
         for (var x in echartargs){
             echartargs[x][0](echartargs[x][1][0], echartargs[x][1][1]);
         }
@@ -299,17 +318,17 @@ function apply_action(action, target){
             }
             // the connect reconstruction
             if ("connection" in config){
-                console.log(config["connection"]);
+                //console.log(config["connection"]);
                 for (var x in config["connection"]){
                     cy.add({
                         group: "edges",
-                        data: { id: target.id() + config["connection"][x][0],
+                        data: { id: "ed_" + target.id() + config["connection"][x][0],
                         source: config["connection"][x][0], target: target.id()}
                     });
-                    var newElement = cy.$("#" + target.id() + config["connection"][x][0]);
+                    var newElement = cy.$("#ed_" + target.id() + config["connection"][x][0]);
                     for (var t in config["connection"][x][1]){
                         if (t == "target-style" && !(config["connection"][x][1][t] == undefined)){
-                            console.log(config["connection"][x][1][t]);
+                            //console.log(config["connection"][x][1][t]);
                             applyValueChange(cy.$("#" + config["connection"][x][0]),
                                 config["connection"][x][1][t].value_changed
                             );
@@ -317,12 +336,12 @@ function apply_action(action, target){
                             newElement.css(t, config["connection"][x][1][t]);
                         }
                     }
-                    additionalEdges.push(target.id() + config["connection"][x][0]);
+                    additionalEdges.push("ed_" + target.id() + config["connection"][x][0]);
                 }
             }
         }
     }else{
-        console.log("over", "no action");
+        //console.log("over", "no action");
     }
 
 }
@@ -341,7 +360,7 @@ function on_mouse_over(event) {
     // if (target.id() in configData){
     //     if (Object.keys(configData[target.id()]["over"]).length > 0){
     //         var config = configData[target.id()]["over"];
-    //         console.log(config);
+    //         //console.log(config);
     //         if ("value_changed" in config){
     //             // applyValueChange(target, config["value_changed"]);
     //         }
@@ -352,7 +371,7 @@ function on_mouse_over(event) {
     //         }
     //     }
     // }else{
-    //     console.log("over", "no action");
+    //     //console.log("over", "no action");
     // }
 }
 
@@ -361,9 +380,9 @@ function on_mouse_out(event) {
     if (event.cyTarget == cy || !event.cyTarget.isNode()){
         return;
     }
-    console.log("out", event);
+    //console.log("out", event);
     resertProps();
-    // console.log("out");
+    // //console.log("out");
     // trying to resume to the default state
 }
 
@@ -373,7 +392,7 @@ function on_mouse_down(event){
         return;
     }
     resertProps();
-    console.log("down", event.cyTarget.id());
+    //console.log("down", event.cyTarget.id());
     apply_action("left", event.cyTarget);
     //generate_tip(event.cyTarget, configData[event.cyTarget.id()].left[0]);
     // cy.nodes($("#glyph4")).style({'background-color': 'yellow'});
@@ -384,15 +403,15 @@ function on_mouse_up(event) {
     // if (event.cyTarget == cy || !event.cyTarget.isNode()){
     //     return;
     // }
-    // console.log("up", event);
-    // console.log("up");
+    // //console.log("up", event);
+    // //console.log("up");
 }
 function right_click(event) {
     if (event.cyTarget == cy || !event.cyTarget.isNode()){
         return;
     }
     resertProps();
-    console.log("right", event.cyTarget.id());
+    //console.log("right", event.cyTarget.id());
     apply_action("right", event.cyTarget);
 }
 

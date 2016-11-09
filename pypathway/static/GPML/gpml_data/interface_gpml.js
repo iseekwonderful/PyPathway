@@ -17,7 +17,7 @@ var qtipReady = true;
 function clean_qtip() {
     $(".qtip").remove();
     if (qtip_state != undefined){
-        //console.log("exist" + qtip_state.qtip);
+        //////console.log("exist" + qtip_state.qtip);
     }
     $("#qtip-content").remove();
     var tips = $(".qtip-pos-tc");
@@ -34,13 +34,13 @@ function resertProps() {
         element_attr[x][0].setAttribute("d", element_attr[x][1])
     }
     for (var x in additionalScale){
-        // //console.log(additionalScale);
+        // ////console.log(additionalScale);
         additionalScale[x][0].css("width", additionalScale[x][1]);
         additionalScale[x][0].css("height", additionalScale[x][2]);
     }
     additionalScale = [];
     for (var x in element_styles){
-        // //console.log(element_styles);
+        // ////console.log(element_styles);
         element_styles[x][0].css(element_styles[x][1], element_styles[x][2]);
     }
     element_styles = [];
@@ -57,14 +57,14 @@ function value_change_hook(){
         return;
     }
     isInited = true;
-    console.log("Here we init");
+    //console.log("Here we init");
     if(!configData) {
         $.getJSON(configFile, function (data) {
             configData = data["option"];
             // when init here we want to set the default value
             for (var k in configData) {
                 var elememt = $("#" + k);
-                // //console.log(k, elememt);
+                // ////console.log(k, elememt);
                 var defaults = configData[k].default;
                 for (var x in defaults) {
                     if (x == "value_changed") {
@@ -95,17 +95,17 @@ function reslove_path(path, scale) {
     var center = [(p1[0] + p2[0] + p3[0] + p4[0]) / 4, (p1[1] + p2[1] + p3[1] + p4[1]) / 4];
     var min = [center[0] - scale * (center[0] - p1[0]), center[1] - scale * (center[1] - p1[1])];
     var max = [center[0] + scale * (center[0] - p1[0]), center[1] + scale * (center[1] - p1[1])];
-    //console.log(min, max);
+    ////console.log(min, max);
     var np2 = [min[0], max[1]];
     var np3 = [max[0], min[1]];
     var res =  "M" + min[0] + "," + min[1] + "L" + np2[0] + "," + np2[1] + "L" + max[0] + "," + max[1] + "L" + np3[0] + "," + np3[1] + "L" + min[0] + "," + min[1]
-    console.log(res);
+    //console.log(res);
     return res
 }
 
 function applyValueChangeForInit(element, config){
     var id = element.id;
-    //console.log(id);
+    ////console.log(id);
     element = $("#" + element.id);
     for(var x in config){
         if (x == "scale"){
@@ -136,13 +136,13 @@ function applyValueChangeForInit(element, config){
     }
     // element.css("fill", "red");
     // highlights = element;
-    // //console.log(element_styles);
+    // ////console.log(element_styles);
 }
 
 
 function applyValueChange(element, config){
     var id = element.id;
-    //console.log(id);
+    ////console.log(id);
     element = $("#" + element.id);
     for(var x in config){
         if (x == "scale"){
@@ -173,7 +173,7 @@ function applyValueChange(element, config){
     }
     // element.css("fill", "red");
     // highlights = element;
-    // //console.log(element_styles);
+    // ////console.log(element_styles);
 }
 
 function applyLink(element, config) {
@@ -225,11 +225,11 @@ function generate_tip(element, config){
     setTimeout(function(){
         qtipReady = true;
     },100);
-    ////console.log("QTIP");
+    //////console.log("QTIP");
     clean_qtip();
     var content = make_tip_node(config);
     qtip_state = element;
-    //console.log(element);
+    ////console.log(element);
     $("#" + element.id).qtip({
         content: {
             text: $("#qtip-content")
@@ -268,7 +268,7 @@ function make_tip_node(config){
     var w = config.width;
     var h = config.height;
     config = config.tab;
-    //console.log(w, h);
+    ////console.log(w, h);
     var content = $("<div></div>");
     content.attr("id", "qtip-content");
     content.css({"width": w + 'px', 'height': h + 'px', 'padding': '2px'});
@@ -285,7 +285,7 @@ function make_tip_node(config){
         var count = 0;
         for (var x in config) {
             var c = config[x];
-            //console.log(c);
+            ////console.log(c);
             var sub = $("<li></li>");
             if (count == 0){
                 sub.attr("class", "active")
@@ -317,14 +317,14 @@ function make_tip_node(config){
                     var tr = $("<tr></tr>");
                     for (var cl in c[1].table[r]){
                         $("<td>" + c[1].table[r][cl] + "</td>").appendTo(tr);
-                        //console.log(c[1].table[r][cl]);
+                        ////console.log(c[1].table[r][cl]);
                     }
                     tr.appendTo(tb)
                 }
                 tb.appendTo(sub2);
             }else if (c[0] == "model"){
             }else if (c[0] == "text"){
-                //console.log(c[1]);
+                ////console.log(c[1]);
                 $("<div><p>" + c[1]["text"] + "</p></div>").appendTo(sub2)
 
             }
@@ -334,7 +334,7 @@ function make_tip_node(config){
         tab.appendTo(content);
         view.appendTo(content);
         content.appendTo('body');
-        //console.log("append");
+        ////console.log("append");
         for (var x in echartargs){
             echartargs[x][0](echartargs[x][1][0], echartargs[x][1][1]);
         }
@@ -389,7 +389,7 @@ function apply_action(action, target){
             }
         }
     }else{
-        //console.log("over", "no action");
+        ////console.log("over", "no action");
     }
 
 }
@@ -408,7 +408,7 @@ function on_mouse_over(event) {
     // if (target.id() in configData){
     //     if (Object.keys(configData[target.id()]["over"]).length > 0){
     //         var config = configData[target.id()]["over"];
-    //         //console.log(config);
+    //         ////console.log(config);
     //         if ("value_changed" in config){
     //             // applyValueChange(target, config["value_changed"]);
     //         }
@@ -419,7 +419,7 @@ function on_mouse_over(event) {
     //         }
     //     }
     // }else{
-    //     //console.log("over", "no action");
+    //     ////console.log("over", "no action");
     // }
 }
 
@@ -428,9 +428,9 @@ function on_mouse_out(event) {
     // if (event.cyTarget == cy || !event.cyTarget.isNode()){
     //     return;
     // }
-    //console.log("out", event);
+    ////console.log("out", event);
     resertProps();
-    // //console.log("out");
+    // ////console.log("out");
     // trying to resume to the default state
 }
 
@@ -440,7 +440,7 @@ function on_mouse_down(event){
     //     return;
     // }
     resertProps();
-    // //console.log("down", event.cyTarget.id());
+    // ////console.log("down", event.cyTarget.id());
     apply_action("left", event.target);
     //generate_tip(event.cyTarget, configData[event.cyTarget.id()].left[0]);
     // cy.nodes($("#glyph4")).style({'background-color': 'yellow'});
@@ -451,15 +451,15 @@ function on_mouse_up(event) {
     // if (event.cyTarget == cy || !event.cyTarget.isNode()){
     //     return;
     // }
-    // //console.log("up", event);
-    // //console.log("up");
+    // ////console.log("up", event);
+    // ////console.log("up");
 }
 function right_click(event) {
     if (event.cyTarget == cy || !event.cyTarget.isNode()){
         return;
     }
     resertProps();
-    //console.log("right", event.cyTarget.id());
+    ////console.log("right", event.cyTarget.id());
     apply_action("right", event.cyTarget);
 }
 

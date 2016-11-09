@@ -22,6 +22,7 @@ requirements = [
     'ipython',
     'jupyter',
     'echarts-python',
+    'numpy',
 ]
 
 test_requirements = [
@@ -29,7 +30,7 @@ test_requirements = [
 
 setup(
     name='pypathway',
-    version='0.2.3',
+    version='0.2.4.1',
     description="A Python package for playing with pathways",
     long_description=readme,
     author="sheep",

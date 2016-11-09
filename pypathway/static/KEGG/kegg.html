@@ -53,7 +53,7 @@
             $.getJSON("kegg_data/config_{{time}}.json", function(jsonData){
                 var zoom = document.getElementById("cy").offsetWidth / parseInt(jsonData["bg"]["width"]);
                 zoom = 1 / zoom;
-                console.log(zoom);
+                //console.log(zoom);
 				var cy = window.cy = cytoscape({
 					container: document.getElementById('cy'),
 
@@ -153,7 +153,7 @@
                 cy.panzoom( defaults );
                 // just use the regular qtip api but on cy elements
                 for(var x in jsonData["pathway"]){
-                    console.log(jsonData["pathway"][x]["nodes"]);
+                    //console.log(jsonData["pathway"][x]["nodes"]);
                     cy.add(jsonData["pathway"][x]["nodes"]);
                 }
                 // init hook here.
@@ -162,25 +162,25 @@
                     if (event.cyTarget == cy){
                         return;
                     }
-                    console.log("over" + event);
+                    //console.log("over" + event);
                     on_mouse_over(event);
                 });
                 cy.on("tap", function (event){
                     if (event.cyTarget == cy){
                         return;
                     }
-                    console.log("tap" + event);
+                    //console.log("tap" + event);
                     on_mouse_down(event);
                 });
                 cy.on("mouseout", function(event){
                     if (event.cyTarget == cy){
                         return;
                     }
-                    console.log("out" + event.cyTarget.id());
+                    //console.log("out" + event.cyTarget.id());
                     on_mouse_out(event);
                 });
                 cy.on("cxttap", function (event) {
-                    console.log("down" + event);
+                    //console.log("down" + event);
                     right_click(event);
                 })
             });

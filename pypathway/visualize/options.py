@@ -151,8 +151,8 @@ class Prop(InteractiveAction):
 
     @property
     def json(self):
-        # return {"value_changed": {k: v for k, v in self.setting.items() if v}}
-        return {"value_changed": self.setting}
+        return {"value_changed": {k: v for k, v in self.setting.items() if v}}
+        # return {"value_changed": self.setting}
 
 
 class Connection(InteractiveAction):
