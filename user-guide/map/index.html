@@ -308,7 +308,7 @@
 <h2 id="overview">Overview</h2>
 <p>The purpose of the data mapping API is to provide a simple and flexible way for programmer to display <strong>additional</strong> information in a pathway. We map the <strong>character</strong> of <code>data</code> to the <strong>property</strong> of <code>glyph</code>. Traditionally, limited information could be displayed in the nodes and arcs only by the their <code>color</code> and <code>opacity</code>. In this package user triggered events, such as <code>mouse-click</code>, are employed to demonstrate more details of the data. This processes should be handled, and then output the information in the <strong>user-interested</strong> entity, via <code>additional-plotting</code> or <code>Popup windows</code>.</p>
 <p>This figure shows the procedure of data mapping</p>
-<p><img alt="" src="../../../images/icons/procedure_map.png" /></p>
+<p><img alt="" src="../../images/icons/procedure_map.png" /></p>
 <p>This section will cover:</p>
 <ul>
 <li>Get ID: provide the identifier what pathway file contains, see <a href="../map/#ID">ID chapter</a> </li>
@@ -320,7 +320,7 @@
 <p>Before data mapping you should have data annotated to database, like genbank, go or KEGG. Then the connection could be built between data and pathway</p>
 </div>
 <p>The support and attribute to get <code>ID</code> is listed in the table below. All these attributes is belonged to pathway node(entity)</p>
-<p><img alt="" src="../../../images/icons/id_system.png" /></p>
+<p><img alt="" src="../../images/icons/id_system.png" /></p>
 <ul>
 <li>In <code>KEGG</code> pathway file, pathway.nodes is used to get all nodes in pathway, each has a <code>id</code> property and <code>ko_id</code> property (may be empty). if you are using pathway for epecifc organism, using <code>ko</code> to get the ko_id for node, and organims code like <code>hsa</code> for organism specific ID. These ids could be used in data mapping.</li>
 <li>
@@ -348,13 +348,13 @@ example:
 <li>color</li>
 <li>opacity (shadow node)</li>
 </ul>
-<p><img alt="" src="../../../images/node_props.png" /></p>
+<p><img alt="" src="../../images/node_props.png" /></p>
 <h3 id="edge-props">edge props</h3>
 <ul>
 <li>highlight edge</li>
 <li>additional edge</li>
 </ul>
-<p><img alt="" src="../../../images/edge.png" /></p>
+<p><img alt="" src="../../images/edge.png" /></p>
 <h3 id="additional-porps">additional porps</h3>
 <p>work as a popup windows, as a container we cant put various data in it.</p>
 <ul>
