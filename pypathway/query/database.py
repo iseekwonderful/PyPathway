@@ -122,7 +122,7 @@ class PublicDatabase:
             # Fill the png and KGML data use a multi-thread module
             error = Queue()
             [p.retrieve(organism) for p in pathways]
-            [p.join_active_thread() for p in pathways]
+            [p._join_active_thread() for p in pathways]
             if not error.empty():
                 e = error.get()
                 raise NetworkException(e[0], e[1])
@@ -179,33 +179,35 @@ class PublicDatabase:
         else:
             return True
 
-    @staticmethod
-    def _common_search(q, source=None, organism=None, proxies=None):
-        # Check if the input is a list.
-        if not PublicDatabase._check_list_arg([source, organism]):
-            raise ValueError("argument should be a list")
-        # Generating urls
-        args = {
-            k: v for (k, v) in {"q": [q], "datasource": source, "organism": organism, "type": type}.items() if v
-        }
-        args["type"] = ["pathway"]
-        params = ["and".join(["{}={}".format(k, value) for value in v]) for k, v in args.items()]
-        url = "http://www.pathwaycommons.org/pc2/search.json?" + "&".join(
-            [p for p in params]
-        )
-        # perform a network request
-        # print url
-        try:
-            nr = NetworkRequest(url, NetworkMethod.GET, proxy=proxies)
-        except Exception as e:
-            raise e
-        if "Error 460" in nr.text:
-            return SearchResult(None, None, 0, [], True)
-        res_json = json.loads(nr.text)
-        # Conclude the result.
-        results = []
-        for res in res_json.get("searchHit"):
-            results.append(ReactomePathwayData(res["uri"], res["name"], res["dataSource"], None, None, None))
-        return SearchResult(res_json.get("comment"), res_json.get("providers"), res_json.get("numHits"),
-                            results, res_json.get("empty"))
+    # @staticmethod
+    # def _common_search(q, source=None, organism=None, proxies=None):
+    #     # Check if the input is a list.
+    #     if not PublicDatabase._check_list_arg([source, organism]):
+    #         raise ValueError("argument should be a list")
+    #     # Generating urls
+    #     args = {
+    #         k: v for (k, v) in {"q": [q], "datasource": source, "organism": organism, "type": type}.items() if v
+    #     }
+    #     args["type"] = ["pathway"]
+    #     params = ["and".join(["{}={}".format(k, value) for value in v]) for k, v in args.items()]
+    #     url = "http://www.pathwaycommons.org/pc2/search.json?" + "&".join(
+    #         [p for p in params]
+    #     )
+    #     # perform a network request
+    #     # print url
+    #     try:
+    #         nr = NetworkRequest(url, NetworkMethod.GET, proxy=proxies)
+    #     except Exception as e:
+    #         raise e
+    #     if "Error 460" in nr.text:
+    #         return SearchResult(None, None, 0, [], True)
+    #     res_json = json.loads(nr.text)
+    #     # Conclude the result.
+    #     results = []
+    #     for res in res_json.get("searchHit"):
+    #         results.append(ReactomePathwayData(res["uri"], res["name"], res["dataSource"], None, None, None))
+    #     return SearchResult(res_json.get("comment"), res_json.get("providers"), res_json.get("numHits"),
+    #                         results, res_json.get("empty"))
 
+
+DB = PublicDatabase

@@ -44,7 +44,7 @@ class MappingAPITest:
             #         print(x.summary())
             ids = [x.props.get("GraphId") for x in path.nodes]
             # ids = [x.props.get("GraphId") for x in path.flatten() if x.props.get("GraphId") is not None]
-            print(ids)
+            # print(ids)
         else:
             res = PublicDatabase.search_reactome("jak")  #, proxies=proxy)
             path = res[1].load(1.3)

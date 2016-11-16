@@ -67,7 +67,6 @@ function value_change_hook(){
         // when init here we want to set the default value
         for(var k in configData){
             var elememt = cy.$("#" + k);
-            // //console.log(k, elememt);
             var defaults = configData[k].default;
             for(var x in defaults){
                 if (x == "value_changed") {
@@ -151,9 +150,9 @@ function applyLink(element, config) {
     });
 }
 
-function applyNodeConnection(element, config) {
-
-}
+// function applyNodeConnection(element, config) {
+//
+// }
 
 // generate qtip for certain node
 function generate_tip(element, config){

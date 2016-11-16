@@ -36,24 +36,24 @@ class PathwayFileReadException(Exception):
         return self.message
 
 
-class SupportedOrganism:
-    def __init__(self):
-        pass
-    '''
-    This class represent the organism supported by Pathway Common, not KEGG
-    Currently, the integrate pathway data supported is only the Homo sapiens (9606)
-
-    Attributes:
-        Homo_Sapiens: 9606
-    '''
-    Homo_Sapiens = 9606
+# class SupportedOrganism:
+#     def __init__(self):
+#         pass
+#     '''
+#     This class represent the organism supported by Pathway Common, not KEGG
+#     Currently, the integrate pathway data supported is only the Homo sapiens (9606)
+#
+#     Attributes:
+#         Homo_Sapiens: 9606
+#     '''
+#     Homo_Sapiens = 9606
 
 
 class SupportedDatabase:
     def __init__(self):
         pass
     '''
-    This class lists the database we support currently
+    This class lists the databases we support currently and the databases we wanna support in the feature.
     '''
     KEGG = 'kegg'
     REACTOME = 'reactome'
@@ -66,7 +66,7 @@ class PathwayFormat:
     def __init__(self):
         self.des = "This is the class include the current support data format"
     '''
-    This class list the format we support currently
+    This class list the format we support currently, and the format we wanna to support in the feature
     '''
     BioPAX = "BIOPAX"
     KGML = "KGML"
@@ -84,8 +84,8 @@ class PathwayData:
         self.id = id
 
     '''
-    This class is the super class of all class store raw pathway data, generally they will contain the
-    identifier(id), descriptions, source(database), format, data
+    This class is the super class of all class store raw pathway data(a search result contains 1 pathway), generally
+     they contain the identifier(id), descriptions, source(database), format, data
 
     Args:
         source: the public database it comes from
@@ -99,6 +99,11 @@ class PathwayData:
     '''
 
     def summary(self):
+        '''
+        Every subclass of PathwayData should have a summary method to tell the user what is in the instances
+
+        :return:
+        '''
         raise NotImplementedError
 
 
@@ -140,6 +145,7 @@ class ReactomePathwayData(PathwayData):
     def retrieve(self, proxies=None):
         '''
         Trying to fill the BioPAX and SBGN-PD data for certain pathway.
+
         :param proxies: if not None, proxies used by while requesting data.
         :return: None, but fill self's BioPAX and SBGN if it is empty
         '''
@@ -174,6 +180,15 @@ class ReactomePathwayData(PathwayData):
                 raise NetworkException(er[0], er[1])
 
     def load(self, ratio=2):
+        '''
+        Load the pathway data instance to pathway object in the memory. By using SBGNParser with BioPAX file, later
+        data provides the content in complex and database identifier information. Also fix_reactome will be called to
+        fix the reactome layout issue. The ratio, is used for adjust the scale issue in the graphic.
+
+        :param ratio: scale down to certain ratio, see the user-guide/format discuss, where introduce the issue we face
+         and the solutions
+        :return: a SBGN pathway object.
+        '''
         if not self.SBGN or not self.data:
             # let load it
             self.retrieve()
@@ -199,41 +214,61 @@ class WiKiPathwayData(PathwayData):
         self.threads = []
 
     '''
-    This class is used for storage the raw wiki pathway data, including the id, name,  oragnism, reversion, score,
+    This class is used for storage the raw wiki pathway data, including the id, name, organism, reversion, score,
     field?
     '''
 
     def load(self):
+        '''
+        Quick method for load GMPL pathway data to the memory, GPMLParser is used in this function. You can use
+        GPMLParser.parse(self.data) to load the pathway to the memory
+
+        :return: A GPML pathway object
+        '''
         from ..core.GPMLImpl import GPMLParser
         if not self.data:
             # retrieve it
             self.retrieve()
-            # raise Exception("Parse GMPL file need GPML data")
         return GPMLParser.parse(self.data)
 
     def __repr__(self):
         return self.summary()
 
     def summary(self):
+        '''
+        Get summary of this pathway data, if you screen the search result, you will see the output of the method, in
+        a list(the search result is a list object contain a series of PathwayData class and subclass).
+
+        :return: Summary of this pathway data object.
+        '''
         return "\nid: {}\nname: {}\nspecies: {}\nrevision: {}\nhasData: {}\nscore: {}\n".format(
             self.id, self.description, self.species, self.revision, True if self.data else False, self.score
         )
 
     def retrieve(self, proxies=None, error_queue=None, single=True):
-        # get the GPML data from wiki pathway
+        '''
+        In the search process, we does not fill the pathway data (self.data) due to the large amount of search result.
+         so in the load() method, we using this method to retrieve the GPML format data. if you doesnt wanna retrieval
+         and parse pathway using load() method, you need to call this method USING DEFAULT params.
+
+        :param proxies: the proxies
+        :param error_queue: the error_queue
+        :param single: the single method
+        :return:
+        '''
         url = "http://webservice.wikipathways.org/getPathway?pwId={}&format=json".format(self.id)
         gpml = MultiThreadNetworkRequest(
-            url, NetworkMethod.GET, self, "data", callback=self.process_data, proxy=proxies, error_queue=error_queue
+            url, NetworkMethod.GET, self, "data", callback=self._process_data, proxy=proxies, error_queue=error_queue
         )
         self.threads.extend([gpml])
         [x.start() for x in self.threads]
         if single:
-            self.join_active_thread()
+            self._join_active_thread()
 
-    def join_active_thread(self):
+    def _join_active_thread(self):
         [x.join() for x in self.threads]
 
-    def process_data(self, data):
+    def _process_data(self, data):
         try:
             content = json.loads(data)["pathway"]["gpml"]
         except:
@@ -304,7 +339,6 @@ class KEGGPathwayData(PathwayData):
     def load(self, proxies=None):
         '''
         Load the pathway data to pathway object in KGML data structure
-        :param query_entity_data: query KEGG ORTHOLOGY for each node, may take minutes
         :param proxies: if not None, proxys for requesting.
         :return: a kegg pathway object (instance of KEGGPathway).
         '''
@@ -333,11 +367,15 @@ class KEGGPathwayData(PathwayData):
                 if not result.get(addr):
                     pass
                 else:
-                    id2name[x.id] = result.get(addr).split(",")[0].split(" ")[1][1: -1]
-                    if not x.ko_id:
-                        x.ko_id = []
-                    for kx in result.get(addr).split(", "):
-                        x.ko_id.append(kx.split(" ")[0].replace("\n", ""))
+                    # print(result.get(addr))
+                    if "map" in result.get(addr):
+                        x.ko_id = [result.get(addr)[:8]]
+                    else:
+                        id2name[x.id] = result.get(addr).split(",")[0].split(" ")[1][1: -1]
+                        if not x.ko_id:
+                            x.ko_id = []
+                        for kx in result.get(addr).split(", "):
+                            x.ko_id.append(kx.split(" ")[0].replace("\n", ""))
             kg.set_label(id2name)
         except:
             raise
@@ -347,32 +385,38 @@ class KEGGPathwayData(PathwayData):
             setattr(x, self.organism, hsa)
         return kg
 
-    def data_callback(self, data, source):
-        split = data.split("///")[:-1]
-        ko = set()
-        for x in split:
-            if re.findall(r"ORTHOLOGY\s+?(K\d+)\s", x):
-                ko.add(re.findall(r"ORTHOLOGY\s+?(K\d+)\s", x)[0])
-        [source.ko_id.append(x) for x in ko]
-
     def summary(self):
+        '''
+        Return the basic information of this pathway class.
+
+        :return:
+        '''
         return "format: {}\nid: {}\ndescription: {}\nhasData: {}".format(
             "KGML", self.id, self.description, self.data is not None
         )
 
-    def html(self, i):
-        import os
-        with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/midviz/kegg_element_template") as fp:
-            tem = fp.read()
-        return tem.replace("{{id}}", self.id).replace("{{name}}", self.description)\
-            .replace("{{hasData}}", str(True if self.data else False)).replace("{{i}}", str(i))\
-            .replace("{{image}}", "http://rest.kegg.jp/get/{}{}/image".format(self.organism, self.id))
+    # def html(self, i):
+    #     import os
+    #     with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/midviz/kegg_element_template") as fp:
+    #         tem = fp.read()
+    #     return tem.replace("{{id}}", self.id).replace("{{name}}", self.description)\
+    #         .replace("{{hasData}}", str(True if self.data else False)).replace("{{i}}", str(i))\
+    #         .replace("{{image}}", "http://rest.kegg.jp/get/{}{}/image".format(self.organism, self.id))
 
     def __repr__(self):
         return self.summary()
 
     # retrieve the pathway info and KGML data
     def retrieve(self, organism="hsa", proxies=None, error=None):
+        '''
+        Retrieve KEGG pathway data, kgml and png. DO NOT use this method except you don't want to parse pathway use
+        load() method.
+
+        :param organism: the organism
+        :param proxies: proxies
+        :param error: error handle DO NOT USE THIS
+        :return: None
+        '''
         self.organism = organism
         kgml_url = "http://rest.kegg.jp/get/{}{}/kgml".format(organism, self.id)
         png_url = "http://rest.kegg.jp/get/{}{}/image".format(organism, self.id)
@@ -383,7 +427,7 @@ class KEGGPathwayData(PathwayData):
         self.threads.extend([kgml, png])
         [x.start() for x in self.threads]
 
-    def join_active_thread(self):
+    def _join_active_thread(self):
         [x.join() for x in self.threads]
 
     def _parse_info(self, data):

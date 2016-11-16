@@ -30,7 +30,7 @@ test_requirements = [
 
 setup(
     name='pypathway',
-    version='0.2.4.1',
+    version='0.2.4.2',
     description="A Python package for playing with pathways",
     long_description=readme,
     author="sheep",

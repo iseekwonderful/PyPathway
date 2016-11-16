@@ -194,7 +194,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
         for i, x in enumerate(os.listdir("local_file/{}".format(target))):
             if "owl" not in x or i < 7:
                 continue
-            print(x, i)
+            # print(x, i)
             res.append(BioPAXParser.parseFromFile("local_file/{}/{}".format(target, x)))
         for x in res:
             self.assertTrue(x is not None)
@@ -230,7 +230,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
             else:
                 root = child.root
             self.assertEqual(root, ph)
-            print(ph, child)
+            # print(ph, child)
             # get genes, entites, reactions
             self.assertTrue(isinstance(ph.genes, list))
             self.assertTrue(isinstance(ph.entities, list))
@@ -240,7 +240,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
             self.assertTrue(isinstance(ph.get_element_by_id("31"), list))
             self.assertTrue(isinstance(ph.get_element_by_name("activation"), list))
             self.assertTrue(isinstance(ph.get_element_by_type("gene"), list))
-            print(count)
+            # print(count)
 
     def test_operate_a_pathway_from_internet(self):
         # while a pathway is from kegg database and with organism and ko_id we need to check more
@@ -252,7 +252,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
         # labels
         l = path.genes[0].display_name
         path.get_element_by_label(l)
-        print(path.TSC1)
+        # print(path.TSC1)
         e = path.genes[1]
         e.color = "red"
         path.set_color({e.id: "tea"})
@@ -264,10 +264,10 @@ class LocalFilesAndAPITes(unittest.TestCase):
         self.assertTrue(path.children[0].father == path)
         self.assertTrue(path.children[0].root == path)
         # labels
-        print(path.nodes)
+        # print(path.nodes)
         l = path.nodes[0].display_name
         path.get_element_by_label(l)
-        print(path.TSC1)
+        # print(path.TSC1)
         e = path.nodes[1]
         e.color = "red"
 
@@ -283,7 +283,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
                 ph.summary()
                 child = ph.children[10]
                 root = child.root
-                print(root, ph)
+                # print(root, ph)
                 # self.assertEqual(root, ph)
                 self.assertEqual(child.is_root, False)
                 # get genes, entites, reactions
@@ -300,7 +300,7 @@ class LocalFilesAndAPITes(unittest.TestCase):
             ph.summary()
             child = ph.children[0]
             root = child.root
-            print(ph, child)
+            # print(ph, child)
             # self.assertEqual(root, ph)
             self.assertEqual(child.is_root, False)
             self.assertTrue(isinstance(ph.nodes, list))
@@ -315,16 +315,13 @@ class LocalFilesAndAPITes(unittest.TestCase):
         fl = os.listdir("local_file/REACTOME_tc")
         for i, x in enumerate(fl):
             if "sbgn" in x and x.replace("sbgn", "xml") in fl:
-                if i == 10:
-                    return
                 try:
                     sb = SBGNParser.parseFromFile("local_file/REACTOME_tc/{}".format(x),
                                                   "local_file/REACTOME_tc/{}".format(x.replace("sbgn", "xml")))
                     sb.fix_reactome()
                     sb.draw()
                 except:
-                    import traceback
-                    print(traceback.format_exc())
+                    raise
 
 
 class MappingAndPlottingTests(unittest.TestCase):

@@ -576,8 +576,10 @@ class Entry(KEGGNode):
         :return: a tuple(id, dict)
         '''
         g = self.graphic[0]
-        if g.type != "rectangle":
-            return
+        # if g.type == "roundrectangle":
+        #     print(g)
+        # if g.type != "rectangle":
+        #     return
         if not g.name:
             return None
         names = g.name.replace(".", "").split(",")
@@ -590,13 +592,15 @@ class Entry(KEGGNode):
             name = names[0]
         if self.add_name:
             name = self.add_name
+        if g.type == "roundrectangle":
+            name = g.name.replace(" ", " ")
         graphic = {
             "data": {"id": self.id, "name": name, "parent": "back"},
             "css":
                 {
-                    "shape": "rectangle",
-                    "width": g.width,
-                    "height": g.height,
+                    "shape": g.type,
+                    "width": g.width + 2,
+                    "height": g.height + 2,
                     "opacity": 1,
                     "background-color": "#ffffff",
                     "text-halign": "center",
@@ -604,15 +608,23 @@ class Entry(KEGGNode):
                     "font-size": 10,
                     "border-style": "solid",
                     "border-width": "1px",
+                    # "text-wrap": "wrap",
+                    # "text-max-width": g.width
                 },
             "position": {
-                "x": g.x,
-                "y": g.y
+                "x": g.x + 1,
+                "y": g.y + 1
             },
             "locked": "true",
             "group": "nodes",
         }
-        # print name, g.x, g.y
+        if "TITLE" in name:
+            graphic["data"]["name"] = name.replace("TITLE:", "")
+            graphic["css"]["shape"] = "rectangle"
+            graphic["css"]["border-width"] = "2px"
+        if g.type == "roundrectangle":
+            graphic["css"]["text-wrap"] = "wrap"
+            graphic["css"]['text-max-width'] = g.width
         return self.id, {"nodes": graphic}
 
     @property
