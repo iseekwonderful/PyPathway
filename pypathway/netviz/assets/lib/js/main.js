@@ -15,7 +15,7 @@ function init(data) {
     } else if (type == 'echarts') {
         init_echarts(data.options)
     } else if (type == 'viva') {
-        init_viva(data.options);
+        init_viva_svg(data.options);
     }
 }
 
@@ -28,6 +28,88 @@ function level_color(level) {
     }else{
         return 0x111111 * (10 - level);
     }
+}
+
+function init_viva_svg(config) {
+    console.log(config);
+    var graph = Viva.Graph.graph();
+    var exist = [];
+    for (var i in config.elements){
+        // console.log(config.elements[i].group);
+        if(config.elements[i].group == 'edges'){
+            // console.log(i);
+            graph.addLink(config.elements[i].data.source, config.elements[i].data.target);
+        }else{
+            var level = parseInt(config.elements[i].data.level);
+            // if (level > 4){ continue }
+            graph.addNode(config.elements[i].data.label);
+            // exist.push(config.elements[i].data.label);
+        }
+    }
+    // for (var i in config.elements){
+    //     // console.log(config.elements[i].group);
+    //     if(config.elements[i].group == 'edges'){
+    //         var source = config.elements[i].data.source;
+    //         var target = config.elements[i].data.target;
+    //         if (exist.indexOf(source) >=0  && exist.indexOf(target) >=0){
+    //             graph.addLink(config.elements[i].data.source, config.elements[i].data.target);
+    //         }
+    //         // console.log(i);
+    //     }
+    // }
+    var layout = Viva.Graph.Layout.forceDirected(graph, {
+        stableThreshold: 0.009,
+        springLength : 5,
+        springCoeff : 0.0002,
+        dragCoeff : 0.02,
+        gravity : -1.5
+    });
+
+    var graphics = Viva.Graph.View.svgGraphics();
+
+    var colors = [
+                        "#1f77b4", "#aec7e8",
+                        "#ff7f0e", "#ffbb78",
+                        "#2ca02c", "#98df8a",
+                        "#d62728", "#ff9896",
+                        "#9467bd", "#c5b0d5",
+                        "#8c564b", "#c49c94",
+                        "#e377c2", "#f7b6d2",
+                        "#7f7f7f", "#c7c7c7",
+                        "#bcbd22", "#dbdb8d",
+                        "#17becf", "#9edae5"
+                        ];
+
+
+    graphics.node(function(node){
+                        var circle = Viva.Graph.svg('circle')
+                            .attr('r', 7)
+                            .attr('stroke', '#fff')
+                            .attr('stroke-width', '1.5px')
+                            .attr("fill", colors[Math.round(Math.random() * colors.length)]);
+
+                        // circle.append('title').text(node.data.label);
+
+                        return circle;
+
+                    }).placeNode(function(nodeUI, pos){
+                        nodeUI.attr( "cx", pos.x).attr("cy", pos.y);
+                    });
+
+                    graphics.link(function(link){
+                        return Viva.Graph.svg('line')
+                                .attr('stroke', '#999')
+                                .attr('stroke-width', Math.sqrt(link.data));
+                    });
+
+    var renderer = Viva.Graph.View.renderer(graph,
+        {container: document.getElementById('cy'),
+        graphics: graphics,
+        layout: layout});
+    renderer.run();
+    setTimeout(function() {
+        renderer.pause();
+    }, 5000);
 }
 
 function init_viva(config){

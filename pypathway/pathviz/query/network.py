@@ -40,13 +40,16 @@ class NetworkRequest:
     Attributes:
         text: The raw result of the request
     '''
-    def __init__(self, url, method, binary=False, proxy=None):
+    def __init__(self, url, method, binary=False, proxy=None, post_arg=None):
         self.url = url
         self.method = method
         self.binary = binary
         self.proxy = proxy
+        self.post_arg = post_arg or {}
         if method == NetworkMethod.GET:
             self.text = self._request_get()
+        else:
+            self.text = self._request_post()
 
     def _request_get(self):
         try:
@@ -54,6 +57,18 @@ class NetworkRequest:
             text = request.text
             if self.binary:
                 text = request.content
+        except Exception as e:
+            raise NetworkException(self.url, e)
+        else:
+            return text
+
+    def _request_post(self):
+        self.post_arg['url'] = self.url
+        self.post_arg['timeout'] = 20
+        self.post_arg['proxies'] = self.proxy
+        try:
+            request = requests.post(**self.post_arg)
+            text = request.text
         except Exception as e:
             raise NetworkException(self.url, e)
         else:

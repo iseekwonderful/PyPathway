@@ -124,3 +124,39 @@ class FromCYConfig(Plotable):
     def plot(self, engine=Engine.CYTOSCAPE):
         pi = PlotOnlyInterface(host=self)
         return pi.update()
+
+
+class DefaultStyle:
+    def __init__(self):
+        self.config = {
+            'nodes': {
+                'size': 20,
+                'border-width': 2,
+                'border-color': '#2f4554',
+                'background-color': {
+                    'circle': '#91c7ae',
+                    'rectangle': '#61a0a8',
+                    'triangle': '#546570',
+                    'other': '#749f83'
+                },
+                'color': '#546570'
+            },
+            'edges': {
+                'width': 2,
+                'color': 'black'
+            }
+        }
+
+    def json(self):
+        return self.config
+
+    @staticmethod
+    def random():
+        return None
+
+
+class Style:
+    def __init__(self):
+        pass
+
+

@@ -4,7 +4,24 @@
 import json
 import os
 
-from pathviz.visualize import IntegrationOptions
+# from ..visualize.options import IntegrationOptions
+
+
+class ReactomeNativeParser:
+    def __init__(self, data: dict):
+        self.data = data
+
+    def search_node(self, node_id):
+        for x in self.data['nodes']:
+            if int(x['reactomeId']) == int(node_id):
+                return x
+
+    # def search_node_with_accum
+
+    def search_edge(self, edge_id):
+        for x in self.data['edges']:
+            if int(x['reactomeId']) == int(edge_id):
+                return x
 
 
 class Pathway:
@@ -81,7 +98,7 @@ def compress(data):
     for i, x in enumerate(data[1:]):
         first_dif.append((x[0] - data[i][0], x[1] - data[i][1]))
     print(max([x[0] for x in first_dif[1:]]))
-    with open("/../static/assets/raw.json", "w") as fp:
+    with open("../static/assets/raw.json", "w") as fp:
         fp.write(json.dumps(data))
 
 
@@ -92,3 +109,17 @@ def vertex2id(v):
             con = json.loads(fp.read())
         data = {x[0]: x[1] for x in con}
     return data.get(int(v))
+
+
+def data_prepare():
+    import pymysql
+    con = pymysql.connect(user="root", passwd="19920819xy", db="reactome")
+    cursor = con.cursor()
+    cursor.execute("select DB_ID, representedInstance from Vertex")
+    f = cursor.fetchall()
+    # to int
+    return [(int(x[0]), int(x[1])) for x in f]
+
+
+if __name__ == '__main__':
+    compress(data_prepare())

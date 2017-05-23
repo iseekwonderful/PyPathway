@@ -4,6 +4,9 @@ import json
 import re
 import sys
 import traceback
+import xml.etree.cElementTree as ET
+import time
+
 
 from .network import MultiThreadNetworkRequest, NetworkMethod, NetworkException, NetworkRequest
 
@@ -33,19 +36,6 @@ class PathwayFileReadException(Exception):
     '''
     def __str__(self):
         return self.message
-
-
-# class SupportedOrganism:
-#     def __init__(self):
-#         pass
-#     '''
-#     This class represent the organism supported by Pathway Common, not KEGG
-#     Currently, the integrate pathway data supported is only the Homo sapiens (9606)
-#
-#     Attributes:
-#         Homo_Sapiens: 9606
-#     '''
-#     Homo_Sapiens = 9606
 
 
 class SupportedDatabase:
@@ -107,12 +97,14 @@ class PathwayData:
 
 
 class ReactomePathwayData(PathwayData):
-    def __init__(self, db_id, description, id, format, bioPAX, SBGN):
+    def __init__(self, db_id, description, id, format, bioPAX, SBGN, species='homo+sapiens'):
         PathwayData.__init__(self, "Reactome", id, description, format, bioPAX)
         self.SBGN = SBGN
         self.BioPAX = self.data
         self.db_id = db_id
         self.threads = []
+        self.species = species
+        self.tree = None
 
     '''
     This class represent the pathway data query from Pathway Common, it provide the interface of many
@@ -148,6 +140,7 @@ class ReactomePathwayData(PathwayData):
         :param proxies: if not None, proxies used by while requesting data.
         :return: None, but fill self's BioPAX and SBGN if it is empty
         '''
+        # print(self.id)
         query = []
         error = Queue()
         query.append(MultiThreadNetworkRequest(
@@ -161,6 +154,10 @@ class ReactomePathwayData(PathwayData):
                 self.db_id
             ),
             NetworkMethod.GET, self, "SBGN", proxy=proxies, error_queue=error))
+        query.append(MultiThreadNetworkRequest(
+            'http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(self.species),
+            NetworkMethod.GET, self, 'tree', proxy=proxies, error_queue=error
+        ))
         self.threads.extend(query)
         try:
             [x.start() for x in self.threads]
@@ -171,6 +168,26 @@ class ReactomePathwayData(PathwayData):
             raise e
         finally:
             self.threads = []
+            if self.tree:
+                self.tree = ET.ElementTree(ET.fromstring(self.tree))
+                tgt = None
+                r = self.tree.getroot()
+                for t in r.iter():
+                    if t.attrib.get('dbId') == self.id.split('-')[-1]:
+                        tgt = t
+                        print(t.tag)
+                while not tgt.attrib.get('hasDiagram'):
+                    # get parent
+                    for t in r.iter():
+                        if tgt in t.getchildren():
+                            tgt = t
+                            break
+                print(tgt.attrib)
+                res = NetworkRequest('http://www.reactome.org/download/current/diagram/{}.json?v={}'.format(
+                    'R-HSA-{}'.format(tgt.attrib['dbId']), str(round(time.time()))
+                ), NetworkMethod.GET, proxy=proxies)
+                print(res.text)
+                self.json_data = json.loads(res.text)
             if self.data:
                 self.data = self.data.encode("utf-8")
         while not error.empty():
@@ -193,10 +210,11 @@ class ReactomePathwayData(PathwayData):
             self.retrieve()
             # raise Exception("load a reactome need the SBGN and BioPAX data, try retrieve first")
         try:
+            print('load~!')
             from pathviz.core.SBGNImpl import SBGNParser
             sb = SBGNParser.parse(self.SBGN, self.data)
             sb.fix()
-            sb.fix_reactome(ratio)
+            sb.fix_reactome(self.json_data)
             return sb
         except:
             print(traceback.format_exc())
@@ -394,13 +412,6 @@ class KEGGPathwayData(PathwayData):
             "KGML", self.id, self.description, self.data is not None
         )
 
-    # def html(self, i):
-    #     import os
-    #     with open(os.path.dirname(os.path.abspath(__file__)) + "/../static/midviz/kegg_element_template") as fp:
-    #         tem = fp.read()
-    #     return tem.replace("{{id}}", self.id).replace("{{name}}", self.description)\
-    #         .replace("{{hasData}}", str(True if self.data else False)).replace("{{i}}", str(i))\
-    #         .replace("{{image}}", "http://rest.kegg.jp/get/{}{}/image".format(self.organism, self.id))
 
     def __repr__(self):
         return self.summary()

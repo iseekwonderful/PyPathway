@@ -189,9 +189,17 @@ def plot(chart):
     with open(os.getcwd() + "/assets/plot/plot_{}.html".format(area_id), "w") as fp:
         fp.write(info.replace("{{ opt }}", json.dumps(chart.json)))
     html = iframe.replace("{{path}}", "'assets/plot/plot_{}.html'".format(area_id))\
-        .replace("{{ratio}}", "0.8").replace("{{time}}", area_id)
+        .replace("{{ratio}}", "0.6").replace("{{time}}", area_id)
     if environment():
         from IPython.display import HTML
+        # print(html)
         return HTML(html)
 
 
+class C:
+    def __init__(self, jsons):
+        self.json = jsons
+
+
+def plot_json(json_config):
+    return plot(C(json_config))
