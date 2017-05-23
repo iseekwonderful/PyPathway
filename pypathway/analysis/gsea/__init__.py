@@ -14,9 +14,13 @@ except:
 class EnrichrResult(EnrichmentResult):
     def __init__(self, df: pandas.DataFrame, source_data, target):
         EnrichmentResult.__init__(self, df, source_data, target, 'gsea')
-
-    def _repr_html_(self):
-        return self.df
+        self.define = {
+            'KEGG':
+                lambda x: {'name': x.split('_')[0], 'species': x.split('_')[1], 'id': x.split('_')[2]},
+            'Reactome':
+                lambda x: {'name': x.split('_')[0], 'species': x.split('_')[1], 'id': x.split('_')[2]},
+            'GO': lambda x: x
+        }
 
     @property
     def table(self):
@@ -35,7 +39,30 @@ class EnrichrResult(EnrichmentResult):
         return plot_json(self.basic_config)
 
     def detail(self, index):
-        pass
+        if 'KEGG' in self.target.upper():
+            return {
+                'info': self.define['KEGG'](self.table.iloc[index][0]),
+                'stat': self.table.iloc[index],
+                'source': self.source_data
+            }
+        elif 'REACTOME' in self.target.upper():
+            ds = {
+                'info': self.define['KEGG'](self.table.iloc[index][0]),
+                'stat': self.table.iloc[index],
+                'source': self.source_data
+            }
+            from ...pathviz.query.common import ReactomePathwayData
+            rp = ReactomePathwayData(
+                ds['info']['id'], ds['info']['name'], ds['info']['id'], None, None, None, ds['info']['species'])
+            return rp
+        elif 'GENE' in self.target.upper():
+            return {
+                'info': self.define['KEGG'](self.table.iloc[index][0]),
+                'stat': self.table.iloc[index],
+                'source': self.source_data
+            }
+        else:
+            return "Detail visualization is not implemented yet"
 
     @property
     def overview(self):
