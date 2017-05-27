@@ -12,5 +12,5 @@ else:
 
 
 def version():
-    return "0.21.3"
+    return "0.22.3"
 

@@ -39,3 +39,15 @@ class Reactome(ORA):
 
     def stat(self):
         pass
+
+
+class GO:
+    pass
+
+
+class GoaAdaptor:
+    pass
+
+
+class KEGG:
+    pass

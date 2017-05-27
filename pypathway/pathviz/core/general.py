@@ -16,6 +16,9 @@ class ReactomeNativeParser:
             if int(x['reactomeId']) == int(node_id):
                 return x
 
+    def search_nodes(self, node_id):
+        return [x for x in self.data['nodes'] if int(x['reactomeId']) == int(node_id)]
+
     # def search_node_with_accum
 
     def search_edge(self, edge_id):

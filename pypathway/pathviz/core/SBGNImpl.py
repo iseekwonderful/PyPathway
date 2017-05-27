@@ -8,7 +8,7 @@ from xml.dom.minidom import Document
 from xml.sax import *
 
 from ..query.common import PathwayFormat
-
+from jucell import iframe
 from pathviz.utils import SBGNParseException
 from pathviz.utils import environment as env
 from .BioPAXImpl import NativeBioPAXParser
@@ -488,6 +488,18 @@ class SBGNRoot(SBGNObject):
             except KeyboardInterrupt:
                 exit()
 
+    def share(self, path, toolbox=False, options=None, type='HTML'):
+        '''
+        This is The function that export plot region with certain settings.
+
+        :param path: the export dir
+        :param toolbox: display a toolbox or not
+        :param options: the plot setting
+        :param type: whether a HTML or a Django template
+        :return: export to a target project in the path
+        '''
+        pass
+
     def export(self):
         # if format == PathwayFormat.KGML:
         #     Warning("[!] Convert from SBGN-PD to Other format is not supported")
@@ -599,14 +611,9 @@ class SBGNRoot(SBGNObject):
                     x.father.bbox[0].h = r
 
     def fix_reactome(self, json_data):
-        # load necessary resource
-        # with open('/Users/yangxu/Desktop/investage/R-HSA-6783589.json') as fp:
-        #     graph = json.load(fp)
         rp = ReactomeNativeParser(json_data)
-        # load the pax
-        pax = NativeBioPAXParser.parse(self.BioPAX)
         pd_delete = []
-        simple_accum = {}
+        simple_refer = {}
         # at last we try to handle state variable
         for x in self.members:
             if not hasattr(x, "id") or not hasattr(x, 'type'):
@@ -621,28 +628,50 @@ class SBGNRoot(SBGNObject):
                 eid = x.raw_id.split("_")[1]
                 bioId = vertex2id(eid)
                 print(bioId)
-                json_cor = rp.search_node(bioId)
-                x.new_id = json_cor['id']
+                json_cor = rp.search_nodes(bioId)
                 if not json_cor:
-                    print(x.__dict__)
-                    print("!!!!")
+                    # print(x.__dict__)
+                    # print("simple chemical, do sth......{}".format(x.ref['label'][0].text))
+                    for td in x.father.ref['glyph']:
+                        if td.raw_id == x.raw_id:
+                            # print(x.raw_id)
+                            x.father.ref['glyph'].remove(x)
+                            break
                     continue
-                # print(json_cor['connectors'])
+                else:
+                    if bioId not in simple_refer:
+                        simple_refer[bioId] = [json_cor, []]
+                    simple_refer[bioId][1].append(x)
+                #     print("SIMPLE MOLECUALR: {}".format(x.ref['label'][0].text))
+                #     if x.ref['label'][0].text.decode('utf8') == 'PI P2':
+                #         print('match')
+                # x.new_id = json_cor['id']
+                # # print(json_cor['connectors'])
                 # x.bbox[0].x = json_cor['prop']['x']
                 # x.bbox[0].y = json_cor['prop']['y']
-                x.bbox[0].x = int(float(x.bbox[0].x) / 3)
-                x.bbox[0].y = int(float(x.bbox[0].y) / 3)
-                x.bbox[0].w = json_cor['prop']['width']
-                x.bbox[0].h = json_cor['prop']['height']
-                print(x.bbox[0].__dict__)
+                # # x.bbox[0].x = int(float(x.bbox[0].x) / 3)
+                # # x.bbox[0].y = int(float(x.bbox[0].y) / 3)
+                # x.bbox[0].w = json_cor['prop']['width']
+                # x.bbox[0].h = json_cor['prop']['height']
+                # if x.ref['label'][0].text.decode('utf8') == 'PI P2':
+                #     pass
+                    # print('match')
+                    # print(json_cor)
+                    # print(x.bbox[0].__dict__)
+                    # print(x.bbox[0].__dict__)
             elif "entity" in x.id:
                 eid = x.raw_id.split("_")[1]
                 bioId = vertex2id(eid)
                 # print(bioId)
                 json_cor = rp.search_node(bioId)
                 if not json_cor:
-                    print(x.__dict__)
-                    print("!!!!")
+                    # print(x.__dict__)
+                    # print("!!!!")
+                    for td in x.father.ref['glyph']:
+                        if td.raw_id == x.raw_id:
+                            print(x.raw_id)
+                            x.father.ref['glyph'].remove(x)
+                            break
                     continue
                     # raise Exception("!!!!!")
                 x.new_id = json_cor['id']
@@ -658,46 +687,53 @@ class SBGNRoot(SBGNObject):
                         bioId = vertex2id(eid)
                         # print(bioId)
                         json_cor = rp.search_node(bioId)
+                        if not json_cor:
+                            for td in x.father.ref['glyph']:
+                                if td.raw_id == x.raw_id:
+                                    # print(x.raw_id)
+                                    x.father.ref['glyph'].remove(x)
+                                    break
+                            continue
                         # print(json_cor['prop'])
                         s.bbox[0].x = json_cor['prop']['x'] - 10
                         s.bbox[0].y = json_cor['prop']['y'] - 10
                 # make sure what exist in complex
-                try:
-                    cor = pax.find_by_DB_ID(bioId).father
-                except:
-                    raise Exception("cor not found")
-                for n in cor.find_child("xref"):
-                    ref = pax.find_by_id(n.props["rdf:resource"].replace("#", ""))
-                    x.external_id.append({ref.find_child("db")[0].value: ref.find_child("id")[0].value})
-                    # print x.external_id
-                    # step 2: fix the compartments's elements
-                    # print cor.summary()
-                    members = []
-                    if cor.class_ == "bp:Complex":
-                        self._complex_members(cor, members, pax)
-                        fbbox = x.ref["bbox"][0]
-                        # print(members)
-                        # x.ref["glyph"] = []
-                        for i, m in enumerate(members):
-                            if m[1] == "1":
-                                g = Glyph("macromolecule", None, None, x.id + m[0], None)
-                            else:
-                                g = Glyph("macromolecule multimer", None, None, x.id + m[0], None)
-                            # print(fbbox.x, fbbox.y, fbbox.w, fbbox.h)
-                            bbox = self.complex_layout(fbbox, i, len(members))
-                            label = Label(m[0])
-                            g.ref["bbox"].append(bbox)
-                            g.ref["label"].append(label)
-                            if m[2]:
-                                for i, md in enumerate(m[2]):
-                                    sg = Glyph("state variable", None, None, x.id + m[0] + md, None)
-                                    sg.ref["bbox"].append(BBox(bbox.x - 6 + (i % 2) * bbox.w,
-                                                               bbox.y - 6 + (i / 2) * bbox.h, 12, 12))
-                                    if "phospho" in md:
-                                        md = "P"
-                                    sg.ref["state"].append(State(value=md, variable=None))
-                                    g.ref["glyph"].append(sg)
-                            x.ref["glyph"].append(g)
+                # try:
+                #     cor = pax.find_by_DB_ID(bioId).father
+                # except:
+                #     raise Exception("cor not found")
+                # for n in cor.find_child("xref"):
+                #     ref = pax.find_by_id(n.props["rdf:resource"].replace("#", ""))
+                #     x.external_id.append({ref.find_child("db")[0].value: ref.find_child("id")[0].value})
+                #     # print x.external_id
+                #     # step 2: fix the compartments's elements
+                #     # print cor.summary()
+                #     members = []
+                #     if cor.class_ == "bp:Complex":
+                #         self._complex_members(cor, members, pax)
+                #         fbbox = x.ref["bbox"][0]
+                #         # print(members)
+                #         # x.ref["glyph"] = []
+                #         for i, m in enumerate(members):
+                #             if m[1] == "1":
+                #                 g = Glyph("macromolecule", None, None, x.id + m[0], None)
+                #             else:
+                #                 g = Glyph("macromolecule multimer", None, None, x.id + m[0], None)
+                #             # print(fbbox.x, fbbox.y, fbbox.w, fbbox.h)
+                #             bbox = self.complex_layout(fbbox, i, len(members))
+                #             label = Label(m[0])
+                #             g.ref["bbox"].append(bbox)
+                #             g.ref["label"].append(label)
+                #             if m[2]:
+                #                 for i, md in enumerate(m[2]):
+                #                     sg = Glyph("state variable", None, None, x.id + m[0] + md, None)
+                #                     sg.ref["bbox"].append(BBox(bbox.x - 6 + (i % 2) * bbox.w,
+                #                                                bbox.y - 6 + (i / 2) * bbox.h, 12, 12))
+                #                     if "phospho" in md:
+                #                         md = "P"
+                #                     sg.ref["state"].append(State(value=md, variable=None))
+                #                     g.ref["glyph"].append(sg)
+                #             x.ref["glyph"].append(g)
                             # print x.summary()
             elif x.type == 'process':
                 if x.bbox[0].x == 0 and x.bbox[0].y == 0:
@@ -707,9 +743,17 @@ class SBGNRoot(SBGNObject):
                 bioId = vertex2id(eid)
                 # print('pbioid: {}'.format(bioId))
                 json_cor = rp.search_edge(bioId)
+                if not json_cor:
+                    for td in x.father.ref['glyph']:
+                        if td.raw_id == x.raw_id:
+                            # print(x.raw_id)
+                            x.father.ref['glyph'].remove(x)
+                            break
+                    # print('!!!!!!')
+                    continue
                 x.new_id = json_cor['id']
-                print(json_cor.get('reactionType'))
-                print(x.type)
+                # print(json_cor.get('reactionType'))
+                # print(x.type)
                 x.type = (json_cor.get('reactionType') or x.type).lower()
                 # print(x.type, x.type.lower())
                 # if x.type == 'Association':
@@ -720,8 +764,8 @@ class SBGNRoot(SBGNObject):
                 #     if s['segments']:
                 #         print(x)
                 #         self.arcs.append(Arc(x['type'], s['edgeId'], ))
-                deltax = float(json_cor['position']['x']) - float(x.bbox[0].x)
-                deltay = float(json_cor['position']['y']) - float(x.bbox[0].y)
+                # deltax = float(json_cor['position']['x']) - float(x.bbox[0].x)
+                # deltay = float(json_cor['position']['y']) - float(x.bbox[0].y)
                 x.bbox[0].x = json_cor['position']['x']
                 x.bbox[0].y = json_cor['position']['y']
                 # print(x.bbox[0].__dict__)
@@ -731,11 +775,67 @@ class SBGNRoot(SBGNObject):
                 x.ref['port'] = []
         # delete exist compartments
         back = []
+        # print(1)
+        # print(simple_refer[179856][1])
+        # print(1)
+        for k, v in simple_refer.items():
+            # print("start {}".format(k))
+            for sb in v[1]:
+                # print(sb)
+                tgt = None
+                for x in self.members:
+                    if hasattr(x, 'name'):
+                        if x.name == 'arc':
+                            if x.source == sb.id:
+                                # print("fetch!: {} to {}".format(sb.id, x.target))
+                                tgt = x.target
+                                break
+                            elif x.target == sb.id:
+                                tgt = x.source
+                                # print('fetch!: {} to {}'.format(sb.id, x.source))
+                                break
+                if not tgt:
+                    raise Exception("No cor edge found")
+                cor = None
+                for x in self.members:
+                    if hasattr(x, 'id'):
+                        if x.id == tgt:
+                            bioId = vertex2id(x.raw_id.split('_')[1])
+                            cor = rp.search_edge(bioId)
+                            # print('Found node', x.raw_id, bioId)
+                            # print(cor)
+                if not cor:
+                    sb.father.ref['glyph'].remove(sb)
+                    continue
+                cor_data = None
+                for k, crv in cor.items():
+                    if k in ['inputs', 'catalysts', 'outputs']:
+                        for ee in crv:
+                            for eesb in v[0]:
+                                # print(ee['id'], eesb['id'])
+                                if ee['id'] == eesb['id']:
+                                    # print("EESAMA is sb: {}".format(ee['id']))
+                                    cor_data = eesb
+
+                if not cor_data:
+                    pass
+                    # print("Failed to find cor simple chemical")
+                # print(cor_data)
+                # set the prop
+                sb.bbox[0].x = cor_data['prop']['x']
+                sb.bbox[0].y = cor_data['prop']['y']
+                sb.bbox[0].w = cor_data['prop']['width']
+                sb.bbox[0].h = cor_data['prop']['height']
         for x in self.members:
             # print(x)
             if hasattr(x, "type") and x.type == "compartment":
                 back.append(x)
                 x.father.ref['glyph'].remove(x)
+            if hasattr(x, "type") and x.type == 'complex':
+                # print("we fatch a complex")
+                x.type = 'macromolecule'
+            # else:
+            #     print(x.type)
         # add new compartments:
         for i, x in enumerate(rp.data['compartments']):
             c = back[i]
@@ -744,6 +844,8 @@ class SBGNRoot(SBGNObject):
             bb = c.bbox[0]
             bb.x, bb.y, bb.w, bb.h = x['prop']['x'], x['prop']['y'], x['prop']['width'], x['prop']['height']
             self.map[0].ref['glyph'].append(c)
+            if not x.get('componentIds'):
+                break
             for cm in x['componentIds']:
                 # print(cm)
                 for m in self.members:
@@ -752,8 +854,6 @@ class SBGNRoot(SBGNObject):
                             # print("!!!")
                             # print(m)
                             m.compartmentRef = c.id
-
-
 
     def fix_reactome2(self, ratio=2.2):
         '''

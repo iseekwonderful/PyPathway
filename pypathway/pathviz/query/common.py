@@ -6,7 +6,8 @@ import sys
 import traceback
 import xml.etree.cElementTree as ET
 import time
-
+import os
+from jucell import iframe
 
 from .network import MultiThreadNetworkRequest, NetworkMethod, NetworkException, NetworkRequest
 
@@ -96,8 +97,48 @@ class PathwayData:
         raise NotImplementedError
 
 
+class Species:
+    def __init__(self, db_id, name, source):
+        self.db_id, self.name, self.source = db_id, name, source
+
+    def __repr__(self):
+        return "{} at {}: id: {}".format(self.name, self.source, self.db_id)
+
+    @staticmethod
+    def parse_reactome(data):
+        db_id, name = '', ''
+        for x in data:
+            if x.tag == 'dbId':
+                db_id = x.text
+            elif x.tag == 'displayName':
+                name = x.text
+        return Species(db_id, name, 'Reactome')
+
+
+class ReactomeSVG:
+    def __init__(self, url, db_id):
+        self.url = url
+        self.db_id = db_id
+
+    def draw(self):
+        # print('start to draw')
+        if not os.path.exists(os.getcwd() + '/assets'):
+            os.mkdir(os.getcwd() + '/assets')
+        file_name = str(time.time()).split('.')[0] + 'svg.html'
+        with open(os.path.dirname(os.path.abspath(__file__)) + '/../static/SVG/index.html') as fp:
+            con = fp.read()
+        con = con.replace('{{ img }}', self.url)
+        with open(os.getcwd() + '/assets/{}'.format(file_name), 'w') as fp:
+            fp.write(con)
+        return iframe('files/assets/{}'.format(file_name))
+
+    def __repr__(self):
+        return 'This is a ReactomeSVG object named: {}'.format(self.db_id)
+
+
 class ReactomePathwayData(PathwayData):
-    def __init__(self, db_id, description, id, format, bioPAX, SBGN, species='homo+sapiens'):
+    def __init__(self, db_id, description, id, format, bioPAX, SBGN,
+                 species=Species('48887', 'Homo sapiens', "Reactome")):
         PathwayData.__init__(self, "Reactome", id, description, format, bioPAX)
         self.SBGN = SBGN
         self.BioPAX = self.data
@@ -138,24 +179,22 @@ class ReactomePathwayData(PathwayData):
         Trying to fill the BioPAX and SBGN-PD data for certain pathway.
 
         :param proxies: if not None, proxies used by while requesting data.
-        :return: None, but fill self's BioPAX and SBGN if it is empty
+        :return: None, but fill self's pathway's json file and SBGN if it is empty
         '''
         # print(self.id)
         query = []
         error = Queue()
-        query.append(MultiThreadNetworkRequest(
-            "http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/biopaxExporter/Level3/{}".format(
-                self.db_id # re.findall(r"\d+", self.id.split("/")[-1])[0]
-            ),
-            NetworkMethod.GET, self, "data", proxy=proxies, error_queue=error))
         query.append(MultiThreadNetworkRequest(
             "http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/sbgnExporter/{}".format(
                 # re.findall(r"\d+", self.id.split("/")[-1])[0]
                 self.db_id
             ),
             NetworkMethod.GET, self, "SBGN", proxy=proxies, error_queue=error))
+        print('http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(
+                self.species.name.replace(' ', '+')))
         query.append(MultiThreadNetworkRequest(
-            'http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(self.species),
+            'http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(
+                self.species.name.replace(' ', '+')),
             NetworkMethod.GET, self, 'tree', proxy=proxies, error_queue=error
         ))
         self.threads.extend(query)
@@ -173,7 +212,7 @@ class ReactomePathwayData(PathwayData):
                 tgt = None
                 r = self.tree.getroot()
                 for t in r.iter():
-                    if t.attrib.get('dbId') == self.id.split('-')[-1]:
+                    if t.attrib.get('dbId') == self.db_id:
                         tgt = t
                         print(t.tag)
                 while not tgt.attrib.get('hasDiagram'):
@@ -183,10 +222,21 @@ class ReactomePathwayData(PathwayData):
                             tgt = t
                             break
                 print(tgt.attrib)
+                if not self.species.name == 'Homo sapiens':
+                    # need one more step:
+                    r = NetworkRequest('http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/detailedView/DatabaseObject/{}'.format(
+                        tgt.attrib['dbId']), NetworkMethod.GET, proxy=proxies
+                    )
+                    jd = json.loads(r.text)
+                    # print(jd['stableIdentifier']['displayName'])
+                    db_id = jd['stableIdentifier']['displayName'].split('.')[0]
+                else:
+                    db_id = 'R-HSA-{}'.format(tgt.attrib['dbId'])
+                print(db_id)
                 res = NetworkRequest('http://www.reactome.org/download/current/diagram/{}.json?v={}'.format(
-                    'R-HSA-{}'.format(tgt.attrib['dbId']), str(round(time.time()))
+                    db_id, str(round(time.time()))
                 ), NetworkMethod.GET, proxy=proxies)
-                print(res.text)
+                # print(res.text)
                 self.json_data = json.loads(res.text)
             if self.data:
                 self.data = self.data.encode("utf-8")
@@ -195,22 +245,24 @@ class ReactomePathwayData(PathwayData):
             if er:
                 raise NetworkException(er[0], er[1])
 
-    def load(self, ratio=2):
+    def load(self):
         '''
         Load the pathway data instance to pathway object in the memory. By using SBGNParser with BioPAX file, later
         data provides the content in complex and database identifier information. Also fix_reactome will be called to
         fix the reactome layout issue. The ratio, is used for adjust the scale issue in the graphic.
 
-        :param ratio: scale down to certain ratio, see the user-guide/format discuss, where introduce the issue we face
-         and the solutions
-        :return: a SBGN pathway object.
+        :return: a SBGN pathway object or a SVG object.
         '''
-        if not self.SBGN or not self.data:
+        if self.id in ReactomePathwayData.svg_list():
+            # print("SVG")
+            return ReactomeSVG('http://www.reactome.org/download/current/ehld/{}.svg'.format(self.id), self.id)
+
+        if not self.SBGN or not self.json_data:
             # let load it
             self.retrieve()
             # raise Exception("load a reactome need the SBGN and BioPAX data, try retrieve first")
         try:
-            print('load~!')
+            print('load~! self"s species is {}'.format(self.species))
             from pathviz.core.SBGNImpl import SBGNParser
             sb = SBGNParser.parse(self.SBGN, self.data)
             sb.fix()
@@ -219,6 +271,28 @@ class ReactomePathwayData(PathwayData):
         except:
             print(traceback.format_exc())
             raise Exception("Error while parse SBGN file")
+
+    @staticmethod
+    def list_species():
+        with open(os.path.dirname(os.path.realpath(__file__)) + '/../static/assets/reactome/species_list') as fp:
+            data = fp.read()
+        out = ET.ElementTree(ET.fromstring(data))
+        species = []
+        for x in out.getroot():
+            species.append(Species.parse_reactome(x))
+        return species
+
+    @staticmethod
+    def svg_list():
+        with open(os.path.dirname(os.path.realpath(__file__)) + '/../static/assets/reactome/svg_list') as fp:
+            data = fp.read()
+        return re.findall('R-HSA-\d+', data)
+
+    @staticmethod
+    def query_by_id(db_id):
+        rd = ReactomePathwayData(db_id, None, db_id, None, None, None)
+        rd.retrieve()
+        return rd
 
 
 class WiKiPathwayData(PathwayData):

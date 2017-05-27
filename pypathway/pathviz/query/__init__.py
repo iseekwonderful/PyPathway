@@ -566,11 +566,19 @@ class PublicDatabase:
         # parse
         if len(res) == 0:
             return []
+        # for k, v in json.loads(res)['results'][0]['entries'][0].items():
+        #     print(k, v)
         try:
             result = []
             if json.loads(res)["results"]:
                 for x in json.loads(res)["results"][0]["entries"]:
-                    result.append(ReactomePathwayData(x["dbId"], x["name"], x["id"], None, None, None))
+                    print(x)
+                    for sp in ReactomePathwayData.list_species():
+                        if sp.name == x['species'][0]:
+                        # print(x['species'])
+                            result.append(
+                                ReactomePathwayData(x["dbId"], x["name"], x["id"], None, None, None, species=sp)
+                            )
             return result
         except:
             raise
