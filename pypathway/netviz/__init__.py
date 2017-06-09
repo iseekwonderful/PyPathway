@@ -41,12 +41,16 @@ class FromNetworkX(Plotable):
                 ],
 
                 "layout": {
-                    'name': self.layout or 'dagre',
+                    'name': 'cose-bilkent',
+                    'animate': False,
+                    'idealEdgeLength': 200,
+
                 },
                 "style": [
                     {
                         "selector": "node",
-                        "style": self.node_styles or {'label': 'data(label)'}
+                        "style": self.node_styles or {'label': 'data(label)',
+                                                      'background-color': '#546570'}
                     },
                     {
                         "selector": "edge",
@@ -62,13 +66,14 @@ class FromNetworkX(Plotable):
                  'data': {'id': k,
                           'label': k,
                           },
-                 'style': v.get('style')
+                 'style': v.get('style') or {
+                     'background-color': '#546570'
+                    }
                  }
             )
         for k, v in self.nx.edge.items():
             if len(v):
                 for i, j in v.items():
-                    print("Add edge: {} - {}: {}".format(k, i, j))
                     config['options']['elements'].append({
                          'group': 'edges',
                          'data': {'source': k,
