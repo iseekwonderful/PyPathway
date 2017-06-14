@@ -572,7 +572,6 @@ class PublicDatabase:
             result = []
             if json.loads(res)["results"]:
                 for x in json.loads(res)["results"][0]["entries"]:
-                    print(x)
                     for sp in ReactomePathwayData.list_species():
                         if sp.name == x['species'][0]:
                         # print(x['species'])

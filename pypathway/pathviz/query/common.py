@@ -190,8 +190,8 @@ class ReactomePathwayData(PathwayData):
                 self.db_id
             ),
             NetworkMethod.GET, self, "SBGN", proxy=proxies, error_queue=error))
-        print('http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(
-                self.species.name.replace(' ', '+')))
+        # print('http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(
+        #         self.species.name.replace(' ', '+')))
         query.append(MultiThreadNetworkRequest(
             'http://reactome.org/ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/{}'.format(
                 self.species.name.replace(' ', '+')),
@@ -202,7 +202,7 @@ class ReactomePathwayData(PathwayData):
             [x.start() for x in self.threads]
             [x.join() for x in self.threads]
         except Exception as e:
-            print("catched!")
+            # print("catched!")
             self.threads = []
             raise e
         finally:
@@ -214,14 +214,14 @@ class ReactomePathwayData(PathwayData):
                 for t in r.iter():
                     if t.attrib.get('dbId') == self.db_id:
                         tgt = t
-                        print(t.tag)
+                        # print(t.tag)
                 while not tgt.attrib.get('hasDiagram'):
                     # get parent
                     for t in r.iter():
                         if tgt in t.getchildren():
                             tgt = t
                             break
-                print(tgt.attrib)
+                # print(tgt.attrib)
                 if not self.species.name == 'Homo sapiens':
                     # need one more step:
                     r = NetworkRequest('http://www.reactome.org/ReactomeRESTfulAPI/RESTfulWS/detailedView/DatabaseObject/{}'.format(
@@ -232,7 +232,7 @@ class ReactomePathwayData(PathwayData):
                     db_id = jd['stableIdentifier']['displayName'].split('.')[0]
                 else:
                     db_id = 'R-HSA-{}'.format(tgt.attrib['dbId'])
-                print(db_id)
+                # print(db_id)
                 res = NetworkRequest('http://www.reactome.org/download/current/diagram/{}.json?v={}'.format(
                     db_id, str(round(time.time()))
                 ), NetworkMethod.GET, proxy=proxies)
@@ -263,7 +263,7 @@ class ReactomePathwayData(PathwayData):
             # raise Exception("load a reactome need the SBGN and BioPAX data, try retrieve first")
         try:
             print('load~! self"s species is {}'.format(self.species))
-            from pathviz.core.SBGNImpl import SBGNParser
+            from ...pathviz.core.SBGNImpl import SBGNParser
             sb = SBGNParser.parse(self.SBGN, self.data)
             sb.fix()
             sb.fix_reactome(self.json_data)
