@@ -2,6 +2,7 @@ import pandas as pd
 import subprocess
 from io import StringIO
 from ...pathviz.query.common import NetworkMethod, NetworkRequest
+from ...analysis import Analysis, EnrichmentResult
 import re
 from ...pathviz.utils import plot_json
 import math
@@ -9,19 +10,19 @@ import requests
 import time
 
 
-class Enrichnet:
+class Enrichnet(Analysis, EnrichmentResult):
     '''
     The adaptor of enrichnet network enrichment analysis service.
 
     '''
-    def __init__(self, genesets, idtype='ensembl', pathdb='biocarta', graph='string'):
+    @staticmethod
+    def run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string'):
         # init requests query session ID
         r = requests.get('http://www.enrichnet.org/index.php')
         sessions = re.findall('index.php\?SESSION_NAME=(.+)\"', r.text)
         if not sessions:
             raise Exception("Cant acquire session from site")
         session = sessions[0]
-        self.status = 'idle'
         if idtype not in ['ensembl', 'hgnc_symbol', 'refseq_dna', 'uniprot_swissprot']:
             raise Exception("Unknown idtypes")
         if pathdb not in ['kegg', 'biocarta', 'reactome', 'wiki', 'nci', 'interpro', 'gobp', 'gomf', 'gocc']:
@@ -40,16 +41,18 @@ class Enrichnet:
         mission = re.findall("http://www.enrichnet.org/reload.php\?temp=([\d\w_]+)", res.text)
         if not mission:
             raise Exception("Cant not retrieve mission id")
-        self.mission_id = mission[0]
-        self.status = 'processing'
+        mission_id = mission[0]
+        df = Enrichnet.check_for_job_done(mission_id)
+        return Enrichnet(mission_id, df, genesets, idtype, pathdb, graph)
 
-    def check_for_job_done(self):
+    @staticmethod
+    def check_for_job_done(mission_id):
         while True:
-            print('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(self.mission_id))
-            r = requests.get('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(self.mission_id))
+            print('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(mission_id))
+            r = requests.get('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(mission_id))
             print(r.status_code)
             if r.status_code == 404:
-                time.sleep(5)
+                time.sleep(10)
                 continue
             elif r.status_code == 200:
                 break
@@ -62,14 +65,47 @@ class Enrichnet:
         r = requests.get("http://www.enrichnet.org/" + table_url[0])
         return pd.read_table(StringIO(r.text))
 
+    def __init__(self, mission_id, df, geneset, idtype, pathdb, graph):
+        self.mission_id, self.df, self.geneset, self.idtype, self.pathdb, self.graph = mission_id, df, geneset, idtype, pathdb, graph
+        EnrichmentResult.__init__(self, self.df, geneset, pathdb, 'Enrichnet')
+
     @property
-    def result(self):
-        return None
+    def plot(self):
+        self.basic_config['yAxis']['data'] = []
+        self.basic_config['series'][0]['data'] = []
+        self.basic_config['title']['subtext'] = self.target
+        self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
+        candidate = []
+        for x in self.df.iterrows():
+            candidate.append([x[1][0], -math.log2(x[1][2])])
+        candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
+        for x in candidate[:15]:
+            self.basic_config['yAxis']['data'].append(x[0])
+            self.basic_config['series'][0]['data'].append(x[1])
+        # print(self.basic_config)
+        return plot_json(self.basic_config)
 
 
+    def overview(self):
+        raise NotImplementedError()
+
+    def detail(self, index):
+        raise NotImplementedError()
+
+    @property
+    def table(self):
+        return self.df
+
+    @property
+    def main_property(self):
+        return 'Fisher q-value'
+
+    @property
+    def network_data(self):
+        raise NotImplementedError()
 
 
-class SPIA:
+class SPIA(Analysis):
     '''
     The adaptor of C implement of Signaling Pathway Impact Analysis (SPIA)
 

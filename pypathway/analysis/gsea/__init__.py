@@ -27,15 +27,19 @@ class EnrichrResult(EnrichmentResult):
         return self.df
 
     @property
-    def plot(self):
+    def plot(self, count=15):
         self.basic_config['yAxis']['data'] = []
         self.basic_config['series'][0]['data'] = []
         self.basic_config['title']['subtext'] = self.target
         self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
+        candidate = []
         for x in self.df.iterrows():
-            # print(x)
-            self.basic_config['yAxis']['data'].append(x[1][0])
-            self.basic_config['series'][0]['data'].append(-math.log2(x[1][2]))
+            candidate.append([x[1][0], -math.log2(x[1][2])])
+        candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
+        for x in candidate[:15]:
+            self.basic_config['yAxis']['data'].append(x[0])
+            self.basic_config['series'][0]['data'].append(x[1])
+        # print(self.basic_config)
         return plot_json(self.basic_config)
 
     def detail(self, index):
@@ -77,7 +81,7 @@ class EnrichrResult(EnrichmentResult):
 
 class Enrichr:
     @staticmethod
-    def run(gene_set):
+    def run(gene_set, database="KEGG"):
         url = 'http://amp.pharm.mssm.edu/Enrichr/addList'
         gene_list = '\n'.join([str(x) for x in gene_set])
         res = NetworkRequest(url, NetworkMethod.POST, post_arg={'files': {
@@ -85,7 +89,7 @@ class Enrichr:
             'description': (None, 'a enrichment')
         }})
         json_data = json.loads(res.text)
-        return Enrichr(json_data['userListId'], json_data['shortId'], gene_set)
+        return Enrichr(json_data['userListId'], json_data['shortId'], gene_set).list('{}_2016'.format(database))
 
     def __init__(self, userListId, shortId, source_data):
         self.userListId = userListId

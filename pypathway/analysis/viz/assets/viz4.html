@@ -8,19 +8,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script>
+        // every tab should like this
         var listen_list = {
-            'card_element-1497274234.169067-0F': ['switch', 'sort', 'percent']
+            'card_element-1497341075.902324-0F': {'switch': 'checked',  'sort': 'value',  'percent': 'value'}
+        };
+        var settings = {
+            active: 'card_element-1497341075.902324-0F',
+            configs: {
+                'card_element-1497341075.902324-0F': {},
+                '...': {}
+            }
         };
         $(function() {
             $( ".card" ).draggable();
         });
         $(document).ready(function() {
             $('select').material_select();
+            $('ul.tabs').tabs({
+                onShow: function (a, b) {
+                    console.log(a, b);
+                    // change the setting[active] and fire event to change the display
+                }
+            });
         });
         function change_button(elements) {
+            console.log(elements);
+            var config = {'name': elements};
             for(var i in listen_list[elements]){
-                console.log($('#' + listen_list[elements][i]).val());
+                config[i] = ($('#' + i).prop(listen_list[elements][i]));
             }
+            console.log(config);
+            // change the settings[configs]
         }
 
     </script>
@@ -47,7 +65,45 @@
     </div>
     <div id="gamecontainer">
         <div id="gamestartscreen" class="gamelayer">
-            {{ card }}
+            <div class="card" style="width: 350px">
+    <div class="card-content" id="content">
+        <p>The GSEA enrichment analysis</p>
+    </div>
+    <div class="card-tabs">
+        <ul class="tabs">
+            <li class="tab"><a class="active" href="#card_element-1497341075.902324-0">table</a></li>
+        </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+        <div id="card_element-1497341075.902324-0"><form action="#" id=card_element-1497341075.902324-0F onchange="change_button('card_element-1497341075.902324-0F')"><div class="row">
+    <div class="switch col l10" id="switch0">
+        <label>
+            Show All: &nbsp;&nbsp; Off
+                <input type="checkbox" id="switch">
+                <span class="lever"></span>
+            On
+        </label>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col l10">
+        <label class="active" for="select">Sort</label>
+        <select id="sort">
+            <option value="Default">pvalue</option>
+            <option value="name">name</option>
+
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="input-field col l10">
+        <label class="active" for="tests">display percent</label>
+        <input type="range" id="percent" min="0.1" max="1" step="0.01"/>
+    </div>
+</div>
+</form></div>
+    </div>
+</div>
         </div>
     </div>
 </body>

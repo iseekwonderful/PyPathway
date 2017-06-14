@@ -9,20 +9,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <link href="css/main.css" rel="stylesheet">
     <script>
+        // every tab should like this
+        var listen_list = {
+            'card_element-1497341075.902324-0F': {'switch': 'checked',  'sort': 'value',  'percent': 'value'}
+        };
         $(function() {
             $( ".card" ).draggable();
         });
         $(document).ready(function() {
             $('select').material_select();
-        });
-        function change_button2() {
-            var listen = ['#switch1', '#tests', '#select'];
-            for (var i in listen){
-                console.log($(listen[i]).val());
-            }
-        }
-        function apply(config){
 
+        });
+        function change_button(elements) {
+            console.log(elements);
+            var config = {'name': elements};
+            for(var i in listen_list[elements]){
+                config[i] = ($('#' + i).prop(listen_list[elements][i]));
+            }
+            console.log(config);
         }
     </script>
     <style>

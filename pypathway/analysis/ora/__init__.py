@@ -1,52 +1,19 @@
-from ...analysis import ORASource, Analysis
+from ...analysis import Analysis, EnrichmentResult
 from ...pathviz.query.network import NetworkMethod, NetworkRequest
+import json
+import pandas as pd
+from io import StringIO
+from ...pathviz.utils import plot_json
+import math
 
 from goatools.go_enrichment import GOEnrichmentStudy
 from goatools.obo_parser import GODag
 from goatools.associations import read_associations
-from goatools.multiple_testing import Methods
-from goatools.pvalcalc import FisherFactory
 
 
-class ORA(Analysis):
+class Reactome(Analysis, EnrichmentResult):
     @staticmethod
-    def run(exp, pop=None, source=None, organism=None, cut_off=0.05, method=None):
-        raise NotImplementedError()
-
-    def stat(self):
-        raise NotImplementedError()
-
-    @property
-    def table(self):
-        '''
-        The result of functional enrichment, should be in the format of pandas.Dataframes 
-        
-        :return: the table of analysis
-        '''
-        raise NotImplementedError()
-
-    @property
-    def main_property(self):
-        '''
-        The property used to plot in the bar chart, default is the -log2(columns)
-        
-        :return: 
-        '''
-        raise NotImplementedError()
-
-    @property
-    def network_data(self):
-        '''
-        The property provide the network for the viz class
-        
-        :return: 
-        '''
-        raise NotImplementedError()
-
-
-class Reactome(ORA):
-    @staticmethod
-    def run(exp, pop=None, source=None, custom_set=None, organism=None, cut_off=0.05, method=None):
+    def run(exp, organism=None, cut_off=0.05):
         '''
         This method is implemented by the Reactome web server
 
@@ -68,18 +35,62 @@ class Reactome(ORA):
                 'Accept': 'application/json'
             }
         })
-        print(res.text)
+        json_data = json.loads(res.text)
+        rows = 'name\tdbId\tfound\tp-value\tfdr\tspecies\n'
+        for x in json_data['pathways']:
+            if organism and not organism == x['species']['name']:
+                continue
+            rows += '{}\t{}\t{}\t{}\t{}\t{}\n'.format(
+                x['name'], x['dbId'], x['entities']['found'], x['entities']['pValue'], x['entities']['fdr'],
+                x['species']['name']
+            )
+        return Reactome(pd.read_table(StringIO(rows)), organism, exp, cut_off)
 
-    def stat(self):
-        pass
+    def __init__(self, df, organism, exp, cut_off):
+        self.df, self.organism, self.exp, self.cut_off = df, organism, exp, cut_off
+        EnrichmentResult.__init__(self, self.df, exp, 'Reactome', 'ORA', 'Fdr')
+
+    @property
+    def table(self):
+        return self.df
+
+    @property
+    def main_property(self):
+        return 'fdr'
+
+    @property
+    def network_data(self):
+        raise Exception("Reactome network")
+
+    @property
+    def plot(self, count=15):
+        self.basic_config['yAxis']['data'] = []
+        self.basic_config['series'][0]['data'] = []
+        self.basic_config['title']['subtext'] = self.target
+        self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
+        candidate = []
+        for x in self.df.iterrows():
+            candidate.append([x[1][0], -math.log2(x[1][4])])
+        candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
+        for x in candidate[:15]:
+            self.basic_config['yAxis']['data'].append(x[0])
+            self.basic_config['series'][0]['data'].append(x[1])
+        # print(self.basic_config)
+        return plot_json(self.basic_config)
+
+    def overview(self):
+        raise NotImplementedError()
+
+    def detail(self, index):
+        raise NotImplementedError()
 
 
-class GO:
+class GO(Analysis, EnrichmentResult):
     @staticmethod
     def run(study, pop, assoc, alpha=0.05, p_value=0.05, compare=False, ratio=None, obo='go-basic.obo', no_propagate_counts=False,
             method='bonferroni,sidak,holm', pvalcalc='fisher'):
-        study, pop = GO.read_geneset(study, pop, compare=compare)
-        print(study)
+        study, pop = GO._read_geneset(study, pop, compare=compare)
+        # print(study)
         methods = method.split(",")
         obo_dag = GODag(obo)
         propagate_counts = not no_propagate_counts
@@ -89,11 +100,16 @@ class GO:
                               pvalcalc=pvalcalc,
                               methods=methods)
         results = g.run_study(study)
-        g.print_summary(results, min_ratio=ratio, indent=False, pval=p_value)
-        return results
+        # g.print_summary(results, min_ratio=ratio, indent=False, pval=p_value)
+        r = 'GO\tNS\tenrichment\tname\tratio_in_study\tratio_in_pop\tp_uncorrected\tdepth\tstudy_count\tp_bonferroni\tp_sidak	p_holm\n'
+        for x in results:
+            r += x.__str__() + "\n"
+        tb = pd.read_table(StringIO(r))
+        return GO(tb, study, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc)
+
 
     @staticmethod
-    def read_geneset(study_fn, pop_fn, compare=False):
+    def _read_geneset(study_fn, pop_fn, compare=False):
         pop = set(_.strip() for _ in open(pop_fn) if _.strip())
         study = frozenset(_.strip() for _ in open(study_fn) if _.strip())
         # some times the pop is a second group to compare, rather than the
@@ -110,16 +126,52 @@ class GO:
 
         return study, pop
 
+    def __init__(self, df, exp, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc):
+        self.exp, self.pop, self.assoc, self.alpha, self.p_value, self.compare = exp, pop, assoc, alpha, p_value, compare
+        self.ratio, self.obo, self.no_propagate_counts, self.method, self.pvalcalc = ratio, obo, no_propagate_counts, method, pvalcalc
+        self.df = df
+        EnrichmentResult.__init__(self, self.df, exp, "Reactome", 'ORA', xlabel='-lg(p_bonferroni)')
 
-class GoaAdaptor:
+    @property
+    def table(self):
+        return self.df
+
+    @property
+    def plot(self, count=15):
+        self.basic_config['yAxis']['data'] = []
+        self.basic_config['series'][0]['data'] = []
+        self.basic_config['title']['subtext'] = self.target
+        self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
+        candidate = []
+        for x in self.df.iterrows():
+            candidate.append([x[1][3], -math.log2(x[1][9])])
+        candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
+        for x in candidate[:15]:
+            self.basic_config['yAxis']['data'].append(x[0])
+            self.basic_config['series'][0]['data'].append(x[1])
+        # print(self.basic_config)
+        return plot_json(self.basic_config)
+
+    def overview(self):
+        raise NotImplementedError()
+
+    def detail(self, index):
+        raise NotImplementedError()
+
+    @property
+    def main_property(self):
+        return 'p_uncorrected'
+
+    @property
+    def network_data(self):
+        raise NotImplementedError()
+
+
+class KEGG(Analysis):
     pass
 
 
-class KEGG:
-    pass
-
-
-if __name__ == '__main__':
-    path = '/Users/yangxu/goatools/'
-    GO.run(path + 'data/study', path + 'data/population', path + 'data/association',
-           obo=path + 'go-basic.obo')
+# if __name__ == '__main__':
+    # path = '/Users/yangxu/goatools/'
+    # GO.run(path + 'data/study', path + 'data/population', path + 'data/association',
+    #        obo=path + 'go-basic.obo')

@@ -1,0 +1,32 @@
+        // every tab should like this
+        var listen_list = {
+            // 'card_element-1497341075.902324-0F': {'switch': 'checked',  'sort': 'value',  'percent': 'value'}
+            {{ listen_list }}
+        };
+        var settings = {
+            active: {{ active }},
+            configs: {
+                // the config should have save key with the listen_list
+            }
+        };
+        $(function() {
+            $( ".card" ).draggable();
+        });
+        $(document).ready(function() {
+            $('select').material_select();
+            $('ul.tabs').tabs({
+                onShow: function (a) {
+                    console.log(a);
+                    // change the setting[active] and fire event to change the display
+                }
+            });
+        });
+        function change_button(elements) {
+            console.log(elements);
+            var config = {'name': elements};
+            for(var i in listen_list[elements]){
+                config[i] = ($('#' + i).prop(listen_list[elements][i]));
+            }
+            console.log(config);
+            // change the settings[configs]
+        }
