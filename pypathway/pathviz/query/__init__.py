@@ -6,6 +6,7 @@ import requests
 from collections import namedtuple
 sys.path.append('/Users/yangxu/PyPathway/')
 from pypathway.netviz import FromCYConfig
+import networkx as nx
 
 
 if sys.version[0] == "2":
@@ -199,10 +200,6 @@ class BioGRID(Database):
         pass
 
 
-class IntAct(Database):
-    pass
-
-
 class STRINGSearchResults:
     def __init__(self, results):
         self.results = results
@@ -247,8 +244,8 @@ class STRING(Database):
     ToDo:
 
     1. load method for search result Done
-    1.5 search and load a list of genes
-    2. convert to networkx object
+    1.5 search and load a list of genes Done
+    2. convert to networkx object  
     3. multiple edge and confidence edge
     4. delete / expand node
     5. tips on node / edge include information: score structure, molecular information
@@ -279,32 +276,40 @@ class STRING(Database):
         '''
         load the network for specific protein
 
-        :param id: protein's id, plz search id first
+        :param id_list: protein's id list, plz search id first
         :return:
         '''
+        G = nx.Graph()
         Node = namedtuple('Node', ['taxonName', 'stringId', 'annotation', 'preferredName', 'queryIndex', 'ncbiTaxonId'])
         Edge = namedtuple('Edge', ['first', 'second', 'first_name', 'second_name', 'score_list'])
-        url = 'http://string-db.org/api/psi-mi-tab/interactionsList?identifiers={}&limit=120'.format(
-            '%0D'.join(['{}'.format(x) for x in id_list]))
+        url = 'http://string-db.org/api/psi-mi-tab/interactionsList?identifiers={}{}'.format(
+            '%0D'.join(['{}'.format(x) for x in id_list]), "&limit=500" if len(id_list) > 10 else "")
         # resolve the interactive list
         # print(url)
         res = NetworkRequest(url, NetworkMethod.GET, proxy=proxies)
         iters = []
         for x in res.text.split('\n'):
-            if not x: continue
+            if not x:
+                continue
             e = x.split('\t')
             iters.append(Edge(first=e[0], second=e[1], first_name=e[2], second_name=e[3], score_list=e[-1].split('|')))
         # print(iters)
         node_set = set([x.first for x in iters]) & set([x.second for x in iters])
         config = STRING._config_generate(iters)
+        for x in iters:
+            print(x)
+            G.add_edge(x.first, x.second, {s[0]: s[1] for s in x.score_list})
+        for x in iters:
+            G.node[x.first] = {'Symbol': x.first_name}
+            G.node[x.second] = {'Symbol': x.second_name}
         # print(config)
         node_count = len([x for x in config['options']['elements'] if x['group'] == 'nodes'])
-        print(node_count)
+        # print(node_count)
         if node_count > 100:
             # raise Exception("Too many nodes to render: {}".format(node_count))
             config['type'] = 'viva'
         cy = FromCYConfig(config)
-        return cy.plot()
+        return G
 
     @staticmethod
     def _config_generate(iters):
@@ -416,7 +421,7 @@ class FunctionSet:
 
 class Interactome(FunctionSet):
     '''
-    Manager of 3 database, BioGIRD, IntAct and BioGIRD.
+    Manager of 3 database, BioGIRD, IntAct.
     Contain 3 possible object, may be empty or not
     all network are base on networkx
 

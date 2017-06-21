@@ -1,5 +1,7 @@
 from jucell.display import Plotable, PlotOnlyInterface
 import os
+import networkx as nx
+import math
 
 
 class Engine:
@@ -15,8 +17,10 @@ class FromNetworkX(Plotable):
         self.layout = layout
         self.node_styles = node_styles
         self.edge_styles = edge_styles
+        self.menu = None
 
-    def plot(self, engine=Engine.CYTOSCAPE):
+    def plot(self, engine=Engine.CYTOSCAPE, menu=None):
+        self.menu = menu
         pi = PlotOnlyInterface(host=self)
         return pi.update()
 
@@ -54,12 +58,18 @@ class FromNetworkX(Plotable):
                     },
                     {
                         "selector": "edge",
-                        "style": self.edge_styles or {}
+                        "style": self.edge_styles or {'opacity': 0.5}
                     }
                 ]
 
-            }
+            },
+            'menu': self.menu if self.menu else None
         }
+        layout = None
+        if len(self.nx.node) > 20:
+            # use the layout provided by
+            layout = nx.spring_layout(self.nx, iterations=1000, k=0.08 / math.sqrt(len(self.nx.node)))
+            config['options']['layout'] = {'name': 'preset'}
         for k, v in self.nx.node.items():
             config['options']['elements'].append(
                 {'group': 'nodes',
@@ -68,9 +78,17 @@ class FromNetworkX(Plotable):
                           },
                  'style': v.get('style') or {
                      'background-color': '#546570'
+                    },
+                 'position': {
+                        'x': int(layout[k][0] * 1000) if layout else 0,
+                        'y': int(layout[k][1] * 1000) if layout else 0
                     }
                  }
             )
+            for key, value in v.items():
+                if key == 'style' or key == 'position' or key == 'data':
+                    continue
+                config['options']['elements'][-1][key] = value
         for k, v in self.nx.edge.items():
             if len(v):
                 for i, j in v.items():

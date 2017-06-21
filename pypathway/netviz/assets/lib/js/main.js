@@ -46,17 +46,6 @@ function init_viva_svg(config) {
             // exist.push(config.elements[i].data.label);
         }
     }
-    // for (var i in config.elements){
-    //     // console.log(config.elements[i].group);
-    //     if(config.elements[i].group == 'edges'){
-    //         var source = config.elements[i].data.source;
-    //         var target = config.elements[i].data.target;
-    //         if (exist.indexOf(source) >=0  && exist.indexOf(target) >=0){
-    //             graph.addLink(config.elements[i].data.source, config.elements[i].data.target);
-    //         }
-    //         // console.log(i);
-    //     }
-    // }
     var layout = Viva.Graph.Layout.forceDirected(graph, {
         stableThreshold: 0.009,
         springLength : 5,
