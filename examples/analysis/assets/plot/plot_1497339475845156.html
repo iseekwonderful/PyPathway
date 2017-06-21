@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "GSEA Enrichment Analysis", "subtext": "KEGG_2016"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}}, "xAxis": {"boundaryGap": [0, 0.01], "type": "value"}, "grid": {"left": "3%", "right": "4%", "containLabel": true, "bottom": "3%"}, "series": [{"name": "-log(p-value)", "type": "bar", "data": [3.362968471775865, 3.588880649707042, 1.9509923897507049, 2.0616446421074737, 2.755859775460647, 2.037368346670169, 2.262421202370577, 1.9734420650077882, 2.002055040389288, 1.8919157587320523, 3.0002379298321733, 1.840856437938257, 2.419077129845432, 2.755859775460647, 1.8660755065981631]}], "yAxis": {"type": "category", "data": ["Complement and coagulation cascades_Homo sapiens_hsa04610", "Fatty acid biosynthesis_Homo sapiens_hsa00061", "Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060", "Bladder cancer_Homo sapiens_hsa05219", "Vitamin digestion and absorption_Homo sapiens_hsa04977", "Cell adhesion molecules (CAMs)_Homo sapiens_hsa04514", "Prion diseases_Homo sapiens_hsa05020", "Vasopressin-regulated water reabsorption_Homo sapiens_hsa04962", "Type I diabetes mellitus_Homo sapiens_hsa04940", "Nucleotide excision repair_Homo sapiens_hsa03420", "Steroid biosynthesis_Homo sapiens_hsa00100", "Malaria_Homo sapiens_hsa05144", "Other types of O-glycan biosynthesis_Homo sapiens_hsa00514", "Glycosaminoglycan biosynthesis - heparan sulfate / heparin_Homo sapiens_hsa00534", "Fatty acid metabolism_Homo sapiens_hsa01212"]}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "ORA Enrichment Analysis", "subtext": "Reactome"}, "grid": {"containLabel": true, "bottom": "3%", "left": "3%", "right": "10%"}, "tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "xAxis": {"name": "fdr", "type": "value", "boundaryGap": [0, 0.01]}, "yAxis": {"type": "category", "data": ["Synthesis of IP3 and IP4 in the cytosol", "Negative regulation of the PI3K/AKT network", "Downstream TCR signaling", "PIP3 activates AKT signaling", "Role of LAT2/NTAL/LAB on calcium mobilization", "PI3K/AKT activation", "TCR signaling", "Synthesis of PIPs at the plasma membrane", "GAB1 signalosome", "Inositol phosphate metabolism", "PI Metabolism", "Downstream signaling events of B Cell Receptor (BCR)", "Signaling by the B Cell Receptor (BCR)", "Ub-specific processing proteases", "Deubiquitination"]}, "series": [{"name": "-log(p-value)", "type": "bar", "data": [29.073562200915088, 28.188059600811265, 25.67551634071719, 25.67551634071719, 25.563231407406914, 25.563231407406914, 25.452250787598928, 24.60805700746794, 24.290417869853417, 24.290417869853417, 21.765407133188003, 18.767171991643714, 18.529797677153244, 17.853671336073866, 14.753848741732416]}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

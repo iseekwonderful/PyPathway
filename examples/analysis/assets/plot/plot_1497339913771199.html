@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "ORA Enrichment Analysis", "subtext": "Reactome"}, "grid": {"containLabel": true, "bottom": "3%", "left": "3%", "right": "4%"}, "tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "xAxis": {"type": "value", "boundaryGap": [0, 0.01]}, "yAxis": {"type": "category", "data": ["PTEN Loss of Function in Cancer", "Netrin mediated repulsion signals", "Ligand-independent caspase activation via DCC", "Ligand-independent caspase activation via DCC", "Synthesis of PIPs at the early endosome membrane", "Synthesis of PIPs at the late endosome membrane", "Synthesis of PIPs at the Golgi membrane", "Caspase activation via extrinsic apoptotic signalling pathway", "Golgi Associated Vesicle Biogenesis", "Netrin-1 signaling", "Synthesis of IP3 and IP4 in the cytosol", "Ovarian tumor domain proteases", "Clathrin derived vesicle budding", "trans-Golgi Network Vesicle Budding", "Inositol phosphate metabolism"]}, "series": [{"name": "-log(p-value)", "type": "bar", "data": [-0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0, -0.0]}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

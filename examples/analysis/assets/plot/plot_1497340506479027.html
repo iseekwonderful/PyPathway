@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "ORA Enrichment Analysis", "subtext": "Reactome"}, "grid": {"containLabel": true, "bottom": "3%", "left": "3%", "right": "10%"}, "tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "xAxis": {"name": "FDR", "type": "value", "boundaryGap": [0, 0.01]}, "yAxis": {"type": "category", "data": ["GO:0003824", "GO:0016740", "GO:0036211", "GO:0006464", "GO:0006468", "GO:0098599", "GO:0008474", "GO:0016310", "GO:0005839", "GO:0043412", "GO:0019748", "GO:0008444", "GO:1901564", "GO:0009404", "GO:0016301"]}, "series": [{"name": "-log(p-value)", "type": "bar", "data": [13.319806009259302, 11.556529137977249, 4.307572801910292, 4.307572801910292, 3.9213901653036336, 3.083141235300246, 3.083141235300246, 2.2310746644362487, 2.1648843847417822, 1.5104570643575261, 1.3075728019102923, 1.2481078615956909, 0.9406447223835788, 0.6665762662748083, 0.4092782299901589]}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

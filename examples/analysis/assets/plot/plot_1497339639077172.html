@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "GSEA Enrichment Analysis", "subtext": "Reactome_2016"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}}, "xAxis": {"boundaryGap": [0, 0.01], "type": "value"}, "grid": {"left": "3%", "right": "4%", "containLabel": true, "bottom": "3%"}, "series": [{"name": "-log(p-value)", "type": "bar", "data": [9.349882422871312, 7.488511846821984, 6.8719657134109235, 6.4156920462975116, 5.709257900087596, 5.040021385735089, 4.929547186341159, 4.453612336826148, 4.453612336826148, 4.453612336826148, 4.453612336826148, 4.453612336826148, 4.453612336826148, 4.453612336826148, 4.453612336826148]}], "yAxis": {"type": "category", "data": ["Crosslinking of collagen fibrils_Homo sapiens_R-HSA-2243919", "Assembly of collagen fibrils and other multimeric structures_Homo sapiens_R-HSA-2022090", "Collagen biosynthesis and modifying enzymes_Homo sapiens_R-HSA-1650814", "Extracellular matrix organization_Homo sapiens_R-HSA-1474244", "Collagen formation_Homo sapiens_R-HSA-1474290", "Elastic fibre formation_Homo sapiens_R-HSA-1566948", "GRB7 events in ERBB2 signaling_Homo sapiens_R-HSA-1306955", "Neurofascin interactions_Homo sapiens_R-HSA-447043", "Anchoring fibril formation_Homo sapiens_R-HSA-2214320", "Defective CHST6 causes MCDC1_Homo sapiens_R-HSA-3656225", "Highly sodium permeable acetylcholine nicotinic receptors_Homo sapiens_R-HSA-629587", "Constitutive Signaling by NOTCH1 t(7;9)(NOTCH1:M1580_K2555) Translocation Mutant_Homo sapiens_R-HSA-2660826", "GLI proteins bind promoters of Hh responsive genes to promote transcription_Homo sapiens_R-HSA-5635851", "Defective ST3GAL3 causes MCT12 and EIEE15_Homo sapiens_R-HSA-3656243", "Defective B4GALT1 causes B4GALT1-CDG (CDG-2d)_Homo sapiens_R-HSA-3656244"]}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
