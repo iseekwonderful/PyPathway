@@ -46,8 +46,8 @@ class RelPlot:
                 G.add_edge(x[0], x[1])
             self.nodes.append({'data': {
                 'id': 'edge{}'.format(i),
-                'source': x[0],
-                'target': x[1],
+                'source': x[0].replace(":", ""),
+                'target': x[1].replace(":", ""),
                 'label': 'is_a'
             }, 'style': {
                 # "label": "data(label)",
@@ -62,7 +62,7 @@ class RelPlot:
             # print(layout)
         # puts into full configs
         self.nodes.append({'group': 'nodes',
-                           'data': {'id': self.rec.id, 'label': self.rec.name, 'level': self.rec.level,
+                           'data': {'id': self.rec.id.replace(":", ""), 'label': self.rec.name, 'level': self.rec.level,
                                     'name': self.rec.name},
                            'style': {
                                'background-color': '#DA5961',
@@ -95,7 +95,7 @@ class RelPlot:
             candidate_id += [x.id for x in r.children + r.parents]
             self.nodes.append({'group': 'nodes',
                                'data': {
-                                   'id': x,
+                                   'id': x.replace(":", ""),
                                    'label': r.name,
                                    'level': r.level,
                                    'name': r.name,
@@ -163,7 +163,6 @@ class RelPlot:
                 'level': v.level,
                 'depth': v.depth
             }
-        print(len(candidate))
         config['options']['elements'] = self.nodes
         config['candidate'] = candidate
         config['default_node'] = {

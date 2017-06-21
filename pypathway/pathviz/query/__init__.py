@@ -5,8 +5,9 @@ import sys
 import requests
 from collections import namedtuple
 sys.path.append('/Users/yangxu/PyPathway/')
-from pypathway.netviz import FromCYConfig
+from pypathway.netviz import FromNetworkX, FromCYConfig
 import networkx as nx
+import types
 
 
 if sys.version[0] == "2":
@@ -95,9 +96,10 @@ class BioGRID(Database):
         res = NetworkRequest(url.format('|'.join([str(x) for x in name_list]), organism),
                              NetworkMethod.GET, proxy=proxies)
         json_data = json.loads(res.text)
-        config = BioGRID.plot(json_data)
-        cy = FromCYConfig(config)
-        return cy.plot()
+        # print(json_data)
+        config, G = BioGRID.plot(json_data)
+        # cy = FromCYConfig(config)
+        return G
 
     @staticmethod
     def search_by_EntreZ(id_list, proxies=None):
@@ -108,9 +110,8 @@ class BioGRID(Database):
         # print(res.text)
         json_data = json.loads(res.text)
         # print(json_data)
-        config = BioGRID.plot(json_data)
-        cy = FromCYConfig(config)
-        return cy.plot()
+        config, G = BioGRID.plot(json_data)
+        return G
 
     @staticmethod
     def search_by_pubmed_id(id_list, proxies=None):
@@ -119,13 +120,12 @@ class BioGRID(Database):
                              NetworkMethod.GET, proxy=proxies)
         # print(res.text)
         json_data = json.loads(res.text)
-        config = BioGRID.plot(json_data)
-        cy = FromCYConfig(config)
-        return cy.plot()
-
+        config, G = BioGRID.plot(json_data)
+        return G
 
     @staticmethod
     def plot(data):
+        G = nx.Graph()
         config = {
             "type": "cy",
             "options": {
@@ -163,6 +163,7 @@ class BioGRID(Database):
             }
         }
         exist_node = []
+        # print(data)
         for k, v in data.items():
             if not v['OFFICIAL_SYMBOL_A'] in exist_node:
                 config['options']['elements'].append(
@@ -172,6 +173,7 @@ class BioGRID(Database):
                               },
                      },
                 )
+                G.add_node(v['BIOGRID_ID_A'], {'Symbol': v['OFFICIAL_SYMBOL_A']})
             if not v['OFFICIAL_SYMBOL_B'] in exist_node:
                 config['options']['elements'].append(
                     {'group': 'nodes',
@@ -180,8 +182,10 @@ class BioGRID(Database):
                               },
                      },
                 )
+            G.add_node(v['BIOGRID_ID_B'], {'Symbol': v['OFFICIAL_SYMBOL_B']})
             if v['BIOGRID_ID_A'] == v['BIOGRID_ID_B']:
                 continue
+            G.add_edge(v['BIOGRID_ID_A'], v['BIOGRID_ID_B'], {'id': v['BIOGRID_INTERACTION_ID']})
             config['options']['elements'].append({
                 'group': 'edges',
                 'data': {
@@ -191,7 +195,9 @@ class BioGRID(Database):
                 },
                 "classes": "haystack"
             })
-        return config
+        plot = lambda x: FromNetworkX(x, label='Symbol').plot()
+        G.plot = types.MethodType(plot, G)
+        return config, G
 
     def start(self):
         pass
@@ -219,16 +225,8 @@ class STRINGSearchResult:
         self.data = data
 
     def load(self):
-        return STRING.load(self.data['stringId'])
+        return STRING.load([self.data['stringId']])
 
-    '''
-    {'annotation': 'Chemokine (C-C motif) receptor 9; Receptor for chemokine SCYA25/TECK. Subsequently transduces a signal by increasing the intracellular calcium ions level. Alternative coreceptor with CD4 for HIV-1 infection',
-        'ncbiTaxonId': 9606,
-        'preferredName': 'CCR9',
-        'queryIndex': 0,
-        'stringId': '9606.ENSP00000350256',
-        'taxonName': 'Homo sapiens'}
-    '''
     def __repr__(self):
         return "{}".format('\n'.join(['{}: {}'.format(k, v) for k, v in self.data.items() if not k == 'queryIndex']))
 
@@ -297,8 +295,8 @@ class STRING(Database):
         node_set = set([x.first for x in iters]) & set([x.second for x in iters])
         config = STRING._config_generate(iters)
         for x in iters:
-            print(x)
-            G.add_edge(x.first, x.second, {s[0]: s[1] for s in x.score_list})
+            # print(x)
+            G.add_edge(x.first, x.second, {s.split(':')[0]: s.split(':')[1] for s in x.score_list})
         for x in iters:
             G.node[x.first] = {'Symbol': x.first_name}
             G.node[x.second] = {'Symbol': x.second_name}
@@ -308,7 +306,8 @@ class STRING(Database):
         if node_count > 100:
             # raise Exception("Too many nodes to render: {}".format(node_count))
             config['type'] = 'viva'
-        cy = FromCYConfig(config)
+        plot = lambda x: FromNetworkX(x, label='Symbol').plot()
+        G.plot = types.MethodType(plot, G)
         return G
 
     @staticmethod
@@ -419,6 +418,47 @@ class FunctionSet:
         raise NotImplementedError()
 
 
+class Network:
+    @staticmethod
+    def differ(G1: nx.Graph, G2: nx.Graph):
+        merged = nx.Graph()
+        nodeG1 = [v['Symbol'] for _, v in G1.node.items()]
+        nodeG2 = [v['Symbol'] for _, v in G2.node.items()]
+        edgeG1, edgeG2 = [], []
+        for k, v in G1.edge.items():
+            for x, _ in v.items():
+                if not frozenset([G1.node[k]['Symbol'], G1.node[x]["Symbol"]]) in edgeG1:
+                    edgeG1.append(frozenset([G1.node[k]['Symbol'], G1.node[x]["Symbol"]]))
+        for k, v in G2.edge.items():
+            for x, _ in v.items():
+                if not frozenset([G2.node[k]['Symbol'], G2.node[x]["Symbol"]]) in edgeG2:
+                    edgeG2.append(frozenset([G2.node[k]['Symbol'], G2.node[x]["Symbol"]]))
+        # handle node first
+        for x in nodeG1:
+            if x not in nodeG2:
+                merged.add_node(x, {"style": {'color': '#ff4c00'}})
+            else:
+                merged.add_node(x)
+        for x in nodeG2:
+            if x not in nodeG1:
+                merged.add_node(x, {'style': {'color': '#104fcc'}})
+        for x in edgeG1:
+            if x not in edgeG2 and not frozenset([list(x)[1], list(x)[1]]) not in edgeG2:
+                x = list(x)
+                merged.add_edge(x[0], x[1], {"style": {'color': '#ff4c00'}})
+            else:
+                x = list(x)
+                merged.add_edge(x[0], x[1])
+        for x in edgeG2:
+            if x not in edgeG1 and not frozenset([list(x)[1], list(x)[1]]) not in edgeG1:
+                x = list(x)
+                merged.add_edge(x[0], x[1], {"style": {'color': '#104fcc'}})
+            else:
+                x = list(x)
+                merged.add_edge(x[0], x[1])
+        return merged
+
+
 class Interactome(FunctionSet):
     '''
     Manager of 3 database, BioGIRD, IntAct.
@@ -426,6 +466,7 @@ class Interactome(FunctionSet):
     all network are base on networkx
 
     '''
+
     def __init__(self, st=None, gi=None, act=None):
         self.st = st
         self.gi = gi
