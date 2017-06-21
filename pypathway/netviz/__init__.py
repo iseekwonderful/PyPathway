@@ -1,5 +1,7 @@
 from jucell.display import Plotable, PlotOnlyInterface
 import os
+import networkx as nx
+import math
 
 
 class Engine:
@@ -10,13 +12,16 @@ class Engine:
 
 
 class FromNetworkX(Plotable):
-    def __init__(self, G, layout='cose', node_styles=None, edge_styles=None):
+    def __init__(self, G, layout='cose', node_styles=None, edge_styles=None, label='node_name'):
         self.nx = G
         self.layout = layout
         self.node_styles = node_styles
         self.edge_styles = edge_styles
+        self.menu = None
+        self.label = label
 
-    def plot(self, engine=Engine.CYTOSCAPE):
+    def plot(self, engine=Engine.CYTOSCAPE, menu=None):
+        self.menu = menu
         pi = PlotOnlyInterface(host=self)
         return pi.update()
 
@@ -34,6 +39,19 @@ class FromNetworkX(Plotable):
 
     def serialize(self):
         # generate the configs
+        default_node = {'label': 'data(label)',
+                          'width': 18,
+                          'height': 18,
+                          'font-size': '-1em',
+                          'font-weight': 1,
+                          'background-color': '#91c7ae',
+                          'border-width': 2,
+                          'border-color': '#2f4554'
+                          }
+        default_edge = {
+                    'width': 1,
+                    'line-color': '#b4bcc3'
+                }
         config = {
             "type": "cy",
             "options": {
@@ -49,28 +67,40 @@ class FromNetworkX(Plotable):
                 "style": [
                     {
                         "selector": "node",
-                        "style": self.node_styles or {'label': 'data(label)',
-                                                      'background-color': '#546570'}
+                        "style": self.node_styles or default_node
                     },
                     {
                         "selector": "edge",
-                        "style": self.edge_styles or {}
+                        "style": self.edge_styles or default_edge
                     }
                 ]
 
-            }
+            },
+            'menu': self.menu if self.menu else None
         }
+        layout = None
+        if len(self.nx.node) > 20:
+            # use the layout provided by
+            layout = nx.spring_layout(self.nx, iterations=1000, k=1 / math.sqrt(len(self.nx.node)))
+            config['options']['layout'] = {'name': 'preset'}
         for k, v in self.nx.node.items():
+            label = k if self.label == 'node_name' else v[self.label]
             config['options']['elements'].append(
                 {'group': 'nodes',
                  'data': {'id': k,
-                          'label': k,
+                          'label': label,
                           },
-                 'style': v.get('style') or {
-                     'background-color': '#546570'
+                 'style': v.get('style') or default_node,
+                 'position': {
+                        'x': int(layout[k][0] * 1000) if layout else 0,
+                        'y': int(layout[k][1] * 1000) if layout else 0
                     }
                  }
             )
+            for key, value in v.items():
+                if key == 'style' or key == 'position' or key == 'data':
+                    continue
+                config['options']['elements'][-1][key] = value
         for k, v in self.nx.edge.items():
             if len(v):
                 for i, j in v.items():
@@ -79,8 +109,9 @@ class FromNetworkX(Plotable):
                          'data': {'source': k,
                                   'target': i,
                                   },
-                         'style': j.get('style')
+                         'style': j.get('style') or default_edge
                     })
+        # print(config)
         return config
 
     @property

@@ -6,29 +6,17 @@ $.getJSON("data/test2.json",function(result){
     init(result);
 });
 
-var node_dict = {};
-var new_dict = {};
-var default_node = {};
-var default_edge = {};
-
 function init(data) {
     // plot type: Cytoscape or Echarts
     var type = data.type;
     console.log(type);
     if (type == 'cy') {
-        init_cy(data);
+        init_cy(data.options);
     } else if (type == 'echarts') {
         init_echarts(data.options)
     } else if (type == 'viva') {
         init_viva_svg(data.options);
     }
-    for(var x in data.options.elements){
-        node_dict[data.options.elements[x].data.id] = data.options.elements[x];
-    }
-    new_dict = data.candidate;
-    default_node = data.default_node;
-    default_edge = data.default_edge;
-    console.log(default_node);
 }
 
 function level_color(level) {
@@ -172,83 +160,32 @@ function init_viva(config){
 }
 
 function init_cy(config) {
-    var menu = config.menu;
-    config = config.options;
     console.log(config);
     config.container = document.getElementById('cy');
     var cy = cytoscape(config);
-    var callback = function (ele, event, type) {
-        console.log("target: ", ele);
-        var target = '';
-        for (var i in config.elements){
-            if (config.elements[i].data.id == ele.id()){
-                target = config.elements[i];
-            }
-        }
-        if (type == 'Expand') {
-            // first read the expand selection
-            console.log(event.cyTarget.id());
-            var setting = node_dict[event.cyTarget.id()].expand;
-            if (setting == undefined) {
-                return;
-            }
-            if (setting.source == 'local'){
-                // read the id from targets
-                var needsToAdd = [];
-                for (var i in setting.targets) {
-                    var id = setting.targets[i];
-                    var new_node = jQuery.extend(true, {}, default_node);
-                    // new_node.data.id =
-                    var node = new_dict[id];
-                    new_node.data = node;
-                    new_node.data['label'] = new_node.data.name;
-                    new_node.position.x = 1000;
-                    new_node.position.y = 1000;
-                    var new_edge = jQuery.extend(true, {}, default_edge);
-                    new_edge.data.id = 'edge' + event.cyTarget.id() + node.id;
-                    new_edge.data.source = event.cyTarget.id();
-                    new_edge.data.target = node.id;
-                    console.log(new_edge);
-                    console.log(new_node);
-                    cy.add(new_node);
-                    cy.add(new_edge);
-                }
-                cy.layout({
-                    'name': 'dagre'
-                })
-            }
-            // console.log(setting);
-        }else if (type == 'Remove') {
-            cy.remove(ele);
-        }else if (type == 'Mark'){
-            // var tgt = cy.$("#" + ele.id());
-            // console.log(tgt);
-            ele.css('background-color', 'red')
-        }
-    };
     var defaults = {
         menuRadius: 100, // the radius of the circular menu in pixels
         selector: 'node', // elements matching this Cytoscape.js selector will trigger cxtmenus
         commands: [ // an array of commands to list in the menu or a function that returns the array
-            {
-                fillColor: 'rgba(20, 20, 20, 0.75)',
-                content: "Mark", // html/text content to be displayed in the menu
-                select: function (ele, event) {
-                    callback(ele, event, 'Mark')
+             { // example command
+             fillColor: 'rgba(20, 20, 20, 0.75)', // optional: custom background color for item
+             content: 'Detail', // html/text content to be displayed in the menu
+             select: function(ele){ // a function to execute when the command is selected
+             console.log( ele.id() ); // `ele` holds the reference to the active element
+             }
+             },
+            { // example command
+                fillColor: 'rgba(20, 20, 20, 0.75)', // optional: custom background color for item
+                content: 'Expend', // html/text content to be displayed in the menu
+                select: function(ele){ // a function to execute when the command is selected
+                    console.log( ele.id() ); // `ele` holds the reference to the active element
                 }
             },
-            {
-                fillColor: 'rgba(20, 20, 20, 0.75)',
-                content: "Expand", // html/text content to be displayed in the menu
-                select: function (ele, event) {
-                    callback(ele, event, 'Expand')
-                }
-            },
-            {
-                fillColor: 'rgba(20, 20, 20, 0.75)',
-                content: "Remove", // html/text content to be displayed in the menu
-                select: function (ele, event) {
-                    callback(ele, event, 'Remove')
+            { // example command
+                fillColor: 'rgba(20, 20, 20, 0.75)', // optional: custom background color for item
+                content: 'Mark', // html/text content to be displayed in the menu
+                select: function(ele){ // a function to execute when the command is selected
+                    console.log( ele.id() ); // `ele` holds the reference to the active element
                 }
             }
         ], // function( ele ){ return [ /*...*/ ] }, // example function for commands
@@ -266,39 +203,9 @@ function init_cy(config) {
         zIndex: 9999, // the z-index of the ui div
         atMouse: false // draw menu at mouse position
     };
+
     var cxtmenuApi = cy.cxtmenu( defaults );
-    cy.on('tap', 'node', function(evt){
-        console.log( evt.cyTarget.id() );
-    });
-    cy.on('mouseover', 'node', function (evt) {
-        $(".qtip-content").remove();
-        $(".qtip").remove();
-        // console.log("over");
-        // console.log(evt.cyTarget.id());
-        var tip = node_dict[evt.cyTarget.id()].tooltip;
-        var text = "";
-        for (var i in tip){
-            // if (i == 'Name'){
-            //     continue;
-            // }
-            text += i + ": " + tip[i] + "</br>";
-        }
-        evt.cyTarget.qtip({
-            style: {
-                classes: 'qtip-tipsy'
-            },
-            content: {
-                text: text
-            },
-            show: {
-                ready: true
-            }
-        })
-    });
-    cy.on('mouseout', 'node', function (evt) {
-        $(".qtip-content").remove();
-        $(".qtip").remove();
-    })
+
 }
 
 function init_echarts() {

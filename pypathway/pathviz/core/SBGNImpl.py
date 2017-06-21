@@ -1,19 +1,15 @@
 import json
-import os
 import re
 import shutil
-import sys
 import time
 from xml.dom.minidom import Document
 from xml.sax import *
 
 from ..query.common import PathwayFormat
-from jucell import iframe
 from ...pathviz.utils import SBGNParseException
 from ...pathviz.utils import environment as env
 from .BioPAXImpl import NativeBioPAXParser
 from .general import Pathway, vertex2id, ReactomeNativeParser
-import math
 
 
 def id_handle(id):

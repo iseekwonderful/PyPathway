@@ -486,7 +486,6 @@ class KEGGPathwayData(PathwayData):
             "KGML", self.id, self.description, self.data is not None
         )
 
-
     def __repr__(self):
         return self.summary()
 
