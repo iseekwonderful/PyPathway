@@ -5,6 +5,9 @@ import pandas as pd
 from io import StringIO
 from ...pathviz.utils import plot_json
 import math
+from ...netviz.goviz import RelPlot
+from ...netviz import FromCYConfig
+
 
 from goatools.go_enrichment import GOEnrichmentStudy
 from goatools.obo_parser import GODag
@@ -48,7 +51,7 @@ class Reactome(Analysis, EnrichmentResult):
 
     def __init__(self, df, organism, exp, cut_off):
         self.df, self.organism, self.exp, self.cut_off = df, organism, exp, cut_off
-        EnrichmentResult.__init__(self, self.df, exp, 'Reactome', 'ORA', 'Fdr')
+        EnrichmentResult.__init__(self, self.df, exp, 'Reactome', 'ORA', '-log(2, Fdr)')
 
     @property
     def table(self):
@@ -152,8 +155,113 @@ class GO(Analysis, EnrichmentResult):
         # print(self.basic_config)
         return plot_json(self.basic_config)
 
-    def overview(self):
-        raise NotImplementedError()
+    def _gradient(self, index, count):
+        start = (0xff, 0, 0)
+        end = (0xff, 0xff, 0xff)
+        return "#{:02X}{:02X}{:02X}".format(int(start[0] + (end[0] - start[0]) / count * index),
+                                            int(start[1] + (end[1] - start[1]) / count * index),
+                                            int(start[2] + (end[2] - start[2]) / count * index))
+
+    def overview(self, dag=None, thresholds=0.05):
+        args = {x[0]: x for i, x in self.table.iterrows()}
+        # print(args['GO:0009078'])
+        # print("draw the network")
+        targets = [x[0] for _, x in self.table.iterrows() if x[6] < 0.001]
+        # print(targets)
+        configs = []
+        edges = []
+        nodes = []
+        for x in targets:
+            rec = dag[x]
+            for i, x in enumerate(list(rec.get_all_parent_edges())):
+                fs = frozenset(x)
+                if fs not in edges:
+                    edges.append(fs)
+        nodes = set([list(x)[0] for x in edges] + [list(x)[1] for x in edges])
+        # print(len(nodes))
+        use_spring, layout = False, []
+        config = {
+            "type": "cy",
+            "options": {
+                "elements": [
+                ],
+
+                "layout": {
+                    'name': 'preset' if use_spring else 'dagre',
+                },
+                "style": [
+                    # from node style and edge style
+                    {
+                        "selector": "node",
+                        "style": {
+                            "content": "data(label)",
+                        }
+                    },
+                    {
+                        "selector": "edge",
+                        "style": {
+                            'background-color': 'pink',
+                            "label": 'data(label)'
+                        }
+                    }
+                ]
+
+            }
+        }
+        for x in nodes:
+            rec = dag[x]
+            config['options']['elements'].append(
+                {'group': 'nodes',
+                 'data': {'id': rec.id.replace(":", ""), 'label': rec.name, 'level': rec.level,
+                          'name': rec.name},
+                 'style': {
+                     'background-color': self._gradient(int(100 - args[x][6] * 100), 100),
+                     'shape': 'roundrectangle',
+                     'width': 'label',
+                     'height': 'label',
+                     'text-halign': 'center',
+                     'text-valign': 'center',
+                     'padding': '10px',
+                     'text-wrap': 'wrap',
+                     'text-max-width': '200px',
+                     'color': '#000000',
+                     'border-radius': '250px',
+                     'border-color': '#000011',
+                     'border-width': '2px',
+                 },
+                 'tooltip': {
+                     # 'Name': r.name,
+                     'Level': rec.level,
+                     'Depth': rec.depth,
+                     'id': rec.id,
+                     'p-value': args[x][6],
+                     'ratio_in_study': args[x][4],
+                     'ratio_in_pop': args[x][5],
+                     'p_bonferroni': args[x][8]
+                 },
+                 'expand': {
+                     'source': 'local',
+                     'targets': [x.id for x in rec.children + rec.parents]
+                 },
+                 'position': {'x': int(layout[rec.id][0] * 10000),
+                              'y': int(layout[rec.id][1] * 10000)} if use_spring else None
+                 }
+            )
+        for i, x in enumerate(edges):
+            x = list(x)
+            config['options']['elements'].append({'data': {
+                'id': 'edge{}'.format(i),
+                'source': x[0].replace(":", ""),
+                'target': x[1].replace(":", ""),
+                'label': 'is_a'
+            }, 'style': {
+                # "label": "data(label)",
+                'curve-style': 'bezier',
+                'width': 2,
+                'target-arrow-shape': 'triangle',
+                'opacity': 0.7
+            }})
+        return FromCYConfig(config).plot()
 
     def detail(self, index):
         raise NotImplementedError()

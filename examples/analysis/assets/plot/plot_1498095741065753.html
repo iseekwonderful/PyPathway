@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"series": [{"name": "-lg(p_bonferroni)", "data": [13.321281912243151, 11.556529137977249, 4.307572801910292, 4.307572801910292, 3.9213901653036336, 3.083141235300246, 3.083141235300246, 2.237863830098888, 2.1648843847417822, 1.5104570643575261, 1.3075728019102923, 1.2515387669959646, 0.9406447223835788, 0.6665762662748083, 0.4092782299901589], "type": "bar"}], "grid": {"bottom": "3%", "containLabel": true, "left": "3%", "right": "12%"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}}, "yAxis": {"data": ["catalytic activity", "transferase activity", "cellular protein modification process", "protein modification process", "protein phosphorylation", "palmitoyl-(protein) hydrolase activity", "palmitoyl hydrolase activity", "phosphorylation", "proteasome core complex", "macromolecule modification", "secondary metabolic process", "CDP-diacylglycerol-glycerol-3-phosphate 3-phosphatidyltransferase activity", "organonitrogen compound metabolic process", "toxin metabolic process", "kinase activity"], "type": "category"}, "title": {"subtext": "Reactome", "text": "ORA Enrichment Analysis"}, "xAxis": {"name": "-lg(p_bonferroni)", "boundaryGap": [0, 0.01], "type": "value"}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

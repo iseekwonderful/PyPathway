@@ -58,7 +58,7 @@ class EnrichmentResult:
                         },
                         'series': [
                             {
-                                'name': '-log(p-value)',
+                                'name': xlabel,
                                 'type': 'bar',
                                 'data': []
                             },
