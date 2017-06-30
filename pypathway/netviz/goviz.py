@@ -218,7 +218,10 @@ class RelPlot:
         # return the config as data
         return self.config
 
-    def plot(self, level_color=True, tooltip=True):
+    def plot(self, level_color=True, tooltip=True, require_config=False):
+        # if require config
+        if require_config:
+            return self.serialize()
         # the go viz is using the cy plot interface, we need add the tooltip and the menu
         ci = FromCYConfig(config=self.serialize())
         return ci.plot()
