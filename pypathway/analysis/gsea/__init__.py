@@ -34,7 +34,7 @@ class EnrichrResult(EnrichmentResult):
         self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
         candidate = []
         for x in self.df.iterrows():
-            candidate.append([x[1][0], -math.log2(x[1][2])])
+            candidate.append([x[1][0].split('_')[0], -math.log2(x[1][2])])
         candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
         for x in candidate[:15]:
             self.basic_config['yAxis']['data'].append(x[0])

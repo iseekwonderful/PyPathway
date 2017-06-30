@@ -5,9 +5,9 @@ import pandas as pd
 from io import StringIO
 from ...pathviz.utils import plot_json
 import math
-from ...netviz.goviz import RelPlot
 from ...netviz import FromCYConfig
-
+import os
+from collections import defaultdict
 
 from goatools.go_enrichment import GOEnrichmentStudy
 from goatools.obo_parser import GODag
@@ -15,17 +15,18 @@ from goatools.associations import read_associations
 
 
 class Reactome(Analysis, EnrichmentResult):
+    '''
+    This class ths the HTTP wrapper of the Reactome Ananlysis server.
+    
+    '''
     @staticmethod
     def run(exp, organism=None, cut_off=0.05):
         '''
         This method is implemented by the Reactome web server
 
         :param exp: the list of over expressed gene symbol
-        :param pop: the population
-        :param source: the source, here default reactome
         :param organism: the organism, default is human
         :param cut_off: the cut off p value, default is 0.05
-        :param method: the method is ora
         :return: a reactome ora object.
         '''
         # submit the analysis
@@ -82,22 +83,46 @@ class Reactome(Analysis, EnrichmentResult):
         return plot_json(self.basic_config)
 
     def overview(self):
-        raise NotImplementedError()
+        # this function render the significant pathway in the Reactome overview.
+        pass
 
     def detail(self, index):
         raise NotImplementedError()
 
 
 class GO(Analysis, EnrichmentResult):
+    '''
+    This class is the wrapper of the Goatools. Use the netviz.goviz.RelPlot to plot the go DAG  
+    
+    '''
     @staticmethod
     def run(study, pop, assoc, alpha=0.05, p_value=0.05, compare=False, ratio=None, obo='go-basic.obo', no_propagate_counts=False,
             method='bonferroni,sidak,holm', pvalcalc='fisher'):
-        study, pop = GO._read_geneset(study, pop, compare=compare)
+        '''
+        This is the wrapper of the Goatools function.
+        
+        :param study: a list of study gene
+        :param pop: a list of population gene
+        :param assoc: the association from the gene to the go term
+        :return: 
+        '''
+        if type(study) == str and type(pop) == str:
+            # load the study and pop from the file
+            study, pop = GO._read_geneset(study, pop, compare=compare)
+        else:
+            # convert to the set
+            study = frozenset(study)
+            pop = set(pop)
         # print(study)
         methods = method.split(",")
+        if not os.path.exists(obo):
+            raise Exception("obo file not exist, please download the file")
         obo_dag = GODag(obo)
         propagate_counts = not no_propagate_counts
-        g = GOEnrichmentStudy(pop, read_associations(assoc), obo_dag,
+        if not type(assoc) == defaultdict:
+            # if from a file
+            assoc = read_associations(assoc)
+        g = GOEnrichmentStudy(pop, assoc, obo_dag,
                               propagate_counts=propagate_counts,
                               alpha=alpha,
                               pvalcalc=pvalcalc,
@@ -108,7 +133,7 @@ class GO(Analysis, EnrichmentResult):
         for x in results:
             r += x.__str__() + "\n"
         tb = pd.read_table(StringIO(r))
-        return GO(tb, study, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc)
+        return GO(tb, study, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc, obo_dag)
 
 
     @staticmethod
@@ -129,11 +154,11 @@ class GO(Analysis, EnrichmentResult):
 
         return study, pop
 
-    def __init__(self, df, exp, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc):
+    def __init__(self, df, exp, pop, assoc, alpha, p_value, compare, ratio, obo, no_propagate_counts, method, pvalcalc, dag):
         self.exp, self.pop, self.assoc, self.alpha, self.p_value, self.compare = exp, pop, assoc, alpha, p_value, compare
         self.ratio, self.obo, self.no_propagate_counts, self.method, self.pvalcalc = ratio, obo, no_propagate_counts, method, pvalcalc
-        self.df = df
-        EnrichmentResult.__init__(self, self.df, exp, "Reactome", 'ORA', xlabel='-lg(p_bonferroni)')
+        self.df, self.dag = df, dag
+        EnrichmentResult.__init__(self, self.df, exp, "GO", 'ORA', xlabel='-lg(p_bonferroni)')
 
     @property
     def table(self):
@@ -162,7 +187,7 @@ class GO(Analysis, EnrichmentResult):
                                             int(start[1] + (end[1] - start[1]) / count * index),
                                             int(start[2] + (end[2] - start[2]) / count * index))
 
-    def overview(self, dag=None, thresholds=0.05):
+    def overview(self, thresholds=0.05):
         args = {x[0]: x for i, x in self.table.iterrows()}
         # print(args['GO:0009078'])
         # print("draw the network")
@@ -172,7 +197,7 @@ class GO(Analysis, EnrichmentResult):
         edges = []
         nodes = []
         for x in targets:
-            rec = dag[x]
+            rec = self.dag[x]
             for i, x in enumerate(list(rec.get_all_parent_edges())):
                 fs = frozenset(x)
                 if fs not in edges:
@@ -209,7 +234,7 @@ class GO(Analysis, EnrichmentResult):
             }
         }
         for x in nodes:
-            rec = dag[x]
+            rec = self.dag[x]
             config['options']['elements'].append(
                 {'group': 'nodes',
                  'data': {'id': rec.id.replace(":", ""), 'label': rec.name, 'level': rec.level,
