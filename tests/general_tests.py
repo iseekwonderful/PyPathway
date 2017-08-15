@@ -1,13 +1,14 @@
 import unittest
 from pypathway import *
-from pypathway.query.network import NetworkRequest, NetworkMethod, MultiThreadNetworkRequest
+from pypathway.pathviz.query import NetworkRequest, NetworkMethod, MultiThreadNetworkRequest
 import sys
 import os
+
 if sys.version[0] == "2":
     from Queue import Queue
 else:
     from queue import Queue
-from map_tests import MappingAPITest
+from .map_tests import MappingAPITest
 from pypathway.visualize.options import *
 
 

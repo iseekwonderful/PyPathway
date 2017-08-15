@@ -1,10 +1,11 @@
-import subprocess
 from io import StringIO
 from ...analysis import Analysis, EnrichmentResult
 import re
 from ...pathviz.utils import plot_json
 import requests
 import json
+from ...utils import IdMapping
+
 
 import numpy as np
 import os
@@ -39,14 +40,15 @@ class Enrichnet(Analysis, EnrichmentResult):
             raise Exception("Unknown graph")
         data = {
             'SESSION_NAME': session,
-            'pathway': 'reactome',
-            'cweighted': 'string',
-            'identifier': 'hgnc_symbol',
-            'geneset': ','.join([x for x in genesets])
+            'pathway': pathdb,
+            'cweighted': graph,
+            'identifier': idtype,
+            'geneset': '\n'.join([x for x in genesets]),
+            'example': '0'
         }
-        url = 'http://www.enrichnet.org/index.php?tmpdat=result'
+        url = 'http://lcsb-enrichnet.uni.lu/enrichnet//index.php?tmpdat=result'
         res = requests.post(url, data=data)
-        mission = re.findall("http://www.enrichnet.org/reload.php\?temp=([\d\w_]+)", res.text)
+        mission = re.findall("http://elephant.uni.lu/enrichnet/reload.php\?temp=([\d\w_]+)", res.text)
         if not mission:
             raise Exception("Cant not retrieve mission id")
         mission_id = mission[0]
@@ -56,21 +58,20 @@ class Enrichnet(Analysis, EnrichmentResult):
     @staticmethod
     def check_for_job_done(mission_id):
         while True:
-            print('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(mission_id))
-            r = requests.get('http://www.enrichnet.org/pages/tmp/{}/result.php'.format(mission_id))
-            print(r.status_code)
+            r = requests.get('http://lcsb-enrichnet.uni.lu/enrichnet//filecreated.php?temp={}'.format(mission_id))
+            print("checking: ", "done!" if len(r.text) == len("Success") else "processing...")
+            if len(r.text) < len("Success"):
+                time.sleep(20)
+                continue
             if r.status_code == 404:
-                time.sleep(10)
+                time.sleep(20)
                 continue
             elif r.status_code == 200:
                 break
             else:
                 raise Exception("Unclear status code while query the server")
-        table_url = re.findall(
-            "file2.php\?filen=C:/xampp/htdocs/enrichnet/pages/tmp/.+?/enrichnet_ranking_table.txt", r.text)
-        if not table_url:
-            raise Exception("Cant retrieve data")
-        r = requests.get("http://www.enrichnet.org/" + table_url[0])
+        r = requests.get("http://lcsb-enrichnet.uni.lu/enrichnet//file2.php" +
+                         "?filen=/var/www/html/enrichnet/pages/tmp/{}/enrichnet_ranking_table.txt".format(mission_id))
         return pd.read_table(StringIO(r.text))
 
     def __init__(self, mission_id, df, geneset, idtype, pathdb, graph):
@@ -187,9 +188,19 @@ class SPIA(Analysis, EnrichmentResult):
 
     @staticmethod
     def run(de, all, organism='hsa', nB=2000, beta=None, combine='fisher'):
+        for x in IdMapping.SPECIES:
+            if organism in x:
+                organism = x[3]
+                break
+        else:
+            raise Exception("Unknown organism")
         if organism not in ['hsa', 'mmu']:
             raise Exception("The organism not contained in the prepared data")
-        de, all = SPIA._load_de(de, all)
+        if type(de) == str:
+            de, all = SPIA._load_de(de, all)
+        else:
+            de = {int(k): float(v) for k, v in de.items()}
+            all = [int(x) for x in all]
         datpT_ALL, id2name = SPIA.load_json_data(organism)
         rel = ["activation", "compound", "binding/association", "expression", "inhibition",
                "activation_phosphorylation", "phosphorylation", "inhibition_phosphorylation",
@@ -286,7 +297,7 @@ class SPIA(Analysis, EnrichmentResult):
         return SPIA(df, de, all, organism, nB, beta, combine)
 
     def __init__(self, df, de, all, organism, nB, beta, combine):
-        EnrichmentResult.__init__(self, df, de, 'KEGG', 'SPIA', 'pGfdr')
+        EnrichmentResult.__init__(self, df, de, 'KEGG: {}'.format(organism), 'SPIA', '-log(2, pGfdr)')
         self.df, self.de, self.all, self.organism, self.nB, self.beta, self.combine = df, de, all, organism, nB, beta, combine
 
     @property
@@ -308,173 +319,3 @@ class SPIA(Analysis, EnrichmentResult):
             self.basic_config['series'][0]['data'].append(x[1])
         # print(self.basic_config)
         return plot_json(self.basic_config)
-
-
-
-
-class SPIA_C(Analysis):
-    '''
-    The adaptor of C implement of Signaling Pathway Impact Analysis (SPIA)
-
-    '''
-    def __init__(self, de, all, organism, nB=2000):
-        '''
-        Apply a SPIA analysis, the de and all could be a pandas dataframe or a file, result is returned in the SPIA
-        class.
-
-        :param de: a two columns table with entraz ID and fold changes
-        :param all: a data series of genes or a file contain genes in the fromat of entraz ID
-        :param organism: the organism
-        :param nB: number of bootstraps default=2000
-        '''
-        path_de, path_all = None, None
-        if type(all) == pd.Series:
-            contents = ""
-            for i, x in all.iteritems():
-                contents += '{}\t{}\n'.format(i, x)
-            with open('all.tab', 'w') as fp:
-                fp.write(contents)
-            path_all = 'all.tab'
-        else:
-            path_all = all
-        if type(de) == pd.DataFrame:
-            contents = ""
-            for _, x in de.iterrows():
-                contents += '{}\t{}\n'.format(x[0], x[1])
-            with open('de.tab', 'w') as fp:
-                fp.write(contents)
-            path_de = 'de.tab'
-            self.de_total = de
-        else:
-            path_de = de
-            self.de_total = pd.read_table(de)
-        path = '/Users/yangxu/spia_c/test/'
-        binary = '/Users/yangxu/spia_c/bin/spia'
-        argv = ['spia', '--dir', '{}pathways/'.format(path),
-                '--de', path_de, '--array',
-                path_all, '--nBoots', '2000']
-        r = subprocess.check_output([binary] + argv)
-        self.de_dict = {}
-        self.r = r
-        self._parse_result(r)
-        # fix me: organism, pandas test
-
-    def _parse_result(self, out):
-        out = out.decode('utf8')
-        self.detail_raw = out.split('Path\tpSize')[0].split('####################')[1:]
-        self.detail = {}
-        self.de = {}
-        for x in self.detail_raw:
-            path_id = re.findall('(\d+.?)\.tab', x)[0]
-            self.detail[path_id] = {}
-            self.de[path_id] = {}
-            self.detail[path_id]['Acc'] = {k: v for (k, v) in re.findall('(\d+):  ([\d\.]+)',
-                                                                         re.findall('Acc = (.+)', x)[0])}
-            self.detail[path_id]['PF'] = {k: v for (k, v) in re.findall('(\d+):  ([\d\.]+)',
-                                                                         re.findall('PF = (.+)', x)[0])}
-            for i, r in self.de_total.iterrows():
-                self.de_dict[int(r[0])] = r[1]
-            for k in self.detail[path_id]['Acc']:
-                if int(k) in self.de_dict:
-                    self.de[path_id][int(k)] = self.de_dict[int(k)]
-                else:
-                    self.de[path_id][int(k)] = 0
-            args = ['pSize', 'NDE', 't_A', 'pNDE', 't_Ac', 'pPERT', 'pG']
-            for a in args:
-                str = '{} = ([\d\.]+)'.format(a)
-                self.detail[path_id]['PF'][a] = re.findall(str, x)[0]
-
-        table = 'Path\tpSize' + out.split('Path\tpSize')[1]
-        self.tb = pd.read_table(StringIO(table))
-
-    def plot(self):
-        pass
-
-    def pathway(self, pathway_id):
-        if pathway_id not in self.detail:
-            raise Exception("Pathway not found")
-        config = self._single_plot_config()
-        zero_x, zero_y, none_zero = [], [], []
-        for k, v in self.detail[pathway_id]['Acc'].items():
-            k = int(k)
-            if v == 0:
-                zero_y.append([float(self.de[pathway_id][k]),float(v)])
-            elif self.de[pathway_id][k] == 0:
-                zero_x.append([float(self.de[pathway_id][k]), float(v)])
-            else:
-                none_zero.append([float(self.de[pathway_id][k]), float(v)])
-        config['series'][0]['data'] = zero_x
-        config['series'][1]['data'] = zero_y
-        config['series'][2]['data'] = none_zero
-        matrix = zero_x + zero_y + none_zero
-        max_x, min_x, max_y, min_y = max([x for x, y in matrix]), min([x for x, y in matrix]),\
-                                     max([y for x, y in matrix]), min([y for x, y in matrix])
-        config['xAxis'][0]['min'] = math.floor(min_x) - 2,
-        config['xAxis'][0]['max'] = math.ceil(max_x) + 2,
-        config['yAxis'][0]['min'] = math.floor(min_y) - 2,
-        config['yAxis'][0]['max'] = math.ceil(max_y) + 2,
-        config['title']['text'] = 'Pathway: {}'.format(pathway_id)
-        # print(config)
-        return plot_json(config)
-
-    def _single_plot_config(self):
-        option = {
-            'title': {
-                'text': 'Anscombe\'s quartet',
-                'x': 'center',
-                'y': 0
-            },
-            'grid': [
-                {'x': '2%', 'y': '7%', 'width': '46%', 'height': '83%'},
-                {'x2': '2%', 'y': '7%', 'width': '46%', 'height': '83%'},
-            ],
-            'tooltip': {
-                'formatter': 'Group {a}: ({c})'
-            },
-            'xAxis': [
-                {'gridIndex': 0, 'min': 0, 'max': 20},
-                {'gridIndex': 1, 'min': 0, 'max': 20},
-            ],
-            'yAxis': [
-                {'gridIndex': 0, 'min': 0, 'max': 15},
-                {'gridIndex': 1, 'min': 0, 'max': 15},
-            ],
-            'series': [
-                {
-                    'name': 'I',
-                    'type': 'scatter',
-                    'xAxisIndex': 0,
-                    'yAxisIndex': 0,
-                    'data': 'dataAll[0]',
-                    # 'markLine': 'markLineOpt'
-                },
-                {
-                    'name': 'III',
-                    'type': 'scatter',
-                    'xAxisIndex': 0,
-                    'yAxisIndex': 0,
-                    'data': 'dataAll[2]',
-                    # 'markLine': 'markLineOpt'
-
-                },
-                {
-                    'name': 'II',
-                    'type': 'scatter',
-                    'xAxisIndex': 0,
-                    'yAxisIndex': 0,
-                    'data': 'dataAll[1]',
-                    # 'markLine': 'markLineOpt'
-                }
-            ]
-        }
-        return option
-
-    @property
-    def result(self):
-        return self.tb
-
-if __name__ == '__main__':
-    # s = SPIA('/Users/yangxu/spiA_c/test/data/DE_Colorectal.tab',
-    #          '/Users/yangxu/spiA_c/test/data/ALL_Colorectal.tab', organism='hsa')
-    # print(s.r)
-    e = Enrichnet(['ENSG00000113916', 'ENSG00000068024', 'ENSG00000108840', 'ENSG00000061273', 'ENSG00000005339'])

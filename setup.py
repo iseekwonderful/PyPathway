@@ -1,14 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from setuptools import setup
+# from setuptools import setup
 import sys
+from distutils.core import setup, Extension
 
-# with open('README.rst') as readme_file:
-#     readme = readme_file.read()
 
-# with open('HISTORY.rst') as history_file:
-#     history = history_file.read()
+
+def get_hotnet2():
+    '''
+    This function get hotnet2 from github.
+
+
+    :return:
+    '''
+
 
 try:
    import pypandoc
@@ -23,10 +29,23 @@ requirements = [
     'jupyter',
     'echarts-python',
     'numpy',
+    'wget',
 ]
 
 test_requirements = [
 ]
+
+c_ext = Extension("pypathway.utils._node", ["./pypathway/src/node_src/_chi2.c", "./pypathway/src/node_src/heap.c",
+                                            "./pypathway/src/node_src/randpick.c", "./pypathway/src/node_src/main.c"])
+
+selects = Extension('pypathway.utils._select', ["./pypathway/src/select/_chi2.c",
+                                                 "./pypathway/src/select/color_coding.cpp",
+                                                 "./pypathway/src/select/PPI_graph.cpp"])
+
+cluster = Extension('pypathway.utils._cluster', ["./pypathway/src/cluster/_chi2.c",
+                                                 "./pypathway/src/cluster/clustering.cpp",
+                                                 "./pypathway/src/cluster/PPI_graph.cpp"])
+
 
 setup(
     name='pypathway',
@@ -51,11 +70,10 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
     ],
     test_suite='tests',
-    tests_require=test_requirements
+    tests_require=test_requirements,
+    ext_modules=[c_ext, selects, cluster],
 )

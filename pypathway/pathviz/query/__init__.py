@@ -4,10 +4,12 @@ import json
 import sys
 import requests
 from collections import namedtuple
-sys.path.append('/Users/yangxu/PyPathway/')
-from pypathway.netviz import FromNetworkX, FromCYConfig
+from ...netviz import FromNetworkX, FromCYConfig
 import networkx as nx
 import types
+from ...utils import IdMapping
+import os
+import wget
 
 
 if sys.version[0] == "2":
@@ -86,25 +88,34 @@ class BioGRID(Database):
     ACCESS_KEY = '416cb97cff808a451eb54c2a885134b4'
 
     @staticmethod
-    def search(name, organism=9606, proxies=None):
-        return BioGRID.search_by_symbol(name, organism, proxies)
+    def search(query_list, idtype='symbol', organism=9606, proxies=None):
+        if idtype.upper() == 'SYMBOL':
+            return BioGRID.search_by_symbol(query_list, organism, proxies)
+        elif idtype.upper() == 'ENTREZ':
+            return BioGRID.search_by_EntreZ(query_list, organism, proxies)
+        elif idtype.upper() == "PUBMED":
+            return BioGRID.search_by_pubmed_id(query_list, organism, proxies)
+        else:
+            raise Exception("Unknown idtype")
 
     @staticmethod
     def search_by_symbol(name_list, organism=9606, proxies=None):
+        if type(name_list) == str:
+            name_list = [name_list]
         url = 'http://webservice.thebiogrid.org/interactions?searchNames=true&geneList={}&includeInteractors=true&includeInteractorInteractions=false&taxId={}&accesskey=416cb97cff808a451eb54c2a885134b4&format=json'
-        # print(url.format('|'.join([str(x) for x in name_list]), organism))
         res = NetworkRequest(url.format('|'.join([str(x) for x in name_list]), organism),
                              NetworkMethod.GET, proxy=proxies)
         json_data = json.loads(res.text)
-        # print(json_data)
         config, G = BioGRID.plot(json_data)
         # cy = FromCYConfig(config)
         return G
 
     @staticmethod
-    def search_by_EntreZ(id_list, proxies=None):
-        url = 'http://webservice.thebiogrid.org/interactions/?geneList={}&searchids=true&includeInteractors=true&accessKey=416cb97cff808a451eb54c2a885134b4&format=json'
-        res = NetworkRequest(url.format('|'.join([str(x) for x in id_list])),
+    def search_by_EntreZ(id_list, organism=9606, proxies=None):
+        if type(id_list) == str:
+            id_list = [id_list]
+        url = 'http://webservice.thebiogrid.org/interactions/?geneList={}&searchids=true&includeInteractors=true&accessKey=416cb97cff808a451eb54c2a885134b4&format=json&taxId={}'
+        res = NetworkRequest(url.format('|'.join([str(x) for x in id_list]), organism),
                              NetworkMethod.GET, proxy=proxies)
         # print(url.format('|'.join([str(x) for x in id_list])))
         # print(res.text)
@@ -114,9 +125,11 @@ class BioGRID(Database):
         return G
 
     @staticmethod
-    def search_by_pubmed_id(id_list, proxies=None):
-        url = 'http://webservice.thebiogrid.org/interactions/?pubmedList={}&accesskey=416cb97cff808a451eb54c2a885134b4&format=json'
-        res = NetworkRequest(url.format('|'.join([str(x) for x in id_list])),
+    def search_by_pubmed_id(id_list, organism=9606, proxies=None):
+        if type(id_list) == str:
+            id_list = [id_list]
+        url = 'http://webservice.thebiogrid.org/interactions/?pubmedList={}&accesskey=416cb97cff808a451eb54c2a885134b4&format=json&taxId={}'
+        res = NetworkRequest(url.format('|'.join([str(x) for x in id_list]), organism),
                              NetworkMethod.GET, proxy=proxies)
         # print(res.text)
         json_data = json.loads(res.text)
@@ -163,7 +176,6 @@ class BioGRID(Database):
             }
         }
         exist_node = []
-        # print(data)
         for k, v in data.items():
             if not v['OFFICIAL_SYMBOL_A'] in exist_node:
                 config['options']['elements'].append(
@@ -400,6 +412,18 @@ class STRING(Database):
     def export(self):
         pass
 
+    @staticmethod
+    def overall_graph(organism='hsa'):
+        numeric_id = -1
+        for spl in IdMapping.SPECIES:
+            if organism in spl:
+                numeric_id = spl[-1]
+                break
+        else:
+            raise Exception("Organism not found")
+        url = "https://string-db.org/download/protein.links.v10.5/{}.protein.links.v10.5.txt.gz".format(numeric_id)
+        wget.download(url, out=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/cache.gz'))
+        # stop here todo.
 
 # Abstract Class
 class FunctionSet:

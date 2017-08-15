@@ -1,0 +1,39 @@
+/**
+ * Created by sheep on 2017/8/11.
+ */
+
+// $.getJSON("data/card.json",function(config){
+//     console.log("main");
+//     for (var i in config) {
+//         console.log(i);
+//         if (config[i].type == 'chart') {
+//             init_chart(i, config[i].snap);
+//         } else if (config[i].type == 'graph') {
+//             init_graph(i, config[i].snap);
+//         }
+//     }
+// });
+
+var config = {{ config }};
+
+window.onload = function (args) {
+    console.log("main");
+    for (var i in config) {
+        console.log(i);
+        if (config[i].type == 'chart') {
+            init_chart(i, config[i].snap);
+        } else if (config[i].type == 'graph') {
+            init_graph(i, config[i].snap);
+        }
+    }
+};
+
+
+function init_chart(id, config) {
+    var chart = echarts.init(document.getElementById(id));
+    chart.setOption(config);
+}
+
+function init_graph(id, config) {
+
+}
