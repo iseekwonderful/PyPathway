@@ -1,4 +1,5 @@
-# HOTNET, KeyPathwayMiner and MAGI
+# HOTNET and MAGI
+
 from multiprocessing import Pool
 import multiprocessing as mp
 import subprocess
@@ -9,6 +10,8 @@ from ...utils import _select
 from ...utils import _cluster
 from collections import namedtuple
 from ...netviz import FromNetworkX
+import sys
+import inspect
 
 
 MAGI_RESULT = namedtuple('MAGI', ['num', 'genes', 'args', 'coExp'])
@@ -27,12 +30,14 @@ class MAGIResult:
 
 class MAGI:
     '''
-    The parallel warper of MAGI (Merge Affected Genes into Integrated networks)
+    The parallel wrapper of MAGI (Merge Affected Genes into Integrated networks)
     site: https://eichlerlab.gs.washington.edu/MAGI/
 
-    ToDO lists: 1. fill the output result in the parser
-                2. try to add information to the node
-                3. add the overview of the graph
+
+    Interfaces: 1. select_pathway
+                2. cluster
+
+    Note: All the input file are the str like file path.
 
     '''
     EXECUTABLE_PATH = '/Users/yangxu/Library/Developer/Xcode/DerivedData/MAGI-cmkybopnjlqlcidnrzkxmmycmuop/Build/Products/Debug/MAGI'
@@ -81,6 +86,20 @@ class MAGI:
 
     @staticmethod
     def select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=mp.cpu_count()):
+        '''
+        This function is the wrapper of the pathway_select wrapper, implement parallel programming using
+         multiprocessing.Pool.
+
+        :param ppi: the protein-protein network
+        :param case: the mutation list in the case
+        :param coExpId: the coExpression id list
+        :param coExpMat: the coExpression matrix
+        :param ctrl: the control mutation list
+        :param length: the length of genes
+        :param filter: the list of gene should not including in the network
+        :param process: the process count, default is the threading number.
+        :return: None, with the generated seed file in the ./cache folder
+        '''
         for x in [ppi, case, coExpId, coExpMat, ctrl, length]:
             try:
                 open(x, 'r')
@@ -101,13 +120,13 @@ class MAGI:
         pool.close()
         pool.join()
         sf = ""
+        # generate seed file
         for x in seed:
             if not x[1] in os.listdir(cache_dir):
                 raise Exception("Cannot find output file")
             sf += '{}/{}\t{}\t{}\n'.format(*x)
         with open(cache_dir + "/seeds", 'w') as fp:
             fp.write(sf)
-        # generate seed file
 
     @staticmethod
     def cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,
@@ -118,7 +137,20 @@ class MAGI:
         Please make sure seed pathways have been created via select_pathway method
 
         '/Volumes/Data/magi/StringNew_HPRD.txt', '/Users/yangxu/PyPathway/pypathway/analysis/modelling/RandomGeneList.0', '/Volumes/Data/magi/GeneCoExpresion_ID.txt', '/Volumes/Data/magi/adj1.csv.Tab.BinaryFormat', '/Users/yangxu/PyPathway/pypathway/analysis/modelling/seeds', 2, 5, 100, '0.5', '2'
-        :return:
+        :param ppi: the ppi network
+        :param coExpId: the coExpression id list
+        :param coExpMat: the coExpression matrix
+        :param upper_mutation_on_control: the max mutation allowed in the control
+        :param min_size_of_module: min size of module
+        :param max_size_of_module: max size of module
+        :param min_ratio_of_seed: For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper 0.5 was used)
+        :param minCoExpr: The minimum pair-wise coexpression value per gene allowed
+        :param avgCoExpr: The minimum average coexpression of the modules allowed
+        :param avgDensity: The minimum avergae PPI density of the modules allowed
+        :param seed: if this step is followed by select_pathway, seed is auto generated, else input the seed file path
+        :param score: if this step is followed by select_pathway, score is auto generated, else input the score file path
+
+        :return: a list of modules.
         '''
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
         seed = seed or cache_dir + '/seeds'
@@ -132,7 +164,6 @@ class MAGI:
         # read the result and return the result object.
         res = MAGI.parse_result(cache_dir + '/magi.res', ppi)
         return [MAGIResult(x[0], x[1].num, x[1].genes, x[1].args, x[1].coExp) for x in res]
-
 
     @staticmethod
     def _run_color_and_mut(args, color, mutation):
@@ -261,13 +292,52 @@ if __name__ == '__main__':
 class Hotnet2:
     '''
     optimized Warper for algorithm hotnet2
-    site: https://github.com/raphael-group/hotnet2
+    Github: https://github.com/raphael-group/hotnet2
     original paper: M.D.M. Leiserson*, F. Vandin*, H.T. Wu, J.R. Dobson, J.V. Eldridge, J.L. Thomas, A. Papoutsaki,
      Y. Kim, B. Niu, M. McLellan, M.S. Lawrence, A.G. Perez, D. Tamborero, Y. Cheng, G.A. Ryslik, N. Lopez-Bigas,
       G. Getz, L. Ding, and B.J. Raphael. (2014) Pan-Cancer Network Analysis Identifies Combinations of Rare Somatic
        Mutations across Pathways and Protein Complexes. Nature Genetics 47, 106–114 (2015).
 
     '''
-    pass
+    @staticmethod
+    def make_network(edgelist_file, gene_index_file, network_name, prefix,
+                     beta, only_permutations, output_dir, q=115, permutation_start_index=1, num_permutations=100,
+                     index_file_start_index=1, cores=1):
+        sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
+        from makeNetworkFiles import run
+        frame = inspect.currentframe()
+        args, _, _, values = inspect.getargvalues(frame)
+        arg = Hotnet2()
+        for a in args:
+            setattr(arg, a, values[a])
+        print(arg.__dict__)
+        run(arg)
+
+    @staticmethod
+    def make_heat(type, **kwargs):
+        sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
+        from makeHeatFile import *
+        type2hf = {'scores': load_direct_heat,
+                        'mutation': load_mutation_heat,
+                        'oncodrive': load_oncodrive_heat,
+                        'mutsig': load_mutsig_heat,
+                        'music': load_music_heat}:
+        if not type in type2hf
+            raise Exception("Unknown args")
+        arg = Hotnet2()
+        setattr(arg, 'heat_fn', type2hf[type])
+        for k, v in kwargs.items():
+            setattr(arg, k, v)
+        run(arg)
+
+    @staticmethod
+    def run_hotnet2():
+        pass
+
+
+
+if __name__ == '__main__':
+    Hotnet2.make_network(1, 2, 3, 4, 5, 6, 7)
+
 
 
