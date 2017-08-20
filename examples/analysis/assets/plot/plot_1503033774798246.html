@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}}, "grid": {"bottom": "3%", "left": "3%", "right": "12%", "containLabel": true}, "series": [{"name": "-lg(P-Value)", "data": [26.44818454206271, 26.44818454206271, 13.7574496543136, 13.125303415409004, 10.682551264750177, 7.227281097901088, 6.021394169141551, 4.830465817581655, 4.691316605311914, 4.426457366974158, 4.216138629717163, 4.209969396963893, 3.8700220960846847, 3.530922107082096, 3.4334663778537005], "type": "bar"}], "title": {"text": "ENRICHNET Enrichment Analysis", "subtext": "kegg"}, "yAxis": {"data": ["hsa00980:Metabolism of xenobiotics by cytochrome P450", "hsa00982:Drug metabolism - cytochrome P450", "hsa05012:Parkinson's disease", "hsa00480:Glutathione metabolism", "hsa00350:Tyrosine metabolism", "hsa00380:Tryptophan metabolism", "hsa05144:Malaria", "hsa05020:Prion diseases", "hsa05010:Alzheimer's disease", "hsa05332:Graft-versus-host disease", "hsa04020:Calcium signaling pathway", "hsa05142:Chagas disease", "hsa04080:Neuroactive ligand-receptor interaction", "hsa00330:Arginine and proline metabolism", "hsa00340:Histidine metabolism"], "type": "category"}, "xAxis": {"name": "-lg(P-Value)", "boundaryGap": [0, 0.01], "type": "value"}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

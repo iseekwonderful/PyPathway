@@ -7,9 +7,9 @@ import sys
 import time
 from xml.sax import ContentHandler, parseString
 
-from utils import environment as env
+from ..utils import environment as env
 
-from pathviz.visualize import IntegrationOptions
+from ..visualize.options import IntegrationOptions
 from .SBGNImpl import TypeNotInNestedElementListError
 from .general import Pathway as RootPathway
 

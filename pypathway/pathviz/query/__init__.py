@@ -10,6 +10,8 @@ import types
 from ...utils import IdMapping
 import os
 import wget
+import gzip
+import zipfile
 
 
 if sys.version[0] == "2":
@@ -211,11 +213,46 @@ class BioGRID(Database):
         G.plot = types.MethodType(plot, G)
         return config, G
 
-    def start(self):
-        pass
+    @staticmethod
+    def overall_graph(organism='hsa'):
+        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'caches/')
+        if not os.path.exists(cache_dir + 'biogrid'):
+            # the organism file is not exist, we have to download
+            print("Download network sets from BioGRID, it will take several minutes")
+            wget.download("https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip",
+                          cache_dir + 'biogrid.zip')
+            # unzip
+            zipref = zipfile.ZipFile(cache_dir + "biogrid.zip", 'r')
+            zipref.extractall(cache_dir + 'biogrid')
+            zipref.close()
+            #os.remove(cache_dir + 'biogrid.zip')
+        for spl in IdMapping.SPECIES:
+            if organism in spl:
+                name = spl[1].replace(' ', '_')
+                break
+        else:
+            raise Exception("Organism not found")
+        print(name)
+        for x in os.listdir(cache_dir + 'biogrid'):
+            if name.upper() in x.upper():
+                return BioGRID.load_graph_from_cache(cache_dir + 'biogrid/' + x)
+        else:
+            raise Exception("The graph for current organism not found in biogrid")
 
-    def load(self):
-        pass
+
+    @staticmethod
+    def load_graph_from_cache(path):
+        G = nx.Graph()
+        with open(path) as fp:
+            con = fp.read()
+        con = con.split("----------------------------------------------------------------------------------------------------")[-1]
+        for x in con.split("\n"):
+            if not x or x[:5] == "INTER":
+                continue
+            s = x.split("\t")
+            G.add_edge(s[2], s[3])
+        return G
+
 
 
 class STRINGSearchResults:
@@ -414,16 +451,31 @@ class STRING(Database):
 
     @staticmethod
     def overall_graph(organism='hsa'):
-        numeric_id = -1
         for spl in IdMapping.SPECIES:
             if organism in spl:
                 numeric_id = spl[-1]
                 break
         else:
             raise Exception("Organism not found")
-        url = "https://string-db.org/download/protein.links.v10.5/{}.protein.links.v10.5.txt.gz".format(numeric_id)
-        wget.download(url, out=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/cache.gz'))
-        # stop here todo.
+        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'caches/')
+        if not os.path.exists(cache_dir + 'st-{}.gz'.format(numeric_id)):
+            # download from remote
+            print("Download {} network from STRING, it may take several minutes".format(numeric_id))
+            url = "https://string-db.org/download/protein.links.v10.5/{}.protein.links.v10.5.txt.gz".format(numeric_id)
+            wget.download(url, out=cache_dir + 'st-{}.gz'.format(numeric_id))
+        return STRING.load_overall(cache_dir + 'st-{}.gz'.format(numeric_id))
+
+    @staticmethod
+    def load_overall(path):
+        with gzip.open(path) as fp:
+            con = fp.read()
+        buf = con.decode("utf8")
+        G = nx.Graph()
+        for x in buf.split("\n")[1:]:
+            if not x: continue
+            s = x.split(' ')
+            G.add_edge(s[0], s[1], {'weight': int(x[2])})
+        return G
 
 # Abstract Class
 class FunctionSet:

@@ -7,9 +7,9 @@ import time
 from xml.dom.minidom import Document
 from xml.sax import parseString, ContentHandler
 
-from utils import environment as env
+from ..utils import environment as env
 
-from pathviz.visualize import IntegrationOptions
+from ..visualize.options import IntegrationOptions
 from .general import Pathway
 
 

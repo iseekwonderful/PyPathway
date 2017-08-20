@@ -79,7 +79,7 @@ class EnrichmentResult:
 
     def plot(self, count=15, data=False, func=lambda x: -math.log2(x)):
         '''
-        Plot the chart in the output area, if it is in the CLI, this function only return a Ipython.display.HTML 
+        Plot the chart in the output area, if it is in the CLI, this function only return an Ipython.display.HTML 
         instance
         
         :param count: the count displayed in the chart, default is 15

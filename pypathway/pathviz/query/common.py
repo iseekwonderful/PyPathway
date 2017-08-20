@@ -316,7 +316,7 @@ class WiKiPathwayData(PathwayData):
 
         :return: A GPML pathway object
         '''
-        from pathviz.core import GPMLParser
+        from ..core.GPMLImpl import GPMLParser
         if not self.data:
             # retrieve it
             self.retrieve()
@@ -433,7 +433,7 @@ class KEGGPathwayData(PathwayData):
         :param proxies: if not None, proxys for requesting.
         :return: a kegg pathway object (instance of KEGGPathway).
         '''
-        from pathviz.core.KGMLImpl import KEGGParser
+        from ..core.KGMLImpl import KEGGParser
         if not self.data:
             raise Exception("Target pathway have no data in {}".format(self.organism))
         kg = KEGGParser.parse(self.data, self.png)

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"yAxis": {"type": "category", "data": ["Focal adhesion", "Alzheimer's disease", "ECM-receptor interaction", "Parkinson's disease", "Pathways in cancer", "PPAR signaling pathway", "Axon guidance", "Huntington's disease", "MAPK signaling pathway", "Fc gamma R-mediated phagocytosis", "Regulation of actin cytoskeleton", "Small cell lung cancer", "Glutamatergic synapse", "Bacterial invasion of epithelial cells", "Pathogenic Escherichia coli infection"]}, "grid": {"right": "12%", "bottom": "3%", "left": "3%", "containLabel": true}, "series": [{"type": "bar", "name": "-log(2, pGfdr)", "data": [28.87834475439018, 26.630586449365204, 25.32792696859805, 24.719501851060844, 13.677804301926303, 12.90730167988138, 10.73417847224561, 9.27572897078037, 9.27572897078037, 9.210347101370305, 7.48466760647671, 7.18352347948733, 6.147877230587218, 5.2218394258198115, 5.2218394258198115]}], "tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "title": {"text": "SPIA Enrichment Analysis", "subtext": "KEGG: hsa"}, "xAxis": {"type": "value", "boundaryGap": [0, 0.01], "name": "-log(2, pGfdr)"}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
