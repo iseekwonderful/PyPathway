@@ -6,16 +6,6 @@ import sys
 from distutils.core import setup, Extension
 
 
-
-def get_hotnet2():
-    '''
-    This function get hotnet2 from github.
-
-
-    :return:
-    '''
-
-
 try:
    import pypandoc
    readme = pypandoc.convert('README.md', 'rst')
@@ -49,7 +39,7 @@ cluster = Extension('pypathway.utils._cluster', ["./pypathway/src/cluster/_chi2.
 
 setup(
     name='pypathway',
-    version='0.2.4.2',
+    version='0.3。1',
     description="A Python package for playing with pathways",
     long_description=readme,
     author="sheep",

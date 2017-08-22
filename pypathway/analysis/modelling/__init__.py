@@ -316,19 +316,19 @@ class Hotnet2:
     @staticmethod
     def make_heat(type, **kwargs):
         sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
-        from makeHeatFile import *
-        type2hf = {'scores': load_direct_heat,
-                        'mutation': load_mutation_heat,
-                        'oncodrive': load_oncodrive_heat,
-                        'mutsig': load_mutsig_heat,
-                        'music': load_music_heat}:
-        if not type in type2hf
+        import makeHeatFile as m
+        type2hf = {'scores': m.load_direct_heat,
+                        'mutation': m.load_mutation_heat,
+                        'oncodrive': m.load_oncodrive_heat,
+                        'mutsig': m.load_mutsig_heat,
+                        'music': m.load_music_heat}
+        if not type in type2hf:
             raise Exception("Unknown args")
         arg = Hotnet2()
         setattr(arg, 'heat_fn', type2hf[type])
         for k, v in kwargs.items():
             setattr(arg, k, v)
-        run(arg)
+        m.run(arg)
 
     @staticmethod
     def run_hotnet2():

@@ -4,6 +4,8 @@ import shutil
 import time
 from xml.dom.minidom import Document
 from xml.sax import *
+import os
+import sys
 
 from ..query.common import PathwayFormat
 from ...pathviz.utils import SBGNParseException

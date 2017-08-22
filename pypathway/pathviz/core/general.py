@@ -116,7 +116,7 @@ def vertex2id(v):
 
 def data_prepare():
     import pymysql
-    con = pymysql.connect(user="root", passwd="19920819xy", db="reactome")
+    con = pymysql.connect(user="root", passwd="19920819xy", db="reactome2")
     cursor = con.cursor()
     cursor.execute("select DB_ID, representedInstance from Vertex")
     f = cursor.fetchall()

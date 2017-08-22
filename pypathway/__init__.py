@@ -1,16 +1,19 @@
-import sys
-
 # the interfaces core object exposes to users
-if sys.version[0] == "2":
+from .utils import IdMapping, GMTUtils
 
-    # the interface database query expose to users
-    pass
-else:
-    pass
+from .pathviz.query import PublicDatabase, STRING, BioGRID
 
-    # the interface database query expose to users
+from .analysis.ora import ORA, KEGG, Reactome, GO
+
+from .analysis.gsea import GSEA
+
+from .analysis.network import SPIA, Enrichnet
+
+from .analysis.modelling import MAGI, Hotnet2
+
+from .netviz import FromCYConfig, FromNetworkX
 
 
 def version():
-    return "0.24"
+    return "0.30"
 
