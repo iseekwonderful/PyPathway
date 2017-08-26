@@ -79,7 +79,6 @@ def save_diffusion_to_file( diffusion_type, diffusion_param, index_file, edge_fi
     else:
         raise NotImplementedError('Diffusion of type "%s" not implemented' % diffusion_type)
         
-    print(convert(output).keys())
     hnio.save_hdf5(output_file, convert(output))
 
 

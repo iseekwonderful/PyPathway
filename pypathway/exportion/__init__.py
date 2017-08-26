@@ -3,6 +3,56 @@ from jinja2 import Template
 import json
 from copy import deepcopy
 import shutil
+from ..netviz import FromNetworkX
+
+
+class MAGIExport:
+    @staticmethod
+    def export(res, output_dirs='.'):
+        items = []
+        json_config = {}
+        # generate the card layout
+        for i, x in enumerate(res):
+            if i % 2 == 0:
+                current = {'has1': True, 'has2': False}
+                current['F'] = {'tags': x.genes.keys(), 'id': "plot{}".format(i)}
+                if i == len(res) - 1:
+                    items.append(current)
+            else:
+                current['has2'] = True
+                current['S'] = {'tags': x.genes.keys(), 'id': "plot{}".format(i)}
+                items.append(current)
+            json_config["plot{}".format(i)] = {
+                'type': 'graph',
+                'snap': FromNetworkX(x.graph).data
+            }
+        template_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'templates', 'enrichment')
+        with open(template_path + "/card-magi.html") as fp:
+            con = fp.read()
+        t = Template(con)
+        with open(template_path + "/index.html", 'w') as fp:
+            fp.write(t.render(items=items))
+        with open(template_path + '/js/card_template') as fp:
+            con = fp.read()
+        t = Template(con)
+        with open(template_path + '/js/card.js', 'w') as fp:
+            fp.write(t.render(config=json.dumps(json_config)))
+        # save to folder
+        path = os.getcwd() + "/magi_result" if output_dirs == '.' else output_dirs + '/magi_result'
+        if os.path.exists(path):
+            # exist path, delete it
+            shutil.rmtree(path)
+        # copy
+        shutil.copytree(os.path.dirname(os.path.realpath(__file__)) + '/templates/enrichment', path)
+        os.remove(path + '/card.html')
+        os.remove(path + '/card-magi.html')
+        os.remove(path + '/enrichment_display.html')
+
+
+class Hotnet2Export:
+    @staticmethod
+    def export(result, output_dir='.'):
+        pass
 
 
 class EnrichmentExport:
@@ -39,8 +89,6 @@ class EnrichmentExport:
         os.remove(path + '/card.html')
         os.remove(path + '/enrichment_display.html')
 
-
-
     @staticmethod
     def generate_page_for_each_result(config):
         data = {}
@@ -60,7 +108,6 @@ class EnrichmentExport:
             t = Template(deepcopy(con))
             with open(template_path + "/details/{}.html".format(x['id']), 'w') as fp:
                 fp.write(t.render(table=config['detail'][i]['table']))
-
 
     @staticmethod
     def generate_page_by_config(config):

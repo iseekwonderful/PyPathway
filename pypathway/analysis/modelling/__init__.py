@@ -6,10 +6,10 @@ import subprocess
 import networkx as nx
 import re
 import os
-from ...utils import _select
-from ...utils import _cluster
 from collections import namedtuple
-from ...netviz import FromNetworkX
+# from ...utils import _select
+# from ...utils import _cluster
+# from ...netviz import FromNetworkX
 import sys
 import inspect
 
@@ -162,8 +162,8 @@ class MAGI:
                          max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
                          avgCoExpr, avgDensity, cache_dir + '/magi.res')
         # read the result and return the result object.
-        res = MAGI.parse_result(cache_dir + '/magi.res', ppi)
-        return [MAGIResult(x[0], x[1].num, x[1].genes, x[1].args, x[1].coExp) for x in res]
+        return MAGI.parse_result(cache_dir + '/magi.res', ppi)
+        # return [MAGIResult(x[0], x[1].num, x[1].genes, x[1].args, x[1].coExp) for x in res]
 
     @staticmethod
     def _run_color_and_mut(args, color, mutation):
@@ -215,8 +215,8 @@ class MAGI:
         with open(result_file) as fp:
             mg = fp.read()
         results = re.findall("\d+.+?\d+ \d+ \d+ \d+ [\.\d]+ [\.\d]+ [\.\d]+", mg, re.DOTALL)
-        ngs = [MAGI._parse_single_result(x, G) for x in results]
-        return ngs
+        res = [MAGI._parse_single_result(x, G) for x in results]
+        return [MAGIResult(x[0], x[1].num, x[1].genes, x[1].args, x[1].coExp) for x in res]
 
     @staticmethod
     def _parse_single_result(out, G):
@@ -283,12 +283,6 @@ class MAGI:
         return G
 
 
-if __name__ == '__main__':
-    # MAGI._run_color_and_mut(MAGI.TEST_ARGS, 5, 1)
-    MAGI.make_pathway(MAGI.TEST_ARGS)
-    # MAGI.cluster(*list(MAGI.CLUSTER_ARGS.values()))
-
-
 class Hotnet2:
     '''
     optimized Warper for algorithm hotnet2
@@ -301,8 +295,8 @@ class Hotnet2:
     '''
     @staticmethod
     def make_network(edgelist_file, gene_index_file, network_name, prefix,
-                     beta, only_permutations, output_dir, q=115, permutation_start_index=1, num_permutations=100,
-                     index_file_start_index=1, cores=1):
+                     beta, output_dir, only_permutations=False, Q=115, permutation_start_index=1, num_permutations=100,
+                     index_file_start_index=1, cores=-1):
         sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
         from makeNetworkFiles import run
         frame = inspect.currentframe()
@@ -314,9 +308,12 @@ class Hotnet2:
         run(arg)
 
     @staticmethod
-    def make_heat(type, **kwargs):
+    def make_heat(**kwargs):
         sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
         import makeHeatFile as m
+        type = kwargs.get('type')
+        if not type:
+            raise Exception('heat type is necessary')
         type2hf = {'scores': m.load_direct_heat,
                         'mutation': m.load_mutation_heat,
                         'oncodrive': m.load_oncodrive_heat,
@@ -328,16 +325,40 @@ class Hotnet2:
         setattr(arg, 'heat_fn', type2hf[type])
         for k, v in kwargs.items():
             setattr(arg, k, v)
+        for k, v in {'min_heat_score': 0, "gene_filter_file": None,
+                     'min_freq': 1, 'fm_threshold': 0.2, 'cis_threshold': 0.2,
+                     'cis': False, 'threshold': 1.0, 'max_heat': 15}.items():
+            setattr(arg, k, v)
         m.run(arg)
 
     @staticmethod
-    def run_hotnet2():
-        pass
-
+    def run_hotnet2(network_files, permuted_network_paths, heat_files, deltas=None,
+                    display_score_fil=None, display_name_file=None, output_hierarchy=False,
+                    network_permutations=100, consensus_permutations=0, heat_permutations=100,
+                    output_directory='.', num_cores=-1, min_cc_size=2, verbose=1,
+                    display_score_file=None):
+        sys.path.append(os.path.dirname(os.path.realpath(__file__)) + "/third_party/hotnet2")
+        from HotNet2 import run
+        frame = inspect.currentframe()
+        args, _, _, values = inspect.getargvalues(frame)
+        arg = Hotnet2()
+        for a in args:
+            setattr(arg, a, values[a])
+        print(arg.__dict__)
+        run(arg)
 
 
 if __name__ == '__main__':
-    Hotnet2.make_network(1, 2, 3, 4, 5, 6, 7)
-
+    path = "/Volumes/Data/hotnet2/paper/"
+    Hotnet2.run_hotnet2(network_files=[path + 'data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5',
+                                       path + 'data/networks/irefindex9/irefindex9_ppr_0.45.h5',
+                                       path + 'data/networks/multinet/multinet_ppr_0.5.h5'],
+                        permuted_network_paths=[
+                            path + 'data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5',
+                            path + 'data/networks/irefindex9/permuted/irefindex9_ppr_0.45_##NUM##.h5',
+                            path + 'data/networks/multinet/permuted/multinet_ppr_0.5_##NUM##.h5'],
+                        heat_files=[path + 'data/heats/pan12.gene2freq.json',
+                                    path + 'data/heats/pan12.gene2mutsig.json'],
+                        output_directory='result')
 
 

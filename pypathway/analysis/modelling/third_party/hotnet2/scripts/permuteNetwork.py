@@ -3,11 +3,16 @@
 # Load required modules
 import sys, os, networkx as nx, multiprocessing as mp
 sys.path.append(os.path.normpath(os.path.dirname(os.path.realpath(__file__)) + '/../'))
+from traceback import format_exc
 
 try:
-    from ..hotnet2.fast_swap import node_swap
+    from pypathway.analysis.modelling.third_party.hotnet2.hotnet2.fast_swap import node_swap
 except:
+    print(format_exc())
+    print("slow node swap")
     node_swap = None
+else:
+    print("fast node swap")
 
 # Parse arguments
 def get_parser():

@@ -401,7 +401,32 @@ def load_hdf5(file_path, keys=None):
     else:
         dictionary = {key:f[key].value for key in f}
     f.close()
+    # ['nodes', 'network_name', 'beta', 'PPR', 'edges']
+    # dictionary = convert_back(dictionary)
+    dictionary['nodes'] = [x.decode('utf8') for x in dictionary['nodes']]
+    dictionary['network_name'] = dictionary['network_name'].decode('utf8')
+    dictionary['edges'] = dictionary['edges'].astype(str)
     return dictionary
+
+
+def convert_back(item):
+    if type(item) == bytes:
+        return item.decode("utf8")
+    elif type(item) == list:
+        return [convert_back(x) for x in item]
+    elif type(item) == tuple:
+        return tuple([convert_back(x) for x in item])
+    elif type(item) == dict:
+        return {convert_back(k): convert_back(v) for k, v in item.items()}
+    elif type(item) == np.ndarray:
+        return item.astype('str')
+    elif type(item) == float or type(item) == int or type(item) == str:
+        return item
+    elif type(item) == np.float64 or type(item) == np.ndarray:
+        return item
+    else:
+        raise Exception("Unknown type: {}".format(type(item)))
+
 
 def save_hdf5(file_path, dictionary, compression=False):
     """
@@ -419,8 +444,6 @@ def save_hdf5(file_path, dictionary, compression=False):
     """
     f = h5py.File(file_path, 'a')
     for key in dictionary:
-        print("type of key {}".format(type(key)))
-        key
         if key in f:
             del f[key]
         if compression:

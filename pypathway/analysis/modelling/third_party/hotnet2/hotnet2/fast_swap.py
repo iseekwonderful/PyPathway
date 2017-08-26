@@ -53,12 +53,12 @@ def translate(Graph):
     #     adjacency = [[0 for _ in range(length)] for _ in range(length)]
     adjacency = np.zeros((length, length)).astype(np.int)
     for i, n in enumerate(Graph.node):
-        id2_node[n] = i
+        id2_node[int(n)] = i
     # for k, v in Graph.edge.items():
     #         for e in v:
     #             adjacency[id2_node[k]][id2_node[e]] = 1
     for x in Graph.edges():
-        i1, i2 = id2_node[x[0]], id2_node[x[1]]
+        i1, i2 = id2_node[int(x[0])], id2_node[int(x[1])]
         adjacency[i1][i2] = 1
         adjacency[i2][i1] = 1
     ids = list(id2_node.keys())
@@ -80,12 +80,12 @@ def parse_adjacency_matrix(id2name, matrix, count):
     for i in range(len(ids)):
         for j in range(len(ids)):
             if matrix[len(ids) * i + j] == 1:
-                rG.add_edge(id2node[i], id2node[j])
+                rG.add_edge(str(id2node[i]), str(id2node[j]))
     return rG
 
 
 def node_swap(G, nswap, windows_threshold=3):
     id2node, matrix, count = translate(G)
-    ids, mat, count = _node.swap(id2node, matrix, count, nswap, windows_threshold)
+    ids, mat, count = _node.swap(id2node, matrix, count, int(nswap), windows_threshold)
     NG = parse_adjacency_matrix(ids, mat, count)
     return NG
