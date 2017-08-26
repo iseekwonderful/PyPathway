@@ -2,6 +2,9 @@
 
 integrated toolkit for pathway based analysis
 
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+
+
 ## Installation
 
 ## Overview

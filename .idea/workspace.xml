@@ -2,7 +2,527 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ebf05c-6ab4-48f5-890d-639bbff756e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/pynet.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/PyPathway.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/PKG-INFO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/SOURCES.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/dependency_links.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/not-zip-safe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/requires.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway.egg-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/.idea/preferred-vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/.idea/pypathway.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.gsea.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.heatmap.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/gsea/images/gseapy.gsea.kegg_2016.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/bin/readme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/seeds" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/OLD-README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/consensus.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/delta.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/heat.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix2.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/run.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/significance.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple2.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/website.config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.cna" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.dname" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.dscore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.heat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.snv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_edgelist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_edgelist2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_gene_index.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/tested_genes.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/tested_samples.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnap.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_fortran.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/fortran/fortran_routines.f95" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/union_find.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/hierarchy.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/subnetworks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2mutsig.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_index_gene" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_edge_list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_index_gene" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/paper_commands.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/consensus.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/consensus.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkHotNet2Consensus.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/referenceConsensusResults.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/runAndConvert.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/server.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/server.py.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/subnetworks.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/network/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/network/spia_data/hsa.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/network/spia_data/mmu.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/ora/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/ora/kegg_set/hsa_kegg_gs.gmt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/ora/obo/assoc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/card_with_tab" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/selector" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/slider" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/switch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/card/card" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/card/row" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card-magi.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/css/local.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/css/materialize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/card.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/data.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/data2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/details/plot0.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/details/plot1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/enrichment_display.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_template" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-cose-bilkent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-cxtmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-dagre.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/dagre.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display3.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display_template" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-2.0.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/materialize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/vivagraph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/ReactomeOverview.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/data/test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/data/test2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-cose-bilkent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-cxtmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-dagre.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/dagre.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-2.0.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui-1.10.3.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui-1.10.3.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/vivagraph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/test.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/test2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/cytoscape-cxtmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/vivagraph.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/netviz/goviz.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/BioPAXImpl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/GPMLImpl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/KGMLImpl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/SBGNImpl.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/core/general.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/query/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/query/common.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/query/network.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/GPML.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/bootstrap/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery-ui-1.10.3.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/font/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/interface_gpml.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/interface_gpml_back.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/pathway.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/custom-element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/echarts.common.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery-2.0.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery-ui-1.10.3.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/lib/custom-element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/mithril.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/polyfills.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.core.min.mod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.core.mod.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.custom-element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.custom-element.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/lib/custom-element.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/bootstrap/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery-ui-1.10.3.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery.qtip.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/cytoscape-panzoom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/cytoscape.js-panzoom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/cytoscape-qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/cytoscape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/echarts.common.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery-2.0.3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery-ui-1.10.3.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery.qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg_data/custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg_data/interface_kegg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/cytoscape-context-menus.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/cytoscape.js-panzoom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/flat-ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_loading.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_ne.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_nw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_s.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_se.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_sw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_w.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_main.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_over.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery-ui-1.10.3.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery.fancybox-1.3.4.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery.qtip.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/FileSaver.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/backbone-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-clipboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-context-menus.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-cose-bilkent.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-edge-bend-editing.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-expand-collapse.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-panzoom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-qtip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-undo-redo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-view-utilities.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/echarts.common.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.expander-min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.noty.packaged.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.qtip.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/underscore.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/add-remove-utilities.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/json-to-sbgnml-converter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-element-utilities.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-filtering.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-style-rules.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgnml-to-json-converter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_flat_10_000000_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_0B9BCD_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_1ABC9C_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_222222_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_228ef1_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_90B6CB_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ef8c08_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffd27a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/sbgn-viz.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/data_test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/pathway.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/add-remove-action-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/biogene-info.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/common-element-properties.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/general-action-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/general-sample-app-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/interface.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/register-undo-redo-actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-global-variables.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-menu-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-mode-handler.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/php/BioGeneQuery.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/add.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-bottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-middle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-center.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/cbio.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/clone_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/delete.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/drag-target.cur" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/i-vis.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/interaction_legend_sbgn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/loading-small.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/node_legend_sbgn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/open-lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/search.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/collapseselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesimple.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesmart.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/expandselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/fitincanvas.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/hideselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/highlightneighborsofselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layout-cose.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layoutproperties.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/load.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/new.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/properties.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/redo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/removehighlights.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/save.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/saveasimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/select.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/showselected.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/undo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/CaM-CaMK_dependent_signaling_to_the_nucleus.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/activated_stat1alpha_induction_of_the_irf1_gene.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/atm_mediated_phosphorylation_of_repair_proteins.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/glycolysis.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/insulin-like_growth_factor_signaling.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/mapk_cascade.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/neuronal_muscle_signalling.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/polyq_proteins_interference.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/vitamins_b6_activation_to_pyridoxal_phosphate.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/SVG/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/assets/chart/plot.j2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/assets/paxtools-4.3.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/assets/raw.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/assets/reactome/species_list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/assets/reactome/svg_list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/static/box.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/visualize/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/pathviz/visualize/options.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/cluster/_chi2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/cluster/clustering.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/cluster/clustering.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/_chi2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/heap.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/heap.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/main.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/main.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/randpick.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/node_src/randpick.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/select/PPI_Graph.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/select/PPI_Graph.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/select/_chi2.c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/select/color_coding.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/src/select/color_coding.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/tests/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_cluster.cpython-35m-darwin.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_node.cpython-35m-darwin.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_select.cpython-35m-darwin.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/datasets/ALL/ALL" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/datasets/ColorectalCancer/all" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/datasets/ColorectalCancer/de" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,47 +542,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotNet2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RandomGeneList.0" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/RandomGeneList.0">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="338" column="43" lean-forward="false" selection-start-line="338" selection-start-column="43" selection-end-line="338" selection-end-column="43" />
-              <folding>
-                <element signature="e#19#51#0" expanded="true" />
-                <element signature="e#396#668#0" expanded="false" />
-                <element signature="e#687#12131#0" expanded="false" />
-                <element signature="e#8055#8768#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="68">
-                <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="15" />
+                <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="53" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -74,17 +559,17 @@
         <entry file="file://$PROJECT_DIR$/tox.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pynet/analysis/propagation/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+            <state relative-caret-position="561">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -92,8 +577,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AUTHORS.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AUTHORS.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CONTRIBUTING.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-544">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compile.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compile.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="setup_c.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py">
+        <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -103,7 +628,7 @@
         </entry>
       </file>
       <file leaf-file-name="c_routines.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c">
+        <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -113,20 +638,10 @@
         </entry>
       </file>
       <file leaf-file-name="c_routines.pyf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf">
+        <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="card" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/card/card">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -202,6 +717,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" />
         <option value="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
+        <option value="$USER_HOME$/pynet/LICENSE" />
+        <option value="$USER_HOME$/pynet/README.md" />
       </list>
     </option>
   </component>
@@ -237,43 +754,11 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
+              <option name="myItemId" value="pynet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -660,46 +1145,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/static/assets/raw.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-          <folding>
-            <element signature="e#78#88#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/Readme.md" />
-    <entry file="file://$PROJECT_DIR$/pypathway/utils/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pynet/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/core/general.py">
+    <entry file="file://$PROJECT_DIR$/pynet/pathviz/core/general.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1989">
           <caret line="119" column="25" lean-forward="false" selection-start-line="119" selection-start-column="25" selection-end-line="119" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/core/SBGNImpl.py">
+    <entry file="file://$PROJECT_DIR$/pynet/pathviz/core/SBGNImpl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -765,42 +1225,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
           <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/index.html">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/cache/magi.res">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16065">
           <caret line="945" column="21" lean-forward="false" selection-start-line="945" selection-start-column="21" selection-end-line="945" selection-end-column="21" />
@@ -814,35 +1274,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/netviz/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pynet/netviz/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3349">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/netviz/assets/lib/js/main.js">
+    <entry file="file://$PROJECT_DIR$/pynet/netviz/assets/lib/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2635">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/main.js">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/details/plot1.html">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display3.js">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -850,21 +1310,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_2.js" />
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display_template">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display_template">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3128">
           <caret line="184" column="19" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="208" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card.html">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/card.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="34" lean-forward="false" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card-magi.html">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/card-magi.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="77" column="42" lean-forward="false" selection-start-line="77" selection-start-column="42" selection-end-line="77" selection-end-column="42" />
@@ -872,28 +1332,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/MAGI-card.html" />
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py.bak">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
           <caret line="94" column="43" lean-forward="false" selection-start-line="94" selection-start-column="43" selection-end-line="94" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_template">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card_template">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="2" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -901,7 +1361,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7208">
           <caret line="427" column="0" lean-forward="false" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
@@ -909,7 +1369,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card.js">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2635">
           <caret line="155" column="9" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="172" selection-end-column="1" />
@@ -917,7 +1377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -933,7 +1393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
@@ -941,17 +1401,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeHeatFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="41" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pynet/pathviz/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -959,7 +1419,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/exportion/templates/card/card">
+    <entry file="file://$PROJECT_DIR$/pynet/exportion/templates/card/card">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -967,7 +1427,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/RandomGeneList.0">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/RandomGeneList.0">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -975,7 +1435,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="50" column="52" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="52" />
@@ -983,12 +1443,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="338" column="43" lean-forward="false" selection-start-line="338" selection-start-column="43" selection-end-line="338" selection-end-column="43" />
           <folding>
-            <element signature="e#19#51#0" expanded="true" />
+            <element signature="e#19#51#0" expanded="false" />
             <element signature="e#396#668#0" expanded="false" />
             <element signature="e#687#12131#0" expanded="false" />
             <element signature="e#8055#8768#0" expanded="false" />
@@ -996,7 +1456,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1004,7 +1464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1012,10 +1472,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf">
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pynet/analysis/propagation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUTHORS.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compile.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1024,28 +1534,10 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="68">
-            <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="15" />
+            <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="53" />
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tox.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
