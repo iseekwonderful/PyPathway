@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ebf05c-6ab4-48f5-890d-639bbff756e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PyPathway.iml" afterPath="$PROJECT_DIR$/.idea/PyPathway.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/MAGI-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/MAGI-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/Hotnet2.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/Hotnet2.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/MAGI.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/MAGI.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/caches/nx_plot/data/test2.json" afterPath="$PROJECT_DIR$/examples/analysis/caches/nx_plot/data/test2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/exportion/__init__.py" afterPath="$PROJECT_DIR$/pypathway/exportion/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/index.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_template" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_template" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,6 +57,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="15" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tox.ini" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tox.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1377">
+              <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="setup_c.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,43 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c_routines.pyf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="c_routines.pyf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
               <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="makeHeatFile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pypathway/pathviz/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -216,6 +201,7 @@
         <option value="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" />
+        <option value="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
       </list>
     </option>
   </component>
@@ -288,146 +274,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modelling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="networks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hint+hi2012_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="networks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hint+hi2012_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="permuted" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -814,20 +660,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/core/BioPAXImpl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2910">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/pathviz/static/assets/raw.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1085,17 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="15" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1196,6 +1017,35 @@
         <state relative-caret-position="408">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="15" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="41" lean-forward="true" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
