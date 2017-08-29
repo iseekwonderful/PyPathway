@@ -1,0 +1,426 @@
+{
+    "parameters": {
+        "network_name": "irefindex9",
+        "display_name_file": null,
+        "output_directory": "result",
+        "network_files": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/irefindex9_ppr_0.45.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/multinet_ppr_0.5.h5"
+        ],
+        "heat_name": "pan12.freq",
+        "delta": 0.00030232200102931904,
+        "consensus_permutations": 0,
+        "permuted_network_paths": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/permuted/irefindex9_ppr_0.45_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/permuted/multinet_ppr_0.5_##NUM##.h5"
+        ],
+        "heat_files": [
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2freq.json",
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2mutsig.json"
+        ],
+        "output_hierarchy": false,
+        "num_cores": -1,
+        "heat_permutations": 100,
+        "display_score_file": null,
+        "verbose": 1,
+        "deltas": null,
+        "min_cc_size": 2,
+        "display_score_fil": null,
+        "network_permutations": 100
+    },
+    "sizes": {
+        "2": 67,
+        "3": 11,
+        "6": 2
+    },
+    "components": [
+        [
+            "E2F3",
+            "KDM6A",
+            "MLL2",
+            "MLL3",
+            "N4BP2",
+            "PROSER1"
+        ],
+        [
+            "EIF2AK1",
+            "KRAS",
+            "PIK3CA",
+            "RASGRF2",
+            "RGL1",
+            "VARS2"
+        ],
+        [
+            "ADAMTS13",
+            "F8",
+            "PROS1"
+        ],
+        [
+            "ARID1A",
+            "ARID2",
+            "PBRM1"
+        ],
+        [
+            "ATXN7L1",
+            "TTC28",
+            "ZNF862"
+        ],
+        [
+            "CCND1",
+            "CDKN2A",
+            "TP53"
+        ],
+        [
+            "DHX37",
+            "FNBP4",
+            "PLXNA2"
+        ],
+        [
+            "KIAA1549",
+            "MBD5",
+            "MYO5B"
+        ],
+        [
+            "LAMB2",
+            "LAMC1",
+            "NID2"
+        ],
+        [
+            "PAX8",
+            "RSBN1",
+            "UNK"
+        ],
+        [
+            "PDGFC",
+            "PDGFRA",
+            "SHF"
+        ],
+        [
+            "PDS5B",
+            "STAG2",
+            "WAPAL"
+        ],
+        [
+            "SMG1",
+            "SMG5",
+            "SMG7"
+        ],
+        [
+            "ABP1",
+            "FGD1"
+        ],
+        [
+            "AHCTF1",
+            "NUP160"
+        ],
+        [
+            "ANGPT1",
+            "ANGPT2"
+        ],
+        [
+            "ANKRD44",
+            "USP6"
+        ],
+        [
+            "ANKRD6",
+            "AXIN2"
+        ],
+        [
+            "ANO8",
+            "COQ9"
+        ],
+        [
+            "AQR",
+            "USP28"
+        ],
+        [
+            "BANK1",
+            "ITPR2"
+        ],
+        [
+            "BBS9",
+            "TTC8"
+        ],
+        [
+            "BCLAF1",
+            "CHD1"
+        ],
+        [
+            "BOC",
+            "CDON"
+        ],
+        [
+            "CAPN3",
+            "DYSF"
+        ],
+        [
+            "CD200",
+            "CD200R1"
+        ],
+        [
+            "CD86",
+            "MARCH8"
+        ],
+        [
+            "CEP97",
+            "KIF24"
+        ],
+        [
+            "CFB",
+            "CFP"
+        ],
+        [
+            "CHD6",
+            "NFE2L2"
+        ],
+        [
+            "CHID1",
+            "STAB1"
+        ],
+        [
+            "CLASP1",
+            "CLIP2"
+        ],
+        [
+            "COL5A1",
+            "COL5A2"
+        ],
+        [
+            "CPT2",
+            "MBTPS2"
+        ],
+        [
+            "DAGLA",
+            "GGCT"
+        ],
+        [
+            "DFNB31",
+            "LRP4"
+        ],
+        [
+            "DGKD",
+            "DGKH"
+        ],
+        [
+            "DICER1",
+            "PIWIL4"
+        ],
+        [
+            "DMXL2",
+            "WDR7"
+        ],
+        [
+            "DNAJC2",
+            "HSPA14"
+        ],
+        [
+            "DPYD",
+            "NOP14"
+        ],
+        [
+            "E2F7",
+            "E2F8"
+        ],
+        [
+            "EBF1",
+            "ZNF521"
+        ],
+        [
+            "EGFR",
+            "ERBB2"
+        ],
+        [
+            "EMILIN1",
+            "EMILIN2"
+        ],
+        [
+            "ENGASE",
+            "ZP3"
+        ],
+        [
+            "FOXA1",
+            "LETM1"
+        ],
+        [
+            "FZD3",
+            "GIPC3"
+        ],
+        [
+            "GTPBP5",
+            "KIAA1432"
+        ],
+        [
+            "HECTD3",
+            "TRIOBP"
+        ],
+        [
+            "HELZ",
+            "SMYD3"
+        ],
+        [
+            "HERC4",
+            "HERC6"
+        ],
+        [
+            "HK3",
+            "HPGDS"
+        ],
+        [
+            "HPS1",
+            "HPS4"
+        ],
+        [
+            "IL12RB1",
+            "IL12RB2"
+        ],
+        [
+            "IL17RA",
+            "IL17RC"
+        ],
+        [
+            "ITGAX",
+            "MIA3"
+        ],
+        [
+            "ITPR3",
+            "TRPM2"
+        ],
+        [
+            "JAG1",
+            "NOTCH3"
+        ],
+        [
+            "KNTC1",
+            "ZWILCH"
+        ],
+        [
+            "LPP",
+            "SHPRH"
+        ],
+        [
+            "MAST3",
+            "PTEN"
+        ],
+        [
+            "MAU2",
+            "NIPBL"
+        ],
+        [
+            "MKS1",
+            "TMEM67"
+        ],
+        [
+            "MMAA",
+            "MUT"
+        ],
+        [
+            "MTM1",
+            "MTMR12"
+        ],
+        [
+            "NCAPD3",
+            "NCAPH2"
+        ],
+        [
+            "NEIL1",
+            "POLB"
+        ],
+        [
+            "NEO1",
+            "UNC5B"
+        ],
+        [
+            "NRP2",
+            "PLXNA1"
+        ],
+        [
+            "ODF2L",
+            "PIPOX"
+        ],
+        [
+            "PHF8",
+            "ZNF711"
+        ],
+        [
+            "POLG",
+            "POLG2"
+        ],
+        [
+            "PTCH1",
+            "SMO"
+        ],
+        [
+            "RALGAPA2",
+            "RALGAPB"
+        ],
+        [
+            "SLC4A4",
+            "SLC4A7"
+        ],
+        [
+            "TFEB",
+            "TFEC"
+        ],
+        [
+            "TLR7",
+            "TLR8"
+        ],
+        [
+            "TRO",
+            "TROAP"
+        ],
+        [
+            "ZNF202",
+            "ZNF473"
+        ]
+    ],
+    "statistics": {
+        "2": {
+            "observed": 80,
+            "pval": 0.91,
+            "expected": 89.85
+        },
+        "3": {
+            "observed": 13,
+            "pval": 0.74,
+            "expected": 15.48
+        },
+        "4": {
+            "observed": 2,
+            "pval": 0.87,
+            "expected": 3.81
+        },
+        "5": {
+            "observed": 2,
+            "pval": 0.33,
+            "expected": 1.31
+        },
+        "6": {
+            "observed": 2,
+            "pval": 0.11,
+            "expected": 0.52
+        },
+        "7": {
+            "observed": 0,
+            "pval": 1.0,
+            "expected": 0.19
+        },
+        "8": {
+            "observed": 0,
+            "pval": 1.0,
+            "expected": 0.11
+        },
+        "9": {
+            "observed": 0,
+            "pval": 1.0,
+            "expected": 0.08
+        },
+        "10": {
+            "observed": 0,
+            "pval": 1.0,
+            "expected": 0.04
+        }
+    }
+}

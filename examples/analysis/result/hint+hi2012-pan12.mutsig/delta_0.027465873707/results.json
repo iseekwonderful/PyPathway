@@ -1,0 +1,190 @@
+{
+    "components": [
+        [
+            "AKT1",
+            "APC",
+            "ARID1A",
+            "ASXL1",
+            "ASXL2",
+            "ATM",
+            "BAP1",
+            "BRAF",
+            "BRCA1",
+            "BRCA2",
+            "CCND1",
+            "CDKN1B",
+            "CHD4",
+            "DDX5",
+            "EGFR",
+            "ERBB2",
+            "ERBB2IP",
+            "GIGYF2",
+            "HRAS",
+            "KRAS",
+            "MAP2K4",
+            "MAP3K1",
+            "MSH6",
+            "MTOR",
+            "MYH10",
+            "NRAS",
+            "PBRM1",
+            "PIK3CA",
+            "PIK3R1",
+            "PLCE1",
+            "PTEN",
+            "RAD21",
+            "RASA1",
+            "RB1",
+            "SGK1",
+            "SMARCA4",
+            "SMARCB1",
+            "SMC3",
+            "STAG2",
+            "STK11",
+            "TSC1",
+            "VHL"
+        ],
+        [
+            "B2M",
+            "CD1D",
+            "HLA-A",
+            "HLA-B"
+        ],
+        [
+            "FAM101A",
+            "FBXW7",
+            "KLF5",
+            "NOTCH1"
+        ],
+        [
+            "KEAP1",
+            "NFE2L2",
+            "PTMA",
+            "WAC"
+        ],
+        [
+            "CREBBP",
+            "EP300",
+            "TP53"
+        ],
+        [
+            "GPS2",
+            "NCOR1",
+            "TBL1XR1"
+        ],
+        [
+            "KDM6A",
+            "MLL2",
+            "MLL3"
+        ],
+        [
+            "POLE",
+            "SP3",
+            "STK19"
+        ],
+        [
+            "CAB39L",
+            "MX1"
+        ],
+        [
+            "CBFB",
+            "RUNX1"
+        ],
+        [
+            "CDH1",
+            "CTNND1"
+        ],
+        [
+            "CDKN2A",
+            "NPM1"
+        ],
+        [
+            "MYD88",
+            "SPOP"
+        ],
+        [
+            "SMAD2",
+            "SMAD4"
+        ]
+    ],
+    "statistics": {
+        "2": {
+            "observed": 14,
+            "pval": 0.08,
+            "expected": 9.42
+        },
+        "3": {
+            "observed": 8,
+            "pval": 0.0,
+            "expected": 1.92
+        },
+        "4": {
+            "observed": 4,
+            "pval": 0.0,
+            "expected": 0.63
+        },
+        "5": {
+            "observed": 1,
+            "pval": 0.16,
+            "expected": 0.16
+        },
+        "6": {
+            "observed": 1,
+            "pval": 0.06,
+            "expected": 0.06
+        },
+        "7": {
+            "observed": 1,
+            "pval": 0.03,
+            "expected": 0.03
+        },
+        "8": {
+            "observed": 1,
+            "pval": 0.01,
+            "expected": 0.01
+        },
+        "9": {
+            "observed": 1,
+            "pval": 0.0,
+            "expected": 0.0
+        },
+        "10": {
+            "observed": 1,
+            "pval": 0.0,
+            "expected": 0.0
+        }
+    },
+    "parameters": {
+        "delta": 0.02746587370697013,
+        "heat_permutations": 100,
+        "num_cores": 8,
+        "display_score_file": null,
+        "network_name": "hint+hi2012",
+        "network_files": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5"
+        ],
+        "min_cc_size": 2,
+        "verbose": 1,
+        "permuted_network_paths": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5"
+        ],
+        "output_directory": "result",
+        "deltas": null,
+        "heat_files": [
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2freq.json",
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2mutsig.json"
+        ],
+        "display_name_file": null,
+        "heat_name": "pan12.mutsig",
+        "network_permutations": 100,
+        "display_score_fil": null,
+        "output_hierarchy": false,
+        "consensus_permutations": 0
+    },
+    "sizes": {
+        "42": 1,
+        "3": 4,
+        "4": 3,
+        "2": 6
+    }
+}

@@ -20,7 +20,7 @@ def random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -
     r = A
     last_but_one = heat.copy()
     n = 1e6 if n == -1 else n
-    for i in range(n):
+    for i in range(int(n)):
         heat = np.dot(heat, A)
         if np.linalg.norm(np.subtract(last_but_one, heat), 1) < threshold:
             break
@@ -66,33 +66,24 @@ def random_walk_with_restart(G: nx.Graph, heat: list, rp: float, n: int = -1, th
     return GG
 
 
-def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:
+def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int) -> nx.Graph:
     '''
     Perform the diffusion kernel algorithm in a Graph object G and heat toward stable state
 
     :param G: the undirected graph G
     :param heat: the heat vector, should have same length with G
-    :param n: the repeat times, if n is -1, it will seek the steady state
+    :param n: the repeat times
     :param rp: restart probability.
     :param threshold: the threshold to check the convergence of the heat, if not n == -1, the loop will stop when the
     threshold is reached
     :return: the graph with heat property in the node's property
     '''
     A = nx.to_numpy_matrix(G)
-    D = np.diag(list(G.degree().value()))
-    W = _l1_norm(A - D)
-    print(W)
-    if n == -1:
-        sim = la.expm(rp * W)
-        h = np.dot(heat, sim)
-    else:
-        last_but_one = heat.copy()
-        for i in range(n):
-            heat = np.dot(heat, W)
-            if np.linalg.norm(np.subtract(last_but_one, heat), 1) < threshold:
-                break
-            last_but_one = heat.copy()
-        h = heat
+    D = np.diag(list(G.degree().values()))
+    L = D - A
+    I = np.eye(len(G))
+    sim = (I - rp * L / n) ** n
+    h = np.dot(heat, np.array(sim))
     GG = copy.deepcopy(G)
     for n, v in zip(list(GG.node.keys()), h):
         GG.node[n]['heat'] = v

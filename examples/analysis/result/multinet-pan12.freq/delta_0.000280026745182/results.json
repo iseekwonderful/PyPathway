@@ -1,0 +1,397 @@
+{
+    "parameters": {
+        "network_name": "multinet",
+        "display_name_file": null,
+        "output_directory": "result",
+        "network_files": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/irefindex9_ppr_0.45.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/multinet_ppr_0.5.h5"
+        ],
+        "heat_name": "pan12.freq",
+        "delta": 0.00028002674518193564,
+        "consensus_permutations": 0,
+        "permuted_network_paths": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/permuted/irefindex9_ppr_0.45_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/permuted/multinet_ppr_0.5_##NUM##.h5"
+        ],
+        "heat_files": [
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2freq.json",
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2mutsig.json"
+        ],
+        "output_hierarchy": false,
+        "num_cores": -1,
+        "heat_permutations": 100,
+        "display_score_file": null,
+        "verbose": 1,
+        "deltas": null,
+        "min_cc_size": 2,
+        "display_score_fil": null,
+        "network_permutations": 100
+    },
+    "sizes": {
+        "34": 1,
+        "3": 7,
+        "4": 5,
+        "2": 52
+    },
+    "components": [
+        [
+            "AGBL2",
+            "BRAF",
+            "CCAR1",
+            "CCDC88A",
+            "CCND1",
+            "CDKN2A",
+            "CHD8",
+            "CUL7",
+            "DAB2IP",
+            "EPPK1",
+            "GNL3L",
+            "HECW2",
+            "IWS1",
+            "KRAS",
+            "MAGI3",
+            "MMRN1",
+            "PIK3CA",
+            "PLEKHA8",
+            "PRDM2",
+            "PRKRIR",
+            "PTEN",
+            "PTPN14",
+            "PTPRB",
+            "RASGRF2",
+            "RIN2",
+            "RNF20",
+            "SETD2",
+            "SMTN",
+            "TEP1",
+            "TP53",
+            "TRIP12",
+            "TTLL5",
+            "WT1",
+            "ZMIZ1"
+        ],
+        [
+            "ADNP",
+            "ARID1A",
+            "ARID2",
+            "PBRM1"
+        ],
+        [
+            "ANGPT1",
+            "ANGPT2",
+            "TEK",
+            "TIE1"
+        ],
+        [
+            "ARHGEF11",
+            "ARHGEF12",
+            "PLXNB2",
+            "PLXNB3"
+        ],
+        [
+            "CCNE1",
+            "FBXW7",
+            "NOTCH4",
+            "SHPRH"
+        ],
+        [
+            "PDS5B",
+            "STAG1",
+            "STAG2",
+            "WAPAL"
+        ],
+        [
+            "DMXL2",
+            "RAB3GAP1",
+            "WDR7"
+        ],
+        [
+            "F8",
+            "LMAN1",
+            "PROS1"
+        ],
+        [
+            "HERC3",
+            "HERC4",
+            "HERC6"
+        ],
+        [
+            "HLA-F",
+            "LILRB1",
+            "LILRB2"
+        ],
+        [
+            "KDM6A",
+            "MLL2",
+            "MLL3"
+        ],
+        [
+            "PPFIA1",
+            "PTPRF",
+            "TRIO"
+        ],
+        [
+            "SEC23B",
+            "SEC24C",
+            "SEC24D"
+        ],
+        [
+            "AASDH",
+            "AASS"
+        ],
+        [
+            "ACBD3",
+            "GOLGB1"
+        ],
+        [
+            "AMIGO1",
+            "AMIGO3"
+        ],
+        [
+            "ARFGEF1",
+            "ARFGEF2"
+        ],
+        [
+            "ARHGEF9",
+            "GPHN"
+        ],
+        [
+            "BOC",
+            "CDON"
+        ],
+        [
+            "CADM1",
+            "EPB41L3"
+        ],
+        [
+            "CALCRL",
+            "CRCP"
+        ],
+        [
+            "CAND2",
+            "UBE3C"
+        ],
+        [
+            "CD1D",
+            "P4HTM"
+        ],
+        [
+            "CLASP1",
+            "CLIP2"
+        ],
+        [
+            "COG5",
+            "COG7"
+        ],
+        [
+            "CUX1",
+            "ELAC2"
+        ],
+        [
+            "DCBLD2",
+            "SEMA4B"
+        ],
+        [
+            "DICER1",
+            "PIWIL4"
+        ],
+        [
+            "DYNC2H1",
+            "DYNC2LI1"
+        ],
+        [
+            "ECI1",
+            "ECI2"
+        ],
+        [
+            "EMILIN1",
+            "EMILIN2"
+        ],
+        [
+            "FAM160A2",
+            "RTN1"
+        ],
+        [
+            "FPGT",
+            "FUK"
+        ],
+        [
+            "FURIN",
+            "PACS1"
+        ],
+        [
+            "GCA",
+            "LCP1"
+        ],
+        [
+            "HECTD3",
+            "TRIOBP"
+        ],
+        [
+            "HELZ",
+            "SMYD3"
+        ],
+        [
+            "IGF2R",
+            "PLIN3"
+        ],
+        [
+            "INADL",
+            "MPP5"
+        ],
+        [
+            "ITGA1",
+            "TLN1"
+        ],
+        [
+            "ITPR1",
+            "ITPR3"
+        ],
+        [
+            "ITSN2",
+            "MAP4K3"
+        ],
+        [
+            "KAT6A",
+            "KAT6B"
+        ],
+        [
+            "KIAA0196",
+            "KIAA1033"
+        ],
+        [
+            "KIF1C",
+            "PTPN21"
+        ],
+        [
+            "KREMEN1",
+            "LRP6"
+        ],
+        [
+            "LAMC1",
+            "NID2"
+        ],
+        [
+            "LIF",
+            "LIFR"
+        ],
+        [
+            "LRP5",
+            "MESDC2"
+        ],
+        [
+            "LRRK1",
+            "LYZ"
+        ],
+        [
+            "MMP9",
+            "THBS2"
+        ],
+        [
+            "NCAPD2",
+            "SMC4"
+        ],
+        [
+            "NOTCH1",
+            "NOTCH3"
+        ],
+        [
+            "NUP205",
+            "TPR"
+        ],
+        [
+            "PAF1",
+            "TTC37"
+        ],
+        [
+            "PEX1",
+            "PEX6"
+        ],
+        [
+            "PHF8",
+            "ZNF711"
+        ],
+        [
+            "PKD1",
+            "PKD2"
+        ],
+        [
+            "PLEKHA1",
+            "PLEKHA2"
+        ],
+        [
+            "RABGAP1",
+            "RABGAP1L"
+        ],
+        [
+            "SKIV2L",
+            "WDR1"
+        ],
+        [
+            "SMC5",
+            "SMC6"
+        ],
+        [
+            "SPINT1",
+            "ST14"
+        ],
+        [
+            "SPTBN2",
+            "UNC13B"
+        ],
+        [
+            "TRO",
+            "TROAP"
+        ]
+    ],
+    "statistics": {
+        "2": {
+            "observed": 65,
+            "pval": 0.25,
+            "expected": 60.24
+        },
+        "3": {
+            "observed": 13,
+            "pval": 0.25,
+            "expected": 10.76
+        },
+        "4": {
+            "observed": 6,
+            "pval": 0.02,
+            "expected": 2.46
+        },
+        "5": {
+            "observed": 1,
+            "pval": 0.59,
+            "expected": 0.79
+        },
+        "6": {
+            "observed": 1,
+            "pval": 0.3,
+            "expected": 0.33
+        },
+        "7": {
+            "observed": 1,
+            "pval": 0.16,
+            "expected": 0.17
+        },
+        "8": {
+            "observed": 1,
+            "pval": 0.09,
+            "expected": 0.09
+        },
+        "9": {
+            "observed": 1,
+            "pval": 0.08,
+            "expected": 0.08
+        },
+        "10": {
+            "observed": 1,
+            "pval": 0.06,
+            "expected": 0.06
+        }
+    }
+}

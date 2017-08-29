@@ -3,11 +3,13 @@ from collections import defaultdict
 import networkx as nx, numpy as np, scipy as sp
 
 try:
-    import c_routines
+    from . import c_routines
     fast_similarity_matrix = True
 except ImportError:
     print("WARNING: Could not import either C module; "
           "falling back to NumPy for similarity matrix creation.")
+    import traceback
+    print(traceback.format_exc())
     fast_similarity_matrix = False
 
 ################################################################################

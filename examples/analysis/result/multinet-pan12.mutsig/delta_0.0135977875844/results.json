@@ -1,0 +1,214 @@
+{
+    "parameters": {
+        "network_name": "multinet",
+        "display_name_file": null,
+        "output_directory": "result",
+        "network_files": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/irefindex9_ppr_0.45.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/multinet_ppr_0.5.h5"
+        ],
+        "heat_name": "pan12.mutsig",
+        "delta": 0.01359778758437134,
+        "consensus_permutations": 0,
+        "permuted_network_paths": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/permuted/irefindex9_ppr_0.45_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/permuted/multinet_ppr_0.5_##NUM##.h5"
+        ],
+        "heat_files": [
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2freq.json",
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2mutsig.json"
+        ],
+        "output_hierarchy": false,
+        "num_cores": -1,
+        "heat_permutations": 100,
+        "display_score_file": null,
+        "verbose": 1,
+        "deltas": null,
+        "min_cc_size": 2,
+        "display_score_fil": null,
+        "network_permutations": 100
+    },
+    "sizes": {
+        "2": 6,
+        "3": 3,
+        "77": 1,
+        "6": 1
+    },
+    "components": [
+        [
+            "ADNP",
+            "AKT1",
+            "APC",
+            "ARID1A",
+            "ARID2",
+            "ASXL1",
+            "ASXL2",
+            "ATRX",
+            "AXIN2",
+            "BAP1",
+            "BRAF",
+            "CAB39L",
+            "CASP8",
+            "CBFB",
+            "CDC27",
+            "CDH1",
+            "CDKN1A",
+            "CDKN1B",
+            "CDKN2A",
+            "CEBPA",
+            "CUX1",
+            "DNMT3A",
+            "DST",
+            "EGFR",
+            "ELF3",
+            "ERBB2",
+            "ERBB2IP",
+            "EZH2",
+            "FBXW7",
+            "FGFR2",
+            "GNA13",
+            "GPS2",
+            "HRAS",
+            "ING1",
+            "KDM5C",
+            "KEAP1",
+            "KIT",
+            "KRAS",
+            "MAP2K4",
+            "MAP3K1",
+            "MAP4K3",
+            "MLL",
+            "MTM1",
+            "MTOR",
+            "MYB",
+            "MYCN",
+            "NCOR1",
+            "NF1",
+            "NFE2L2",
+            "NOTCH1",
+            "NOTCH2",
+            "NPM1",
+            "NR4A2",
+            "PBRM1",
+            "PIK3CA",
+            "PIK3R1",
+            "POU2AF1",
+            "PTEN",
+            "PTPN11",
+            "PXK",
+            "RASA1",
+            "RB1",
+            "RNF111",
+            "RRAS2",
+            "RUNX1",
+            "SAMHD1",
+            "SHOC2",
+            "SMAD2",
+            "SMAD4",
+            "SPEN",
+            "STK11",
+            "TBL1XR1",
+            "TCF7L2",
+            "TGFBR2",
+            "TRIP12",
+            "TSC1",
+            "WT1"
+        ],
+        [
+            "ATM",
+            "CCDC82",
+            "MSH6",
+            "RIT1",
+            "RLF",
+            "VHL"
+        ],
+        [
+            "ACO1",
+            "IDH1",
+            "IDH2"
+        ],
+        [
+            "KDM6A",
+            "MLL2",
+            "MLL3"
+        ],
+        [
+            "SMARCA4",
+            "SMARCB1",
+            "TP53"
+        ],
+        [
+            "ATF7IP",
+            "MBD1"
+        ],
+        [
+            "B2M",
+            "CD1D"
+        ],
+        [
+            "BRCA1",
+            "CHD2"
+        ],
+        [
+            "CTCF",
+            "RAD21"
+        ],
+        [
+            "MYD88",
+            "SPOP"
+        ],
+        [
+            "TNFRSF14",
+            "TRAF3"
+        ]
+    ],
+    "statistics": {
+        "2": {
+            "observed": 11,
+            "pval": 0.5,
+            "expected": 10.53
+        },
+        "3": {
+            "observed": 5,
+            "pval": 0.07,
+            "expected": 2.36
+        },
+        "4": {
+            "observed": 2,
+            "pval": 0.27,
+            "expected": 0.97
+        },
+        "5": {
+            "observed": 2,
+            "pval": 0.11,
+            "expected": 0.52
+        },
+        "6": {
+            "observed": 2,
+            "pval": 0.03,
+            "expected": 0.33
+        },
+        "7": {
+            "observed": 1,
+            "pval": 0.18,
+            "expected": 0.18
+        },
+        "8": {
+            "observed": 1,
+            "pval": 0.07,
+            "expected": 0.07
+        },
+        "9": {
+            "observed": 1,
+            "pval": 0.04,
+            "expected": 0.04
+        },
+        "10": {
+            "observed": 1,
+            "pval": 0.02,
+            "expected": 0.02
+        }
+    }
+}

@@ -11,9 +11,9 @@ from .analysis.network import SPIA, Enrichnet
 
 from .analysis.modelling import MAGI, Hotnet2
 
-from .netviz import FromCYConfig, FromNetworkX
+from .netviz import FromCYConfig, FromNetworkX, StylePresets
 
 
 def version():
-    return "0.30"
+    return "0.31"
 

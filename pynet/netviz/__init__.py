@@ -4,13 +4,6 @@ import networkx as nx
 import math
 
 
-class Engine:
-    CYTOSCAPE = 'cytoscape'
-    VIVASVG = 'vivagraph.js.svg'
-    VIVAWEBGL = 'vivagraph.js.webgl'
-    D3 = 'D3'
-
-
 class StylePresets:
     DEFAULT = {}
     RED = {
@@ -137,7 +130,7 @@ class FromNetworkX(Plotable):
         # if snapshot, the edge will be shorter and the text will be larger
         self.snapshot = snapshot
 
-    def plot(self, engine=Engine.CYTOSCAPE, menu=None):
+    def plot(self, menu=None):
         self.menu = menu
         pi = PlotOnlyInterface(host=self)
         return pi.update()
@@ -300,7 +293,7 @@ class FromCYConfig(Plotable):
     def deserialize(self):
         pass
 
-    def plot(self, engine=Engine.CYTOSCAPE):
+    def plot(self):
         pi = PlotOnlyInterface(host=self)
         return pi.update()
 

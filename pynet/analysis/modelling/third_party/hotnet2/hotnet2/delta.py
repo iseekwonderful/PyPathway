@@ -8,8 +8,34 @@ from collections import namedtuple, defaultdict
 from . import hotnet2 as hn, hnio
 from .union_find import UnionFind
 from .constants import *
+import traceback
+
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+
+try:
+    import _chi2
+    fast_scc = True
+    print("fast_scc")
+except:
+    fast_scc = False
+    print(traceback.format_exc())
+    print("slow_scc")
 
 strong_ccs = nx.strongly_connected_components
+
+def max_connected_component(mat, delta):
+    r = _chi2.chi2(2.0, (mat > delta).astype(np.int32))
+    return parse_result(r)
+
+def parse_result(res):
+    cur_pos = 0
+    lens = []
+    while cur_pos < len(res):
+        lens.append(res[cur_pos])
+        cur_pos += res[cur_pos] + 1
+    return lens
 
 def get_component_sizes(arrs):
     return [len(arr) for arr in arrs]
@@ -53,15 +79,18 @@ def find_best_delta_by_largest_cc(permuted_sim, permuted_index, sizes, directed,
 
             # construct graph using new delta
             delta = sorted_edges[int(index)]
-            G = hn.weighted_graph(permuted_sim, permuted_index, delta, directed)
             if delta in visited:
                 size2delta[max_size] = delta
                 break
             else:
                 visited.append( delta )
-
+            if fast_scc:
+                lengths = max_connected_component(permuted_sim, delta)
+            else:
+                G = hn.weighted_graph(permuted_sim, permuted_index, delta, directed)
+                lengths = get_component_sizes( component_fn( G) )
             # increment / decrement index based on whether components meet size specifications
-            if delta_too_small( get_component_sizes( component_fn( G) ), max_size ):
+            if delta_too_small( lengths , max_size ):
                 right  = index
                 index -= round( (index-left)/2. )
             else:

@@ -8,6 +8,7 @@ import shutil
 import time
 import json
 from collections import namedtuple
+import pickle as pk
 
 
 GMTInfo = namedtuple('GMTInfo', ['genesPerTerm', 'numTerms', 'link', 'libraryName', 'geneCoverage'])
@@ -336,6 +337,16 @@ class SQLiteManager:
             s2t[str(x[0])].append(x[1])
         result = [[x, s2t[str(x)]] if str(x) in s2t else [x, None] for x in ids]
         return result
+
+
+def load_hint_hi12012_network():
+    '''
+    Load hint interactive network as a test network
+
+    :return: the networkx Graph
+    '''
+    with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'datasets/hint.bin'), 'rb') as fp:
+        return pk.load(fp)
 
 
 if __name__ == '__main__':

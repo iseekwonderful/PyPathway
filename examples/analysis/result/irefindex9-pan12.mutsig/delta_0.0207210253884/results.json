@@ -1,0 +1,195 @@
+{
+    "parameters": {
+        "network_name": "irefindex9",
+        "display_name_file": null,
+        "output_directory": "result",
+        "network_files": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/irefindex9_ppr_0.45.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/multinet_ppr_0.5.h5"
+        ],
+        "heat_name": "pan12.mutsig",
+        "delta": 0.020721025388414676,
+        "consensus_permutations": 0,
+        "permuted_network_paths": [
+            "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/irefindex9/permuted/irefindex9_ppr_0.45_##NUM##.h5",
+            "/Volumes/Data/hotnet2/paper/data/networks/multinet/permuted/multinet_ppr_0.5_##NUM##.h5"
+        ],
+        "heat_files": [
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2freq.json",
+            "/Volumes/Data/hotnet2/paper/data/heats/pan12.gene2mutsig.json"
+        ],
+        "output_hierarchy": false,
+        "num_cores": -1,
+        "heat_permutations": 100,
+        "display_score_file": null,
+        "verbose": 1,
+        "deltas": null,
+        "min_cc_size": 2,
+        "display_score_fil": null,
+        "network_permutations": 100
+    },
+    "sizes": {
+        "17": 1,
+        "26": 1,
+        "3": 1,
+        "4": 1,
+        "2": 12
+    },
+    "components": [
+        [
+            "ADNP",
+            "ARID1A",
+            "ARID2",
+            "ATM",
+            "CAB39L",
+            "CBFB",
+            "CDKN2A",
+            "CEBPA",
+            "CHD8",
+            "CTCF",
+            "DCLRE1A",
+            "KDM6A",
+            "MLL2",
+            "MLL3",
+            "MLL4",
+            "NPM1",
+            "PBRM1",
+            "PTEN",
+            "RAD21",
+            "RB1",
+            "RUNX1",
+            "SMARCA4",
+            "SMARCB1",
+            "STAG2",
+            "STK11",
+            "TRIP12"
+        ],
+        [
+            "APC",
+            "AXIN2",
+            "BRAF",
+            "FBXW7",
+            "HRAS",
+            "KIT",
+            "KLHL8",
+            "KRAS",
+            "MAP2K4",
+            "MAP3K1",
+            "NF1",
+            "NOTCH1",
+            "NOTCH2",
+            "NRAS",
+            "PIK3CA",
+            "PLCE1",
+            "RASA1"
+        ],
+        [
+            "B2M",
+            "CD1D",
+            "HLA-A",
+            "HLA-B"
+        ],
+        [
+            "ASXL1",
+            "ASXL2",
+            "BAP1"
+        ],
+        [
+            "AGFG2",
+            "EPS15L1"
+        ],
+        [
+            "CARD11",
+            "CASP8"
+        ],
+        [
+            "CDKN1A",
+            "CDKN1B"
+        ],
+        [
+            "CREBBP",
+            "EP300"
+        ],
+        [
+            "EGFR",
+            "ERBB2"
+        ],
+        [
+            "GPS2",
+            "TBL1XR1"
+        ],
+        [
+            "KEAP1",
+            "NFE2L2"
+        ],
+        [
+            "MTM1",
+            "MTMR12"
+        ],
+        [
+            "MYD88",
+            "SPOP"
+        ],
+        [
+            "POU2AF1",
+            "POU2F2"
+        ],
+        [
+            "RAC1",
+            "RHOA"
+        ],
+        [
+            "SF3B1",
+            "U2AF1"
+        ]
+    ],
+    "statistics": {
+        "2": {
+            "observed": 16,
+            "pval": 0.03,
+            "expected": 10.42
+        },
+        "3": {
+            "observed": 4,
+            "pval": 0.14,
+            "expected": 2.13
+        },
+        "4": {
+            "observed": 3,
+            "pval": 0.03,
+            "expected": 0.64
+        },
+        "5": {
+            "observed": 2,
+            "pval": 0.02,
+            "expected": 0.26
+        },
+        "6": {
+            "observed": 2,
+            "pval": 0.02,
+            "expected": 0.13
+        },
+        "7": {
+            "observed": 2,
+            "pval": 0.0,
+            "expected": 0.06
+        },
+        "8": {
+            "observed": 2,
+            "pval": 0.0,
+            "expected": 0.03
+        },
+        "9": {
+            "observed": 2,
+            "pval": 0.0,
+            "expected": 0.03
+        },
+        "10": {
+            "observed": 2,
+            "pval": 0.0,
+            "expected": 0.01
+        }
+    }
+}

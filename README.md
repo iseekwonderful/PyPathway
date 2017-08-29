@@ -1,5 +1,3 @@
-#Pynet
-
 integrated toolkit for pathway based analysis
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
@@ -24,6 +22,8 @@ integrated toolkit for pathway based analysis
 ## Enrichment Analysis
 
 ## Modeling
+
+## Propagation
 
 ## performance
 
