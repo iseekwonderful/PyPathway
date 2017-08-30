@@ -1,6 +1,7 @@
 integrated toolkit for pathway based analysis
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Build Status](https://travis-ci.org/iseekwonderful/PyPathway.svg?branch=master)](https://travis-ci.org/iseekwonderful/PyPathway)
 
 
 ## Installation
