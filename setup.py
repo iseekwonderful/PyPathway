@@ -42,13 +42,13 @@ c_ext = Extension("pypathway.utils._node", ["./pypathway/src/node_src/_chi2.c", 
 # c extension for magi pathway select
 selects = Extension('pypathway.utils._select', ["./pypathway/src/select/_chi2.c",
                                                  "./pypathway/src/select/color_coding.cpp",
-                                                 "./pypathway/src/select/PPI_graph.cpp"],
+                                                 "./pypathway/src/select/PPI_Graph.cpp"],
                     extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 # c extension for magi cluster
 cluster = Extension('pypathway.utils._cluster', ["./pypathway/src/cluster/_chi2.c",
                                                  "./pypathway/src/cluster/clustering.cpp",
-                                                 "./pypathway/src/cluster/PPI_graph.cpp"],
+                                                 "./pypathway/src/cluster/PPI_Graph.cpp"],
                     extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 
