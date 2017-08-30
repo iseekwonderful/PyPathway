@@ -13,7 +13,7 @@ extern double ****DPMatrix;
 // thread-identical
 extern int colorAssigned[maxNumNode];
 // thread-identical
-extern int colorBinaryRep[maxNumColor+1];//color 0 is not there. Starts by color1
+extern int colorBinaryRep[21];//color 0 is not there. Starts by color1
 
 int initialize(int numColor);
 bool hasColor(int, int); // given the color list A (an integer which repersents the color set). check if a partocular color B is there or not.

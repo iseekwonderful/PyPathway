@@ -28,8 +28,7 @@ extern float varianceCoExpression;
 
 typedef struct PPI_Node{
 	int nodeId;
-	char nodeName[geneNameLen]; // protein/gene name
-
+	char nodeName[50]; // protein/gene name
 	int numSevereMutInCases;
 	int numMissenseMutInCases;
 	int numSevereMutInControl;
@@ -45,14 +44,14 @@ typedef struct PPI_Node{
 
 typedef struct coExpresionGeneHash{
 	int nodeId;// The gene id in the PPI network table
-	char geneName[geneNameLen];
+	char geneName[50];
 	int hashId; // The coexpression table Id
 }coExpresionGeneHash;
 
-extern coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
+extern coExpresionGeneHash coExpresionGeneHashTable[50000];
 
-extern PPI_Node listNodes[maxNumNode];
-extern float coExpresionMatrix[maxNumNode][maxNumNode];
+extern PPI_Node listNodes[50000];
+extern float coExpresionMatrix[50000][50000];
 
 int createPPI_Graph(FILE *); 
 //int assignScoreCases(FILE *);

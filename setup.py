@@ -4,6 +4,7 @@
 # from setuptools import setup
 import sys
 from distutils.core import setup, Extension
+import sys
 
 
 try:
@@ -36,19 +37,19 @@ test_requirements = [
 # c extension for fast node swap.
 c_ext = Extension("pypathway.utils._node", ["./pypathway/src/node_src/_chi2.c", "./pypathway/src/node_src/heap.c",
                                             "./pypathway/src/node_src/randpick.c", "./pypathway/src/node_src/main.c"],
-                  extra_compile_args=["-std=c99"])
+                  extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 # c extension for magi pathway select
 selects = Extension('pypathway.utils._select', ["./pypathway/src/select/_chi2.c",
                                                  "./pypathway/src/select/color_coding.cpp",
                                                  "./pypathway/src/select/PPI_graph.cpp"],
-                    extra_compile_args=["-std=c99"])
+                    extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 # c extension for magi cluster
 cluster = Extension('pypathway.utils._cluster', ["./pypathway/src/cluster/_chi2.c",
                                                  "./pypathway/src/cluster/clustering.cpp",
                                                  "./pypathway/src/cluster/PPI_graph.cpp"],
-                    extra_compile_args=["-std=c99"])
+                    extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 
 setup(
