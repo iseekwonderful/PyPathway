@@ -7,9 +7,9 @@ import networkx as nx
 import re
 import os
 from collections import namedtuple
-# from ...utils import _select
-# from ...utils import _cluster
-# from ...netviz import FromNetworkX
+from ...utils import _select
+from ...utils import _cluster
+from ...netviz import FromNetworkX
 import sys
 import inspect
 

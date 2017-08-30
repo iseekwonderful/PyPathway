@@ -2,29 +2,231 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ebf05c-6ab4-48f5-890d-639bbff756e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/markdowns/images/propagation/propagation_overview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/markdowns/propagation.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/main.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pynet/utils/datasets/hint.bin" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/Network_process-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/network-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/pd_np-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/test-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/Network_process.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/enrich_export.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/network.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/pd_np.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/analysis/test.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/pathviz/.ipynb_checkpoints/Search_Retriveve_in_KEGG-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/pathviz/.ipynb_checkpoints/interaction_network_db_example-checkpoint.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/pathviz/Search_Retriveve_in_KEGG.ipynb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/pathviz/interaction_network_db_example.ipynb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/enrichment/GO graph plot.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/enrichment/GO graph plot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/enrichment/enrichment_general_ora.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/enrichment/enrichment_general_ora.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/netviz/ToolTip.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/netviz/ToolTip.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/netviz/Usage.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/netviz/Usage.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/netviz/edit.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/netviz/edit.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/netviz/overview.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/netviz/overview.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/BioGrid.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/BioGrid.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/netprocess_KEGG.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/netprocess_KEGG.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/plot.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/plot.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/process_reactome_view.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/process_reactome_view.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/process_wiki_pathway.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/process_wiki_pathway.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/string_draw.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/string_draw.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/network_process/string_search.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/network_process/string_search.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/images/propagation/propagation_overview.png" afterPath="$PROJECT_DIR$/docs/markdowns/images/propagation/propagation_overview.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/enrichment.md" afterPath="$PROJECT_DIR$/docs/markdowns/enrichment.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/modelling.md" afterPath="$PROJECT_DIR$/docs/markdowns/modelling.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/netviz.md" afterPath="$PROJECT_DIR$/docs/markdowns/netviz.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/network_process.md" afterPath="$PROJECT_DIR$/docs/markdowns/network_process.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/propagation.md" afterPath="$PROJECT_DIR$/docs/markdowns/propagation.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/Hotnet2-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/Hotnet2-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/MAGI-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/MAGI-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/ORA-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/ORA-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/propagation-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/.ipynb_checkpoints/propagation-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/GSEA.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/GSEA.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/Hotnet2.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/Hotnet2.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/MAGI.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/MAGI.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/ORA.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/ORA.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/caches/nx_plot/data/test2.json" afterPath="$PROJECT_DIR$/examples/analysis/caches/nx_plot/data/test2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/propagation.ipynb" afterPath="$PROJECT_DIR$/examples/analysis/propagation.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/consensus/stats.tsv" afterPath="$PROJECT_DIR$/examples/analysis/result/consensus/stats.tsv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/consensus/subnetworks.json" afterPath="$PROJECT_DIR$/examples/analysis/result/consensus/subnetworks.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/consensus/subnetworks.tsv" afterPath="$PROJECT_DIR$/examples/analysis/result/consensus/subnetworks.tsv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/consensus/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/consensus/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363951405345/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000363957920771/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415180279575/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000415288026893/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.00049303904028/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000493095200101/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513140855701/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/delta_0.000513306065987/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.freq/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0177667570204/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0178254985429/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0193064042092/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.019318600015/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221346131379/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0221438312362/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.027465873707/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/delta_0.0274911768143/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/hint+hi2012-pan12.mutsig/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000249498028185/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000252730684621/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000257552167584/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/delta_0.000302322001029/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.freq/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0159664399704/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0168780197693/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0207210253884/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/delta_0.0304039022193/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/irefindex9-pan12.mutsig/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000265676819441/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000280026745182/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000283200716338/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/delta_0.000309490320359/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.freq/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0135977875844/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0145950745892/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0171047649869/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/components.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/components.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/results.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/significance.txt" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/delta_0.0273747378463/significance.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/viz-data.json" afterPath="$PROJECT_DIR$/examples/analysis/result/multinet-pan12.mutsig/viz-data.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/netviz/.ipynb_checkpoints/netviz_example-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/netviz/.ipynb_checkpoints/netviz_example-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/netviz/netviz_example.ipynb" afterPath="$PROJECT_DIR$/examples/netviz/netviz_example.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pathviz/GPML_pathway_operation.ipynb" afterPath="$PROJECT_DIR$/examples/pathviz/GPML_pathway_operation.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pathviz/SBGN_pathway_operation.ipynb" afterPath="$PROJECT_DIR$/examples/pathviz/SBGN_pathway_operation.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/__init__.py" afterPath="$PROJECT_DIR$/pynet/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/gsea/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv" afterPath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.kegg_2016.log" afterPath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.kegg_2016.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/cache/magi.res" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/cache/magi.res" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/cache/seeds" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/cache/seeds" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/LICENSE" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/OLD-README.md" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/OLD-README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/README.md" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/consensus.config" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/consensus.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/README.md" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/hierarchy.html" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/hierarchy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/requirements.txt" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/referenceConsensusResults.txt" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/referenceConsensusResults.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/runAndConvert.sh" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/runAndConvert.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/.gitignore" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/README.md" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/bower.json" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/index.html" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/requirements.txt" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py.bak" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py.bak" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/subnetworks.html" afterPath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/subnetworks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/network/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/network/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/ora/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/ora/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/analysis/propagation/__init__.py" afterPath="$PROJECT_DIR$/pynet/analysis/propagation/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/netviz/__init__.py" afterPath="$PROJECT_DIR$/pynet/netviz/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/utils/__init__.py" afterPath="$PROJECT_DIR$/pynet/utils/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/card.json" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/card.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/data2.json" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/data2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot0.html" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot0.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot1.html" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/index.html" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card.js" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display3.js" afterPath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pynet/pathviz/query/__init__.py" afterPath="$PROJECT_DIR$/pynet/pathviz/query/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/Readme.md" afterPath="$PROJECT_DIR$/tests/Readme.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,11 +284,10 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5695">
+            <state relative-caret-position="5831">
               <caret line="354" column="12" lean-forward="false" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
               <folding>
                 <element signature="e#19#51#0" expanded="true" />
-                <element signature="e#8055#8768#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -130,11 +331,9 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pynet/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="221">
               <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-              <folding>
-                <element signature="e#46#84#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,7 +353,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/lib/python3.5/site-packages/jucell-0.1.5-py3.5.egg/jucell/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="204">
               <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -275,6 +474,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,7 +498,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="pynet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,18 +512,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="pynet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="markdowns" />
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyPathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pynet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datasets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -685,7 +906,7 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23908414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24121405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1036,11 +1257,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5695">
+        <state relative-caret-position="5831">
           <caret line="354" column="12" lean-forward="false" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
           <folding>
             <element signature="e#19#51#0" expanded="true" />
-            <element signature="e#8055#8768#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1054,11 +1274,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/markdowns/netviz.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="238">
@@ -1066,6 +1281,11 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1081,11 +1301,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pynet/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="221">
           <caret line="13" column="60" lean-forward="false" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
-          <folding>
-            <element signature="e#46#84#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,7 +1319,7 @@
     </entry>
     <entry file="file:///usr/local/lib/python3.5/site-packages/jucell-0.1.5-py3.5.egg/jucell/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="204">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />

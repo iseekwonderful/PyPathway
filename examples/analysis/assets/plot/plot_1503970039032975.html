@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 100vw; height: 96vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "yAxis": {"data": ["HALLMARK_ADIPOGENESIS", "HALLMARK_OXIDATIVE_PHOSPHORYLATION", "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION", "HALLMARK_UV_RESPONSE_DN", "HALLMARK_XENOBIOTIC_METABOLISM", "HALLMARK_FATTY_ACID_METABOLISM", "HALLMARK_HYPOXIA", "HALLMARK_ESTROGEN_RESPONSE_EARLY", "HALLMARK_ESTROGEN_RESPONSE_LATE", "HALLMARK_APICAL_JUNCTION", "HALLMARK_ANDROGEN_RESPONSE", "HALLMARK_KRAS_SIGNALING_UP", "HALLMARK_MTORC1_SIGNALING", "HALLMARK_GLYCOLYSIS", "HALLMARK_TNFA_SIGNALING_VIA_NFKB"], "type": "category"}, "series": [{"data": [76.84174600088619, 75.52972629373677, 70.64232490213199, 35.91139546311497, 31.78451062779423, 31.722245798901888, 31.722245798901888, 31.077996823930366, 28.501864605124176, 27.991007325172006, 27.991007325172006, 27.89819563436637, 23.998795579694054, 21.423298223389768, 21.268829220584642], "type": "bar", "name": "-lg(p-value)"}], "grid": {"right": "12%", "left": "3%", "containLabel": true, "bottom": "3%"}, "title": {"text": " Enrichment Analysis", "subtext": "ORA"}, "xAxis": {"type": "value", "name": "-lg(p-value)", "boundaryGap": [0, 0.01]}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

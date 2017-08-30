@@ -1,0 +1,909 @@
+<?xml version="1.0" ?>
+<sbgn xmlns="http://sbgn.org/libsbgn/pd/0.1">
+  <map language="process description" name="map">
+    <arc class="consumption" id="edge11096650" name="arc" source="entityVertex11096577" target="reactionVertex11096649">
+      <start name="start" x="5739.0" y="2993.25"/>
+      <end name="end" x="6177.0" y="3990.0"/>
+    </arc>
+    <arc class="production" id="edge11096651" name="arc" source="reactionVertex11096649" target="entityVertex11096578">
+      <start name="start" x="6195.0" y="3990.0"/>
+      <end name="end" x="6660.75" y="3897.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096652" name="arc" source="entityVertex11096574" target="reactionVertex11096649">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6177.0" y="3990.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096654" name="arc" source="entityVertex11096579" target="reactionVertex11096653">
+      <start name="start" x="5748.75" y="3239.25"/>
+      <end name="end" x="6183.0" y="4056.0"/>
+    </arc>
+    <arc class="production" id="edge11096655" name="arc" source="reactionVertex11096653" target="entityVertex11096580">
+      <start name="start" x="6201.0" y="4056.0"/>
+      <end name="end" x="6698.25" y="4137.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096656" name="arc" source="entityVertex11096574" target="reactionVertex11096653">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6183.0" y="4056.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096658" name="arc" source="entityVertex11096581" target="reactionVertex11096657">
+      <start name="start" x="4754.25" y="4844.25"/>
+      <end name="end" x="5088.0" y="4764.0"/>
+    </arc>
+    <arc class="production" id="edge11096659" name="arc" source="reactionVertex11096657" target="entityVertex11096582">
+      <start name="start" x="5106.0" y="4764.0"/>
+      <end name="end" x="5292.75" y="4731.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096660" name="arc" source="entityVertex11096574" target="reactionVertex11096657">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5088.0" y="4764.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096662" name="arc" source="entityVertex11096585" target="reactionVertex11096661">
+      <start name="start" x="5706.75" y="2285.25"/>
+      <end name="end" x="6141.0" y="3405.0"/>
+    </arc>
+    <arc class="production" id="edge11096663" name="arc" source="reactionVertex11096661" target="entityVertex11096643">
+      <start name="start" x="6159.0" y="3405.0"/>
+      <end name="end" x="6696.0" y="3078.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096664" name="arc" source="entityVertex11096574" target="reactionVertex11096661">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6141.0" y="3405.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096666" name="arc" source="entityVertex11096586" target="reactionVertex11096665">
+      <start name="start" x="3663.75" y="2429.25"/>
+      <end name="end" x="3975.0" y="2412.0"/>
+    </arc>
+    <arc class="production" id="edge11096667" name="arc" source="reactionVertex11096665" target="entityVertex11096587">
+      <start name="start" x="3975.0" y="2394.0"/>
+      <end name="end" x="3857.25" y="1036.5"/>
+    </arc>
+    <arc class="inhibition" id="edge11096668" name="arc" source="entityVertex11096574" target="reactionVertex11096665">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3975.0" y="2412.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096670" name="arc" source="entityVertex11096588" target="reactionVertex11096669">
+      <start name="start" x="3249.75" y="5135.25"/>
+      <end name="end" x="3747.0" y="4803.0"/>
+    </arc>
+    <arc class="production" id="edge11096671" name="arc" source="reactionVertex11096669" target="entityVertex11096589">
+      <start name="start" x="3729.0" y="4803.0"/>
+      <end name="end" x="2889.75" y="5283.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096672" name="arc" source="entityVertex11096574" target="reactionVertex11096669">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3747.0" y="4803.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096674" name="arc" source="entityVertex11096590" target="reactionVertex11096673">
+      <start name="start" x="3302.25" y="5336.25"/>
+      <end name="end" x="3858.0" y="4857.0"/>
+    </arc>
+    <arc class="production" id="edge11096675" name="arc" source="reactionVertex11096673" target="entityVertex11096591">
+      <start name="start" x="3840.0" y="4857.0"/>
+      <end name="end" x="2801.25" y="5658.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096676" name="arc" source="entityVertex11096574" target="reactionVertex11096673">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3858.0" y="4857.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096678" name="arc" source="entityVertex11096592" target="reactionVertex11096677">
+      <start name="start" x="3396.75" y="3497.25"/>
+      <end name="end" x="3834.0" y="3456.0"/>
+    </arc>
+    <arc class="production" id="edge11096679" name="arc" source="reactionVertex11096677" target="entityVertex11096593">
+      <start name="start" x="3816.0" y="3456.0"/>
+      <end name="end" x="2199.75" y="2785.5"/>
+    </arc>
+    <arc class="inhibition" id="edge11096680" name="arc" source="entityVertex11096574" target="reactionVertex11096677">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3834.0" y="3456.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096682" name="arc" source="entityVertex11096594" target="reactionVertex11096681">
+      <start name="start" x="5751.75" y="2564.25"/>
+      <end name="end" x="6138.0" y="3459.0"/>
+    </arc>
+    <arc class="production" id="edge11096683" name="arc" source="reactionVertex11096681" target="entityVertex11096595">
+      <start name="start" x="6156.0" y="3459.0"/>
+      <end name="end" x="6632.25" y="3213.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096684" name="arc" source="entityVertex11096574" target="reactionVertex11096681">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6138.0" y="3459.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096686" name="arc" source="entityVertex11096596" target="reactionVertex11096685">
+      <start name="start" x="4839.75" y="2441.25"/>
+      <end name="end" x="5424.0" y="2475.0"/>
+    </arc>
+    <arc class="production" id="edge11096687" name="arc" source="reactionVertex11096685" target="entityVertex11096597">
+      <start name="start" x="5424.0" y="2457.0"/>
+      <end name="end" x="5479.5" y="1161.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096688" name="arc" source="entityVertex11096574" target="reactionVertex11096685">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5424.0" y="2475.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096690" name="arc" source="entityVertex11096598" target="reactionVertex11096689">
+      <start name="start" x="4806.75" y="2783.25"/>
+      <end name="end" x="5574.0" y="2637.0"/>
+    </arc>
+    <arc class="production" id="edge11096691" name="arc" source="reactionVertex11096689" target="entityVertex11096599">
+      <start name="start" x="5574.0" y="2619.0"/>
+      <end name="end" x="5951.25" y="643.5"/>
+    </arc>
+    <arc class="stimulation" id="edge11096692" name="arc" source="entityVertex11096574" target="reactionVertex11096689">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5574.0" y="2637.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096694" name="arc" source="entityVertex11096600" target="reactionVertex11096693">
+      <start name="start" x="3330.75" y="4460.25"/>
+      <end name="end" x="3822.0" y="4299.0"/>
+    </arc>
+    <arc class="production" id="edge11096695" name="arc" source="reactionVertex11096693" target="entityVertex11096601">
+      <start name="start" x="3804.0" y="4299.0"/>
+      <end name="end" x="2780.25" y="4479.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096696" name="arc" source="entityVertex11096574" target="reactionVertex11096693">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3822.0" y="4299.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096698" name="arc" source="entityVertex11096602" target="reactionVertex11096697">
+      <start name="start" x="3968.25" y="2753.25"/>
+      <end name="end" x="4287.0" y="2421.0"/>
+    </arc>
+    <arc class="production" id="edge11096699" name="arc" source="reactionVertex11096697" target="entityVertex11096603">
+      <start name="start" x="4287.0" y="2403.0"/>
+      <end name="end" x="4469.25" y="628.5"/>
+    </arc>
+    <arc class="inhibition" id="edge11096700" name="arc" source="entityVertex11096574" target="reactionVertex11096697">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="4287.0" y="2421.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096702" name="arc" source="entityVertex11096604" target="reactionVertex11096701">
+      <start name="start" x="5724.75" y="2855.25"/>
+      <end name="end" x="6168.0" y="3729.0"/>
+    </arc>
+    <arc class="production" id="edge11096703" name="arc" source="reactionVertex11096701" target="entityVertex11096605">
+      <start name="start" x="6186.0" y="3729.0"/>
+      <end name="end" x="6582.75" y="3537.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096704" name="arc" source="entityVertex11096574" target="reactionVertex11096701">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6168.0" y="3729.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096706" name="arc" source="entityVertex11096606" target="reactionVertex11096705">
+      <start name="start" x="3267.75" y="2987.25"/>
+      <end name="end" x="3594.0" y="2979.0"/>
+    </arc>
+    <arc class="production" id="edge11096707" name="arc" source="reactionVertex11096705" target="entityVertex11096607">
+      <start name="start" x="3594.0" y="2961.0"/>
+      <end name="end" x="3476.25" y="1248.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096708" name="arc" source="entityVertex11096574" target="reactionVertex11096705">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3594.0" y="2979.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096710" name="arc" source="entityVertex11096608" target="reactionVertex11096709">
+      <start name="start" x="3729.75" y="5108.25"/>
+      <end name="end" x="4410.0" y="4416.0"/>
+    </arc>
+    <arc class="production" id="edge11096711" name="arc" source="reactionVertex11096709" target="entityVertex11096644">
+      <start name="start" x="4410.0" y="4434.0"/>
+      <end name="end" x="4572.0" y="6093.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096712" name="arc" source="entityVertex11096574" target="reactionVertex11096709">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="4410.0" y="4416.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096714" name="arc" source="entityVertex11096609" target="reactionVertex11096713">
+      <start name="start" x="3390.75" y="3134.25"/>
+      <end name="end" x="3579.0" y="3066.0"/>
+    </arc>
+    <arc class="production" id="edge11096715" name="arc" source="reactionVertex11096713" target="entityVertex11096610">
+      <start name="start" x="3579.0" y="3048.0"/>
+      <end name="end" x="2754.0" y="909.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096716" name="arc" source="entityVertex11096574" target="reactionVertex11096713">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3579.0" y="3066.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096718" name="arc" source="entityVertex11096611" target="reactionVertex11096717">
+      <start name="start" x="4662.75" y="4478.25"/>
+      <end name="end" x="4977.0" y="4518.0"/>
+    </arc>
+    <arc class="production" id="edge11096719" name="arc" source="reactionVertex11096717" target="entityVertex11096612">
+      <start name="start" x="4995.0" y="4518.0"/>
+      <end name="end" x="5276.25" y="4449.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096720" name="arc" source="entityVertex11096574" target="reactionVertex11096717">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="4977.0" y="4518.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096722" name="arc" source="entityVertex11096613" target="reactionVertex11096721">
+      <start name="start" x="5724.75" y="4427.25"/>
+      <end name="end" x="6204.0" y="4143.0"/>
+    </arc>
+    <arc class="production" id="edge11096723" name="arc" source="reactionVertex11096721" target="entityVertex11096614">
+      <start name="start" x="6222.0" y="4143.0"/>
+      <end name="end" x="6879.75" y="4512.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096724" name="arc" source="entityVertex11096574" target="reactionVertex11096721">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6204.0" y="4143.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096726" name="arc" source="entityVertex11096615" target="reactionVertex11096725">
+      <start name="start" x="3360.75" y="3992.25"/>
+      <end name="end" x="3834.0" y="3927.0"/>
+    </arc>
+    <arc class="production" id="edge11096727" name="arc" source="reactionVertex11096725" target="entityVertex11096616">
+      <start name="start" x="3816.0" y="3927.0"/>
+      <end name="end" x="2843.25" y="3993.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096728" name="arc" source="entityVertex11096574" target="reactionVertex11096725">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3834.0" y="3927.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096730" name="arc" source="entityVertex11096617" target="reactionVertex11096729">
+      <start name="start" x="5718.75" y="2432.25"/>
+      <end name="end" x="6153.0" y="3570.0"/>
+    </arc>
+    <arc class="production" id="edge11096731" name="arc" source="reactionVertex11096729" target="entityVertex11096618">
+      <start name="start" x="6171.0" y="3570.0"/>
+      <end name="end" x="6594.75" y="3330.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096732" name="arc" source="entityVertex11096574" target="reactionVertex11096729">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6153.0" y="3570.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096734" name="arc" source="entityVertex11096619" target="reactionVertex11096733">
+      <start name="start" x="3291.75" y="4883.25"/>
+      <end name="end" x="3768.0" y="4632.0"/>
+    </arc>
+    <arc class="production" id="edge11096735" name="arc" source="reactionVertex11096733" target="entityVertex11096620">
+      <start name="start" x="3750.0" y="4632.0"/>
+      <end name="end" x="2882.25" y="5016.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096736" name="arc" source="entityVertex11096574" target="reactionVertex11096733">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3768.0" y="4632.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096738" name="arc" source="entityVertex11096621" target="reactionVertex11096737">
+      <start name="start" x="5508.75" y="4082.25"/>
+      <end name="end" x="6168.0" y="3819.0"/>
+    </arc>
+    <arc class="production" id="edge11096739" name="arc" source="reactionVertex11096737" target="entityVertex11096622">
+      <start name="start" x="6186.0" y="3819.0"/>
+      <end name="end" x="6611.25" y="3657.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096740" name="arc" source="entityVertex11096574" target="reactionVertex11096737">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6168.0" y="3819.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096742" name="arc" source="entityVertex11096623" target="reactionVertex11096741">
+      <start name="start" x="3375.75" y="4652.25"/>
+      <end name="end" x="3789.0" y="4473.0"/>
+    </arc>
+    <arc class="production" id="edge11096743" name="arc" source="reactionVertex11096741" target="entityVertex11096624">
+      <start name="start" x="3771.0" y="4473.0"/>
+      <end name="end" x="2901.75" y="4782.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096744" name="arc" source="entityVertex11096574" target="reactionVertex11096741">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3789.0" y="4473.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096746" name="arc" source="entityVertex11096625" target="reactionVertex11096745">
+      <start name="start" x="4806.75" y="2624.25"/>
+      <end name="end" x="5571.0" y="2553.0"/>
+    </arc>
+    <arc class="production" id="edge11096747" name="arc" source="reactionVertex11096745" target="entityVertex11096626">
+      <start name="start" x="5571.0" y="2535.0"/>
+      <end name="end" x="5601.75" y="756.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096748" name="arc" source="entityVertex11096574" target="reactionVertex11096745">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5571.0" y="2553.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096750" name="arc" source="entityVertex11096627" target="reactionVertex11096749">
+      <start name="start" x="4722.75" y="4652.25"/>
+      <end name="end" x="5019.0" y="4596.0"/>
+    </arc>
+    <arc class="production" id="edge11096751" name="arc" source="reactionVertex11096749" target="entityVertex11096628">
+      <start name="start" x="5037.0" y="4596.0"/>
+      <end name="end" x="5252.25" y="4617.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096752" name="arc" source="entityVertex11096574" target="reactionVertex11096749">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5019.0" y="4596.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096754" name="arc" source="entityVertex11096629" target="reactionVertex11096753">
+      <start name="start" x="4731.75" y="2180.25"/>
+      <end name="end" x="5268.0" y="2259.0"/>
+    </arc>
+    <arc class="production" id="edge11096755" name="arc" source="reactionVertex11096753" target="entityVertex11096630">
+      <start name="start" x="5268.0" y="2241.0"/>
+      <end name="end" x="4857.0" y="1632.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096756" name="arc" source="entityVertex11096574" target="reactionVertex11096753">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5268.0" y="2259.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096758" name="arc" source="entityVertex11096631" target="reactionVertex11096757">
+      <start name="start" x="3435.75" y="3266.25"/>
+      <end name="end" x="3783.0" y="3270.0"/>
+    </arc>
+    <arc class="production" id="edge11096759" name="arc" source="reactionVertex11096757" target="entityVertex11096632">
+      <start name="start" x="3783.0" y="3252.0"/>
+      <end name="end" x="2033.25" y="1545.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096760" name="arc" source="entityVertex11096574" target="reactionVertex11096757">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3783.0" y="3270.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096762" name="arc" source="entityVertex11096633" target="reactionVertex11096761">
+      <start name="start" x="3378.75" y="4160.25"/>
+      <end name="end" x="3819.0" y="4134.0"/>
+    </arc>
+    <arc class="production" id="edge11096763" name="arc" source="reactionVertex11096761" target="entityVertex11096634">
+      <start name="start" x="3801.0" y="4134.0"/>
+      <end name="end" x="2820.75" y="4251.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096764" name="arc" source="entityVertex11096574" target="reactionVertex11096761">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3819.0" y="4134.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096766" name="arc" source="entityVertex11096635" target="reactionVertex11096765">
+      <start name="start" x="3744.75" y="2587.95"/>
+      <end name="end" x="4149.0" y="2376.0"/>
+    </arc>
+    <arc class="production" id="edge11096767" name="arc" source="reactionVertex11096765" target="entityVertex11096645">
+      <start name="start" x="4131.0" y="2376.0"/>
+      <end name="end" x="2156.25" y="2250.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096768" name="arc" source="entityVertex11096574" target="reactionVertex11096765">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="4149.0" y="2376.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096770" name="arc" source="entityVertex11096637" target="reactionVertex11096769">
+      <start name="start" x="3753.75" y="5264.25"/>
+      <end name="end" x="4311.0" y="4689.0"/>
+    </arc>
+    <arc class="production" id="edge11096771" name="arc" source="reactionVertex11096769" target="entityVertex11096638">
+      <start name="start" x="4311.0" y="4707.0"/>
+      <end name="end" x="4188.0" y="6015.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096772" name="arc" source="entityVertex11096574" target="reactionVertex11096769">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="4311.0" y="4689.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096774" name="arc" source="entityVertex11096639" target="reactionVertex11096773">
+      <start name="start" x="3383.25" y="3749.25"/>
+      <end name="end" x="3837.0" y="3621.0"/>
+    </arc>
+    <arc class="production" id="edge11096775" name="arc" source="reactionVertex11096773" target="entityVertex11096640">
+      <start name="start" x="3819.0" y="3621.0"/>
+      <end name="end" x="2876.25" y="3642.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096776" name="arc" source="entityVertex11096574" target="reactionVertex11096773">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3837.0" y="3621.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096778" name="arc" source="entityVertex11096641" target="reactionVertex11096777">
+      <start name="start" x="5745.75" y="2717.25"/>
+      <end name="end" x="6168.0" y="3660.0"/>
+    </arc>
+    <arc class="production" id="edge11096779" name="arc" source="reactionVertex11096777" target="entityVertex11096642">
+      <start name="start" x="6186.0" y="3660.0"/>
+      <end name="end" x="6653.25" y="3438.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096780" name="arc" source="entityVertex11096574" target="reactionVertex11096777">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="6168.0" y="3660.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096782" name="arc" source="entityVertex11096583" target="reactionVertex11096781">
+      <start name="start" x="3768.75" y="5444.25"/>
+      <end name="end" x="3966.0" y="5910.0"/>
+    </arc>
+    <arc class="production" id="edge11096783" name="arc" source="reactionVertex11096781" target="entityVertex11096584">
+      <start name="start" x="3966.0" y="5928.0"/>
+      <end name="end" x="3903.0" y="6054.0"/>
+    </arc>
+    <arc class="inhibition" id="edge11096784" name="arc" source="entityVertex11096574" target="reactionVertex11096781">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="3966.0" y="5910.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096785" name="arc" source="entityVertex11096646" target="reactionVertex11096781">
+      <start name="start" x="1404.75" y="6333.0"/>
+      <end name="end" x="3966.0" y="5910.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096787" name="arc" source="entityVertex11096575" target="reactionVertex11096786">
+      <start name="start" x="4800.0" y="2321.25"/>
+      <end name="end" x="5358.0" y="2355.0"/>
+    </arc>
+    <arc class="production" id="edge11096788" name="arc" source="reactionVertex11096786" target="entityVertex11096576">
+      <start name="start" x="5358.0" y="2337.0"/>
+      <end name="end" x="5223.75" y="1167.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096789" name="arc" source="entityVertex11096574" target="reactionVertex11096786">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5358.0" y="2355.0"/>
+    </arc>
+    <arc class="consumption" id="edge11096791" name="arc" source="entityVertex11096647" target="reactionVertex11096790">
+      <start name="start" x="4861.5" y="2908.95"/>
+      <end name="end" x="5211.0" y="2205.0"/>
+    </arc>
+    <arc class="production" id="edge11096792" name="arc" source="reactionVertex11096790" target="entityVertex11096648">
+      <start name="start" x="5211.0" y="2187.0"/>
+      <end name="end" x="4980.0" y="1965.0"/>
+    </arc>
+    <arc class="stimulation" id="edge11096793" name="arc" source="entityVertex11096574" target="reactionVertex11096790">
+      <start name="start" x="4955.25" y="3456.0"/>
+      <end name="end" x="5211.0" y="2205.0"/>
+    </arc>
+    <glyph bg_color="white" class="complex multimer" color="black" compartmentRef="compartment7660" id="entityVertex11096574" name="glyph" new_id="24" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="119" x="1622" y="1146"/>
+      <glyph bg_color="white" class="annotation" color="black" compartmentRef="compartment7660" id="entityVertex11096574annotation" name="glyph" new_id="24" opacity="1" scale="1">
+        <bbox h="36" name="bbox" w="119" x="1622" y="1146"/>
+        <callout name="callout" target="entityVertex_11096574">
+          <point name="point" x="5044.5" y="3474.0"/>
+        </callout>
+        <label name="label" text="2xp-Y693-STAT4"/>
+      </glyph>
+      <label name="label" text="2xp-Y693-STAT4"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096575" name="glyph" new_id="26" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="104" x="1574" y="764"/>
+      <label name="label" text="IFNG gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex11096576" name="glyph" new_id="27" opacity="1" scale="1">
+      <bbox h="27" name="bbox" w="77" x="1722" y="383"/>
+      <label name="label" text="IFNG"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096577" name="glyph" new_id="30" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="104" x="1887" y="988"/>
+      <label name="label" text="BOLA2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096578" name="glyph" new_id="31" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="109" x="2193" y="1293"/>
+      <label name="label" text="BOLA2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096579" name="glyph" new_id="144" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1894" y="1070"/>
+      <label name="label" text="CA1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096580" name="glyph" new_id="145" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="83" x="2212" y="1373"/>
+      <label name="label" text="CA1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096581" name="glyph" new_id="147" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="95" x="1561" y="1605"/>
+      <label name="label" text="SNRPA1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096582" name="glyph" new_id="148" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="89" x="1742" y="1571"/>
+      <label name="label" text="SNRPA1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096583" name="glyph" new_id="150" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1234" y="1805"/>
+      <label name="label" text="SOD2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment5460" id="entityVertex11096584" name="glyph" new_id="151" opacity="1" scale="1">
+      <bbox h="25" name="bbox" w="57" x="1286" y="2012"/>
+      <label name="label" text="SOD2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096585" name="glyph" new_id="2464" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1880" y="752"/>
+      <label name="label" text="AIP gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096586" name="glyph" new_id="2467" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1199" y="800"/>
+      <label name="label" text="ANXA2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex11096587" name="glyph" new_id="2468" opacity="1" scale="1">
+      <bbox h="50" name="bbox" w="95" x="1262" y="338"/>
+      <label name="label" text="ANXA2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096588" name="glyph" new_id="2470" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1061" y="1702"/>
+      <label name="label" text="ARF1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096589" name="glyph" new_id="2471" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="89" x="941" y="1755"/>
+      <label name="label" text="ARF1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096590" name="glyph" new_id="2473" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="95" x="1077" y="1769"/>
+      <label name="label" text="CAPZA1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096591" name="glyph" new_id="2474" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="107" x="907" y="1880"/>
+      <label name="label" text="CAPZA1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096592" name="glyph" new_id="2476" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1110" y="1156"/>
+      <label name="label" text="CDC42 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment12045" id="entityVertex11096593" name="glyph" new_id="2477" opacity="1" scale="1">
+      <bbox h="50" name="bbox" w="133" x="700" y="921"/>
+      <label name="label" text="CDC42"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096594" name="glyph" new_id="2479" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1895" y="845"/>
+      <label name="label" text="CFL1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096595" name="glyph" new_id="2480" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="87" x="2189" y="1065"/>
+      <label name="label" text="CFL1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096596" name="glyph" new_id="2482" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1591" y="804"/>
+      <label name="label" text="CNN2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" id="entityVertex11096597" name="glyph" new_id="2483" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="74" x="1808" y="381"/>
+      <label name="label" text="CNN2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096598" name="glyph" new_id="2485" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1580" y="918"/>
+      <label name="label" text="GSTA2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment383505" id="entityVertex11096599" name="glyph" new_id="2486" opacity="1" scale="1">
+      <bbox h="50" name="bbox" w="95" x="1960" y="207"/>
+      <label name="label" text="GSTA2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096600" name="glyph" new_id="2488" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1088" y="1477"/>
+      <label name="label" text="GSTO1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096601" name="glyph" new_id="2489" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="99" x="902" y="1487"/>
+      <label name="label" text="GSTO1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096602" name="glyph" new_id="2491" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="115" x="1294" y="908"/>
+      <label name="label" text="HNRNPA2B1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment383505" id="entityVertex11096603" name="glyph" new_id="2492" opacity="1" scale="1">
+      <bbox h="50" name="bbox" w="95" x="1466" y="202"/>
+      <label name="label" text="HNRNPA2B1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096604" name="glyph" new_id="2494" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="101" x="1883" y="942"/>
+      <label name="label" text="HNRNPDL gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096605" name="glyph" new_id="2495" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="113" x="2166" y="1173"/>
+      <label name="label" text="HNRNPDL"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096606" name="glyph" new_id="2497" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="93" x="1066" y="986"/>
+      <label name="label" text="HNRNPF gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096607" name="glyph" new_id="2498" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="111" x="1131" y="410"/>
+      <label name="label" text="HNRNPF"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096608" name="glyph" new_id="2500" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1221" y="1693"/>
+      <label name="label" text="HSP9 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096609" name="glyph" new_id="2503" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1108" y="1035"/>
+      <label name="label" text="LCP1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment204883" id="entityVertex11096610" name="glyph" new_id="2504" opacity="1" scale="1">
+      <bbox h="32" name="bbox" w="100" x="893" y="297"/>
+      <label name="label" text="LCP1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096611" name="glyph" new_id="2506" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1532" y="1483"/>
+      <label name="label" text="LMNB1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096612" name="glyph" new_id="2507" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="127" x="1727" y="1477"/>
+      <label name="label" text="LMNB1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096613" name="glyph" new_id="2509" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1886" y="1466"/>
+      <label name="label" text="MIF gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment1462052" id="entityVertex11096614" name="glyph" new_id="2511" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="97" x="2269" y="1498"/>
+      <label name="label" text="MIF"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096615" name="glyph" new_id="2513" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1098" y="1321"/>
+      <label name="label" text="MSN gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096616" name="glyph" new_id="2514" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="87" x="926" y="1325"/>
+      <label name="label" text="MSN"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096617" name="glyph" new_id="2516" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1884" y="801"/>
+      <label name="label" text="MTAP gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096618" name="glyph" new_id="2517" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="89" x="2176" y="1104"/>
+      <label name="label" text="MTAP"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096619" name="glyph" new_id="2519" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1075" y="1618"/>
+      <label name="label" text="PAK2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096620" name="glyph" new_id="2520" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="91" x="938" y="1666"/>
+      <label name="label" text="PAK2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096621" name="glyph" new_id="2522" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1814" y="1351"/>
+      <label name="label" text="PDCD4 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096622" name="glyph" new_id="2523" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="99" x="2179" y="1213"/>
+      <label name="label" text="PDCD4"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096623" name="glyph" new_id="2525" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1103" y="1541"/>
+      <label name="label" text="PITPNA gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096624" name="glyph" new_id="2526" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="97" x="943" y="1588"/>
+      <label name="label" text="PITPNA"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096625" name="glyph" new_id="2528" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1580" y="865"/>
+      <label name="label" text="PPIA gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment383505" id="entityVertex11096626" name="glyph" new_id="2529" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="121" x="1837" y="246"/>
+      <label name="label" text="PPIA"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096627" name="glyph" new_id="2531" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1552" y="1541"/>
+      <label name="label" text="PSME2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096628" name="glyph" new_id="2532" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="131" x="1718" y="1533"/>
+      <label name="label" text="PSME2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096629" name="glyph" new_id="2534" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1555" y="717"/>
+      <label name="label" text="RALA gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment437051" id="entityVertex11096630" name="glyph" new_id="2535" opacity="1" scale="1">
+      <bbox h="37" name="bbox" w="136" x="1585" y="538"/>
+      <label name="label" text="RALA"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096631" name="glyph" new_id="2537" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1123" y="1079"/>
+      <label name="label" text="RAPB1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment6798757" id="entityVertex11096632" name="glyph" new_id="2538" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="127" x="646" y="509"/>
+      <label name="label" text="RAP1B"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096633" name="glyph" new_id="2540" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1104" y="1377"/>
+      <label name="label" text="RPLP0 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096634" name="glyph" new_id="2541" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="93" x="917" y="1411"/>
+      <label name="label" text="RPLP0"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096635" name="glyph" new_id="2543" opacity="1" scale="1">
+      <bbox h="51" name="bbox" w="97" x="1224" y="855"/>
+      <label name="label" text="SERPINB2 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096637" name="glyph" new_id="2546" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1229" y="1745"/>
+      <label name="label" text="SOD1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment5460" id="entityVertex11096638" name="glyph" new_id="2547" opacity="1" scale="1">
+      <bbox h="40" name="bbox" w="50" x="1381" y="1999"/>
+      <label name="label" text="SOD1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096639" name="glyph" new_id="2549" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="91" x="1105" y="1240"/>
+      <label name="label" text="TALDO1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096640" name="glyph" new_id="2550" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="103" x="933" y="1208"/>
+      <label name="label" text="TALDO1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096641" name="glyph" new_id="2552" opacity="1" scale="1">
+      <bbox h="65" name="bbox" w="89" x="1893" y="896"/>
+      <label name="label" text="TCP1 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096642" name="glyph" new_id="2553" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="87" x="2196" y="1140"/>
+      <label name="label" text="TCP1"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096643" name="glyph" new_id="2942" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="29" x="2217" y="1020"/>
+      <label name="label" text="AIP"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment5460" id="entityVertex11096644" name="glyph" new_id="2943" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="46" x="1509" y="2025"/>
+      <label name="label" text="HSPA9"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096645" name="glyph" new_id="2964" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="63" x="703" y="744"/>
+      <label name="label" text="SERPINB2"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096646" name="glyph" new_id="2965" opacity="1" scale="1">
+      <bbox h="36" name="bbox" w="121" x="438" y="2105"/>
+      <label name="label" text="p-S43,S173,S294,S325-FOXO3"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment7660" id="entityVertex11096647" name="glyph" new_id="2968" opacity="1" scale="1">
+      <bbox h="51" name="bbox" w="66" x="1604" y="962"/>
+      <label name="label" text="IL10 gene"/>
+    </glyph>
+    <glyph bg_color="white" class="macromolecule" color="black" compartmentRef="compartment70101" id="entityVertex11096648" name="glyph" new_id="2969" opacity="1" scale="1">
+      <bbox h="22" name="bbox" w="34" x="1645" y="649"/>
+      <label name="label" text="IL10"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096649" name="glyph" new_id="32" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2053" y="1324"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096653" name="glyph" new_id="143" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2055" y="1346"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096657" name="glyph" new_id="146" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1690" y="1582"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096661" name="glyph" new_id="2463" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2041" y="1129"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096665" name="glyph" new_id="2466" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1319" y="798"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096669" name="glyph" new_id="2469" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1243" y="1595"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096673" name="glyph" new_id="2472" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1280" y="1613"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096677" name="glyph" new_id="2475" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1272" y="1146"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096681" name="glyph" new_id="2478" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2040" y="1147"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096685" name="glyph" new_id="2481" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1802" y="819"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096689" name="glyph" new_id="2484" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1852" y="873"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096693" name="glyph" new_id="2487" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1268" y="1427"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096697" name="glyph" new_id="2490" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1423" y="801"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096701" name="glyph" new_id="2493" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2050" y="1237"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096705" name="glyph" new_id="2496" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1192" y="987"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096709" name="glyph" new_id="2499" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1464" y="1466"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096713" name="glyph" new_id="2502" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1187" y="1016"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096717" name="glyph" new_id="2505" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1653" y="1500"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096721" name="glyph" new_id="2508" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2062" y="1375"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096725" name="glyph" new_id="2512" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1272" y="1303"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096729" name="glyph" new_id="2515" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2045" y="1184"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096733" name="glyph" new_id="2518" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1250" y="1538"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096737" name="glyph" new_id="2521" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2050" y="1267"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096741" name="glyph" new_id="2524" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1257" y="1485"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096745" name="glyph" new_id="2527" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1851" y="845"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096749" name="glyph" new_id="2530" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1667" y="1526"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096753" name="glyph" new_id="2533" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1750" y="747"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096757" name="glyph" new_id="2536" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1255" y="1084"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096761" name="glyph" new_id="2539" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1267" y="1372"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096765" name="glyph" new_id="2542" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1377" y="786"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096769" name="glyph" new_id="2545" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1431" y="1557"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096773" name="glyph" new_id="2548" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1273" y="1201"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096777" name="glyph" new_id="2551" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="2050" y="1214"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment70101" id="reactionVertex11096781" name="glyph" new_id="2962" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1316" y="1964"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096786" name="glyph" new_id="2966" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1780" y="779"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment7660" id="reactionVertex11096790" name="glyph" new_id="2967" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1731" y="729"/>
+    </glyph>
+    <glyph bg_color="white" class="omitted process" color="black" compartmentRef="compartment70101" id="reactionVertex11603428" name="glyph" new_id="2962" opacity="1" scale="1">
+      <bbox h="16" name="bbox" w="16" x="1316" y="1964"/>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment5460" name="glyph" opacity="1" scale="1">
+      <bbox h="143" name="bbox" w="339" x="1265" y="1972"/>
+      <label name="label" text="mitochondrial matrix">
+        <bbox h="24.0" name="bbox" w="88.0" x="13131.84" y="2163.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment6798757" name="glyph" opacity="1" scale="1">
+      <bbox h="115" name="bbox" w="185" x="625" y="494"/>
+      <label name="label" text="azurophil granule membrane">
+        <bbox h="24.0" name="bbox" w="160.0" x="11898.0" y="2841.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment1462052" name="glyph" opacity="1" scale="1">
+      <bbox h="145" name="bbox" w="247" x="2224" y="1446"/>
+      <label name="label" text="secretory granule lumen">
+        <bbox h="24.0" name="bbox" w="224.0" x="4696.08" y="1650.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment70101" name="glyph" opacity="1" scale="1">
+      <bbox h="2036" name="bbox" w="3026" x="152" y="419"/>
+      <label name="label" text="cytosol">
+        <bbox h="24.0" name="bbox" w="208.0" x="1920.0" y="1554.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment437051" name="glyph" opacity="1" scale="1">
+      <bbox h="100" name="bbox" w="192" x="1550" y="526"/>
+      <label name="label" text="cytoplasmic vesicle membrane">
+        <bbox h="24.0" name="bbox" w="240.0" x="2067.0" y="2802.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment383505" name="glyph" opacity="1" scale="1">
+      <bbox h="146" name="bbox" w="702" x="1369" y="170"/>
+      <label name="label" text="extracellular exosome">
+        <bbox h="24.0" name="bbox" w="184.0" x="6731.28" y="4410.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment12045" name="glyph" opacity="1" scale="1">
+      <bbox h="120" name="bbox" w="182" x="674" y="910"/>
+      <label name="label" text="endoplasmic reticulum membrane">
+        <bbox h="24.0" name="bbox" w="264.0" x="11829.24" y="2709.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment7660" name="glyph" opacity="1" scale="1">
+      <bbox h="1219" name="bbox" w="1055" x="1053" y="696"/>
+      <label name="label" text="nucleoplasm">
+        <bbox h="24.0" name="bbox" w="160.0" x="3876.36" y="5988.0"/>
+      </label>
+    </glyph>
+    <glyph bg_color="white" class="compartment" color="black" compartmentOrder="10.0" id="compartment204883" name="glyph" opacity="1" scale="1">
+      <bbox h="148" name="bbox" w="407" x="658" y="258"/>
+      <label name="label" text="cell junction">
+        <bbox h="24.0" name="bbox" w="104.0" x="2071.68" y="846.0"/>
+      </label>
+    </glyph>
+  </map>
+</sbgn>

@@ -43,12 +43,12 @@ class Enrichnet(EnrichmentResult):
             'pathway': pathdb,
             'cweighted': graph,
             'identifier': idtype,
-            'geneset': '\n'.join([x for x in genesets]),
+            'geneset': '\n'.join([str(x) for x in genesets]),
             'example': '0'
         }
-        url = 'http://lcsb-enrichnet.uni.lu/enrichnet//index.php?tmpdat=result'
+        url = 'http://www.enrichnet.org/index.php?tmpdat=result'
         res = requests.post(url, data=data)
-        mission = re.findall("http://elephant.uni.lu/enrichnet/reload.php\?temp=([\d\w_]+)", res.text)
+        mission = re.findall("http://enrichnet.org/reload.php\?temp=([\d\w_]+)", res.text)
         if not mission:
             raise Exception("Cant not retrieve mission id")
         mission_id = mission[0]
@@ -58,8 +58,7 @@ class Enrichnet(EnrichmentResult):
     @staticmethod
     def check_for_job_done(mission_id):
         while True:
-            r = requests.get('http://lcsb-enrichnet.uni.lu/enrichnet//filecreated.php?temp={}'.format(mission_id))
-            print("checking: ", "done!" if len(r.text) == len("Success") else "processing...")
+            r = requests.get('http://www.enrichnet.org/filecreated.php?temp={}'.format(mission_id))
             if len(r.text) < len("Success"):
                 time.sleep(20)
                 continue
@@ -70,8 +69,8 @@ class Enrichnet(EnrichmentResult):
                 break
             else:
                 raise Exception("Unclear status code while query the server")
-        r = requests.get("http://lcsb-enrichnet.uni.lu/enrichnet//file2.php" +
-                         "?filen=/var/www/html/enrichnet/pages/tmp/{}/enrichnet_ranking_table.txt".format(mission_id))
+        r = requests.get("http://www.enrichnet.org/file2.php?filen=C:/xampp/htdocs/enrichnet/pages/"
+                         "tmp/{}/enrichnet_ranking_table.txt".format(mission_id))
         return pd.read_table(StringIO(r.text))
 
     def __init__(self, mission_id, df, geneset, idtype, pathdb, graph):

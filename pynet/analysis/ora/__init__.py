@@ -3,7 +3,6 @@ from ...pathviz.query.network import NetworkMethod, NetworkRequest
 import json
 import pandas as pd
 from io import StringIO
-import math
 from ...netviz import FromCYConfig
 from collections import defaultdict
 import os
@@ -14,7 +13,6 @@ import wget
 from goatools.go_enrichment import GOEnrichmentStudy
 from goatools.obo_parser import GODag
 from goatools.associations import read_associations
-import copy
 
 
 class ExpressionData:
@@ -257,8 +255,8 @@ class GO(EnrichmentResult):
         EnrichmentResult.__init__(self, self.df, exp, "GO", 'ORA', 3, 9, xlabel='-lg(p_bonferroni)')
 
     def _gradient(self, index, count):
-        start = (0xff, 0, 0)
-        end = (0xff, 0xff, 0xff)
+        end = (0xff, 0, 0)
+        start = (0xff, 0xff, 0xff)
         return "#{:02X}{:02X}{:02X}".format(int(start[0] + (end[0] - start[0]) / count * index),
                                             int(start[1] + (end[1] - start[1]) / count * index),
                                             int(start[2] + (end[2] - start[2]) / count * index))
@@ -313,7 +311,7 @@ class GO(EnrichmentResult):
                  'data': {'id': rec.id.replace(":", ""), 'label': rec.name, 'level': rec.level,
                           'name': rec.name},
                  'style': {
-                     'background-color': self._gradient(int(100 - args[x][6] * 100), 100),
+                     'background-color': self._gradient(int(100 - args[x][9] * 100), 100),
                      'shape': 'roundrectangle',
                      'width': 'label',
                      'height': 'label',
@@ -335,7 +333,7 @@ class GO(EnrichmentResult):
                      'p-value': args[x][6],
                      'ratio_in_study': args[x][4],
                      'ratio_in_pop': args[x][5],
-                     'p_bonferroni': args[x][8]
+                     'p_bonferroni': args[x][9]
                  },
                  'expand': {
                      'source': 'local',

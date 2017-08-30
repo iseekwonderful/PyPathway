@@ -215,12 +215,18 @@ class BioGRID(Database):
 
     @staticmethod
     def overall_graph(organism='hsa'):
-        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'caches/')
+        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/')
         if not os.path.exists(cache_dir + 'biogrid'):
             # the organism file is not exist, we have to download
             print("Download network sets from BioGRID, it will take several minutes")
-            wget.download("https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip",
-                          cache_dir + 'biogrid.zip')
+            # "https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip"
+            # wget.download("https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip",
+            #               cache_dir + 'biogrid.zip')
+            r = requests.get("https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip", stream=True)
+            with open(cache_dir + 'biogrid.zip', 'wb') as f:
+                for chunk in r.iter_content(chunk_size=1024):
+                    if chunk:
+                        f.write(chunk)
             # unzip
             zipref = zipfile.ZipFile(cache_dir + "biogrid.zip", 'r')
             zipref.extractall(cache_dir + 'biogrid')
@@ -252,7 +258,6 @@ class BioGRID(Database):
             s = x.split("\t")
             G.add_edge(s[2], s[3])
         return G
-
 
 
 class STRINGSearchResults:
@@ -457,7 +462,7 @@ class STRING(Database):
                 break
         else:
             raise Exception("Organism not found")
-        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'caches/')
+        cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/')
         if not os.path.exists(cache_dir + 'st-{}.gz'.format(numeric_id)):
             # download from remote
             print("Download {} network from STRING, it may take several minutes".format(numeric_id))
@@ -719,7 +724,3 @@ class PublicDatabase:
 
 
 DB = PublicDatabase
-
-
-# if __name__ == '__main__':
-#     BioGIRD.search('CD4', 9606)
