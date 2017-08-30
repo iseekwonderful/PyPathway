@@ -33,22 +33,25 @@ requirements = [
 test_requirements = [
 ]
 
+# c extension for fast node swap.
 c_ext = Extension("pypathway.utils._node", ["./pypathway/src/node_src/_chi2.c", "./pypathway/src/node_src/heap.c",
                                             "./pypathway/src/node_src/randpick.c", "./pypathway/src/node_src/main.c"])
 
+# c extension for magi pathway select
 selects = Extension('pypathway.utils._select', ["./pypathway/src/select/_chi2.c",
                                                  "./pypathway/src/select/color_coding.cpp",
                                                  "./pypathway/src/select/PPI_graph.cpp"])
 
+# c extension for magi cluster
 cluster = Extension('pypathway.utils._cluster', ["./pypathway/src/cluster/_chi2.c",
                                                  "./pypathway/src/cluster/clustering.cpp",
                                                  "./pypathway/src/cluster/PPI_graph.cpp"])
 
 
 setup(
-    name='pypathway',
-    version='0.3。1',
-    description="A Python package for playing with pathways",
+    name='PyPathway',
+    version='0.3.3',
+    description="A Python package biological network analysis and visualization",
     long_description=readme,
     author="sheep",
     author_email='sss3barry@gmail.com',
@@ -62,7 +65,7 @@ setup(
     install_requires=requirements,
     license="GNU General Public License v3 (GPLv3)",
     zip_safe=False,
-    keywords='pypathway',
+    keywords='pathway',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

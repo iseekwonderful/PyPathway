@@ -1,3 +1,2 @@
-rm -r dist/ build/
-python setup.py sdist bdist_wheel
+python3 setup.py dist bdist_wheel
 cd dist
