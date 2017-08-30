@@ -11,9 +11,10 @@ recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 
 recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
-recursive-include pypathway/core *
-recursive-include pypathway/static *
-recursive-include pypathway/query *
-recursive-include pypathway/visualize *
+recursive-include pypathway/analysis *
+recursive-include pypathway/exportion *
+recursive-include pypathway/netviz *
+recursive-include pypathway/pathviz *
+recursive-include pypathway/src *
 recursive-include pypathway/tests *
-recursive-include pypathway/paxtools *
+recursive-include pypathway/utils *

@@ -2,9 +2,604 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ebf05c-6ab4-48f5-890d-639bbff756e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/markdowns/images/enrichment/enrichment_table.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/pynet.iml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/pypathway.egg-info/PKG-INFO" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/SOURCES.txt" afterPath="$PROJECT_DIR$/pypathway.egg-info/SOURCES.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/dependency_links.txt" afterPath="$PROJECT_DIR$/pypathway.egg-info/dependency_links.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/not-zip-safe" afterPath="$PROJECT_DIR$/pypathway.egg-info/not-zip-safe" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/requires.txt" afterPath="$PROJECT_DIR$/pypathway.egg-info/requires.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet.egg-info/top_level.txt" afterPath="$PROJECT_DIR$/pypathway.egg-info/top_level.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/.idea/misc.xml" afterPath="$PROJECT_DIR$/pypathway/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/.idea/modules.xml" afterPath="$PROJECT_DIR$/pypathway/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/.idea/preferred-vcs.xml" afterPath="$PROJECT_DIR$/pypathway/.idea/preferred-vcs.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/.idea/pypathway.iml" afterPath="$PROJECT_DIR$/pypathway/.idea/pypathway.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/pypathway/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/__init__.py" afterPath="$PROJECT_DIR$/pypathway/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/Readme.md" afterPath="$PROJECT_DIR$/pypathway/analysis/Readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.gsea.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.gsea.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.heatmap.pdf" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.heatmap.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/gsea/images/gseapy.gsea.kegg_2016.log" afterPath="$PROJECT_DIR$/pypathway/analysis/gsea/images/gseapy.gsea.kegg_2016.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/bin/readme" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/bin/readme" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/cache/magi.res" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/cache/seeds" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/cache/seeds" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/.gitignore" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/HotNet2.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/LICENSE" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/OLD-README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/OLD-README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/consensus.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/consensus.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/delta.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/delta.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/heat.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/heat.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix2.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/influence_matrix2.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/run.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/run.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/significance.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/significance.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/simple.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/simple2.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple2.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/configs/website.config" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/configs/website.config" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example.cna" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.cna" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example.dname" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.dname" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example.dscore" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.dscore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example.heat" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.heat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example.snv" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example.snv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example_edgelist.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_edgelist.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example_edgelist2.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_edgelist2.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/example_gene_index.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/example_gene_index.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/tested_genes.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/tested_genes.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/example/tested_samples.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/example/tested_samples.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.h" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.h" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/main.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.h" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/heat.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/heat.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnap.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnap.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/setup_fortran.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_fortran.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/src/fortran/fortran_routines.f95" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/fortran/fortran_routines.f95" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/stats.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/stats.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/union_find.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/union_find.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/hierarchy.html" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/hierarchy.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/subnetworks.html" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz_files/subnetworks.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeHeatFile.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeHeatFile.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2freq.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2mutsig.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/heats/pan12.gene2mutsig.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_index_gene" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_index_gene" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_edge_list" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_edge_list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_index_gene" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/data/networks/multinet/multinet_index_gene" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/paper/paper_commands.sh" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/paper/paper_commands.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/requirements.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/requirements.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/consensus.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/consensus.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/consensus.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/consensus.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createDendrogram.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/checkHotNet2Consensus.sh" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/checkHotNet2Consensus.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_consensus_results.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/compare_subnetworks.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/createSimulatedData.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/referenceConsensusResults.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/referenceConsensusResults.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/test/runAndConvert.sh" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/test/runAndConvert.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/.gitignore" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/.gitignore" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/README.md" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/bower.json" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/index.html" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/requirements.txt" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/requirements.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/server.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/server.py.bak" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/server.py.bak" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/viz/subnetworks.html" afterPath="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/viz/subnetworks.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/network/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/network/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/network/spia_data/hsa.json" afterPath="$PROJECT_DIR$/pypathway/analysis/network/spia_data/hsa.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/network/spia_data/mmu.json" afterPath="$PROJECT_DIR$/pypathway/analysis/network/spia_data/mmu.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/kegg_set/hsa_kegg_gs.gmt" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/kegg_set/hsa_kegg_gs.gmt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/assoc" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/assoc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go (1).obo" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go (1).obo" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go.obo" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go.obo" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go.obo04pfd8pd.tmp" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go.obo04pfd8pd.tmp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go.obo5crjc6yj.tmp" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go.obo5crjc6yj.tmp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go.obovg9jw2ar.tmp" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go.obovg9jw2ar.tmp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/ora/obo/go.obowm7kh_65.tmp" afterPath="$PROJECT_DIR$/pypathway/analysis/ora/obo/go.obowm7kh_65.tmp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/propagation/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/__init__.py" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/templates/card_with_tab" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/card_with_tab" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/templates/js" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/templates/selector" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/selector" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/templates/slider" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/slider" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/templates/switch" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/templates/switch" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/viz.html" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/viz2.html" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz2.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/viz3.html" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz3.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/analysis/viz/assets/viz4.html" afterPath="$PROJECT_DIR$/pypathway/analysis/viz/assets/viz4.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/__init__.py" afterPath="$PROJECT_DIR$/pypathway/exportion/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/card/card" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/card/card" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/card/row" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/card/row" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/card-magi.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card-magi.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/card.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/card.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/css/local.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/css/local.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/css/materialize.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/css/materialize.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/card.json" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/card.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/data.json" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/data.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/data/data2.json" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/data/data2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot0.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/details/plot0.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/details/plot1.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/details/plot1.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/enrichment_display.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/enrichment_display.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/index.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/bootstrap.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/card_template" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/card_template" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape-cose-bilkent.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-cose-bilkent.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape-cxtmenu.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-cxtmenu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape-dagre.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-dagre.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape-qtip.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape-qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/cytoscape.min.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/cytoscape.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/dagre.min.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/dagre.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display3.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/enrichment_display_template" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/enrichment_display_template" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-2.0.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery-ui.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery-ui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery.qtip.css" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery.qtip.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/jquery.qtip.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/jquery.qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/main.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/materialize.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/materialize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/enrichment/js/vivagraph.js" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/enrichment/js/vivagraph.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/exportion/templates/index.html" afterPath="$PROJECT_DIR$/pypathway/exportion/templates/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/ReactomeOverview.py" afterPath="$PROJECT_DIR$/pypathway/netviz/ReactomeOverview.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/Readme.md" afterPath="$PROJECT_DIR$/pypathway/netviz/Readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/__init__.py" afterPath="$PROJECT_DIR$/pypathway/netviz/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/data/nodes.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/data/nodes2.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/data/nodes3.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/data/nodes3.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/data/test.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/data/test.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/data/test2.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/data/test2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/index.html" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/bootstrap.css" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape-cose-bilkent.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-cose-bilkent.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape-cxtmenu.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-cxtmenu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape-dagre.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-dagre.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape-qtip.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape-qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/cytoscape.min.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/cytoscape.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/dagre.min.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/dagre.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-2.0.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery-ui-1.10.3.custom.css" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui-1.10.3.custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery-ui.css" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery-ui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery.qtip.css" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery.qtip.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/jquery.qtip.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/jquery.qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/main.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets/lib/js/vivagraph.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets/lib/js/vivagraph.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/data/nodes.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/data/nodes2.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/data/nodes3.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/nodes3.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/data/test.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/test.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/data/test2.json" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/data/test2.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/index.html" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/lib/js/cytoscape-cxtmenu.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/cytoscape-cxtmenu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/lib/js/main.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/assets_back/lib/js/vivagraph.js" afterPath="$PROJECT_DIR$/pypathway/netviz/assets_back/lib/js/vivagraph.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/netviz/goviz.py" afterPath="$PROJECT_DIR$/pypathway/netviz/goviz.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/__init__.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/BioPAXImpl.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/BioPAXImpl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/GPMLImpl.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/GPMLImpl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/KGMLImpl.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/KGMLImpl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/SBGNImpl.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/SBGNImpl.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/__init__.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/core/general.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/core/general.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/query/__init__.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/query/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/query/common.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/query/common.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/query/network.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/query/network.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/.idea/GPML.iml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/GPML.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/.idea/modules.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/.idea/workspace.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/bootstrap/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/jquery-ui-1.10.3.custom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery-ui-1.10.3.custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/jquery-ui.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery-ui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/jquery.qtip.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/jquery.qtip.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/css/main.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/font/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml_data/config.json" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/config.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml_data/custom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml_data/interface_gpml.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/interface_gpml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml_data/interface_gpml_back.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/interface_gpml_back.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/gpml_data/pathway.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/gpml_data/pathway.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/chaosofpvjs/pvjs_a.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_a.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/chaosofpvjs/pvjs_b.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_b.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/custom-element.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/custom-element.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/d3.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/d3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/echarts.common.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/echarts.common.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery-2.0.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/jquery.qtip.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/jquery.qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/lib/custom-element.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/lib/custom-element.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/mithril.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/mithril.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/polyfill.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/polyfill.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/polyfills.bundle.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/polyfills.bundle.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/pvjs.core.min.mod.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.core.min.mod.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/pvjs.core.mod.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.core.mod.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/pvjs.custom-element.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.custom-element.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/js/pvjs.custom-element.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/js/pvjs.custom-element.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/GPML/lib/custom-element.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/GPML/lib/custom-element.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/bootstrap/bootstrap.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/jquery-ui-1.10.3.custom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery-ui-1.10.3.custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/jquery-ui.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery-ui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/jquery.qtip.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/jquery.qtip.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/css/main.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/cytoscape-panzoom.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/cytoscape-panzoom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/cytoscape.js-panzoom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/cytoscape.js-panzoom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/cy-panzoom/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/cytoscape-qtip.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/cytoscape-qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/cytoscape.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/cytoscape.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/echarts.common.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/echarts.common.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/jquery-2.0.3.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery-2.0.3.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/js/jquery.qtip.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/js/jquery.qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/kegg.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/kegg_data/custom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg_data/custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/KEGG/kegg_data/interface_kegg.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/KEGG/kegg_data/interface_kegg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/index.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/bootstrap.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/bootstrap.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/cytoscape-context-menus.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/cytoscape-context-menus.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/cytoscape.js-panzoom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/cytoscape.js-panzoom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/flat-ui.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/flat-ui.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/css/font-awesome.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/bordered-pulled.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/core.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/core.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/fixed-width.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/fixed-width.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/font-awesome.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/font-awesome.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/icons.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/icons.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/larger.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/larger.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/list.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/list.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/mixins.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/mixins.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/path.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/path.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/rotated-flipped.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/spinning.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/spinning.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/stacked.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/stacked.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/variables.less" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/less/variables.less" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_bordered-pulled.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_core.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_core.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_fixed-width.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_icons.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_icons.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_larger.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_larger.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_list.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_list.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_mixins.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_mixins.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_path.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_path.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_rotated-flipped.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_spinning.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_spinning.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_stacked.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_stacked.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_variables.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/_variables.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/font-awesome-4.0.3/scss/font-awesome.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/blank.gif" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/blank.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_close.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_close.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_loading.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_loading.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_left.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_right.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_nav_right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_e.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_e.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_n.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_n.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_ne.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_ne.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_nw.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_nw.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_s.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_s.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_se.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_se.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_sw.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_sw.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_w.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_shadow_w.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_left.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_main.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_main.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_over.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_over.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_right.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancy_title_right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-x.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-x.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-y.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox-y.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/images/fancybox/fancybox.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/images/fancybox/fancybox.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/jquery-ui-1.10.3.custom.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery-ui-1.10.3.custom.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/jquery.fancybox-1.3.4.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery.fancybox-1.3.4.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/css/jquery.qtip.min.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/css/jquery.qtip.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/FileSaver.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/FileSaver.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/backbone-min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/backbone-min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/bootstrap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-clipboard.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-clipboard.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-context-menus.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-context-menus.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-cose-bilkent.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-cose-bilkent.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-edge-bend-editing.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-edge-bend-editing.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-expand-collapse.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-expand-collapse.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-panzoom.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-panzoom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-qtip.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-qtip.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-undo-redo.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-undo-redo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape-view-utilities.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape-view-utilities.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/cytoscape.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/cytoscape.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/echarts.common.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/echarts.common.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery.expander-min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.expander-min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery.noty.packaged.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.noty.packaged.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/jquery.qtip.min.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/jquery.qtip.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/js/underscore.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/js/underscore.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/add-remove-utilities.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/add-remove-utilities.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/json-to-sbgnml-converter.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/json-to-sbgnml-converter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/sbgn-element-utilities.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-element-utilities.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/sbgn-filtering.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-filtering.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/sbgn-style-rules.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-style-rules.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/lib/src/utilities/sbgnml-to-json-converter.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/lib/src/utilities/sbgnml-to-json-converter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/animated-overlay.gif" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/animated-overlay.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_20_666666_40x40.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_flat_10_000000_40x100.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_flat_10_000000_40x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_f6f6f6_1x400.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_f6f6f6_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_fdf5ce_1x400.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_100_fdf5ce_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_glass_65_ffffff_1x400.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_0B9BCD_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_0B9BCD_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_1ABC9C_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_1ABC9C_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_222222_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_228ef1_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_228ef1_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_90B6CB_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_90B6CB_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ef8c08_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ef8c08_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffd27a_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffd27a_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-icons_ffffff_256x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/css/sbgn-viz.css" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/css/sbgn-viz.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/data/config.json" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/config.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/data/data_test.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/data_test.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/data/pathway.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/data/pathway.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/add-remove-action-functions.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/add-remove-action-functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/biogene-info.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/biogene-info.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/common-element-properties.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/common-element-properties.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/general-action-functions.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/general-action-functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/general-sample-app-functions.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/general-sample-app-functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/interface.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/interface.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/register-undo-redo-actions.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/register-undo-redo-actions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/sample-app-global-variables.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-global-variables.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/sample-app-menu-functions.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-menu-functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/sample-app-mode-handler.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-mode-handler.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-components/php/BioGeneQuery.php" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-components/php/BioGeneQuery.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/Thumbs.db" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/Thumbs.db" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/add.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/add.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-bottom.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-bottom.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-middle.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-middle.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-top.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-horizontal-top.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-vertical-center.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-center.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-vertical-left.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-left.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align-vertical-right.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align-vertical-right.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/align/align.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/align/align.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/cbio.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/cbio.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/clone_bg.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/clone_bg.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/delete.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/delete.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/drag-target.cur" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/drag-target.cur" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/i-vis.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/i-vis.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/interaction_legend_sbgn.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/interaction_legend_sbgn.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/loading-small.gif" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/loading-small.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/loading.gif" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/loading.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/lock.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/lock.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/node_legend_sbgn.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/node_legend_sbgn.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/open-lock.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/open-lock.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/search.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/search.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/collapseselected.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/collapseselected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesimple.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesimple.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesmart.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/deletesmart.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/expandselected.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/expandselected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/fitincanvas.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/fitincanvas.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/hideselected.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/hideselected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/highlightneighborsofselected.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/highlightneighborsofselected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layout-cose.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layout-cose.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layoutproperties.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/layoutproperties.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/load.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/load.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/new.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/new.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/properties.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/properties.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/redo.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/redo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/removehighlights.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/removehighlights.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/save.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/save.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/saveasimage.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/saveasimage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/select.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/select.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/showselected.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/showselected.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/sampleapp-images/toolbar-icons/undo.png" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/sampleapp-images/toolbar-icons/undo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/CaM-CaMK_dependent_signaling_to_the_nucleus.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/CaM-CaMK_dependent_signaling_to_the_nucleus.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/activated_stat1alpha_induction_of_the_irf1_gene.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/activated_stat1alpha_induction_of_the_irf1_gene.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/atm_mediated_phosphorylation_of_repair_proteins.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/atm_mediated_phosphorylation_of_repair_proteins.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/glycolysis.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/glycolysis.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/insulin-like_growth_factor_signaling.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/insulin-like_growth_factor_signaling.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/mapk_cascade.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/mapk_cascade.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/neuronal_muscle_signalling.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/neuronal_muscle_signalling.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/polyq_proteins_interference.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/polyq_proteins_interference.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SBGN/samples/vitamins_b6_activation_to_pyridoxal_phosphate.xml" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SBGN/samples/vitamins_b6_activation_to_pyridoxal_phosphate.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/SVG/index.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/SVG/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/assets/chart/plot.j2" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/assets/chart/plot.j2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/assets/paxtools-4.3.1.jar" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/assets/paxtools-4.3.1.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/assets/raw.json" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/assets/raw.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/assets/reactome/species_list" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/assets/reactome/species_list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/assets/reactome/svg_list" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/assets/reactome/svg_list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/static/box.html" afterPath="$PROJECT_DIR$/pypathway/pathviz/static/box.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/utils.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/utils.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/visualize/__init__.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/visualize/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/pathviz/visualize/options.py" afterPath="$PROJECT_DIR$/pypathway/pathviz/visualize/options.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/cluster/PPI_Graph.cpp" afterPath="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/cluster/PPI_Graph.h" afterPath="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/cluster/_chi2.c" afterPath="$PROJECT_DIR$/pypathway/src/cluster/_chi2.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/cluster/clustering.cpp" afterPath="$PROJECT_DIR$/pypathway/src/cluster/clustering.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/cluster/clustering.h" afterPath="$PROJECT_DIR$/pypathway/src/cluster/clustering.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/_chi2.c" afterPath="$PROJECT_DIR$/pypathway/src/node_src/_chi2.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/heap.c" afterPath="$PROJECT_DIR$/pypathway/src/node_src/heap.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/heap.h" afterPath="$PROJECT_DIR$/pypathway/src/node_src/heap.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/main.c" afterPath="$PROJECT_DIR$/pypathway/src/node_src/main.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/main.h" afterPath="$PROJECT_DIR$/pypathway/src/node_src/main.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/randpick.c" afterPath="$PROJECT_DIR$/pypathway/src/node_src/randpick.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/node_src/randpick.h" afterPath="$PROJECT_DIR$/pypathway/src/node_src/randpick.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/select/PPI_Graph.cpp" afterPath="$PROJECT_DIR$/pypathway/src/select/PPI_Graph.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/select/PPI_Graph.h" afterPath="$PROJECT_DIR$/pypathway/src/select/PPI_Graph.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/select/_chi2.c" afterPath="$PROJECT_DIR$/pypathway/src/select/_chi2.c" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/select/color_coding.cpp" afterPath="$PROJECT_DIR$/pypathway/src/select/color_coding.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/src/select/color_coding.h" afterPath="$PROJECT_DIR$/pypathway/src/select/color_coding.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/tests/__init__.py" afterPath="$PROJECT_DIR$/pypathway/tests/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/_cluster.cpython-35m-darwin.so" afterPath="$PROJECT_DIR$/pypathway/utils/_cluster.cpython-35m-darwin.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/_node.cpython-35m-darwin.so" afterPath="$PROJECT_DIR$/pypathway/utils/_node.cpython-35m-darwin.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/_select.cpython-35m-darwin.so" afterPath="$PROJECT_DIR$/pypathway/utils/_select.cpython-35m-darwin.so" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/datasets/ALL/ALL" afterPath="$PROJECT_DIR$/pypathway/utils/datasets/ALL/ALL" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/datasets/ColorectalCancer/all" afterPath="$PROJECT_DIR$/pypathway/utils/datasets/ColorectalCancer/all" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/datasets/ColorectalCancer/de" afterPath="$PROJECT_DIR$/pypathway/utils/datasets/ColorectalCancer/de" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/datasets/hint.bin" afterPath="$PROJECT_DIR$/pypathway/utils/datasets/hint.bin" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/information/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/information/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/interfaces.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/interfaces.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/templates/information/tests/index.html" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/templates/information/tests/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/templates/information/tests/test.js" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/templates/information/tests/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/display/utils/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/display/utils/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/interactive/__init__.py" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/interactive/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pynet/utils/jucell/template.html" afterPath="$PROJECT_DIR$/pypathway/utils/jucell/template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MANIFEST.in" afterPath="$PROJECT_DIR$/MANIFEST.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,12 +620,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="810">
-                <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <first_editor relative-caret-position="708">
+                <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -59,40 +654,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="full_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/former/full_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functional_enrichment_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/former/functional_enrichment_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="general_tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/former/general_tests.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/former/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -110,17 +671,49 @@
         <entry file="file://$PROJECT_DIR$/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+            <state relative-caret-position="119">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#78#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.in" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -147,6 +740,7 @@
       <find>import</find>
       <find>jucell</find>
       <find>pylibroadrunner</find>
+      <find>'</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pynet/analysis/modelling/third_party</dir>
@@ -159,7 +753,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pypathway/analysis/__init__.py" />
         <option value="$PROJECT_DIR$/pypathway/analysis/network/__init__.py" />
         <option value="$PROJECT_DIR$/docs/markdown/enrichment.md" />
         <option value="$PROJECT_DIR$/pypathway/pathviz/query/__init__.py" />
@@ -205,11 +798,12 @@
         <option value="$PROJECT_DIR$/pynet/utils/jucell/display/__init__.py" />
         <option value="$PROJECT_DIR$/pynet/utils/jucell/display/information/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/compile.sh" />
         <option value="$PROJECT_DIR$/tests.py" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/MANIFEST.in" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -247,7 +841,7 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
+              <option name="myItemId" value="pypathway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -257,7 +851,21 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyPathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -266,86 +874,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="markdowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="markdowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pynet" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PyPathway" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="markdowns" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="enrichment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -750,13 +1278,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -794,21 +1315,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/makeHeatFile.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="105" column="41" lean-forward="false" selection-start-line="105" selection-start-column="33" selection-end-line="105" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -816,7 +1337,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="5" />
@@ -826,7 +1347,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -854,7 +1375,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/gsea/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/gsea/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -864,7 +1385,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -872,7 +1393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6018">
           <caret line="354" column="12" lean-forward="false" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
@@ -882,7 +1403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/network/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/network/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="16" />
@@ -890,37 +1411,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/ora/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/ora/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/modelling/third_party/hotnet2/hotnet2/delta.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
-            <element signature="e#47#117#0" expanded="true" />
+            <element signature="e#47#117#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/propagation/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/analysis/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -930,7 +1451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/exportion/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/exportion/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -938,7 +1459,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/netviz/goviz.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/netviz/goviz.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
@@ -946,7 +1467,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/netviz/ReactomeOverview.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/netviz/ReactomeOverview.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -956,7 +1477,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -969,7 +1490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
@@ -980,7 +1501,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/display/information/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/display/information/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
@@ -998,7 +1519,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/display/utils/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/display/utils/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1008,7 +1529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/display/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/display/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -1046,7 +1567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/display/interfaces.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/display/interfaces.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1062,17 +1583,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/template.html">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/interactive/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/interactive/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
@@ -1170,27 +1691,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/utils/jucell/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/utils/jucell/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="e#78#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/netviz/__init__.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/netviz/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
@@ -1200,7 +1711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pynet/pathviz/query/common.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/pathviz/query/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
@@ -1242,14 +1753,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,15 +1814,7 @@
     <entry file="file://$PROJECT_DIR$/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1342,11 +1837,45 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="810">
-            <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <first_editor relative-caret-position="708">
+            <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#78#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

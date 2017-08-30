@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <script>
+        $(function() {
+            $( ".card" ).draggable();
+        });
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+        function change_button2() {
+            var listen = ['#switch1', '#tests', '#select'];
+            for (var i in listen){
+                console.log($(listen[i]).val());
+            }
+        }
+        function apply(config){
+
+        }
+    </script>
+    <style>
+        /*canvas{ position: absolute; z-index: 1 }*/
+
+        #gamestartscreen {
+            position: absolute;
+            margin: 0 auto;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            }
+    </style>
+</head>
+<body>
+    <div class='row'>
+        <div class="col s3 m3 l3 xl3" style="height: 80px;background-color: #0B9BCD">
+        </div>
+        <div class="col s8 m8 l8 xl8" style="height: 80px;background-color: #1abc9c">
+            <table class="bordered striped centered">
+                <thead>
+                  <tr>
+                      <th>Name</th>
+                      <th>Item Name</th>
+                      <th>Item Price</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Alvin</td>
+                    <td>Eclair</td>
+                    <td>$0.87</td>
+                  </tr>
+                  <tr>
+                    <td>Alan</td>
+                    <td>Jellybean</td>
+                    <td>$3.76</td>
+                  </tr>
+                  <tr>
+                    <td>Jonathan</td>
+                    <td>Lollipop</td>
+                    <td>$7.00</td>
+                  </tr>
+                </tbody>
+        </table>
+        </div>
+        <div class="col s1 m1 l2 xl1" style="height: 80px;background-color: #0B9BCD">
+        </div>
+
+    </div>
+    <div id="gamecontainer">
+        <div id="gamestartscreen" class="gamelayer">
+            <div class="card" style="width: 330px">
+                <div class="card-content" id="content">
+                    <p>GSEA enrichment analysis</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs">
+                        <li class="tab"><a class="active" href="#test4">Table</a></li>
+                        <li class="tab"><a href="#test5">Bar plot</a></li>
+                        <li class="tab"><a href="#test7">Network</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="test4">
+                        <form action="#" id='form' onchange="change_button2($('#form'))">
+                            <div class="row">
+                                <div class="col s6">
+                                    Display All
+                                </div>
+                                <div class="switch col s6">
+                                    <label>
+                                      Off
+                                      <input type="checkbox">
+                                      <span class="lever"></span>
+                                      On
+                                    </label>
+                                  </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    Filter
+                                </div>
+                                <div class="col s6" style="float:right">
+                                    <p class="range-field">
+                                        <input type="range" id="tests" min="0" max="100"/>
+                                    </p>
+                                  </div>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <select id="select">
+                                    <option value="Default">This is default</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Multiple Select</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="test5">
+                        <div class="input-field col s12">
+                            <select>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Materialize Select</label>
+                        </div>
+                    </div>
+                    <div id="test7">Test 4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
