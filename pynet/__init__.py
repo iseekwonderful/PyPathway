@@ -17,5 +17,5 @@ from .exportion import EnrichmentExport, MAGIExport, Hotnet2Export
 
 
 def version():
-    return "0.32"
+    return "0.33"
 

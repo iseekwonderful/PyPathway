@@ -1,4 +1,4 @@
-from jucell.display import Plotable, PlotOnlyInterface
+from ..utils.jucell.display import Plotable, PlotOnlyInterface
 import os
 import networkx as nx
 import math

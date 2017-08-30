@@ -1,7 +1,6 @@
 from io import StringIO
 from ...analysis import EnrichmentResult
 import re
-from ...pathviz.utils import plot_json
 import requests
 import json
 from ...utils import IdMapping

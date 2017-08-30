@@ -14,6 +14,14 @@ except (IOError, ImportError):
 
 
 requirements = [
+    'gseapy>=0.8.4',
+    'networkx',
+    'pandas',
+    'scipy',
+    'statsmodels',
+    'goatools',
+    'jinja2',
+    'sqlite3',
     'requests>=1.0',
     'ipython',
     'jupyter',

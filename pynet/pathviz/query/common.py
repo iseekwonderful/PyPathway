@@ -7,7 +7,7 @@ import traceback
 import xml.etree.cElementTree as ET
 import time
 import os
-from jucell import iframe
+from ...utils.jucell import iframe
 
 from .network import MultiThreadNetworkRequest, NetworkMethod, NetworkException, NetworkRequest
 
