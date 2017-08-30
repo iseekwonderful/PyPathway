@@ -19,6 +19,9 @@ integrated toolkit for pathway based analysis
 
 ## Network process
 
+APIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.
+
+
 ## Enrichment Analysis
 
 ## Modeling
