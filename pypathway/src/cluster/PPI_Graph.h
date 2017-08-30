@@ -5,8 +5,9 @@
 #include <stdlib.h>
 
 #define maxNumNode 50000
+#define geneNameLen 50
 
-const int geneNameLen=50;
+//const int geneNameLen=50;
 const float minCoExpresThreshold=0.37;
 extern int numNodes;
 extern int coExpresGeneNum;
