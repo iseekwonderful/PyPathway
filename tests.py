@@ -38,3 +38,33 @@ class TestAnalysis(unittest.TestCase):
 
     def test_spia(self):
         pass
+
+
+class TestUtils(unittest.TestCase):
+    def test_id_mapping(self):
+        pass
+
+    def test_gmt_utils(self):
+        pass
+
+    def test_load_sample_network(self):
+        pass
+
+
+class ModellingTest(unittest.TestCase):
+    def test_pathway_select(self):
+        pass
+
+    def test_cluster(self):
+        pass
+
+    def test_make_network_file(self):
+        pass
+
+    def test_make_heat_file(self):
+        pass
+
+    def test_run_hotnet2(self):
+        pass
+
+
