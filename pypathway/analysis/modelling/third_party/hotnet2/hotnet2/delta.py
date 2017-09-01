@@ -15,18 +15,18 @@ import os
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 try:
-    import _chi2
-    fast_scc = True
+    import fast_scc
+    use_fast_scc = True
     print("fast_scc")
 except:
-    fast_scc = False
+    use_fast_scc = False
     print(traceback.format_exc())
     print("slow_scc")
 
 strong_ccs = nx.strongly_connected_components
 
 def max_connected_component(mat, delta):
-    r = _chi2.chi2(2.0, (mat > delta).astype(np.int32))
+    r = fast_scc.scc(2.0, mat > delta)
     return parse_result(r)
 
 def parse_result(res):
@@ -84,7 +84,7 @@ def find_best_delta_by_largest_cc(permuted_sim, permuted_index, sizes, directed,
                 break
             else:
                 visited.append( delta )
-            if fast_scc:
+            if use_fast_scc:
                 lengths = max_connected_component(permuted_sim, delta)
             else:
                 G = hn.weighted_graph(permuted_sim, permuted_index, delta, directed)
