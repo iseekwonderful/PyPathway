@@ -15,7 +15,9 @@ from .netviz import FromCYConfig, FromNetworkX, StylePresets
 
 from .exportion import EnrichmentExport, MAGIExport, Hotnet2Export
 
+from .analysis.propagation import random_walk, random_walk_with_restart, diffusion_kernel
+
 
 def version():
-    return "0.33"
+    return "0.35"
 
