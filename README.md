@@ -6,7 +6,21 @@ integrated Python toolkit for pathway based analysis
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 
 
+
 ## Installation
+
+**Python version: >= 3.5**
+
+* install via pypi
+```
+pip install pypathway
+```
+* install from the source
+```
+git clone https://github.com/iseekwonderful/PyPathway.git
+cd PyPathway
+python setup.py install
+```
 
 ## Overview
 * Public databases APIs: `STRING`, `BioGRID`, `KEGG`, `Reactome` and `WikiPathway`
@@ -98,15 +112,28 @@ res.graph()
 
 ## Modeling
 
-
+* the Python Interface and optimize for `MAGI`
+* several c extension for `Hotnet permutation performance 
 
 ## Propagation
 
 Implemented algorithms
 
 * Random walk
+```python
+
+random_walk(G, h)
+```
 * Random walk with restart
+```python
+
+random_walk_with_restart(G, h, rp=0.7, n=-1)
+```
 * Heat kernel
+```python
+diffusion_kernel(G, h, rp=0.8, n=100)
+
+```
 
 ### detail
 
@@ -116,4 +143,17 @@ image source: [Network propagation: a universal amplifier of genetic association
 
 ## performance
 
+* numpy implementation of SPIA
+* node swap c extension for hotnet2
+* multi-threading for MAGI
+
+
 ## Interactive Visualization
+
+The interactive visualization for IPython notebook
+
+### Feature
+* `__repr__` Implemented for most classes
+* dynamic visualization for networkx.Graph instance
+* visualizer for pathway object
+* visualizer for Gene ontology DAG.
