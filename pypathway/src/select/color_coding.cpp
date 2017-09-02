@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "PPI_Graph.h"
 #include "color_coding.h"
-#include <math.h>
+//#include <math.h>
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
@@ -23,6 +23,13 @@ bool hasColor(int A, int B)
     if ((A & colorBinaryRep[B])==colorBinaryRep[B])
         return true;
     else return false;
+}
+
+int pow(int a1, int a2){
+    int res = 1;
+    for (int i = 0; i < a2; i++){
+        res *= a1;
+    }
 }
 
 int addColor(int A, int B)
