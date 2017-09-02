@@ -24,9 +24,9 @@ struct Node2 {
 
 
 // test function 2
-void hello(){
-    printf("hello ctypes\n");
-}
+//void hello(){
+//    printf("hello ctypes\n");
+//}
 
 // test function 3
 
@@ -252,7 +252,7 @@ struct Node* parse_adjacency_matrix(int * id_list, int * matrix, int length){
         }
         nodes[i].neighbours = neighbours_matrix;
     }
-    display_graph(nodes, length);
+    // display_graph(nodes, length);
     return nodes;
 }
 
@@ -291,7 +291,7 @@ struct Node* connected_double_edge_swap(struct Node* G, int node_count, int nswa
     struct CDF * cdf = generate_cdf(G, node_count);
     windows_threhold = 3;
     int windows = 1;
-    printf("\nStArT\n");
+//    printf("\nStArT\n");
     while (i < nswap) {
         int wcount = 0;
         init_heap();
@@ -300,9 +300,9 @@ struct Node* connected_double_edge_swap(struct Node* G, int node_count, int nswa
 //            printf("low windows count\n");
             int fail = 0;
             while (wcount < windows && i < nswap) {
-                if (i % 100000 == 0) {
-                    printf("done: %i\n", i);
-                }
+//                if (i % 100000 == 0) {
+//                    printf("done: %i\n", i);
+//                }
 //                printf("Low: i: %i, wcount: %i, windows: %i\n", i, wcount, windows);
                 int * picked = choose_node_from_cdf(cdf, (float)(rand()) / (float)(RAND_MAX), (float)(rand()) / (float)(RAND_MAX));
                 int n1 = picked[0];
@@ -368,9 +368,9 @@ struct Node* connected_double_edge_swap(struct Node* G, int node_count, int nswa
 //            printf("high windows count\n");
             // do check at end
             while (wcount < windows && i < nswap) {
-                if (i % 100000 == 0) {
-                    printf("done: %i\n", i);
-                }
+//                if (i % 100000 == 0) {
+//                    printf("done: %i\n", i);
+//                }
 //                printf("High: i: %i, wcount: %i, window: %i\n", i, wcount, windows);
                 int * picked = choose_node_from_cdf(cdf, (float)(rand()) / (float)(RAND_MAX), (float)(rand()) / (float)(RAND_MAX));
                 int n1 = picked[0];
