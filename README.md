@@ -1,9 +1,10 @@
-integrated toolkit for pathway based analysis
+integrated Python toolkit for pathway based analysis
 
-![](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Build Status](https://travis-ci.org/iseekwonderful/PyPathway.svg?branch=master)](https://travis-ci.org/iseekwonderful/PyPathway)
 ![](https://img.shields.io/badge/python-3.5-blue.svg)
 ![](https://img.shields.io/badge/python-3.6-blue.svg)
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+
 
 ## Installation
 
@@ -69,8 +70,22 @@ r = SPIA.run(all=c.background, de=c.deg, organism='hsa')
 
 * `table`, `plot()` and `graph()` method for the presentation of the analysis
 
+```python
+res.table
+
+```
 ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_table.png)
+
+```python
+res.plot()
+```
+
 ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png)
+```python
+
+res.graph()
+```
+
 ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png)
 
 ### IPython examples
