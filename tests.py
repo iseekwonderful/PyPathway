@@ -132,12 +132,12 @@ class TestPropagation(unittest.TestCase):
         r = random_walk(G, h)
         self.assertTrue(r is not None)
 
-    def test_RWR(self):
-        print("test rwr")
-        G = load_hint_hi12012_network()
-        h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
-        r = random_walk_with_restart(G, h, rp=0.7)
-        self.assertTrue(r is not None)
+    # def test_RWR(self):
+    #     print("test rwr")
+    #     G = load_hint_hi12012_network()
+    #     h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
+    #     r = random_walk_with_restart(G, h, rp=0.7)
+    #     self.assertTrue(r is not None)
 
     def test_heat_kernel(self):
         print("test heat kernel")
