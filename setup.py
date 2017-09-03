@@ -44,7 +44,8 @@ def configuration(parent_package='',top_path=None):
 
     config.add_extension('pypathway.analysis.modelling.third_party.hotnet2.hotnet2.c_routines',
                          sources=['pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf',
-                                    'pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c'])
+                                    'pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c'],
+                         extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
     return config
 
 npy_setup(**configuration(top_path='').todict())
