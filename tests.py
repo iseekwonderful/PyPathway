@@ -54,7 +54,7 @@ class TestAnalysis(unittest.TestCase):
     def test_spia(self):
         print("test spia")
         c = ColorectalCancer()
-        s = SPIA.run(c.deg, c.background)
+        s = SPIA.run(c.deg[:100], c.background)
         self.assertTrue(hasattr(s, 'plot'))
 
     def test_enrichnet_api(self):
