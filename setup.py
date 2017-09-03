@@ -73,7 +73,8 @@ fast_scc = Extension("pypathway.analysis.modelling.third_party.hotnet2.hotnet2.f
     "pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c",
     "pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.c",
     "pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.c",
-    "pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.c"])
+    "pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/test_data.c"],
+                     extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 
 if sys.platform == "darwin":

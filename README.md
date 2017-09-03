@@ -11,6 +11,12 @@ integrated Python toolkit for pathway based analysis
 
 **Python version: >= 3.5**
 
+**For Windows user**
+
+the [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) is required to compile c extensions.
+
+note: different version of OS may require different version of build tools.
+
 * install via pypi
 ```
 pip install pypathway
