@@ -29,6 +29,7 @@ requirements = [
     'echarts-python',
     'numpy',
     'wget',
+    'h5py',
 ]
 
 test_requirements = [
