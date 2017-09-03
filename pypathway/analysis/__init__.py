@@ -93,8 +93,9 @@ class EnrichmentResult:
         config['title']['subtext'] = self.target
         config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
         candidate = []
-        for x in self.df.iterrows():
-            candidate.append([x[1][self.title_index], func(x[1][self.prop_index])])
+        for i, x in self.df.iterrows():
+            candidate.append([x[self.title_index] if self.title_index >= 0 else i,
+                              func(x[self.prop_index] if self.prop_index >= 0 else i)])
         candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
         for x in candidate[:count]:
             config['yAxis']['data'].append(x[0])

@@ -23,6 +23,6 @@ class GSEA(EnrichmentResult):
         return GSEA(res.res2d, data, gmt, cls)
 
     def __init__(self, df, data, gmt, cls):
-        EnrichmentResult.__init__(self, df, data, gmt, 'GSEA', 0, 3, '-lg(fdr)')
+        EnrichmentResult.__init__(self, df, data, gmt, 'GSEA', -1, 3, '-lg(fdr)')
         self.df, self.data, self.gmt, self.cls = df, data, gmt, cls
 

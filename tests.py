@@ -93,7 +93,7 @@ class ModellingTest(unittest.TestCase):
     def test_make_heat_file(self):
         path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
         Hotnet2.make_heat(type='scores', heat_file=path + 'data/heats/pan12.gene2freq.txt',
-                          output_file='pan12.gene2freq.json', name='pan12.freq')
+                          output_file='former/pan12.gene2freq.json', name='pan12.freq')
 
     # def test_run_hotnet2(self):
     #     '''
