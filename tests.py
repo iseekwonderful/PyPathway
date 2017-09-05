@@ -7,6 +7,7 @@ from pypathway.utils import load_hint_hi12012_network
 from pypathway import random_walk_with_restart, random_walk, diffusion_kernel
 import pandas as pd
 import os
+import networkx as nx
 
 
 class TestNetworkProcess(unittest.TestCase):
@@ -54,7 +55,8 @@ class TestAnalysis(unittest.TestCase):
     def test_spia(self):
         print("test spia")
         c = ColorectalCancer()
-        s = SPIA.run(c.deg[:100], c.background)
+        deg = {k: c.deg[k] for k in list(c.deg.keys())[:100]}
+        s = SPIA.run(deg, c.background)
         self.assertTrue(hasattr(s, 'plot'))
 
     def test_enrichnet_api(self):
@@ -95,53 +97,53 @@ class TestUtils(unittest.TestCase):
         self.assertTrue(G is not None)
 
 
-class ModellingTest(unittest.TestCase):
-    # uncomment this while local test, this is time wasting for travis-ci
-    # def test_make_network_file(self):
-    #     path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
-    #     Hotnet2.make_network(edgelist_file=path + "data/networks/hint+hi2012/hint+hi2012_edge_list",
-    #                          gene_index_file=path + "data/networks/hint+hi2012/hint+hi2012_index_gene",
-    #                          network_name='hint+hi2012', prefix='hint+hi2012', beta=0.4,
-    #                          output_dir='data/networks/hint+hi2012_2', num_permutations=8)
-
-    def test_make_heat_file(self):
-        print("test heat")
-        path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
-        Hotnet2.make_heat(type='scores', heat_file=path + 'data/heats/pan12.gene2freq.txt',
-                          output_file='former/pan12.gene2freq.json', name='pan12.freq')
-
-    # def test_run_hotnet2(self):
-    #     '''
-    #     This test make take ~30 minuates
-    #
-    #     :return:
-    #     '''
-    #     path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
-    #     Hotnet2.run_hotnet2(network_files=[path + 'data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5'],
-    #                         permuted_network_paths=[
-    #                             path + 'data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5'],
-    #                         heat_files=[path + 'data/heats/pan12.gene2freq.json'],
-    #                         output_directory='result', num_cores=-1, heat_permutations=1)
+# class ModellingTest(unittest.TestCase):
+#     # uncomment this while local test, this is time wasting for travis-ci
+#     def test_make_network_file(self):
+#         path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
+#         Hotnet2.make_network(edgelist_file=path + "data/networks/hint+hi2012/hint+hi2012_edge_list",
+#                              gene_index_file=path + "data/networks/hint+hi2012/hint+hi2012_index_gene",
+#                              network_name='hint+hi2012', prefix='hint+hi2012', beta=0.4,
+#                              output_dir='data/networks/hint+hi2012_2', num_permutations=8)
+#
+#     def test_make_heat_file(self):
+#         print("test heat")
+#         path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
+#         Hotnet2.make_heat(type='scores', heat_file=path + 'data/heats/pan12.gene2freq.txt',
+#                           output_file='former/pan12.gene2freq.json', name='pan12.freq')
+#
+#     def test_run_hotnet2(self):
+#         '''
+#         This test make take ~30 minuates
+#
+#         :return:
+#         '''
+#         path = os.path.dirname(os.path.realpath(__file__)) + "/pypathway/analysis/modelling/third_party/hotnet2/paper/"
+#         Hotnet2.run_hotnet2(network_files=[path + 'data/networks/hint+hi2012/hint+hi2012_ppr_0.4.h5'],
+#                             permuted_network_paths=[
+#                                 path + 'data/networks/hint+hi2012/permuted/hint+hi2012_ppr_0.4_##NUM##.h5'],
+#                             heat_files=[path + 'data/heats/pan12.gene2freq.json'],
+#                             output_directory='result', num_cores=-1, heat_permutations=1)
 
 
 class TestPropagation(unittest.TestCase):
     def test_random_walk(self):
         print("test random walk")
-        G = load_hint_hi12012_network()
+        G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
         h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
         r = random_walk(G, h)
         self.assertTrue(r is not None)
 
-    # def test_RWR(self):
-    #     print("test rwr")
-    #     G = load_hint_hi12012_network()
-    #     h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
-    #     r = random_walk_with_restart(G, h, rp=0.7)
-    #     self.assertTrue(r is not None)
+    def test_RWR(self):
+        print("test rwr")
+        G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
+        h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
+        r = random_walk_with_restart(G, h, rp=0.7)
+        self.assertTrue(r is not None)
 
     def test_heat_kernel(self):
         print("test heat kernel")
-        G = load_hint_hi12012_network()
+        G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
         h = [1 if i % 3 == 0 else 0 for i in range(len(G))]
         r = diffusion_kernel(G, h, rp=0.7, n=200)
         self.assertTrue(r is not None)
