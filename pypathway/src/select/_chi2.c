@@ -60,7 +60,6 @@ static PyObject *select_select(PyObject *self, PyObject *args)
 
     int value = pathway_select(p, c, h, e, d, f, l, i, color, mut, fileName);
     // int value = hi();
-
     /* Build the output tuple */
     PyObject *ret = Py_BuildValue("i", 1);
     return ret;

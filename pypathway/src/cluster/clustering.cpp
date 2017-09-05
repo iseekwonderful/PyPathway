@@ -5,7 +5,14 @@
 #include "PPI_Graph.h"
 #include "clustering.h"
 #include <time.h>
-#include <unistd.h>
+
+//#include <unistd.h>
+
+//#ifdef WIN32
+//#include <windows.h>
+//#else
+//#include <unistd.h>
+//#endif
 
 
 //0.467581 0.16842
@@ -927,6 +934,7 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	markPathsNotToUse();
 	createGraphOfPaths();
 	randomConnectedComponents(randomNum);
+	return 0;
 }
 int main(int argv, char *argc[])
 {

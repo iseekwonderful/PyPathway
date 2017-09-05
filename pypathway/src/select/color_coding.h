@@ -11,7 +11,7 @@ const int weightContorl=100; // maximum weight of control allowd (maximum size o
 // thread-identical
 extern double ****DPMatrix;
 // thread-identical
-extern int colorAssigned[maxNumNode];
+extern int colorAssigned[50000];
 // thread-identical
 extern int colorBinaryRep[21];//color 0 is not there. Starts by color1
 

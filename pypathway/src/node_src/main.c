@@ -528,70 +528,70 @@ int tagged(int* list, int list_length, int id, int max_id){
 //     return 0;
 // }
 
-int perform_test(){
-    // First read the test graph
-    char * path = "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list";
-    FILE * fp;
-    fp = fopen(path, "r");
-    int geneNameLen = 50;
-    int * index2num = (int *)malloc(sizeof(int) * 10000);
-    memset(index2num, 0, sizeof(int) * 10000);
-    // indicate the neighbour index
-    int * neighbour_index = (int *)malloc(sizeof(int) * 10000);
-    memset(neighbour_index, 0, sizeof(int) * 10000);
-    char geneName1[geneNameLen], geneName2[geneNameLen], noneSence[geneNameLen];
-    while (fscanf(fp, "%s %s %s\n", geneName1, geneName2, noneSence)!=EOF) {
-        int n1 = atoi(geneName1);
-        int n2 = atoi(geneName2);
-        index2num[n1] += 1;
-        index2num[n2] += 1;
-    }
-    struct Node ** id2Node = malloc(sizeof(struct Node *) * 10000);
-    int max = 0;
-    for (int i = 1; i < 10000; i++) {
-        if (index2num[i] == 0) {
-            printf("max is %i\n", i);
-            max = i;
-            break;
-        }else{
-            struct Node * n = (struct Node *)malloc(sizeof(struct Node));
-            n->node_id = i;
-            n->neighbour_count = index2num[i];
-            n->neighbours = (int *)malloc(sizeof(int) * index2num[i]);
-            memset(n->neighbours, 0, sizeof(int) * index2num[i]);
-            id2Node[i] = n;
-        }
-    }
-    fseek(fp, 0, SEEK_SET);
-    int n = 0;
-    while (fscanf(fp, "%s %s %s\n", geneName1, geneName2, noneSence)!=EOF) {
-        int n1 = atoi(geneName1);
-        int n2 = atoi(geneName2);
-        int n1_index = neighbour_index[n1];
-        struct Node nn1 = *id2Node[n1];
-        nn1.neighbours[n1_index] = n2;
-        if (nn1.neighbour_count != index2num[n1]) {
-            printf("Error\n");
-        }
-        neighbour_index[n1] += 1;
-        id2Node[n2]->neighbours[neighbour_index[n2]] = n1;
-        neighbour_index[n2] += 1;
-        n ++;
-    }
-    printf("count: %i\n", id2Node[9859]->neighbour_count);
-    for (int i = 0; i < id2Node[100]->neighbour_count; i++) {
-        printf("%i\t", id2Node[100]->neighbours[i]);
-    }
-    struct Node * G = (struct Node *)malloc(sizeof(struct Node) * (max - 1));
-    for (int i = 1; i < max; i += 1) {
-        G[i - 1] = *id2Node[i];
-    }
-    // struct Node nn = G[max - 2];
-    connected_double_edge_swap(G, max - 1, 100000, 3);
-    return 0;
-}
-
-int main(int argc, const char * argv[]) {
-    perform_test();
-    return 0;
-}
+//int perform_test(){
+//    // First read the test graph
+//    char * path = "/Volumes/Data/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list";
+//    FILE * fp;
+//    fp = fopen(path, "r");
+//    int geneNameLen = 50;
+//    int * index2num = (int *)malloc(sizeof(int) * 10000);
+//    memset(index2num, 0, sizeof(int) * 10000);
+//    // indicate the neighbour index
+//    int * neighbour_index = (int *)malloc(sizeof(int) * 10000);
+//    memset(neighbour_index, 0, sizeof(int) * 10000);
+//    char geneName1[geneNameLen], geneName2[geneNameLen], noneSence[geneNameLen];
+//    while (fscanf(fp, "%s %s %s\n", geneName1, geneName2, noneSence)!=EOF) {
+//        int n1 = atoi(geneName1);
+//        int n2 = atoi(geneName2);
+//        index2num[n1] += 1;
+//        index2num[n2] += 1;
+//    }
+//    struct Node ** id2Node = malloc(sizeof(struct Node *) * 10000);
+//    int max = 0;
+//    for (int i = 1; i < 10000; i++) {
+//        if (index2num[i] == 0) {
+//            printf("max is %i\n", i);
+//            max = i;
+//            break;
+//        }else{
+//            struct Node * n = (struct Node *)malloc(sizeof(struct Node));
+//            n->node_id = i;
+//            n->neighbour_count = index2num[i];
+//            n->neighbours = (int *)malloc(sizeof(int) * index2num[i]);
+//            memset(n->neighbours, 0, sizeof(int) * index2num[i]);
+//            id2Node[i] = n;
+//        }
+//    }
+//    fseek(fp, 0, SEEK_SET);
+//    int n = 0;
+//    while (fscanf(fp, "%s %s %s\n", geneName1, geneName2, noneSence)!=EOF) {
+//        int n1 = atoi(geneName1);
+//        int n2 = atoi(geneName2);
+//        int n1_index = neighbour_index[n1];
+//        struct Node nn1 = *id2Node[n1];
+//        nn1.neighbours[n1_index] = n2;
+//        if (nn1.neighbour_count != index2num[n1]) {
+//            printf("Error\n");
+//        }
+//        neighbour_index[n1] += 1;
+//        id2Node[n2]->neighbours[neighbour_index[n2]] = n1;
+//        neighbour_index[n2] += 1;
+//        n ++;
+//    }
+//    printf("count: %i\n", id2Node[9859]->neighbour_count);
+//    for (int i = 0; i < id2Node[100]->neighbour_count; i++) {
+//        printf("%i\t", id2Node[100]->neighbours[i]);
+//    }
+//    struct Node * G = (struct Node *)malloc(sizeof(struct Node) * (max - 1));
+//    for (int i = 1; i < max; i += 1) {
+//        G[i - 1] = *id2Node[i];
+//    }
+//    // struct Node nn = G[max - 2];
+//    connected_double_edge_swap(G, max - 1, 100000, 3);
+//    return 0;
+//}
+//
+//int main(int argc, const char * argv[]) {
+//    perform_test();
+//    return 0;
+//}

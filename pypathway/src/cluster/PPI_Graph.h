@@ -53,7 +53,7 @@ typedef struct coExpresionGeneHash{
 extern coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
 
 extern PPI_Node listNodes[maxNumNode];
-extern float coExpresionMatrix[maxNumNode][maxNumNode];
+extern float** coExpresionMatrix;
 
 int createPPI_Graph(FILE *); 
 //int assignScoreCases(FILE *);

@@ -30,6 +30,7 @@ int pow(int a1, int a2){
     for (int i = 0; i < a2; i++){
         res *= a1;
     }
+    return res;
 }
 
 int addColor(int A, int B)
@@ -140,7 +141,8 @@ void randomColor()
     srand(time(NULL));
     for (int count=0; count<numNodes; count++)
     {
-        colorAssigned[count]=((random()%(numColor))+1);
+        //colorAssigned[count]=((random()%(numColor))+1);
+        colorAssigned[count]=((rand()%(numColor))+1);
         //printf("%i\n", colorAssigned[count]);
     }
 }
@@ -448,6 +450,7 @@ extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expre
     t = time( 0 );
     strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
     // printf("done: timestamp: %s\n", tmpBuf);
+    return 0;
 }
 
 

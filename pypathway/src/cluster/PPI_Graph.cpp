@@ -20,7 +20,7 @@ float coexpressionPValue[102];
 float meanCoExpression, varianceCoExpression;
 coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
 // thread-shared
-float coExpresionMatrix[maxNumNode][maxNumNode];// The node is is the same as PPI node id. The nodes which are not in PPI network are discarded.
+float** coExpresionMatrix;// The node is is the same as PPI node id. The nodes which are not in PPI network are discarded.
 
 
 int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
@@ -29,6 +29,10 @@ int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
     /* First we have to convert the geneNames in each instance of coexpression matrix into the id used in the PPI_Node.
      * Assuming that the coExpressionMatrix is orderd by the ids in coExpresionGeneHasTable.*/
 
+    coExpresionMatrix = (float **)malloc(sizeof(float *) * maxNumNode);
+    for (int i = 0; i < maxNumNode; i++){
+        coExpresionMatrix[i] = (float* )malloc(sizeof(float) * maxNumNode);
+    }
 	int firstGeneCount=0, secondGeneCount=0;
 	char geneName1[geneNameLen], geneName2[geneNameLen], prevGeneName[geneNameLen];
 	float geneCoExpr;
