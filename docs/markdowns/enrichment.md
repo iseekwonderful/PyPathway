@@ -117,7 +117,7 @@ The result table (In IPython notebook):
 # barplot
 res_h.plot()
 ```
-![](img_here)
+![](img_https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png)
 
 ### Specific ORA
 For KEGG, REACTOME and GO, there are specific class implement for them. For the convienice of geneset query and 
@@ -150,7 +150,7 @@ rg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo
 ```
 
 The gene ontology enrichment analysis provide the graph overview of the analysis
-![](graph_viz image here)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png)
 
 ### GSEA
 The Gene Set Enrichment Analysis, is introduced in paper:

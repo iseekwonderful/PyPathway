@@ -2,19 +2,17 @@
     <script>
         var box = $("#box{{time}}");
         var father = box.parent();
-//        var grandfather = father.parent();
         var thirdfather = father.parent().parent().parent();
         thirdfather.children(".prompt").remove();
         father.parent().children(".prompt").remove();
         father.css("max-width", "100%");
         box.css("margin-left", "5px");
         var target = document.getElementById("box{{time}}");
-//        var w = target.offsetWidth;
         var w = thirdfather.outerWidth();
         console.log(w);
         target.style.height = w * {{ratio}} + "px";
         box.append($("<iframe width='" + (parseInt(w) - 15).toString() + "'" +
-                " height='" + w * {{ratio}} + "' src={{path}} " +
+                " height='" + (w * {{ratio}} - 5) + "' src={{path}} " +
                 "frameborder='0'></iframe>"))
     </script>
 </div>
