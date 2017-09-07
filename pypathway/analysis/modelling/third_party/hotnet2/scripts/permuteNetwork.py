@@ -8,11 +8,12 @@ from traceback import format_exc
 try:
     from pypathway.analysis.modelling.third_party.hotnet2.hotnet2.fast_swap import node_swap
 except:
-    print(format_exc())
-    print("slow node swap")
+    pass
+    # print(format_exc())
+    # print("slow node swap")
     node_swap = None
 else:
-    print("fast node swap")
+    pass
 
 # Parse arguments
 def get_parser():
@@ -44,7 +45,7 @@ def permute_network( G, Q, numEdges, outputFile ):
     H = G.copy()
     nswap = Q*numEdges
     if node_swap:
-        print("fast node swap")
+        #print("fast node swap")
         H = node_swap(H, nswap=nswap)
         # fix me
         swaps = nswap

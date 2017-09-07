@@ -201,13 +201,13 @@ int add_edge(struct Node* n1, struct Node * n2){
     return 1;
 }
 
-int* build_adjacency_matrix(struct Node* nodes, int node_count){
+char* build_adjacency_matrix(struct Node* nodes, int node_count){
     int* id2Node = (int *)malloc(sizeof(int) * node_count);
     for (int i = 0; i < node_count; ++i)
     {
         id2Node[i] = nodes[i].node_id;
     }
-    int* matrix = (int *)malloc(sizeof(int) * node_count * node_count);
+    char* matrix = (char *)malloc(sizeof(char) * node_count * node_count);
     memset(matrix, 0, node_count * node_count);
     for (int i = 0; i < node_count; ++i)
     {
@@ -228,7 +228,7 @@ int* build_adjacency_matrix(struct Node* nodes, int node_count){
     return matrix;
 }
 
-struct Node* parse_adjacency_matrix(int * id_list, int * matrix, int length){
+struct Node* parse_adjacency_matrix(int * id_list, char * matrix, int length){
     struct Node * nodes = (struct Node *)malloc(sizeof(struct Node) * length);
     for (int i = 0; i < length; ++i)
     {

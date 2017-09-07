@@ -9,13 +9,23 @@ integrated Python toolkit for pathway based analysis
 
 ## Installation
 
+### General requirement
 **Python version: >= 3.5**
 
-**For Windows user**
 
-the [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) is required to compile c extensions.
+### Windows
 
-note: different version of OS may require different version of build tools.
+* The [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) is required to compile c extensions.
+
+* `numpy`, `scipy` and `staticmodels` (anaconda is recommend)
+
+
+### Unix / Linux
+
+* gcc or clang compiler
+
+
+### Sources
 
 * install via pypi
 ```
@@ -28,23 +38,32 @@ cd PyPathway
 python setup.py install
 ```
 
-## Overview
+## Features
 * Public databases APIs: `STRING`, `BioGRID`, `KEGG`, `Reactome` and `WikiPathway`
 * Functional set based and network based enrichment analysis algorithms implemented: `ORA`, `GSEA` and `SPIA`
 * Performance optimize for denovo enrichment algorithm `MAGI` and `Hotnet2`.
+* Network propagation random walk, RWR and heat kernel
 * Interactive visualization for pathway, graph and analysis result.
 * Web page exportation for results.
 
-## Features
-* Integrated with numpy and networkx
-* Dynamic visualization for IPython notebook
-* Most classes implement `__repr__` method for interactive environment
+## Highlights [TODOS]
+* Integrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages 
+* Dynamic visualization for IPython notebook. 
+* Most classes implement `__repr__` method for interactive environment.
 
 ## Network process
 
-Intuitive APIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.
+Intuitive APIs for querying and retrieval interaction network from public database. The return object are stored in `networkx.Graph` object.
 
-### search
+### Support databases
+
+* `KEGG`
+* `Reactome`
+* `WikiPathway`
+* `STRING`
+* `BioGRID`
+
+### Search
 ```
 from pypathway import PublicDatabase
 kg = PublicDatabase.search_kegg('CD4')
@@ -52,13 +71,13 @@ wp = PublicDatabase.search_wp('CD4')
 rt = PublicDatabase.search_reactome('CD4')
 ```
 
-### load
+### Load
 
 ```
 pathway = r[0].load()
 ```
 
-### plot
+### Plot
 
 ```
 pathway.draw()
@@ -66,21 +85,21 @@ pathway.draw()
 
 ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/netprocess_KEGG.png)
 
-### IPython examples
+### IPython notebook examples
 
 * [STRING and BioGRID](https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/STRING%7CBioGID_query.ipynb)
 * [Pathway databases](https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/Pathway_Datatbase_APIs.ipynb)
 
 ## Enrichment Analysis
 
-### Supports
+### Support methods
 
 * ORA
 * GSEA
 * Network enrichment (SPIA and Enrichment)
 * denovo enrichment (MAGI and Hotnet2)
 
-### Implementation
+### Implementation / Interface
 
 * Staticmethod `run()` for the starting of the analysis
  
@@ -147,10 +166,18 @@ diffusion_kernel(G, h, rp=0.8, n=100)
 
 image source: [Network propagation: a universal amplifier of genetic associations](http://www.nature.com/nrg/journal/v18/n9/abs/nrg.2017.38.html)
 
-## performance
+### IPython notebook examples
 
+* [Propagation](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb)
+
+## Utility and Performance
+
+
+* The Id converter
+* GMT file manager
+* network and expression data sets.
 * numpy implementation of SPIA
-* node swap c extension for hotnet2
+* node swap c extension for Hotnet2
 * multi-threading for MAGI
 
 
@@ -163,3 +190,5 @@ The interactive visualization for IPython notebook
 * dynamic visualization for networkx.Graph instance
 * visualizer for pathway object
 * visualizer for Gene ontology DAG.
+
+### GIF here

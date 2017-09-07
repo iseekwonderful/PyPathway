@@ -197,8 +197,7 @@ class GO(EnrichmentResult):
             obo = os.path.dirname(os.path.realpath(__file__)) + "/obo/go.obo"
         if not os.path.exists(obo):
             print("obo file not found, start to download")
-            wget.download('http://purl.obolibrary.org/obo/go/go-basic.obo',
-                          os.path.dirname(os.path.realpath(__file__)) + "/obo/go.obo")
+            wget.download('http://purl.obolibrary.org/obo/go/go-basic.obo', obo)
         obo_dag = GODag(obo)
         propagate_counts = not no_propagate_counts
         if type(assoc) == dict:

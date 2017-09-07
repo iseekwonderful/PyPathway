@@ -49,43 +49,42 @@ def translate(Graph):
     :return the id2node dict and the adjancency matrix
     '''
     length = len(Graph.node)
+    print(length)
     id2_node = {}
-    #     adjacency = [[0 for _ in range(length)] for _ in range(length)]
-    adjacency = np.zeros((length, length)).astype(np.int)
+    adjacency = np.zeros((length, length), dtype=np.int8)
     for i, n in enumerate(Graph.node):
         id2_node[int(n)] = i
-    # for k, v in Graph.edge.items():
-    #         for e in v:
-    #             adjacency[id2_node[k]][id2_node[e]] = 1
     for x in Graph.edges():
         i1, i2 = id2_node[int(x[0])], id2_node[int(x[1])]
         adjacency[i1][i2] = 1
         adjacency[i2][i1] = 1
     ids = list(id2_node.keys())
     id_list = (c_int * len(ids))(*ids)
-    length = len(id_list)
-    adj = list(np.reshape(adjacency, length ** 2))
-    #     for x in adjacency:
-    #         adj += list(x.astype(np.int))
-    adj_list = (c_int * len(adj))(*adj)
-    #     adj_list = adjacency.ctypes.data_as(c_int_p)
-    return id_list, adj_list, length
+    # length = len(id_list)
+    # adj = list(np.reshape(adjacency, length ** 2))
+    # adj_list = (c_byte * len(adj))(*adj)
+    return id_list, adjacency, length
 
 
 def parse_adjacency_matrix(id2name, matrix, count):
     ids = struct.unpack('i' * count, id2name)
-    matrix = struct.unpack('i' * count * count, matrix)
+    # matrix = struct.unpack('i' * count * count, matrix)
     id2node = {i: x for i, x in enumerate(ids)}
     rG = nx.Graph()
-    for i in range(len(ids)):
-        for j in range(len(ids)):
-            if matrix[len(ids) * i + j] == 1:
+    for i in range(count):
+        for j in range(count):
+            if matrix[i][j] == 1:
                 rG.add_edge(str(id2node[i]), str(id2node[j]))
     return rG
 
 
 def node_swap(G, nswap, windows_threshold=3):
+    print("start translate")
     id2node, matrix, count = translate(G)
+    print("call node swap")
     ids, mat, count = _node.swap(id2node, matrix, count, int(nswap), windows_threshold)
+    print("parse adjacency matrix")
+    print(type(ids), mat.shape, count)
     NG = parse_adjacency_matrix(ids, mat, count)
+    print("done")
     return NG

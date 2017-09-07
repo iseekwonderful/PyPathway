@@ -1,5 +1,7 @@
 #include <Python.h>
 #include "main.h"
+#include <numpy/arrayobject.h>
+#include <stdlib.h>
 
 
 /* Docstrings */
@@ -35,6 +37,8 @@ PyObject *PyInit__node(void)
     PyObject *module = PyModule_Create(&moduledef);
     if (module == NULL)
         return NULL;
+
+    import_array();
     
     /* Load `numpy` functionality. */    
     return module;
@@ -49,12 +53,27 @@ static PyObject *swap_swap(PyObject *self, PyObject *args)
 
     int * id_list;
     int id_size;
-    int * adjacency;
+    char * adjacency;
     int adjacency_size;
+    PyObject *adj_object;
 
-    if (!PyArg_ParseTuple(args, "s#s#iii", &id_list, &id_size, &adjacency,
-     &adjacency_size, &node_count, &repeats, &windows_threholds)) {
+//    if (!PyArg_ParseTuple(args, "s#s#iii", &id_list, &id_size, &adjacency,
+//     &adjacency_size, &node_count, &repeats, &windows_threholds)) {
+//        return NULL;
+//    }
+
+    if (!PyArg_ParseTuple(args, "s#Oiii", &id_list, &id_size, &adj_object, &node_count, &repeats, &windows_threholds)) {
         return NULL;
+    }
+
+    adjacency_size = (int)PyArray_DIM(adj_object, 0);
+    adjacency = (char*)PyArray_DATA(adj_object);
+
+    // Py_DECREF(adj_object);
+
+    if (adjacency == NULL) {
+        printf("adjacency null %i\n", adjacency_size);
+        exit(1);
     }
 
     // printf("%i, %i, %i\n", id_size, adjacency_size, node_count);
@@ -63,7 +82,7 @@ static PyObject *swap_swap(PyObject *self, PyObject *args)
 
     struct Node* res = connected_double_edge_swap(r, node_count, repeats, windows_threholds);
 
-    int* matrix = build_adjacency_matrix(res, node_count);
+    char* matrix = build_adjacency_matrix(res, node_count);
 
     int* id2node = (int *)malloc(sizeof(int) * node_count);
 
@@ -72,7 +91,14 @@ static PyObject *swap_swap(PyObject *self, PyObject *args)
         id2node[i] = res[i].node_id;
     }
 
+    npy_intp dims[2];
+    dims[0] = adjacency_size;
+    dims[1] = adjacency_size;
+
+    PyObject* mat;
+    mat = PyArray_SimpleNewFromData(2, dims, NPY_INT8, matrix);
+
     /* Build the output tuple */
-    PyObject *ret = Py_BuildValue("y#y#i", id2node, sizeof(int) * node_count, matrix, sizeof(int) * node_count * node_count, node_count);
+    PyObject* ret = Py_BuildValue("y#Oi", id_list, sizeof(int) * node_count, mat, node_count);
     return ret;
 }
