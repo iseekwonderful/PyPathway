@@ -106,7 +106,7 @@ class MAGI:
             except:
                 raise Exception("File not found")
         colors, mutations, run_id = [8, 7, 6, 5], [4, 3, 2, 1], '0'
-        colors, mutations, run_id = [5], [1], '0'
+        # colors, mutations, run_id = [5], [1], '0'
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
         pool = Pool(processes=process)
         seed = []
