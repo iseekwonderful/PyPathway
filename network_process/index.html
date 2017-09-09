@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Network process - Documation of PyPathway</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Network process";
+    var mkdocs_page_input_path = "network_process.md";
+    var mkdocs_page_url = "/network_process/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documation of PyPathway</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Network process</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#network-process">Network process</a></li>
+    
+
+    <li class="toctree-l2"><a href="#string">STRING</a></li>
+    
+
+    <li class="toctree-l2"><a href="#biogrid">BioGRID</a></li>
+    
+
+    <li class="toctree-l2"><a href="#kegg">KEGG</a></li>
+    
+
+    <li class="toctree-l2"><a href="#reactome">Reactome</a></li>
+    
+
+    <li class="toctree-l2"><a href="#wikipathway">WikiPathway</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analysis</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../enrichment/">Enrichment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../modelling/">Modelling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../propagation/">propagation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documation of PyPathway</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Network process</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/network_process.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="network-process">Network process</h2>
+<p>APIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.</p>
+<h2 id="string">STRING</h2>
+<p><strong>Single or list molecular</strong></p>
+<p>To search interaction network related to STRING database, use the staticmethod <code>STRING.search(name, organism)</code> .</p>
+<p><img alt="" src="../images/network_process/string_search.png" /></p>
+<p>and each search result could be retrieved using its <code>load</code> method; the result of <code>load</code> method is a <code>networkx.Graph</code> with a additional <code>plot</code> method. Use the plot method to draw the graph.</p>
+<p><img alt="" src="../images/network_process/string_draw.png" /></p>
+<p><strong>Query Entire network</strong></p>
+<p>Also, download the total interaction network is available for certain organism. use <code>STRING.overall_network(organism)</code> to retrieve the total interaction network to a networkx object.</p>
+<pre><code># This function returns a nx.Graph object G contain the entire network from string for species hsa.
+G = STRING.overall_graph(&quot;hsa&quot;)
+</code></pre>
+
+<h2 id="biogrid">BioGRID</h2>
+<p><strong>Single or list of molecular</strong></p>
+<p>Similar to STRING, single or list molecular search is implemented in <code>BioGRID.search</code>, supports three type of id: [<code>Symbol</code>, <code>Extrez</code>, <code>pubmed</code>].</p>
+<p><img alt="" src="../images/network_process/BioGrid.png" /></p>
+<p>The result is the <code>networkx.Graph</code> object with additional plot object.</p>
+<p><img alt="" src="../images/network_process/plot.png" /></p>
+<p><strong>Entire networks</strong></p>
+<p>Using <code>BioGRID.overall_network(organism)</code> to retrieve the entire network.</p>
+<h2 id="kegg">KEGG</h2>
+<p>To search and retrieve pathway from KEGG</p>
+<pre><code class="python"># use search_kegg to search kegg database
+res = PublicDatabase.search_kegg(name, organism=&quot;hsa&quot;)
+# use load() method to parse the result
+path = res[0].load()
+# use plot to view the pathway.
+</code></pre>
+
+<p><strong>Result</strong></p>
+<p><img alt="" src="../images/network_process/netprocess_KEGG.png" /></p>
+<p>Unlike STRING and BioGRID, the KEGG, Reactome and WikiPathway object
+are stored in a tree-like object.</p>
+<h2 id="reactome">Reactome</h2>
+<p>The reactome API is integrated in the class <code>PublicDatabase</code>, use PublicDatabase to
+ search Reactome database for pathways.</p>
+<pre><code class="python">res = PublicDatabase.search_reactome(&quot;jak&quot;)
+</code></pre>
+
+<p>results(list of class of ReactomeResult)</p>
+<pre><code>[source: Reactome
+  id: R-HSA-8950505
+ BioPAX: False 
+ SBGN-PD: False 
+ description:b'Gene and protein expression by &lt;span class=&quot;highlighting&quot; &gt;JAK&lt;/span&gt;-STAT signaling after Interleukin-12 stimulation',
+ source: Reactome
+  id: R-HSA-6788467
+ BioPAX: False 
+ SBGN-PD: False 
+ description:b'IL-6-type cytokine receptor ligand interactions',
+ source: Reactome
+  id: R-HSA-877300
+ BioPAX: False 
+ SBGN-PD: False 
+ description:b'Interferon gamma signaling',
+ source: Reactome
+  id: R-HSA-913531
+ BioPAX: False 
+ SBGN-PD: False 
+ description:b'Interferon Signaling',
+ source: Reactome
+  id: R-HSA-982772
+ BioPAX: False 
+ SBGN-PD: False 
+ description:b'Growth hormone receptor signaling']
+</code></pre>
+
+<p>Retrieve and draw the pathway.</p>
+<pre><code class="python"># load
+pathway = res[1].load()
+# draw
+ph.draw()
+</code></pre>
+
+<p>The result pathway is drawn in the interactive region</p>
+<p><img alt="" src="../images/network_process/process_reactome_view.png" /></p>
+<h2 id="wikipathway">WikiPathway</h2>
+<p>The class <code>PublicDatabase</code> also implements <code>search_wp</code> API.</p>
+<pre><code>PublicDatabase.search_wp(keyword, organism)
+</code></pre>
+
+<p>which return a class of WikiPathwayResult instances, use load method to get
+the pathway object. And draw to get quick preview of the pathway.</p>
+<pre><code>result[0].load().draw()
+</code></pre>
+
+<p><strong>Example</strong></p>
+<pre><code># search
+res = PublicDatabase.search_wp(&quot;jak&quot;)
+# load 
+path = res[0].load()
+# draw
+path.draw()
+</code></pre>
+
+<p><img alt="" src="../images/network_process/process_wiki_pathway.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../enrichment/" class="btn btn-neutral float-right" title="Enrichment">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../enrichment/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

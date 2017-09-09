@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Visualization - Documation of PyPathway</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Visualization";
+    var mkdocs_page_input_path = "netviz.md";
+    var mkdocs_page_url = "/netviz/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documation of PyPathway</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_process/">Network process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analysis</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../enrichment/">Enrichment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../modelling/">Modelling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../propagation/">propagation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Visualization</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#overview">Overview</a></li>
+    
+
+    <li class="toctree-l2"><a href="#usage">Usage</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#inputs">Inputs</a></li>
+        
+            <li><a class="toctree-l3" href="#example">Example</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#the-layout">The layout</a></li>
+    
+
+    <li class="toctree-l2"><a href="#basic-interactive-feature">Basic interactive feature</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#tooltips">Tooltips</a></li>
+        
+            <li><a class="toctree-l3" href="#the-cxtmenu">The cxtmenu</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#the-dag-visualizer-for-go">The DAG visualizer for GO</a></li>
+    
+
+    <li class="toctree-l2"><a href="#todo">Todo</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#style">Style</a></li>
+        
+            <li><a class="toctree-l3" href="#caution">Caution</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documation of PyPathway</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Visualization</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/netviz.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="overview">Overview</h2>
+<p>This is the inner module of pynet and a dynamic visualizer for networkx graph. With several function like  tooltips, highlight and node modification.</p>
+<p><img alt="" src="../images/netviz/overview.png" /></p>
+<h2 id="usage">Usage</h2>
+<h3 id="inputs">Inputs</h3>
+<p>The class <code>FromNetworkx</code> receive <code>networks.Graph</code> or <code>networks.DiGraph</code> instance, and plot as a HTML widget in the output area.
+The difference between <code>Graph</code> and <code>DiGraph</code> is the arrow rendered in the target.</p>
+<h3 id="example">Example</h3>
+<pre><code>FromNetworkX(nx.complete_graph(5)).plot()
+</code></pre>
+
+<p>This example generate a five node Graph and render.</p>
+<p><img alt="" src="../images/netviz/Usage.png" /> </p>
+<h2 id="the-layout">The layout</h2>
+<p>The layout algorithm is mainly <code>spring_layout</code>. if the node number is less then 20, the module will use <code>cose-bilkent</code> implementation. Else the <code>nx.spring_layout</code> is used for speed concern.</p>
+<p><strong>If the graph is highly connected, the layout algorithm may have poor performance</strong></p>
+<h2 id="basic-interactive-feature">Basic interactive feature</h2>
+<h3 id="tooltips">Tooltips</h3>
+<p>if any <code>tooltip</code> item are in the node’s property, a tooltip will  appear when mouse hang over the node. the tooltip accepts a <code>dict</code> like </p>
+<pre><code>{“FIRST_ATTRITUTE”: “FIRST_VALUE”, “SECOND_ATTRIBUTE”: “SECOND_VALUE”}
+</code></pre>
+
+<p>and displays:</p>
+<pre><code>FIRST_ATTRITUTE: FIRST_VALUE
+SECOND_ATTRIBUTE: SECOND_VALUE
+</code></pre>
+
+<p>look likes:</p>
+<p><img alt="" src="../images/netviz/ToolTip.png" /></p>
+<h3 id="the-cxtmenu">The cxtmenu</h3>
+<p>if left click at certain node, a cxtmenu will be displayed with mark, remove and expand(may not available if not implemented).
+<img alt="" src="../images/netviz/edit.png" /></p>
+<h2 id="the-dag-visualizer-for-go">The DAG visualizer for GO</h2>
+<p>Specially for Gene Ontology, the DAG plotter is prepared with dagre layout.</p>
+<p>Example: </p>
+<h1 id="todo">Todo</h1>
+<h2 id="style">Style</h2>
+<p>The <code>FromNetworkx</code> receives style like {‘node’: {…}, ‘edge’: {…}, ‘spring_length’: {…}}
+or several presets are available in <code>StylePresets</code>
+for example:</p>
+<pre><code>ORANGE_CENTERED_LABEL = {
+        'node': {'label': 'data(label)',
+                 'width': 24,
+                 'height': 24,
+                 'font-size': '-1em',
+                 'font-weight': 2,
+                 'background-color': '#F69924',
+                 'border-width': 2,
+                 'border-color': 'white',
+                 'text-valign': 'center',
+                 'text-halign': 'center',
+                 'color': 'white'
+                 },
+        'edge': {
+            'width': 3,
+            'line-color': '#F69924'
+        },
+        'spring_length': 50
+    }
+</code></pre>
+
+<h2 id="caution">Caution</h2>
+<h3 id="maximum-node-and-edge-count">Maximum node and edge count</h3>
+<p>Due to the performance issue cause by JavaScript and Cytoscape.js, and Graph whose node number &gt; 2k or edge &gt; 5k will cause browser long time 100 percent CPU usage.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../propagation/" class="btn btn-neutral" title="propagation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../propagation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

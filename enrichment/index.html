@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Enrichment - Documation of PyPathway</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Enrichment";
+    var mkdocs_page_input_path = "enrichment.md";
+    var mkdocs_page_url = "/enrichment/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documation of PyPathway</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_process/">Network process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analysis</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Enrichment</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#enrichment-analysis">Enrichment Analysis</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l4" href="#basic-class">Basic class</a></li>
+        
+            <li><a class="toctree-l4" href="#ora">ORA</a></li>
+        
+            <li><a class="toctree-l4" href="#specific-ora">Specific ORA</a></li>
+        
+            <li><a class="toctree-l4" href="#gsea">GSEA</a></li>
+        
+            <li><a class="toctree-l4" href="#spia">SPIA</a></li>
+        
+            <li><a class="toctree-l4" href="#enrichnet">Enrichnet</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../modelling/">Modelling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../propagation/">propagation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documation of PyPathway</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Analysis &raquo;</li>
+        
+      
+    
+    <li>Enrichment</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/enrichment.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="enrichment-analysis">Enrichment Analysis</h2>
+<h3 id="overview">Overview</h3>
+<p>Enrichment analysis aim to find functional set which are over-represented in 
+a large set of protein or genes. In this section, we will go through the supports
+enrichment, demonstrate the definition and the usage of each method. </p>
+<h3 id="basic-class">Basic class</h3>
+<p>This basic class of enrichment analysis is <code>EnrichmentResult</code> it self contains the 
+ result of certain type of enrichment analysis and subclass should at least
+ rewrite the statistic method <code>run</code> to perform the analysis.</p>
+<h4 id="methods">methods</h4>
+<ul>
+<li>
+<p><code>run</code> : execute the enrichment analysis and return the instance of subclass contains
+the analysis information</p>
+</li>
+<li>
+<p><code>table</code> : return the result pandas.Dataframe</p>
+</li>
+<li>
+<p><code>plot</code> : plot the bar chart in the output area</p>
+</li>
+<li>
+<p><code>graph</code> : if the result set have certain relationship, this method return the graph of them.
+for example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.</p>
+</li>
+</ul>
+<h3 id="ora">ORA</h3>
+<p>The over-representation analysis is the most widely used enrichment analysis method, It use
+Fisher's exact test to check whether certain functional set is over-represented in a large set
+of protein or genes.</p>
+<h4 id="implementation">Implementation</h4>
+<p>The ORA methods is implemented in the analysis.ora</p>
+<pre><code class="python"># general ora method
+ORA.run(study, pop, gene_set, adjust='fdr_bh')    
+</code></pre>
+
+<p>where <code>study</code> is set of significant differential expressed genes or proteins,
+ and <code>pop</code> is the total annotated genes or proteins. the <code>gene_set</code> is a dict contains
+the gene set name and contained genes like </p>
+<pre><code>{&quot;B cell receptor pathway&quot;: {&quot;CD22&quot;, &quot;CD81&quot;...}...}
+</code></pre>
+
+<h4 id="example">Example</h4>
+<pre><code class="python"># import necessary module
+from pypathway.analysis.ora import KEGG, ORA
+from pypathway.utils import ColorectalCancer, IdMapping, GMTUtils
+
+# load a gene_set from a gmt file
+gmt = GMTUtils.parse_gmt_file(&quot;../../tests/gmt_file/h.all.v6.0.entrez.gmt&quot;)
+
+# load data set
+c = ColorectalCancer()
+
+# perform general ORA test
+res_h = ORA.run(c.deg_list, c.background, gmt)
+
+# view result table
+res_h.table.head()
+</code></pre>
+
+<p>The result table (In IPython notebook):</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>mapped</th>
+      <th>number in study</th>
+      <th>p-value</th>
+      <th>fdr</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>HALLMARK_GLYCOLYSIS</td>
+      <td>184</td>
+      <td>91</td>
+      <td>9.956407e-08</td>
+      <td>3.555860e-07</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>HALLMARK_APICAL_JUNCTION</td>
+      <td>185</td>
+      <td>97</td>
+      <td>7.750142e-10</td>
+      <td>3.748583e-09</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>HALLMARK_MYC_TARGETS_V1</td>
+      <td>173</td>
+      <td>48</td>
+      <td>8.377692e-01</td>
+      <td>9.106187e-01</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>HALLMARK_COAGULATION</td>
+      <td>131</td>
+      <td>64</td>
+      <td>1.237516e-05</td>
+      <td>3.093790e-05</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>HALLMARK_MTORC1_SIGNALING</td>
+      <td>176</td>
+      <td>90</td>
+      <td>1.551015e-08</td>
+      <td>5.965443e-08</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="python"># barplot
+res_h.plot()
+</code></pre>
+
+<p><img alt="" src="../images/enrichment/enrichment_general_ora.png" /></p>
+<h3 id="specific-ora">Specific ORA</h3>
+<p>For KEGG, REACTOME and GO, there are specific class implement for them. For the convienice of geneset query and </p>
+<ul>
+<li><code>KEGG</code> </li>
+</ul>
+<pre><code class="python"># rather than input specific gene set, organism is accepted and geneset will be retrieved.
+r_kg = KEGG.run(c.deg_list, c.background, 'hsa')
+</code></pre>
+
+<ul>
+<li><code>Reactome</code></li>
+</ul>
+<pre><code># Reactome official API is used. note that the background is the whole Reactome
+# library, if background set required, use Reactome GMT file and ORA class 
+r = Reactome.run(sybs, organism='Homo sapiens')
+</code></pre>
+
+<ul>
+<li><code>Gene Ontology</code></li>
+</ul>
+<pre><code class="python"># Gene ontology analysis require additional a assoc file.
+# IdMapping class could be used to generate this file
+# c.background is to background gene list of certain study
+r = IdMapping.convert_to_dict(input_id=c.background, source='ENTREZID', target=&quot;GO&quot;, organism='hsa')
+# and run the analysis
+# [str(x) for x in c.deg_list]: study
+# [str(x) for x in c.background]: background
+# r: the assoc dict
+# obo=path + 'go-basic.obo': the path to the obo file
+rg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo=path + 'go-basic.obo')
+</code></pre>
+
+<p>The gene ontology enrichment analysis provide the graph overview of the analysis</p>
+<p><img alt="" src="../images/enrichment/go_graph_plot.png" /></p>
+<h3 id="gsea">GSEA</h3>
+<p>The Gene Set Enrichment Analysis, is introduced in paper:</p>
+<blockquote>
+<p>Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles</p>
+</blockquote>
+<p>at <a href="http://www.pnas.org/content/102/43/15545.short">PNAS</a></p>
+<p>This class is implement via <a href="https://github.com/BioNinja/GSEApy">GSEApy</a></p>
+<h4 id="usage">Usage</h4>
+<pre><code class="python"># gene_exp is the expression dataframe
+# class_vector is the define of the experiment
+gs_res = gp.gsea(data=gene_exp, gene_sets='KEGG_2016', cls=class_vector, 
+                 permutation_type='phenotype', #set permutation_type to phenotype when 
+                 outdir='gsea_reprot', method='signal_to_noise', format='png')
+</code></pre>
+
+<p>more detail information is described in the <code>example/analysis/GSEA.ipynb</code></p>
+<h3 id="spia">SPIA</h3>
+<p>The Signaling Pathway Impact Analysis, is introduced in paper:</p>
+<blockquote>
+<p><a href="https://academic.oup.com/bioinformatics/article/25/1/75/302846/A-novel-signaling-pathway-impact-analysis#">A novel signaling pathway impact analysis</a></p>
+</blockquote>
+<p>we implement this algorithm in Python.</p>
+<h4 id="usage_1">Usage</h4>
+<pre><code class="python">r = SPIA.run(de=c.deg, all=c.background)
+# de: a dict, key: gene, value: fold-change
+# the idtype is entrez. use IDMapping to convert
+</code></pre>
+
+<h3 id="enrichnet">Enrichnet</h3>
+<p>The Enrichnet algorithm is introduced in paper</p>
+<blockquote>
+<p><a href="https://academic.oup.com/bioinformatics/article/28/18/i451/247049/EnrichNet-network-based-gene-set-enrichment">EnrichNet: network-based gene set enrichment analysis</a></p>
+</blockquote>
+<p>we implement the Python API for Enrichnet HTTP service.</p>
+<h4 id="usage_2">Usage</h4>
+<pre><code class="python">run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')
+# genesets: the gene list used to run the analysis
+# idtype: input id type
+# the pathlib: function set library
+# graph: the graph 
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modelling/" class="btn btn-neutral float-right" title="Modelling">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../network_process/" class="btn btn-neutral" title="Network process"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../network_process/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../modelling/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

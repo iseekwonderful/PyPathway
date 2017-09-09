@@ -1,672 +1,374 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
-    
-      
-        <title>PyPathway</title>
-      
-      
-      
-      
-    
-    <meta property="og:url" content="None">
-    <meta property="og:title" content="PyPathway">
-    <meta property="og:image" content="None/./">
-    <meta name="apple-mobile-web-app-title" content="PyPathway">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('./assets/fonts/icon.eot?52m981');
-      	src: url('./assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('./assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('./assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('./assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="./assets/stylesheets/application-a422ff04cc.css">
-    
-      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
-    
-    
-      
-      
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
-      <style>
-        body, input {
-          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
-        }
-      </style>
-    
-    
-      <link rel="stylesheet" href="./stylesheets/extra.css">
-    
-    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
-    
-  </head>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
   
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Overview - Documation of PyPathway</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
   
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Overview";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
   
-  <body class="palette-primary-white palette-accent-orange">
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
     
-      
-      
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Documation of PyPathway</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Overview</a>
+    <ul class="subnav">
             
-          </span>
-        
-        PyPathway
-      </div>
-    </div>
+    <li class="toctree-l2"><a href="#pypathway">PyPathway</a></li>
     
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/iseekwonderful" title="@iseekwonderful on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
-  
-  <a href="https://github.com/iseekwonderful/pypathway" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          PyPathway
-          <span class="version">
-            0.2.4.1
-          </span>
-        </strong>
-        
-          <br>
-          iseekwonderful/pypathway
-        
-      </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-        <ul class="repo">
-          <li class="repo-download">
-            
-            <a href="https://github.com/iseekwonderful/pypathway/archive/0.2.3.zip" target="_blank" title="Download" data-action="download">
-              <i class="icon icon-download"></i> Download
-            </a>
-          </li>
-          <li class="repo-stars">
-            <a href="https://github.com/iseekwonderful/pypathway/stargazers" target="_blank" title="Stargazers" data-action="star">
-              <i class="icon icon-star"></i> Stars
-              <span class="count">&ndash;</span>
-            </a>
-          </li>
-        </ul>
-        <hr>
-      
-      <div class="toc">
         <ul>
-          
-            
-  <li>
-    <a class="current" title="Get Started" href=".">
-      Get Started
-    </a>
-    
-      
         
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Usage" href="#usage">
-                Usage
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Installation" href="#installation">
-                Installation
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Try it out" href="#try-it-out">
-                Try it out
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Features" href="#features">
-                Features
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Lisences" href="#lisences">
-                Lisences
-              </a>
-            </li>
-          
+            <li><a class="toctree-l3" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l3" href="#features">Features</a></li>
+        
+            <li><a class="toctree-l3" href="#network-process">Network process</a></li>
+        
+            <li><a class="toctree-l3" href="#enrichment-analysis">Enrichment Analysis</a></li>
+        
+            <li><a class="toctree-l3" href="#modeling">Modeling</a></li>
+        
+            <li><a class="toctree-l3" href="#propagation">Propagation</a></li>
+        
+            <li><a class="toctree-l3" href="#utility-and-performance">Utility and Performance</a></li>
+        
+            <li><a class="toctree-l3" href="#interactive-visualization">Interactive Visualization</a></li>
+        
         </ul>
-      
     
-  </li>
 
-          
-            
-  <li>
-    <span class="section">User Guide</span>
-    <ul>
-      
-        
-  <li>
-    <a class="" title="Search and Retrive Pathway" href="user-guide/query/">
-      Search and Retrive Pathway
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="Core Pathway Object" href="user-guide/core/">
-      Core Pathway Object
-    </a>
-    
-  </li>
-
-      
-        
-  <li>
-    <a class="" title="Data mapping and visualization" href="user-guide/map/">
-      Data mapping and visualization
-    </a>
-    
-  </li>
-
-      
     </ul>
-  </li>
-
+	    </li>
           
-            
-  <li>
-    <a class="" title="Format Discuss" href="format/">
-      Format Discuss
-    </a>
-    
-  </li>
-
+            <li class="toctree-l1">
+		
+    <a class="" href="network_process/">Network process</a>
+	    </li>
           
-            
-  <li>
-    <a class="" title="Installation" href="install/">
-      Installation
-    </a>
-    
-  </li>
-
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analysis</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="enrichment/">Enrichment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="modelling/">Modelling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="propagation/">propagation</a>
+                </li>
+    </ul>
+	    </li>
           
-            
-  <li>
-    <a class="" title="Chart Plot" href="chart/">
-      Chart Plot
-    </a>
-    
-  </li>
-
+            <li class="toctree-l1">
+		
+    <a class="" href="netviz/">Visualization</a>
+	    </li>
           
         </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
-            
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Documation of PyPathway</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Overview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
               
-              <li>
-                <a href="https://github.com/iseekwonderful" target="_blank" title="@iseekwonderful on GitHub">
-                  @iseekwonderful on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
-</nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
-          
-          <h1 id="welcome-to-pypathway">Welcome to pypathway</h1>
-<p>PyPathway is a package for python users who play with biology pathways, powered by Web technology and <a href="http://jupyter.org/">ipython nootebook(jupyter)</a>. In traditional environment, rendered pathway graphic will be displayed in a browser.</p>
-<h2 id="usage">Usage</h2>
-<ul>
-<li>Search and retrieve pathway from Reactome, WikiPathway and KEGG.</li>
-<li>Parse <code>BioPAX</code>, <code>SBGN-ML</code>, <code>KGML</code> and <code>GPML</code> format pathway file.</li>
-<li>Python API for highly custom biology data mapping.</li>
-<li>Interactive visualization data via <code>IPython</code> notebook.</li>
-</ul>
-<p><img alt="" src="./images/query/ALL_re.png" /></p>
+                <h1 id="pypathway">PyPathway</h1>
+<p>integrated Python toolkit for pathway based analysis</p>
+<p><a href="https://badge.fury.io/py/pypathway"><img alt="PyPI version" src="https://badge.fury.io/py/pypathway.svg" /></a>
+<a href="https://travis-ci.org/iseekwonderful/PyPathway"><img alt="Build Status" src="https://travis-ci.org/iseekwonderful/PyPathway.svg?branch=master" /></a>
+<img alt="" src="https://img.shields.io/badge/python-3.5-blue.svg" />
+<img alt="" src="https://img.shields.io/badge/python-3.6-blue.svg" />
+<img alt="" src="https://img.shields.io/badge/license-MIT-blue.svg" /></p>
 <h2 id="installation">Installation</h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This section assumes that you, like most Python users, have <code>Python</code>, <code>pip</code>, <code>IPython</code> and <code>Jupyter</code> installed, if not,  view this <a href="./install/">FULL install guide</a></p>
-</div>
-<p>For most of users, we suggest you install via <code>pip</code>, if you are interested in the developing function, install it from <a href="https://github.com/iseekwonderful/PyPathway">Github</a></p>
-<div class="code"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pypathway</span>
-</pre></div>
-
+<h3 id="general-requirement">General requirement</h3>
+<p><strong>Python version: &gt;= 3.5</strong></p>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>
+<p>The <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ 2015 Build Tools</a> is required to compile c extensions.</p>
+</li>
+<li>
+<p><code>numpy</code>, <code>scipy</code> and <code>staticmodels</code> (anaconda is recommend)</p>
+</li>
+</ul>
+<h3 id="unix-linux">Unix / Linux</h3>
+<ul>
+<li>gcc or clang compiler</li>
+</ul>
+<h3 id="sources">Sources</h3>
+<ul>
+<li>install via pypi</li>
+</ul>
+<pre><code>pip install pypathway
+</code></pre>
 
 <ul>
-<li>BioPAX visualization need additional Paxtool commandline tool:</li>
+<li>install from the source</li>
 </ul>
-<div class="code"><pre><span></span><span class="c1"># osx</span>
-brew install homebrew/science/paxtools
-</pre></div>
+<pre><code>git clone https://github.com/iseekwonderful/PyPathway.git
+cd PyPathway
+python setup.py install
+</code></pre>
 
-
-<ul>
-<li>For windows users, view <a href="./install/#optionalinstall-java">Java setup guide</a> to set up the command for application’s usage.</li>
-</ul>
-<h2 id="try-it-out">Try it out</h2>
-<h3 id="1-load-ipython-notebook">1. Load IPython notebook</h3>
-<p>Most of situation we suggest you use <code>IPython</code> notebook to handle pathway data. This Web base interactive code environment provide richer content while rendering pathway.</p>
-<p>Open <code>IPython notebook</code> by typing <code>jupyter notebook</code> in <code>terminal</code>(linux and osx), <code>CMD</code>, or <code>powershell</code>. </p>
-<p>Example: in macOS 10.11, terminal. which will open <code>IPython notebook</code> a page in default browser</p>
-<p><img src=./images/query/jupyter.png alt="Drawing" style="width: 700px;"/></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Using <code>Chrome</code>, <code>Firefox</code> or <code>Safari</code> to run IPython notebook. </p>
-</div>
-<h3 id="2-create-a-new-notebook">2. create a new notebook</h3>
-<p>On the right top, click <code>New</code> -&gt; <code>Python3</code>(<code>Python2</code>) to create a new notebook.</p>
-<p><img src=./images/query/create_step_1.png alt="Drawing" style="width: 200px;"/></p>
-<p>You will see a notebook page like this. Than enjoy your time with <code>IPython notebook</code>. </p>
-<p><img alt="" src="./images/query/create_step_2.png" /></p>
-<p>This IPython notebook shows searching and drawing pathway related with <code>jak</code>  in IPython notebook, no <strong>data mapping API</strong> is used</p>
-<h3 id="3-search-and-retrieve-pathway">3. Search and retrieve pathway</h3>
-<ul>
-<li>Use <code>PublicDatabase</code>’s <code>search_kegg</code> staticmethod to Search <code>KEGG</code> database.</li>
-<li>Use load() method to retrieve and parse pathway from <code>KEGG</code></li>
-<li>Use draw() method to render pathway.  </li>
-</ul>
-<h3 id="4-code-and-result">4. Code and result</h3>
-<p><img alt="" src="./images/query/try_it_out_kg.png" /></p>
 <h2 id="features">Features</h2>
-<h3 id="pathway-search-and-retrieve">Pathway Search and Retrieve</h3>
-<h4 id="supported-database">Supported database</h4>
 <ul>
-<li><code>KEGG</code>: Kyoto Encyclopedia of Genes and Genomes</li>
-<li><code>Reactome</code>: a free, open-source, curated and peer reviewed pathway database. </li>
-<li><code>WikiPathway</code>: WikiPathways is an open, public platform dedicated to the curation of biological pathways by and for the scientific community.</li>
+<li>Public databases APIs: <code>STRING</code>, <code>BioGRID</code>, <code>KEGG</code>, <code>Reactome</code> and <code>WikiPathway</code></li>
+<li>Functional set based and network based enrichment analysis algorithms implemented: <code>ORA</code>, <code>GSEA</code> and <code>SPIA</code></li>
+<li>Performance optimize for denovo enrichment algorithm <code>MAGI</code> and <code>Hotnet2</code>.</li>
+<li>Network propagation random walk, RWR and heat kernel</li>
+<li>Interactive visualization for pathway, graph and analysis result.</li>
+<li>
+<p>Web page exportation for results.</p>
+</li>
+<li>
+<p>Integrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages </p>
+</li>
+<li>Dynamic visualization for IPython notebook. </li>
+<li>Most classes implement <code>__repr__</code> method for interactive environment.</li>
 </ul>
-<h4 id="supported-format">Supported format</h4>
+<h2 id="network-process">Network process</h2>
+<p>Intuitive APIs for querying and retrieval interaction network from public database. The return object are stored in <code>networkx.Graph</code> object.</p>
+<h3 id="support-databases">Support databases</h3>
 <ul>
-<li><a href="http://www.genome.jp/kegg/xml/"><code>KGML</code></a>: a format using by <code>KEGG</code>, we support it in a <strong>limited scope</strong>.</li>
-<li><a href="./www.biopax.org/"><code>BioPAX</code></a>: a open-source, community created format, we support its parse, modify and export to SBGN-PD format. note that its <strong>visualization</strong> is done after <em>convert</em>  to <code>SBGN-PD</code> format and <em>auto-layout</em>.</li>
-<li><a href="http://www.sbgn.org/"><code>SBGN-PD</code></a>: a format for <strong>Process Description</strong> in system biology, especially suit for pathway visualization and data integration.</li>
-<li><a href="http://www.pathvisio.org/gpml/"><code>GPML</code></a>: GPML is the native format used by PathVisio and WikiPathways.</li>
+<li><code>KEGG</code></li>
+<li><code>Reactome</code></li>
+<li><code>WikiPathway</code></li>
+<li><code>STRING</code></li>
+<li><code>BioGRID</code></li>
 </ul>
-<h3 id="data-mapping-api">Data mapping API</h3>
-<p>Use the elements in pathway graphics to display the characters of your experiments/omics data. </p>
-<h3 id="interactive-api"><a href="docs.md">Interactive API</a></h3>
-<p>Interactive API gives more space for data presentation.</p>
-<ul>
-<li>Mouse Event handling.</li>
-<li>PopUp windows.</li>
-<li>Glyph property change in runtimes</li>
-</ul>
-<h3 id="wheels">Wheels</h3>
-<p>The visualization of <code>SBGN-PD</code> is based on the project <a href="https://github.com/iVis-at-Bilkent/sbgnviz-js"><code>sbgnviz-js</code></a>, 
-and the ploting of <code>GPML</code> is based on <a href="https://github.com/wikipathways/pvjs"><code>pvjs</code></a>.</p>
-<h3 id="whats-next">What’s NEXT</h3>
-<p>Now go to <a href="./user-guide/query/">Search and Retrieve Pathway</a>, start with query pathway from public database.</p>
-<h2 id="lisences">Lisences</h2>
-<p>licensed with <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"></a>GNU General Public License</p>
-          <aside class="copyright" role="note">
-            
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
-              
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
-      
-    </div>
-    <div class="next">
-      
-        <a href="user-guide/query/" title="Search and Retrive Pathway">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                Search and Retrive Pathway
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-  </nav>
+<h3 id="search">Search</h3>
+<pre><code>from pypathway import PublicDatabase
+kg = PublicDatabase.search_kegg('CD4')
+wp = PublicDatabase.search_wp('CD4')
+rt = PublicDatabase.search_reactome('CD4')
+</code></pre>
 
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
+<h3 id="load">Load</h3>
+<pre><code>pathway = r[0].load()
+</code></pre>
+
+<h3 id="plot">Plot</h3>
+<pre><code>pathway.draw()
+</code></pre>
+
+<p><img alt="" src="./images/network_process/netprocess_KEGG.png" /></p>
+<h3 id="ipython-notebook-examples">IPython notebook examples</h3>
+<ul>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/STRING%7CBioGID_query.ipynb">STRING and BioGRID</a></li>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/Pathway_Datatbase_APIs.ipynb">Pathway databases</a></li>
+</ul>
+<h2 id="enrichment-analysis">Enrichment Analysis</h2>
+<h3 id="support-methods">Support methods</h3>
+<ul>
+<li>ORA</li>
+<li>GSEA</li>
+<li>Network enrichment (SPIA and Enrichment)</li>
+<li>denovo enrichment (MAGI and Hotnet2)</li>
+</ul>
+<h3 id="implementation-interface">Implementation / Interface</h3>
+<ul>
+<li>Staticmethod <code>run()</code> for the starting of the analysis</li>
+</ul>
+<pre><code class="python">r = SPIA.run(all=c.background, de=c.deg, organism='hsa')
+</code></pre>
+
+<ul>
+<li><code>table</code>, <code>plot()</code> and <code>graph()</code> method for the presentation of the analysis</li>
+</ul>
+<pre><code class="python">res.table
+
+</code></pre>
+
+<p><img alt="" src="./images/enrichment/enrichment_table.png" /></p>
+<pre><code class="python">res.plot()
+</code></pre>
+
+<p><img alt="" src="./images/enrichment/enrichment_general_ora.png" /></p>
+<pre><code class="python">
+res.graph()
+</code></pre>
+
+<p><img alt="" src="./images/enrichment/go_graph_plot.png" /></p>
+<h3 id="ipython-examples">IPython examples</h3>
+<ul>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/ORA.ipynb">ORA</a></li>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/GSEA.ipynb">GSEA</a></li>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb">Network enrichment</a></li>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/MAGI.ipynb">MAGI</a></li>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/Hotnet2.ipynb">Hotnet2</a></li>
+</ul>
+<h2 id="modeling">Modeling</h2>
+<ul>
+<li>the Python Interface and optimize for <code>MAGI</code></li>
+<li>several c extension for `Hotnet permutation performance </li>
+</ul>
+<h2 id="propagation">Propagation</h2>
+<p>Implemented algorithms</p>
+<ul>
+<li>Random walk</li>
+</ul>
+<pre><code class="python">
+random_walk(G, h)
+</code></pre>
+
+<ul>
+<li>Random walk with restart</li>
+</ul>
+<pre><code class="python">
+random_walk_with_restart(G, h, rp=0.7, n=-1)
+</code></pre>
+
+<ul>
+<li>Heat kernel</li>
+</ul>
+<pre><code class="python">diffusion_kernel(G, h, rp=0.8, n=100)
+
+</code></pre>
+
+<h3 id="detail">detail</h3>
+<blockquote>
+<p><img alt="" src="./images/propagation/propagation_overview.png" /></p>
+</blockquote>
+<p>image source: <a href="http://www.nature.com/nrg/journal/v18/n9/abs/nrg.2017.38.html">Network propagation: a universal amplifier of genetic associations</a></p>
+<h3 id="ipython-notebook-examples_1">IPython notebook examples</h3>
+<ul>
+<li><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb">Propagation</a></li>
+</ul>
+<h2 id="utility-and-performance">Utility and Performance</h2>
+<ul>
+<li>The Id converter</li>
+<li>GMT file manager</li>
+<li>network and expression data sets.</li>
+<li>numpy implementation of SPIA</li>
+<li>node swap c extension for Hotnet2</li>
+<li>multi-threading for MAGI</li>
+</ul>
+<h2 id="interactive-visualization">Interactive Visualization</h2>
+<p>The interactive visualization for IPython notebook</p>
+<h3 id="feature">Feature</h3>
+<ul>
+<li><code>__repr__</code> Implemented for most classes</li>
+<li>dynamic visualization for networkx.Graph instance</li>
+<li>visualizer for pathway object</li>
+<li>visualizer for Gene ontology DAG.</li>
+</ul>
+              
+            </div>
           </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="network_process/" class="btn btn-neutral float-right" title="Network process">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
         </div>
       </div>
-    </main>
-    <script>
-      var base_url = '.';
-      var repo_id  = 'iseekwonderful/pypathway';
-    </script>
-    <script src="./assets/javascripts/application-997097ee0c.js"></script>
-    
-      <script src="./images/iframe/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/cytoscape.min.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/KEGG/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/KEGG/kegg_data/interface_kegg.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/gpml_data/interface_gpml.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/custom-element.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/d3.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/mithril.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/polyfills.bundle.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/pvjs.core.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/pvjs.custom-element.min.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/js/lib/custom-element.js"></script>
-    
-      <script src="./images/iframe/TryItOutCase/GPML/lib/custom-element.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/FileSaver.min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/backbone-min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-clipboard.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-context-menus.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-cose-bilkent.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-edge-bend-editing.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-expand-collapse.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-undo-redo.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape-view-utilities.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/cytoscape.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery.expander-min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery.fancybox-1.3.4.pack.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery.noty.packaged.min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/jquery.qtip.min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/js/underscore.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/sbgn-extensions/cytoscape.renderer.canvas.sbgn-renderer.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/add-remove-utilities.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/json-to-sbgnml-converter.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-element-utilities.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-filtering.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgn-style-rules.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/lib/src/utilities/sbgnml-to-json-converter.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/3Dmol-min.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/add-remove-action-functions.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/biogene-info.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/common-element-properties.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-action-functions.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/general-sample-app-functions.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/interface.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/register-undo-redo-actions.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-cytoscape-sbgn.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-global-variables.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-menu-functions.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-mode-handler.js"></script>
-    
-      <script src="./images/iframe/ValueChangeExample/SBGN/sampleapp-components/js/sample-app-stylesheet-helpers.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/cytoscape.min.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914815139999.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_1477914835079892.js"></script>
-    
-      <script src="./images/iframe/assets/KEGG/kegg_data/interface_kegg_wb.js"></script>
-    
-      <script src="./images/iframe/chart_display/assets/plot/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/cytoscape.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913844149739.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913846509054.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913897230443.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_1477913958840769.js"></script>
-    
-      <script src="./images/iframe/ct/KEGG/kegg_data/interface_kegg_wb.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/cytoscape.min.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477810538312956.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_1477811576187087.js"></script>
-    
-      <script src="./images/iframe/integrate_example/KEGG/kegg_data/interface_kegg_wb.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/cy-panzoom/cytoscape-panzoom.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/bootstrap.min.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/cytoscape-qtip.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/cytoscape.min.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/echarts.common.min.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/jquery-2.0.3.min.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/jquery-ui-1.10.3.custom.min.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/js/jquery.qtip.js"></script>
-    
-      <script src="./images/iframe/qkegg/KEGG/kegg_data/interface_kegg.js"></script>
-    
-    
-  </body>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+        <span style="margin-left: 15px"><a href="network_process/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
 </html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2017-09-09 01:14:58
+-->
