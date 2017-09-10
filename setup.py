@@ -82,7 +82,7 @@ if sys.platform == "darwin":
     os.environ['CFLAGS'] = "-I{}".format(numpy.get_include())
 
 setup(
-    ext_modules=[fast_scc],
+    ext_modules=[fast_scc, c_ext],
     include_dirs=numpy.get_include(),
 )
 
@@ -115,7 +115,7 @@ setup(
     ],
     test_suite='tests',
     tests_require=test_requirements,
-    ext_modules=[c_ext, selects, cluster, fast_scc],
+    ext_modules=[selects, cluster],
 )
 
 
