@@ -1,20 +1,9 @@
-
 include AUTHORS.rst
 
-include CONTRIBUTING.rst
-include HISTORY.rst
 include LICENSE
 include README.rst
 
-recursive-include tests *
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 
-recursive-include docs *.rst conf.py Makefile make.bat *.jpg *.png *.gif
-recursive-include pypathway/analysis *
-recursive-include pypathway/exportion *
-recursive-include pypathway/netviz *
-recursive-include pypathway/pathviz *
-recursive-include pypathway/src *
-recursive-include pypathway/tests *
-recursive-include pypathway/utils *
+recursive-include pypathway *

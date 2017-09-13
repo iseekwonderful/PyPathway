@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# from setuptools import setup
-import sys
-from distutils.core import setup, Extension
+from setuptools import setup
+from setuptools.extension import Extension
 import sys
 import os
 import numpy
-from numpy.distutils.core import setup as npy_setup
 
 try:
    import pypandoc
@@ -24,7 +22,6 @@ requirements = [
     'statsmodels',
     'goatools',
     'jinja2',
-    'sqlite3',
     'requests>=1.0',
     'ipython',
     'jupyter',
@@ -33,22 +30,6 @@ requirements = [
     'wget',
     'h5py',
 ]
-
-test_requirements = [
-]
-
-
-def configuration(parent_package='',top_path=None):
-    from numpy.distutils.misc_util import Configuration
-    config = Configuration('',parent_package,top_path)
-
-    config.add_extension('pypathway.analysis.modelling.third_party.hotnet2.hotnet2.c_routines',
-                         sources=['pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf',
-                                    'pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c'],
-                         extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
-    return config
-
-npy_setup(**configuration(top_path='').todict())
 
 # c extension for fast node swap.
 c_ext = Extension("pypathway.utils._node", ["./pypathway/src/node_src/_chi2.c", "./pypathway/src/node_src/heap.c",
@@ -81,25 +62,17 @@ if sys.platform == "darwin":
     # fix the include issue of distutuls in macos
     os.environ['CFLAGS'] = "-I{}".format(numpy.get_include())
 
-setup(
-    ext_modules=[fast_scc, c_ext],
-    include_dirs=numpy.get_include(),
-)
-
 
 setup(
     name='PyPathway',
-    version='0.3.3',
+    version='0.3.4',
     description="A Python package biological network analysis and visualization",
     long_description=readme,
     author="sheep",
     author_email='sss3barry@gmail.com',
     url='https://github.com/iseekwonderful/pypathway',
-    packages=[
-        'pypathway',
-    ],
-    package_dir={'pypathway':
-                 'pypathway'},
+    packages=['pypathway'],
+    # package_dir={'pypathway':'pypathway'},
     include_package_data=True,
     install_requires=requirements,
     license="GNU General Public License v3 (GPLv3)",
@@ -114,8 +87,9 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     test_suite='tests',
-    tests_require=test_requirements,
-    ext_modules=[selects, cluster],
+    tests_require=[],
+    include_dirs=numpy.get_include(),
+    ext_modules=[selects, cluster, fast_scc, c_ext],
 )
 
 

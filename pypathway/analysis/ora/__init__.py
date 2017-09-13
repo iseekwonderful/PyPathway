@@ -206,7 +206,7 @@ class GO(EnrichmentResult):
                 if not v: continue
                 line = ";".join([str(x) for x in v if x])
                 buf += "{}\t{}\n".format(k, line)
-            path = os.path.dirname(os.path.realpath(__file__)) + "/obo/assoc"
+            path = os.path.dirname(os.path.realpath(__file__)) + "/assoc"
             with open(path, 'w') as fp:
                 fp.write(buf)
             assoc = read_associations(path)
@@ -378,7 +378,6 @@ class GO(EnrichmentResult):
         return df.sort_values(by='p_holm')[:20].to_html()
 
 
-
 class KEGG(EnrichmentResult):
     @staticmethod
     def run(study, pop, organism='hsa', adjust='fdr_bh'):
@@ -427,22 +426,6 @@ class KEGG(EnrichmentResult):
 
     def arguments(self):
         pass
-
-    # @property
-    # def plot(self, count=15):
-    #     self.basic_config['yAxis']['data'] = []
-    #     self.basic_config['series'][0]['data'] = []
-    #     self.basic_config['title']['subtext'] = self.target
-    #     self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
-    #     candidate = []
-    #     for x in self.df.iterrows():
-    #         candidate.append([x[1][1], -math.log2(x[1][5])])
-    #     candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
-    #     for x in candidate[:15]:
-    #         self.basic_config['yAxis']['data'].append(x[0])
-    #         self.basic_config['series'][0]['data'].append(x[1])
-    #     # print(self.basic_config)
-    #     return plot_json(self.basic_config)
 
 
 

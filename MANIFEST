@@ -4,14 +4,10 @@ CONTRIBUTING.rst
 LICENSE
 setup.cfg
 setup.py
-./pypathway/src/cluster/PPI_graph.cpp
+./pypathway/src/cluster/PPI_Graph.cpp
 ./pypathway/src/cluster/_chi2.c
 ./pypathway/src/cluster/clustering.cpp
-./pypathway/src/node_src/_chi2.c
-./pypathway/src/node_src/heap.c
-./pypathway/src/node_src/main.c
-./pypathway/src/node_src/randpick.c
-./pypathway/src/select/PPI_graph.cpp
+./pypathway/src/select/PPI_Graph.cpp
 ./pypathway/src/select/_chi2.c
 ./pypathway/src/select/color_coding.cpp
 docs/Makefile
@@ -59,79 +55,16 @@ pypathway/analysis/.DS_Store
 pypathway/analysis/Readme.md
 pypathway/analysis/__init__.py
 pypathway/analysis/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/gsea/.DS_Store
 pypathway/analysis/gsea/__init__.py
 pypathway/analysis/gsea/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.gsea.pdf
-pypathway/analysis/gsea/images/Butanoate metabolism_Homo sapiens_hsa00650.heatmap.pdf
-pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.gsea.pdf
-pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.heatmap.pdf
-pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.gsea.pdf
-pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.heatmap.pdf
-pypathway/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.gsea.pdf
-pypathway/analysis/gsea/images/Drug metabolism - cytochrome P450_Homo sapiens_hsa00982.heatmap.pdf
-pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.gsea.pdf
-pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.heatmap.pdf
-pypathway/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.gsea.pdf
-pypathway/analysis/gsea/images/Galactose metabolism_Homo sapiens_hsa00052.heatmap.pdf
-pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.gsea.pdf
-pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.heatmap.pdf
-pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.gsea.pdf
-pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.heatmap.pdf
-pypathway/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.gsea.pdf
-pypathway/analysis/gsea/images/Huntington's disease_Homo sapiens_hsa05016.heatmap.pdf
-pypathway/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.gsea.pdf
-pypathway/analysis/gsea/images/Lysine degradation_Homo sapiens_hsa00310.heatmap.pdf
-pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.gsea.pdf
-pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.heatmap.pdf
-pypathway/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.gsea.pdf
-pypathway/analysis/gsea/images/Nicotinate and nicotinamide metabolism_Homo sapiens_hsa00760.heatmap.pdf
-pypathway/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.gsea.pdf
-pypathway/analysis/gsea/images/Nitrogen metabolism_Homo sapiens_hsa00910.heatmap.pdf
-pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.gsea.pdf
-pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.heatmap.pdf
-pypathway/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.gsea.pdf
-pypathway/analysis/gsea/images/Parkinson's disease_Homo sapiens_hsa05012.heatmap.pdf
-pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.gsea.pdf
-pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.heatmap.pdf
-pypathway/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.gsea.pdf
-pypathway/analysis/gsea/images/Pentose and glucuronate interconversions_Homo sapiens_hsa00040.heatmap.pdf
-pypathway/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.gsea.pdf
-pypathway/analysis/gsea/images/Pentose phosphate pathway_Homo sapiens_hsa00030.heatmap.pdf
-pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.gsea.pdf
-pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.heatmap.pdf
-pypathway/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.gsea.pdf
-pypathway/analysis/gsea/images/Propanoate metabolism_Homo sapiens_hsa00640.heatmap.pdf
-pypathway/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.gsea.pdf
-pypathway/analysis/gsea/images/Pyruvate metabolism_Homo sapiens_hsa00620.heatmap.pdf
-pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.gsea.pdf
-pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.heatmap.pdf
-pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.gsea.pdf
-pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.heatmap.pdf
-pypathway/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.gsea.pdf
-pypathway/analysis/gsea/images/Retinol metabolism_Homo sapiens_hsa00830.heatmap.pdf
-pypathway/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.gsea.pdf
-pypathway/analysis/gsea/images/Selenocompound metabolism_Homo sapiens_hsa00450.heatmap.pdf
-pypathway/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.gsea.pdf
-pypathway/analysis/gsea/images/Starch and sucrose metabolism_Homo sapiens_hsa00500.heatmap.pdf
-pypathway/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.gsea.pdf
-pypathway/analysis/gsea/images/Terpenoid backbone biosynthesis_Homo sapiens_hsa00900.heatmap.pdf
-pypathway/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.gsea.pdf
-pypathway/analysis/gsea/images/Tryptophan metabolism_Homo sapiens_hsa00380.heatmap.pdf
-pypathway/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.gsea.pdf
-pypathway/analysis/gsea/images/Tyrosine metabolism_Homo sapiens_hsa00350.heatmap.pdf
-pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.gsea.pdf
-pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.heatmap.pdf
-pypathway/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.gsea.pdf
-pypathway/analysis/gsea/images/beta-Alanine metabolism_Homo sapiens_hsa00410.heatmap.pdf
+pypathway/analysis/gsea/images/ABC transporters_Homo sapiens_hsa02010.gsea.pdf
+pypathway/analysis/gsea/images/ABC transporters_Homo sapiens_hsa02010.heatmap.pdf
 pypathway/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv
 pypathway/analysis/gsea/images/gseapy.gsea.kegg_2016.log
 pypathway/analysis/modelling/.DS_Store
-pypathway/analysis/modelling/RandomGeneList.0
 pypathway/analysis/modelling/__init__.py
 pypathway/analysis/modelling/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/modelling/bin/readme
-pypathway/analysis/modelling/cache/.DS_Store
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control1.Run0
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control2.Run0
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control3.Run0
@@ -153,7 +86,6 @@ pypathway/analysis/modelling/cache/magi.res
 pypathway/analysis/modelling/cache/seeds
 pypathway/analysis/modelling/third_party/.DS_Store
 pypathway/analysis/modelling/third_party/__init__.py
-pypathway/analysis/modelling/third_party/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/modelling/third_party/hotnet2/.DS_Store
 pypathway/analysis/modelling/third_party/hotnet2/.gitignore
 pypathway/analysis/modelling/third_party/hotnet2/HotNet2.py
@@ -167,15 +99,6 @@ pypathway/analysis/modelling/third_party/hotnet2/makeHeatFile.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py
 pypathway/analysis/modelling/third_party/hotnet2/makeNetworkFiles.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/requirements.txt
-pypathway/analysis/modelling/third_party/hotnet2/__pycache__/HotNet2.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/__pycache__/makeHeatFile.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/__pycache__/makeNetworkFiles.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/build/src.macosx-10.12-x86_64-2.7/fortranobject.c
-pypathway/analysis/modelling/third_party/hotnet2/build/src.macosx-10.12-x86_64-2.7/fortranobject.h
-pypathway/analysis/modelling/third_party/hotnet2/build/temp.macosx-10.12-x86_64-2.7/build/src.macosx-10.12-x86_64-2.7/fortranobject.o
-pypathway/analysis/modelling/third_party/hotnet2/build/temp.macosx-10.12-x86_64-2.7/hotnet2/src/c/c_routines.o
-pypathway/analysis/modelling/third_party/hotnet2/build/temp.macosx-10.12-x86_64-2.7/hotnet2/src/c/c_routinesmodule.o
 pypathway/analysis/modelling/third_party/hotnet2/example/README.md
 pypathway/analysis/modelling/third_party/hotnet2/example/example.cna
 pypathway/analysis/modelling/third_party/hotnet2/example/example.dname
@@ -197,70 +120,32 @@ pypathway/analysis/modelling/third_party/hotnet2/example/configs/significance.co
 pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple.config
 pypathway/analysis/modelling/third_party/hotnet2/example/configs/simple2.config
 pypathway/analysis/modelling/third_party/hotnet2/example/configs/website.config
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/.DS_Store
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__init__.py.bak
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/_chi2.cpython-35m-darwin.so
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_setup.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_routines.cpython-35m-darwin.so
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_routines.so
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/consensus.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/constants.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/delta.py.bak
+pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_scc.cpython-35m-darwin.so
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/fast_swap.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/heat.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnap.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hnio.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hotnet2.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/network.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/permutations.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/run.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_c.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/setup_fortran.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/stats.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/union_find.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/viz.py.bak
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/consensus.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/constants.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/delta.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/fast_swap.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/heat.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/hnap.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/hnio.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/hotnet2.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/network.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/permutations.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/run.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/stats.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/union_find.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/__pycache__/viz.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/src.macosx-10.12-x86_64-3.5/fortranobject.c
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/src.macosx-10.12-x86_64-3.5/fortranobject.h
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/build/src.macosx-10.12-x86_64-3.5/fortranobject.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/c_ext_src/_chi2.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/c_ext_src/basic.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/c_ext_src/data_structure.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/c_ext_src/graphic.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/c_ext_src/test_data.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/src/c/c_routines.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/build/temp.macosx-10.12-x86_64-3.5/src/c/c_routinesmodule.o
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/_chi2.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/basic.h
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/data_structure.h
+pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/fast_scc.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/graphic.h
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src/main.c
@@ -273,9 +158,6 @@ pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__pycache__/hierarchical_clustering.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/hotnet2/hierarchy/__pycache__/hierarchical_clustering_io.cpython-35.pyc
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.c
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routines.pyf
 pypathway/analysis/modelling/third_party/hotnet2/hotnet2/src/c/c_routinesmodule.c
@@ -300,8 +182,6 @@ pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.p
 pypathway/analysis/modelling/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py
 pypathway/analysis/modelling/third_party/hotnet2/scripts/permuteNetwork.py.bak
-pypathway/analysis/modelling/third_party/hotnet2/scripts/__pycache__/createDendrogram.cpython-35.pyc
-pypathway/analysis/modelling/third_party/hotnet2/scripts/__pycache__/permuteNetwork.cpython-35.pyc
 pypathway/analysis/modelling/third_party/hotnet2/test/README.md
 pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py
 pypathway/analysis/modelling/third_party/hotnet2/test/checkConfigResults.py.bak
@@ -324,29 +204,16 @@ pypathway/analysis/modelling/third_party/hotnet2/viz/requirements.txt
 pypathway/analysis/modelling/third_party/hotnet2/viz/server.py
 pypathway/analysis/modelling/third_party/hotnet2/viz/server.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/viz/subnetworks.html
-pypathway/analysis/network/.DS_Store
 pypathway/analysis/network/__init__.py
 pypathway/analysis/network/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/network/spia_data/.DS_Store
 pypathway/analysis/network/spia_data/hsa.json
 pypathway/analysis/network/spia_data/mmu.json
-pypathway/analysis/ora/.DS_Store
 pypathway/analysis/ora/__init__.py
 pypathway/analysis/ora/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/ora/kegg_set/hsa_kegg_gs.gmt
-pypathway/analysis/ora/obo/.DS_Store
-pypathway/analysis/ora/obo/assoc
-pypathway/analysis/ora/obo/go (1).obo
-pypathway/analysis/ora/obo/go.obo
-pypathway/analysis/ora/obo/go.obo04pfd8pd.tmp
-pypathway/analysis/ora/obo/go.obo5crjc6yj.tmp
-pypathway/analysis/ora/obo/go.obovg9jw2ar.tmp
-pypathway/analysis/ora/obo/go.obowm7kh_65.tmp
 pypathway/analysis/propagation/__init__.py
 pypathway/analysis/propagation/__pycache__/__init__.cpython-35.pyc
-pypathway/analysis/viz/.DS_Store
 pypathway/analysis/viz/__init__.py
-pypathway/analysis/viz/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/viz/assets/viz.html
 pypathway/analysis/viz/assets/viz2.html
 pypathway/analysis/viz/assets/viz3.html
@@ -356,14 +223,11 @@ pypathway/analysis/viz/assets/templates/js
 pypathway/analysis/viz/assets/templates/selector
 pypathway/analysis/viz/assets/templates/slider
 pypathway/analysis/viz/assets/templates/switch
-pypathway/exportion/.DS_Store
 pypathway/exportion/__init__.py
 pypathway/exportion/__pycache__/__init__.cpython-35.pyc
-pypathway/exportion/templates/.DS_Store
 pypathway/exportion/templates/index.html
 pypathway/exportion/templates/card/card
 pypathway/exportion/templates/card/row
-pypathway/exportion/templates/enrichment/.DS_Store
 pypathway/exportion/templates/enrichment/card-magi.html
 pypathway/exportion/templates/enrichment/card.html
 pypathway/exportion/templates/enrichment/enrichment_display.html
@@ -396,23 +260,17 @@ pypathway/exportion/templates/enrichment/js/jquery.qtip.js
 pypathway/exportion/templates/enrichment/js/main.js
 pypathway/exportion/templates/enrichment/js/materialize.js
 pypathway/exportion/templates/enrichment/js/vivagraph.js
-pypathway/netviz/.DS_Store
 pypathway/netviz/ReactomeOverview.py
 pypathway/netviz/Readme.md
 pypathway/netviz/__init__.py
 pypathway/netviz/goviz.py
-pypathway/netviz/__pycache__/ReactomeOverview.cpython-35.pyc
 pypathway/netviz/__pycache__/__init__.cpython-35.pyc
-pypathway/netviz/__pycache__/goviz.cpython-35.pyc
-pypathway/netviz/assets/.DS_Store
 pypathway/netviz/assets/index.html
 pypathway/netviz/assets/data/nodes.json
 pypathway/netviz/assets/data/nodes2.json
 pypathway/netviz/assets/data/nodes3.json
 pypathway/netviz/assets/data/test.json
 pypathway/netviz/assets/data/test2.json
-pypathway/netviz/assets/lib/.DS_Store
-pypathway/netviz/assets/lib/js/.DS_Store
 pypathway/netviz/assets/lib/js/bootstrap.css
 pypathway/netviz/assets/lib/js/cytoscape-cose-bilkent.js
 pypathway/netviz/assets/lib/js/cytoscape-cxtmenu.js
@@ -429,21 +287,10 @@ pypathway/netviz/assets/lib/js/jquery.qtip.css
 pypathway/netviz/assets/lib/js/jquery.qtip.js
 pypathway/netviz/assets/lib/js/main.js
 pypathway/netviz/assets/lib/js/vivagraph.js
-pypathway/netviz/assets_back/index.html
-pypathway/netviz/assets_back/data/nodes.json
-pypathway/netviz/assets_back/data/nodes2.json
-pypathway/netviz/assets_back/data/nodes3.json
-pypathway/netviz/assets_back/data/test.json
-pypathway/netviz/assets_back/data/test2.json
-pypathway/netviz/assets_back/lib/js/cytoscape-cxtmenu.js
-pypathway/netviz/assets_back/lib/js/main.js
-pypathway/netviz/assets_back/lib/js/vivagraph.js
-pypathway/pathviz/.DS_Store
 pypathway/pathviz/__init__.py
 pypathway/pathviz/utils.py
 pypathway/pathviz/__pycache__/__init__.cpython-35.pyc
 pypathway/pathviz/__pycache__/utils.cpython-35.pyc
-pypathway/pathviz/core/.DS_Store
 pypathway/pathviz/core/BioPAXImpl.py
 pypathway/pathviz/core/GPMLImpl.py
 pypathway/pathviz/core/KGMLImpl.py
@@ -456,37 +303,29 @@ pypathway/pathviz/core/__pycache__/KGMLImpl.cpython-35.pyc
 pypathway/pathviz/core/__pycache__/SBGNImpl.cpython-35.pyc
 pypathway/pathviz/core/__pycache__/__init__.cpython-35.pyc
 pypathway/pathviz/core/__pycache__/general.cpython-35.pyc
-pypathway/pathviz/query/.DS_Store
 pypathway/pathviz/query/__init__.py
 pypathway/pathviz/query/common.py
 pypathway/pathviz/query/network.py
 pypathway/pathviz/query/__pycache__/__init__.cpython-35.pyc
 pypathway/pathviz/query/__pycache__/common.cpython-35.pyc
 pypathway/pathviz/query/__pycache__/network.cpython-35.pyc
-pypathway/pathviz/query/cache/.DS_Store
-pypathway/pathviz/static/.DS_Store
 pypathway/pathviz/static/box.html
-pypathway/pathviz/static/GPML/.DS_Store
 pypathway/pathviz/static/GPML/gpml.html
 pypathway/pathviz/static/GPML/.idea/GPML.iml
 pypathway/pathviz/static/GPML/.idea/modules.xml
 pypathway/pathviz/static/GPML/.idea/workspace.xml
-pypathway/pathviz/static/GPML/css/.DS_Store
 pypathway/pathviz/static/GPML/css/font-awesome.min.css
 pypathway/pathviz/static/GPML/css/jquery-ui-1.10.3.custom.css
 pypathway/pathviz/static/GPML/css/jquery-ui.css
 pypathway/pathviz/static/GPML/css/jquery.qtip.css
 pypathway/pathviz/static/GPML/css/main.css
-pypathway/pathviz/static/GPML/css/bootstrap/.DS_Store
 pypathway/pathviz/static/GPML/css/bootstrap/bootstrap.min.css
 pypathway/pathviz/static/GPML/font/fontawesome-webfont.woff
-pypathway/pathviz/static/GPML/gpml_data/.DS_Store
 pypathway/pathviz/static/GPML/gpml_data/config.json
 pypathway/pathviz/static/GPML/gpml_data/custom.css
 pypathway/pathviz/static/GPML/gpml_data/interface_gpml.js
 pypathway/pathviz/static/GPML/gpml_data/interface_gpml_back.js
 pypathway/pathviz/static/GPML/gpml_data/pathway.xml
-pypathway/pathviz/static/GPML/js/.DS_Store
 pypathway/pathviz/static/GPML/js/bootstrap.min.js
 pypathway/pathviz/static/GPML/js/custom-element.js
 pypathway/pathviz/static/GPML/js/d3.min.js
@@ -503,11 +342,8 @@ pypathway/pathviz/static/GPML/js/pvjs.custom-element.js
 pypathway/pathviz/static/GPML/js/pvjs.custom-element.min.js
 pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_a.js
 pypathway/pathviz/static/GPML/js/chaosofpvjs/pvjs_b.js
-pypathway/pathviz/static/GPML/js/lib/.DS_Store
 pypathway/pathviz/static/GPML/js/lib/custom-element.js
-pypathway/pathviz/static/GPML/lib/.DS_Store
 pypathway/pathviz/static/GPML/lib/custom-element.js
-pypathway/pathviz/static/KEGG/.DS_Store
 pypathway/pathviz/static/KEGG/kegg.html
 pypathway/pathviz/static/KEGG/css/font-awesome.min.css
 pypathway/pathviz/static/KEGG/css/fontawesome-webfont.woff
@@ -534,7 +370,6 @@ pypathway/pathviz/static/KEGG/js/jquery-ui-1.10.3.custom.min.js
 pypathway/pathviz/static/KEGG/js/jquery.qtip.js
 pypathway/pathviz/static/KEGG/kegg_data/custom.css
 pypathway/pathviz/static/KEGG/kegg_data/interface_kegg.js
-pypathway/pathviz/static/SBGN/.DS_Store
 pypathway/pathviz/static/SBGN/index.html
 pypathway/pathviz/static/SBGN/lib/css/bootstrap.css
 pypathway/pathviz/static/SBGN/lib/css/cytoscape-context-menus.css
@@ -624,7 +459,6 @@ pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-element-utilities.js
 pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-filtering.js
 pypathway/pathviz/static/SBGN/lib/src/utilities/sbgn-style-rules.js
 pypathway/pathviz/static/SBGN/lib/src/utilities/sbgnml-to-json-converter.js
-pypathway/pathviz/static/SBGN/sampleapp-components/.DS_Store
 pypathway/pathviz/static/SBGN/sampleapp-components/css/sbgn-viz.css
 pypathway/pathviz/static/SBGN/sampleapp-components/css/images/animated-overlay.gif
 pypathway/pathviz/static/SBGN/sampleapp-components/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png
@@ -715,7 +549,6 @@ pypathway/pathviz/static/assets/raw.json
 pypathway/pathviz/static/assets/chart/plot.j2
 pypathway/pathviz/static/assets/reactome/species_list
 pypathway/pathviz/static/assets/reactome/svg_list
-pypathway/pathviz/visualize/.DS_Store
 pypathway/pathviz/visualize/__init__.py
 pypathway/pathviz/visualize/options.py
 pypathway/pathviz/visualize/__pycache__/__init__.cpython-35.pyc
@@ -738,15 +571,17 @@ pypathway/src/select/_chi2.c
 pypathway/src/select/color_coding.cpp
 pypathway/src/select/color_coding.h
 pypathway/tests/__init__.py
-pypathway/tests/__pycache__/__init__.cpython-35.pyc
+pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt
+pypathway/tests/gmt_file/h.all.v6.0.symbols.gmt
+pypathway/tests/gsea_data/GSE4107.cls
+pypathway/tests/gsea_data/GSE4107.xlsx
 pypathway/utils/.DS_Store
 pypathway/utils/__init__.py
-pypathway/utils/__init__.pyc
 pypathway/utils/_cluster.cpython-35m-darwin.so
 pypathway/utils/_node.cpython-35m-darwin.so
 pypathway/utils/_select.cpython-35m-darwin.so
 pypathway/utils/__pycache__/__init__.cpython-35.pyc
-pypathway/utils/datasets/.DS_Store
+pypathway/utils/caches/ttt.ttt
 pypathway/utils/datasets/hint.bin
 pypathway/utils/datasets/ALL/ALL
 pypathway/utils/datasets/ColorectalCancer/all
@@ -757,166 +592,8 @@ pypathway/utils/jucell/__pycache__/__init__.cpython-35.pyc
 pypathway/utils/jucell/display/__init__.py
 pypathway/utils/jucell/display/interfaces.py
 pypathway/utils/jucell/display/__pycache__/__init__.cpython-35.pyc
-pypathway/utils/jucell/display/__pycache__/interfaces.cpython-35.pyc
 pypathway/utils/jucell/display/information/__init__.py
-pypathway/utils/jucell/display/information/__pycache__/__init__.cpython-35.pyc
 pypathway/utils/jucell/display/templates/information/tests/index.html
 pypathway/utils/jucell/display/templates/information/tests/test.js
 pypathway/utils/jucell/display/utils/__init__.py
-pypathway/utils/jucell/display/utils/__pycache__/__init__.cpython-35.pyc
 pypathway/utils/jucell/interactive/__init__.py
-pypathway/utils/jucell/interactive/__pycache__/__init__.cpython-35.pyc
-pypathway/utils/third_party/.DS_Store
-pypathway/utils/third_party/hotnet2/.DS_Store
-pypathway/utils/third_party/hotnet2/.gitignore
-pypathway/utils/third_party/hotnet2/HotNet2.py
-pypathway/utils/third_party/hotnet2/HotNet2.py.bak
-pypathway/utils/third_party/hotnet2/LICENSE
-pypathway/utils/third_party/hotnet2/OLD-README.md
-pypathway/utils/third_party/hotnet2/README.md
-pypathway/utils/third_party/hotnet2/makeHeatFile.py
-pypathway/utils/third_party/hotnet2/makeHeatFile.py.bak
-pypathway/utils/third_party/hotnet2/makeNetworkFiles.py
-pypathway/utils/third_party/hotnet2/makeNetworkFiles.py.bak
-pypathway/utils/third_party/hotnet2/requirements.txt
-pypathway/utils/third_party/hotnet2/example/.DS_Store
-pypathway/utils/third_party/hotnet2/example/README.md
-pypathway/utils/third_party/hotnet2/example/example.cna
-pypathway/utils/third_party/hotnet2/example/example.dname
-pypathway/utils/third_party/hotnet2/example/example.dscore
-pypathway/utils/third_party/hotnet2/example/example.heat
-pypathway/utils/third_party/hotnet2/example/example.snv
-pypathway/utils/third_party/hotnet2/example/example_edgelist.txt
-pypathway/utils/third_party/hotnet2/example/example_edgelist2.txt
-pypathway/utils/third_party/hotnet2/example/example_gene_index.txt
-pypathway/utils/third_party/hotnet2/example/tested_genes.txt
-pypathway/utils/third_party/hotnet2/example/tested_samples.txt
-pypathway/utils/third_party/hotnet2/example/configs/consensus.config
-pypathway/utils/third_party/hotnet2/example/configs/delta.config
-pypathway/utils/third_party/hotnet2/example/configs/heat.config
-pypathway/utils/third_party/hotnet2/example/configs/influence_matrix.config
-pypathway/utils/third_party/hotnet2/example/configs/influence_matrix2.config
-pypathway/utils/third_party/hotnet2/example/configs/run.config
-pypathway/utils/third_party/hotnet2/example/configs/significance.config
-pypathway/utils/third_party/hotnet2/example/configs/simple.config
-pypathway/utils/third_party/hotnet2/example/configs/simple2.config
-pypathway/utils/third_party/hotnet2/example/configs/website.config
-pypathway/utils/third_party/hotnet2/hotnet2/.DS_Store
-pypathway/utils/third_party/hotnet2/hotnet2/__init__.py
-pypathway/utils/third_party/hotnet2/hotnet2/__init__.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/__init__.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/consensus.py
-pypathway/utils/third_party/hotnet2/hotnet2/consensus.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/consensus.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/constants.py
-pypathway/utils/third_party/hotnet2/hotnet2/constants.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/constants.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/delta.py
-pypathway/utils/third_party/hotnet2/hotnet2/delta.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/delta.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/heat.py
-pypathway/utils/third_party/hotnet2/hotnet2/heat.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/heat.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hnap.py
-pypathway/utils/third_party/hotnet2/hotnet2/hnap.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hnio.py
-pypathway/utils/third_party/hotnet2/hotnet2/hnio.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/hnio.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hotnet2.py
-pypathway/utils/third_party/hotnet2/hotnet2/hotnet2.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/hotnet2.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/network.py
-pypathway/utils/third_party/hotnet2/hotnet2/network.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/permutations.py
-pypathway/utils/third_party/hotnet2/hotnet2/permutations.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/permutations.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/run.py
-pypathway/utils/third_party/hotnet2/hotnet2/run.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/run.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/setup_c.py
-pypathway/utils/third_party/hotnet2/hotnet2/setup_fortran.py
-pypathway/utils/third_party/hotnet2/hotnet2/stats.py
-pypathway/utils/third_party/hotnet2/hotnet2/stats.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/stats.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/union_find.py
-pypathway/utils/third_party/hotnet2/hotnet2/union_find.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/viz.py
-pypathway/utils/third_party/hotnet2/hotnet2/viz.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/viz.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/__init__.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/consensus.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/constants.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/delta.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/heat.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/hnap.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/hnio.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/hotnet2.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/network.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/permutations.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/run.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/stats.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/union_find.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/__pycache__/viz.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/README.md
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__init__.py
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__init__.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__init__.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.py.bak
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/hierarchical_clustering_io.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__pycache__/__init__.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__pycache__/hierarchical_clustering.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/hierarchy/__pycache__/hierarchical_clustering_io.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/hotnet2/src/c/c_routines.c
-pypathway/utils/third_party/hotnet2/hotnet2/src/c/c_routines.pyf
-pypathway/utils/third_party/hotnet2/hotnet2/src/fortran/fortran_routines.f95
-pypathway/utils/third_party/hotnet2/hotnet2/viz_files/hierarchy.html
-pypathway/utils/third_party/hotnet2/hotnet2/viz_files/subnetworks.html
-pypathway/utils/third_party/hotnet2/paper/.DS_Store
-pypathway/utils/third_party/hotnet2/paper/paper_commands.sh
-pypathway/utils/third_party/hotnet2/paper/data/.DS_Store
-pypathway/utils/third_party/hotnet2/paper/data/heats/pan12.gene2freq.json
-pypathway/utils/third_party/hotnet2/paper/data/heats/pan12.gene2freq.txt
-pypathway/utils/third_party/hotnet2/paper/data/heats/pan12.gene2mutsig.txt
-pypathway/utils/third_party/hotnet2/paper/data/networks/.DS_Store
-pypathway/utils/third_party/hotnet2/paper/data/networks/hint+hi2012/.DS_Store
-pypathway/utils/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_edge_list
-pypathway/utils/third_party/hotnet2/paper/data/networks/hint+hi2012/hint+hi2012_index_gene
-pypathway/utils/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_edge_list
-pypathway/utils/third_party/hotnet2/paper/data/networks/irefindex9/irefindex9_index_gene
-pypathway/utils/third_party/hotnet2/paper/data/networks/multinet/multinet_edge_list
-pypathway/utils/third_party/hotnet2/paper/data/networks/multinet/multinet_index_gene
-pypathway/utils/third_party/hotnet2/scripts/consensus.py
-pypathway/utils/third_party/hotnet2/scripts/consensus.py.bak
-pypathway/utils/third_party/hotnet2/scripts/createDendrogram.py
-pypathway/utils/third_party/hotnet2/scripts/createDendrogram.py.bak
-pypathway/utils/third_party/hotnet2/scripts/createInfluenceMatrix.py
-pypathway/utils/third_party/hotnet2/scripts/createInfluenceMatrix.py.bak
-pypathway/utils/third_party/hotnet2/scripts/permuteNetwork.py
-pypathway/utils/third_party/hotnet2/scripts/permuteNetwork.py.bak
-pypathway/utils/third_party/hotnet2/scripts/__pycache__/permuteNetwork.cpython-35.pyc
-pypathway/utils/third_party/hotnet2/test/README.md
-pypathway/utils/third_party/hotnet2/test/checkConfigResults.py
-pypathway/utils/third_party/hotnet2/test/checkConfigResults.py.bak
-pypathway/utils/third_party/hotnet2/test/checkHotNet2Consensus.sh
-pypathway/utils/third_party/hotnet2/test/compare_consensus_results.py
-pypathway/utils/third_party/hotnet2/test/compare_consensus_results.py.bak
-pypathway/utils/third_party/hotnet2/test/compare_subnetworks.py
-pypathway/utils/third_party/hotnet2/test/compare_subnetworks.py.bak
-pypathway/utils/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py
-pypathway/utils/third_party/hotnet2/test/convertSimulatedDataToOldFormat.py.bak
-pypathway/utils/third_party/hotnet2/test/createSimulatedData.py
-pypathway/utils/third_party/hotnet2/test/createSimulatedData.py.bak
-pypathway/utils/third_party/hotnet2/test/referenceConsensusResults.txt
-pypathway/utils/third_party/hotnet2/test/runAndConvert.sh
-pypathway/utils/third_party/hotnet2/viz/.gitignore
-pypathway/utils/third_party/hotnet2/viz/README.md
-pypathway/utils/third_party/hotnet2/viz/bower.json
-pypathway/utils/third_party/hotnet2/viz/index.html
-pypathway/utils/third_party/hotnet2/viz/requirements.txt
-pypathway/utils/third_party/hotnet2/viz/server.py
-pypathway/utils/third_party/hotnet2/viz/server.py.bak
-pypathway/utils/third_party/hotnet2/viz/subnetworks.html

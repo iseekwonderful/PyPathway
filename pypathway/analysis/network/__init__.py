@@ -76,22 +76,6 @@ class Enrichnet(EnrichmentResult):
         self.mission_id, self.df, self.geneset, self.idtype, self.pathdb, self.graph = mission_id, df, geneset, idtype, pathdb, graph
         EnrichmentResult.__init__(self, self.df, geneset, pathdb, 'Enrichnet', 0, 2)
 
-    # @property
-    # def plot(self):
-    #     self.basic_config['yAxis']['data'] = []
-    #     self.basic_config['series'][0]['data'] = []
-    #     self.basic_config['title']['subtext'] = self.target
-    #     self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
-    #     candidate = []
-    #     for x in self.df.iterrows():
-    #         candidate.append([x[1][0], -math.log2(x[1][2])])
-    #     candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
-    #     for x in candidate[:15]:
-    #         self.basic_config['yAxis']['data'].append(x[0])
-    #         self.basic_config['series'][0]['data'].append(x[1])
-    #     # print(self.basic_config)
-    #     return plot_json(self.basic_config)
-
     def overview(self):
         raise NotImplementedError()
 
@@ -301,19 +285,3 @@ class SPIA(EnrichmentResult):
     @property
     def table(self):
         return self.df
-
-    # @property
-    # def plot(self, count=15):
-    #     self.basic_config['yAxis']['data'] = []
-    #     self.basic_config['series'][0]['data'] = []
-    #     self.basic_config['title']['subtext'] = self.target
-    #     self.basic_config['title']['text'] = "{} Enrichment Analysis".format(self.method.upper())
-    #     candidate = []
-    #     for x in self.df.iterrows():
-    #         candidate.append([x[1][0], -math.log2(x[1][4])])
-    #     candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
-    #     for x in candidate[:15]:
-    #         self.basic_config['yAxis']['data'].append(x[0])
-    #         self.basic_config['series'][0]['data'].append(x[1])
-    #     # print(self.basic_config)
-    #     return plot_json(self.basic_config)

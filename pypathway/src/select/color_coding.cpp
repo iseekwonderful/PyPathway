@@ -400,10 +400,10 @@ extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expre
     char fileName[100];
     
     time_t t = time( 0 );
-    char tmpBuf[BUFLEN];
+    char* tmpBuf = (char*)malloc(sizeof(char) * BUFLEN);
     strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
 
-    // printf("Start: %s\n", tmpBuf);
+    printf("Start: %s\n", tmpBuf);
     
     FILE *fp, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7;
     int countNumParamters=0;
@@ -437,19 +437,22 @@ extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expre
     t = time( 0 );
     numColor = numColorArg;
     strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    // printf("numColor: %i, numTurnMut: %i, timestamp: %s\n", numColorArg, numTurMutArg, tmpBuf);
+    printf("numColor: %i, numTurnMut: %i, timestamp: %s\n", numColorArg, numTurMutArg, tmpBuf);
     sprintf(fileName,"%s/BestPaths.Length%i.Control%i.Run%i\0", file_name, numColorArg, numTurMutArg, randomRunId);
     // printf("%s\n", fileName);
     numColor = numColorArg;
     fp8=fopen(fileName, "w");
     controlServMutAllowed=numTurMutArg;
     initialize();
+    printf("done initialize\n");
     runColorCodingMethod(fp8);
+    printf("done runcolor\n");
     freeMatrixes();
     fclose(fp8);
     t = time( 0 );
     strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    // printf("done: timestamp: %s\n", tmpBuf);
+    free(tmpBuf);
+    printf("done: timestamp: %s\n", tmpBuf);
     return 0;
 }
 

@@ -1,0 +1,49 @@
+LINE 282 : 2017-09-10 10:34:19,712 [INFO    ] Parsing data files for GSEA.............................
+LINE 87  : 2017-09-10 10:34:19,720 [INFO    ] Downloading and generating Enrichr library gene sets...
+LINE 207 : 2017-09-10 10:34:19,722 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 395 : 2017-09-10 10:34:20,945 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2016 HTTP/1.1" 200 None
+LINE 139 : 2017-09-10 10:34:24,817 [INFO    ] 0292 gene_sets have been filtered out when max_size=500 and min_size=15
+LINE 296 : 2017-09-10 10:34:24,818 [INFO    ] 0001 gene_sets used for further statistical testing.....
+LINE 297 : 2017-09-10 10:34:24,818 [INFO    ] Start to run GSEA...Might take a while..................
+LINE 341 : 2017-09-10 10:34:24,826 [DEBUG   ] Start to compute enrichment socres......................
+LINE 349 : 2017-09-10 10:34:24,826 [DEBUG   ] Start to compute esnulls...............................
+LINE 515 : 2017-09-10 10:34:29,358 [DEBUG   ] Start to compute pvals..................................
+LINE 537 : 2017-09-10 10:34:29,359 [DEBUG   ] Compute normalized enrichment score and normalized esnull
+LINE 553 : 2017-09-10 10:34:29,359 [DEBUG   ] start to compute fdrs..................................
+LINE 587 : 2017-09-10 10:34:29,359 [DEBUG   ] Statistial testing finished.............................
+LINE 309 : 2017-09-10 10:34:29,363 [INFO    ] Start to generate gseapy reports, and produce figures...
+LINE 321 : 2017-09-10 10:34:30,530 [INFO    ] Congratulations. GSEApy run successfully................
+LINE 207 : 2017-09-10 10:34:30,555 [DEBUG   ] Starting new HTTP connection (1): rest.kegg.jp
+LINE 395 : 2017-09-10 10:34:31,058 [DEBUG   ] http://rest.kegg.jp:80 "GET /link/pathway/hsa HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:39,535 [DEBUG   ] Starting new HTTP connection (1): rest.kegg.jp
+LINE 395 : 2017-09-10 10:34:40,557 [DEBUG   ] http://rest.kegg.jp:80 "GET /list/pathway/hsa HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:42,906 [DEBUG   ] Starting new HTTP connection (1): webservice.thebiogrid.org
+LINE 395 : 2017-09-10 10:34:43,434 [DEBUG   ] http://webservice.thebiogrid.org:80 "GET /interactions?searchNames=true&geneList=CD22&includeInteractors=true&includeInteractorInteractions=false&taxId=9606&accesskey=416cb97cff808a451eb54c2a885134b4&format=json HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:43,446 [DEBUG   ] Starting new HTTP connection (1): rest.kegg.jp
+LINE 395 : 2017-09-10 10:34:44,025 [DEBUG   ] http://rest.kegg.jp:80 "GET /find/pathway/jak HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:44,028 [DEBUG   ] Starting new HTTP connection (1): rest.kegg.jp
+LINE 207 : 2017-09-10 10:34:44,029 [DEBUG   ] Starting new HTTP connection (1): rest.kegg.jp
+LINE 395 : 2017-09-10 10:34:44,314 [DEBUG   ] http://rest.kegg.jp:80 "GET /get/ko04630/kgml HTTP/1.1" 200 None
+LINE 395 : 2017-09-10 10:34:44,332 [DEBUG   ] http://rest.kegg.jp:80 "GET /get/ko04630/image HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:44,936 [DEBUG   ] Starting new HTTP connection (1): www.kegg.jp
+LINE 395 : 2017-09-10 10:34:45,949 [DEBUG   ] http://www.kegg.jp:80 "GET /kegg-bin/show_pathway?map04630 HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:46,078 [DEBUG   ] Starting new HTTP connection (1): www.reactome.org
+LINE 395 : 2017-09-10 10:34:46,695 [DEBUG   ] http://www.reactome.org:80 "GET /ContentService/search/query?query=jak&types=Pathway&cluster=true HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:34:47,656 [DEBUG   ] Starting new HTTP connection (1): www.reactome.org
+LINE 207 : 2017-09-10 10:34:47,658 [DEBUG   ] Starting new HTTP connection (1): reactome.org
+LINE 395 : 2017-09-10 10:34:48,310 [DEBUG   ] http://reactome.org:80 "GET /ReactomeRESTfulAPI/RESTfulWS/pathwayHierarchy/Homo+sapiens HTTP/1.1" 200 None
+LINE 395 : 2017-09-10 10:34:48,330 [DEBUG   ] http://www.reactome.org:80 "GET /ReactomeRESTfulAPI/RESTfulWS/sbgnExporter/8950505 HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:36:26,746 [DEBUG   ] Starting new HTTP connection (1): www.reactome.org
+LINE 395 : 2017-09-10 10:36:27,356 [DEBUG   ] http://www.reactome.org:80 "GET /download/current/diagram/R-HSA-8950505.json?v=1505010987 HTTP/1.1" 200 138433
+LINE 207 : 2017-09-10 10:36:28,984 [DEBUG   ] Starting new HTTP connection (1): string-db.org
+LINE 395 : 2017-09-10 10:36:29,949 [DEBUG   ] http://string-db.org:80 "GET /api/json/resolve?identifier=CD22&species=9606 HTTP/1.1" 200 736
+LINE 207 : 2017-09-10 10:36:29,952 [DEBUG   ] Starting new HTTP connection (1): string-db.org
+LINE 395 : 2017-09-10 10:36:30,696 [DEBUG   ] http://string-db.org:80 "GET /api/psi-mi-tab/interactionsList?identifiers=9606.ENSP00000085219 HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:36:30,699 [DEBUG   ] Starting new HTTP connection (1): webservice.wikipathways.org
+LINE 395 : 2017-09-10 10:36:31,521 [DEBUG   ] http://webservice.wikipathways.org:80 "GET /findPathwaysByText?query=jak&format=json HTTP/1.1" 200 1030
+LINE 207 : 2017-09-10 10:36:31,524 [DEBUG   ] Starting new HTTP connection (1): webservice.wikipathways.org
+LINE 395 : 2017-09-10 10:36:31,879 [DEBUG   ] http://webservice.wikipathways.org:80 "GET /getPathway?pwId=WP2593&format=json HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:36:32,096 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 395 : 2017-09-10 10:36:34,458 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/geneSetLibrary?mode=text&libraryName=Genome_Browser_PWMs HTTP/1.1" 200 None
+LINE 207 : 2017-09-10 10:36:59,284 [DEBUG   ] Starting new HTTP connection (1): amp.pharm.mssm.edu
+LINE 395 : 2017-09-10 10:37:00,907 [DEBUG   ] http://amp.pharm.mssm.edu:80 "GET /Enrichr/datasetStatistics?_=1505011019 HTTP/1.1" 200 None
