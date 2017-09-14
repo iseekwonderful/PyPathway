@@ -2,7 +2,7 @@ import unittest
 from pypathway import PublicDatabase as Database, STRING, BioGRID, ColorectalCancer
 from pypathway import GSEA, SPIA, Enrichnet, KEGG
 from pypathway import MAGI, Hotnet2
-from pypathway import GMTUtils, IdMapping
+from pypathway import GMTUtils
 from pypathway.utils import load_hint_hi12012_network
 from pypathway import random_walk_with_restart, random_walk, diffusion_kernel
 import pandas as pd
@@ -60,22 +60,22 @@ class TestAnalysis(unittest.TestCase):
     #     s = SPIA.run(c.deg, c.background)
     #     self.assertTrue(hasattr(s, 'plot'))
 
-    def test_enrichnet_api(self):
-        print("test enrichnet")
-        c = ColorectalCancer()
-        sym = IdMapping.convert(input_id=c.deg_list, source='ENTREZID', target="SYMBOL", organism='hsa')
-        sym = [x[1][0] for x in sym if x[1]]
-        sym = [x[1][0] for x in sym if x[1]]
-        en = Enrichnet.run(genesets=sym, graph='string')
-        self.assertTrue(hasattr(en, 'table'))
+    # def test_enrichnet_api(self):
+    #     print("test enrichnet")
+    #     c = ColorectalCancer()
+    #     sym = IdMapping.convert(input_id=c.deg_list, source='ENTREZID', target="SYMBOL", organism='hsa')
+    #     sym = [x[1][0] for x in sym if x[1]]
+    #     sym = [x[1][0] for x in sym if x[1]]
+    #     en = Enrichnet.run(genesets=sym, graph='string')
+    #     self.assertTrue(hasattr(en, 'table'))
 
 
 class TestUtils(unittest.TestCase):
-    def test_id_mapping(self):
-        print("test idmapping")
-        c = ColorectalCancer()
-        r = IdMapping.convert(input_id=c.deg_list[:2], organism='hsa', source="ENTREZID", target="SYMBOL")
-        self.assertTrue(r is not None)
+    # def test_id_mapping(self):
+    #     print("test idmapping")
+    #     c = ColorectalCancer()
+    #     r = IdMapping.convert(input_id=c.deg_list[:2], organism='hsa', source="ENTREZID", target="SYMBOL")
+    #     self.assertTrue(r is not None)
 
     def test_loading_remote_gmts(self):
         print("test gmts")
