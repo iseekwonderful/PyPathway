@@ -131,7 +131,7 @@ class EnrichmentExport:
                                 'path': './details/{}.html?id={}'.format(x['id'], x['id'])}
                 items.append(current)
         with open(template_path + '/index.html', 'w') as fp:
-            fp.write(t.render(items=items))
+            fp.write(t.render(items=items, title='Enrichments'))
         # generate the snapshot config
         snapshot_config = {}
         snapshot_config_path = template_path + "/data/card.json"

@@ -11,7 +11,7 @@
 double ****DPMatrix;
 int colorAssigned[maxNumNode];
 int numColor;
-int colorBinaryRep[maxNumColor+1];
+int colorBinaryRep[21];
 
 int listOfGenesPicked[100];
 int countListOfGenesPicked;
@@ -19,13 +19,12 @@ const int maxNumServeMutInControl=10;
 int controlServMutAllowed=0;
 bool hasColor(int A, int B)
 {
-    
     if ((A & colorBinaryRep[B])==colorBinaryRep[B])
         return true;
     else return false;
 }
 
-int pow(int a1, int a2){
+int power(int a1, int a2){
     int res = 1;
     for (int i = 0; i < a2; i++){
         res *= a1;
@@ -48,7 +47,7 @@ void initialize()
 {
     for (int count=1; count<numColor+1; count++)
     {
-        colorBinaryRep[count]=(int) pow(2,count-1);
+        colorBinaryRep[count]=(int) power(2,count-1);
     }
     
     DPMatrix = (double ****) malloc(numColor*sizeof(int ***));
@@ -56,14 +55,14 @@ void initialize()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        DPMatrix[coExpresionLength] = (double ***) malloc((pow(2, numColor)+1)*sizeof(double **));
+        DPMatrix[coExpresionLength] = (double ***) malloc((power(2, numColor)+1)*sizeof(double **));
     }
     
     for (int  coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2, numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2, numColor)+1; colorList++)
         {
-            DPMatrix[coExpresionLength][colorList] = (double **) malloc(20000*sizeof(double*));
+            DPMatrix[coExpresionLength][colorList] = (double **) malloc(numNodes*sizeof(double*));
         }
         
     }
@@ -72,9 +71,9 @@ void initialize()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
         {
-            for (int nodeId=0; nodeId<20000; nodeId++)
+            for (int nodeId=0; nodeId<numNodes; nodeId++)
             {
                 DPMatrix[coExpresionLength][colorList][nodeId] = (double *) malloc(maxNumServeMutInControl*sizeof(double));
             }
@@ -84,9 +83,9 @@ void initialize()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
         {
-            for (int nodeId=0; nodeId<20000; nodeId++)
+            for (int nodeId=0; nodeId<numNodes; nodeId++)
             {
                 for (int controlSever=0; controlSever<maxNumServeMutInControl; controlSever++)
                 {
@@ -105,9 +104,9 @@ void freeMatrixes()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
         {
-            for (int nodeId=0; nodeId<20000; nodeId++)
+            for (int nodeId=0; nodeId<numNodes; nodeId++)
             {
                 free(DPMatrix[coExpresionLength][colorList][nodeId]);
             }
@@ -117,7 +116,7 @@ void freeMatrixes()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
         {
             free(DPMatrix[coExpresionLength][colorList]);
         }
@@ -298,7 +297,7 @@ int traverseBack(int coExpresionLength, int colorList, int nodeId, int controlSe
 
 
 
-extern "C" int numberColor(int list)//calculates number of colors in each list
+int numberColor(int list)//calculates number of colors in each list
 {
     int countBinary=0;
     for (int count=0; count<numColor+1; count++)
@@ -315,9 +314,9 @@ void reinitializeMatrix()
     
     for (int coExpresionLength=0; coExpresionLength<numColor; coExpresionLength++)
     {
-        for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+        for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
         {
-            for (int nodeId=0; nodeId<20000; nodeId++)
+            for (int nodeId=0; nodeId<numNodes; nodeId++)
             {
                 for (int controlSever=0; controlSever<maxNumServeMutInControl; controlSever++)
                 {
@@ -329,7 +328,7 @@ void reinitializeMatrix()
 }
 
 
-extern "C" void runColorCodingMethod(FILE *fp)
+void runColorCodingMethod(FILE *fp)
 {
     double maxScore=-2000; //-2000 is equal to -infinity
     //int minControl=0;
@@ -352,7 +351,7 @@ extern "C" void runColorCodingMethod(FILE *fp)
         minCoExprLength=0;
         int coExpresionLength=numColor-1;
         {
-            for (int colorList=1; colorList<pow(2,numColor)+1; colorList++)
+            for (int colorList=1; colorList<power(2,numColor)+1; colorList++)
             {
                 for (int nodeId=0; nodeId<numNodes; nodeId++)
                 {
@@ -388,22 +387,13 @@ extern "C" void runColorCodingMethod(FILE *fp)
     }
 }
 
-extern "C" int hi(){
-    return 1;
-}
-
-extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
+int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
     char* co_expression_matrix, char* control_list, char* filter_list,
     char* length, char* run_id, int num_color, int num_mut, char * file_name) {
 
     int randomRunId=0;
-    char fileName[100];
-    
-    time_t t = time( 0 );
-    char* tmpBuf = (char*)malloc(sizeof(char) * BUFLEN);
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-
-    printf("Start: %s\n", tmpBuf);
+    char fileName[300];
+    printf("Start C5!\n");
     
     FILE *fp, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7;
     int countNumParamters=0;
@@ -422,24 +412,15 @@ extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expre
     randomRunId = atoi(run_id);
     numColorArg = num_color;
     numTurMutArg = num_mut;
-
-    // printf("numColor: %i, numTurnMut: %i, %s\n", numColorArg, numTurMutArg, file_name);
-
     sprintf(fileName,"%s/RandomGeneList.%i\0", file_name, randomRunId);
-    // printf("%s\n", fileName);
-    // sprintf(fileName, file_name, randomRunId);
     FILE *fp8=fopen(fileName,"w");
-    // printf("%x\n", fp8);
     createPPI_Graph(fp);
     assignScoreToBothControlandCases(fp2, fp3, fp4, fp7, fp8, filter);
     createCoExpresionGeneHash(fp5);
     createCoExpresionMatix(fp6);
-    t = time( 0 );
     numColor = numColorArg;
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    printf("numColor: %i, numTurnMut: %i, timestamp: %s\n", numColorArg, numTurMutArg, tmpBuf);
+    printf("numColor: %i, numTurnMut: %i \n", numColorArg, numTurMutArg);
     sprintf(fileName,"%s/BestPaths.Length%i.Control%i.Run%i\0", file_name, numColorArg, numTurMutArg, randomRunId);
-    // printf("%s\n", fileName);
     numColor = numColorArg;
     fp8=fopen(fileName, "w");
     controlServMutAllowed=numTurMutArg;
@@ -448,11 +429,11 @@ extern "C" int pathway_select(char* ppi_network, char* case_list, char* co_expre
     runColorCodingMethod(fp8);
     printf("done runcolor\n");
     freeMatrixes();
+    freePPI_Graph();
+    freeCoExpresionGeneMatrix();
+    freeCoExpresionGeneHash();
     fclose(fp8);
-    t = time( 0 );
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    free(tmpBuf);
-    printf("done: timestamp: %s\n", tmpBuf);
+    printf("done\n");
     return 0;
 }
 

@@ -6,7 +6,8 @@
 #include "PPI_Graph.h"
 
 // thread-shared
-PPI_Node listNodes[maxNumNode];
+// PPI_Node listNodes[maxNumNode];
+PPI_Node* listNodes;
 int numNodes=0;
 int coExpresGeneNum=0;
 int totalSevereMutInCases=0;
@@ -16,12 +17,22 @@ int totalLengthGenes=0;
 float allNodeMeanValue=0;
 float allNodesSTD=0;
 int totalNodesWithScoreAssigned=0;
-float coexpressionPValue[102];
+// float coexpressionPValue[102];
+float* coexpressionPValue;
 float meanCoExpression, varianceCoExpression;
-coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
+// coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
+coExpresionGeneHash* coExpresionGeneHashTable;
+
 // thread-shared
 float** coExpresionMatrix;// The node is is the same as PPI node id. The nodes which are not in PPI network are discarded.
 
+
+void freeCoExpresionGeneMatrix(){
+	for(int i = 0; i < numNodes; i++){
+		free(coExpresionMatrix[i]);
+	}
+	free(coExpresionMatrix);
+}
 
 int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
 {
@@ -29,11 +40,10 @@ int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
     /* First we have to convert the geneNames in each instance of coexpression matrix into the id used in the PPI_Node.
      * Assuming that the coExpressionMatrix is orderd by the ids in coExpresionGeneHasTable.*/
 
-    coExpresionMatrix = (float **)malloc(sizeof(float *) * maxNumNode);
-    for (int i = 0; i < maxNumNode; i++){
-        coExpresionMatrix[i] = (float* )malloc(sizeof(float) * maxNumNode);
+    coExpresionMatrix = (float **)malloc(sizeof(float *) * numNodes);
+    for (int i = 0; i < numNodes; i++){
+        coExpresionMatrix[i] = (float* )malloc(sizeof(float) * numNodes);
     }
-
 	int firstGeneCount=0, secondGeneCount=0;
 	char geneName1[geneNameLen], geneName2[geneNameLen], prevGeneName[geneNameLen];
 	float geneCoExpr;
@@ -73,11 +83,16 @@ int isConnectedPPI(int node1, int node2)
 return 0;
 }
 
+void freePPI_Graph(){
+	free(listNodes);
+}
+
 // manage a list of node, name id and neighbours
 // the node list: list node
 // the count: numNodes.
 int createPPI_Graph(FILE *inputPPI_FP)
 {
+	listNodes = (PPI_Node* )malloc(sizeof(PPI_Node) * maxNumNode); 
     char geneName1[geneNameLen], geneName2[geneNameLen];
     int nodeId1, nodeId2;
 	while (fscanf(inputPPI_FP, "%s\t%s\n", geneName1, geneName2)!=EOF)
@@ -305,6 +320,7 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
         //printf("%lf %i\n", log(listNodes[count].prob), listNodes[count].numMissenseMutInCases);
         listNodes[count].weightCases=0;
         calNewProbValue(count);
+
 	
     }
     
@@ -337,12 +353,18 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
 }
 
 
+void freeCoExpresionGeneHash(){
+	free(coExpresionGeneHashTable);
+}
+
 int createCoExpresionGeneHash(FILE *fp)
 {
+    coExpresionGeneHashTable = (coExpresionGeneHash*)malloc(sizeof(coExpresionGeneHash) * maxNumNode);
     srand((unsigned int)time(NULL));
     int hashId;
     coExpresGeneNum=0;
     int coExprId=0;
+    int coID;
     char ensName[100];
     char geneName[geneNameLen];
 	while (fscanf(fp, "%i\t%s\t%s\n", &coExprId, ensName, geneName)!=EOF)
@@ -354,11 +376,12 @@ int createCoExpresionGeneHash(FILE *fp)
 			if (strcmp(listNodes[count].nodeName, geneName)==0)
 			{
 				hashId=count;
+				strcpy(coExpresionGeneHashTable[coID].geneName, geneName);
+				coExpresionGeneHashTable[coID].hashId=coID;
+				coExpresionGeneHashTable[coID].nodeId=hashId;
+				coID++;
 			}
 		} 
-		strcpy(coExpresionGeneHashTable[coExprId].geneName, geneName);
-		coExpresionGeneHashTable[coExprId].hashId=coExprId;
-		coExpresionGeneHashTable[coExprId].nodeId=hashId;
 	}
     return -1;
 }
@@ -441,17 +464,3 @@ if (endOfQueue==sizeSubgraph)
 else return false;
 	
 }
-/*
-int main(int argv, char *argc[])
-{
-	FILE *fp=fopen(argc[1],"r");
-	FILE *fp2=fopen(argc[2],"r");
-	FILE *fp3=fopen(argc[3],"r");
-	FILE *fp4=fopen(argc[4],"r");
-	FILE *fp5=fopen(argc[5],"r");
-	FILE *fp6=fopen(argc[6],"r");
-	createPPI_Graph(fp);
-	assignScoreToBothControlandCases(fp2, fp3, fp4);
-	createCoExpresionGeneHash(fp5);	
-	createCoExpresionMatix(fp6);	
-}*/

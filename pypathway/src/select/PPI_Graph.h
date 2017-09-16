@@ -4,10 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define maxNumNode 50000
+#define maxNumNode 30000
+#define geneNameLen 50
+#define minCoExpresThreshold 0.37
 
-const int geneNameLen=50;
-const float minCoExpresThreshold=0.37;
+// const int geneNameLen=50;
+
+// const float minCoExpresThreshold=0.37;
 extern int numNodes;
 extern int coExpresGeneNum;
 extern int totalSevereMutInCases;
@@ -17,7 +20,8 @@ extern int totalLengthGenes;
 extern float allNodeMeanValue;
 extern float allNodesSTD;
 extern int totalNodesWithScoreAssigned;
-extern float coexpressionPValue[102];// [0, 0.01, 0.02, ..., 0.99, 1]: the co-expression p-value for every edge (for very coExpresionValue > x 
+// extern float coexpressionPValue[102];// [0, 0.01, 0.02, ..., 0.99, 1]: the co-expression p-value for every edge (for very coExpresionValue > x 
+extern float* coexpressionPValue;
 extern float meanCoExpression;
 extern float varianceCoExpression;
 
@@ -48,11 +52,18 @@ typedef struct coExpresionGeneHash{
 	int hashId; // The coexpression table Id
 }coExpresionGeneHash;
 
-extern coExpresionGeneHash coExpresionGeneHashTable[50000];
+// extern coExpresionGeneHash coExpresionGeneHashTable[30000];
 
-extern PPI_Node listNodes[50000];
+// extern PPI_Node listNodes[30000];
+
+extern coExpresionGeneHash* coExpresionGeneHashTable;
+extern PPI_Node* listNodes;
+
 extern float** coExpresionMatrix;
 
+void freeCoExpresionGeneMatrix();
+void freeCoExpresionGeneHash();
+void freePPI_Graph();
 int createPPI_Graph(FILE *); 
 //int assignScoreCases(FILE *);
 //int assignScoreControls(FILE *);

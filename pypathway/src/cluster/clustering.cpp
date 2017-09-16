@@ -401,7 +401,7 @@ return tempClust;
 int readPathFiles(FILE *fp)
 {
 int numPaths=0;
-char fileName[100];
+char fileName[300];
 FILE *fpInputPaths;
 int pathLength;
         while(fscanf(fp,"%s %i %i\n", fileName, &numPaths, &pathLength)!=EOF)
@@ -916,15 +916,12 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	lowerLimitSize = l;
 	upperLimitSize = u;
 	pathAlpha = atof(aaa);
-	randomNum=atoi(i);
+	randomNum= atoi(i);
 	minAvgExpr2 = atof(minCoExpr);
 	minAvgExpr = atof(avgCoExpr);
 	minAvgEdgeDensity = atof(avgDensity);
 
 	output = fopen(outputFile, "w");
-	// printf("m:%i\nl:%i\nu:%i\na:%f\ni: %i\n", minClusterWeight, lowerLimitSize, upperLimitSize,
-           // pathAlpha, randomNum);
-	// exit(0);
 	srand(time(NULL)+randomNum);
 	createPPI_Graph(fp1);
         assignScorePrecalculated(fp2);
@@ -934,6 +931,7 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	markPathsNotToUse();
 	createGraphOfPaths();
 	randomConnectedComponents(randomNum);
+	printf("done!/n");
 	return 0;
 }
 int main(int argv, char *argc[])
