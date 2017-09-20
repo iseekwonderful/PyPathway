@@ -65,7 +65,7 @@ if sys.platform == "darwin":
 
 setup(
     name='PyPathway',
-    version='0.3.4',
+    version='0.3.5',
     description="A Python package biological network analysis and visualization",
     long_description=readme,
     author="sheep",

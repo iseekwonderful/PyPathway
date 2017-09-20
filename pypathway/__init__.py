@@ -19,5 +19,5 @@ from .analysis.propagation import random_walk, random_walk_with_restart, diffusi
 
 
 def version():
-    return "0.3.4"
+    return "0.3.5"
 

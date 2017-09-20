@@ -46,7 +46,7 @@ python setup.py install
 * Interactive visualization for pathway, graph and analysis result.
 * Web page exportation for results.
 
-## Highlights [TODOS]
+## Highlights
 * Integrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages 
 * Dynamic visualization for IPython notebook. 
 * Most classes implement `__repr__` method for interactive environment.
@@ -190,5 +190,3 @@ The interactive visualization for IPython notebook
 * dynamic visualization for networkx.Graph instance
 * visualizer for pathway object
 * visualizer for Gene ontology DAG.
-
-### GIF here
