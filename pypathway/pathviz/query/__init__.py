@@ -231,7 +231,6 @@ class BioGRID(Database):
             zipref = zipfile.ZipFile(cache_dir + "biogrid.zip", 'r')
             zipref.extractall(cache_dir + 'biogrid')
             zipref.close()
-            #os.remove(cache_dir + 'biogrid.zip')
         for spl in IdMapping.SPECIES:
             if organism in spl:
                 name = spl[1].replace(' ', '_')
@@ -466,8 +465,20 @@ class STRING(Database):
         if not os.path.exists(cache_dir + 'st-{}.gz'.format(numeric_id)):
             # download from remote
             print("Download {} network from STRING, it may take several minutes".format(numeric_id))
-            url = "https://string-db.org/download/protein.links.v10.5/{}.protein.links.v10.5.txt.gz".format(numeric_id)
-            wget.download(url, out=cache_dir + 'st-{}.gz'.format(numeric_id))
+            headers = {
+                "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                "accept-encoding": "gzip, deflate, br",
+                "referer": "https://string-db.org/cgi/download.pl?UserId=7qr6MQTTMAQm&sessionId=pVTJ31WUVusQ",
+                "upgrade-insecure-requests": "1",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"
+            }
+            url = "https://stringdb-static.org/download/protein.links.v10.5/{}.protein.links.v10.5.txt.gz".format(numeric_id)
+            # wget.download(url, out=cache_dir + 'st-{}.gz'.format(numeric_id))
+            r = requests.get(url, stream=True, headers=headers)
+            with open(cache_dir + 'st-{}.gz'.format(numeric_id), 'wb') as f:
+                for chunk in r.iter_content(chunk_size=1024):
+                    if chunk:
+                        f.write(chunk)
         return STRING.load_overall(cache_dir + 'st-{}.gz'.format(numeric_id))
 
     @staticmethod

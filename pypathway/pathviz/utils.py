@@ -190,10 +190,12 @@ def plot(chart):
         fp.write(info.replace("{{ opt }}", json.dumps(chart.json)))
     html = iframe.replace("{{path}}", "'assets/plot/plot_{}.html'".format(area_id))\
         .replace("{{ratio}}", "0.6").replace("{{time}}", area_id)
-    if environment():
-        from IPython.display import HTML
-        # print(html)
-        return HTML(html)
+    from IPython.display import HTML
+    return HTML(html)
+    # if environment():
+    #     from IPython.display import HTML
+    #     # print(html)
+    #     return HTML(html)
 
 
 class C:

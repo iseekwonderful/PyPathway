@@ -131,7 +131,6 @@ class Reactome(EnrichmentResult):
             }
         })
         json_data = json.loads(res.text)
-        print(json_data['identifiersNotFound'])
         if organism:
             for x in IdMapping.SPECIES:
                 if organism in x:
@@ -222,7 +221,7 @@ class GO(EnrichmentResult):
                               methods=methods)
         results = g.run_study(study)
         # g.print_summary(results, min_ratio=ratio, indent=False, pval=p_value)
-        r = 'GO\tNS\tenrichment\tname\tratio_in_study\tratio_in_pop\tp_uncorrected\tdepth\tstudy_count\tp_bonferroni\tp_sidak	p_holm\n'
+        r = 'GO\tNS\tenrichment\tname\tratio_in_study\tratio_in_pop\tp_uncorrected\tdepth\tstudy_count\tp_bonferroni\tp_sidak\tp_holm\thit\n'
         for x in results:
             r += x.__str__() + "\n"
         tb = pd.read_table(StringIO(r))

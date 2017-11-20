@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 98vw; height: 95vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"title": {"text": "GSEA Enrichment Analysis", "subtext": "KEGG_2016"}, "series": [{"type": "bar", "name": "-lg(fdr)", "data": [6.699668841798472, 6.410162224603487, 6.377740746911109, 4.591144385020303, 4.447529077067972, 4.401988293157787, 3.7454725314115964, 2.888026561337769, 1.4948582648872688, 1.3895325031328414, 1.3496397760093284, 1.3425530300264485, 1.31213014164296, 1.30975698483629, 1.2275479778922407]}], "xAxis": {"type": "value", "boundaryGap": [0, 0.01], "name": "-lg(fdr)"}, "tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "yAxis": {"type": "category", "data": ["Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280", "Glycerolipid metabolism_Homo sapiens_hsa00561", "Fatty acid degradation_Homo sapiens_hsa00071", "Peroxisome_Homo sapiens_hsa04146", "Glycolysis / Gluconeogenesis_Homo sapiens_hsa00010", "Fatty acid metabolism_Homo sapiens_hsa01212", "Carbon metabolism_Homo sapiens_hsa01200", "ABC transporters_Homo sapiens_hsa02010", "HTLV-I infection_Homo sapiens_hsa05166", "Rap1 signaling pathway_Homo sapiens_hsa04015", "Calcium signaling pathway_Homo sapiens_hsa04020", "Oocyte meiosis_Homo sapiens_hsa04114", "Bile secretion_Homo sapiens_hsa04976", "Progesterone-mediated oocyte maturation_Homo sapiens_hsa04914", "Longevity regulating pathway - mammal_Homo sapiens_hsa04211"]}, "grid": {"left": "3%", "right": "12%", "containLabel": true, "bottom": "3%"}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

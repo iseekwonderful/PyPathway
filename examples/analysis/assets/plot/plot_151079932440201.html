@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 98vw; height: 95vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"xAxis": {"type": "value", "name": "-log(2, Fdr)", "boundaryGap": [0, 0.01]}, "title": {"text": "ORA Enrichment Analysis", "subtext": "KEGG"}, "series": [{"type": "bar", "data": [58.30093454446628, 27.56362820460109, 27.56362820460109, 25.14287470680848, 21.630806307777874, 19.42702491524023, 19.42702491524023, 18.56883741747823, 18.473589607091938, 17.41840707323309, 16.487126960361355, 14.20480027451808, 13.5697190237294, 13.541024425814417, 12.923941956877083], "name": "-log(2, Fdr)"}], "grid": {"bottom": "3%", "containLabel": true, "right": "12%", "left": "3%"}, "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}}, "yAxis": {"type": "category", "data": ["Metabolic pathways - Homo sapiens (human)", "Valine, leucine and isoleucine degradation - Homo sapiens (human)", "Alzheimer's disease - Homo sapiens (human)", "Parkinson's disease - Homo sapiens (human)", "Non-alcoholic fatty liver disease (NAFLD) - Homo sapiens (human)", "Oxidative phosphorylation - Homo sapiens (human)", "Propanoate metabolism - Homo sapiens (human)", "Endocytosis - Homo sapiens (human)", "Fatty acid metabolism - Homo sapiens (human)", "Fatty acid degradation - Homo sapiens (human)", "Focal adhesion - Homo sapiens (human)", "Citrate cycle (TCA cycle) - Homo sapiens (human)", "PPAR signaling pathway - Homo sapiens (human)", "Pathways in cancer - Homo sapiens (human)", "Carbon metabolism - Homo sapiens (human)"]}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

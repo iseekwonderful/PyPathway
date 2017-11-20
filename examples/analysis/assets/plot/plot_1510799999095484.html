@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 98vw; height: 95vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"tooltip": {"axisPointer": {"type": "shadow"}, "trigger": "axis"}, "series": [{"name": "-log(2, pGfdr)", "type": "bar", "data": [28.87834475439555, 26.571741708452, 25.327926968590806, 24.698678958751835, 13.375400138281524, 12.464712537318517, 10.605466889224704, 9.29340494234438, 9.29340494234438, 9.026237933038479, 7.968195449883774, 7.522337149502121, 6.147877230586179, 5.6722668949068975, 5.327182710518391]}], "grid": {"left": "3%", "containLabel": true, "bottom": "3%", "right": "12%"}, "xAxis": {"type": "value", "boundaryGap": [0, 0.01], "name": "-log(2, pGfdr)"}, "title": {"subtext": "KEGG: hsa", "text": "SPIA Enrichment Analysis"}, "yAxis": {"type": "category", "data": ["Focal adhesion", "Alzheimer's disease", "ECM-receptor interaction", "Parkinson's disease", "Pathways in cancer", "PPAR signaling pathway", "Axon guidance", "MAPK signaling pathway", "Huntington's disease", "Fc gamma R-mediated phagocytosis", "Small cell lung cancer", "Regulation of actin cytoskeleton", "Glutamatergic synapse", "Pathogenic Escherichia coli infection", "Bacterial invasion of epithelial cells"]}};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

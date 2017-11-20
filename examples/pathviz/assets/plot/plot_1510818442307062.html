@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 98vw; height: 95vh;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        var option = {"tooltip": {"trigger": "axis"}, "xAxis": [{"data": ["0H", "6H", "12H", "2Day", "3Day", "5Day", "7Day"], "type": "category", "position": "bottom", "boundaryGap": false}], "legend": {"data": ["Spleen", "Skin", "HK", "Jill"], "y": "bottom", "x": "center", "orient": "horizontal"}, "title": {"subtext": "random data", "text": "Line"}, "series": [{"data": [4.676, 19.1696, 2.7115, 1.4422, 21.1782, 13.9049, 17.5204], "type": "line", "name": "Spleen"}, {"data": [38.6732, 23.7513, 31.9005, 45.0743, 17.3379, 18.485, 22.3063], "type": "line", "name": "Skin"}, {"data": [51.6697, 72.3491, 30.7584, 73.7938, 73.9612, 44.9524, 68.6854], "type": "line", "name": "HK"}, {"data": [87.252, 74.2253, 66.9929, 97.8734, 62.1787, 81.13, 73.297], "type": "line", "name": "Jill"}], "yAxis": [{"data": [], "type": "value", "position": "left"}]};
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

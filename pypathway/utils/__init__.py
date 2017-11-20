@@ -248,32 +248,32 @@ class IdMapping:
         return local_db
 
     @staticmethod
-    def convert(input_id, organism, source, target):
+    def convert(input_id, species, source, target):
         '''
         convert a list id 
         
         :param input_id: iter. id list
-        :param organism: the organism
+        :param species: the organism
         :param source: source id type
         :param target: target id type
         :return: a list [[sid, [tid1, tid2 ...]]...]
         '''
-        db = IdMapping.check_db_available(organism)
+        db = IdMapping.check_db_available(species)
         return db.convert(input_id, source, target)
 
     @staticmethod
-    def convert_to_dict(input_id, organism, source, target):
+    def convert_to_dict(input_id, species, source, target):
         '''
         identical to the convert function, this function return a dict  
         
         :param input_id: iter. id lis
-        :param organism: the organism
+        :param species: the organism
         :param source: source id type
         :param target: target id type
         :return: a dict {sid: [tid1, ...]} if no target id for certain source id, source id will
         not exist in the dict.
         '''
-        db = IdMapping.check_db_available(organism)
+        db = IdMapping.check_db_available(species)
         r = db.convert(input_id, source, target)
         return {x[0]: x[1] for x in r}
 
@@ -281,14 +281,19 @@ class IdMapping:
     def get_keys(organism):
         return IdMapping.check_db_available(organism).keys
 
+
     @staticmethod
-    def test():
-        test_list = ["org.Ag.eg.sqlite", "org.At.tair.sqlite", "org.Bt.eg.sqlite", "org.Ce.eg.sqlite",
-                     "org.Cf.eg.sqlite", "org.Dm.eg.sqlite", "org.Dr.eg.sqlite", "org.EcK12.eg.sqlite",
-                     "org.EcSakai.eg.sqlite", "org.Gg.eg.sqlite", "org.Hs.eg.sqlite", "org.Mm.eg.sqlite",
-                     "org.Mmu.eg.sqlite", "org.Pf.plasmo.sqlite", "org.Pt.eg.sqlite", "org.Rn.eg.sqlite",
-                     "org.Sc.sgd.sqlite", "org.Ss.eg.sqlite", "org.Xl.eg.sqlite", ]
-        # test retrieve_database, load idtypes, convert function for the database in the test_list
+    def clear():
+        '''
+        This method clear the local cache of all the database.
+
+        :return:
+        '''
+        path = os.path.dirname(os.path.realpath(__file__)) + "/caches"
+        for x in os.listdir(path):
+            # delete sqlite database only
+            if "sqlite" in x:
+                os.remove(path + "/" + x)
 
 
 class SQLiteManager:
