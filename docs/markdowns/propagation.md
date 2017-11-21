@@ -1,10 +1,10 @@
 # Network Propagation
-this module implements three algorithms: `random walk`, `random walk with restart` and `heat kernel`. The 
-implementation of this module is according to paper
+This module implements three algorithms: `random walk`, `random walk with restart` and `heat kernel`. The 
+implementation of this module based on the paper
 > Network propagation: a universal amplifier of genetic associations
 
 All these method start with a vector = |V| and simulate the heat diffuse process in the network.
-the difference between these methods are list in the following table (from above paper).
+the difference between these methods are list in the following table (figure from above paper).
 
 ![](/Users/yangxu/PyPathway/docs/markdowns/images/propagation/propagation_overview.png)
 
@@ -17,7 +17,7 @@ def random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -
 
 ### Arguments:
 * `G: nx.Graph` : the input graph.
-* `heat` : the heat vector, length = |V|.
+* `heat` : the heat vector, length = |V|. e.g. `[1, 0, 0, 1, 1]`
 * `n: int = -1` : the time random walk repeats, if n==-1, the loop will stop when the
     threshold is reached.
 * `threshold`: the threshold check whether the steady state is reached.
@@ -112,4 +112,4 @@ Out [5]:
 
 ## Example Notebook
 
-the example notebook is exist in `$project_root/examples/analysis/propagation.ipynb`.
+The example notebook exists in `$project_root/examples/analysis/propagation.ipynb` or view at [Github](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb)
