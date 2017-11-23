@@ -16,7 +16,7 @@ except (IOError, ImportError):
 
 requirements = [
     'gseapy>=0.8.4',
-    'networkx',
+    'networkx==1.11',   # todo: fix the issue in networkx > 2.0
     'pandas',
     'scipy',
     'statsmodels',
