@@ -20,7 +20,7 @@ extern int totalLengthGenes;
 extern float allNodeMeanValue;
 extern float allNodesSTD;
 extern int totalNodesWithScoreAssigned;
-// extern float coexpressionPValue[102];// [0, 0.01, 0.02, ..., 0.99, 1]: the co-expression p-value for every edge (for very coExpresionValue > x 
+// extern float coexpressionPValue[102];// [0, 0.01, 0.02, ..., 0.99, 1]: the co-expression p-value for every edge (for very coExpresionValue > x
 extern float* coexpressionPValue;
 extern float meanCoExpression;
 extern float varianceCoExpression;
@@ -36,7 +36,7 @@ typedef struct PPI_Node{
 	int numSevereMutInCases;
 	int numMissenseMutInCases;
 	int numSevereMutInControl;
-	
+
 	double prob;
 	double weightCases;// The weight assigned for the cases I assume is double
 	int weightControl;//The weight assigned to control I assume is integer
@@ -64,7 +64,7 @@ extern float** coExpresionMatrix;
 void freeCoExpresionGeneMatrix();
 void freeCoExpresionGeneHash();
 void freePPI_Graph();
-int createPPI_Graph(FILE *); 
+int createPPI_Graph(FILE *);
 //int assignScoreCases(FILE *);
 //int assignScoreControls(FILE *);
 int createCoExpresionMatix(FILE *);
@@ -75,4 +75,5 @@ int isConnectedPPI(int, int);
 double log_N_Choose_M(int , int);
 bool isSubGraphConnectedComponent(int *, int); // a list of node Ids and the number of noces
 bool isSubGraphConnectedComponenti_WithCoExpr(int *, int);
+void init_vars();
 #endif

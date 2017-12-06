@@ -273,9 +273,9 @@ class SPIA(EnrichmentResult):
         pNDEfdr = {list(pNDE.keys())[i]: o[i] for i in range(len(list(pNDE.keys())))}
         _, o, _, _ = multicomp.multipletests(list(pG.values()), method='bonferroni')
         pGbf = {list(pG.keys())[i]: o[i] for i in range(len(list(pG.keys())))}
-        df = pd.DataFrame([id2name, pNDE, pb, pG, pGfdr, pNDEfdr, pGbf, status]).T
-        df.columns = ['name', 'pNDE', 'pPERT', 'pG', 'pGfdr', 'pNDEfdr', 'pGbf', 'status']
-        df = df.sort_values(by='pGfdr')
+        df = pd.DataFrame([id2name, pNDE, pb, pG, pGfdr, pGbf, status]).T
+        df.columns = ['name', 'pNDE', 'pPERT', 'pG', 'pGfdr', 'pGFWER', 'status']
+        df = df.sort_values(by='pGFWER')
         return SPIA(df, de, all, organism, nB, beta, combine)
 
     def __init__(self, df, de, all, organism, nB, beta, combine):

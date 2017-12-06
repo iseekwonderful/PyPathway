@@ -105,7 +105,7 @@ class MAGI:
                 open(x, 'r')
             except:
                 raise Exception("File not found")
-        colors, mutations, run_id = [8, 7, 6, 5], [4, 3, 2, 1], '0'
+        colors, mutations, run_id = [5], [1], '0'
         # colors, mutations, run_id = [5], [1], '0'
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
         pool = Pool(processes=process)
@@ -159,6 +159,7 @@ class MAGI:
         minCoExpr = minCoExpr or 'none'
         avgCoExpr = avgCoExpr or 'none'
         avgDensity = avgDensity or 'none'
+        print(cache_dir)
         _cluster.cluster(ppi, score, coExpId, coExpMat, seed, upper_mutation_on_control, min_size_of_module,
                          max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
                          avgCoExpr, avgDensity, cache_dir + '/magi.res')

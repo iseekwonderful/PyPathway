@@ -23,6 +23,18 @@ float meanCoExpression, varianceCoExpression;
 // coExpresionGeneHash coExpresionGeneHashTable[maxNumNode];
 coExpresionGeneHash* coExpresionGeneHashTable;
 
+void init_vars(){
+    numNodes=0;
+    coExpresGeneNum=0;
+    totalSevereMutInCases=0;
+    totalMissenseMutInCases=0;
+    totalSevereMutInControl=0;
+    totalLengthGenes=0;
+    allNodeMeanValue=0;
+    allNodesSTD=0;
+    totalNodesWithScoreAssigned=0;
+}
+
 // thread-shared
 float** coExpresionMatrix;// The node is is the same as PPI node id. The nodes which are not in PPI network are discarded.
 
@@ -36,17 +48,19 @@ void freeCoExpresionGeneMatrix(){
 
 int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
 {
-    // the file are binary fromat, but we can image what it is
+    // the file are binary format, but we can image what it is
     /* First we have to convert the geneNames in each instance of coexpression matrix into the id used in the PPI_Node.
      * Assuming that the coExpressionMatrix is orderd by the ids in coExpresionGeneHasTable.*/
 
     coExpresionMatrix = (float **)malloc(sizeof(float *) * numNodes);
+    memset(coExpresionMatrix, 0, sizeof(float *) * numNodes);
     for (int i = 0; i < numNodes; i++){
         coExpresionMatrix[i] = (float* )malloc(sizeof(float) * numNodes);
     }
 	int firstGeneCount=0, secondGeneCount=0;
 	char geneName1[geneNameLen], geneName2[geneNameLen], prevGeneName[geneNameLen];
 	float geneCoExpr;
+	// printf("%i %i\n", numNodes, maxNumNode);
 	while(fscanf(fpCoExpresionMatrix, "%s %s %f\n", geneName1, geneName2, &geneCoExpr)!=EOF)
 	{
 		geneCoExpr=pow(geneCoExpr, 0.3333333);
@@ -58,15 +72,19 @@ int createCoExpresionMatix(FILE *fpCoExpresionMatrix)
 		}else{
 			secondGeneCount++;
 		}
-
 		// assuing the gene number of gene1 and gene2 in coexpression gene list is firstGeneCount and secondGeneCount using the coExpresionGeneHashTable we can find their respected id in PPI_Node//
+
+        if (coExpresionGeneHashTable[firstGeneCount].nodeId >= numNodes || coExpresionGeneHashTable[secondGeneCount].nodeId >= numNodes) {
+            printf("%i %i\n", firstGeneCount, secondGeneCount);
+            printf("%i %i\n", coExpresionGeneHashTable[firstGeneCount].nodeId, coExpresionGeneHashTable[secondGeneCount].nodeId);
+        }
 
 		if (coExpresionGeneHashTable[firstGeneCount].nodeId>-1 && coExpresionGeneHashTable[secondGeneCount].nodeId>-1)
 		{
 			coExpresionMatrix[coExpresionGeneHashTable[firstGeneCount].nodeId][coExpresionGeneHashTable[secondGeneCount].nodeId]=geneCoExpr;
 			coExpresionMatrix[coExpresionGeneHashTable[secondGeneCount].nodeId][coExpresionGeneHashTable[firstGeneCount].nodeId]=geneCoExpr;
 		}
-		//	printf("%s %s %s %s\n", geneName1, geneName2, listNodes[coExpresionGeneHashTable[firstGeneCount].nodeId].nodeName, listNodes[coExpresionGeneHashTable[secondGeneCount].nodeId].nodeName);
+	    // printf("%s %s %s %s\n", geneName1, geneName2, listNodes[coExpresionGeneHashTable[firstGeneCount].nodeId].nodeName, listNodes[coExpresionGeneHashTable[secondGeneCount].nodeId].nodeName);
 
 	}
     return -1;
@@ -76,10 +94,10 @@ int isConnectedPPI(int node1, int node2)
 {
 	for (int count=0; count<listNodes[node1].degree; count++)
 	{
-		
+
 		if (listNodes[node1].neighbours[count]==node2)
 			return 1;
-	} 
+	}
 return 0;
 }
 
@@ -92,17 +110,19 @@ void freePPI_Graph(){
 // the count: numNodes.
 int createPPI_Graph(FILE *inputPPI_FP)
 {
-	listNodes = (PPI_Node* )malloc(sizeof(PPI_Node) * maxNumNode); 
+    numNodes = 0;
+	listNodes = (PPI_Node* )malloc(sizeof(PPI_Node) * maxNumNode);
+	memset(listNodes, 0, sizeof(PPI_Node) * maxNumNode);
     char geneName1[geneNameLen], geneName2[geneNameLen];
     int nodeId1, nodeId2;
 	while (fscanf(inputPPI_FP, "%s\t%s\n", geneName1, geneName2)!=EOF)
 	{
-		//printf("%s %s\n", geneName1, geneName2);
+		// printf("%s %s, %i\n", geneName1, geneName2, numNodes);
 		if (strcmp(geneName1, geneName2)!=0)
 		{
 			nodeId1=-1;
 			nodeId2=-1;
-		
+
 			for (int count=0; count<numNodes; count++)
 			{
 				if (strcmp(geneName1, listNodes[count].nodeName)==0)
@@ -110,7 +130,6 @@ int createPPI_Graph(FILE *inputPPI_FP)
 				if (strcmp(geneName2, listNodes[count].nodeName)==0)
 					nodeId2=count;
 			}
-            // gaben is unhappy, create a new node
 			if (nodeId1==-1)
 			{
 				listNodes[numNodes].nodeId=numNodes;
@@ -121,10 +140,9 @@ int createPPI_Graph(FILE *inputPPI_FP)
 				nodeId1=numNodes;
 				numNodes++;
 			}
-            // JW is sad and throw his AWP.
 			if (nodeId2==-1)
 			{
-			
+
 				listNodes[numNodes].nodeId=numNodes;
 				strcpy(listNodes[numNodes].nodeName, geneName2);
 				listNodes[numNodes].degree=0;
@@ -133,7 +151,7 @@ int createPPI_Graph(FILE *inputPPI_FP)
 				nodeId2=numNodes;
 				numNodes++;
 			}
-		
+
 			listNodes[nodeId1].degree++;
 			listNodes[nodeId2].degree++;
 			listNodes[nodeId1].neighbours=(int *)realloc(listNodes[nodeId1].neighbours, listNodes[nodeId1].degree*sizeof(int));
@@ -168,11 +186,11 @@ return val;
 
 double calNewProbValue(int nodeId)
 {
-	
+
 
 	listNodes[nodeId].weightCases=log_N_Choose_M(totalSevereMutInCases, listNodes[nodeId].numSevereMutInCases) + listNodes[nodeId].numSevereMutInCases * log(listNodes[nodeId].prob) + (totalSevereMutInCases-listNodes[nodeId].numSevereMutInCases)*log(1-listNodes[nodeId].prob);
 	listNodes[nodeId].weightCases=listNodes[nodeId].weightCases+log_N_Choose_M(totalMissenseMutInCases, listNodes[nodeId].numMissenseMutInCases)+ listNodes[nodeId].numMissenseMutInCases * log(listNodes[nodeId].prob)+(totalMissenseMutInCases-listNodes[nodeId].numMissenseMutInCases)*log(1-listNodes[nodeId].prob);
-	
+
 	listNodes[nodeId].weightCases=-1*listNodes[nodeId].weightCases;
 	if (listNodes[nodeId].numSevereMutInCases + listNodes[nodeId].numMissenseMutInCases==0)
 		listNodes[nodeId].weightCases=0;
@@ -204,16 +222,16 @@ totalLengthGenes=0;
 				totalSevereMutInCases=totalSevereMutInCases+numSevereMutInCases;
 				totalMissenseMutInCases=totalMissenseMutInCases+numMissenseInCases;
 				totalNodesWithScoreAssigned++;
-			///THE CONTROL MUTATIONS IS NOT ADDED YET (YOU SHOULD ADD IT)	
+			///THE CONTROL MUTATIONS IS NOT ADDED YET (YOU SHOULD ADD IT)
 				allNodeMeanValue=allNodeMeanValue+weight;
 			}
 		}
-	
+
 	}
 
 
 
-	
+
 	allNodeMeanValue=(float)allNodeMeanValue/(float)totalNodesWithScoreAssigned;
 	for (int count=0; count<numNodes; count++)
 	{
@@ -233,7 +251,7 @@ totalLengthGenes=0;
 				listNodes[count].numSevereMutInControl=controlCount;
 				//printf("added control %s %i\n", listNodes[count].nodeName, listNodes[count].weightControl);
 			}
-		}	
+		}
 	}
 */
     return -1;
@@ -250,6 +268,7 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
     double len;
     double temp;
     srand(time(NULL));
+    // srand(0);
 
 	while(fscanf(fpCases, "%s\t%i\t%lf%s\n", geneName, &numTruncatingControl, &variantScoreCases, variantSubtype)!=EOF)
 	{
@@ -268,14 +287,14 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
 				countTotal++;
 				totalMissenseMutInCases++;
 			}
-		}		
+		}
 	}
 
 	//printf("%i %i\n", totalSevereMutInCases, totalMissenseMutInCases);
 
 	while(fscanf(fpControl, "%s\t%i\n", geneName, &numTruncatingControl)!=EOF)
 	{
-		
+
 		for (int count=0; count<numNodes; count++)
 		{
 			if (strcmp(geneName, listNodes[count].nodeName)==0)
@@ -284,7 +303,7 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
 				listNodes[count].weightControl=numTruncatingControl;
 				totalSevereMutInControl++;
 			}
-		}		
+		}
 	}
 	while(fscanf(fpGeneLen, "%s\t%lf\n", geneName, &len)!=EOF)
 	{
@@ -321,11 +340,11 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
         listNodes[count].weightCases=0;
         calNewProbValue(count);
 
-	
+
     }
-    
+
     // while go through the case ignore the filter
-    
+
     if (filter==true)
     {
         while(fscanf(filterFile,"%s\n", geneName)!=EOF)
@@ -346,7 +365,7 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
     {
         fprintf(fpOutputGeneScore,"%s %lf %i %i %i %i\n", listNodes[count].nodeName, listNodes[count].weightCases, listNodes[count].numSevereMutInCases, listNodes[count].numMissenseMutInCases, listNodes[count].weightControl, listNodes[count].length);
     }
-	
+
     fclose(fpOutputGeneScore);
     //printf("%i\n", countTotal);
     return -1;
@@ -360,11 +379,14 @@ void freeCoExpresionGeneHash(){
 int createCoExpresionGeneHash(FILE *fp)
 {
     coExpresionGeneHashTable = (coExpresionGeneHash*)malloc(sizeof(coExpresionGeneHash) * maxNumNode);
+    for (int i = 0; i < maxNumNode; i++) {
+        coExpresionGeneHashTable[i].nodeId = -1;
+    }
     srand((unsigned int)time(NULL));
-    int hashId;
+    int hashId = 0;
     coExpresGeneNum=0;
     int coExprId=0;
-    int coID;
+    int coID = 0;
     char ensName[100];
     char geneName[geneNameLen];
 	while (fscanf(fp, "%i\t%s\t%s\n", &coExprId, ensName, geneName)!=EOF)
@@ -381,7 +403,7 @@ int createCoExpresionGeneHash(FILE *fp)
 				coExpresionGeneHashTable[coID].nodeId=hashId;
 				coID++;
 			}
-		} 
+		}
 	}
     return -1;
 }
@@ -441,7 +463,7 @@ bool isSubGraphConnectedComponent(int *listSubgraphNodes, int sizeSubgraph)
 	int indexQueue, endOfQueue;
 	listNodesCovered= (int *) malloc(sizeSubgraph * sizeof(int));
 	listNodesCovered[0]=listSubgraphNodes[0];
-	
+
 	indexQueue=0;
 	endOfQueue=1;
 
@@ -452,9 +474,9 @@ bool isSubGraphConnectedComponent(int *listSubgraphNodes, int sizeSubgraph)
 				{
 					listNodesCovered[endOfQueue]=listNodes[listNodesCovered[indexQueue]].neighbours[count2];
 					endOfQueue++;
-				} 	
+				}
 			}
-			indexQueue++;	
+			indexQueue++;
 
 
 	}while(indexQueue!=endOfQueue);
@@ -462,5 +484,5 @@ bool isSubGraphConnectedComponent(int *listSubgraphNodes, int sizeSubgraph)
 if (endOfQueue==sizeSubgraph)
 	return true;
 else return false;
-	
+
 }

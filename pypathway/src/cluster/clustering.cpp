@@ -323,7 +323,7 @@ int tempInt;
 int tempFloat;
 startClusterId=0;
 
-potNewPath = (char **) malloc(100*sizeof(char *));
+potNewPath = (char **) malloc(300*sizeof(char *));
 	for (int count=0; count<100; count++)
 	{
 		potNewPath[count]=(char *) malloc(geneNameLen*sizeof(char *));
@@ -902,7 +902,7 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	int l, int u, char* aaa, char* i, char* minCoExpr, char* avgCoExpr, 
 	char* avgDensity, char* outputFile)
 {
-	// printf("Aaaa is %s\n", aaa);
+	printf("Start!\n");
 	bestCluster = (clustersSelected *) malloc(sizeof(clustersSelected));
 	FILE *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
 	int randomNum;
@@ -927,9 +927,11 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
         assignScorePrecalculated(fp2);
         createCoExpresionGeneHash(fp3);
 	createCoExpresionMatix(fp4);
+	printf("Start read path file\n");
 	readPathFiles(fp5);
 	markPathsNotToUse();
 	createGraphOfPaths();
+	printf("Start random connect\n");
 	randomConnectedComponents(randomNum);
 	printf("done!/n");
 	return 0;

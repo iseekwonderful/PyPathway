@@ -389,6 +389,7 @@ class KEGG(EnrichmentResult):
         result = {}
         for k, v in mapped.items():
             result[k] = stats.hypergeom.sf(len(s_mapped[k]) - 1, len(pop), len(mapped[k]), len(study))
+            print(len(s_mapped[k]) - 1, len(pop), len(study), len(mapped[k]), result[k])
         _, o, _, _ = multicomp.multipletests(list(result.values()), method=adjust)
         rfdr = {list(result.keys())[i]: o[i] for i in range(len(list(result.keys())))}
         # !
