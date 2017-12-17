@@ -105,14 +105,14 @@ class MAGI:
                 open(x, 'r')
             except:
                 raise Exception("File not found")
-        colors, mutations, run_id = [5], [1], '0'
+        colors, mutations, run_id = [8, 7, 6, 5], [4, 3, 2, 1], '0'
         # colors, mutations, run_id = [5], [1], '0'
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
         pool = Pool(processes=process)
         seed = []
         for i in colors:
             for j in mutations:
-                seed.append([cache_dir, "BestPaths.Length{}.Control{}.Run0".format(i, j), i, j])
+                seed.append([cache_dir, "BestPaths.Length{}.Control{}.Run0.de".format(i, j), 0, i])
                 if not filter:
                     args = (cache_dir, ppi, case, coExpId, coExpMat, ctrl, length, run_id, i, j)
                 else:
@@ -121,13 +121,45 @@ class MAGI:
         pool.close()
         pool.join()
         sf = ""
+        for x in os.listdir(cache_dir):
+            if x in [e[1][:-3] for e in seed]:
+                with open(cache_dir + "/" + x) as fp:
+                    con = fp.read()
+                c, r = MAGI.de_duplicate(con)
+                with open(cache_dir + "/" + x + ".de", 'w') as fp:
+                    fp.write(c)
+                for i, s in enumerate(seed):
+                    if s[1][:-3] == x:
+                        seed[i][2] = r
         # generate seed file
         for x in seed:
-            if not x[1] in os.listdir(cache_dir):
+            if not x[1][:-3] in os.listdir(cache_dir):
                 raise Exception("Cannot find output file")
             sf += '{}/{}\t{}\t{}\n'.format(*x)
         with open(cache_dir + "/seeds", 'w') as fp:
             fp.write(sf)
+
+    @staticmethod
+    def de_duplicate(con):
+        current = []
+        result = {}
+        divided = re.split("(Avg CoExpr:[\d\.]+\s[\d\.]+\s[\d\.]+\n)", con)
+        for i, x in enumerate(divided):
+            if not x: break
+            if i & 1 == 0:
+                for e in x.split("\n"):
+                    if e[0] == 'r':
+                        break
+                    current.append(e.split(' ')[1])
+            if i & 1 == 1:
+                if x[0] == "A":
+                    if frozenset(current) not in result:
+                        result[frozenset(current)] = divided[i - 1] + x
+                    current = []
+        r = ""
+        for v in result.values():
+            r += v
+        return r, len(result)
 
     @staticmethod
     def cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,
@@ -154,17 +186,21 @@ class MAGI:
         :return: a list of modules.
         '''
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
-        seed = seed or cache_dir + '/seeds'
-        score = score or cache_dir + '/RandomGeneList.0'
-        minCoExpr = minCoExpr or 'none'
-        avgCoExpr = avgCoExpr or 'none'
-        avgDensity = avgDensity or 'none'
-        print(cache_dir)
-        _cluster.cluster(ppi, score, coExpId, coExpMat, seed, upper_mutation_on_control, min_size_of_module,
-                         max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
-                         avgCoExpr, avgDensity, cache_dir + '/magi.res')
+        # seed = seed or cache_dir + '/seeds'
+        # score = score or cache_dir + '/RandomGeneList.0'
+        # minCoExpr = minCoExpr or 'none'
+        # avgCoExpr = avgCoExpr or 'none'
+        # avgDensity = avgDensity or 'none'
+        # print(seed, score, minCoExpr, avgCoExpr)
+        # _cluster.cluster(ppi, score, coExpId, coExpMat, seed, upper_mutation_on_control, min_size_of_module,
+        #                  max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
+        #                  avgCoExpr, avgDensity, cache_dir + '/magi.res')
         # read the result and return the result object.
-        return MAGI.parse_result(cache_dir + '/magi.res', ppi)
+        res = MAGI.parse_result(cache_dir + '/magi.res', ppi)
+        dedul = {}
+        for x in res:
+            dedul[x.args[-1]] = x
+        return list(dedul.values())
         # return [MAGIResult(x[0], x[1].num, x[1].genes, x[1].args, x[1].coExp) for x in res]
 
     @staticmethod
@@ -244,7 +280,9 @@ class MAGI:
 
         arg_list = out.split("\n")[-1].split(' ')
         m = MAGI_RESULT(length, genes, arg_list, coExp)
-        new_graph = nx.subgraph(G, m.genes.keys())
+        sub_graph = nx.subgraph(G, m.genes.keys())
+        new_graph = nx.Graph()
+        new_graph.add_edges_from(sub_graph.edges)
         # generate the config
         config = {}
         for k, v in m.genes.items():
@@ -266,8 +304,8 @@ class MAGI:
                 }
             }
         for x in new_graph.node:
-            new_graph.node[x] = config[x]
-        for k, v in new_graph.edge.items():
+            new_graph.node[x].update(config[x])
+        for k, v in dict(new_graph.edges).items():
             for ano, v in v.items():
                 new_graph.edge[k][ano] = {'style': {'width': float(m.coExp[k][ano]) * 5}}
         return new_graph, m

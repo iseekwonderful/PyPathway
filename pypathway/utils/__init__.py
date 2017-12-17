@@ -9,6 +9,7 @@ import time
 import json
 from collections import namedtuple
 import pickle as pk
+import networkx as nx
 
 
 GMTInfo = namedtuple('GMTInfo', ['genesPerTerm', 'numTerms', 'link', 'libraryName', 'geneCoverage'])
@@ -207,11 +208,11 @@ class IdMapping:
 
         print("Database {} not found, will be downloaded from bioconductor".format(db))
         # # get info
-        r = requests.get("https://bioconductor.org/packages/release/data/annotation/html/{}.html".format(db))
+        r = requests.get("http://bioconductor.org/packages/release/data/annotation/html/{}.html".format(db))
         download_address = re.findall('href=\"\.\./(src/contrib/.+?tar\.gz)\"', r.text)
         if not download_address:
             raise Exception("Server may update, cant find download address")
-        address = "https://bioconductor.org/packages/release/data/annotation/" + download_address[0]
+        address = "http://bioconductor.org/packages/release/data/annotation/" + download_address[0]
         wget.download(address, out=os.path.dirname(os.path.realpath(__file__)) + "/db")
         IdMapping._uncompress(os.path.dirname(os.path.realpath(__file__)) + "/db")
         shutil.copy(os.path.dirname(os.path.realpath(__file__)) + "/{}/inst/extdata/{}".format(
@@ -346,12 +347,22 @@ class SQLiteManager:
 
 def load_hint_hi12012_network():
     '''
-    Load hint interactive network as a test network
+    Load hint interactive network as a test network.
 
     :return: the networkx Graph
     '''
     with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'datasets/hint.bin'), 'rb') as fp:
-        return pk.load(fp)
+        naive = pk.load(fp)
+    if nx.__version__[0] == '2':
+        G = nx.Graph()
+        edges = []
+        for i, j in naive.edge.items():
+            for k, t in j.items():
+                edges.append(frozenset([i, k]))
+        G.add_edges_from(set(edges))
+        return G
+    else:
+        return naive
 
 
 if __name__ == '__main__':

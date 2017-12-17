@@ -78,7 +78,7 @@ def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int) -> nx.Graph:
     :return: the graph with heat property in the node's property
     '''
     A = nx.to_numpy_matrix(G)
-    D = np.diag(list(G.degree().values()))
+    D = np.diag(list(dict(G.degree()).values()))
     L = D - A
     I = np.eye(len(G))
     sim = (I - rp * L / n) ** n

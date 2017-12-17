@@ -1,6 +1,7 @@
 AUTHORS.rst
 LICENSE
 MANIFEST.in
+README.md
 setup.cfg
 setup.py
 ./pypathway/src/cluster/PPI_Graph.cpp
@@ -31,35 +32,102 @@ pypathway/analysis/.DS_Store
 pypathway/analysis/Readme.md
 pypathway/analysis/__init__.py
 pypathway/analysis/__pycache__/__init__.cpython-35.pyc
+pypathway/analysis/gsea/.DS_Store
 pypathway/analysis/gsea/__init__.py
 pypathway/analysis/gsea/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/gsea/images/ABC transporters_Homo sapiens_hsa02010.gsea.pdf
 pypathway/analysis/gsea/images/ABC transporters_Homo sapiens_hsa02010.heatmap.pdf
+pypathway/analysis/gsea/images/Bile secretion_Homo sapiens_hsa04976.gsea.pdf
+pypathway/analysis/gsea/images/Bile secretion_Homo sapiens_hsa04976.heatmap.pdf
+pypathway/analysis/gsea/images/Calcium signaling pathway_Homo sapiens_hsa04020.gsea.pdf
+pypathway/analysis/gsea/images/Calcium signaling pathway_Homo sapiens_hsa04020.heatmap.pdf
+pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.gsea.pdf
+pypathway/analysis/gsea/images/Carbon metabolism_Homo sapiens_hsa01200.heatmap.pdf
+pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.gsea.pdf
+pypathway/analysis/gsea/images/Cytokine-cytokine receptor interaction_Homo sapiens_hsa04060.heatmap.pdf
+pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.gsea.pdf
+pypathway/analysis/gsea/images/Fatty acid degradation_Homo sapiens_hsa00071.heatmap.pdf
+pypathway/analysis/gsea/images/Fatty acid metabolism_Homo sapiens_hsa01212.gsea.pdf
+pypathway/analysis/gsea/images/Fatty acid metabolism_Homo sapiens_hsa01212.heatmap.pdf
+pypathway/analysis/gsea/images/Glycerolipid metabolism_Homo sapiens_hsa00561.gsea.pdf
+pypathway/analysis/gsea/images/Glycerolipid metabolism_Homo sapiens_hsa00561.heatmap.pdf
+pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.gsea.pdf
+pypathway/analysis/gsea/images/Glycolysis _ Gluconeogenesis_Homo sapiens_hsa00010.heatmap.pdf
+pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.gsea.pdf
+pypathway/analysis/gsea/images/HTLV-I infection_Homo sapiens_hsa05166.heatmap.pdf
+pypathway/analysis/gsea/images/Longevity regulating pathway - mammal_Homo sapiens_hsa04211.gsea.pdf
+pypathway/analysis/gsea/images/Longevity regulating pathway - mammal_Homo sapiens_hsa04211.heatmap.pdf
+pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.gsea.pdf
+pypathway/analysis/gsea/images/MAPK signaling pathway_Homo sapiens_hsa04010.heatmap.pdf
+pypathway/analysis/gsea/images/Neuroactive ligand-receptor interaction_Homo sapiens_hsa04080.gsea.pdf
+pypathway/analysis/gsea/images/Neuroactive ligand-receptor interaction_Homo sapiens_hsa04080.heatmap.pdf
+pypathway/analysis/gsea/images/Oocyte meiosis_Homo sapiens_hsa04114.gsea.pdf
+pypathway/analysis/gsea/images/Oocyte meiosis_Homo sapiens_hsa04114.heatmap.pdf
+pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.gsea.pdf
+pypathway/analysis/gsea/images/PI3K-Akt signaling pathway_Homo sapiens_hsa04151.heatmap.pdf
+pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.gsea.pdf
+pypathway/analysis/gsea/images/Pathways in cancer_Homo sapiens_hsa05200.heatmap.pdf
+pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.gsea.pdf
+pypathway/analysis/gsea/images/Peroxisome_Homo sapiens_hsa04146.heatmap.pdf
+pypathway/analysis/gsea/images/Phospholipase D signaling pathway_Homo sapiens_hsa04072.gsea.pdf
+pypathway/analysis/gsea/images/Phospholipase D signaling pathway_Homo sapiens_hsa04072.heatmap.pdf
+pypathway/analysis/gsea/images/Progesterone-mediated oocyte maturation_Homo sapiens_hsa04914.gsea.pdf
+pypathway/analysis/gsea/images/Progesterone-mediated oocyte maturation_Homo sapiens_hsa04914.heatmap.pdf
+pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.gsea.pdf
+pypathway/analysis/gsea/images/Rap1 signaling pathway_Homo sapiens_hsa04015.heatmap.pdf
+pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.gsea.pdf
+pypathway/analysis/gsea/images/Ras signaling pathway_Homo sapiens_hsa04014.heatmap.pdf
+pypathway/analysis/gsea/images/Regulation of lipolysis in adipocytes_Homo sapiens_hsa04923.gsea.pdf
+pypathway/analysis/gsea/images/Regulation of lipolysis in adipocytes_Homo sapiens_hsa04923.heatmap.pdf
+pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.gsea.pdf
+pypathway/analysis/gsea/images/Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280.heatmap.pdf
+pypathway/analysis/gsea/images/Vascular smooth muscle contraction_Homo sapiens_hsa04270.gsea.pdf
+pypathway/analysis/gsea/images/Vascular smooth muscle contraction_Homo sapiens_hsa04270.heatmap.pdf
+pypathway/analysis/gsea/images/cAMP signaling pathway_Homo sapiens_hsa04024.gsea.pdf
+pypathway/analysis/gsea/images/cAMP signaling pathway_Homo sapiens_hsa04024.heatmap.pdf
 pypathway/analysis/gsea/images/gseapy.gsea.gene_sets.report.csv
 pypathway/analysis/gsea/images/gseapy.gsea.kegg_2016.log
 pypathway/analysis/modelling/.DS_Store
 pypathway/analysis/modelling/__init__.py
 pypathway/analysis/modelling/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/modelling/bin/readme
+pypathway/analysis/modelling/cache/.DS_Store
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control1.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length5.Control1.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control2.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length5.Control2.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control3.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length5.Control3.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length5.Control4.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length5.Control4.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length6.Control1.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length6.Control1.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length6.Control2.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length6.Control2.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length6.Control3.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length6.Control3.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length6.Control4.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length6.Control4.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length7.Control1.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length7.Control1.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length7.Control2.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length7.Control2.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length7.Control3.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length7.Control3.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length7.Control4.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length7.Control4.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length8.Control1.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length8.Control1.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length8.Control2.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length8.Control2.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length8.Control3.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length8.Control3.Run0.de
 pypathway/analysis/modelling/cache/BestPaths.Length8.Control4.Run0
+pypathway/analysis/modelling/cache/BestPaths.Length8.Control4.Run0.de
 pypathway/analysis/modelling/cache/RandomGeneList.0
 pypathway/analysis/modelling/cache/magi.res
 pypathway/analysis/modelling/cache/seeds
+pypathway/analysis/modelling/cache/seeds_back
 pypathway/analysis/modelling/third_party/.DS_Store
 pypathway/analysis/modelling/third_party/__init__.py
 pypathway/analysis/modelling/third_party/hotnet2/.DS_Store
@@ -178,16 +246,22 @@ pypathway/analysis/modelling/third_party/hotnet2/viz/requirements.txt
 pypathway/analysis/modelling/third_party/hotnet2/viz/server.py
 pypathway/analysis/modelling/third_party/hotnet2/viz/server.py.bak
 pypathway/analysis/modelling/third_party/hotnet2/viz/subnetworks.html
+pypathway/analysis/network/.DS_Store
 pypathway/analysis/network/__init__.py
 pypathway/analysis/network/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/network/spia_data/hsa.json
 pypathway/analysis/network/spia_data/mmu.json
+pypathway/analysis/ora/.DS_Store
 pypathway/analysis/ora/__init__.py
 pypathway/analysis/ora/assoc
 pypathway/analysis/ora/__pycache__/__init__.cpython-35.pyc
 pypathway/analysis/ora/kegg_set/hsa_kegg_gs.gmt
+pypathway/analysis/ora/obo/go.obo
+pypathway/analysis/ora/obo/ttt.ttt
+pypathway/analysis/propagation/.DS_Store
 pypathway/analysis/propagation/__init__.py
 pypathway/analysis/propagation/__pycache__/__init__.cpython-35.pyc
+pypathway/analysis/viz/.DS_Store
 pypathway/analysis/viz/__init__.py
 pypathway/analysis/viz/assets/viz.html
 pypathway/analysis/viz/assets/viz2.html
@@ -198,8 +272,10 @@ pypathway/analysis/viz/assets/templates/js
 pypathway/analysis/viz/assets/templates/selector
 pypathway/analysis/viz/assets/templates/slider
 pypathway/analysis/viz/assets/templates/switch
+pypathway/exportion/.DS_Store
 pypathway/exportion/__init__.py
 pypathway/exportion/__pycache__/__init__.cpython-35.pyc
+pypathway/exportion/templates/.DS_Store
 pypathway/exportion/templates/index.html
 pypathway/exportion/templates/card/card
 pypathway/exportion/templates/card/row
@@ -235,11 +311,13 @@ pypathway/exportion/templates/enrichment/js/jquery.qtip.js
 pypathway/exportion/templates/enrichment/js/main.js
 pypathway/exportion/templates/enrichment/js/materialize.js
 pypathway/exportion/templates/enrichment/js/vivagraph.js
+pypathway/netviz/.DS_Store
 pypathway/netviz/ReactomeOverview.py
 pypathway/netviz/Readme.md
 pypathway/netviz/__init__.py
 pypathway/netviz/goviz.py
 pypathway/netviz/__pycache__/__init__.cpython-35.pyc
+pypathway/netviz/assets/.DS_Store
 pypathway/netviz/assets/index.html
 pypathway/netviz/assets/data/nodes.json
 pypathway/netviz/assets/data/nodes2.json
@@ -262,23 +340,34 @@ pypathway/netviz/assets/lib/js/jquery.qtip.css
 pypathway/netviz/assets/lib/js/jquery.qtip.js
 pypathway/netviz/assets/lib/js/main.js
 pypathway/netviz/assets/lib/js/vivagraph.js
+pypathway/pathviz/.DS_Store
 pypathway/pathviz/__init__.py
 pypathway/pathviz/utils.py
 pypathway/pathviz/__pycache__/__init__.cpython-35.pyc
 pypathway/pathviz/__pycache__/utils.cpython-35.pyc
+pypathway/pathviz/core/.DS_Store
 pypathway/pathviz/core/BioPAXImpl.py
 pypathway/pathviz/core/GPMLImpl.py
 pypathway/pathviz/core/KGMLImpl.py
 pypathway/pathviz/core/SBGNImpl.py
 pypathway/pathviz/core/__init__.py
 pypathway/pathviz/core/general.py
+pypathway/pathviz/core/__pycache__/BioPAXImpl.cpython-35.pyc
+pypathway/pathviz/core/__pycache__/GPMLImpl.cpython-35.pyc
+pypathway/pathviz/core/__pycache__/KGMLImpl.cpython-35.pyc
+pypathway/pathviz/core/__pycache__/SBGNImpl.cpython-35.pyc
+pypathway/pathviz/core/__pycache__/__init__.cpython-35.pyc
+pypathway/pathviz/core/__pycache__/general.cpython-35.pyc
+pypathway/pathviz/query/.DS_Store
 pypathway/pathviz/query/__init__.py
 pypathway/pathviz/query/common.py
 pypathway/pathviz/query/network.py
 pypathway/pathviz/query/__pycache__/__init__.cpython-35.pyc
 pypathway/pathviz/query/__pycache__/common.cpython-35.pyc
 pypathway/pathviz/query/__pycache__/network.cpython-35.pyc
-pypathway/pathviz/query/cache/1
+pypathway/pathviz/query/cache/.DS_Store
+pypathway/pathviz/query/cache/ttt.ttt
+pypathway/pathviz/static/.DS_Store
 pypathway/pathviz/static/box.html
 pypathway/pathviz/static/GPML/gpml.html
 pypathway/pathviz/static/GPML/.idea/GPML.iml
@@ -516,11 +605,15 @@ pypathway/pathviz/static/SBGN/samples/vitamins_b6_activation_to_pyridoxal_phosph
 pypathway/pathviz/static/SVG/index.html
 pypathway/pathviz/static/assets/paxtools-4.3.1.jar
 pypathway/pathviz/static/assets/raw.json
+pypathway/pathviz/static/assets/raw2.json
 pypathway/pathviz/static/assets/chart/plot.j2
 pypathway/pathviz/static/assets/reactome/species_list
 pypathway/pathviz/static/assets/reactome/svg_list
+pypathway/pathviz/visualize/.DS_Store
 pypathway/pathviz/visualize/__init__.py
 pypathway/pathviz/visualize/options.py
+pypathway/pathviz/visualize/__pycache__/__init__.cpython-35.pyc
+pypathway/pathviz/visualize/__pycache__/options.cpython-35.pyc
 pypathway/src/cluster/PPI_Graph.cpp
 pypathway/src/cluster/PPI_Graph.h
 pypathway/src/cluster/_chi2.c
@@ -538,22 +631,36 @@ pypathway/src/select/PPI_Graph.h
 pypathway/src/select/_chi2.c
 pypathway/src/select/color_coding.c
 pypathway/src/select/color_coding.h
+pypathway/tests/.DS_Store
 pypathway/tests/__init__.py
+pypathway/tests/data/association
+pypathway/tests/data/population
+pypathway/tests/data/study
 pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt
 pypathway/tests/gmt_file/h.all.v6.0.symbols.gmt
 pypathway/tests/gsea_data/GSE4107.cls
 pypathway/tests/gsea_data/GSE4107.xlsx
+pypathway/tests/magi_files/GeneCoExpresion_ID.txt
+pypathway/tests/magi_files/Gene_Name_Length.txt
+pypathway/tests/magi_files/ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt
+pypathway/tests/magi_files/New_ESP_Sereve.txt
+pypathway/tests/magi_files/StringNew_HPRD.txt
+pypathway/tests/magi_files/adj1.csv.Tab.BinaryFormat
+pypathway/tests/magi_files/test.bin
 pypathway/utils/.DS_Store
 pypathway/utils/__init__.py
 pypathway/utils/_cluster.cpython-35m-darwin.so
 pypathway/utils/_node.cpython-35m-darwin.so
 pypathway/utils/_select.cpython-35m-darwin.so
 pypathway/utils/__pycache__/__init__.cpython-35.pyc
+pypathway/utils/caches/.DS_Store
 pypathway/utils/caches/ttt.ttt
+pypathway/utils/datasets/.DS_Store
 pypathway/utils/datasets/hint.bin
 pypathway/utils/datasets/ALL/ALL
 pypathway/utils/datasets/ColorectalCancer/all
 pypathway/utils/datasets/ColorectalCancer/de
+pypathway/utils/jucell/.DS_Store
 pypathway/utils/jucell/__init__.py
 pypathway/utils/jucell/template.html
 pypathway/utils/jucell/__pycache__/__init__.cpython-35.pyc

@@ -1,12 +1,16 @@
 # Network Propagation
 This module implements three algorithms: `random walk`, `random walk with restart` and `heat kernel`. The 
-implementation of this module based on the paper
+implementation of these modules based on the paper
 > Network propagation: a universal amplifier of genetic associations
 
 All these method start with a vector = |V| and simulate the heat diffuse process in the network.
 the difference between these methods are list in the following table (figure from above paper).
 
-![](/Users/yangxu/PyPathway/docs/markdowns/images/propagation/propagation_overview.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/propagation/propagation_overview.png?raw=true)
+
+## Example Notebook
+
+The example notebook exists in `$project_root/examples/analysis/propagation.ipynb` or view at [Github](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb)
 
 ## Random Walk
 
@@ -32,7 +36,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node.
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
 In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: random_walk(G, h).node
+In [5]: dict(random_walk(G, h).node)
 
 Out [5]: 
 {1: {'heat': 0.33333342635070995},
@@ -67,7 +71,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
 In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: random_walk_with_restart(G, h, rp=0.7, n=-1).node
+In [5]: dict(random_walk_with_restart(G, h, rp=0.7, n=-1).node)
 
 Out [5]: 
 {1: {'heat': 0.18859903381642515},
@@ -100,7 +104,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
 In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: diffusion_kernel(G, h, rp=0.8, n=100).node
+In [5]: dict(diffusion_kernel(G, h, rp=0.8, n=100).node)
 
 Out [5]: 
 {1: {'heat': 0.42138736822730222},
@@ -110,6 +114,3 @@ Out [5]:
  5: {'heat': 0.38714718125782877}}
 ```
 
-## Example Notebook
-
-The example notebook exists in `$project_root/examples/analysis/propagation.ipynb` or view at [Github](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb)

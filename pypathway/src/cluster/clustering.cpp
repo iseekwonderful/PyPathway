@@ -81,6 +81,8 @@ float sumCoExpr=0;
                         if (count1!=count2)
                         {
                                 sumCoExpr=sumCoExpr+coExpresionMatrix[tempCluster->nodeId[count1]][tempCluster->nodeId[count2]];
+                                // printf("%i - %i, %f\n", tempCluster->nodeId[count1], tempCluster->nodeId[count2],
+                                    // coExpresionMatrix[tempCluster->nodeId[count1]][tempCluster->nodeId[count2]]);
                         }
                 }
 
@@ -304,6 +306,10 @@ return minCoExprValue;
 
 bool isValidCluster(clustersSelected *clus)
 {
+
+    // printf("numServeMutInControl: %i, averageEdgeDensity: %f, averageCoexpresion: %f, total: %f\n",
+    //  clus->numServeMutInControl, clus->averageEdgeDensity, clus->averageCoexpresion, clus->seedScore);
+    // printf("minClusterWeight: %i, minAvgEdgeDensity: %f, minAvgExpr: %f\n", minClusterWeight, minAvgEdgeDensity, minAvgExpr);
 	if (clus->numServeMutInControl<minClusterWeight && clus->averageEdgeDensity>minAvgEdgeDensity && clus->averageCoexpresion>minAvgExpr && isSubGraphConnectedComponenti_WithCoExpr(clus->nodeId, clus->sizeCluster)==true && clus->sizeCluster<=upperLimitSize && minCoExprValueInClus(clus)>=minAvgExpr2)
 	{
 		return true;
@@ -337,7 +343,8 @@ potNewPath = (char **) malloc(300*sizeof(char *));
                 }
 		fscanf(fp,"recolor %i\n", &tempInt);
 		fscanf(fp,"%i %i %i %f\n",&tempInt, &tempInt, &tempInt, &tempFloat);
-                fscanf(fp,"Avg CoExpr:%f %f %f\n", &avgCoExprValue, &avgEdgeDensity, &FinalScore);
+        fscanf(fp,"Avg CoExpr:%f %f %f\n", &avgCoExprValue, &avgEdgeDensity, &FinalScore);
+
 		if (highestScorePath[pathLength]<FinalScore)
 			highestScorePath[pathLength]=FinalScore;
         	tempCluster=createATempCluster(pathLength, potNewPath);
@@ -352,7 +359,7 @@ potNewPath = (char **) malloc(300*sizeof(char *));
 		}
 		else
 		{
-			// printf("%s\n", "WTF invalid cluster");
+//			 printf("%s, %i, %f\n", "WTF invalid cluster", tempCluster->sizeCluster, tempCluster->seedScore);
 			free(tempCluster);
 		}
         }
@@ -913,6 +920,7 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	fp4=fopen(e,"r");
 	fp5=fopen(s,"r");
 	minClusterWeight = m;
+	// printf("minClusterWeight: %i, %s\n", minClusterWeight, s);
 	lowerLimitSize = l;
 	upperLimitSize = u;
 	pathAlpha = atof(aaa);
@@ -927,13 +935,13 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
         assignScorePrecalculated(fp2);
         createCoExpresionGeneHash(fp3);
 	createCoExpresionMatix(fp4);
-	printf("Start read path file\n");
+	// printf("Start read path file\n");
 	readPathFiles(fp5);
 	markPathsNotToUse();
 	createGraphOfPaths();
-	printf("Start random connect\n");
+	// printf("Start random connect\n");
 	randomConnectedComponents(randomNum);
-	printf("done!/n");
+	// printf("done!/n");
 	return 0;
 }
 int main(int argv, char *argc[])

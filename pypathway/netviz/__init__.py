@@ -214,24 +214,39 @@ class FromNetworkX(Plotable):
                 config['options']['elements'][-1][key] = value
         if type(self.nx) == nx.Graph:
             exist_edge = []
-            for k, v in self.nx.edge.items():
-                if len(v):
-                    for i, j in v.items():
-                        edg = frozenset(sorted([k, i]))
-                        if edg in exist_edge:
-                            continue
-                        exist_edge.append(edg)
-                        config['options']['elements'].append({
-                             'group': 'edges',
-                             'data': {'source': k,
-                                      'target': i,
-                                      },
-                             'style': j.get('style') or self.edge_styles or default_edge,
-                             'tooltips': j.get('tooltips') or None
-                        })
+            if nx.__version__[0] == '2':
+                for k, i in self.nx.edges:
+                    edg = frozenset(sorted([k, i]))
+                    if edg in exist_edge:
+                        continue
+                    exist_edge.append(edg)
+                    config['options']['elements'].append({
+                        'group': 'edges',
+                        'data': {'source': k,
+                                 'target': i,
+                                 },
+                        # 'style': j.get('style') or self.edge_styles or default_edge,
+                        # 'tooltips': j.get('tooltips') or None
+                    })
+            else:
+                for k, v in self.nx.edge.items():
+                    if len(v):
+                        for i, j in v.items():
+                            edg = frozenset(sorted([k, i]))
+                            if edg in exist_edge:
+                                continue
+                            exist_edge.append(edg)
+                            config['options']['elements'].append({
+                                 'group': 'edges',
+                                 'data': {'source': k,
+                                          'target': i,
+                                          },
+                                 'style': j.get('style') or self.edge_styles or default_edge,
+                                 'tooltips': j.get('tooltips') or None
+                            })
         else:
             # if it is a DiGraph, we should plot the arrow
-            for k, v in self.nx.edge.items():
+            for k, v in self.nx.edges.items():
                 if len(v):
                     for i, j in v.items():
                         config['options']['elements'].append({

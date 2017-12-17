@@ -9,6 +9,10 @@
 from .. import EnrichmentResult
 import gseapy as gp
 import os
+import numpy as np
+import pkgutil
+import logging
+import sys
 
 
 class GSEA(EnrichmentResult):
@@ -18,6 +22,12 @@ class GSEA(EnrichmentResult):
 
     @staticmethod
     def run(data, gmt, cls, permutation_type='phenotype', method='signal_to_noise', permution_num=1000):
+        prefix = gp.__name__ + "."
+        for importer, modname, ispkg in pkgutil.iter_modules(gp.__path__, prefix):
+            if modname == "gseapy.gsea":
+                module = __import__(modname, fromlist="dummy")
+        module.ranking_metric = GSEA._ranking_metric
+        gp.algorithm.ranking_metric = GSEA._ranking_metric
         res = gp.gsea(data, gmt, cls, permutation_type=permutation_type, permutation_num=permution_num,
                       outdir=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'images'), method=method)
         return GSEA(res.res2d, data, gmt, cls)
@@ -25,4 +35,40 @@ class GSEA(EnrichmentResult):
     def __init__(self, df, data, gmt, cls):
         EnrichmentResult.__init__(self, df, data, gmt, 'GSEA', -1, 3, '-lg(fdr)')
         self.df, self.data, self.gmt, self.cls = df, data, gmt, cls
+
+    @staticmethod
+    def _ranking_metric(df, method, phenoPos, phenoNeg, classes, ascending):
+        '''
+        Original implementation
+
+        '''
+        A = phenoPos
+        B = phenoNeg
+
+        # exclude any zero stds.
+        df_mean = df.groupby(by=classes, axis=1).mean()
+        df_std = df.groupby(by=classes, axis=1).std()
+
+        min_allowed = df_mean.abs() * 0.2
+        min_allowed = min_allowed.where(min_allowed > 0, 0.2)
+        df_std = df_std.where(df_std > min_allowed, min_allowed)
+
+        if method == 'signal_to_noise':
+            sr = (df_mean[A] - df_mean[B]) / (df_std[A] + df_std[B])
+        elif method == 't_test':
+            sr = (df_mean[A] - df_mean[B]) / np.sqrt(df_std[A] ** 2 / len(df_std) + df_std[B] ** 2 / len(df_std))
+        elif method == 'ratio_of_classes':
+            sr = df_mean[A] / df_mean[B]
+        elif method == 'diff_of_classes':
+            sr = df_mean[A] - df_mean[B]
+        elif method == 'log2_ratio_of_classes':
+            sr = np.log2(df_mean[A] / df_mean[B])
+        else:
+            logging.error("Please provide correct method name!!!")
+            sys.exit()
+        sr.sort_values(ascending=ascending, inplace=True)
+        df3 = sr.to_frame().reset_index()
+        df3.columns = ['gene_name', 'rank']
+        df3['rank2'] = df3['rank']
+        return df3
 

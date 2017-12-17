@@ -16,7 +16,7 @@ except (IOError, ImportError):
 
 requirements = [
     'gseapy>=0.8.4',
-    'networkx==1.11',   # todo: fix the issue in networkx > 2.0
+    'networkx',   # todo: fix the issue in networkx > 2.0
     'pandas',
     'scipy',
     'statsmodels',
@@ -65,7 +65,7 @@ if sys.platform == "darwin":
 
 setup(
     name='PyPathway',
-    version='0.3.5',
+    version='0.3.6',
     description="A Python package biological network analysis and visualization",
     long_description=readme,
     author="sheep",

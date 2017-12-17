@@ -2,7 +2,7 @@
 
 ## Overview
 Enrichment analysis aim to find functional set which are over-represented in the large set of protein or genes. In this section, we will go through the supported
-enrichment, demonstrate the definition and the usage of each method. 
+enrichment methods, demonstrate the definition and the usage of each method. 
 
 ## Basic class
 All the class of enrichment analysis are inherited from `EnrichmentResult`. This class holds the 
@@ -121,7 +121,7 @@ The result table (In IPython notebook):
 # barplot
 res_h.plot()
 ```
-![](img_https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png?raw=true)
 
 ### Specific ORA
 For KEGG, REACTOME and GO, there are specific class implement for them. This class preloaded the gene sets or the DEG file before the analysis are performed. 
@@ -160,7 +160,8 @@ rg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo
 ```
 
 The gene ontology enrichment analysis provide the graph overview of the analysis
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png)
+
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png?raw=true)
 
 ## GSEA
 The Gene Set Enrichment Analysis(GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically 
@@ -174,7 +175,7 @@ This class is implement via [GSEApy](https://github.com/BioNinja/GSEApy)
 ### Usage
 
 #### Input data structure
-Differ to other analysis class, the GSEA need to do a phenotypic-based permutation test, so the original data is need.
+Differ to other analysis class, the GSEA need to do a phenotypic or gene_set permutation test, so the original data is need.
 
 * The gene_sets: receives both get dict or a library name in [Enrichr's library](http://amp.pharm.mssm.edu/Enrichr/#stats)
 
@@ -250,16 +251,15 @@ gs_res = gp.gsea(data=gene_exp, gene_sets='KEGG_2016', cls=class_vector,
                  permutation_type='phenotype', #set permutation_type to phenotype when 
                  outdir='gsea_reprot', method='signal_to_noise', format='png')
 ```
-more detail information is described in the `example/analysis/GSEA.ipynb`
-
-### SPIA
+more detail information is available in the [notebook](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/GSEA.ipynb)
+## SPIA
 
 The Signaling Pathway Impact Analysis, is introduced in paper:
 > [A novel signaling pathway impact analysis](https://academic.oup.com/bioinformatics/article/25/1/75/302846/A-novel-signaling-pathway-impact-analysis#)
 
 we implement this algorithm in Python.
 
-#### Usage
+### Usage
 
 ```python
 r = SPIA.run(de=c.deg, all=c.background)
@@ -268,14 +268,19 @@ r = SPIA.run(de=c.deg, all=c.background)
 * de: a python dict of DEGs. key: gene, value: fold-change. e.g. `{'A': 2.1, 'B': 3.0 ...}`
 * all: a python list of total genes. the idtype is ENTREZ. If necessary, use IDMapping to convert other idtype to ENTREZ. e.g. `['A', 'B', 'C', 'D']`
 
-### Enrichnet
+### Result
+Use `table` method to view the result in table form and use the `plot` method to view the bar plot.
+
+[Example notebook](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb) is also available.  
+
+## Enrichnet
 
 The Enrichnet algorithm is introduced in paper
 > [EnrichNet: network-based gene set enrichment analysis](https://academic.oup.com/bioinformatics/article/28/18/i451/247049/EnrichNet-network-based-gene-set-enrichment)
 
 we implement the Python API for Enrichnet HTTP service.
 
-#### Usage
+### Usage
 
 ```python
 run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')
@@ -285,4 +290,8 @@ run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')
 * the pathlib: function set library. Supports pathdb: `['kegg', 'biocarta', 'reactome', 'wiki', 'nci', 'interpro', 'gobp', 'gomf', 'gocc']`
 * graph: the graph database. Supports `['string', 'bossi']`.
 
+### Result
+Use `table` method to view the result in table form and use the `plot` method to view the bar plot.
+
+[Example notebook](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb) is also available.  
 

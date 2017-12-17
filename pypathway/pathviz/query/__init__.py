@@ -187,7 +187,10 @@ class BioGRID(Database):
                               },
                      },
                 )
-                G.add_node(v['BIOGRID_ID_A'], {'Symbol': v['OFFICIAL_SYMBOL_A']})
+                if nx.__version__[0] == '2':
+                    G.add_node(v['BIOGRID_ID_A'], **{'Symbol': v['OFFICIAL_SYMBOL_A']})
+                else:
+                    G.add_node(v['BIOGRID_ID_A'], {'Symbol': v['OFFICIAL_SYMBOL_A']})
             if not v['OFFICIAL_SYMBOL_B'] in exist_node:
                 config['options']['elements'].append(
                     {'group': 'nodes',
@@ -196,10 +199,16 @@ class BioGRID(Database):
                               },
                      },
                 )
-            G.add_node(v['BIOGRID_ID_B'], {'Symbol': v['OFFICIAL_SYMBOL_B']})
+            if nx.__version__[0] == '2':
+                G.add_node(v['BIOGRID_ID_B'], **{'Symbol': v['OFFICIAL_SYMBOL_B']})
+            else:
+                G.add_node(v['BIOGRID_ID_B'], {'Symbol': v['OFFICIAL_SYMBOL_B']})
             if v['BIOGRID_ID_A'] == v['BIOGRID_ID_B']:
                 continue
-            G.add_edge(v['BIOGRID_ID_A'], v['BIOGRID_ID_B'], {'id': v['BIOGRID_INTERACTION_ID']})
+            if nx.__version__[0] == '2':
+                G.add_edge(v['BIOGRID_ID_A'], v['BIOGRID_ID_B'], **{'id': v['BIOGRID_INTERACTION_ID']})
+            else:
+                G.add_edge(v['BIOGRID_ID_A'], v['BIOGRID_ID_B'], **{'id': v['BIOGRID_INTERACTION_ID']})
             config['options']['elements'].append({
                 'group': 'edges',
                 'data': {
@@ -348,11 +357,16 @@ class STRING(Database):
         node_set = set([x.first for x in iters]) & set([x.second for x in iters])
         config = STRING._config_generate(iters)
         for x in iters:
-            # print(x)
-            G.add_edge(x.first, x.second, {s.split(':')[0]: s.split(':')[1] for s in x.score_list})
+            if nx.__version__[0] == '2':
+                G.add_edge(x.first, x.second, **{s.split(':')[0]: s.split(':')[1] for s in x.score_list})
+            else:
+                G.add_edge(x.first, x.second, {s.split(':')[0]: s.split(':')[1] for s in x.score_list})
         for x in iters:
-            G.node[x.first] = {'Symbol': x.first_name}
-            G.node[x.second] = {'Symbol': x.second_name}
+            if nx.__version__[0] == '2':
+                nx.set_node_attributes(G, name="Symbol", values={x.first: x.first_name, x.second: x.second_name})
+            else:
+                G.node[x.first] = {'Symbol': x.first_name}
+                G.node[x.second] = {'Symbol': x.second_name}
         # print(config)
         node_count = len([x for x in config['options']['elements'] if x['group'] == 'nodes'])
         # print(node_count)
@@ -490,7 +504,7 @@ class STRING(Database):
         for x in buf.split("\n")[1:]:
             if not x: continue
             s = x.split(' ')
-            G.add_edge(s[0], s[1], {'weight': int(x[2])})
+            G.add_edge(s[0], s[1], **{'weight': int(x[2])})
         return G
 
 # Abstract Class
@@ -528,23 +542,23 @@ class Network:
         # handle node first
         for x in nodeG1:
             if x not in nodeG2:
-                merged.add_node(x, {"style": {'color': '#ff4c00'}})
+                merged.add_node(x, **{"style": {'color': '#ff4c00'}})
             else:
                 merged.add_node(x)
         for x in nodeG2:
             if x not in nodeG1:
-                merged.add_node(x, {'style': {'color': '#104fcc'}})
+                merged.add_node(x, **{'style': {'color': '#104fcc'}})
         for x in edgeG1:
             if x not in edgeG2 and not frozenset([list(x)[1], list(x)[1]]) not in edgeG2:
                 x = list(x)
-                merged.add_edge(x[0], x[1], {"style": {'color': '#ff4c00'}})
+                merged.add_edge(x[0], x[1], **{"style": {'color': '#ff4c00'}})
             else:
                 x = list(x)
                 merged.add_edge(x[0], x[1])
         for x in edgeG2:
             if x not in edgeG1 and not frozenset([list(x)[1], list(x)[1]]) not in edgeG1:
                 x = list(x)
-                merged.add_edge(x[0], x[1], {"style": {'color': '#104fcc'}})
+                merged.add_edge(x[0], x[1], **{"style": {'color': '#104fcc'}})
             else:
                 x = list(x)
                 merged.add_edge(x[0], x[1])

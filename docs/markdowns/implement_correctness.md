@@ -174,8 +174,156 @@ The top5 result is list in the table below.
 ## GSEA
 We use the Java implementation from board institute to check the implementation correctness.
 ## Enrichnet
-### Result of the Enrichnet we interface
+We use the we interface provided by `Enrichnet` to check the correctness of the method.
+### Result of the Enrichnet web interface
+We perform the analysis with following parameters
+* Choose a molecular network: STRING
+* Identifier format: HGNC SYMBOL
+* gene identifier: we use the gene list derive from `ColorectalCancer` dataset
+
+**Derive**
+
+```
+c = ColorectalCancer()
+sym = IdMapping.convert(input_id=c.deg_list, source='ENTREZID', target="SYMBOL", species='hsa') sym = [x[1][0] for x in sym if x[1]]
+```
+
+**Result**
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Annotation (pathway/process)</th>
+      <th>XD-score</th>
+      <th>Fisher q-value</th>
+      <th>Gene set size</th>
+      <th>Pathway size</th>
+      <th>Overlap size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>hsa00280:Valine, leucine and isoleucine degrad...</td>
+      <td>4.334854</td>
+      <td>4.772740e-09</td>
+      <td>4342</td>
+      <td>44</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>hsa00603:Glycosphingolipid biosynthesis - glob...</td>
+      <td>3.895005</td>
+      <td>2.245753e-02</td>
+      <td>4342</td>
+      <td>14</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hsa00640:Propanoate metabolism</td>
+      <td>3.673330</td>
+      <td>8.447069e-05</td>
+      <td>4342</td>
+      <td>32</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>hsa00410:beta-Alanine metabolism</td>
+      <td>3.316433</td>
+      <td>4.982290e-03</td>
+      <td>4342</td>
+      <td>22</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>hsa00900:Terpenoid backbone biosynthesis</td>
+      <td>3.252147</td>
+      <td>3.759063e-02</td>
+      <td>4342</td>
+      <td>15</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Result of PyPathway
+**Code**
+
+```
+c = ColorectalCancer()
+# convert ENTREZID to SYMBOL
+sym = IdMapping.convert(input_id=c.deg_list, source='ENTREZID', target="SYMBOL", species='hsa')
+sym = [x[1][0] for x in sym if x[1]]
+# start analysis
+en = Enrichnet.run(genesets=sym, graph='string')
+```
+
+**Result**
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Annotation (pathway/process)</th>
+      <th>XD-score</th>
+      <th>Fisher q-value</th>
+      <th>Gene set size</th>
+      <th>Pathway size</th>
+      <th>Overlap size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>hsa00280:Valine, leucine and isoleucine degrad...</td>
+      <td>4.334854</td>
+      <td>4.772740e-09</td>
+      <td>4342</td>
+      <td>44</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>hsa00603:Glycosphingolipid biosynthesis - glob...</td>
+      <td>3.895005</td>
+      <td>2.245753e-02</td>
+      <td>4342</td>
+      <td>14</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hsa00640:Propanoate metabolism</td>
+      <td>3.673330</td>
+      <td>8.447069e-05</td>
+      <td>4342</td>
+      <td>32</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>hsa00410:beta-Alanine metabolism</td>
+      <td>3.316433</td>
+      <td>4.982290e-03</td>
+      <td>4342</td>
+      <td>22</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>hsa00900:Terpenoid backbone biosynthesis</td>
+      <td>3.252147</td>
+      <td>3.759063e-02</td>
+      <td>4342</td>
+      <td>15</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Propagation
 ### Heat diffuse
 We use [Cytoscape Diffusion APP](http://apps.cytoscape.org/apps/diffusion) to check the correctness of the heat diffusion.
