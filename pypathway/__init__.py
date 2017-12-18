@@ -18,6 +18,4 @@ from .exportion import EnrichmentExport, MAGIExport, Hotnet2Export
 from .analysis.propagation import random_walk, random_walk_with_restart, diffusion_kernel
 
 
-def version():
-    return "0.3.5"
-
+__version__ = "0.3.62"

@@ -2,7 +2,7 @@ import sqlite3
 import os
 import tarfile
 import requests
-import wget
+from . import wget
 import re
 import shutil
 import time

@@ -186,15 +186,14 @@ class MAGI:
         :return: a list of modules.
         '''
         cache_dir = os.path.dirname(os.path.realpath(__file__)) + '/cache'
-        # seed = seed or cache_dir + '/seeds'
-        # score = score or cache_dir + '/RandomGeneList.0'
-        # minCoExpr = minCoExpr or 'none'
-        # avgCoExpr = avgCoExpr or 'none'
-        # avgDensity = avgDensity or 'none'
-        # print(seed, score, minCoExpr, avgCoExpr)
-        # _cluster.cluster(ppi, score, coExpId, coExpMat, seed, upper_mutation_on_control, min_size_of_module,
-        #                  max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
-        #                  avgCoExpr, avgDensity, cache_dir + '/magi.res')
+        seed = seed or cache_dir + '/seeds'
+        score = score or cache_dir + '/RandomGeneList.0'
+        minCoExpr = minCoExpr or 'none'
+        avgCoExpr = avgCoExpr or 'none'
+        avgDensity = avgDensity or 'none'
+        _cluster.cluster(ppi, score, coExpId, coExpMat, seed, upper_mutation_on_control, min_size_of_module,
+                         max_size_of_module, str(min_ratio_of_seed), '0', minCoExpr,
+                         avgCoExpr, avgDensity, cache_dir + '/magi.res')
         # read the result and return the result object.
         res = MAGI.parse_result(cache_dir + '/magi.res', ppi)
         dedul = {}

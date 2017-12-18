@@ -9,7 +9,7 @@ import os
 from scipy import stats
 from statsmodels.sandbox.stats import multicomp
 from ...utils import IdMapping, GeneSet, GMTUtils
-import wget
+from ...utils import wget
 from goatools.go_enrichment import GOEnrichmentStudy
 from goatools.obo_parser import GODag
 from goatools.associations import read_associations

@@ -7,9 +7,8 @@ from collections import namedtuple
 from ...netviz import FromNetworkX, FromCYConfig
 import networkx as nx
 import types
-from ...utils import IdMapping
+from ...utils import IdMapping, wget
 import os
-import wget
 import gzip
 import zipfile
 

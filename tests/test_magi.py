@@ -2,11 +2,7 @@ import unittest
 import pickle
 from itertools import combinations as cm
 import os
-
-import sys
-sys.path.insert(0, "/Users/yangxu/PyPathway")
 from pypathway import MAGI
-import pypathway
 
 
 class MAGITest(unittest.TestCase):
