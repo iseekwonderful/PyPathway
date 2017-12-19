@@ -29,7 +29,8 @@ class MAGITest(unittest.TestCase):
         with open(os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/tests/magi_files/adj1.csv.Tab.BinaryFormat", "w") as fp:
             fp.write(out)
 
-    def test_pathway_select(self):
+    def test_a_pathway_select(self):
+        print("We now select a pathway")
         path = os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/tests/magi_files/"
         MAGI.select_pathway(
             path + 'StringNew_HPRD.txt',
@@ -39,7 +40,8 @@ class MAGITest(unittest.TestCase):
             path + 'Gene_Name_Length.txt'
         )
 
-    def test_cluster(self):
+    def test_b_cluster(self):
+        print("we now clustering")
         path = os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/tests/magi_files/"
         r = MAGI.cluster(
             path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt',

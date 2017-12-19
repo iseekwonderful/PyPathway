@@ -103,7 +103,7 @@ class TestLoadDatasets(unittest.TestCase):
 
         :return: None
         '''
-        gmt = GMTUtils.parse_gmt_file("../pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt")
+        gmt = GMTUtils.parse_gmt_file(os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt")
         self.assertTrue("HALLMARK_ADIPOGENESIS" in gmt)
 
 
