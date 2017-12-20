@@ -7,11 +7,11 @@ APIs for querying and retrieval of interaction network from public database. The
 
 To search interaction network from STRING database, use the staticmethod `STRING.search(name, organism)` .
 
-![](https://raw.githubusercontent.com/iseekwonderful/PyPathway/master/docs/markdowns/images/network_process/string_search.png)
+![](images/network_process/string_search.png)
 
 and each search result could be retrieved using its `load` method; the result of `load` method is a `networkx.Graph` with a additional `plot` method. Use the plot method to draw the graph.
 
-![](https://raw.githubusercontent.com/iseekwonderful/PyPathway/master/docs/markdowns/images/network_process/string_draw.png)
+![](images/network_process/string_draw.png)
 
 **Query Entire network**
 
@@ -26,11 +26,12 @@ G = STRING.overall_graph("hsa")
 
 Similar to STRING, single or list molecular search is implemented in `BioGRID.search`, supports three type of id: [`Symbol`, `Extrez`, `pubmed`].
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/BioGrid.png?raw=true)
+![](images/network_process/BioGrid.png)
 
 The result is the `networkx.Graph` object with additional plot object.
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/plot.png?raw=true)
+![](images/network_process/plot.png)
+
 **Entire networks**
 
 Using `BioGRID.overall_network(organism)` to retrieve the entire network.
@@ -48,7 +49,7 @@ path = res[0].load()
 
 **Result**
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/netprocess_KEGG.png?raw=true)
+![](images/network_process/netprocess_KEGG.png)
 
 Unlike STRING and BioGRID, the KEGG, Reactome and WikiPathway object
 are stored in a tree-like object.
@@ -102,7 +103,7 @@ ph.draw()
 
 The result pathway is drawn in the interactive region
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/process_reactome_view.png?raw=true)
+![](images/network_process/process_reactome_view.png)
 
 ## WikiPathway
 
@@ -130,4 +131,4 @@ path = res[0].load()
 path.draw()
 ```
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/process_wiki_pathway.png?raw=true)
+![](images/network_process/process_wiki_pathway.png)

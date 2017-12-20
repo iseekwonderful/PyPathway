@@ -6,7 +6,7 @@ implementation of these modules based on the paper
 All these method start with a vector = |V| and simulate the heat diffuse process in the network.
 the difference between these methods are list in the following table (figure from above paper).
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/propagation/propagation_overview.png?raw=true)
+![](images/propagation/propagation_overview.png)
 
 ## Example Notebook
 
