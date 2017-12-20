@@ -7,6 +7,7 @@ sys.path.append("/Users/yangxu/PyPathway")
 import networkx as nx
 import numpy as np
 
+import pypathway as pt
 from pypathway import IdMapping, FromNetworkX, ColorectalCancer, GMTUtils
 from pypathway.utils import load_hint_hi12012_network
 from pypathway.pathviz.utils import plot
@@ -26,7 +27,8 @@ class TestIdMapping(unittest.TestCase):
         # check and download
         IdMapping.check_db_available('hsa')
         # check file exist
-        self.assertTrue(os.path.exists(os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/utils/caches/org.Hs.eg.sqlite"))
+        # should use the syspath?
+        self.assertTrue(os.path.exists(os.path.dirname(pt.__file__) + "/../pypathway/utils/caches/org.Hs.eg.sqlite"))
 
     def test_convert(self):
         '''
@@ -103,7 +105,7 @@ class TestLoadDatasets(unittest.TestCase):
 
         :return: None
         '''
-        gmt = GMTUtils.parse_gmt_file(os.path.dirname(os.path.realpath(__file__)) + "/../pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt")
+        gmt = GMTUtils.parse_gmt_file(os.path.dirname(os.path.realpath(__file__)) + "/assets/gmt_file/h.all.v6.0.entrez.gmt")
         self.assertTrue("HALLMARK_ADIPOGENESIS" in gmt)
 
 

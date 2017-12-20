@@ -2,18 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48ebf05c-6ab4-48f5-890d-639bbff756e2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/Utility and Tools.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/enrichment.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/Supported Species.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/chart plot example.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/convert to dict.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/convert.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/nx plot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/markdowns/images/Utility/supported id types.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/pathviz/STRING|BioGID_query.ipynb" afterPath="$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clean.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/pathviz/STRING|BioGID_query.ipynb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/tests/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_cluster.cpython-35m-darwin.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_node.cpython-35m-darwin.so" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypathway/utils/_select.cpython-35m-darwin.so" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/data/association" afterPath="$PROJECT_DIR$/tests/assets/data/association" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/data/population" afterPath="$PROJECT_DIR$/tests/assets/data/population" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/data/study" afterPath="$PROJECT_DIR$/tests/assets/data/study" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/gmt_file/h.all.v6.0.entrez.gmt" afterPath="$PROJECT_DIR$/tests/assets/gmt_file/h.all.v6.0.entrez.gmt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/gmt_file/h.all.v6.0.symbols.gmt" afterPath="$PROJECT_DIR$/tests/assets/gmt_file/h.all.v6.0.symbols.gmt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/gsea_data/GSE4107.cls" afterPath="$PROJECT_DIR$/tests/assets/gsea_data/GSE4107.cls" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/gsea_data/GSE4107.xlsx" afterPath="$PROJECT_DIR$/tests/assets/gsea_data/GSE4107.xlsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/GeneCoExpresion_ID.txt" afterPath="$PROJECT_DIR$/tests/assets/magi_files/GeneCoExpresion_ID.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/Gene_Name_Length.txt" afterPath="$PROJECT_DIR$/tests/assets/magi_files/Gene_Name_Length.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt" afterPath="$PROJECT_DIR$/tests/assets/magi_files/ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/New_ESP_Sereve.txt" afterPath="$PROJECT_DIR$/tests/assets/magi_files/New_ESP_Sereve.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/StringNew_HPRD.txt" afterPath="$PROJECT_DIR$/tests/assets/magi_files/StringNew_HPRD.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/adj1.csv.Tab.BinaryFormat" afterPath="$PROJECT_DIR$/tests/assets/magi_files/adj1.csv.Tab.BinaryFormat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pypathway/tests/magi_files/test.bin" afterPath="$PROJECT_DIR$/tests/assets/magi_files/test.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/network_process.md" afterPath="$PROJECT_DIR$/docs/markdowns/network_process.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/markdowns/propagation.md" afterPath="$PROJECT_DIR$/docs/markdowns/propagation.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb" afterPath="$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_enrichment.py" afterPath="$PROJECT_DIR$/tests/test_enrichment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_magi.py" afterPath="$PROJECT_DIR$/tests/test_magi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_utils.py" afterPath="$PROJECT_DIR$/tests/test_utils.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,17 +49,37 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49194548">
+    <splitter split-orientation="horizontal" split-proportion="0.40738422">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="test_magi.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_magi.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="833">
-                  <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+                <state relative-caret-position="414">
+                  <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="clean.sh" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/clean.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_propagation.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests/test_propagation.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -61,13 +94,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pypathway/analysis/gsea/__init__.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="715">
-                  <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+                <state relative-caret-position="510">
+                  <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
                   <folding>
                     <element signature="e#122#153#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/tests.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -80,14 +125,16 @@
           <file leaf-file-name="test_enrichment.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/tests/test_enrichment.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="715">
-                  <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
-                  <folding />
+                <state relative-caret-position="193">
+                  <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#62#77#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="STRING_BioGID_query.ipynb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="STRING_BioGID_query.ipynb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb">
               <provider selected="true" editor-type-id="ipnb-editor">
                 <state>
@@ -96,12 +143,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test_utils.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="_chi2.c" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pypathway/src/select/_chi2.c">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test_utils.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1751">
-                  <caret line="105" column="81" lean-forward="false" selection-start-line="105" selection-start-column="81" selection-end-line="105" selection-end-column="81" />
-                  <folding />
+                <state relative-caret-position="1774">
+                  <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -163,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/pypathway/src/select/color_coding.h" />
         <option value="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.cpp" />
         <option value="$PROJECT_DIR$/pypathway/src/cluster/PPI_Graph.h" />
@@ -211,9 +269,10 @@
         <option value="$PROJECT_DIR$/pypathway/pathviz/query/__init__.py" />
         <option value="$PROJECT_DIR$/pypathway/utils/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/tests/test_utils.py" />
         <option value="$PROJECT_DIR$/tests/test_enrichment.py" />
         <option value="$PROJECT_DIR$/tests/test_magi.py" />
+        <option value="$PROJECT_DIR$/tests/test_utils.py" />
+        <option value="$PROJECT_DIR$/clean.sh" />
       </list>
     </option>
   </component>
@@ -245,6 +304,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -282,7 +342,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,11 +360,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="pypathway" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pathviz" />
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caches" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,13 +382,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyPathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PyPathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pypathway" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ora" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="obo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,19 +452,19 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pypathway/src/select" />
-      <recent name="$PROJECT_DIR$/examples/analysis" />
-      <recent name="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src" />
-      <recent name="$PROJECT_DIR$/pypathway/tests" />
-      <recent name="$PROJECT_DIR$/docs/markdowns/images/enrichment" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/markdowns/images/network_process" />
       <recent name="$PROJECT_DIR$/docs/markdown" />
       <recent name="$PROJECT_DIR$/docs/markdown/images/enrichment" />
       <recent name="$PROJECT_DIR$/docs/markdown/images" />
       <recent name="$PROJECT_DIR$/pypathway/utils/cache" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/assets" />
+      <recent name="$PROJECT_DIR$/pypathway/src/select" />
+      <recent name="$PROJECT_DIR$/examples/analysis" />
+      <recent name="$PROJECT_DIR$/pypathway/analysis/modelling/third_party/hotnet2/hotnet2/c_ext_src" />
+      <recent name="$PROJECT_DIR$/pypathway/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -731,6 +850,12 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SFStoredExecutionPersistentComponent">
+    <executions>
+      <execution name="Default" sourceToExecute="" />
+    </executions>
+    <lastSelectedExecutionName>Default</lastSelectedExecutionName>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -781,9 +906,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2428115" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25079873" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -791,8 +916,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23069307" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.309901" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -820,17 +945,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pypathway/src/select/color_coding.c" />
-    <entry file="file://$PROJECT_DIR$/pypathway/src/select/PPI_Graph.c" />
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/BestPaths.Length5.Control2.Run0" />
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/network/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/docs/markdowns/modelling.md" />
     <entry file="file://$PROJECT_DIR$/pypathway/pathviz/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/netviz/__init__.py" />
     <entry file="file://$PROJECT_DIR$/docs/markdowns/Utility and Tools.md" />
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/propagation/__init__.py" />
     <entry file="file://$PROJECT_DIR$/docs/markdowns/netviz.md" />
-    <entry file="file://$PROJECT_DIR$/tests/test_propagation.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/BestPaths.Length5.Control1.Run0" />
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/magi.res" />
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/seeds_back" />
@@ -858,40 +977,28 @@
     <entry file="file://$PROJECT_DIR$/pypathway/src/cluster/clustering.cpp" />
     <entry file="file://$PROJECT_DIR$/pypathway/src/cluster/clustering.h" />
     <entry file="file://$PROJECT_DIR$/setup.py" />
-    <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="105" column="81" lean-forward="false" selection-start-line="105" selection-start-column="81" selection-end-line="105" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/utils/wget.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/pathviz/query/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/utils/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/tests.py" />
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/ora/__init__.py" />
     <entry file="file://$PROJECT_DIR$/setup.cfg" />
-    <entry file="file://$PROJECT_DIR$/tests/test_enrichment.py">
+    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/t.tt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="68" column="65" lean-forward="false" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_magi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypathway/analysis/modelling/cache/t.tt">
+    <entry file="file://$PROJECT_DIR$/pypathway/src/select/_chi2.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -901,18 +1008,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pypathway/analysis/gsea/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="30" column="56" lean-forward="false" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="e#122#153#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pathviz/STRING_BioGID_query.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
+    <entry file="file://$PROJECT_DIR$/tests/assets/data/study">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_enrichment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#62#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_propagation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypathway/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-317">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_magi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="44" column="69" lean-forward="false" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1774">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/plot/plot_151376326408531.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clean.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
