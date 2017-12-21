@@ -16,12 +16,12 @@ The example notebook exists in `$project_root/examples/analysis/propagation.ipyn
 
 ### API
 ```python
-def random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -> nx.Graph
+def random_walk(G: nx.Graph, heat: dict, n: int = -1, threshold: float = 1e-6) -> nx.Graph
 ```
 
 ### Arguments:
 * `G: nx.Graph` : the input graph.
-* `heat` : the heat vector, length = |V|. e.g. `[1, 0, 0, 1, 1]`
+* `heat` : the heat dict, should have same length with G, contain the node name and the heat value
 * `n: int = -1` : the time random walk repeats, if n==-1, the loop will stop when the
     threshold is reached.
 * `threshold`: the threshold check whether the steady state is reached.
@@ -35,7 +35,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node.
 # the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
 In [5]: dict(random_walk(G, h).node)
 
 Out [5]: 
@@ -50,12 +50,12 @@ Out [5]:
 
 ### API
 ```
-def random_walk_with_restart(G: nx.Graph, heat: list, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:
+def random_walk_with_restart(G: nx.Graph, heat: dict, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:
 ```
 
 ### Arguments:
 * `G: nx.Graph` : the input graph.
-* `heat` : the heat vector, length = |V|.
+* `heat` : the heat dict, should have same length with G, contain the node name and the heat value
 * `n: int = -1` : the time random walk with restart repeats, if n==-1, the loop will stop when the
     threshold is reached.
 * `rp`: restart probability.
@@ -70,7 +70,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node
 # the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
 In [5]: dict(random_walk_with_restart(G, h, rp=0.7, n=-1).node)
 
 Out [5]: 
@@ -85,12 +85,12 @@ Out [5]:
 
 ### API
 ```
-def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:
+def diffusion_kernel(G: nx.Graph, heat: dict, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:
 ```
 
 ### Arguments:
 * `G: nx.Graph` : the input graph.
-* `heat` : the heat vector, length = |V|.
+* `heat` : the heat dict, should have same length with G, contain the node name and the heat value
 * `n: int = -1` : the time random walk with restart repeats.
 * `rp`: restart probability.
 
@@ -103,7 +103,7 @@ nx.Graph (copied) with node property `heat` with the result heat of each node
 # the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
 In [5]: dict(diffusion_kernel(G, h, rp=0.8, n=100).node)
 
 Out [5]: 

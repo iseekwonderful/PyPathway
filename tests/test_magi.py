@@ -8,12 +8,12 @@ from pypathway import MAGI
 class MAGITest(unittest.TestCase):
     def __init__(self, *args, **kwargs):
         super(MAGITest, self).__init__(*args, **kwargs)
-        if not os.path.exists(os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/adj1.csv.Tab.BinaryFormat"):
+        if not os.path.exists(os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/adj1.csv.Tab.BinaryFormat"):
             self.read_compressed_coExpression_network()
 
     def read_compressed_coExpression_network(self):
-        path_compress = os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/test.bin"
-        path_id = os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/GeneCoExpresion_ID.txt"
+        path_compress = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/test.bin"
+        path_id = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/GeneCoExpresion_ID.txt"
         # read the index
         indexs, out = {}, ""
         with open(path_id) as fp:
@@ -26,12 +26,12 @@ class MAGITest(unittest.TestCase):
         for x, y in cm(indexs.keys(), 2):
             value = max(mat[indexs[x]][indexs[y]], mat[indexs[y]][indexs[x]])
             out += "{}\t{}\t{}\n".format(x, y, value)
-        with open(os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/adj1.csv.Tab.BinaryFormat", "w") as fp:
+        with open(os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/adj1.csv.Tab.BinaryFormat", "w") as fp:
             fp.write(out)
 
     def test_a_pathway_select(self):
         print("We now select a pathway")
-        path = os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/"
+        path = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/"
         MAGI.select_pathway(
             path + 'StringNew_HPRD.txt',
             path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',
@@ -42,7 +42,7 @@ class MAGITest(unittest.TestCase):
 
     def test_b_cluster(self):
         print("we now clustering")
-        path = os.path.dirname(os.path.realpath(__file__)) + "/assets/magi_files/"
+        path = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/"
         r = MAGI.cluster(
             path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt',
             path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 200, 0.3

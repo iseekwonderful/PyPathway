@@ -12,9 +12,9 @@ class TestPropagation(unittest.TestCase):
         :return:
         '''
         G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
-        h = np.array([0, 1, 0, 1, 0])
+        h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
         r = random_walk(G, h)
-        self.assertAlmostEqual(r.node[1]['heat'], 0.3333, 4)
+        self.assertAlmostEqual(r.nodes[1]['heat'], 0.3333, 4)
 
     def test_RWR(self):
         '''
@@ -23,9 +23,9 @@ class TestPropagation(unittest.TestCase):
         :return:
         '''
         G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
-        h = np.array([0, 1, 0, 1, 0])
+        h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
         r = random_walk_with_restart(G, h, rp=0.7)
-        self.assertAlmostEqual(r.node[1]['heat'], 0.1886, 4)
+        self.assertAlmostEqual(r.nodes[1]['heat'], 0.1886, 4)
 
     def test_heat_kernel(self):
         '''
@@ -34,9 +34,9 @@ class TestPropagation(unittest.TestCase):
         :return:
         '''
         G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
-        h = np.array([0, 1, 0, 1, 0])
+        h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
         r = diffusion_kernel(G, h, rp=0.7, n=100)
-        self.assertAlmostEqual(r.node[1]['heat'], 0.4172, 4)
+        self.assertAlmostEqual(r.nodes[1]['heat'], 0.4172, 4)
 
 if __name__ == '__main__':
     unittest.main()
