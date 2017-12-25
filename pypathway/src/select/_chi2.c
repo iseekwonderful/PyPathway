@@ -53,16 +53,19 @@ static PyObject *select_select(PyObject *self, PyObject *args)
     char* i;
     int color;
     int mut;
-    if (!PyArg_ParseTuple(args, "ssssssssii|s", &fileName, &p, &c, &h, &e,
-     &d, &l, &i, &color, &mut, &f)) {
+    int random_seed = 0;
+    if (!PyArg_ParseTuple(args, "ssssssssiii|s", &fileName, &p, &c, &h, &e,
+     &d, &l, &i, &color, &mut, &random_seed, &f)) {
         return NULL;
     }
 
-    int value = pathway_select(p, c, h, e, d, f, l, i, color, mut, fileName);
+//    printf("random seed is %i\n", random_seed);
+
+    int value = pathway_select(p, c, h, e, d, f, l, i, color, mut, fileName, random_seed);
     
     // int value = hi();
     /* Build the output tuple */
-    printf("letus return a value\n");
+//    printf("letus return a value\n");
     PyObject *ret = Py_BuildValue("i", 1);
     return ret;
 }

@@ -258,7 +258,7 @@ totalLengthGenes=0;
 }
 
 
-int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGeneLen, FILE *filterFile, FILE *fpOutputGeneScore, bool filter)
+int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGeneLen, FILE *filterFile, FILE *fpOutputGeneScore, bool filter, int rand_seed)
 {
     char geneName[geneNameLen];
     int numTruncatingControl;
@@ -267,7 +267,7 @@ int assignScoreToBothControlandCases(FILE *fpCases, FILE *fpControl, FILE *fpGen
     int countTotal=0, randId;
     double len;
     double temp;
-    srand(time(NULL));
+    srand(rand_seed);
     // srand(0);
 
 	while(fscanf(fpCases, "%s\t%i\t%lf%s\n", geneName, &numTruncatingControl, &variantScoreCases, variantSubtype)!=EOF)
@@ -376,13 +376,13 @@ void freeCoExpresionGeneHash(){
 	free(coExpresionGeneHashTable);
 }
 
-int createCoExpresionGeneHash(FILE *fp)
+int createCoExpresionGeneHash(FILE *fp, int rand_seed)
 {
     coExpresionGeneHashTable = (coExpresionGeneHash*)malloc(sizeof(coExpresionGeneHash) * maxNumNode);
     for (int i = 0; i < maxNumNode; i++) {
         coExpresionGeneHashTable[i].nodeId = -1;
     }
-    srand((unsigned int)time(NULL));
+    srand((unsigned int)rand_seed);
     int hashId = 0;
     coExpresGeneNum=0;
     int coExprId=0;

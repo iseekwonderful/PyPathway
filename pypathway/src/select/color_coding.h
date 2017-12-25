@@ -20,7 +20,7 @@ extern int colorBinaryRep[21];//color 0 is not there. Starts by color1
 
 int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
     char* co_expression_matrix, char* control_list, char* filter_list,
-    char* length, char* run_id, int num_color, int num_mut, char * file_name);
+    char* length, char* run_id, int num_color, int num_mut, char * file_name, int seed);
 
 extern int controlServMutAllowed;
 

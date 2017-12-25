@@ -9,3 +9,5 @@ rm -r build
 rm -r dist
 rm -r assets
 rm -r caches
+
+find . | grep -E "(\.pdf$)" | xargs rm -rf

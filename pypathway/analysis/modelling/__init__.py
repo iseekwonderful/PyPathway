@@ -85,7 +85,7 @@ class MAGI:
         pool.join()
 
     @staticmethod
-    def select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=mp.cpu_count()):
+    def select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=mp.cpu_count(), rand_seed=0):
         '''
         This function is the wrapper of the pathway_select wrapper, implement parallel programming using
          multiprocessing.Pool.
@@ -114,9 +114,9 @@ class MAGI:
             for j in mutations:
                 seed.append([cache_dir, "BestPaths.Length{}.Control{}.Run0.de".format(i, j), 0, i])
                 if not filter:
-                    args = (cache_dir, ppi, case, coExpId, coExpMat, ctrl, length, run_id, i, j)
+                    args = (cache_dir, ppi, case, coExpId, coExpMat, ctrl, length, run_id, i, j, rand_seed)
                 else:
-                    args = (cache_dir, ppi, case, coExpId, coExpMat, ctrl, length, run_id, i, j, filter)
+                    args = (cache_dir, ppi, case, coExpId, coExpMat, ctrl, length, run_id, i, j, rand_seed, filter)
                 pool.apply_async(_select.select, args=args)
         pool.close()
         pool.join()

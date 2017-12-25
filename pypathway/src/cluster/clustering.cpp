@@ -307,10 +307,14 @@ return minCoExprValue;
 bool isValidCluster(clustersSelected *clus)
 {
 
-    // printf("numServeMutInControl: %i, averageEdgeDensity: %f, averageCoexpresion: %f, total: %f\n",
-    //  clus->numServeMutInControl, clus->averageEdgeDensity, clus->averageCoexpresion, clus->seedScore);
-    // printf("minClusterWeight: %i, minAvgEdgeDensity: %f, minAvgExpr: %f\n", minClusterWeight, minAvgEdgeDensity, minAvgExpr);
-	if (clus->numServeMutInControl<minClusterWeight && clus->averageEdgeDensity>minAvgEdgeDensity && clus->averageCoexpresion>minAvgExpr && isSubGraphConnectedComponenti_WithCoExpr(clus->nodeId, clus->sizeCluster)==true && clus->sizeCluster<=upperLimitSize && minCoExprValueInClus(clus)>=minAvgExpr2)
+//    printf("numServeMutInControl: %i, averageEdgeDensity: %f, averageCoexpresion: %f, total: %f\n",
+//      clus->numServeMutInControl, clus->averageEdgeDensity, clus->averageCoexpresion, clus->seedScore);
+//    printf("minClusterWeight: %i, minAvgEdgeDensity: %f, minAvgExpr: %f\n", minClusterWeight, minAvgEdgeDensity, minAvgExpr);
+//    printf("is connected : %i\n", isSubGraphConnectedComponenti_WithCoExpr(clus->nodeId, clus->sizeCluster));
+//    printf("size: %i, uppersize: %i, minCoExprValueInClus: %f, minAvgExpr2: %f\n", clus->sizeCluster, upperLimitSize, minCoExprValueInClus(clus), minAvgExpr2);
+	if (clus->numServeMutInControl<minClusterWeight && clus->averageEdgeDensity>minAvgEdgeDensity && clus->averageCoexpresion>minAvgExpr &&
+	 isSubGraphConnectedComponenti_WithCoExpr(clus->nodeId, clus->sizeCluster)==true &&
+	  clus->sizeCluster<=upperLimitSize && minCoExprValueInClus(clus)>=minAvgExpr2)
 	{
 		return true;
 	}
@@ -359,7 +363,7 @@ potNewPath = (char **) malloc(300*sizeof(char *));
 		}
 		else
 		{
-//			 printf("%s, %i, %f\n", "WTF invalid cluster", tempCluster->sizeCluster, tempCluster->seedScore);
+			// printf("%s, %i, %f\n", "WTF invalid cluster", tempCluster->sizeCluster, tempCluster->averageCoexpresion);
 			free(tempCluster);
 		}
         }
@@ -578,8 +582,13 @@ if (potClusIdCanMergeToClusCount>0)
 
 int randomConnectedComponents(int randId)
 {
+//printf("total cluster is %i\n", totalClusters);
+if (totalClusters == 0) {
+//    printf("None valid cluster exit!\n");
+    return 0;
+}
 int count=0;
-srand(time(NULL)+randId);
+srand(randId);
 for (int count2=0; count2<500; count2++)
 {
 	count = rand()%totalClusters;		
@@ -638,9 +647,9 @@ int totalClusterLength=0;
 	{
 		totalClusterLength=totalClusterLength+listNodes[listClusterSelected[clusterId].nodeId[count]].length;
         PPI_Node n = listNodes[listClusterSelected[clusterId].nodeId[count]];
-		printf("%s, %i, %i, %i\n", n.nodeName, n.numSevereMutInCases, n.numMissenseMutInCases, n.numSevereMutInControl);
+//		printf("%s, %i, %i, %i\n", n.nodeName, n.numSevereMutInCases, n.numMissenseMutInCases, n.numSevereMutInControl);
 	}
-printf("%i %i %i %i %f %f %f\n", totalClusterLength, listClusterSelected[clusterId].numMissenseMutInCases,listClusterSelected[clusterId].numSevereMutInCases, listClusterSelected[clusterId].numServeMutInControl, listClusterSelected[clusterId].averageCoexpresion, listClusterSelected[clusterId].averageEdgeDensity, listClusterSelected[clusterId].totalScore);
+//printf("%i %i %i %i %f %f %f\n", totalClusterLength, listClusterSelected[clusterId].numMissenseMutInCases,listClusterSelected[clusterId].numSevereMutInCases, listClusterSelected[clusterId].numServeMutInControl, listClusterSelected[clusterId].averageCoexpresion, listClusterSelected[clusterId].averageEdgeDensity, listClusterSelected[clusterId].totalScore);
     return 0;
 }
 
@@ -909,10 +918,9 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	int l, int u, char* aaa, char* i, char* minCoExpr, char* avgCoExpr, 
 	char* avgDensity, char* outputFile)
 {
-	printf("Start!\n");
+	printf("Start! %s\n", s);
 	bestCluster = (clustersSelected *) malloc(sizeof(clustersSelected));
 	FILE *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
-	int randomNum;
 	int countNumParamters=0;
 	fp1=fopen(p,"r");
 	fp2=fopen(c,"r");
@@ -924,18 +932,19 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	lowerLimitSize = l;
 	upperLimitSize = u;
 	pathAlpha = atof(aaa);
-	randomNum= atoi(i);
+	int randomNum= atoi(i);
+	printf("random num is %i\n", randomNum);
 	minAvgExpr2 = atof(minCoExpr);
 	minAvgExpr = atof(avgCoExpr);
 	minAvgEdgeDensity = atof(avgDensity);
 
 	output = fopen(outputFile, "w");
-	srand(time(NULL)+randomNum);
+	srand(randomNum);
 	createPPI_Graph(fp1);
         assignScorePrecalculated(fp2);
-        createCoExpresionGeneHash(fp3);
+        createCoExpresionGeneHash(fp3, randomNum);
 	createCoExpresionMatix(fp4);
-	// printf("Start read path file\n");
+	printf("Start read path file\n");
 	readPathFiles(fp5);
 	markPathsNotToUse();
 	createGraphOfPaths();
@@ -944,108 +953,108 @@ extern "C" int clustering(char* p, char* c, char* h, char* e, char* s, int m,
 	// printf("done!/n");
 	return 0;
 }
-int main(int argv, char *argc[])
-{
-	bestCluster = (clustersSelected *) malloc(sizeof(clustersSelected));
-	FILE *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
-	int randomNum;
-	int countNumParamters=0;
-	/*fp1=fopen(argv[1],"r");//PPI network
-	fp2=fopen(argv[2],"r");//cases
-	fp3=fopen(argv[3],"r");//gene coexpresion name
-	fp4=fopen(argv[4],"r");//gene coexpresion matrix
-	fp5=fopen(argv[5],"r");// set of paths and their lengths;                
-	fp6=fopen(argv[6],"r");// ESP/Control set of mutations
-	minClusterWeight=atoi(argv[7]);
-	lowerLimitSize=atoi(argv[8]);
-	upperLimitSize=atoi(argv[9]);
-	pathAlpha=atof(argv[10]);
-	randomNum=atoi(argv[11]);
-
-	minAvgExpr
-	minAvgExpr2
-	minAvgEdgeDensity
-*/
-	for (int count=0; count<argv; count++)
-	{
-		if (strcmp(argc[count], "-p")==0) //PPI
-		{
-			fp1=fopen(argc[count+1],"r");
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-c")==0)// Cases
-		{
-			fp2=fopen(argc[count+1],"r");
-			countNumParamters++;			
-		}
-		if (strcmp(argc[count], "-h")==0) // gene coexpression hash
-		{
-			fp3=fopen(argc[count+1],"r");
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-e")==0) //
-		{
-			fp4=fopen(argc[count+1],"r");
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-s")==0) // Seed files
-		{
-			fp5=fopen(argc[count+1],"r");
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-m")==0) //min cluster control weight
-		{
-			minClusterWeight=atoi(argc[count+1]);
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-l")==0) //lowerbound size 
-		{
-			lowerLimitSize=atoi(argc[count+1]);
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-u")==0)
-		{
-			upperLimitSize=atoi(argc[count+1]);
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-a")==0)
-		{
-			pathAlpha=atof(argc[count+1]);
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-i")==0)
-		{
-			randomNum=atoi(argc[count+1]);
-			countNumParamters++;
-		}
-		if (strcmp(argc[count], "-minCoExpr")==0)
-		{
-			minAvgExpr2=atof(argc[count+1]);
-		}
-		if (strcmp(argc[count], "-avgCoExpr")==0)
-		{
-			minAvgExpr=atof(argc[count+1]);
-		}
-		if (strcmp(argc[count], "-avgDensity")==0)
-		{
-			minAvgEdgeDensity=atof(argc[count+1]);
-		}
-	}
-
-
-	if (countNumParamters!=10)
-	{
-		printf("usage:\n needs ten paramters to run\n -p <PPI Network> \n -c <cases/control mutaion list> \n -h <Gene CoExpression Id> \n -e <CoExpression Matrix> \n -s <Seed Fild> \n -m <upperbound on contorl mutations> \n -l <lower bound on the size of the module > \n -u <upper bound on the size of cluster> \n -a <minimum ratio of seed score allowed> \n -i <random run id> \n -minCoExpr <minimum pair-wise coexpression value (optional: defualt is set to 0.01) \n -avgCoExpr <minimum average coexpression of the module (optional: defualt is set at 0.415)> \n -avgDensity <average density of PPI (optional, defualt is set at 0.08)> \n");
-		return 0;
-	}
-
-	srand(time(NULL)+randomNum);
-	createPPI_Graph(fp1);
-        assignScorePrecalculated(fp2);
-        createCoExpresionGeneHash(fp3);
-	createCoExpresionMatix(fp4);
-	readPathFiles(fp5);
-	markPathsNotToUse();
-	createGraphOfPaths();
-	randomConnectedComponents(randomNum);
-}
+//int main(int argv, char *argc[])
+//{
+//	bestCluster = (clustersSelected *) malloc(sizeof(clustersSelected));
+//	FILE *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
+//	int randomNum;
+//	int countNumParamters=0;
+//	/*fp1=fopen(argv[1],"r");//PPI network
+//	fp2=fopen(argv[2],"r");//cases
+//	fp3=fopen(argv[3],"r");//gene coexpresion name
+//	fp4=fopen(argv[4],"r");//gene coexpresion matrix
+//	fp5=fopen(argv[5],"r");// set of paths and their lengths;
+//	fp6=fopen(argv[6],"r");// ESP/Control set of mutations
+//	minClusterWeight=atoi(argv[7]);
+//	lowerLimitSize=atoi(argv[8]);
+//	upperLimitSize=atoi(argv[9]);
+//	pathAlpha=atof(argv[10]);
+//	randomNum=atoi(argv[11]);
+//
+//	minAvgExpr
+//	minAvgExpr2
+//	minAvgEdgeDensity
+//*/
+//	for (int count=0; count<argv; count++)
+//	{
+//		if (strcmp(argc[count], "-p")==0) //PPI
+//		{
+//			fp1=fopen(argc[count+1],"r");
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-c")==0)// Cases
+//		{
+//			fp2=fopen(argc[count+1],"r");
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-h")==0) // gene coexpression hash
+//		{
+//			fp3=fopen(argc[count+1],"r");
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-e")==0) //
+//		{
+//			fp4=fopen(argc[count+1],"r");
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-s")==0) // Seed files
+//		{
+//			fp5=fopen(argc[count+1],"r");
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-m")==0) //min cluster control weight
+//		{
+//			minClusterWeight=atoi(argc[count+1]);
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-l")==0) //lowerbound size
+//		{
+//			lowerLimitSize=atoi(argc[count+1]);
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-u")==0)
+//		{
+//			upperLimitSize=atoi(argc[count+1]);
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-a")==0)
+//		{
+//			pathAlpha=atof(argc[count+1]);
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-i")==0)
+//		{
+//			randomNum=atoi(argc[count+1]);
+//			countNumParamters++;
+//		}
+//		if (strcmp(argc[count], "-minCoExpr")==0)
+//		{
+//			minAvgExpr2=atof(argc[count+1]);
+//		}
+//		if (strcmp(argc[count], "-avgCoExpr")==0)
+//		{
+//			minAvgExpr=atof(argc[count+1]);
+//		}
+//		if (strcmp(argc[count], "-avgDensity")==0)
+//		{
+//			minAvgEdgeDensity=atof(argc[count+1]);
+//		}
+//	}
+//
+//
+//	if (countNumParamters!=10)
+//	{
+//		printf("usage:\n needs ten paramters to run\n -p <PPI Network> \n -c <cases/control mutaion list> \n -h <Gene CoExpression Id> \n -e <CoExpression Matrix> \n -s <Seed Fild> \n -m <upperbound on contorl mutations> \n -l <lower bound on the size of the module > \n -u <upper bound on the size of cluster> \n -a <minimum ratio of seed score allowed> \n -i <random run id> \n -minCoExpr <minimum pair-wise coexpression value (optional: defualt is set to 0.01) \n -avgCoExpr <minimum average coexpression of the module (optional: defualt is set at 0.415)> \n -avgDensity <average density of PPI (optional, defualt is set at 0.08)> \n");
+//		return 0;
+//	}
+//
+//	srand(randomNum);
+//	createPPI_Graph(fp1);
+//        assignScorePrecalculated(fp2);
+//        createCoExpresionGeneHash(fp3);
+//	createCoExpresionMatix(fp4);
+//	readPathFiles(fp5);
+//	markPathsNotToUse();
+//	createGraphOfPaths();
+//	randomConnectedComponents(randomNum);
+//}

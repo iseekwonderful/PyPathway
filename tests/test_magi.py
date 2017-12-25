@@ -2,51 +2,42 @@ import unittest
 import pickle
 from itertools import combinations as cm
 import os
+
+import sys
+sys.path.insert(0, "/Users/yangxu/PyPathway")
+
+import pypathway as pt
 from pypathway import MAGI
 
 
 class MAGITest(unittest.TestCase):
-    def __init__(self, *args, **kwargs):
-        super(MAGITest, self).__init__(*args, **kwargs)
-        if not os.path.exists(os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/adj1.csv.Tab.BinaryFormat"):
-            self.read_compressed_coExpression_network()
-
-    def read_compressed_coExpression_network(self):
-        path_compress = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/test.bin"
-        path_id = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/GeneCoExpresion_ID.txt"
-        # read the index
-        indexs, out = {}, ""
-        with open(path_id) as fp:
-            for x in fp.read().split("\n"):
-                if not x: continue
-                i, _, v = x.split("\t")
-                indexs[v] = int(i) - 1
-        with open(path_compress, "rb") as fp:
-            mat = pickle.load(fp)
-        for x, y in cm(indexs.keys(), 2):
-            value = max(mat[indexs[x]][indexs[y]], mat[indexs[y]][indexs[x]])
-            out += "{}\t{}\t{}\n".format(x, y, value)
-        with open(os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/adj1.csv.Tab.BinaryFormat", "w") as fp:
-            fp.write(out)
-
     def test_a_pathway_select(self):
-        print("We now select a pathway")
         path = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/"
         MAGI.select_pathway(
             path + 'StringNew_HPRD.txt',
             path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',
             path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat',
             path + 'New_ESP_Sereve.txt',
-            path + 'Gene_Name_Length.txt'
+            path + 'Gene_Name_Length.txt',
+            rand_seed=10
         )
+        # check if we ge right result
+        cache_dir = os.path.dirname(pt.__file__) + "/analysis/modelling/cache/"
+        with open(cache_dir + "RandomGeneList.0") as fp:
+            self.assertTrue(fp.read().split("\n")[1] == "RUVBL1 3.761159 0 1 0 1768")
+
 
     def test_b_cluster(self):
-        print("we now clustering")
+        print(pt.__file__)
+        print("we now test clustering")
         path = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/"
         r = MAGI.cluster(
             path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt',
-            path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 200, 0.3
+            path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 15, 0.3
         )
+        self.assertTrue(set(r[0].genes.keys()),
+                        {'GATAD2B', 'ZMYND11', 'SMAD4', 'STAG1', 'YY1', 'CTNNB1', 'MECP2', 'CUL1', 'GTF2IRD1',
+                         'HSPA4', 'RUVBL1', 'PSMA7', 'SMAD2', 'PIAS1', 'SMARCC2'})
 
 
 if __name__ == '__main__':

@@ -13,6 +13,8 @@ int colorAssigned[maxNumNode];
 int numColor;
 int colorBinaryRep[21];
 
+int random_seed;
+
 int listOfGenesPicked[100];
 int countListOfGenesPicked;
 const int maxNumServeMutInControl=10;
@@ -137,7 +139,7 @@ void freeMatrixes()
 
 void randomColor()
 {
-    srand(time(NULL));
+    srand(random_seed);
     // srand(0);
     for (int count=0; count<numNodes; count++)
     {
@@ -390,11 +392,19 @@ void runColorCodingMethod(FILE *fp)
 
 int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
     char* co_expression_matrix, char* control_list, char* filter_list,
-    char* length, char* run_id, int num_color, int num_mut, char * file_name) {
+    char* length, char* run_id, int num_color, int num_mut, char * file_name, int seed) {
+
+    if (seed == NULL) {
+        random_seed = time(NULL);
+    } else {
+        random_seed = seed;
+    }
+
+//    printf("We use %i as random seed \n", random_seed);
 
     int randomRunId=0;
     char fileName[300];
-    printf("3Start read file color %i, mut %i!\n", num_color, num_mut);
+    printf("Start read file color %i, mut %i!\n", num_color, num_mut);
 
     FILE *fp, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7;
     int countNumParamters=0;
@@ -420,10 +430,10 @@ int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
     numTurMutArg = num_mut;
     sprintf(fileName,"%s/RandomGeneList.%i\0", file_name, randomRunId);
     FILE *fp8=fopen(fileName,"w");
-    printf("end open out file\n");
+//    printf("end open out file\n");
     createPPI_Graph(fp);
-    assignScoreToBothControlandCases(fp2, fp3, fp4, fp7, fp8, filter);
-    createCoExpresionGeneHash(fp5);
+    assignScoreToBothControlandCases(fp2, fp3, fp4, fp7, fp8, filter, random_seed);
+    createCoExpresionGeneHash(fp5, random_seed);
     createCoExpresionMatix(fp6);
     sprintf(fileName,"%s/BestPaths.Length%i.Control%i.Run%i\0", file_name, numColorArg, numTurMutArg, randomRunId);
     numColor = numColorArg;
@@ -431,7 +441,7 @@ int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
     controlServMutAllowed=numTurMutArg;
     initialize();
     runColorCodingMethod(fp8);
-    printf("Start to free resource\n");
+//    printf("Start to free resource\n");
     freeMatrixes();
     freePPI_Graph();
     freeCoExpresionGeneMatrix();
@@ -442,121 +452,121 @@ int pathway_select(char* ppi_network, char* case_list, char* co_expression_id,
 }
 
 
-int main(int argv, char *argc[])
-{
-
-    int randomRunId=0;
-    char fileName[100];
-
-    time_t t = time( 0 );
-    char tmpBuf[BUFLEN];
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-
-    printf("Start: %s\n", tmpBuf);
-
-    FILE *fp, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7;
-    int countNumParamters=0;
-    bool filter=false;
-    int numColorArg, numTurMutArg;
-
-
-    for (int count=0; count<argv; count++)
-    {
-        if (strcmp(argc[count], "-p")==0) // PPI
-        {
-            fp=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-c")==0) // CASES
-        {
-            fp2=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-d")==0) // CONTROL : ESP
-        {
-            fp3=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-l")==0) // Gene Length
-        {
-            fp4=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-h")==0) // Gene coExpression Hash Table
-        {
-            fp5=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-e")==0) // CoExpression Matrix
-        {
-            fp6=fopen(argc[count+1],"r");
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-i")==0) // ranodm id run
-        {
-            randomRunId = atoi(argc[count+1]);
-            countNumParamters++;
-        }
-        if (strcmp(argc[count], "-f")==0) // genes to filter out (by assiging a very high ESP/Control mutations to it.
-        {
-            fp7=fopen(argc[count+1], "r");
-            filter=true;
-        }
-        if (strcmp(argc[count], "-nc")==0) {
-            numColorArg = atoi(argc[count + 1]);
-        }
-        if (strcmp(argc[count], "-nm")==0) {
-            numTurMutArg = atoi(argc[count + 1]);
-        }
-
-    }
-
-    printf("numColor: %i, numTurnMut: %i\n", numColorArg, numTurMutArg);
-    if (countNumParamters!=7)
-    {
-        printf("usage:\n needs seven paramters to run\n -p <PPI Network> \n -c <cases mutaion list> \n -d <control mutation list> \n -l <Length of each genes> \n -h <Gene CoExpression Id> \n -e <CoExpression Matrix> \n -i <random run id> \n -f <filter genes (optional, defualt is no gene is filtered) \n");
-        return 0;
-    }
-
-    //	FILE *fp=fopen(argc[1],"r");//PPI Network
-    //	FILE *fp2=fopen(argc[2],"r");//The cases
-    //	FILE *fp3=fopen(argc[3],"r");//The control
-    //	FILE *fp4=fopen(argc[4],"r");//The gene Length
-    //maxControlWeight=atoi(argc[5]);
-    //	FILE *fp5=fopen(argc[5],"r");//The gene coexpresions
-    //	FILE *fp6=fopen(argc[6],"r");
-    //	randomRunId = atoi(argc[7]);
-    sprintf(fileName,"RandomGeneList.%i\0", randomRunId);
-    FILE *fp8=fopen(fileName,"w");
-    //numColor=atoi(argc[7]);//
-    //controlServMutAllowed=atoi(argc[8]);
-    createPPI_Graph(fp);
-    assignScoreToBothControlandCases(fp2, fp3, fp4, fp7, fp8, filter);
-    createCoExpresionGeneHash(fp5);
-    createCoExpresionMatix(fp6);
-
-//     for (int countNumColor=8; countNumColor>4; countNumColor--)
-//     {
-//     	numColor=countNumColor;
-//     	for (int countTrunMut=1; countTrunMut<5; countTrunMut++)
-//     	{
-            t = time( 0 );
-    numColor = numColorArg;
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    printf("numColor: %i, numTurnMut: %i, timestamp: %s\n", numColorArg, numTurMutArg, tmpBuf);
-    sprintf(fileName,"BestPaths.Length%i.Control%i.Run%i\0", numColorArg, numTurMutArg, randomRunId);
-    numColor = numColorArg;
-    fp8=fopen(fileName, "w");
-    controlServMutAllowed=numTurMutArg;
-    initialize();
-    runColorCodingMethod(fp8);
-    freeMatrixes();
-    fclose(fp8);
-//     	}
-//     }
-    t = time( 0 );
-    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
-    printf("done: timestamp: %s\n", tmpBuf);
-
-}
-
+//int main(int argv, char *argc[])
+//{
+//
+//    int randomRunId=0;
+//    char fileName[100];
+//
+//    time_t t = time( 0 );
+//    char tmpBuf[BUFLEN];
+//    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
+//
+//    printf("Start: %s\n", tmpBuf);
+//
+//    FILE *fp, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7;
+//    int countNumParamters=0;
+//    bool filter=false;
+//    int numColorArg, numTurMutArg;
+//
+//
+//    for (int count=0; count<argv; count++)
+//    {
+//        if (strcmp(argc[count], "-p")==0) // PPI
+//        {
+//            fp=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-c")==0) // CASES
+//        {
+//            fp2=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-d")==0) // CONTROL : ESP
+//        {
+//            fp3=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-l")==0) // Gene Length
+//        {
+//            fp4=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-h")==0) // Gene coExpression Hash Table
+//        {
+//            fp5=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-e")==0) // CoExpression Matrix
+//        {
+//            fp6=fopen(argc[count+1],"r");
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-i")==0) // ranodm id run
+//        {
+//            randomRunId = atoi(argc[count+1]);
+//            countNumParamters++;
+//        }
+//        if (strcmp(argc[count], "-f")==0) // genes to filter out (by assiging a very high ESP/Control mutations to it.
+//        {
+//            fp7=fopen(argc[count+1], "r");
+//            filter=true;
+//        }
+//        if (strcmp(argc[count], "-nc")==0) {
+//            numColorArg = atoi(argc[count + 1]);
+//        }
+//        if (strcmp(argc[count], "-nm")==0) {
+//            numTurMutArg = atoi(argc[count + 1]);
+//        }
+//
+//    }
+//
+//    printf("numColor: %i, numTurnMut: %i\n", numColorArg, numTurMutArg);
+//    if (countNumParamters!=7)
+//    {
+//        printf("usage:\n needs seven paramters to run\n -p <PPI Network> \n -c <cases mutaion list> \n -d <control mutation list> \n -l <Length of each genes> \n -h <Gene CoExpression Id> \n -e <CoExpression Matrix> \n -i <random run id> \n -f <filter genes (optional, defualt is no gene is filtered) \n");
+//        return 0;
+//    }
+//
+//    //	FILE *fp=fopen(argc[1],"r");//PPI Network
+//    //	FILE *fp2=fopen(argc[2],"r");//The cases
+//    //	FILE *fp3=fopen(argc[3],"r");//The control
+//    //	FILE *fp4=fopen(argc[4],"r");//The gene Length
+//    //maxControlWeight=atoi(argc[5]);
+//    //	FILE *fp5=fopen(argc[5],"r");//The gene coexpresions
+//    //	FILE *fp6=fopen(argc[6],"r");
+//    //	randomRunId = atoi(argc[7]);
+//    sprintf(fileName,"RandomGeneList.%i\0", randomRunId);
+//    FILE *fp8=fopen(fileName,"w");
+//    //numColor=atoi(argc[7]);//
+//    //controlServMutAllowed=atoi(argc[8]);
+//    createPPI_Graph(fp);
+//    assignScoreToBothControlandCases(fp2, fp3, fp4, fp7, fp8, filter);
+//    createCoExpresionGeneHash(fp5);
+//    createCoExpresionMatix(fp6);
+//
+////     for (int countNumColor=8; countNumColor>4; countNumColor--)
+////     {
+////     	numColor=countNumColor;
+////     	for (int countTrunMut=1; countTrunMut<5; countTrunMut++)
+////     	{
+//            t = time( 0 );
+//    numColor = numColorArg;
+//    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
+//    printf("numColor: %i, numTurnMut: %i, timestamp: %s\n", numColorArg, numTurMutArg, tmpBuf);
+//    sprintf(fileName,"BestPaths.Length%i.Control%i.Run%i\0", numColorArg, numTurMutArg, randomRunId);
+//    numColor = numColorArg;
+//    fp8=fopen(fileName, "w");
+//    controlServMutAllowed=numTurMutArg;
+//    initialize();
+//    runColorCodingMethod(fp8);
+//    freeMatrixes();
+//    fclose(fp8);
+////     	}
+////     }
+//    t = time( 0 );
+//    strftime(tmpBuf, BUFLEN, "%Y-%m-%d %H:%M:%S", localtime(&t)); //format date and time.
+//    printf("done: timestamp: %s\n", tmpBuf);
+//
+//}
+//

@@ -68,9 +68,9 @@ int createPPI_Graph(FILE *);
 //int assignScoreCases(FILE *);
 //int assignScoreControls(FILE *);
 int createCoExpresionMatix(FILE *);
-int assignScoreToBothControlandCases(FILE *, FILE *, FILE *, FILE *, FILE *, bool);
+int assignScoreToBothControlandCases(FILE *, FILE *, FILE *, FILE *, FILE *, bool, int);
 int assignScorePrecalculated(FILE *);
-int createCoExpresionGeneHash(FILE *);
+int createCoExpresionGeneHash(FILE *, int);
 int isConnectedPPI(int, int);
 double log_N_Choose_M(int , int);
 bool isSubGraphConnectedComponent(int *, int); // a list of node Ids and the number of noces
