@@ -226,7 +226,7 @@ class BioGRID(Database):
         cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/')
         if not os.path.exists(cache_dir + 'biogrid'):
             # the organism file is not exist, we have to download
-            print("Download network sets from BioGRID, it will take several minutes")
+            print("Download network sets from BioGRID, this may take several minutes")
             # "https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip"
             # wget.download("https://thebiogrid.org/downloads/archives/Release%20Archive/BIOGRID-3.4.151/BIOGRID-ORGANISM-3.4.151.tab.zip",
             #               cache_dir + 'biogrid.zip')
@@ -477,7 +477,7 @@ class STRING(Database):
         cache_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'cache/')
         if not os.path.exists(cache_dir + 'st-{}.gz'.format(numeric_id)):
             # download from remote
-            print("Download {} network from STRING, it may take several minutes".format(numeric_id))
+            print("Download {} network from STRING, this may take several minutes".format(numeric_id))
             headers = {
                 "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
                 "accept-encoding": "gzip, deflate, br",

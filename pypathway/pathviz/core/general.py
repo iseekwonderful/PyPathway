@@ -101,7 +101,7 @@ def compress(data):
     for i, x in enumerate(data[1:]):
         first_dif.append((x[0] - data[i][0], x[1] - data[i][1]))
     print(max([x[0] for x in first_dif[1:]]))
-    with open("../static/assets/raw2.json", "w") as fp:
+    with open("../static/assets/raw.json", "w") as fp:
         fp.write(json.dumps(data))
 
 
@@ -116,7 +116,7 @@ def vertex2id(v):
 
 def data_prepare():
     import pymysql
-    con = pymysql.connect(user="root", passwd="19920819xy", db="reactome2")
+    con = pymysql.connect(user="root", passwd="19920819xy", db="reactome4")
     cursor = con.cursor()
     cursor.execute("select DB_ID, representedInstance from Vertex")
     f = cursor.fetchall()

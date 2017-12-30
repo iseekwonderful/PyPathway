@@ -622,10 +622,10 @@ class SBGNRoot(SBGNObject):
             if not hasattr(x, "id") or not hasattr(x, 'type'):
                 continue
             if x.type == 'simple chemical':
-                print('chemical')
+                # print('chemical')
                 eid = x.raw_id.split("_")[1]
                 bioId = vertex2id(eid)
-                print(bioId)
+                # print(bioId)
                 json_cor = rp.search_nodes(bioId)
                 if not json_cor:
                     # print(x.__dict__)

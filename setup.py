@@ -26,7 +26,7 @@ requirements = [
     'ipython',
     'jupyter',
     'echarts-python',
-    'numpy',
+    'numpy>=1.13.0',
     'h5py',
 ]
 
@@ -64,7 +64,7 @@ if sys.platform == "darwin":
 
 setup(
     name='pypathway',
-    version='0.3.8',
+    version='0.4.0',
     description="A Python package biological network analysis and visualization",
     long_description=readme,
     author="sheep",

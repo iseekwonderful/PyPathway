@@ -1,6 +1,6 @@
 # Implementation correctness
 
-Here we will demonstrate the implementation correctness by comparing the result to exist implementation in R or C lang.
+Here we demonstrate the implementation correctness by comparing the result to exist implementation in R or C lang.
 
 ## ORA and SPIA
 The SPIA method including the result of ORA analysis thus we check the implementation of SPIA and ORA together in this section.
@@ -172,7 +172,18 @@ The top5 result is list in the table below.
 </table>
 
 ## GSEA
-We use the Java implementation from board institute to check the implementation correctness.
+We use the Java implementation from board institute to check the implementation correctness. The `class vector` and the `expression data` is available at [Github](https://github.com/iseekwonderful/PyPathway/tree/master/tests/assets/gsea_data). The GSEA algorithm, use random permutation to calculate NES and we can not use same random seed and random algorithm in `Java` and `Python`. So we compare the es of the top five pathway in KEGG enrichment and find that the result is identical to the original GSEA Java implementation
+
+```
+Term
+Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280   -0.836357
+Glycerolipid metabolism_Homo sapiens_hsa00561                      -0.674108
+Peroxisome_Homo sapiens_hsa04146                                   -0.672286
+Fatty acid degradation_Homo sapiens_hsa00071                       -0.659410
+Fatty acid metabolism_Homo sapiens_hsa01212                        -0.631014
+Name: es, dtype: float64
+```
+
 ## Enrichnet
 We use the we interface provided by `Enrichnet` to check the correctness of the method.
 ### Result of the Enrichnet web interface
@@ -324,7 +335,7 @@ en = Enrichnet.run(genesets=sym, graph='string')
   </tbody>
 </table>
 
-## Propagation
+## Network Propagation
 ### Heat diffuse
 We use [Cytoscape Diffusion APP](http://apps.cytoscape.org/apps/diffusion) to check the correctness of the heat diffusion.
 #### Result of Diffusion APP
@@ -356,31 +367,47 @@ diffusion_kernel(G, h, rp=0.7, n=100).node
 ## MAGI
 
 ### Pathway select
-
+The test file of MAGI could be found in [Github](https://github.com/iseekwonderful/PyPathway/tree/master/tests/assets/smaller_magi), and we use a modified C version of MAGI only set the random seed to 10 and compile it in `macOS 10.12.6` and compiler `LLVM 9.0` to generate a random free result.
+ 
 #### original
-We compile MAGI source code in Ubuntu 14.04 and run pathway select with following CMD. (Note that `/Volumes/Data/magi` is the location of official example file dir).
+**1. pathway select**
 
 ``` shell
-./Pathway_Select -p /Volumes/Data/magi/StringNew_HPRD.txt -c /Volumes/Data/magi/ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt -h /Volumes/Data/magi/GeneCoExpresion_ID.txt -e /Volumes/Data/magi/adj1.csv.Tab.BinaryFormat -d /Volumes/Data/magi/New_ESP_Sereve.txt -l /Volumes/Data/magi/Gene_Name_Length.txt -i 1
+./Pathway_Select -p StringNew_HPRD.txt -c ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt -h GeneCoExpresion_ID.txt -e adj1.csv.Tab.BinaryFormat -d New_ESP_Sereve.txt -l Gene_Name_Length.txt -i 0
 ```
 
-For **BestPaths.Length8.Control4.Run0** we find 430 identical
-Candidate of best path.
+**2. cluster**
+
+```shell
+-c RandomGeneList.0 -a 0.3 -s seeds -avgCoExpr 0.415 -avgDensity 0.08 -e adj1.csv.Tab.BinaryFormat -l 5 -i cluster -p StringNew_HPRD.txt -h GeneCoExpresion_ID.txt -m 1 -u 10 -minCoExpr 0.01
+```
 
 #### PyPathway
-We use following code to run pathway select in pypathway
 
-``` python
-path = "/Volumes/Data/magi/"
+**1. pathway select**
+
+```
 MAGI.select_pathway(
     path + 'StringNew_HPRD.txt', 
     path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt', 
     path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 
     path + 'New_ESP_Sereve.txt',
-    path + 'Gene_Name_Length.txt'
+    path + 'Gene_Name_Length.txt',
+    rand_seed = 10
 )
 ```
 
-For **BestPaths.Length8.Control4.Run0** we also find 430 identical Candidate of best path and is identical to the original result.
+**2. cluster**
 
-### Cluster
+```
+r = MAGI.cluster(
+    path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', 
+    path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 10, 0.3
+)
+```
+
+### Result
+We get same highest scored submodule:
+```
+{'GTF2IRD1': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.045591', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'CTNNB1': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '6.503305', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMAD4': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '0.000000', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'CDC73': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '0.000000', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'HSPA4': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.139670', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMARCC2': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.808325', 'numSevereMutInControl': '1', 'weightControl': '0'}, 'PIAS1': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.515701', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMAD2': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '2.088150', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'ZMYND11': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.822162', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'GATAD2B': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.588371', 'numSevereMutInControl': '2', 'weightControl': '0'}}
+```
