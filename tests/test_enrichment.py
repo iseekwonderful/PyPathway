@@ -18,6 +18,7 @@ class TestEnrichment(unittest.TestCase):
 
         :return: None
         '''
+        print("Test general ora")
         # load gmt file
         gmt_path = os.path.dirname(os.path.realpath(__file__)) + "/assets/gmt_file/h.all.v6.0.entrez.gmt"
         gmt = GMTUtils.parse_gmt_file(gmt_path)
@@ -33,6 +34,7 @@ class TestEnrichment(unittest.TestCase):
 
         :return: None
         '''
+        print("test kegg")
         # run test
         r = KEGG.run(self.c.deg_list, self.c.background, organism='hsa')
         # check result
@@ -45,12 +47,13 @@ class TestEnrichment(unittest.TestCase):
 
         :return: None
         '''
+        print("test go")
         # if obo file not found, will be auto downloaded
         r = IdMapping.convert_to_dict(input_id=self.c.background, source='ENTREZID', target="GO", species='hsa')
-        rg = GO.run([str(x) for x in self.c.deg_list], [str(x) for x in self.c.background], r, obo="go-basic.obo")
+        rg = GO.run([str(x) for x in self.c.deg_list[:100]], [str(x) for x in self.c.background], r, obo="go-basic.obo")
         # check result
-        self.assertEqual(rg.table.sort_values("p_bonferroni").iloc[0][0], "GO:0044444")
-        self.assertAlmostEqual(rg.table.sort_values("p_bonferroni").iloc[0][-2], 4.73e-102)
+        self.assertEqual(rg.table.sort_values("p_bonferroni").iloc[0][0], "GO:0006635")
+        self.assertAlmostEqual(rg.table.sort_values("p_bonferroni").iloc[0][-2], 3.29e-7)
 
     def test_gsea(self):
         '''
@@ -58,29 +61,24 @@ class TestEnrichment(unittest.TestCase):
 
         :return:
         '''
+        print("test gsea")
         dir = os.path.dirname(os.path.realpath(__file__)) + "/assets/gsea_data/"
         phenoA, phenoB, class_vector = GSEA.parse_class_vector(dir + "GSE4107.cls")
         gene_exp = pd.read_excel(dir + "GSE4107.xlsx")
-        r = GSEA.run(data=gene_exp.iloc[:1000], gmt="KEGG_2016", cls=class_vector)
+        r = GSEA.run(data=gene_exp.iloc[:100], gmt="KEGG_2016", cls=class_vector)
         # check result
         self.assertEqual(r.table.sort_values("es").iloc[0].name,
-                         'Valine, leucine and isoleucine degradation_Homo sapiens_hsa00280')
-        self.assertAlmostEqual(r.table.sort_values("es").iloc[0].es, -0.8363, places=3)
+                         'ABC transporters_Homo sapiens_hsa02010')
+        self.assertAlmostEqual(r.table.sort_values("es").iloc[0].es, -0.3421, places=3)
 
-    def test_spia(self):
-        r = SPIA.run(all=self.c.background, de=self.c.deg, organism='hsa')
-        # check
-        self.assertEqual(r.table.sort_values("pPERT").iloc[0].name, "04510")
-        self.assertAlmostEqual(r.table.sort_values("pPERT").iloc[0].pPERT, 5e-6)
-
-    # def test_enrichnet(self):
-    #     sym = IdMapping.convert(input_id=self.c.deg_list, source='ENTREZID', target="SYMBOL", species='hsa')
-    #     sym = [x[1][0] for x in sym if x[1]]
-    #     en = Enrichnet.run(genesets=sym, graph='string')
+    # def test_spia(self):
+    #     print("test spia")
+    #     # de = {k: v for i, (k, v) in enumerate(self.c.deg.items()) if i < 10}
+    #     r = SPIA.run(all=self.c.background, de=self.c.deg, organism='hsa')
     #     # check
-    #     self.assertEqual(en.table.sort_values("Fisher q-value").iloc[0]["Annotation (pathway/process)"],
-    #                      "hsa00280:Valine, leucine and isoleucine degradation")
-    #     self.assertAlmostEqual(en.table.sort_values("Fisher q-value").iloc[0]["XD-score"], 4.33, 2)
+    #     # print(r.table.sort_values("pPERT").iloc[0])
+    #     self.assertEqual(r.table.sort_values("pPERT").iloc[0].name, "04510")
+    #     self.assertAlmostEqual(r.table.sort_values("pPERT").iloc[0].pPERT, 5e-06)
 
 
 if __name__ == '__main__':
