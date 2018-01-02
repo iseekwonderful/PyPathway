@@ -54,6 +54,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../network_process/">Network process</a>
 	    </li>
           
@@ -74,19 +79,9 @@
     
         <ul>
         
-            <li><a class="toctree-l4" href="#paper">Paper</a></li>
-        
             <li><a class="toctree-l4" href="#original-c-implementation">Original C Implementation</a></li>
         
-        </ul>
-    
-
-    <li class="toctree-l3"><a href="#overview">Overview</a></li>
-    
-
-    <li class="toctree-l3"><a href="#usage">Usage</a></li>
-    
-        <ul>
+            <li><a class="toctree-l4" href="#overview">Overview</a></li>
         
             <li><a class="toctree-l4" href="#pathway_select">pathway_select</a></li>
         
@@ -95,11 +90,14 @@
         </ul>
     
 
+    <li class="toctree-l3"><a href="#export-result">Export result</a></li>
+    
+
     </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../propagation/">propagation</a>
+    <a class="" href="../propagation/">Propagation</a>
                 </li>
     </ul>
 	    </li>
@@ -107,6 +105,16 @@
             <li class="toctree-l1">
 		
     <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../utils/">Utilities and tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../begin/">Guide For Beginner</a>
 	    </li>
           
         </ul>
@@ -149,59 +157,58 @@
             <div class="section">
               
                 <h2 id="magi">MAGI</h2>
-<h4 id="paper">Paper</h4>
-<blockquote>
-<p><a href="http://genome.cshlp.org/content/early/2014/11/05/gr.178855.114.abstract">The discovery of integrated gene networks for autism and related disorders</a></p>
-</blockquote>
-<h4 id="original-c-implementation">Original C Implementation</h4>
-<p><a href="https://eichlerlab.gs.washington.edu/MAGI/">https://eichlerlab.gs.washington.edu/MAGI/</a> The source and example are available in this website.</p>
-<h2 id="overview">Overview</h2>
-<p>The C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler.</p>
-<h2 id="usage">Usage</h2>
-<p>The original C implementation are migrate into Python C extension, The <code>MAGI</code> class are used to execute the <code>pathway_select</code> and the <code>clustring</code>. The visualization methods are provided to plot the <code>module</code> network.</p>
+<p>MAGI ( Merge Affected Genes into Integrated networks ) is originally published in the paper <a href="http://genome.cshlp.org/content/early/2014/11/05/gr.178855.114.abstract">The discovery of integrated gene networks for autism and related disorders</a>. Which combines the interactive network and the co-expression network to find functional modules.</p>
+<h3 id="original-c-implementation">Original C Implementation</h3>
+<p><a href="https://eichlerlab.gs.washington.edu/MAGI/">https://eichlerlab.gs.washington.edu/MAGI/</a> The source and example files are available in this website.</p>
+<h3 id="overview">Overview</h3>
+<p>The C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler. The <code>MAGI</code> class including the <code>pathway_select</code> and the <code>clustring</code> module. The visualization methods are provided to plot the <code>module</code>'s network.</p>
 <h3 id="pathway_select">pathway_select</h3>
-<p>The statistic method <code>MAGI.select_pathway</code> are used to generate the seed pathway use color-coding algorithm.</p>
-<pre><code>select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=8)
+<p>The static method <code>MAGI.select_pathway</code> are used to generate the seed pathway use color-coding algorithm.</p>
+<pre><code>select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=4)
 </code></pre>
 
-<p><strong>Parameter</strong>
-<em> <code>ppi</code>: the Protein-protein interaction network, example: <code>StringNew_HPRD</code>.
-</em> <code>case</code>: the case denote mutation list example: <code>ID_2_Autism_4_Severe_Missense.Clean_WithNew</code>
-<em> <code>coExpId</code>: The input gives the order of each gene appearing in the coExpression matrix. example <code>GeneCoExpresion_ID</code>
-</em> <code>coExpMat</code>: the Pairwise gene coexpression values. example: <code>adj1.csv.Tab.BinaryFormat</code>.
-<em> <code>ctrl</code>: The number of mutations in each gene in controls. example: <code>New_ESP_Sereve</code>
-</em> <code>filter</code>: optional, remove set of the gene in PPI.
-* <code>length</code>: the length of each genes, example: <code>Gene_Name_Length</code></p>
-<p><strong>Example</strong>
-<em>note</em>: all the file is in the <code>.</code> folder. if not, should use relative or absolute path.</p>
-<pre><code># path is the path to the assets file.
+<p><strong>Parameters</strong></p>
+<ul>
+<li><code>ppi</code>: the Protein-protein interaction network, example: <code>StringNew_HPRD</code>.</li>
+<li><code>case</code>: the case denote mutation list, example: <code>ID_2_Autism_4_Severe_Missense.Clean_WithNew</code></li>
+<li><code>coExpId</code>: The input gives the order of each gene appearing in the coExpression matrix. example <code>GeneCoExpresion_ID</code></li>
+<li><code>coExpMat</code>: the Pairwise gene coexpression values, example: <code>adj1.csv.Tab.BinaryFormat</code>.</li>
+<li><code>ctrl</code>: The number of mutations in each gene in controls. example: <code>New_ESP_Sereve</code></li>
+<li><code>filter</code>: optional, remove set of the gene in PPI.</li>
+<li><code>length</code>: the length of each genes, example: <code>Gene_Name_Length</code></li>
+</ul>
+<p><strong>Example</strong></p>
+<p><em>note</em>: put the <a href="https://eichlerlab.gs.washington.edu/MAGI/">example assets</a> to the path folder.</p>
+<pre><code>path = &quot;../../tests/assets/smaller_magi/&quot;
 MAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',
                    path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', path + 'New_ESP_Sereve.txt',
                    path + 'Gene_Name_Length.txt')
 </code></pre>
 
-<p>The seed file, random list file will be written to the <code>cache</code> dir.</p>
+<p>Output file in this step including the seed file and the random list file will be written to the <code>cache</code> dir.</p>
 <h3 id="clustering">Clustering</h3>
-<p>the statistic method <code>MAGI.clustering</code> are used to cluster the seed pathway generated in the last step.</p>
+<p>This step cluster the seeds pathway we get in the previous step to a functional module.the static method <code>MAGI.clustering</code> are used to do this job.</p>
 <pre><code class="python">def cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,
                 min_size_of_module, max_size_of_module, min_ratio_of_seed,
                 minCoExpr=None, avgCoExpr=None, avgDensity=None, seed=None, score=None):
 
 </code></pre>
 
-<p><strong>Parameter</strong>
-<em> <code>ppi</code>: the Protein-protein interaction network, example: <code>StringNew_HPRD</code>.
-</em> <code>coExpId</code>: The input gives the order of each gene appearing in the coExpression matrix. example <code>GeneCoExpresion_ID</code>
-<em> <code>coExpMat</code>: the Pairwise gene coexpression values. example: <code>adj1.csv.Tab.BinaryFormat</code>.
-</em> <code>upper_mutation_on_control</code>: The total number of mutations in control's allowed.
-<em> <code>min_size_of_module</code>:     The minimum number of genes in the module
-</em> <code>max_size_of_module</code>:     The maximum number of genes in the module
-<em> <code>min_ratio_of_seed</code>: For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper <code>0.5</code> was used)
-</em> <code>minCoExpr</code>: The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e. <code>r^2&gt;0.01</code>, which is the median coexpression value in the input <code>adj1.csv.Tab.BinaryFormat</code>)
-<em> <code>avgCoExpr</code>: The minimum average coexpression of the modules allowed (the default is <code>0.415</code>)
-</em> <code>avgDensity</code>:         The minimum avergae PPI density of the modules allowed (the default is 0.08)
-<em> <code>seed</code>: if the <code>MAGI.select_pathway</code> is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here
-</em> <code>score</code>: similar to <code>seed</code>, input CLI generate score file path else None;</p>
+<p><strong>Parameter</strong></p>
+<ul>
+<li><code>ppi</code>: the Protein-protein interaction network, example: <code>StringNew_HPRD</code>.</li>
+<li><code>coExpId</code>: The input gives the order of each gene appearing in the coExpression matrix. example <code>GeneCoExpresion_ID</code></li>
+<li><code>coExpMat</code>: the Pairwise gene coexpression values. example: <code>adj1.csv.Tab.BinaryFormat</code>.</li>
+<li><code>upper_mutation_on_control</code>: The total number of mutations in control's allowed.</li>
+<li><code>min_size_of_module</code>:     The minimum number of genes in the module</li>
+<li><code>max_size_of_module</code>:     The maximum number of genes in the module</li>
+<li><code>min_ratio_of_seed</code>: For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper <code>0.5</code> was used)</li>
+<li><code>minCoExpr</code>: The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e. <code>r^2&gt;0.01</code>, which is the median coexpression value in the input <code>adj1.csv.Tab.BinaryFormat</code>)</li>
+<li><code>avgCoExpr</code>: The minimum average coexpression of the modules allowed (the default is <code>0.415</code>)</li>
+<li><code>avgDensity</code>:         The minimum avergae PPI density of the modules allowed (the default is 0.08)</li>
+<li><code>seed</code>: if the <code>MAGI.select_pathway</code> is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here</li>
+<li><code>score</code>: similar to <code>seed</code>, input CLI generate score file path else None;</li>
+</ul>
 <p><strong>Example</strong></p>
 <pre><code class="python">result = MAGI.cluster(path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 2, 5, 100, 0.5)
 </code></pre>
@@ -210,6 +217,14 @@ MAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Mi
 <pre><code class="python"># plot the result
 result[0].plot()
 </code></pre>
+
+<p><img alt="" src="../images/modelling/magiview.png" /></p>
+<h2 id="export-result">Export result</h2>
+<p>Use <code>MAGIExport.export</code> method to export the result of a clustering result.</p>
+<pre><code>MAGIExport.export(result)
+</code></pre>
+
+<p>Which generates a HTML page displaying the modules and its visualization.</p>
               
             </div>
           </div>
@@ -217,7 +232,7 @@ result[0].plot()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../propagation/" class="btn btn-neutral float-right" title="propagation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../propagation/" class="btn btn-neutral float-right" title="Propagation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../enrichment/" class="btn btn-neutral" title="Enrichment"><span class="icon icon-circle-arrow-left"></span> Previous</a>

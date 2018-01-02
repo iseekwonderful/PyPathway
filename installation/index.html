@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installation - Documation of PyPathway</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installation";
+    var mkdocs_page_input_path = "installation.md";
+    var mkdocs_page_url = "/installation/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documation of PyPathway</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Overview</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Installation</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#installation">Installation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#install-via-anaconda">Install via Anaconda</a></li>
+        
+            <li><a class="toctree-l3" href="#from-scratch">From scratch</a></li>
+        
+            <li><a class="toctree-l3" href="#troubleshooting">Troubleshooting</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../network_process/">Network process</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Analysis</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../enrichment/">Enrichment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../modelling/">Modelling</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../propagation/">Propagation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../utils/">Utilities and tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../begin/">Guide For Beginner</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documation of PyPathway</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Installation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/installation.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installation">Installation</h1>
+<h2 id="install-via-anaconda">Install via Anaconda</h2>
+<ol>
+<li>Download and install Anaconda from <a href="https://www.anaconda.com/download/#macos">Anaconda site.</a></li>
+<li>
+<p>Install Pypathway</p>
+<p><code>conda install -c steamedsheep pypathway</code></p>
+</li>
+</ol>
+<h2 id="from-scratch">From scratch</h2>
+<p>Setup the compiler and build the source from pypi. This method is not recommended for beginner. Installation is tested in <code>Ubuntu 16.10</code>, <code>Ubuntu 16.04</code>, <code>Windows 10 1703</code>, <code>macOS 10.12.6</code> and <code>macOS 10.13.1</code>. Note that most of linux system come with gcc and build tools, if not, please install compiler using package manager or build from source.</p>
+<h3 id="ubuntu">Ubuntu</h3>
+<ol>
+<li>
+<p>update and upgrade the system</p>
+<p><code>sudo apt update; sudo apt upgrade;</code></p>
+</li>
+<li>
+<p>Install <code>Python</code> and its related package</p>
+<p><code>sudo apt install python3-dev python3-pip python3-tk</code></p>
+</li>
+<li>
+<p>Install <strong>numpy</strong></p>
+<p><code>pip3 install numpy</code></p>
+</li>
+<li>
+<p>Install pypathway via pypi</p>
+<p><code>pip3 install pypathway</code></p>
+</li>
+</ol>
+<h3 id="macos">macOS</h3>
+<ol>
+<li>
+<p>if necessary, install <a href="https://brew.sh/">Homebrew</a></p>
+<p><code>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></p>
+</li>
+<li>
+<p>If necessary install python3 and pip</p>
+<p><code>brew install python3</code></p>
+</li>
+<li>
+<p>Install PyPathway via pip</p>
+<p><code>pip3 install numpy
+pip3 install pypathway</code></p>
+</li>
+</ol>
+<h3 id="windows">Windows</h3>
+<p><strong>Install PyPathway via Anaconda is highly recommended in windows!</strong></p>
+<p>Please refer to the section <a href="../installation/#install-via-anaconda">Install PyPathway via Anaconda</a>. If you still want to install via <code>pypi</code>, this guide may help you.</p>
+<ol>
+<li>
+<p>Install Python3</p>
+<ul>
+<li>Download python3.6 from following link <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>. </li>
+<li>Select <code>Add to PATH</code> while the installation</li>
+</ul>
+</li>
+<li>
+<p>Install VS2015 compiler</p>
+<ul>
+<li>download and install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ 2015 Build Tools</a></li>
+</ul>
+</li>
+<li>
+<p>Install PreCompiled numpy with mkl packages</p>
+<ul>
+<li>Download numpy with mkl from <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy">https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy</a> and Install it.</li>
+</ul>
+</li>
+<li>
+<p>Install PyPathway</p>
+<p><code>pip3 install pypathway</code></p>
+</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ol>
+<li>
+<p><strong>Hard-link code</strong> error: This error should occur while installing pypathway using conda in windows. We now cannot figure out the solution, but install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Visual C++ 2015 Build Tools</a> and then install anaconda's pip should fix this issue</p>
+<p><code>pip install pypathway</code></p>
+</li>
+<li>
+<p><strong>Microsoft Visual C++ 14.0 is required. Get it with "Microsoft Visual C++ Build Tools": http://landinghub.visualstudio.com/visual-cpp-build-tools</strong>: Please download and install <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools">Microsoft Visual C++ Build Tools</a>. However, <a href="../installation/#install-via-anaconda"><strong>Install via Anaconda</strong></a> is more easy and highly recommended method in Windows.</p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../network_process/" class="btn btn-neutral float-right" title="Network process">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../network_process/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

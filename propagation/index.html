@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>propagation - Documation of PyPathway</title>
+  <title>Propagation - Documation of PyPathway</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "propagation";
+    var mkdocs_page_name = "Propagation";
     var mkdocs_page_input_path = "propagation.md";
     var mkdocs_page_url = "/propagation/";
   </script>
@@ -54,6 +54,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../network_process/">Network process</a>
 	    </li>
           
@@ -71,20 +76,20 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">propagation</a>
+    <a class="current" href="./">Propagation</a>
     <ul class="subnav">
             
     <li class="toctree-l3"><a href="#network-propagation">Network Propagation</a></li>
     
         <ul>
         
+            <li><a class="toctree-l4" href="#example-notebook">Example Notebook</a></li>
+        
             <li><a class="toctree-l4" href="#random-walk">Random Walk</a></li>
         
             <li><a class="toctree-l4" href="#random-walk-with-restart-rwr">Random Walk with Restart (RWR)</a></li>
         
             <li><a class="toctree-l4" href="#heat-kernel">Heat kernel</a></li>
-        
-            <li><a class="toctree-l4" href="#example-notebook">Example Notebook</a></li>
         
         </ul>
     
@@ -97,6 +102,16 @@
             <li class="toctree-l1">
 		
     <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../utils/">Utilities and tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../begin/">Guide For Beginner</a>
 	    </li>
           
         </ul>
@@ -125,7 +140,7 @@
         
       
     
-    <li>propagation</li>
+    <li>Propagation</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/iseekwonderful/PyPathway/edit/master/docs/propagation.md"
@@ -139,23 +154,25 @@
             <div class="section">
               
                 <h1 id="network-propagation">Network Propagation</h1>
-<p>this module implements three algorithms: <code>random walk</code>, <code>random walk with restart</code> and <code>heat kernel</code>. The 
-implementation of this module is according to paper</p>
+<p>This module implements three algorithms: <code>random walk</code>, <code>random walk with restart</code> and <code>heat kernel</code>. The 
+implementation of these modules based on the paper</p>
 <blockquote>
 <p>Network propagation: a universal amplifier of genetic associations</p>
 </blockquote>
 <p>All these method start with a vector = |V| and simulate the heat diffuse process in the network.
-the difference between these methods are list in the following table (from above paper).</p>
-<p><img alt="" src="../Users/yangxu/PyPathway/docs/markdowns/images/propagation/propagation_overview.png" /></p>
+the difference between these methods are list in the following table (figure from above paper).</p>
+<p><img alt="" src="../images/propagation/propagation_overview.png" /></p>
+<h2 id="example-notebook">Example Notebook</h2>
+<p>The example notebook exists in <code>$project_root/examples/analysis/propagation.ipynb</code> or view at <a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb">Github</a></p>
 <h2 id="random-walk">Random Walk</h2>
 <h3 id="api">API</h3>
-<pre><code class="python">def random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -&gt; nx.Graph
+<pre><code class="python">def random_walk(G: nx.Graph, heat: dict, n: int = -1, threshold: float = 1e-6) -&gt; nx.Graph
 </code></pre>
 
-<h3 id="arguments">Arguments:</h3>
+<p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>G: nx.Graph</code> : the input graph.</li>
-<li><code>heat</code> : the heat vector, length = |V|.</li>
+<li><code>heat</code> : the heat dict, should have same length with G, contain the node name and the heat value.</li>
 <li><code>n: int = -1</code> : the time random walk repeats, if n==-1, the loop will stop when the
     threshold is reached.</li>
 <li><code>threshold</code>: the threshold check whether the steady state is reached.</li>
@@ -166,8 +183,8 @@ the difference between these methods are list in the following table (from above
 <pre><code># the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: random_walk(G, h).node
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
+In [5]: dict(random_walk(G, h).node)
 
 Out [5]: 
 {1: {'heat': 0.33333342635070995},
@@ -179,26 +196,24 @@ Out [5]:
 
 <h2 id="random-walk-with-restart-rwr">Random Walk with Restart (RWR)</h2>
 <h3 id="api_1">API</h3>
-<pre><code>def random_walk_with_restart(G: nx.Graph, heat: list, rp: float, n: int = -1, threshold: float = 1e-6) -&gt; nx.Graph:
+<pre><code>def random_walk_with_restart(G: nx.Graph, heat: dict, rp: float, n: int = -1, threshold: float = 1e-6) -&gt; nx.Graph:
 </code></pre>
 
-<h3 id="arguments_1">Arguments:</h3>
-<ul>
-<li><code>G: nx.Graph</code> : the input graph.</li>
-<li><code>heat</code> : the heat vector, length = |V|.</li>
-<li><code>n: int = -1</code> : the time random walk with restart repeats, if n==-1, the loop will stop when the
-    threshold is reached.</li>
-<li><code>rp</code>: restart probability.</li>
-<li><code>threshold</code>: the threshold check whether the steady state is reached.</li>
-</ul>
+<p><strong>Arguments</strong>:
+<em> <code>G: nx.Graph</code> : the input graph.
+</em> <code>heat</code> : the heat dict, should have same length with G, contain the node name and the heat value.
+<em> <code>n: int = -1</code> : the time random walk with restart repeats, if n==-1, the loop will stop when the
+    threshold is reached.
+</em> <code>rp</code>: restart probability.
+* <code>threshold</code>: the threshold check whether the steady state is reached.</p>
 <h3 id="return-value_1">Return value</h3>
 <p>nx.Graph (copied) with node property <code>heat</code> with the result heat of each node</p>
 <h3 id="example_1">Example</h3>
 <pre><code># the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: random_walk_with_restart(G, h, rp=0.7, n=-1).node
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
+In [5]: dict(random_walk_with_restart(G, h, rp=0.7, n=-1).node)
 
 Out [5]: 
 {1: {'heat': 0.18859903381642515},
@@ -210,13 +225,13 @@ Out [5]:
 
 <h2 id="heat-kernel">Heat kernel</h2>
 <h3 id="api_2">API</h3>
-<pre><code>def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int, threshold: float = 1e-6) -&gt; nx.Graph:
+<pre><code>def diffusion_kernel(G: nx.Graph, heat: dict, rp: float, n: int, threshold: float = 1e-6) -&gt; nx.Graph:
 </code></pre>
 
-<h3 id="arguments_2">Arguments:</h3>
+<p><strong>Arguments</strong>:</p>
 <ul>
 <li><code>G: nx.Graph</code> : the input graph.</li>
-<li><code>heat</code> : the heat vector, length = |V|.</li>
+<li><code>heat</code> : the heat dict, should have same length with G, contain the node name and the heat value.</li>
 <li><code>n: int = -1</code> : the time random walk with restart repeats.</li>
 <li><code>rp</code>: restart probability.</li>
 </ul>
@@ -226,8 +241,8 @@ Out [5]:
 <pre><code># the graph
 In [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])
 # the heat
-In [4]: h = np.array([0, 1, 0, 1, 0])
-In [5]: diffusion_kernel(G, h, rp=0.8, n=100).node
+In [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}
+In [5]: dict(diffusion_kernel(G, h, rp=0.8, n=100).node)
 
 Out [5]: 
 {1: {'heat': 0.42138736822730222},
@@ -236,9 +251,6 @@ Out [5]:
  4: {'heat': 0.47852257848932078},
  5: {'heat': 0.38714718125782877}}
 </code></pre>
-
-<h2 id="example-notebook">Example Notebook</h2>
-<p>the example notebook is available at <a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/propagation.ipynb">Github</a>.</p>
               
             </div>
           </div>

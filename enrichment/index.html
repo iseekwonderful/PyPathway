@@ -54,6 +54,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../network_process/">Network process</a>
 	    </li>
           
@@ -76,8 +81,6 @@
         
             <li><a class="toctree-l4" href="#ora">ORA</a></li>
         
-            <li><a class="toctree-l4" href="#specific-ora">Specific ORA</a></li>
-        
             <li><a class="toctree-l4" href="#gsea">GSEA</a></li>
         
             <li><a class="toctree-l4" href="#spia">SPIA</a></li>
@@ -95,7 +98,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../propagation/">propagation</a>
+    <a class="" href="../propagation/">Propagation</a>
                 </li>
     </ul>
 	    </li>
@@ -103,6 +106,16 @@
             <li class="toctree-l1">
 		
     <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../utils/">Utilities and tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../begin/">Guide For Beginner</a>
 	    </li>
           
         </ul>
@@ -144,23 +157,22 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="enrichment-analysis">Enrichment Analysis</h2>
-<h3 id="overview">Overview</h3>
-<p>Enrichment analysis aim to find functional set which are over-represented in 
-a large set of protein or genes. In this section, we will go through the supports
-enrichment, demonstrate the definition and the usage of each method. </p>
-<h3 id="basic-class">Basic class</h3>
-<p>This basic class of enrichment analysis is <code>EnrichmentResult</code> it self contains the 
- result of certain type of enrichment analysis and subclass should at least
+                <h1 id="enrichment-analysis">Enrichment Analysis</h1>
+<h2 id="overview">Overview</h2>
+<p>Enrichment analysis aim to find functional set which are over-represented in the large set of protein or genes. In this section, we will go through the supported
+enrichment methods, demonstrate the definition and the usage of each method. </p>
+<h2 id="basic-class">Basic class</h2>
+<p>All the class of enrichment analysis are inherited from <code>EnrichmentResult</code>. This class holds the 
+ result of the enrichment analysis and the subclass should at least
  rewrite the statistic method <code>run</code> to perform the analysis.</p>
-<h4 id="methods">methods</h4>
+<h3 id="methods">methods</h3>
 <ul>
 <li>
 <p><code>run</code> : execute the enrichment analysis and return the instance of subclass contains
 the analysis information</p>
 </li>
 <li>
-<p><code>table</code> : return the result pandas.Dataframe</p>
+<p><code>table</code> : return the result <code>pandas.Dataframe</code></p>
 </li>
 <li>
 <p><code>plot</code> : plot the bar chart in the output area</p>
@@ -170,29 +182,36 @@ the analysis information</p>
 for example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.</p>
 </li>
 </ul>
-<h3 id="ora">ORA</h3>
+<h2 id="ora">ORA</h2>
 <p>The over-representation analysis is the most widely used enrichment analysis method, It use
 Fisher's exact test to check whether certain functional set is over-represented in a large set
 of protein or genes.</p>
-<h4 id="implementation">Implementation</h4>
-<p>The ORA methods is implemented in the analysis.ora</p>
+<h3 id="implementation">Implementation</h3>
+<p>The ORA methods is implemented in the <code>analysis.ora</code></p>
 <pre><code class="python"># general ora method
 ORA.run(study, pop, gene_set, adjust='fdr_bh')    
 </code></pre>
 
-<p>where <code>study</code> is set of significant differential expressed genes or proteins,
- and <code>pop</code> is the total annotated genes or proteins. the <code>gene_set</code> is a dict contains
-the gene set name and contained genes like </p>
+<p><strong>Parameters</strong></p>
+<ul>
+<li><code>study</code>: <code>set</code> or <code>list</code> of significant differential expressed genes or proteins. E.g. <code>[A, B, C, D]</code></li>
+<li><code>pop</code> <code>set</code> or <code>list</code> of the total annotated genes or proteins. E.g. <code>[A, B, C, D, E, F, G]</code></li>
+<li><code>gene_set</code> is a dict contains. 
+the gene set name and contained genes like </li>
+</ul>
 <pre><code>{&quot;B cell receptor pathway&quot;: {&quot;CD22&quot;, &quot;CD81&quot;...}...}
 </code></pre>
 
-<h4 id="example">Example</h4>
+<p>This information usually parsed from a GMT file use <code>GMTUtils</code>.</p>
+<h3 id="example">Example</h3>
 <pre><code class="python"># import necessary module
 from pypathway.analysis.ora import KEGG, ORA
 from pypathway.utils import ColorectalCancer, IdMapping, GMTUtils
 
 # load a gene_set from a gmt file
-gmt = GMTUtils.parse_gmt_file(&quot;../../tests/gmt_file/h.all.v6.0.entrez.gmt&quot;)
+# the test folder does not come with pypi or anaconda installation, please obtain it from GitHub.
+# git clone https://github.com/iseekwonderful/PyPathway
+gmt = GMTUtils.parse_gmt_file(&quot;../../tests/assets/gmt_file/h.all.v6.0.entrez.gmt&quot;)
 
 # load data set
 c = ColorectalCancer()
@@ -266,11 +285,13 @@ res_h.plot()
 
 <p><img alt="" src="../images/enrichment/enrichment_general_ora.png" /></p>
 <h3 id="specific-ora">Specific ORA</h3>
-<p>For KEGG, REACTOME and GO, there are specific class implement for them. For the convienice of geneset query and </p>
+<p>For KEGG, REACTOME and GO, there are specific class implement for them. This class preloaded the gene sets or the DEG file before the analysis are performed. </p>
+<h4 id="the-apis">The APIs</h4>
+<p>The input and output data structure are same as the basic ORA.</p>
 <ul>
 <li><code>KEGG</code> </li>
 </ul>
-<pre><code class="python"># rather than input specific gene set, organism is accepted and geneset will be retrieved.
+<pre><code class="python">#rather than input specific gene set, organism is accepted and geneset will be retrieved.
 r_kg = KEGG.run(c.deg_list, c.background, 'hsa')
 </code></pre>
 
@@ -285,6 +306,7 @@ r = Reactome.run(sybs, organism='Homo sapiens')
 <ul>
 <li><code>Gene Ontology</code></li>
 </ul>
+<p>For <code>Gene Ontology</code> analysis please provide a association file, which could be a <code>Python dict</code> or <code>text file</code>. In this example, we use a dict generated by the utility IdMapping. If you want use the exist text association file, use the format like this each line: <code>ID\tGO_term1;GO_term2...\n</code></p>
 <pre><code class="python"># Gene ontology analysis require additional a assoc file.
 # IdMapping class could be used to generate this file
 # c.background is to background gene list of certain study
@@ -299,47 +321,131 @@ rg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo
 
 <p>The gene ontology enrichment analysis provide the graph overview of the analysis</p>
 <p><img alt="" src="../images/enrichment/go_graph_plot.png" /></p>
-<h3 id="gsea">GSEA</h3>
-<p>The Gene Set Enrichment Analysis, is introduced in paper:</p>
+<h2 id="gsea">GSEA</h2>
+<p>The Gene Set Enrichment Analysis(GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically 
+significant, concordant differences between two biological states. is introduced in paper:</p>
 <blockquote>
 <p>Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles</p>
 </blockquote>
 <p>at <a href="http://www.pnas.org/content/102/43/15545.short">PNAS</a></p>
-<p>This class is implement via <a href="https://github.com/BioNinja/GSEApy">GSEApy</a></p>
-<h4 id="usage">Usage</h4>
+<p>This class is implement based on <a href="https://github.com/BioNinja/GSEApy">GSEApy</a></p>
+<h3 id="usage">Usage</h3>
+<h4 id="input-data-structure">Input data structure</h4>
+<p>Differ to other analysis class, the GSEA need to do a phenotypic or gene_set permutation test, so the original data is need.</p>
+<ul>
+<li>
+<p>The gene_sets: receives both get dict or a library name in <a href="http://amp.pharm.mssm.edu/Enrichr/#stats">Enrichr's library</a></p>
+</li>
+<li>
+<p>The cls file, this file format defines phenotype (class or template) labels and associates each sample in the expression data with a label. The CLS file format uses spaces or tabs to separate the fields. For detail information, please refer to the <a href="https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/Data_formats#CLS:_Categorical_.28e.g_tumor_vs_normal.29_class_file_format_.28.2A.cls.29">official documents</a></p>
+</li>
+</ul>
+<p><img alt="" src="https://software.broadinstitute.org/cancer/software/gsea/wiki/images/6/6d/Cls_format_snapshot.png" /></p>
+<ul>
+<li>The expression file. A pandas data frame contains the expression  value (counts, TPM). e.g.</li>
+</ul>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Name</th>
+      <th>2965M patient's mucosa</th>
+      <th>3216M patient's mucosa</th>
+      <th>3335M patientüs mucosa</th>
+      <th>3416M patient's mucosa</th>
+      <th>3578M patientüs mucosa</th>
+      <th>3798M patientüs mucosa</th>
+      <th>3838M patientüs mucosa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A1BG-AS1</th>
+      <td>1.618062</td>
+      <td>1.631023</td>
+      <td>1.751713</td>
+      <td>1.942189</td>
+      <td>1.389749</td>
+      <td>1.620180</td>
+      <td>1.222842</td>
+    </tr>
+    <tr>
+      <th>A1CF</th>
+      <td>2.029520</td>
+      <td>3.323313</td>
+      <td>3.315563</td>
+      <td>2.795794</td>
+      <td>3.209412</td>
+      <td>2.805799</td>
+      <td>1.633054</td>
+    </tr>
+    <tr>
+      <th>A2M</th>
+      <td>2.994217</td>
+      <td>2.556958</td>
+      <td>2.999796</td>
+      <td>3.354563</td>
+      <td>3.143560</td>
+      <td>2.776570</td>
+      <td>3.075487</td>
+    </tr>
+    <tr>
+      <th>A2M-AS1</th>
+      <td>2.233742</td>
+      <td>1.709143</td>
+      <td>1.968936</td>
+      <td>2.648101</td>
+      <td>2.353158</td>
+      <td>2.346996</td>
+      <td>2.903206</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="api">API</h4>
 <pre><code class="python"># gene_exp is the expression dataframe
 # class_vector is the define of the experiment
-gs_res = gp.gsea(data=gene_exp, gene_sets='KEGG_2016', cls=class_vector, 
-                 permutation_type='phenotype', #set permutation_type to phenotype when 
-                 outdir='gsea_reprot', method='signal_to_noise', format='png')
+r = GSEA.run(data=gene_exp, gmt=&quot;KEGG_2016&quot;, cls=class_vector)
 </code></pre>
 
-<p>more detail information is described in the <code>example/analysis/GSEA.ipynb</code></p>
-<h3 id="spia">SPIA</h3>
+<p>more detail information is available in the <a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/GSEA.ipynb">notebook</a></p>
+<h2 id="spia">SPIA</h2>
 <p>The Signaling Pathway Impact Analysis, is introduced in paper:</p>
 <blockquote>
 <p><a href="https://academic.oup.com/bioinformatics/article/25/1/75/302846/A-novel-signaling-pathway-impact-analysis#">A novel signaling pathway impact analysis</a></p>
 </blockquote>
-<p>we implement this algorithm in Python.</p>
-<h4 id="usage_1">Usage</h4>
+<p>We implement this algorithm in Python.</p>
+<h3 id="usage_1">Usage</h3>
 <pre><code class="python">r = SPIA.run(de=c.deg, all=c.background)
-# de: a dict, key: gene, value: fold-change
-# the idtype is entrez. use IDMapping to convert
 </code></pre>
 
-<h3 id="enrichnet">Enrichnet</h3>
+<p><strong>Parameters</strong></p>
+<ul>
+<li>de: a python dict of DEGs. <code>key</code>: gene, <code>value</code>: fold-change. e.g. <code>{'A': 2.1, 'B': 3.0 ...}</code></li>
+<li>all: a python list of total genes. the idtype is ENTREZ. If necessary, use IDMapping to convert other idtype to ENTREZ. e.g. <code>['A', 'B', 'C', 'D']</code></li>
+</ul>
+<h3 id="result">Result</h3>
+<p>Use <code>table</code> method to view the result in table form and use the <code>plot</code> method to view the bar plot.</p>
+<p><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb">Example notebook</a> is also available.  </p>
+<h2 id="enrichnet">Enrichnet</h2>
 <p>The Enrichnet algorithm is introduced in paper</p>
 <blockquote>
 <p><a href="https://academic.oup.com/bioinformatics/article/28/18/i451/247049/EnrichNet-network-based-gene-set-enrichment">EnrichNet: network-based gene set enrichment analysis</a></p>
 </blockquote>
-<p>we implement the Python API for Enrichnet HTTP service.</p>
-<h4 id="usage_2">Usage</h4>
+<p>We implement the Python API for Enrichnet HTTP service.</p>
+<h3 id="usage_2">Usage</h3>
 <pre><code class="python">run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')
-# genesets: the gene list used to run the analysis
-# idtype: input id type
-# the pathlib: function set library
-# graph: the graph 
 </code></pre>
+
+<p><strong>Parameters</strong></p>
+<ul>
+<li>genesets: the gene list used to run the analysis. E.g. <code>['A', 'B' ...]</code></li>
+<li>idtype: input id type. Supports idtype: <code>['ensembl', 'hgnc_symbol', 'refseq_dna', 'uniprot_swissprot']</code></li>
+<li>the pathlib: function set library. Supports pathdb: <code>['kegg', 'biocarta', 'reactome', 'wiki', 'nci', 'interpro', 'gobp', 'gomf', 'gocc']</code></li>
+<li>graph: the graph database. Supports <code>['string', 'bossi']</code>.</li>
+</ul>
+<h3 id="result_1">Result</h3>
+<p>Use <code>table</code> method to view the result in table form and use the <code>plot</code> method to view the bar plot.</p>
+<p><a href="https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb">Example notebook</a> is also available.  </p>
               
             </div>
           </div>

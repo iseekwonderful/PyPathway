@@ -52,6 +52,11 @@
     <a class="" href="..">Overview</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <a class="current" href="./">Network process</a>
@@ -59,20 +64,19 @@
             
     <li class="toctree-l2"><a href="#network-process">Network process</a></li>
     
-
-    <li class="toctree-l2"><a href="#string">STRING</a></li>
-    
-
-    <li class="toctree-l2"><a href="#biogrid">BioGRID</a></li>
-    
-
-    <li class="toctree-l2"><a href="#kegg">KEGG</a></li>
-    
-
-    <li class="toctree-l2"><a href="#reactome">Reactome</a></li>
-    
-
-    <li class="toctree-l2"><a href="#wikipathway">WikiPathway</a></li>
+        <ul>
+        
+            <li><a class="toctree-l3" href="#string">STRING</a></li>
+        
+            <li><a class="toctree-l3" href="#biogrid">BioGRID</a></li>
+        
+            <li><a class="toctree-l3" href="#kegg">KEGG</a></li>
+        
+            <li><a class="toctree-l3" href="#reactome">Reactome</a></li>
+        
+            <li><a class="toctree-l3" href="#wikipathway">WikiPathway</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -92,7 +96,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../propagation/">propagation</a>
+    <a class="" href="../propagation/">Propagation</a>
                 </li>
     </ul>
 	    </li>
@@ -100,6 +104,16 @@
             <li class="toctree-l1">
 		
     <a class="" href="../netviz/">Visualization</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../utils/">Utilities and tools</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../begin/">Guide For Beginner</a>
 	    </li>
           
         </ul>
@@ -137,28 +151,28 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="network-process">Network process</h2>
-<p>APIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.</p>
+                <h1 id="network-process">Network process</h1>
+<p>This section demonstrate APIs for querying and retrieval of the interaction network and the pathway from public database. Results are stored in <code>networkx.Graph</code> or <code>Pathway</code> object.</p>
 <h2 id="string">STRING</h2>
-<p><strong>Single or list molecular</strong></p>
-<p>To search interaction network related to STRING database, use the staticmethod <code>STRING.search(name, organism)</code> .</p>
+<h3 id="single-or-list-molecular">Single or list molecular</h3>
+<p>To search interaction network from STRING database, use the staticmethod <code>STRING.search(name, organism='hsa')</code> .</p>
 <p><img alt="" src="../images/network_process/string_search.png" /></p>
-<p>and each search result could be retrieved using its <code>load</code> method; the result of <code>load</code> method is a <code>networkx.Graph</code> with a additional <code>plot</code> method. Use the plot method to draw the graph.</p>
+<p>and each search result could be retrieved using its <code>load</code> method; the result of <code>load</code> method is a <code>networkx.Graph</code> with a additional <code>plot</code> method. Use the plot method to view the graph.</p>
 <p><img alt="" src="../images/network_process/string_draw.png" /></p>
-<p><strong>Query Entire network</strong></p>
-<p>Also, download the total interaction network is available for certain organism. use <code>STRING.overall_network(organism)</code> to retrieve the total interaction network to a networkx object.</p>
+<h3 id="query-entire-network">Query Entire network</h3>
+<p>Also, download the total interaction network is available for certain organism. use <code>STRING.overall_network(organism)</code> to retrieve the total interaction network to a <code>networkx</code> object.</p>
 <pre><code># This function returns a nx.Graph object G contain the entire network from string for species hsa.
 G = STRING.overall_graph(&quot;hsa&quot;)
 </code></pre>
 
 <h2 id="biogrid">BioGRID</h2>
-<p><strong>Single or list of molecular</strong></p>
-<p>Similar to STRING, single or list molecular search is implemented in <code>BioGRID.search</code>, supports three type of id: [<code>Symbol</code>, <code>Extrez</code>, <code>pubmed</code>].</p>
+<h3 id="single-or-list-of-molecular">Single or list of molecular</h3>
+<p>Similar to STRING, single or list molecular's searching is implemented in <code>BioGRID.search</code>, which supports three idtype: [<code>Symbol</code>, <code>Extrez</code>, <code>pubmed</code>].</p>
 <p><img alt="" src="../images/network_process/BioGrid.png" /></p>
 <p>The result is the <code>networkx.Graph</code> object with additional plot object.</p>
 <p><img alt="" src="../images/network_process/plot.png" /></p>
-<p><strong>Entire networks</strong></p>
-<p>Using <code>BioGRID.overall_network(organism)</code> to retrieve the entire network.</p>
+<h3 id="entire-networks">Entire networks</h3>
+<p>Use <code>BioGRID.overall_network(organism)</code> to retrieve the entire network.</p>
 <h2 id="kegg">KEGG</h2>
 <p>To search and retrieve pathway from KEGG</p>
 <pre><code class="python"># use search_kegg to search kegg database
@@ -168,13 +182,11 @@ path = res[0].load()
 # use plot to view the pathway.
 </code></pre>
 
-<p><strong>Result</strong></p>
+<p>The result is a pathway object, use <code>draw</code> method to have a quick view.</p>
 <p><img alt="" src="../images/network_process/netprocess_KEGG.png" /></p>
-<p>Unlike STRING and BioGRID, the KEGG, Reactome and WikiPathway object
-are stored in a tree-like object.</p>
 <h2 id="reactome">Reactome</h2>
 <p>The reactome API is integrated in the class <code>PublicDatabase</code>, use PublicDatabase to
- search Reactome database for pathways.</p>
+ search Reactome database for pathways. </p>
 <pre><code class="python">res = PublicDatabase.search_reactome(&quot;jak&quot;)
 </code></pre>
 
@@ -220,7 +232,7 @@ ph.draw()
 <pre><code>PublicDatabase.search_wp(keyword, organism)
 </code></pre>
 
-<p>which return a class of WikiPathwayResult instances, use load method to get
+<p>which return a class of <code>WikiPathwayResult</code> instances, use load method to get
 the pathway object. And draw to get quick preview of the pathway.</p>
 <pre><code>result[0].load().draw()
 </code></pre>
@@ -245,7 +257,7 @@ path.draw()
         <a href="../enrichment/" class="btn btn-neutral float-right" title="Enrichment">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -273,7 +285,7 @@ path.draw()
           <a href="https://github.com/iseekwonderful/PyPathway" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../enrichment/" style="color: #fcfcfc">Next &raquo;</a></span>

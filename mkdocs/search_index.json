@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "PyPathway\n\n\nintegrated Python toolkit for pathway based analysis\n\n\n\n\n\n\n\n\n\n\n\n\nInstallation\n\n\nGeneral requirement\n\n\nPython version: >= 3.5\n\n\nWindows\n\n\n\n\n\n\nThe \nVisual C++ 2015 Build Tools\n is required to compile c extensions.\n\n\n\n\n\n\nnumpy\n, \nscipy\n and \nstaticmodels\n (anaconda is recommend)\n\n\n\n\n\n\nUnix / Linux\n\n\n\n\ngcc or clang compiler\n\n\n\n\nSources\n\n\n\n\ninstall via pypi\n\n\n\n\npip install pypathway\n\n\n\n\n\n\ninstall from the source\n\n\n\n\ngit clone https://github.com/iseekwonderful/PyPathway.git\ncd PyPathway\npython setup.py install\n\n\n\n\nFeatures\n\n\n\n\nPublic databases APIs: \nSTRING\n, \nBioGRID\n, \nKEGG\n, \nReactome\n and \nWikiPathway\n\n\nFunctional set based and network based enrichment analysis algorithms implemented: \nORA\n, \nGSEA\n and \nSPIA\n\n\nPerformance optimize for denovo enrichment algorithm \nMAGI\n and \nHotnet2\n.\n\n\nNetwork propagation random walk, RWR and heat kernel\n\n\nInteractive visualization for pathway, graph and analysis result.\n\n\n\n\nWeb page exportation for results.\n\n\n\n\n\n\nIntegrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages \n\n\n\n\nDynamic visualization for IPython notebook. \n\n\nMost classes implement \n__repr__\n method for interactive environment.\n\n\n\n\nNetwork process\n\n\nIntuitive APIs for querying and retrieval interaction network from public database. The return object are stored in \nnetworkx.Graph\n object.\n\n\nSupport databases\n\n\n\n\nKEGG\n\n\nReactome\n\n\nWikiPathway\n\n\nSTRING\n\n\nBioGRID\n\n\n\n\nSearch\n\n\nfrom pypathway import PublicDatabase\nkg = PublicDatabase.search_kegg('CD4')\nwp = PublicDatabase.search_wp('CD4')\nrt = PublicDatabase.search_reactome('CD4')\n\n\n\n\nLoad\n\n\npathway = r[0].load()\n\n\n\n\nPlot\n\n\npathway.draw()\n\n\n\n\n\n\nIPython notebook examples\n\n\n\n\nSTRING and BioGRID\n\n\nPathway databases\n\n\n\n\nEnrichment Analysis\n\n\nSupport methods\n\n\n\n\nORA\n\n\nGSEA\n\n\nNetwork enrichment (SPIA and Enrichment)\n\n\ndenovo enrichment (MAGI and Hotnet2)\n\n\n\n\nImplementation / Interface\n\n\n\n\nStaticmethod \nrun()\n for the starting of the analysis\n\n\n\n\nr = SPIA.run(all=c.background, de=c.deg, organism='hsa')\n\n\n\n\n\n\ntable\n, \nplot()\n and \ngraph()\n method for the presentation of the analysis\n\n\n\n\nres.table\n\n\n\n\n\n\n\nres.plot()\n\n\n\n\n\n\n\nres.graph()\n\n\n\n\n\n\nIPython examples\n\n\n\n\nORA\n\n\nGSEA\n\n\nNetwork enrichment\n\n\nMAGI\n\n\nHotnet2\n\n\n\n\nModeling\n\n\n\n\nthe Python Interface and optimize for \nMAGI\n\n\nseveral c extension for `Hotnet permutation performance \n\n\n\n\nPropagation\n\n\nImplemented algorithms\n\n\n\n\nRandom walk\n\n\n\n\n\nrandom_walk(G, h)\n\n\n\n\n\n\nRandom walk with restart\n\n\n\n\n\nrandom_walk_with_restart(G, h, rp=0.7, n=-1)\n\n\n\n\n\n\nHeat kernel\n\n\n\n\ndiffusion_kernel(G, h, rp=0.8, n=100)\n\n\n\n\n\ndetail\n\n\n\n\n\n\n\n\nimage source: \nNetwork propagation: a universal amplifier of genetic associations\n\n\nIPython notebook examples\n\n\n\n\nPropagation\n\n\n\n\nUtility and Performance\n\n\n\n\nThe Id converter\n\n\nGMT file manager\n\n\nnetwork and expression data sets.\n\n\nnumpy implementation of SPIA\n\n\nnode swap c extension for Hotnet2\n\n\nmulti-threading for MAGI\n\n\n\n\nInteractive Visualization\n\n\nThe interactive visualization for IPython notebook\n\n\nFeature\n\n\n\n\n__repr__\n Implemented for most classes\n\n\ndynamic visualization for networkx.Graph instance\n\n\nvisualizer for pathway object\n\n\nvisualizer for Gene ontology DAG.",
+            "text": "PyPathway\n\n\nintegrated Python toolkit for pathway based analysis\n\n\n\n\n\n\n\n\n\n\n\n\nInstallation\n\n\nInstall PyPathway via Anaconda is recommended.\n\n\n\n\nDownload and install anaconda from \nAnaconda site\n\n\nInstall \nPyPathway\n by\n\n\n\n\nconda install -c steamedsheep pypathway\n\n\n\n\nNOTE:\n  If you want to install \npypathway\n via \npypi\n, please refer to the \nInstallation section\n\n\nFeatures\n\n\n\n\nPublic databases APIs: \nSTRING\n, \nBioGRID\n, \nKEGG\n, \nReactome\n and \nWikiPathway\n\n\nFunctional set based and network based enrichment analysis algorithms implemented: \nORA\n, \nGSEA\n and \nSPIA\n\n\nPerformance optimize for denovo enrichment algorithm \nMAGI\n and \nHotnet2\n.\n\n\nNetwork propagation algorithms \nrandom walk\n, \nRWR\n and \nheat kernel\n.\n\n\nInteractive visualization and web page exportation for pathway, graph and analysis result.\n\n\nIntegrated with \npandas\n, \nnetworkx\n and \nnumpy\n. Most of the methods accept both text file and data structure from these packages \n\n\nDynamic visualization for \nIPython notebook\n. \n\n\nMost classes implement \n__repr__\n method for interactive environment.\n\n\n\n\nNetwork process\n\n\nIntuitive APIs for querying and retrieval interaction network from public database. The return object are stored in \nnetworkx.Graph\n object.\n\n\nSupport databases\n\n\n\n\nKEGG\n\n\nReactome\n\n\nWikiPathway\n\n\nSTRING\n\n\nBioGRID\n\n\n\n\nSearch\n\n\nfrom pypathway import PublicDatabase\nkg = PublicDatabase.search_kegg('CD4')\nwp = PublicDatabase.search_wp('CD4')\nrt = PublicDatabase.search_reactome('CD4')\n\n\n\n\nLoad\n\n\npathway = r[0].load()\n\n\n\n\nPlot\n\n\npathway.draw()\n\n\n\n\n\n\nIPython notebook examples\n\n\n\n\nSTRING and BioGRID\n\n\nPathway databases\n\n\n\n\nEnrichment Analysis\n\n\nSupport methods\n\n\n\n\nORA\n\n\nGSEA\n\n\nNetwork enrichment (SPIA and Enrichment)\n\n\ndenovo enrichment (MAGI and Hotnet2)\n\n\n\n\nImplementation / Interface\n\n\n\n\nStaticmethod \nrun()\n for the starting of the analysis\n\n\n\n\nr = SPIA.run(all=c.background, de=c.deg, organism='hsa')\n\n\n\n\n\n\ntable\n, \nplot()\n and \ngraph()\n method for the presentation of the analysis\n\n\n\n\nres.table\n\n\n\n\n\n\nres.plot()\n\n\n\n\n\n\nres.graph()\n\n\n\n\n\n\nIPython examples\n\n\n\n\nORA\n\n\nGSEA\n\n\nNetwork enrichment\n\n\nMAGI\n\n\n\n\nModeling\n\n\n\n\nthe Python Interface and optimize for \nMAGI\n\n\nseveral c extension for \nHotnet\n permutation performance \n\n\n\n\nPropagation\n\n\nImplemented algorithms\n\n\n\n\nRandom walk\n\n\n\n\nrandom_walk(G, h)\n\n\n\n\n\n\nRandom walk with restart\n\n\n\n\nrandom_walk_with_restart(G, h, rp=0.7, n=-1)\n\n\n\n\n\n\nHeat kernel\n\n\n\n\ndiffusion_kernel(G, h, rp=0.8, n=100)\n\n\n\n\nImplementation detail\n\n\n\n\n\n\n\n\nimage source: \nNetwork propagation: a universal amplifier of genetic associations\n\n\nIPython notebook examples\n\n\n\n\nPropagation\n\n\n\n\nUtility and Performance\n\n\n\n\nThe Id converter\n\n\nGMT file manager\n\n\nnetwork and expression data sets.\n\n\nnumpy implementation of SPIA\n\n\nnode swap c extension for Hotnet2\n\n\nmulti-threading for MAGI",
             "title": "Overview"
         },
         {
@@ -12,32 +12,12 @@
         },
         {
             "location": "/#installation",
-            "text": "",
+            "text": "Install PyPathway via Anaconda is recommended.   Download and install anaconda from  Anaconda site  Install  PyPathway  by   conda install -c steamedsheep pypathway  NOTE:   If you want to install  pypathway  via  pypi , please refer to the  Installation section",
             "title": "Installation"
         },
         {
-            "location": "/#general-requirement",
-            "text": "Python version: >= 3.5",
-            "title": "General requirement"
-        },
-        {
-            "location": "/#windows",
-            "text": "The  Visual C++ 2015 Build Tools  is required to compile c extensions.    numpy ,  scipy  and  staticmodels  (anaconda is recommend)",
-            "title": "Windows"
-        },
-        {
-            "location": "/#unix-linux",
-            "text": "gcc or clang compiler",
-            "title": "Unix / Linux"
-        },
-        {
-            "location": "/#sources",
-            "text": "install via pypi   pip install pypathway   install from the source   git clone https://github.com/iseekwonderful/PyPathway.git\ncd PyPathway\npython setup.py install",
-            "title": "Sources"
-        },
-        {
             "location": "/#features",
-            "text": "Public databases APIs:  STRING ,  BioGRID ,  KEGG ,  Reactome  and  WikiPathway  Functional set based and network based enrichment analysis algorithms implemented:  ORA ,  GSEA  and  SPIA  Performance optimize for denovo enrichment algorithm  MAGI  and  Hotnet2 .  Network propagation random walk, RWR and heat kernel  Interactive visualization for pathway, graph and analysis result.   Web page exportation for results.    Integrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages    Dynamic visualization for IPython notebook.   Most classes implement  __repr__  method for interactive environment.",
+            "text": "Public databases APIs:  STRING ,  BioGRID ,  KEGG ,  Reactome  and  WikiPathway  Functional set based and network based enrichment analysis algorithms implemented:  ORA ,  GSEA  and  SPIA  Performance optimize for denovo enrichment algorithm  MAGI  and  Hotnet2 .  Network propagation algorithms  random walk ,  RWR  and  heat kernel .  Interactive visualization and web page exportation for pathway, graph and analysis result.  Integrated with  pandas ,  networkx  and  numpy . Most of the methods accept both text file and data structure from these packages   Dynamic visualization for  IPython notebook .   Most classes implement  __repr__  method for interactive environment.",
             "title": "Features"
         },
         {
@@ -82,28 +62,28 @@
         },
         {
             "location": "/#implementation-interface",
-            "text": "Staticmethod  run()  for the starting of the analysis   r = SPIA.run(all=c.background, de=c.deg, organism='hsa')   table ,  plot()  and  graph()  method for the presentation of the analysis   res.table   res.plot()   \nres.graph()",
+            "text": "Staticmethod  run()  for the starting of the analysis   r = SPIA.run(all=c.background, de=c.deg, organism='hsa')   table ,  plot()  and  graph()  method for the presentation of the analysis   res.table   res.plot()   res.graph()",
             "title": "Implementation / Interface"
         },
         {
             "location": "/#ipython-examples",
-            "text": "ORA  GSEA  Network enrichment  MAGI  Hotnet2",
+            "text": "ORA  GSEA  Network enrichment  MAGI",
             "title": "IPython examples"
         },
         {
             "location": "/#modeling",
-            "text": "the Python Interface and optimize for  MAGI  several c extension for `Hotnet permutation performance",
+            "text": "the Python Interface and optimize for  MAGI  several c extension for  Hotnet  permutation performance",
             "title": "Modeling"
         },
         {
             "location": "/#propagation",
-            "text": "Implemented algorithms   Random walk   \nrandom_walk(G, h)   Random walk with restart   \nrandom_walk_with_restart(G, h, rp=0.7, n=-1)   Heat kernel   diffusion_kernel(G, h, rp=0.8, n=100)",
+            "text": "Implemented algorithms   Random walk   random_walk(G, h)   Random walk with restart   random_walk_with_restart(G, h, rp=0.7, n=-1)   Heat kernel   diffusion_kernel(G, h, rp=0.8, n=100)",
             "title": "Propagation"
         },
         {
-            "location": "/#detail",
+            "location": "/#implementation-detail",
             "text": "image source:  Network propagation: a universal amplifier of genetic associations",
-            "title": "detail"
+            "title": "Implementation detail"
         },
         {
             "location": "/#ipython-notebook-examples_1",
@@ -116,53 +96,103 @@
             "title": "Utility and Performance"
         },
         {
-            "location": "/#interactive-visualization",
-            "text": "The interactive visualization for IPython notebook",
-            "title": "Interactive Visualization"
+            "location": "/installation/",
+            "text": "Installation\n\n\nInstall via Anaconda\n\n\n\n\nDownload and install Anaconda from \nAnaconda site.\n\n\n\n\nInstall Pypathway\n\n\nconda install -c steamedsheep pypathway\n\n\n\n\n\n\nFrom scratch\n\n\nSetup the compiler and build the source from pypi. This method is not recommended for beginner. Installation is tested in \nUbuntu 16.10\n, \nUbuntu 16.04\n, \nWindows 10 1703\n, \nmacOS 10.12.6\n and \nmacOS 10.13.1\n. Note that most of linux system come with gcc and build tools, if not, please install compiler using package manager or build from source.\n\n\nUbuntu\n\n\n\n\n\n\nupdate and upgrade the system\n\n\nsudo apt update; sudo apt upgrade;\n\n\n\n\n\n\nInstall \nPython\n and its related package\n\n\nsudo apt install python3-dev python3-pip python3-tk\n\n\n\n\n\n\nInstall \nnumpy\n\n\npip3 install numpy\n\n\n\n\n\n\nInstall pypathway via pypi\n\n\npip3 install pypathway\n\n\n\n\n\n\nmacOS\n\n\n\n\n\n\nif necessary, install \nHomebrew\n\n\n/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"\n\n\n\n\n\n\nIf necessary install python3 and pip\n\n\nbrew install python3\n\n\n\n\n\n\nInstall PyPathway via pip\n\n\npip3 install numpy\npip3 install pypathway\n\n\n\n\n\n\nWindows\n\n\nInstall PyPathway via Anaconda is highly recommended in windows!\n\n\nPlease refer to the section \nInstall PyPathway via Anaconda\n. If you still want to install via \npypi\n, this guide may help you.\n\n\n\n\n\n\nInstall Python3\n\n\n\n\nDownload python3.6 from following link \nhttps://www.python.org/downloads/windows/\n. \n\n\nSelect \nAdd to PATH\n while the installation\n\n\n\n\n\n\n\n\nInstall VS2015 compiler\n\n\n\n\ndownload and install \nVisual C++ 2015 Build Tools\n\n\n\n\n\n\n\n\nInstall PreCompiled numpy with mkl packages\n\n\n\n\nDownload numpy with mkl from \nhttps://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy\n and Install it.\n\n\n\n\n\n\n\n\nInstall PyPathway\n\n\npip3 install pypathway\n\n\n\n\n\n\nTroubleshooting\n\n\n\n\n\n\nHard-link code\n error: This error should occur while installing pypathway using conda in windows. We now cannot figure out the solution, but install \nVisual C++ 2015 Build Tools\n and then install anaconda's pip should fix this issue\n\n\npip install pypathway\n\n\n\n\n\n\nMicrosoft Visual C++ 14.0 is required. Get it with \"Microsoft Visual C++ Build Tools\": http://landinghub.visualstudio.com/visual-cpp-build-tools\n: Please download and install \nMicrosoft Visual C++ Build Tools\n. However, \nInstall via Anaconda\n is more easy and highly recommended method in Windows.",
+            "title": "Installation"
         },
         {
-            "location": "/#feature",
-            "text": "__repr__  Implemented for most classes  dynamic visualization for networkx.Graph instance  visualizer for pathway object  visualizer for Gene ontology DAG.",
-            "title": "Feature"
+            "location": "/installation/#installation",
+            "text": "",
+            "title": "Installation"
+        },
+        {
+            "location": "/installation/#install-via-anaconda",
+            "text": "Download and install Anaconda from  Anaconda site.   Install Pypathway  conda install -c steamedsheep pypathway",
+            "title": "Install via Anaconda"
+        },
+        {
+            "location": "/installation/#from-scratch",
+            "text": "Setup the compiler and build the source from pypi. This method is not recommended for beginner. Installation is tested in  Ubuntu 16.10 ,  Ubuntu 16.04 ,  Windows 10 1703 ,  macOS 10.12.6  and  macOS 10.13.1 . Note that most of linux system come with gcc and build tools, if not, please install compiler using package manager or build from source.",
+            "title": "From scratch"
+        },
+        {
+            "location": "/installation/#ubuntu",
+            "text": "update and upgrade the system  sudo apt update; sudo apt upgrade;    Install  Python  and its related package  sudo apt install python3-dev python3-pip python3-tk    Install  numpy  pip3 install numpy    Install pypathway via pypi  pip3 install pypathway",
+            "title": "Ubuntu"
+        },
+        {
+            "location": "/installation/#macos",
+            "text": "if necessary, install  Homebrew  /usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\"    If necessary install python3 and pip  brew install python3    Install PyPathway via pip  pip3 install numpy\npip3 install pypathway",
+            "title": "macOS"
+        },
+        {
+            "location": "/installation/#windows",
+            "text": "Install PyPathway via Anaconda is highly recommended in windows!  Please refer to the section  Install PyPathway via Anaconda . If you still want to install via  pypi , this guide may help you.    Install Python3   Download python3.6 from following link  https://www.python.org/downloads/windows/ .   Select  Add to PATH  while the installation     Install VS2015 compiler   download and install  Visual C++ 2015 Build Tools     Install PreCompiled numpy with mkl packages   Download numpy with mkl from  https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy  and Install it.     Install PyPathway  pip3 install pypathway",
+            "title": "Windows"
+        },
+        {
+            "location": "/installation/#troubleshooting",
+            "text": "Hard-link code  error: This error should occur while installing pypathway using conda in windows. We now cannot figure out the solution, but install  Visual C++ 2015 Build Tools  and then install anaconda's pip should fix this issue  pip install pypathway    Microsoft Visual C++ 14.0 is required. Get it with \"Microsoft Visual C++ Build Tools\": http://landinghub.visualstudio.com/visual-cpp-build-tools : Please download and install  Microsoft Visual C++ Build Tools . However,  Install via Anaconda  is more easy and highly recommended method in Windows.",
+            "title": "Troubleshooting"
         },
         {
             "location": "/network_process/",
-            "text": "Network process\n\n\nAPIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.\n\n\nSTRING\n\n\nSingle or list molecular\n\n\nTo search interaction network related to STRING database, use the staticmethod \nSTRING.search(name, organism)\n .\n\n\n\n\nand each search result could be retrieved using its \nload\n method; the result of \nload\n method is a \nnetworkx.Graph\n with a additional \nplot\n method. Use the plot method to draw the graph.\n\n\n\n\nQuery Entire network\n\n\nAlso, download the total interaction network is available for certain organism. use \nSTRING.overall_network(organism)\n to retrieve the total interaction network to a networkx object.\n\n\n# This function returns a nx.Graph object G contain the entire network from string for species hsa.\nG = STRING.overall_graph(\"hsa\")\n\n\n\n\nBioGRID\n\n\nSingle or list of molecular\n\n\nSimilar to STRING, single or list molecular search is implemented in \nBioGRID.search\n, supports three type of id: [\nSymbol\n, \nExtrez\n, \npubmed\n].\n\n\n\n\nThe result is the \nnetworkx.Graph\n object with additional plot object.\n\n\n\n\nEntire networks\n\n\nUsing \nBioGRID.overall_network(organism)\n to retrieve the entire network.\n\n\nKEGG\n\n\nTo search and retrieve pathway from KEGG\n\n\n# use search_kegg to search kegg database\nres = PublicDatabase.search_kegg(name, organism=\"hsa\")\n# use load() method to parse the result\npath = res[0].load()\n# use plot to view the pathway.\n\n\n\n\nResult\n\n\n\n\nUnlike STRING and BioGRID, the KEGG, Reactome and WikiPathway object\nare stored in a tree-like object.\n\n\nReactome\n\n\nThe reactome API is integrated in the class \nPublicDatabase\n, use PublicDatabase to\n search Reactome database for pathways.\n\n\nres = PublicDatabase.search_reactome(\"jak\")\n\n\n\n\nresults(list of class of ReactomeResult)\n\n\n[source: Reactome\n  id: R-HSA-8950505\n BioPAX: False \n SBGN-PD: False \n description:b'Gene and protein expression by <span class=\"highlighting\" >JAK</span>-STAT signaling after Interleukin-12 stimulation',\n source: Reactome\n  id: R-HSA-6788467\n BioPAX: False \n SBGN-PD: False \n description:b'IL-6-type cytokine receptor ligand interactions',\n source: Reactome\n  id: R-HSA-877300\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon gamma signaling',\n source: Reactome\n  id: R-HSA-913531\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon Signaling',\n source: Reactome\n  id: R-HSA-982772\n BioPAX: False \n SBGN-PD: False \n description:b'Growth hormone receptor signaling']\n\n\n\n\nRetrieve and draw the pathway.\n\n\n# load\npathway = res[1].load()\n# draw\nph.draw()\n\n\n\n\nThe result pathway is drawn in the interactive region\n\n\n\n\nWikiPathway\n\n\nThe class \nPublicDatabase\n also implements \nsearch_wp\n API.\n\n\nPublicDatabase.search_wp(keyword, organism)\n\n\n\n\nwhich return a class of WikiPathwayResult instances, use load method to get\nthe pathway object. And draw to get quick preview of the pathway.\n\n\nresult[0].load().draw()\n\n\n\n\nExample\n\n\n# search\nres = PublicDatabase.search_wp(\"jak\")\n# load \npath = res[0].load()\n# draw\npath.draw()",
+            "text": "Network process\n\n\nThis section demonstrate APIs for querying and retrieval of the interaction network and the pathway from public database. Results are stored in \nnetworkx.Graph\n or \nPathway\n object.\n\n\nSTRING\n\n\nSingle or list molecular\n\n\nTo search interaction network from STRING database, use the staticmethod \nSTRING.search(name, organism='hsa')\n .\n\n\n\n\nand each search result could be retrieved using its \nload\n method; the result of \nload\n method is a \nnetworkx.Graph\n with a additional \nplot\n method. Use the plot method to view the graph.\n\n\n\n\nQuery Entire network\n\n\nAlso, download the total interaction network is available for certain organism. use \nSTRING.overall_network(organism)\n to retrieve the total interaction network to a \nnetworkx\n object.\n\n\n# This function returns a nx.Graph object G contain the entire network from string for species hsa.\nG = STRING.overall_graph(\"hsa\")\n\n\n\n\nBioGRID\n\n\nSingle or list of molecular\n\n\nSimilar to STRING, single or list molecular's searching is implemented in \nBioGRID.search\n, which supports three idtype: [\nSymbol\n, \nExtrez\n, \npubmed\n].\n\n\n\n\nThe result is the \nnetworkx.Graph\n object with additional plot object.\n\n\n\n\nEntire networks\n\n\nUse \nBioGRID.overall_network(organism)\n to retrieve the entire network.\n\n\nKEGG\n\n\nTo search and retrieve pathway from KEGG\n\n\n# use search_kegg to search kegg database\nres = PublicDatabase.search_kegg(name, organism=\"hsa\")\n# use load() method to parse the result\npath = res[0].load()\n# use plot to view the pathway.\n\n\n\n\nThe result is a pathway object, use \ndraw\n method to have a quick view.\n\n\n\n\nReactome\n\n\nThe reactome API is integrated in the class \nPublicDatabase\n, use PublicDatabase to\n search Reactome database for pathways. \n\n\nres = PublicDatabase.search_reactome(\"jak\")\n\n\n\n\nresults(list of class of ReactomeResult)\n\n\n[source: Reactome\n  id: R-HSA-8950505\n BioPAX: False \n SBGN-PD: False \n description:b'Gene and protein expression by <span class=\"highlighting\" >JAK</span>-STAT signaling after Interleukin-12 stimulation',\n source: Reactome\n  id: R-HSA-6788467\n BioPAX: False \n SBGN-PD: False \n description:b'IL-6-type cytokine receptor ligand interactions',\n source: Reactome\n  id: R-HSA-877300\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon gamma signaling',\n source: Reactome\n  id: R-HSA-913531\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon Signaling',\n source: Reactome\n  id: R-HSA-982772\n BioPAX: False \n SBGN-PD: False \n description:b'Growth hormone receptor signaling']\n\n\n\n\nRetrieve and draw the pathway.\n\n\n# load\npathway = res[1].load()\n# draw\nph.draw()\n\n\n\n\nThe result pathway is drawn in the interactive region\n\n\n\n\nWikiPathway\n\n\nThe class \nPublicDatabase\n also implements \nsearch_wp\n API.\n\n\nPublicDatabase.search_wp(keyword, organism)\n\n\n\n\nwhich return a class of \nWikiPathwayResult\n instances, use load method to get\nthe pathway object. And draw to get quick preview of the pathway.\n\n\nresult[0].load().draw()\n\n\n\n\nExample\n\n\n# search\nres = PublicDatabase.search_wp(\"jak\")\n# load \npath = res[0].load()\n# draw\npath.draw()",
             "title": "Network process"
         },
         {
             "location": "/network_process/#network-process",
-            "text": "APIs for querying and retrieval interaction network from public database. The return object are stored in networkx graph object.",
+            "text": "This section demonstrate APIs for querying and retrieval of the interaction network and the pathway from public database. Results are stored in  networkx.Graph  or  Pathway  object.",
             "title": "Network process"
         },
         {
             "location": "/network_process/#string",
-            "text": "Single or list molecular  To search interaction network related to STRING database, use the staticmethod  STRING.search(name, organism)  .   and each search result could be retrieved using its  load  method; the result of  load  method is a  networkx.Graph  with a additional  plot  method. Use the plot method to draw the graph.   Query Entire network  Also, download the total interaction network is available for certain organism. use  STRING.overall_network(organism)  to retrieve the total interaction network to a networkx object.  # This function returns a nx.Graph object G contain the entire network from string for species hsa.\nG = STRING.overall_graph(\"hsa\")",
+            "text": "",
             "title": "STRING"
         },
         {
+            "location": "/network_process/#single-or-list-molecular",
+            "text": "To search interaction network from STRING database, use the staticmethod  STRING.search(name, organism='hsa')  .   and each search result could be retrieved using its  load  method; the result of  load  method is a  networkx.Graph  with a additional  plot  method. Use the plot method to view the graph.",
+            "title": "Single or list molecular"
+        },
+        {
+            "location": "/network_process/#query-entire-network",
+            "text": "Also, download the total interaction network is available for certain organism. use  STRING.overall_network(organism)  to retrieve the total interaction network to a  networkx  object.  # This function returns a nx.Graph object G contain the entire network from string for species hsa.\nG = STRING.overall_graph(\"hsa\")",
+            "title": "Query Entire network"
+        },
+        {
             "location": "/network_process/#biogrid",
-            "text": "Single or list of molecular  Similar to STRING, single or list molecular search is implemented in  BioGRID.search , supports three type of id: [ Symbol ,  Extrez ,  pubmed ].   The result is the  networkx.Graph  object with additional plot object.   Entire networks  Using  BioGRID.overall_network(organism)  to retrieve the entire network.",
+            "text": "",
             "title": "BioGRID"
         },
         {
+            "location": "/network_process/#single-or-list-of-molecular",
+            "text": "Similar to STRING, single or list molecular's searching is implemented in  BioGRID.search , which supports three idtype: [ Symbol ,  Extrez ,  pubmed ].   The result is the  networkx.Graph  object with additional plot object.",
+            "title": "Single or list of molecular"
+        },
+        {
+            "location": "/network_process/#entire-networks",
+            "text": "Use  BioGRID.overall_network(organism)  to retrieve the entire network.",
+            "title": "Entire networks"
+        },
+        {
             "location": "/network_process/#kegg",
-            "text": "To search and retrieve pathway from KEGG  # use search_kegg to search kegg database\nres = PublicDatabase.search_kegg(name, organism=\"hsa\")\n# use load() method to parse the result\npath = res[0].load()\n# use plot to view the pathway.  Result   Unlike STRING and BioGRID, the KEGG, Reactome and WikiPathway object\nare stored in a tree-like object.",
+            "text": "To search and retrieve pathway from KEGG  # use search_kegg to search kegg database\nres = PublicDatabase.search_kegg(name, organism=\"hsa\")\n# use load() method to parse the result\npath = res[0].load()\n# use plot to view the pathway.  The result is a pathway object, use  draw  method to have a quick view.",
             "title": "KEGG"
         },
         {
             "location": "/network_process/#reactome",
-            "text": "The reactome API is integrated in the class  PublicDatabase , use PublicDatabase to\n search Reactome database for pathways.  res = PublicDatabase.search_reactome(\"jak\")  results(list of class of ReactomeResult)  [source: Reactome\n  id: R-HSA-8950505\n BioPAX: False \n SBGN-PD: False \n description:b'Gene and protein expression by <span class=\"highlighting\" >JAK</span>-STAT signaling after Interleukin-12 stimulation',\n source: Reactome\n  id: R-HSA-6788467\n BioPAX: False \n SBGN-PD: False \n description:b'IL-6-type cytokine receptor ligand interactions',\n source: Reactome\n  id: R-HSA-877300\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon gamma signaling',\n source: Reactome\n  id: R-HSA-913531\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon Signaling',\n source: Reactome\n  id: R-HSA-982772\n BioPAX: False \n SBGN-PD: False \n description:b'Growth hormone receptor signaling']  Retrieve and draw the pathway.  # load\npathway = res[1].load()\n# draw\nph.draw()  The result pathway is drawn in the interactive region",
+            "text": "The reactome API is integrated in the class  PublicDatabase , use PublicDatabase to\n search Reactome database for pathways.   res = PublicDatabase.search_reactome(\"jak\")  results(list of class of ReactomeResult)  [source: Reactome\n  id: R-HSA-8950505\n BioPAX: False \n SBGN-PD: False \n description:b'Gene and protein expression by <span class=\"highlighting\" >JAK</span>-STAT signaling after Interleukin-12 stimulation',\n source: Reactome\n  id: R-HSA-6788467\n BioPAX: False \n SBGN-PD: False \n description:b'IL-6-type cytokine receptor ligand interactions',\n source: Reactome\n  id: R-HSA-877300\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon gamma signaling',\n source: Reactome\n  id: R-HSA-913531\n BioPAX: False \n SBGN-PD: False \n description:b'Interferon Signaling',\n source: Reactome\n  id: R-HSA-982772\n BioPAX: False \n SBGN-PD: False \n description:b'Growth hormone receptor signaling']  Retrieve and draw the pathway.  # load\npathway = res[1].load()\n# draw\nph.draw()  The result pathway is drawn in the interactive region",
             "title": "Reactome"
         },
         {
             "location": "/network_process/#wikipathway",
-            "text": "The class  PublicDatabase  also implements  search_wp  API.  PublicDatabase.search_wp(keyword, organism)  which return a class of WikiPathwayResult instances, use load method to get\nthe pathway object. And draw to get quick preview of the pathway.  result[0].load().draw()  Example  # search\nres = PublicDatabase.search_wp(\"jak\")\n# load \npath = res[0].load()\n# draw\npath.draw()",
+            "text": "The class  PublicDatabase  also implements  search_wp  API.  PublicDatabase.search_wp(keyword, organism)  which return a class of  WikiPathwayResult  instances, use load method to get\nthe pathway object. And draw to get quick preview of the pathway.  result[0].load().draw()  Example  # search\nres = PublicDatabase.search_wp(\"jak\")\n# load \npath = res[0].load()\n# draw\npath.draw()",
             "title": "WikiPathway"
         },
         {
             "location": "/enrichment/",
-            "text": "Enrichment Analysis\n\n\nOverview\n\n\nEnrichment analysis aim to find functional set which are over-represented in \na large set of protein or genes. In this section, we will go through the supports\nenrichment, demonstrate the definition and the usage of each method. \n\n\nBasic class\n\n\nThis basic class of enrichment analysis is \nEnrichmentResult\n it self contains the \n result of certain type of enrichment analysis and subclass should at least\n rewrite the statistic method \nrun\n to perform the analysis.\n\n\nmethods\n\n\n\n\n\n\nrun\n : execute the enrichment analysis and return the instance of subclass contains\nthe analysis information\n\n\n\n\n\n\ntable\n : return the result pandas.Dataframe\n\n\n\n\n\n\nplot\n : plot the bar chart in the output area\n\n\n\n\n\n\ngraph\n : if the result set have certain relationship, this method return the graph of them.\nfor example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.\n\n\n\n\n\n\nORA\n\n\nThe over-representation analysis is the most widely used enrichment analysis method, It use\nFisher's exact test to check whether certain functional set is over-represented in a large set\nof protein or genes.\n\n\nImplementation\n\n\nThe ORA methods is implemented in the analysis.ora\n\n\n# general ora method\nORA.run(study, pop, gene_set, adjust='fdr_bh')    \n\n\n\n\nwhere \nstudy\n is set of significant differential expressed genes or proteins,\n and \npop\n is the total annotated genes or proteins. the \ngene_set\n is a dict contains\nthe gene set name and contained genes like \n\n\n{\"B cell receptor pathway\": {\"CD22\", \"CD81\"...}...}\n\n\n\n\nExample\n\n\n# import necessary module\nfrom pypathway.analysis.ora import KEGG, ORA\nfrom pypathway.utils import ColorectalCancer, IdMapping, GMTUtils\n\n# load a gene_set from a gmt file\ngmt = GMTUtils.parse_gmt_file(\"../../tests/gmt_file/h.all.v6.0.entrez.gmt\")\n\n# load data set\nc = ColorectalCancer()\n\n# perform general ORA test\nres_h = ORA.run(c.deg_list, c.background, gmt)\n\n# view result table\nres_h.table.head()\n\n\n\n\nThe result table (In IPython notebook):\n\n\n\n  \n\n    \n\n      \n\n      \nname\n\n      \nmapped\n\n      \nnumber in study\n\n      \np-value\n\n      \nfdr\n\n    \n\n  \n\n  \n\n    \n\n      \n0\n\n      \nHALLMARK_GLYCOLYSIS\n\n      \n184\n\n      \n91\n\n      \n9.956407e-08\n\n      \n3.555860e-07\n\n    \n\n    \n\n      \n1\n\n      \nHALLMARK_APICAL_JUNCTION\n\n      \n185\n\n      \n97\n\n      \n7.750142e-10\n\n      \n3.748583e-09\n\n    \n\n    \n\n      \n2\n\n      \nHALLMARK_MYC_TARGETS_V1\n\n      \n173\n\n      \n48\n\n      \n8.377692e-01\n\n      \n9.106187e-01\n\n    \n\n    \n\n      \n3\n\n      \nHALLMARK_COAGULATION\n\n      \n131\n\n      \n64\n\n      \n1.237516e-05\n\n      \n3.093790e-05\n\n    \n\n    \n\n      \n4\n\n      \nHALLMARK_MTORC1_SIGNALING\n\n      \n176\n\n      \n90\n\n      \n1.551015e-08\n\n      \n5.965443e-08\n\n    \n\n  \n\n\n\n\n\n# barplot\nres_h.plot()\n\n\n\n\n\n\nSpecific ORA\n\n\nFor KEGG, REACTOME and GO, there are specific class implement for them. For the convienice of geneset query and \n\n\n\n\nKEGG\n \n\n\n\n\n# rather than input specific gene set, organism is accepted and geneset will be retrieved.\nr_kg = KEGG.run(c.deg_list, c.background, 'hsa')\n\n\n\n\n\n\nReactome\n\n\n\n\n# Reactome official API is used. note that the background is the whole Reactome\n# library, if background set required, use Reactome GMT file and ORA class \nr = Reactome.run(sybs, organism='Homo sapiens')\n\n\n\n\n\n\nGene Ontology\n\n\n\n\n# Gene ontology analysis require additional a assoc file.\n# IdMapping class could be used to generate this file\n# c.background is to background gene list of certain study\nr = IdMapping.convert_to_dict(input_id=c.background, source='ENTREZID', target=\"GO\", organism='hsa')\n# and run the analysis\n# [str(x) for x in c.deg_list]: study\n# [str(x) for x in c.background]: background\n# r: the assoc dict\n# obo=path + 'go-basic.obo': the path to the obo file\nrg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo=path + 'go-basic.obo')\n\n\n\n\nThe gene ontology enrichment analysis provide the graph overview of the analysis\n\n\n\n\nGSEA\n\n\nThe Gene Set Enrichment Analysis, is introduced in paper:\n\n\n\n\nGene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles\n\n\n\n\nat \nPNAS\n\n\nThis class is implement via \nGSEApy\n\n\nUsage\n\n\n# gene_exp is the expression dataframe\n# class_vector is the define of the experiment\ngs_res = gp.gsea(data=gene_exp, gene_sets='KEGG_2016', cls=class_vector, \n                 permutation_type='phenotype', #set permutation_type to phenotype when \n                 outdir='gsea_reprot', method='signal_to_noise', format='png')\n\n\n\n\nmore detail information is described in the \nexample/analysis/GSEA.ipynb\n\n\nSPIA\n\n\nThe Signaling Pathway Impact Analysis, is introduced in paper:\n\n\n\n\nA novel signaling pathway impact analysis\n\n\n\n\nwe implement this algorithm in Python.\n\n\nUsage\n\n\nr = SPIA.run(de=c.deg, all=c.background)\n# de: a dict, key: gene, value: fold-change\n# the idtype is entrez. use IDMapping to convert\n\n\n\n\nEnrichnet\n\n\nThe Enrichnet algorithm is introduced in paper\n\n\n\n\nEnrichNet: network-based gene set enrichment analysis\n\n\n\n\nwe implement the Python API for Enrichnet HTTP service.\n\n\nUsage\n\n\nrun(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')\n# genesets: the gene list used to run the analysis\n# idtype: input id type\n# the pathlib: function set library\n# graph: the graph",
+            "text": "Enrichment Analysis\n\n\nOverview\n\n\nEnrichment analysis aim to find functional set which are over-represented in the large set of protein or genes. In this section, we will go through the supported\nenrichment methods, demonstrate the definition and the usage of each method. \n\n\nBasic class\n\n\nAll the class of enrichment analysis are inherited from \nEnrichmentResult\n. This class holds the \n result of the enrichment analysis and the subclass should at least\n rewrite the statistic method \nrun\n to perform the analysis.\n\n\nmethods\n\n\n\n\n\n\nrun\n : execute the enrichment analysis and return the instance of subclass contains\nthe analysis information\n\n\n\n\n\n\ntable\n : return the result \npandas.Dataframe\n\n\n\n\n\n\nplot\n : plot the bar chart in the output area\n\n\n\n\n\n\ngraph\n : if the result set have certain relationship, this method return the graph of them.\nfor example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.\n\n\n\n\n\n\nORA\n\n\nThe over-representation analysis is the most widely used enrichment analysis method, It use\nFisher's exact test to check whether certain functional set is over-represented in a large set\nof protein or genes.\n\n\nImplementation\n\n\nThe ORA methods is implemented in the \nanalysis.ora\n\n\n# general ora method\nORA.run(study, pop, gene_set, adjust='fdr_bh')    \n\n\n\n\nParameters\n\n\n\n\nstudy\n: \nset\n or \nlist\n of significant differential expressed genes or proteins. E.g. \n[A, B, C, D]\n\n\npop\n \nset\n or \nlist\n of the total annotated genes or proteins. E.g. \n[A, B, C, D, E, F, G]\n\n\ngene_set\n is a dict contains. \nthe gene set name and contained genes like \n\n\n\n\n{\"B cell receptor pathway\": {\"CD22\", \"CD81\"...}...}\n\n\n\n\nThis information usually parsed from a GMT file use \nGMTUtils\n.\n\n\nExample\n\n\n# import necessary module\nfrom pypathway.analysis.ora import KEGG, ORA\nfrom pypathway.utils import ColorectalCancer, IdMapping, GMTUtils\n\n# load a gene_set from a gmt file\n# the test folder does not come with pypi or anaconda installation, please obtain it from GitHub.\n# git clone https://github.com/iseekwonderful/PyPathway\ngmt = GMTUtils.parse_gmt_file(\"../../tests/assets/gmt_file/h.all.v6.0.entrez.gmt\")\n\n# load data set\nc = ColorectalCancer()\n\n# perform general ORA test\nres_h = ORA.run(c.deg_list, c.background, gmt)\n\n# view result table\nres_h.table.head()\n\n\n\n\nThe result table (In IPython notebook):\n\n\n\n  \n\n    \n\n      \n\n      \nname\n\n      \nmapped\n\n      \nnumber in study\n\n      \np-value\n\n      \nfdr\n\n    \n\n  \n\n  \n\n    \n\n      \n0\n\n      \nHALLMARK_GLYCOLYSIS\n\n      \n184\n\n      \n91\n\n      \n9.956407e-08\n\n      \n3.555860e-07\n\n    \n\n    \n\n      \n1\n\n      \nHALLMARK_APICAL_JUNCTION\n\n      \n185\n\n      \n97\n\n      \n7.750142e-10\n\n      \n3.748583e-09\n\n    \n\n    \n\n      \n2\n\n      \nHALLMARK_MYC_TARGETS_V1\n\n      \n173\n\n      \n48\n\n      \n8.377692e-01\n\n      \n9.106187e-01\n\n    \n\n    \n\n      \n3\n\n      \nHALLMARK_COAGULATION\n\n      \n131\n\n      \n64\n\n      \n1.237516e-05\n\n      \n3.093790e-05\n\n    \n\n    \n\n      \n4\n\n      \nHALLMARK_MTORC1_SIGNALING\n\n      \n176\n\n      \n90\n\n      \n1.551015e-08\n\n      \n5.965443e-08\n\n    \n\n  \n\n\n\n\n\n# barplot\nres_h.plot()\n\n\n\n\n\n\nSpecific ORA\n\n\nFor KEGG, REACTOME and GO, there are specific class implement for them. This class preloaded the gene sets or the DEG file before the analysis are performed. \n\n\nThe APIs\n\n\nThe input and output data structure are same as the basic ORA.\n\n\n\n\nKEGG\n \n\n\n\n\n#rather than input specific gene set, organism is accepted and geneset will be retrieved.\nr_kg = KEGG.run(c.deg_list, c.background, 'hsa')\n\n\n\n\n\n\nReactome\n\n\n\n\n# Reactome official API is used. note that the background is the whole Reactome\n# library, if background set required, use Reactome GMT file and ORA class \nr = Reactome.run(sybs, organism='Homo sapiens')\n\n\n\n\n\n\nGene Ontology\n\n\n\n\nFor \nGene Ontology\n analysis please provide a association file, which could be a \nPython dict\n or \ntext file\n. In this example, we use a dict generated by the utility IdMapping. If you want use the exist text association file, use the format like this each line: \nID\\tGO_term1;GO_term2...\\n\n\n\n# Gene ontology analysis require additional a assoc file.\n# IdMapping class could be used to generate this file\n# c.background is to background gene list of certain study\nr = IdMapping.convert_to_dict(input_id=c.background, source='ENTREZID', target=\"GO\", organism='hsa')\n# and run the analysis\n# [str(x) for x in c.deg_list]: study\n# [str(x) for x in c.background]: background\n# r: the assoc dict\n# obo=path + 'go-basic.obo': the path to the obo file\nrg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo=path + 'go-basic.obo')\n\n\n\n\nThe gene ontology enrichment analysis provide the graph overview of the analysis\n\n\n\n\nGSEA\n\n\nThe Gene Set Enrichment Analysis(GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically \nsignificant, concordant differences between two biological states. is introduced in paper:\n\n\n\n\nGene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles\n\n\n\n\nat \nPNAS\n\n\nThis class is implement based on \nGSEApy\n\n\nUsage\n\n\nInput data structure\n\n\nDiffer to other analysis class, the GSEA need to do a phenotypic or gene_set permutation test, so the original data is need.\n\n\n\n\n\n\nThe gene_sets: receives both get dict or a library name in \nEnrichr's library\n\n\n\n\n\n\nThe cls file, this file format defines phenotype (class or template) labels and associates each sample in the expression data with a label. The CLS file format uses spaces or tabs to separate the fields. For detail information, please refer to the \nofficial documents\n\n\n\n\n\n\n\n\n\n\nThe expression file. A pandas data frame contains the expression  value (counts, TPM). e.g.\n\n\n\n\n\n  \n\n    \n\n      \nName\n\n      \n2965M patient's mucosa\n\n      \n3216M patient's mucosa\n\n      \n3335M patient\u00fcs mucosa\n\n      \n3416M patient's mucosa\n\n      \n3578M patient\u00fcs mucosa\n\n      \n3798M patient\u00fcs mucosa\n\n      \n3838M patient\u00fcs mucosa\n\n    \n\n  \n\n  \n\n    \n\n      \nA1BG-AS1\n\n      \n1.618062\n\n      \n1.631023\n\n      \n1.751713\n\n      \n1.942189\n\n      \n1.389749\n\n      \n1.620180\n\n      \n1.222842\n\n    \n\n    \n\n      \nA1CF\n\n      \n2.029520\n\n      \n3.323313\n\n      \n3.315563\n\n      \n2.795794\n\n      \n3.209412\n\n      \n2.805799\n\n      \n1.633054\n\n    \n\n    \n\n      \nA2M\n\n      \n2.994217\n\n      \n2.556958\n\n      \n2.999796\n\n      \n3.354563\n\n      \n3.143560\n\n      \n2.776570\n\n      \n3.075487\n\n    \n\n    \n\n      \nA2M-AS1\n\n      \n2.233742\n\n      \n1.709143\n\n      \n1.968936\n\n      \n2.648101\n\n      \n2.353158\n\n      \n2.346996\n\n      \n2.903206\n\n    \n\n  \n\n\n\n\n\nAPI\n\n\n# gene_exp is the expression dataframe\n# class_vector is the define of the experiment\nr = GSEA.run(data=gene_exp, gmt=\"KEGG_2016\", cls=class_vector)\n\n\n\n\nmore detail information is available in the \nnotebook\n\n\nSPIA\n\n\nThe Signaling Pathway Impact Analysis, is introduced in paper:\n\n\n\n\nA novel signaling pathway impact analysis\n\n\n\n\nWe implement this algorithm in Python.\n\n\nUsage\n\n\nr = SPIA.run(de=c.deg, all=c.background)\n\n\n\n\nParameters\n\n\n\n\nde: a python dict of DEGs. \nkey\n: gene, \nvalue\n: fold-change. e.g. \n{'A': 2.1, 'B': 3.0 ...}\n\n\nall: a python list of total genes. the idtype is ENTREZ. If necessary, use IDMapping to convert other idtype to ENTREZ. e.g. \n['A', 'B', 'C', 'D']\n\n\n\n\nResult\n\n\nUse \ntable\n method to view the result in table form and use the \nplot\n method to view the bar plot.\n\n\nExample notebook\n is also available.  \n\n\nEnrichnet\n\n\nThe Enrichnet algorithm is introduced in paper\n\n\n\n\nEnrichNet: network-based gene set enrichment analysis\n\n\n\n\nWe implement the Python API for Enrichnet HTTP service.\n\n\nUsage\n\n\nrun(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')\n\n\n\n\nParameters\n\n\n\n\ngenesets: the gene list used to run the analysis. E.g. \n['A', 'B' ...]\n\n\nidtype: input id type. Supports idtype: \n['ensembl', 'hgnc_symbol', 'refseq_dna', 'uniprot_swissprot']\n\n\nthe pathlib: function set library. Supports pathdb: \n['kegg', 'biocarta', 'reactome', 'wiki', 'nci', 'interpro', 'gobp', 'gomf', 'gocc']\n\n\ngraph: the graph database. Supports \n['string', 'bossi']\n.\n\n\n\n\nResult\n\n\nUse \ntable\n method to view the result in table form and use the \nplot\n method to view the bar plot.\n\n\nExample notebook\n is also available.",
             "title": "Enrichment"
         },
         {
@@ -172,17 +202,17 @@
         },
         {
             "location": "/enrichment/#overview",
-            "text": "Enrichment analysis aim to find functional set which are over-represented in \na large set of protein or genes. In this section, we will go through the supports\nenrichment, demonstrate the definition and the usage of each method.",
+            "text": "Enrichment analysis aim to find functional set which are over-represented in the large set of protein or genes. In this section, we will go through the supported\nenrichment methods, demonstrate the definition and the usage of each method.",
             "title": "Overview"
         },
         {
             "location": "/enrichment/#basic-class",
-            "text": "This basic class of enrichment analysis is  EnrichmentResult  it self contains the \n result of certain type of enrichment analysis and subclass should at least\n rewrite the statistic method  run  to perform the analysis.",
+            "text": "All the class of enrichment analysis are inherited from  EnrichmentResult . This class holds the \n result of the enrichment analysis and the subclass should at least\n rewrite the statistic method  run  to perform the analysis.",
             "title": "Basic class"
         },
         {
             "location": "/enrichment/#methods",
-            "text": "run  : execute the enrichment analysis and return the instance of subclass contains\nthe analysis information    table  : return the result pandas.Dataframe    plot  : plot the bar chart in the output area    graph  : if the result set have certain relationship, this method return the graph of them.\nfor example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.",
+            "text": "run  : execute the enrichment analysis and return the instance of subclass contains\nthe analysis information    table  : return the result  pandas.Dataframe    plot  : plot the bar chart in the output area    graph  : if the result set have certain relationship, this method return the graph of them.\nfor example, the Gene Ontology ORA subclass return the graph of GO DAG of significant sets.",
             "title": "methods"
         },
         {
@@ -192,98 +222,123 @@
         },
         {
             "location": "/enrichment/#implementation",
-            "text": "The ORA methods is implemented in the analysis.ora  # general ora method\nORA.run(study, pop, gene_set, adjust='fdr_bh')      where  study  is set of significant differential expressed genes or proteins,\n and  pop  is the total annotated genes or proteins. the  gene_set  is a dict contains\nthe gene set name and contained genes like   {\"B cell receptor pathway\": {\"CD22\", \"CD81\"...}...}",
+            "text": "The ORA methods is implemented in the  analysis.ora  # general ora method\nORA.run(study, pop, gene_set, adjust='fdr_bh')      Parameters   study :  set  or  list  of significant differential expressed genes or proteins. E.g.  [A, B, C, D]  pop   set  or  list  of the total annotated genes or proteins. E.g.  [A, B, C, D, E, F, G]  gene_set  is a dict contains. \nthe gene set name and contained genes like    {\"B cell receptor pathway\": {\"CD22\", \"CD81\"...}...}  This information usually parsed from a GMT file use  GMTUtils .",
             "title": "Implementation"
         },
         {
             "location": "/enrichment/#example",
-            "text": "# import necessary module\nfrom pypathway.analysis.ora import KEGG, ORA\nfrom pypathway.utils import ColorectalCancer, IdMapping, GMTUtils\n\n# load a gene_set from a gmt file\ngmt = GMTUtils.parse_gmt_file(\"../../tests/gmt_file/h.all.v6.0.entrez.gmt\")\n\n# load data set\nc = ColorectalCancer()\n\n# perform general ORA test\nres_h = ORA.run(c.deg_list, c.background, gmt)\n\n# view result table\nres_h.table.head()  The result table (In IPython notebook):  \n   \n     \n       \n       name \n       mapped \n       number in study \n       p-value \n       fdr \n     \n   \n   \n     \n       0 \n       HALLMARK_GLYCOLYSIS \n       184 \n       91 \n       9.956407e-08 \n       3.555860e-07 \n     \n     \n       1 \n       HALLMARK_APICAL_JUNCTION \n       185 \n       97 \n       7.750142e-10 \n       3.748583e-09 \n     \n     \n       2 \n       HALLMARK_MYC_TARGETS_V1 \n       173 \n       48 \n       8.377692e-01 \n       9.106187e-01 \n     \n     \n       3 \n       HALLMARK_COAGULATION \n       131 \n       64 \n       1.237516e-05 \n       3.093790e-05 \n     \n     \n       4 \n       HALLMARK_MTORC1_SIGNALING \n       176 \n       90 \n       1.551015e-08 \n       5.965443e-08 \n     \n     # barplot\nres_h.plot()",
+            "text": "# import necessary module\nfrom pypathway.analysis.ora import KEGG, ORA\nfrom pypathway.utils import ColorectalCancer, IdMapping, GMTUtils\n\n# load a gene_set from a gmt file\n# the test folder does not come with pypi or anaconda installation, please obtain it from GitHub.\n# git clone https://github.com/iseekwonderful/PyPathway\ngmt = GMTUtils.parse_gmt_file(\"../../tests/assets/gmt_file/h.all.v6.0.entrez.gmt\")\n\n# load data set\nc = ColorectalCancer()\n\n# perform general ORA test\nres_h = ORA.run(c.deg_list, c.background, gmt)\n\n# view result table\nres_h.table.head()  The result table (In IPython notebook):  \n   \n     \n       \n       name \n       mapped \n       number in study \n       p-value \n       fdr \n     \n   \n   \n     \n       0 \n       HALLMARK_GLYCOLYSIS \n       184 \n       91 \n       9.956407e-08 \n       3.555860e-07 \n     \n     \n       1 \n       HALLMARK_APICAL_JUNCTION \n       185 \n       97 \n       7.750142e-10 \n       3.748583e-09 \n     \n     \n       2 \n       HALLMARK_MYC_TARGETS_V1 \n       173 \n       48 \n       8.377692e-01 \n       9.106187e-01 \n     \n     \n       3 \n       HALLMARK_COAGULATION \n       131 \n       64 \n       1.237516e-05 \n       3.093790e-05 \n     \n     \n       4 \n       HALLMARK_MTORC1_SIGNALING \n       176 \n       90 \n       1.551015e-08 \n       5.965443e-08 \n     \n     # barplot\nres_h.plot()",
             "title": "Example"
         },
         {
             "location": "/enrichment/#specific-ora",
-            "text": "For KEGG, REACTOME and GO, there are specific class implement for them. For the convienice of geneset query and    KEGG     # rather than input specific gene set, organism is accepted and geneset will be retrieved.\nr_kg = KEGG.run(c.deg_list, c.background, 'hsa')   Reactome   # Reactome official API is used. note that the background is the whole Reactome\n# library, if background set required, use Reactome GMT file and ORA class \nr = Reactome.run(sybs, organism='Homo sapiens')   Gene Ontology   # Gene ontology analysis require additional a assoc file.\n# IdMapping class could be used to generate this file\n# c.background is to background gene list of certain study\nr = IdMapping.convert_to_dict(input_id=c.background, source='ENTREZID', target=\"GO\", organism='hsa')\n# and run the analysis\n# [str(x) for x in c.deg_list]: study\n# [str(x) for x in c.background]: background\n# r: the assoc dict\n# obo=path + 'go-basic.obo': the path to the obo file\nrg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo=path + 'go-basic.obo')  The gene ontology enrichment analysis provide the graph overview of the analysis",
+            "text": "For KEGG, REACTOME and GO, there are specific class implement for them. This class preloaded the gene sets or the DEG file before the analysis are performed.",
             "title": "Specific ORA"
         },
         {
+            "location": "/enrichment/#the-apis",
+            "text": "The input and output data structure are same as the basic ORA.   KEGG     #rather than input specific gene set, organism is accepted and geneset will be retrieved.\nr_kg = KEGG.run(c.deg_list, c.background, 'hsa')   Reactome   # Reactome official API is used. note that the background is the whole Reactome\n# library, if background set required, use Reactome GMT file and ORA class \nr = Reactome.run(sybs, organism='Homo sapiens')   Gene Ontology   For  Gene Ontology  analysis please provide a association file, which could be a  Python dict  or  text file . In this example, we use a dict generated by the utility IdMapping. If you want use the exist text association file, use the format like this each line:  ID\\tGO_term1;GO_term2...\\n  # Gene ontology analysis require additional a assoc file.\n# IdMapping class could be used to generate this file\n# c.background is to background gene list of certain study\nr = IdMapping.convert_to_dict(input_id=c.background, source='ENTREZID', target=\"GO\", organism='hsa')\n# and run the analysis\n# [str(x) for x in c.deg_list]: study\n# [str(x) for x in c.background]: background\n# r: the assoc dict\n# obo=path + 'go-basic.obo': the path to the obo file\nrg = GO.run([str(x) for x in c.deg_list], [str(x) for x in c.background], r, obo=path + 'go-basic.obo')  The gene ontology enrichment analysis provide the graph overview of the analysis",
+            "title": "The APIs"
+        },
+        {
             "location": "/enrichment/#gsea",
-            "text": "The Gene Set Enrichment Analysis, is introduced in paper:   Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles   at  PNAS  This class is implement via  GSEApy",
+            "text": "The Gene Set Enrichment Analysis(GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically \nsignificant, concordant differences between two biological states. is introduced in paper:   Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles   at  PNAS  This class is implement based on  GSEApy",
             "title": "GSEA"
         },
         {
             "location": "/enrichment/#usage",
-            "text": "# gene_exp is the expression dataframe\n# class_vector is the define of the experiment\ngs_res = gp.gsea(data=gene_exp, gene_sets='KEGG_2016', cls=class_vector, \n                 permutation_type='phenotype', #set permutation_type to phenotype when \n                 outdir='gsea_reprot', method='signal_to_noise', format='png')  more detail information is described in the  example/analysis/GSEA.ipynb",
+            "text": "",
             "title": "Usage"
         },
         {
+            "location": "/enrichment/#input-data-structure",
+            "text": "Differ to other analysis class, the GSEA need to do a phenotypic or gene_set permutation test, so the original data is need.    The gene_sets: receives both get dict or a library name in  Enrichr's library    The cls file, this file format defines phenotype (class or template) labels and associates each sample in the expression data with a label. The CLS file format uses spaces or tabs to separate the fields. For detail information, please refer to the  official documents      The expression file. A pandas data frame contains the expression  value (counts, TPM). e.g.   \n   \n     \n       Name \n       2965M patient's mucosa \n       3216M patient's mucosa \n       3335M patient\u00fcs mucosa \n       3416M patient's mucosa \n       3578M patient\u00fcs mucosa \n       3798M patient\u00fcs mucosa \n       3838M patient\u00fcs mucosa \n     \n   \n   \n     \n       A1BG-AS1 \n       1.618062 \n       1.631023 \n       1.751713 \n       1.942189 \n       1.389749 \n       1.620180 \n       1.222842 \n     \n     \n       A1CF \n       2.029520 \n       3.323313 \n       3.315563 \n       2.795794 \n       3.209412 \n       2.805799 \n       1.633054 \n     \n     \n       A2M \n       2.994217 \n       2.556958 \n       2.999796 \n       3.354563 \n       3.143560 \n       2.776570 \n       3.075487 \n     \n     \n       A2M-AS1 \n       2.233742 \n       1.709143 \n       1.968936 \n       2.648101 \n       2.353158 \n       2.346996 \n       2.903206",
+            "title": "Input data structure"
+        },
+        {
+            "location": "/enrichment/#api",
+            "text": "# gene_exp is the expression dataframe\n# class_vector is the define of the experiment\nr = GSEA.run(data=gene_exp, gmt=\"KEGG_2016\", cls=class_vector)  more detail information is available in the  notebook",
+            "title": "API"
+        },
+        {
             "location": "/enrichment/#spia",
-            "text": "The Signaling Pathway Impact Analysis, is introduced in paper:   A novel signaling pathway impact analysis   we implement this algorithm in Python.",
+            "text": "The Signaling Pathway Impact Analysis, is introduced in paper:   A novel signaling pathway impact analysis   We implement this algorithm in Python.",
             "title": "SPIA"
         },
         {
             "location": "/enrichment/#usage_1",
-            "text": "r = SPIA.run(de=c.deg, all=c.background)\n# de: a dict, key: gene, value: fold-change\n# the idtype is entrez. use IDMapping to convert",
+            "text": "r = SPIA.run(de=c.deg, all=c.background)  Parameters   de: a python dict of DEGs.  key : gene,  value : fold-change. e.g.  {'A': 2.1, 'B': 3.0 ...}  all: a python list of total genes. the idtype is ENTREZ. If necessary, use IDMapping to convert other idtype to ENTREZ. e.g.  ['A', 'B', 'C', 'D']",
             "title": "Usage"
         },
         {
+            "location": "/enrichment/#result",
+            "text": "Use  table  method to view the result in table form and use the  plot  method to view the bar plot.  Example notebook  is also available.",
+            "title": "Result"
+        },
+        {
             "location": "/enrichment/#enrichnet",
-            "text": "The Enrichnet algorithm is introduced in paper   EnrichNet: network-based gene set enrichment analysis   we implement the Python API for Enrichnet HTTP service.",
+            "text": "The Enrichnet algorithm is introduced in paper   EnrichNet: network-based gene set enrichment analysis   We implement the Python API for Enrichnet HTTP service.",
             "title": "Enrichnet"
         },
         {
             "location": "/enrichment/#usage_2",
-            "text": "run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')\n# genesets: the gene list used to run the analysis\n# idtype: input id type\n# the pathlib: function set library\n# graph: the graph",
+            "text": "run(genesets, idtype='hgnc_symbol', pathdb='kegg', graph='string')  Parameters   genesets: the gene list used to run the analysis. E.g.  ['A', 'B' ...]  idtype: input id type. Supports idtype:  ['ensembl', 'hgnc_symbol', 'refseq_dna', 'uniprot_swissprot']  the pathlib: function set library. Supports pathdb:  ['kegg', 'biocarta', 'reactome', 'wiki', 'nci', 'interpro', 'gobp', 'gomf', 'gocc']  graph: the graph database. Supports  ['string', 'bossi'] .",
             "title": "Usage"
         },
         {
+            "location": "/enrichment/#result_1",
+            "text": "Use  table  method to view the result in table form and use the  plot  method to view the bar plot.  Example notebook  is also available.",
+            "title": "Result"
+        },
+        {
             "location": "/modelling/",
-            "text": "MAGI\n\n\nPaper\n\n\n\n\nThe discovery of integrated gene networks for autism and related disorders\n\n\n\n\nOriginal C Implementation\n\n\nhttps://eichlerlab.gs.washington.edu/MAGI/\n The source and example are available in this website.\n\n\nOverview\n\n\nThe C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler.\n\n\nUsage\n\n\nThe original C implementation are migrate into Python C extension, The \nMAGI\n class are used to execute the \npathway_select\n and the \nclustring\n. The visualization methods are provided to plot the \nmodule\n network.\n\n\npathway_select\n\n\nThe statistic method \nMAGI.select_pathway\n are used to generate the seed pathway use color-coding algorithm.\n\n\nselect_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=8)\n\n\n\n\nParameter\n\n\n \nppi\n: the Protein-protein interaction network, example: \nStringNew_HPRD\n.\n\n \ncase\n: the case denote mutation list example: \nID_2_Autism_4_Severe_Missense.Clean_WithNew\n\n\n \ncoExpId\n: The input gives the order of each gene appearing in the coExpression matrix. example \nGeneCoExpresion_ID\n\n\n \ncoExpMat\n: the Pairwise gene coexpression values. example: \nadj1.csv.Tab.BinaryFormat\n.\n\n \nctrl\n: The number of mutations in each gene in controls. example: \nNew_ESP_Sereve\n\n\n \nfilter\n: optional, remove set of the gene in PPI.\n* \nlength\n: the length of each genes, example: \nGene_Name_Length\n\n\nExample\n\n\nnote\n: all the file is in the \n.\n folder. if not, should use relative or absolute path.\n\n\n# path is the path to the assets file.\nMAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',\n                   path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', path + 'New_ESP_Sereve.txt',\n                   path + 'Gene_Name_Length.txt')\n\n\n\n\nThe seed file, random list file will be written to the \ncache\n dir.\n\n\nClustering\n\n\nthe statistic method \nMAGI.clustering\n are used to cluster the seed pathway generated in the last step.\n\n\ndef cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,\n                min_size_of_module, max_size_of_module, min_ratio_of_seed,\n                minCoExpr=None, avgCoExpr=None, avgDensity=None, seed=None, score=None):\n\n\n\n\n\nParameter\n\n\n \nppi\n: the Protein-protein interaction network, example: \nStringNew_HPRD\n.\n\n \ncoExpId\n: The input gives the order of each gene appearing in the coExpression matrix. example \nGeneCoExpresion_ID\n\n\n \ncoExpMat\n: the Pairwise gene coexpression values. example: \nadj1.csv.Tab.BinaryFormat\n.\n\n \nupper_mutation_on_control\n: The total number of mutations in control's allowed.\n\n \nmin_size_of_module\n:     The minimum number of genes in the module\n\n \nmax_size_of_module\n:     The maximum number of genes in the module\n\n \nmin_ratio_of_seed\n: For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper \n0.5\n was used)\n\n \nminCoExpr\n: The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e. \nr^2>0.01\n, which is the median coexpression value in the input \nadj1.csv.Tab.BinaryFormat\n)\n\n \navgCoExpr\n: The minimum average coexpression of the modules allowed (the default is \n0.415\n)\n\n \navgDensity\n:         The minimum avergae PPI density of the modules allowed (the default is 0.08)\n\n \nseed\n: if the \nMAGI.select_pathway\n is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here\n\n \nscore\n: similar to \nseed\n, input CLI generate score file path else None;\n\n\nExample\n\n\nresult = MAGI.cluster(path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 2, 5, 100, 0.5)\n\n\n\n\nThe result a list of \nMAGIResult\n class.\n\n\n# plot the result\nresult[0].plot()",
+            "text": "MAGI\n\n\nMAGI ( Merge Affected Genes into Integrated networks ) is originally published in the paper \nThe discovery of integrated gene networks for autism and related disorders\n. Which combines the interactive network and the co-expression network to find functional modules.\n\n\nOriginal C Implementation\n\n\nhttps://eichlerlab.gs.washington.edu/MAGI/\n The source and example files are available in this website.\n\n\nOverview\n\n\nThe C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler. The \nMAGI\n class including the \npathway_select\n and the \nclustring\n module. The visualization methods are provided to plot the \nmodule\n's network.\n\n\npathway_select\n\n\nThe static method \nMAGI.select_pathway\n are used to generate the seed pathway use color-coding algorithm.\n\n\nselect_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=4)\n\n\n\n\nParameters\n\n\n\n\nppi\n: the Protein-protein interaction network, example: \nStringNew_HPRD\n.\n\n\ncase\n: the case denote mutation list, example: \nID_2_Autism_4_Severe_Missense.Clean_WithNew\n\n\ncoExpId\n: The input gives the order of each gene appearing in the coExpression matrix. example \nGeneCoExpresion_ID\n\n\ncoExpMat\n: the Pairwise gene coexpression values, example: \nadj1.csv.Tab.BinaryFormat\n.\n\n\nctrl\n: The number of mutations in each gene in controls. example: \nNew_ESP_Sereve\n\n\nfilter\n: optional, remove set of the gene in PPI.\n\n\nlength\n: the length of each genes, example: \nGene_Name_Length\n\n\n\n\nExample\n\n\nnote\n: put the \nexample assets\n to the path folder.\n\n\npath = \"../../tests/assets/smaller_magi/\"\nMAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',\n                   path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', path + 'New_ESP_Sereve.txt',\n                   path + 'Gene_Name_Length.txt')\n\n\n\n\nOutput file in this step including the seed file and the random list file will be written to the \ncache\n dir.\n\n\nClustering\n\n\nThis step cluster the seeds pathway we get in the previous step to a functional module.the static method \nMAGI.clustering\n are used to do this job.\n\n\ndef cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,\n                min_size_of_module, max_size_of_module, min_ratio_of_seed,\n                minCoExpr=None, avgCoExpr=None, avgDensity=None, seed=None, score=None):\n\n\n\n\n\nParameter\n\n\n\n\nppi\n: the Protein-protein interaction network, example: \nStringNew_HPRD\n.\n\n\ncoExpId\n: The input gives the order of each gene appearing in the coExpression matrix. example \nGeneCoExpresion_ID\n\n\ncoExpMat\n: the Pairwise gene coexpression values. example: \nadj1.csv.Tab.BinaryFormat\n.\n\n\nupper_mutation_on_control\n: The total number of mutations in control's allowed.\n\n\nmin_size_of_module\n:     The minimum number of genes in the module\n\n\nmax_size_of_module\n:     The maximum number of genes in the module\n\n\nmin_ratio_of_seed\n: For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper \n0.5\n was used)\n\n\nminCoExpr\n: The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e. \nr^2>0.01\n, which is the median coexpression value in the input \nadj1.csv.Tab.BinaryFormat\n)\n\n\navgCoExpr\n: The minimum average coexpression of the modules allowed (the default is \n0.415\n)\n\n\navgDensity\n:         The minimum avergae PPI density of the modules allowed (the default is 0.08)\n\n\nseed\n: if the \nMAGI.select_pathway\n is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here\n\n\nscore\n: similar to \nseed\n, input CLI generate score file path else None;\n\n\n\n\nExample\n\n\nresult = MAGI.cluster(path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 2, 5, 100, 0.5)\n\n\n\n\nThe result a list of \nMAGIResult\n class.\n\n\n# plot the result\nresult[0].plot()\n\n\n\n\n\n\nExport result\n\n\nUse \nMAGIExport.export\n method to export the result of a clustering result.\n\n\nMAGIExport.export(result)\n\n\n\n\nWhich generates a HTML page displaying the modules and its visualization.",
             "title": "Modelling"
         },
         {
             "location": "/modelling/#magi",
-            "text": "",
+            "text": "MAGI ( Merge Affected Genes into Integrated networks ) is originally published in the paper  The discovery of integrated gene networks for autism and related disorders . Which combines the interactive network and the co-expression network to find functional modules.",
             "title": "MAGI"
         },
         {
-            "location": "/modelling/#paper",
-            "text": "The discovery of integrated gene networks for autism and related disorders",
-            "title": "Paper"
-        },
-        {
             "location": "/modelling/#original-c-implementation",
-            "text": "https://eichlerlab.gs.washington.edu/MAGI/  The source and example are available in this website.",
+            "text": "https://eichlerlab.gs.washington.edu/MAGI/  The source and example files are available in this website.",
             "title": "Original C Implementation"
         },
         {
             "location": "/modelling/#overview",
-            "text": "The C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler.",
+            "text": "The C implementation only use one thread and lacks exception handling. We provide the Python interface with modified multi-process model and File IO exception handler. The  MAGI  class including the  pathway_select  and the  clustring  module. The visualization methods are provided to plot the  module 's network.",
             "title": "Overview"
         },
         {
-            "location": "/modelling/#usage",
-            "text": "The original C implementation are migrate into Python C extension, The  MAGI  class are used to execute the  pathway_select  and the  clustring . The visualization methods are provided to plot the  module  network.",
-            "title": "Usage"
-        },
-        {
             "location": "/modelling/#pathway_select",
-            "text": "The statistic method  MAGI.select_pathway  are used to generate the seed pathway use color-coding algorithm.  select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=8)  Parameter    ppi : the Protein-protein interaction network, example:  StringNew_HPRD .   case : the case denote mutation list example:  ID_2_Autism_4_Severe_Missense.Clean_WithNew    coExpId : The input gives the order of each gene appearing in the coExpression matrix. example  GeneCoExpresion_ID    coExpMat : the Pairwise gene coexpression values. example:  adj1.csv.Tab.BinaryFormat .   ctrl : The number of mutations in each gene in controls. example:  New_ESP_Sereve    filter : optional, remove set of the gene in PPI.\n*  length : the length of each genes, example:  Gene_Name_Length  Example  note : all the file is in the  .  folder. if not, should use relative or absolute path.  # path is the path to the assets file.\nMAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',\n                   path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', path + 'New_ESP_Sereve.txt',\n                   path + 'Gene_Name_Length.txt')  The seed file, random list file will be written to the  cache  dir.",
+            "text": "The static method  MAGI.select_pathway  are used to generate the seed pathway use color-coding algorithm.  select_pathway(ppi, case, coExpId, coExpMat, ctrl, length, filter=None, process=4)  Parameters   ppi : the Protein-protein interaction network, example:  StringNew_HPRD .  case : the case denote mutation list, example:  ID_2_Autism_4_Severe_Missense.Clean_WithNew  coExpId : The input gives the order of each gene appearing in the coExpression matrix. example  GeneCoExpresion_ID  coExpMat : the Pairwise gene coexpression values, example:  adj1.csv.Tab.BinaryFormat .  ctrl : The number of mutations in each gene in controls. example:  New_ESP_Sereve  filter : optional, remove set of the gene in PPI.  length : the length of each genes, example:  Gene_Name_Length   Example  note : put the  example assets  to the path folder.  path = \"../../tests/assets/smaller_magi/\"\nMAGI.select_pathway(path + 'StringNew_HPRD.txt', path + 'ID_2_Autism_4_Severe_Missense.Clean_WithNew.txt',\n                   path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', path + 'New_ESP_Sereve.txt',\n                   path + 'Gene_Name_Length.txt')  Output file in this step including the seed file and the random list file will be written to the  cache  dir.",
             "title": "pathway_select"
         },
         {
             "location": "/modelling/#clustering",
-            "text": "the statistic method  MAGI.clustering  are used to cluster the seed pathway generated in the last step.  def cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,\n                min_size_of_module, max_size_of_module, min_ratio_of_seed,\n                minCoExpr=None, avgCoExpr=None, avgDensity=None, seed=None, score=None):  Parameter    ppi : the Protein-protein interaction network, example:  StringNew_HPRD .   coExpId : The input gives the order of each gene appearing in the coExpression matrix. example  GeneCoExpresion_ID    coExpMat : the Pairwise gene coexpression values. example:  adj1.csv.Tab.BinaryFormat .   upper_mutation_on_control : The total number of mutations in control's allowed.   min_size_of_module :     The minimum number of genes in the module   max_size_of_module :     The maximum number of genes in the module   min_ratio_of_seed : For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper  0.5  was used)   minCoExpr : The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e.  r^2>0.01 , which is the median coexpression value in the input  adj1.csv.Tab.BinaryFormat )   avgCoExpr : The minimum average coexpression of the modules allowed (the default is  0.415 )   avgDensity :         The minimum avergae PPI density of the modules allowed (the default is 0.08)   seed : if the  MAGI.select_pathway  is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here   score : similar to  seed , input CLI generate score file path else None;  Example  result = MAGI.cluster(path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 2, 5, 100, 0.5)  The result a list of  MAGIResult  class.  # plot the result\nresult[0].plot()",
+            "text": "This step cluster the seeds pathway we get in the previous step to a functional module.the static method  MAGI.clustering  are used to do this job.  def cluster(ppi, coExpId, coExpMat, upper_mutation_on_control,\n                min_size_of_module, max_size_of_module, min_ratio_of_seed,\n                minCoExpr=None, avgCoExpr=None, avgDensity=None, seed=None, score=None):  Parameter   ppi : the Protein-protein interaction network, example:  StringNew_HPRD .  coExpId : The input gives the order of each gene appearing in the coExpression matrix. example  GeneCoExpresion_ID  coExpMat : the Pairwise gene coexpression values. example:  adj1.csv.Tab.BinaryFormat .  upper_mutation_on_control : The total number of mutations in control's allowed.  min_size_of_module :     The minimum number of genes in the module  max_size_of_module :     The maximum number of genes in the module  min_ratio_of_seed : For each seed type the top percentage of the score from maximum score of the seed allowed (in the paper  0.5  was used)  minCoExpr : The minimum pair-wise coexpression value per gene allowed (the default is 0.01, i.e.  r^2>0.01 , which is the median coexpression value in the input  adj1.csv.Tab.BinaryFormat )  avgCoExpr : The minimum average coexpression of the modules allowed (the default is  0.415 )  avgDensity :         The minimum avergae PPI density of the modules allowed (the default is 0.08)  seed : if the  MAGI.select_pathway  is called before, than ignore this. is the seed is generate by CLI PathwaySelect, use the seed file path here  score : similar to  seed , input CLI generate score file path else None;   Example  result = MAGI.cluster(path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt', path + 'adj1.csv.Tab.BinaryFormat', 2, 5, 100, 0.5)  The result a list of  MAGIResult  class.  # plot the result\nresult[0].plot()",
             "title": "Clustering"
         },
         {
+            "location": "/modelling/#export-result",
+            "text": "Use  MAGIExport.export  method to export the result of a clustering result.  MAGIExport.export(result)  Which generates a HTML page displaying the modules and its visualization.",
+            "title": "Export result"
+        },
+        {
             "location": "/propagation/",
-            "text": "Network Propagation\n\n\nthis module implements three algorithms: \nrandom walk\n, \nrandom walk with restart\n and \nheat kernel\n. The \nimplementation of this module is according to paper\n\n\n\n\nNetwork propagation: a universal amplifier of genetic associations\n\n\n\n\nAll these method start with a vector = |V| and simulate the heat diffuse process in the network.\nthe difference between these methods are list in the following table (from above paper).\n\n\n\n\nRandom Walk\n\n\nAPI\n\n\ndef random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -> nx.Graph\n\n\n\n\nArguments:\n\n\n\n\nG: nx.Graph\n : the input graph.\n\n\nheat\n : the heat vector, length = |V|.\n\n\nn: int = -1\n : the time random walk repeats, if n==-1, the loop will stop when the\n    threshold is reached.\n\n\nthreshold\n: the threshold check whether the steady state is reached.\n\n\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node.\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: random_walk(G, h).node\n\nOut [5]: \n{1: {'heat': 0.33333342635070995},\n 2: {'heat': 0.49999990698262176},\n 3: {'heat': 0.3333333333333327},\n 4: {'heat': 0.3333332403159554},\n 5: {'heat': 0.50000009301737625}}\n\n\n\n\nRandom Walk with Restart (RWR)\n\n\nAPI\n\n\ndef random_walk_with_restart(G: nx.Graph, heat: list, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:\n\n\n\n\nArguments:\n\n\n\n\nG: nx.Graph\n : the input graph.\n\n\nheat\n : the heat vector, length = |V|.\n\n\nn: int = -1\n : the time random walk with restart repeats, if n==-1, the loop will stop when the\n    threshold is reached.\n\n\nrp\n: restart probability.\n\n\nthreshold\n: the threshold check whether the steady state is reached.\n\n\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: random_walk_with_restart(G, h, rp=0.7, n=-1).node\n\nOut [5]: \n{1: {'heat': 0.18859903381642515},\n 2: {'heat': 0.76309178743961337},\n 3: {'heat': 0.096618357487922704},\n 4: {'heat': 0.74859903381642512},\n 5: {'heat': 0.20309178743961354}}\n\n\n\n\nHeat kernel\n\n\nAPI\n\n\ndef diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:\n\n\n\n\nArguments:\n\n\n\n\nG: nx.Graph\n : the input graph.\n\n\nheat\n : the heat vector, length = |V|.\n\n\nn: int = -1\n : the time random walk with restart repeats.\n\n\nrp\n: restart probability.\n\n\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: diffusion_kernel(G, h, rp=0.8, n=100).node\n\nOut [5]: \n{1: {'heat': 0.42138736822730222},\n 2: {'heat': 0.38934416321338194},\n 3: {'heat': 0.32359870881215813},\n 4: {'heat': 0.47852257848932078},\n 5: {'heat': 0.38714718125782877}}\n\n\n\n\nExample Notebook\n\n\nthe example notebook is available at \nGithub\n.",
-            "title": "propagation"
+            "text": "Network Propagation\n\n\nThis module implements three algorithms: \nrandom walk\n, \nrandom walk with restart\n and \nheat kernel\n. The \nimplementation of these modules based on the paper\n\n\n\n\nNetwork propagation: a universal amplifier of genetic associations\n\n\n\n\nAll these method start with a vector = |V| and simulate the heat diffuse process in the network.\nthe difference between these methods are list in the following table (figure from above paper).\n\n\n\n\nExample Notebook\n\n\nThe example notebook exists in \n$project_root/examples/analysis/propagation.ipynb\n or view at \nGithub\n\n\nRandom Walk\n\n\nAPI\n\n\ndef random_walk(G: nx.Graph, heat: dict, n: int = -1, threshold: float = 1e-6) -> nx.Graph\n\n\n\n\nArguments\n:\n\n\n\n\nG: nx.Graph\n : the input graph.\n\n\nheat\n : the heat dict, should have same length with G, contain the node name and the heat value.\n\n\nn: int = -1\n : the time random walk repeats, if n==-1, the loop will stop when the\n    threshold is reached.\n\n\nthreshold\n: the threshold check whether the steady state is reached.\n\n\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node.\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(random_walk(G, h).node)\n\nOut [5]: \n{1: {'heat': 0.33333342635070995},\n 2: {'heat': 0.49999990698262176},\n 3: {'heat': 0.3333333333333327},\n 4: {'heat': 0.3333332403159554},\n 5: {'heat': 0.50000009301737625}}\n\n\n\n\nRandom Walk with Restart (RWR)\n\n\nAPI\n\n\ndef random_walk_with_restart(G: nx.Graph, heat: dict, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:\n\n\n\n\nArguments\n:\n\n \nG: nx.Graph\n : the input graph.\n\n \nheat\n : the heat dict, should have same length with G, contain the node name and the heat value.\n\n \nn: int = -1\n : the time random walk with restart repeats, if n==-1, the loop will stop when the\n    threshold is reached.\n\n \nrp\n: restart probability.\n* \nthreshold\n: the threshold check whether the steady state is reached.\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(random_walk_with_restart(G, h, rp=0.7, n=-1).node)\n\nOut [5]: \n{1: {'heat': 0.18859903381642515},\n 2: {'heat': 0.76309178743961337},\n 3: {'heat': 0.096618357487922704},\n 4: {'heat': 0.74859903381642512},\n 5: {'heat': 0.20309178743961354}}\n\n\n\n\nHeat kernel\n\n\nAPI\n\n\ndef diffusion_kernel(G: nx.Graph, heat: dict, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:\n\n\n\n\nArguments\n:\n\n\n\n\nG: nx.Graph\n : the input graph.\n\n\nheat\n : the heat dict, should have same length with G, contain the node name and the heat value.\n\n\nn: int = -1\n : the time random walk with restart repeats.\n\n\nrp\n: restart probability.\n\n\n\n\nReturn value\n\n\nnx.Graph (copied) with node property \nheat\n with the result heat of each node\n\n\nExample\n\n\n# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(diffusion_kernel(G, h, rp=0.8, n=100).node)\n\nOut [5]: \n{1: {'heat': 0.42138736822730222},\n 2: {'heat': 0.38934416321338194},\n 3: {'heat': 0.32359870881215813},\n 4: {'heat': 0.47852257848932078},\n 5: {'heat': 0.38714718125782877}}",
+            "title": "Propagation"
         },
         {
             "location": "/propagation/#network-propagation",
-            "text": "this module implements three algorithms:  random walk ,  random walk with restart  and  heat kernel . The \nimplementation of this module is according to paper   Network propagation: a universal amplifier of genetic associations   All these method start with a vector = |V| and simulate the heat diffuse process in the network.\nthe difference between these methods are list in the following table (from above paper).",
+            "text": "This module implements three algorithms:  random walk ,  random walk with restart  and  heat kernel . The \nimplementation of these modules based on the paper   Network propagation: a universal amplifier of genetic associations   All these method start with a vector = |V| and simulate the heat diffuse process in the network.\nthe difference between these methods are list in the following table (figure from above paper).",
             "title": "Network Propagation"
+        },
+        {
+            "location": "/propagation/#example-notebook",
+            "text": "The example notebook exists in  $project_root/examples/analysis/propagation.ipynb  or view at  Github",
+            "title": "Example Notebook"
         },
         {
             "location": "/propagation/#random-walk",
@@ -292,13 +347,8 @@
         },
         {
             "location": "/propagation/#api",
-            "text": "def random_walk(G: nx.Graph, heat: list, n: int = -1, threshold: float = 1e-6) -> nx.Graph",
+            "text": "def random_walk(G: nx.Graph, heat: dict, n: int = -1, threshold: float = 1e-6) -> nx.Graph  Arguments :   G: nx.Graph  : the input graph.  heat  : the heat dict, should have same length with G, contain the node name and the heat value.  n: int = -1  : the time random walk repeats, if n==-1, the loop will stop when the\n    threshold is reached.  threshold : the threshold check whether the steady state is reached.",
             "title": "API"
-        },
-        {
-            "location": "/propagation/#arguments",
-            "text": "G: nx.Graph  : the input graph.  heat  : the heat vector, length = |V|.  n: int = -1  : the time random walk repeats, if n==-1, the loop will stop when the\n    threshold is reached.  threshold : the threshold check whether the steady state is reached.",
-            "title": "Arguments:"
         },
         {
             "location": "/propagation/#return-value",
@@ -307,7 +357,7 @@
         },
         {
             "location": "/propagation/#example",
-            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: random_walk(G, h).node\n\nOut [5]: \n{1: {'heat': 0.33333342635070995},\n 2: {'heat': 0.49999990698262176},\n 3: {'heat': 0.3333333333333327},\n 4: {'heat': 0.3333332403159554},\n 5: {'heat': 0.50000009301737625}}",
+            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(random_walk(G, h).node)\n\nOut [5]: \n{1: {'heat': 0.33333342635070995},\n 2: {'heat': 0.49999990698262176},\n 3: {'heat': 0.3333333333333327},\n 4: {'heat': 0.3333332403159554},\n 5: {'heat': 0.50000009301737625}}",
             "title": "Example"
         },
         {
@@ -317,13 +367,8 @@
         },
         {
             "location": "/propagation/#api_1",
-            "text": "def random_walk_with_restart(G: nx.Graph, heat: list, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:",
+            "text": "def random_walk_with_restart(G: nx.Graph, heat: dict, rp: float, n: int = -1, threshold: float = 1e-6) -> nx.Graph:  Arguments :   G: nx.Graph  : the input graph.   heat  : the heat dict, should have same length with G, contain the node name and the heat value.   n: int = -1  : the time random walk with restart repeats, if n==-1, the loop will stop when the\n    threshold is reached.   rp : restart probability.\n*  threshold : the threshold check whether the steady state is reached.",
             "title": "API"
-        },
-        {
-            "location": "/propagation/#arguments_1",
-            "text": "G: nx.Graph  : the input graph.  heat  : the heat vector, length = |V|.  n: int = -1  : the time random walk with restart repeats, if n==-1, the loop will stop when the\n    threshold is reached.  rp : restart probability.  threshold : the threshold check whether the steady state is reached.",
-            "title": "Arguments:"
         },
         {
             "location": "/propagation/#return-value_1",
@@ -332,7 +377,7 @@
         },
         {
             "location": "/propagation/#example_1",
-            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: random_walk_with_restart(G, h, rp=0.7, n=-1).node\n\nOut [5]: \n{1: {'heat': 0.18859903381642515},\n 2: {'heat': 0.76309178743961337},\n 3: {'heat': 0.096618357487922704},\n 4: {'heat': 0.74859903381642512},\n 5: {'heat': 0.20309178743961354}}",
+            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(random_walk_with_restart(G, h, rp=0.7, n=-1).node)\n\nOut [5]: \n{1: {'heat': 0.18859903381642515},\n 2: {'heat': 0.76309178743961337},\n 3: {'heat': 0.096618357487922704},\n 4: {'heat': 0.74859903381642512},\n 5: {'heat': 0.20309178743961354}}",
             "title": "Example"
         },
         {
@@ -342,13 +387,8 @@
         },
         {
             "location": "/propagation/#api_2",
-            "text": "def diffusion_kernel(G: nx.Graph, heat: list, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:",
+            "text": "def diffusion_kernel(G: nx.Graph, heat: dict, rp: float, n: int, threshold: float = 1e-6) -> nx.Graph:  Arguments :   G: nx.Graph  : the input graph.  heat  : the heat dict, should have same length with G, contain the node name and the heat value.  n: int = -1  : the time random walk with restart repeats.  rp : restart probability.",
             "title": "API"
-        },
-        {
-            "location": "/propagation/#arguments_2",
-            "text": "G: nx.Graph  : the input graph.  heat  : the heat vector, length = |V|.  n: int = -1  : the time random walk with restart repeats.  rp : restart probability.",
-            "title": "Arguments:"
         },
         {
             "location": "/propagation/#return-value_2",
@@ -357,17 +397,12 @@
         },
         {
             "location": "/propagation/#example_2",
-            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = np.array([0, 1, 0, 1, 0])\nIn [5]: diffusion_kernel(G, h, rp=0.8, n=100).node\n\nOut [5]: \n{1: {'heat': 0.42138736822730222},\n 2: {'heat': 0.38934416321338194},\n 3: {'heat': 0.32359870881215813},\n 4: {'heat': 0.47852257848932078},\n 5: {'heat': 0.38714718125782877}}",
+            "text": "# the graph\nIn [3]: G = nx.Graph([[1, 2], [2, 3], [3, 5], [2, 5], [1, 4], [4, 5]])\n# the heat\nIn [4]: h = {1: 0, 2: 1, 3: 0, 4: 1, 5: 0}\nIn [5]: dict(diffusion_kernel(G, h, rp=0.8, n=100).node)\n\nOut [5]: \n{1: {'heat': 0.42138736822730222},\n 2: {'heat': 0.38934416321338194},\n 3: {'heat': 0.32359870881215813},\n 4: {'heat': 0.47852257848932078},\n 5: {'heat': 0.38714718125782877}}",
             "title": "Example"
         },
         {
-            "location": "/propagation/#example-notebook",
-            "text": "the example notebook is available at  Github .",
-            "title": "Example Notebook"
-        },
-        {
             "location": "/netviz/",
-            "text": "Overview\n\n\nThis is the inner module of pynet and a dynamic visualizer for networkx graph. With several function like  tooltips, highlight and node modification.\n\n\n\n\nUsage\n\n\nInputs\n\n\nThe class \nFromNetworkx\n receive \nnetworks.Graph\n or \nnetworks.DiGraph\n instance, and plot as a HTML widget in the output area.\nThe difference between \nGraph\n and \nDiGraph\n is the arrow rendered in the target.\n\n\nExample\n\n\nFromNetworkX(nx.complete_graph(5)).plot()\n\n\n\n\nThis example generate a five node Graph and render.\n\n\n \n\n\nThe layout\n\n\nThe layout algorithm is mainly \nspring_layout\n. if the node number is less then 20, the module will use \ncose-bilkent\n implementation. Else the \nnx.spring_layout\n is used for speed concern.\n\n\nIf the graph is highly connected, the layout algorithm may have poor performance\n\n\nBasic interactive feature\n\n\nTooltips\n\n\nif any \ntooltip\n item are in the node\u2019s property, a tooltip will  appear when mouse hang over the node. the tooltip accepts a \ndict\n like \n\n\n{\u201cFIRST_ATTRITUTE\u201d: \u201cFIRST_VALUE\u201d, \u201cSECOND_ATTRIBUTE\u201d: \u201cSECOND_VALUE\u201d}\n\n\n\n\nand displays:\n\n\nFIRST_ATTRITUTE: FIRST_VALUE\nSECOND_ATTRIBUTE: SECOND_VALUE\n\n\n\n\nlook likes:\n\n\n\n\nThe cxtmenu\n\n\nif left click at certain node, a cxtmenu will be displayed with mark, remove and expand(may not available if not implemented).\n\n\n\nThe DAG visualizer for GO\n\n\nSpecially for Gene Ontology, the DAG plotter is prepared with dagre layout.\n\n\nExample: \n\n\nTodo\n\n\nStyle\n\n\nThe \nFromNetworkx\n receives style like {\u2018node\u2019: {\u2026}, \u2018edge\u2019: {\u2026}, \u2018spring_length\u2019: {\u2026}}\nor several presets are available in \nStylePresets\n\nfor example:\n\n\nORANGE_CENTERED_LABEL = {\n        'node': {'label': 'data(label)',\n                 'width': 24,\n                 'height': 24,\n                 'font-size': '-1em',\n                 'font-weight': 2,\n                 'background-color': '#F69924',\n                 'border-width': 2,\n                 'border-color': 'white',\n                 'text-valign': 'center',\n                 'text-halign': 'center',\n                 'color': 'white'\n                 },\n        'edge': {\n            'width': 3,\n            'line-color': '#F69924'\n        },\n        'spring_length': 50\n    }\n\n\n\n\nCaution\n\n\nMaximum node and edge count\n\n\nDue to the performance issue cause by JavaScript and Cytoscape.js, and Graph whose node number > 2k or edge > 5k will cause browser long time 100 percent CPU usage.",
+            "text": "Overview\n\n\nThis is the inner module of pynet and a dynamic visualizer for networkx graph. With several function like  tooltips, highlight and node modification.\n\n\n\n\nUsage\n\n\nInputs\n\n\nThe class \nFromNetworkx\n receive \nnetworks.Graph\n or \nnetworks.DiGraph\n instance, and plot as a HTML widget in the output area.\nThe difference between \nGraph\n and \nDiGraph\n is the arrow rendered in the target.\n\n\nExample\n\n\nFromNetworkX(nx.complete_graph(5)).plot()\n\n\n\n\nThis example generate a five node Graph and render.\n\n\n \n\n\nThe layout\n\n\nThe layout algorithm is mainly \nspring_layout\n. if the node number is less then 20, the module will use \ncose-bilkent\n implementation. Else the \nnx.spring_layout\n is used for speed concern.\n\n\nIf the graph is highly connected, the layout algorithm may have poor performance\n\n\nBasic interactive feature\n\n\nTooltips\n\n\nif any \ntooltip\n item are in the node\u2019s property, a tooltip will  appear when mouse hang over the node. the tooltip accepts a \ndict\n like \n\n\n{\u201cFIRST_ATTRITUTE\u201d: \u201cFIRST_VALUE\u201d, \u201cSECOND_ATTRIBUTE\u201d: \u201cSECOND_VALUE\u201d}\n\n\n\n\nand displays:\n\n\nFIRST_ATTRITUTE: FIRST_VALUE\nSECOND_ATTRIBUTE: SECOND_VALUE\n\n\n\n\nlook likes:\n\n\n\n\nThe cxtmenu\n\n\nif left click at certain node, a cxtmenu will be displayed with mark, remove and expand(may not available if not implemented).\n\n\n\nThe DAG visualizer for GO\n\n\nSpecially for Gene Ontology, the DAG plotter is prepared with dagre layout.\n\n\nExample: \n\n\n\nStyle\n\n\nThe \nFromNetworkx\n receives style like {\u2018node\u2019: {\u2026}, \u2018edge\u2019: {\u2026}, \u2018spring_length\u2019: {\u2026}}\nor several presets are available in \nStylePresets\n\nfor example:\n\n\nORANGE_CENTERED_LABEL = {\n        'node': {'label': 'data(label)',\n                 'width': 24,\n                 'height': 24,\n                 'font-size': '-1em',\n                 'font-weight': 2,\n                 'background-color': '#F69924',\n                 'border-width': 2,\n                 'border-color': 'white',\n                 'text-valign': 'center',\n                 'text-halign': 'center',\n                 'color': 'white'\n                 },\n        'edge': {\n            'width': 3,\n            'line-color': '#F69924'\n        },\n        'spring_length': 50\n    }\n\n\n\n\nCaution\n\n\nMaximum node and edge count\n\n\nDue to the performance issue cause by JavaScript and Cytoscape.js, and Graph whose node number > 2k or edge > 5k will cause browser long time 100 percent CPU usage.",
             "title": "Visualization"
         },
         {
@@ -416,11 +451,6 @@
             "title": "The DAG visualizer for GO"
         },
         {
-            "location": "/netviz/#todo",
-            "text": "",
-            "title": "Todo"
-        },
-        {
             "location": "/netviz/#style",
             "text": "The  FromNetworkx  receives style like {\u2018node\u2019: {\u2026}, \u2018edge\u2019: {\u2026}, \u2018spring_length\u2019: {\u2026}}\nor several presets are available in  StylePresets \nfor example:  ORANGE_CENTERED_LABEL = {\n        'node': {'label': 'data(label)',\n                 'width': 24,\n                 'height': 24,\n                 'font-size': '-1em',\n                 'font-weight': 2,\n                 'background-color': '#F69924',\n                 'border-width': 2,\n                 'border-color': 'white',\n                 'text-valign': 'center',\n                 'text-halign': 'center',\n                 'color': 'white'\n                 },\n        'edge': {\n            'width': 3,\n            'line-color': '#F69924'\n        },\n        'spring_length': 50\n    }",
             "title": "Style"
@@ -434,6 +464,131 @@
             "location": "/netviz/#maximum-node-and-edge-count",
             "text": "Due to the performance issue cause by JavaScript and Cytoscape.js, and Graph whose node number > 2k or edge > 5k will cause browser long time 100 percent CPU usage.",
             "title": "Maximum node and edge count"
+        },
+        {
+            "location": "/utils/",
+            "text": "Utility and Tools\n\n\nTools in \npypathway.utils\n including ID mapping tool, Graph plot tool and Chart plot tool.\n\n\nID mapping\n\n\nThis tool convert different id using by different database.\n\n\nDatabase Source\n\n\nDatabases will be downloaded from \nwww.bioconductor.org\n, please make sure that you have internet connection and ~200M desk speace.\n\n\nSupport species\n\n\nanopheles\n,  \nbovine\n,  \ncanine\n,  \nchicken\n,  \nchimp\n,  \necoliK12\n,  \necoliSakai\n,  \nfly\n,  \nhuman\n,  \nmouse\n,  \npig\n,  \nrat\n,  \nrhesus\n,  \nworm\n,  \nxenopus\n,  \nyeast\n,  \nzebrafish\n\n\nThis can be viewed by class property \nSPECIES\n of \nIdMapping\n.\n\n\n\n\nSupport Id Types\n\n\nALIAS2PROBE\n,  \nREFSEQ\n,  \nACCNUM\n,  \nENSEMBL\n,  \nPATH\n,  \nPROSITE\n,  \nUNIPROT\n,  \nCHRLOCEND\n,  \nALIAS\n,  \nGO\n,  \nIPI\n,  \nCHRLOCCHR\n,  \nONTOLOGYALL\n,  \nENSEMBLTRANS\n,  \nEVIDENCE\n,  \nPFAM\n,  \nMAP\n,  \nALIAS2EG\n,  \nGENENAME\n,  \nCHRLOC\n,  \nCHR\n,  \nENTREZID\n,  \nENZYME\n,  \nUNIGENE\n,  \nONTOLOGY\n,  \nEVIDENCEALL\n,  \nGOALL\n,  \nENSEMBLPROT\n,  \nSYMBOL\n,  \nPMID\n \n\n\nThis can be viewed by class property \nPOSSIBLE_KEY\n of IdMapping.\n\n\n\n\nInput Format\n\n\nA list of id. \n\n\n\n\nFor example, a list of ENTREZID: \n[2, 8195, 6274, 147463, 90120, 9, 10, 12, 14, 16]\n\n\n\n\nAPI\n\n\nIdMapping\n provides class method \nconvert\n and \nconvert_to_dict\n. Both receive a list of id and return result in list form or dict form.\n\n\nParameters\n\n\n\n\ninput_id: a list of source id, example: a list of ENTREZID: \n[2, 8195, 6274, 147463, 90120, 9, 10, 12, 14, 16]\n\n\nspecies: The species. Example: \nyeast\n\n\nsource: The source ID name. Example: \nENTREZID\n\n\ntarget: The target ID name. Example: \nSYMBOL\n\n\n\n\nExample\n\n\n\n\nIdMapping.convert\n\n\n\n\n\n\n\n\nIdMapping.convert_to_dict\n\n\n\n\n\n\nOutput format\n\n\n\n\n\n\nIdMapping.convert: a list of results, each result contains the source id and a list of target id. Please refer to the \nnotebook\n, the output filed Out[14] should explain this clearly.\n\n\n\n\n\n\nIdMapping.convert_to_dict: a dict, key is the input ids and the value is a list of output ids.\n\n\n\n\n\n\nExample notebook\n\n\nView at Github\n\n\nGraph Plot Tool\n\n\nThis tool plot \nnetworkx.Graph\n and \nnetwork.DiGraph\n in the output area in the notebook. Python package like networkx does not implement plot method and needs to export the graph to certain format and view via external tool. This utility speed up the work flow via reduce the the switch between different tools.\n\n\nInput Format\n\n\nThe \nnetworkx.Graph\n and \nnetwork.DiGraph\n \n\n\nAPI\n\n\nWe implement a class named \nFromNetworkX\n which could be inited with a \nnetworkx.Graph\n or \nnetwork.DiGraph\n class. \nFromNetworkX\n has a method called \nplot\n which plot the graph in the output area while the code is executed in the Jupiter notebook.\n\n\nExample\n\n\n\n\nChart Plot tool\n\n\nThis tool works with \necharts-python\n and creates interactive plot in the Jupyter notebook environment.\n\n\nAPIs\n\n\nTo build up of a chart object please refer to the \necharts-python\n's docs.\n\n\nThe \nplot\n method receive a \necharts-python\n's Chart instance and plot in the output area while the code is executed in the Jupiter notebook.\n\n\nExample",
+            "title": "Utilities and tools"
+        },
+        {
+            "location": "/utils/#utility-and-tools",
+            "text": "Tools in  pypathway.utils  including ID mapping tool, Graph plot tool and Chart plot tool.",
+            "title": "Utility and Tools"
+        },
+        {
+            "location": "/utils/#id-mapping",
+            "text": "This tool convert different id using by different database.",
+            "title": "ID mapping"
+        },
+        {
+            "location": "/utils/#database-source",
+            "text": "Databases will be downloaded from  www.bioconductor.org , please make sure that you have internet connection and ~200M desk speace.",
+            "title": "Database Source"
+        },
+        {
+            "location": "/utils/#support-species",
+            "text": "anopheles ,   bovine ,   canine ,   chicken ,   chimp ,   ecoliK12 ,   ecoliSakai ,   fly ,   human ,   mouse ,   pig ,   rat ,   rhesus ,   worm ,   xenopus ,   yeast ,   zebrafish  This can be viewed by class property  SPECIES  of  IdMapping .",
+            "title": "Support species"
+        },
+        {
+            "location": "/utils/#support-id-types",
+            "text": "ALIAS2PROBE ,   REFSEQ ,   ACCNUM ,   ENSEMBL ,   PATH ,   PROSITE ,   UNIPROT ,   CHRLOCEND ,   ALIAS ,   GO ,   IPI ,   CHRLOCCHR ,   ONTOLOGYALL ,   ENSEMBLTRANS ,   EVIDENCE ,   PFAM ,   MAP ,   ALIAS2EG ,   GENENAME ,   CHRLOC ,   CHR ,   ENTREZID ,   ENZYME ,   UNIGENE ,   ONTOLOGY ,   EVIDENCEALL ,   GOALL ,   ENSEMBLPROT ,   SYMBOL ,   PMID    This can be viewed by class property  POSSIBLE_KEY  of IdMapping.",
+            "title": "Support Id Types"
+        },
+        {
+            "location": "/utils/#input-format",
+            "text": "A list of id.    For example, a list of ENTREZID:  [2, 8195, 6274, 147463, 90120, 9, 10, 12, 14, 16]",
+            "title": "Input Format"
+        },
+        {
+            "location": "/utils/#api",
+            "text": "IdMapping  provides class method  convert  and  convert_to_dict . Both receive a list of id and return result in list form or dict form.",
+            "title": "API"
+        },
+        {
+            "location": "/utils/#parameters",
+            "text": "input_id: a list of source id, example: a list of ENTREZID:  [2, 8195, 6274, 147463, 90120, 9, 10, 12, 14, 16]  species: The species. Example:  yeast  source: The source ID name. Example:  ENTREZID  target: The target ID name. Example:  SYMBOL",
+            "title": "Parameters"
+        },
+        {
+            "location": "/utils/#example",
+            "text": "IdMapping.convert     IdMapping.convert_to_dict",
+            "title": "Example"
+        },
+        {
+            "location": "/utils/#output-format",
+            "text": "IdMapping.convert: a list of results, each result contains the source id and a list of target id. Please refer to the  notebook , the output filed Out[14] should explain this clearly.    IdMapping.convert_to_dict: a dict, key is the input ids and the value is a list of output ids.",
+            "title": "Output format"
+        },
+        {
+            "location": "/utils/#example-notebook",
+            "text": "View at Github",
+            "title": "Example notebook"
+        },
+        {
+            "location": "/utils/#graph-plot-tool",
+            "text": "This tool plot  networkx.Graph  and  network.DiGraph  in the output area in the notebook. Python package like networkx does not implement plot method and needs to export the graph to certain format and view via external tool. This utility speed up the work flow via reduce the the switch between different tools.",
+            "title": "Graph Plot Tool"
+        },
+        {
+            "location": "/utils/#input-format_1",
+            "text": "The  networkx.Graph  and  network.DiGraph",
+            "title": "Input Format"
+        },
+        {
+            "location": "/utils/#api_1",
+            "text": "We implement a class named  FromNetworkX  which could be inited with a  networkx.Graph  or  network.DiGraph  class.  FromNetworkX  has a method called  plot  which plot the graph in the output area while the code is executed in the Jupiter notebook.",
+            "title": "API"
+        },
+        {
+            "location": "/utils/#example_1",
+            "text": "",
+            "title": "Example"
+        },
+        {
+            "location": "/utils/#chart-plot-tool",
+            "text": "This tool works with  echarts-python  and creates interactive plot in the Jupyter notebook environment.",
+            "title": "Chart Plot tool"
+        },
+        {
+            "location": "/utils/#apis",
+            "text": "To build up of a chart object please refer to the  echarts-python 's docs.  The  plot  method receive a  echarts-python 's Chart instance and plot in the output area while the code is executed in the Jupiter notebook.",
+            "title": "APIs"
+        },
+        {
+            "location": "/utils/#example_2",
+            "text": "",
+            "title": "Example"
+        },
+        {
+            "location": "/begin/",
+            "text": "For Beginner\n\n\n\n\nPython is a multi-paradigm programming language. Object-oriented programming and structured programming are fully supported, and many of its features support functional programming and aspect-oriented programming. \n\n\n\n\nSuggested Tutorial\n\n\nPython Language\n\n\n\n\nA Byte of Python\n\n\nPython For Beginners\n\n\n\n\nPython with bioinformatics\n\n\n\n\nBioPython\n: Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.\n\n\nbioconda\n: Bioconda is a channel for the conda package manager specializing in bioinformatics software.\n\n\n\n\nJupyter\n\n\n\n\nJupyter Notebook Tutorial: The Definitive Guide\n\n\nOfficial Documentation",
+            "title": "Guide For Beginner"
+        },
+        {
+            "location": "/begin/#for-beginner",
+            "text": "Python is a multi-paradigm programming language. Object-oriented programming and structured programming are fully supported, and many of its features support functional programming and aspect-oriented programming.",
+            "title": "For Beginner"
+        },
+        {
+            "location": "/begin/#suggested-tutorial",
+            "text": "",
+            "title": "Suggested Tutorial"
+        },
+        {
+            "location": "/begin/#python-language",
+            "text": "A Byte of Python  Python For Beginners",
+            "title": "Python Language"
+        },
+        {
+            "location": "/begin/#python-with-bioinformatics",
+            "text": "BioPython : Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.  bioconda : Bioconda is a channel for the conda package manager specializing in bioinformatics software.",
+            "title": "Python with bioinformatics"
+        },
+        {
+            "location": "/begin/#jupyter",
+            "text": "Jupyter Notebook Tutorial: The Definitive Guide  Official Documentation",
+            "title": "Jupyter"
         }
     ]
 }
