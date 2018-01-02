@@ -54,7 +54,7 @@ class EnrichmentResult:
                             }
                         },
                         'grid': {
-                            'left': '3%',
+                            'left': '2%',
                             'right': '12%',
                             'bottom': '3%',
                             'containLabel': True
@@ -62,11 +62,11 @@ class EnrichmentResult:
                         'xAxis': {
                             'type': 'value',
                             'boundaryGap': [0, 0.01],
-                            'name': self.xlabel
+                            'name': self.xlabel,
                         },
                         'yAxis': {
                             'type': 'category',
-                            'data': []
+                            'data': [],
                         },
                         'series': [
                             {
@@ -98,7 +98,7 @@ class EnrichmentResult:
                               func(x[self.prop_index] if self.prop_index >= 0 else i)])
         candidate = sorted(candidate, key=lambda x: x[1], reverse=True)
         for x in candidate[:count]:
-            config['yAxis']['data'].append(x[0])
+            config['yAxis']['data'].append({'value': x[0], "textStyle": {"fontSize": 12}})
             config['series'][0]['data'].append(x[1])
         if data:
             return config

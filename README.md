@@ -1,5 +1,8 @@
+# PyPathway
+
 integrated Python toolkit for pathway based analysis
 
+[![PyPI version](https://badge.fury.io/py/pypathway.svg)](https://badge.fury.io/py/pypathway)
 [![Build Status](https://travis-ci.org/iseekwonderful/PyPathway.svg?branch=master)](https://travis-ci.org/iseekwonderful/PyPathway)
 ![](https://img.shields.io/badge/python-3.5-blue.svg)
 ![](https://img.shields.io/badge/python-3.6-blue.svg)
@@ -9,46 +12,27 @@ integrated Python toolkit for pathway based analysis
 
 ## Installation
 
-### General requirement
-**Python version: >= 3.5**
+Install PyPathway via Anaconda is recommended.
 
+1.  Download and install anaconda from [Anaconda site](`https://www.anaconda.com/download/`)
+2.  Install `PyPathway` by
 
-### Windows
-
-* The [Visual C++ 2015 Build Tools](http://landinghub.visualstudio.com/visual-cpp-build-tools) is required to compile c extensions.
-
-* `numpy`, `scipy` and `staticmodels` (anaconda is recommend)
-
-
-### Unix / Linux
-
-* gcc or clang compiler
-
-
-### Sources
-
-* install via pypi
 ```
-pip install pypathway
-```
-* install from the source
-```
-git clone https://github.com/iseekwonderful/PyPathway.git
-cd PyPathway
-python setup.py install
+conda install -c steamedsheep pypathway
 ```
 
+**NOTE:**  If you want to install `pypathway` via `pypi`, please refer to the [Installation section](installation)
+
+## Documentation
+View the docs at [github.io](http://iseekwonderful.github.io/PyPathway)
 ## Features
 * Public databases APIs: `STRING`, `BioGRID`, `KEGG`, `Reactome` and `WikiPathway`
 * Functional set based and network based enrichment analysis algorithms implemented: `ORA`, `GSEA` and `SPIA`
 * Performance optimize for denovo enrichment algorithm `MAGI` and `Hotnet2`.
-* Network propagation random walk, RWR and heat kernel
-* Interactive visualization for pathway, graph and analysis result.
-* Web page exportation for results.
-
-## Highlights
-* Integrated with pandas, networkx and numpy. Most of the methods accept both text file and data structure from these packages 
-* Dynamic visualization for IPython notebook. 
+* Network propagation algorithms `random walk`, `RWR` and `heat kernel`.
+* Interactive visualization and web page exportation for pathway, graph and analysis result.
+* Integrated with `pandas`, `networkx` and `numpy`. Most of the methods accept both text file and data structure from these packages 
+* Dynamic visualization for `IPython notebook`. 
 * Most classes implement `__repr__` method for interactive environment.
 
 ## Network process
@@ -83,11 +67,11 @@ pathway = r[0].load()
 pathway.draw()
 ```
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/netprocess_KEGG.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/network_process/netprocess_KEGG.png?raw=true)
 
 ### IPython notebook examples
 
-* [STRING and BioGRID](https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/STRING%7CBioGID_query.ipynb)
+* [STRING and BioGRID](https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/STRING_BioGID_query.ipynb)
 * [Pathway databases](https://github.com/iseekwonderful/PyPathway/blob/master/examples/pathviz/Pathway_Datatbase_APIs.ipynb)
 
 ## Enrichment Analysis
@@ -111,21 +95,19 @@ r = SPIA.run(all=c.background, de=c.deg, organism='hsa')
 
 ```python
 res.table
-
 ```
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_table.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_table.png?raw=true)
 
 ```python
 res.plot()
 ```
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/enrichment_general_ora.png?raw=true)
 ```python
-
 res.graph()
 ```
 
-![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png)
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/enrichment/GO%20graph%20plot.png?raw=true)
 
 ### IPython examples
 
@@ -133,12 +115,11 @@ res.graph()
 * [GSEA](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/GSEA.ipynb)
 * [Network enrichment](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/network_enrichment.ipynb)
 * [MAGI](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/MAGI.ipynb)
-* [Hotnet2](https://github.com/iseekwonderful/PyPathway/blob/master/examples/analysis/Hotnet2.ipynb)
 
 ## Modeling
 
 * the Python Interface and optimize for `MAGI`
-* several c extension for `Hotnet permutation performance 
+* several c extension for `Hotnet` permutation performance 
 
 ## Propagation
 
@@ -146,23 +127,20 @@ Implemented algorithms
 
 * Random walk
 ```python
-
 random_walk(G, h)
 ```
 * Random walk with restart
 ```python
-
 random_walk_with_restart(G, h, rp=0.7, n=-1)
 ```
 * Heat kernel
 ```python
 diffusion_kernel(G, h, rp=0.8, n=100)
-
 ```
 
-### detail
+### Implementation detail
 
-> ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/propagation/propagation_overview.png)
+> ![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/propagation/propagation_overview.png?raw=true)
 
 image source: [Network propagation: a universal amplifier of genetic associations](http://www.nature.com/nrg/journal/v18/n9/abs/nrg.2017.38.html)
 
@@ -179,14 +157,3 @@ image source: [Network propagation: a universal amplifier of genetic association
 * numpy implementation of SPIA
 * node swap c extension for Hotnet2
 * multi-threading for MAGI
-
-
-## Interactive Visualization
-
-The interactive visualization for IPython notebook
-
-### Feature
-* `__repr__` Implemented for most classes
-* dynamic visualization for networkx.Graph instance
-* visualizer for pathway object
-* visualizer for Gene ontology DAG.

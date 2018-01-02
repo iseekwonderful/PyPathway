@@ -395,7 +395,7 @@ class KEGG(EnrichmentResult):
         df_result = {'ID': [], 'Name': [], 'mapped': [], 'deg': [], 'p-value': [], 'fdr': []}
         for k, v in mapped.items():
             df_result['ID'].append(k.split("::")[0])
-            df_result['Name'].append(k.split("::")[1])
+            df_result['Name'].append(k.split("::")[1].split(" - ")[0])
             df_result['mapped'].append(len(mapped[k]))
             df_result['deg'].append(len(s_mapped[k]))
             df_result['p-value'].append(result[k])
@@ -407,10 +407,6 @@ class KEGG(EnrichmentResult):
     def __init__(self, df, study, pop, organism, adjust):
         EnrichmentResult.__init__(self, df, study, "KEGG", "ORA", 1, 5, '-log(2, Fdr)')
         self.df, self.study, self.pop, self.organism, self.adjust = df, study, pop, organism, adjust
-
-    # @property
-    # def table(self):
-    #     return self.df
 
     @property
     def main_property(self):
