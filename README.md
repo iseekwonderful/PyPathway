@@ -23,8 +23,10 @@ conda install -c steamedsheep pypathway
 
 **NOTE:**  If you want to install `pypathway` via `pypi`, please refer to the [Installation section](installation)
 
-## Documentation
+## Documentation and tests
 View the docs at [github.io](http://iseekwonderful.github.io/PyPathway)
+
+Regular [tests](https://github.com/iseekwonderful/PyPathway/tree/master/tests) and [notebook (nbval) tests](https://github.com/iseekwonderful/PyPathway/tree/master/notebook_tests)
 ## Features
 * Public databases APIs: `STRING`, `BioGRID`, `KEGG`, `Reactome` and `WikiPathway`
 * Functional set based and network based enrichment analysis algorithms implemented: `ORA`, `GSEA` and `SPIA`

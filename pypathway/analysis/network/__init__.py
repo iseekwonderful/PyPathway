@@ -232,7 +232,7 @@ class SPIA(EnrichmentResult):
             de_sample = list(de.values())
             all_sample = [i for i, x in enumerate(row_names) if x in all]
             length = len(X)
-            for i in range(2000):  # nB
+            for i in range(nB):  # nB
                 x = np.zeros(length)
                 sp = random.sample(de_sample, noMy)
                 idx = random.sample(all_sample, noMy)

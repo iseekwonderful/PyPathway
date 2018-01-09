@@ -33,11 +33,10 @@ class MAGITest(unittest.TestCase):
         path = os.path.dirname(os.path.realpath(__file__)) + "/assets/smaller_magi/"
         r = MAGI.cluster(
             path + 'StringNew_HPRD.txt', path + 'GeneCoExpresion_ID.txt',
-            path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 15, 0.3
+            path + 'adj1.csv.Tab.BinaryFormat', 10, 5, 20, 0.3
         )
-        self.assertTrue(set(r[0].genes.keys()),
-                        {'GATAD2B', 'ZMYND11', 'SMAD4', 'STAG1', 'YY1', 'CTNNB1', 'MECP2', 'CUL1', 'GTF2IRD1',
-                         'HSPA4', 'RUVBL1', 'PSMA7', 'SMAD2', 'PIAS1', 'SMARCC2'})
+        print(set(r[0].genes.keys()))
+        self.assertAlmostEqual(float(r[0].genes['CTNNB1']['weightCases']), 6.503305)
 
 
 if __name__ == '__main__':
