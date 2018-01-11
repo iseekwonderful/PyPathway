@@ -407,7 +407,6 @@ r = MAGI.cluster(
 ```
 
 ### Result
+In original version:
+
 We get same highest scored submodule:
-```
-{'GTF2IRD1': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.045591', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'CTNNB1': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '6.503305', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMAD4': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '0.000000', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'CDC73': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '0.000000', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'HSPA4': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.139670', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMARCC2': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.808325', 'numSevereMutInControl': '1', 'weightControl': '0'}, 'PIAS1': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '3.515701', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'SMAD2': {'numSevereMutInCases': '0', 'prob': '0.000000', 'numMissenseMutInCases': '1', 'weightCases': '2.088150', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'ZMYND11': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.822162', 'numSevereMutInControl': '0', 'weightControl': '0'}, 'GATAD2B': {'numSevereMutInCases': '1', 'prob': '0.000000', 'numMissenseMutInCases': '0', 'weightCases': '3.588371', 'numSevereMutInControl': '2', 'weightControl': '0'}}
-```
