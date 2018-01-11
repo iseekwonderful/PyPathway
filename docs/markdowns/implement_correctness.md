@@ -340,7 +340,7 @@ en = Enrichnet.run(genesets=sym, graph='string')
 We use [Cytoscape Diffusion APP](http://apps.cytoscape.org/apps/diffusion) to check the correctness of the heat diffusion.
 #### Result of Diffusion APP
 
-** Image here
+![](https://raw.githubusercontent.com/iseekwonderful/PyPathway/master/docs/markdowns/images/ic/ic_diffusion_in_cy.png)
 
 #### Result of PyPathway
 
@@ -408,5 +408,6 @@ r = MAGI.cluster(
 
 ### Result
 In original version:
-
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/ic/original.png?raw=true)
 We get same highest scored submodule:
+![](https://github.com/iseekwonderful/PyPathway/blob/master/docs/markdowns/images/ic/py.png?raw=true)
