@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup
+from setuptools.command.build_ext import build_ext
 from setuptools.extension import Extension
 import sys
 import os
-import numpy
 
 try:
    import pypandoc
@@ -57,9 +57,21 @@ fast_scc = Extension("pypathway.analysis.modelling.third_party.hotnet2.hotnet2.f
                      extra_compile_args=["-std=c99"] if not sys.platform == 'darwin' else None)
 
 
-if sys.platform == "darwin":
-    # fix the include issue of distutuls in macos
-    os.environ['CFLAGS'] = "-I{}".format(numpy.get_include())
+class CustomBuildExtCommand(build_ext):
+    """build_ext command for use when numpy headers are needed."""
+
+    def run(self):
+        # Import numpy here, only when headers are needed
+        import numpy
+
+        # Add numpy headers to include_dirs
+        self.include_dirs.append(numpy.get_include())
+
+        if sys.platform == "darwin":
+            # fix the include issue of distutils in macos
+            os.environ['CFLAGS'] = "-I{}".format(numpy.get_include())
+
+        super().run()
 
 
 setup(
@@ -73,6 +85,7 @@ setup(
     packages=['pypathway'],
     # package_dir={'pypathway':'pypathway'},
     include_package_data=True,
+    setup_requires=['numpy'],
     install_requires=requirements,
     license="GNU General Public License v3 (GPLv3)",
     zip_safe=False,
@@ -87,8 +100,6 @@ setup(
     ],
     test_suite='tests',
     tests_require=[],
-    include_dirs=numpy.get_include(),
+    cmdclass={'build_ext': CustomBuildExtCommand},
     ext_modules=[selects, cluster, fast_scc, c_ext],
 )
-
-
